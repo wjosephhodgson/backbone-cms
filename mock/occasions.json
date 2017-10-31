@@ -1,0 +1,68 @@
+[
+	{
+		"id": 11111,
+		"occasion": "Birthday for Him",
+		"type": "Teleflora",
+		"collection": false
+	},
+	{
+		"id": 22222,
+		"occasion": "Birthday for Her",
+		"type": "Teleflora",
+		"collection": true
+	},
+	{
+		"id": 33333,
+		"occasion": "Halloween",
+		"type": "Custom",
+		"collection": false
+	},
+	{
+		"id": 44444,
+		"occasion": "Thanksgiving",
+		"type": "Custom",
+		"collection": false
+	},
+	{
+		"id": 55555,
+		"occasion": "Christmas",
+		"type": "Teleflora",
+		"collection": true
+	},
+	{
+		"id": 66666,
+		"occasion": "New Years",
+		"type": "Teleflora",
+		"collection": true
+	},
+	{
+		"id": 77777,
+		"occasion": "Valentine's Day",
+		"type": "Teleflora",
+		"collection": true
+	},
+	{
+		"id": 88888,
+		"occasion": "Mother's Day",
+		"type": "Custom",
+		"collection": false
+	},
+	{
+		"id": 99999,
+		"occasion": "Father's Day",
+		"type": "Teleflora",
+		"collection": false
+	},
+	{
+		"id": 12121,
+		"occasion": "Easter",
+		"type": "Teleflora",
+		"collection": false
+	},
+	{
+		"id": 34343,
+		"occasion": "Independence Day",
+		"type": "Teleflora",
+		"collection": false
+	}
+]

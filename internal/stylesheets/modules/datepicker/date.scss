@@ -1,0 +1,221 @@
+/////
+// ie8-fix
+/////
+.no-svg{
+  .picker__nav--prev, .picker__nav--next  {
+    background-image: url("../images/ui-sprite.png") !important;
+  }
+}
+
+.picker__box {
+  padding: 0 1em;
+
+  .picker__header {
+    text-align: center;
+    position: relative;
+    margin-top: 1em;
+
+    /* .closer {
+      position: relative;
+      height: 30px;
+      border-bottom: 1px solid $accent-grey;
+      margin-top: 0.6em;
+      margin-bottom: 0.6em;
+    } */
+
+    /**
+     * The month navigation buttons.
+     */
+    .picker__nav--prev,
+    .picker__nav--next {
+      width: 22px;
+      height: 22px;
+      display: inline-block;
+      background-image: url("../images/ui-sprite.svg");
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+      text-indent: -9999px;
+    }
+    .picker__nav--prev {
+      float: left;
+      background-position: -208px -57px;
+
+      &:hover {
+        background-position: -234px -57px;
+      }
+    }
+    .picker__nav--next {
+      float: right;
+      background-position: -154px -57px;
+
+      &:hover {
+        background-position: -180px -57px;
+      }
+    }
+
+    .picker__nav--prev:hover,
+    .picker__nav--next:hover {
+      cursor: pointer;
+    }
+    .picker__nav--disabled,
+    .picker__nav--disabled:hover,
+    .picker__nav--disabled:before,
+    .picker__nav--disabled:before:hover {
+      //cursor: default;
+      //background: none;
+    }
+
+    /**
+     * The month label.
+     */
+    .picker__month {
+      display: inline-block;
+      margin-left: .20em;
+      margin-right: .20em;
+      min-width: 69px;
+      font-size: 1.307em;
+    }
+  }
+
+  /**
+   * The calendar table of dates
+  */
+  .picker__table {
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    font-size: inherit;
+    width: 100%;
+    margin-top: .75em;
+    margin-bottom: .5em;
+    font-family: $sans-stack;
+
+    @media (min-height: 33.875em) {
+      margin-bottom: .75em;
+    }
+
+    td {
+      margin: 0;
+      padding: 0;
+      border: 1px solid $accent-grey;
+
+      /**
+       * The days on the calendar
+      */
+      .picker__day {
+        padding: 0 0.154em;
+        border: 1px solid transparent;
+      }
+      .picker__day--today {
+        position: relative;
+      }
+      .picker__day--today:before {
+        content: " ";
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        width: 0;
+        height: 0;
+        border-top: 0.4em solid $black;
+        border-left: 0.4em solid transparent;
+      }
+      .picker__day--level2 {
+        background-color: $green;
+      }
+      .picker__day--level3 {
+        background-color: $light-green;
+      }
+      .picker__day--level4 {
+        background-color: $light-yellow;
+      }
+      .picker__day--level5 {
+        background-color: $light-orange;
+      }
+      .picker__day--selected:hover {
+        text-decoration: underline;
+      }
+      .picker__day--highlighted {
+        outline: 1px solid $dark-grey;
+        border: 1px solid $dark-grey;
+      }
+      .picker__day--outfocus {
+        color: $light-grey;
+        //@include opacity(66);
+      }
+      .picker__day--infocus:hover,
+      .picker__day--outfocus:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      .picker__day--highlighted:hover,
+      .picker--focused .picker__day--highlighted {
+        text-decoration: underline;
+      }
+      .picker__day--disabled,
+      .picker__day--disabled:hover {
+        cursor: default;
+        background-color: $grey;
+        color: $dark-grey;
+        text-decoration: none;
+      }
+      .picker__day--highlighted.picker__day--disabled,
+      .picker__day--highlighted.picker__day--disabled:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  /**
+   * The footer containing the level info
+   */
+  .picker__footer {
+    text-align: left;
+    margin-bottom: 0.5em;
+    font-size: 1.076em;
+
+    ul {
+      list-style: none;
+
+      li {
+        display: inline-block;
+        margin-right: 3.2%;
+      }
+    }
+
+    .color-box {
+      border: 1px solid $accent-grey;
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: -3px;
+
+      &.level1 {
+        background-color: $white;
+      }
+      &.level2 {
+        background-color: $green;
+      }
+      &.level3 {
+        background-color: $light-green;
+      }
+      &.level4 {
+        background-color: $light-yellow;
+      }
+      &.level5 {
+        background-color: $light-orange;
+      }
+    }
+
+    .closer {
+      text-align: center;
+      color: $pink;
+      border-top: 1px solid $accent-grey;
+      margin-top: 0.6em;
+      padding-top: 0.3em;
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="section-title">
+			<h2 class="pull-left">Order Lookup / Resend</h2>
+		</div>
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row panel alert-panel">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-1">
+				<div class="icon icon-3x icon-warning"></div>
+			</div>
+			<div class="col-11 alert-text">
+				This is a generic placeholder for error messages in eSAT. <br>
+				In the live app, this will be a real message and will be hidden by default.
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+<!-- Hidden Alert Message for invalid search -->
+<div class="row row-spaced panel alert-panel hidden-alt" id="search-alert">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-1">
+				<div class="icon icon-4x icon-warning"></div>
+			</div>
+			<div class="col-11 alert-text">
+				Please enter search criteria into at least one of the below fields in order to look up orders.
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+
+<div class="row row-spaced form-section panel">
+<form id="p-form">
+	<div class="row row-spaced">
+		<div class="col-3 form-section">
+			<label for="f-dove-number">Dove No.</label>
+			<input type="text" id="f-dove-number" name="f-dove-number">
+		</div>
+
+		<div class="col-3 form-section">
+			<label for="f-from-date">Order Date From:</label>
+			<div class="date-container">
+			    <input type="text" id="f-from-date" name="f-from-date">
+			</div>
+		</div>
+
+		<div class="col-3 form-section">
+			<label for="f-to-date">To:</label>
+			<div class="date-container">
+			    <input type="text" id="f-to-date" name="f-to-date">
+			</div>
+		</div>
+	</div>
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="row">
+				<div class="col-3"><label for="f-confirmation-number">Confirmation No.</label></div>
+				<div class="col-3"><label for="f-sender-last-name">Sender Last Name</label></div>
+				<div class="col-3"><label for="f-recipient-last-name">Recipient Last Name</label></div>
+			</div>
+
+			<div class="row">
+				<div class="col-3 form-section"><input type="text" id="f-confirmation-number" name="f-confirmation-number"></div>
+				<div class="col-3 form-section"><input type="text" id="f-sender-last-name" name="f-sender-last-name">	</div>
+				<div class="col-3 form-section"><input type="text" id="f-recipient-last-name" name="f-recipient-last-name">	</div>
+				<div class="col-3"><button type="button" class="btn btn-submit y-space-s" id="search-btn">Search</button></div>
+			</div>
+		</div>
+	</div>
+</form>
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Order Search Result</div>
+		</div>
+	</div>
+	<div class="row row-spaced">
+		<div class="col-12">Click on any order to view the order details.  To resend the order, click on the resend icon next to the order</div>
+	</div>
+	<table id="orders-table" class="table alternate">
+		<thead>
+			<tr class="highlighted">
+				<th>Order Date</th>
+				<th>Sender Last Name</th>
+				<th>Recipient Last Name</th>
+				<th>Confirmation No.</th>
+				<th>Dove No.</th>
+				<th>Resend</th>
+			</tr>
+		</thead>
+		<tbody id="orders-list"></tbody>
+	</table>
+</div>

@@ -1,0 +1,94 @@
+
+<div class="col-12">
+
+	<div class="row row-spaced">
+		<div class="col-6 form-section">
+			<div class="label">Products Label</div>
+			<input type="text" name="f-products-label" id="f-products-label" value="<%= contentLabel %>">
+		</div>
+		<div class="col-6 form-section select-container">
+			<div class="label">Column Width</div>
+			<select name="f-products-columns" id="f-products-columns">
+				<%
+					var colnum;
+					if( columns === 1 ) {
+						colnum = '1 Column'
+					} else if ( columns === 2 ) {
+						colnum = '2 Columns'
+					} else if ( columns === 3 ) {
+						colnum = '3 Columns'
+					} else if ( columns === 4 ) {
+						colnum = '4 Columns'
+					}
+				%>
+		    	<option selected disabled hidden value="<%= columns %>"><%= colnum %></option>
+		    	<option value="1">1 Column</option>
+		    	<option value="2">2 Columns</option>
+			</select>
+		</div>
+	</div>
+
+	<div id="parent-select" class="row row-spaced">
+		<div class="col-12">
+			<div class="row">
+				<div class="col-12">
+					<div class="panel-title">Parent</div>
+				</div>
+			</div>
+
+			<div class="row row-spaced">
+				<div class="col-6 form-section">
+					<div id="edit-parent-container" class="row row-spaced">
+						<div class="col-12">
+							<label for="f-parentName">Parent Category</label>
+						</div>					
+						<div class="col-12">
+							<div class="row">
+							</div>
+
+							<div class="row row-spaced">
+								<div class="col-12">
+									<div id="parent-table" class="div-table <%= parent ? '' : 'no-border' %>">
+									  <div class="div-table-body collapsed" id="parent-list"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="row">
+				<div class="col-12 form-section">
+					<div class="label">Selected Child Categories</div>
+				</div>
+				<div class="col-12">
+					<div id="featured-child-categories"></div>
+				</div>
+			</div>		
+		</div>
+	
+	</div>
+
+	<div class="row row-spaced y-space-top-m">
+		<div class="col-12">
+			<div class="panel-title">
+				"Show More" Link
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-4 form-section">
+			<div class="label">Enable "Show More" Link</div>
+			<input <%= showMore ? 'checked' : '' %> type="checkbox" id="f-showMore" name="f-showMore" class="switch on-off-switch">
+			<label for="f-showMore" class="on-off-switch-label"><div class="on-off-switch-state"></div>on</label>
+		</div>
+
+		<div class="col-8 form-section show-more-section">
+			<div class="label">Link Label</div>
+			<input type="text" name="f-showMoreLabel" id="f-showMoreLabel" value="<%= showMoreLabel %>">
+		</div>
+		
+	</div>
+
+</div>

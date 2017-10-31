@@ -1,0 +1,107 @@
+[
+	{
+		"sequence": 1,
+		"ChannelName": "Pinterest",
+		"imgUrl":"/images/social-icons/pinterest.png",
+		"SocialPageLink": "http://pinterest.com/",
+		"SocialMedActive": true,
+		"id": 1,
+		"Edit": false
+	},
+	{
+		"sequence": 2,
+		"ChannelName": "Facebook",
+		"imgUrl": "/images/social-icons/fb.png",
+		"SocialPageLink": "http://facebook.com/",
+		"SocialMedActive": true,
+		"id": 2,
+		"Edit": false
+	},
+	{
+
+		"sequence": 3,
+		"ChannelName": "Twitter",
+		"imgUrl": "/images/social-icons/twitter.png",
+		"SocialPageLink": "http://twitter.com/",
+		"SocialMedActive": true,
+		"id": 3,
+		"Edit": false
+	},
+	{
+
+		"sequence": 4,
+		"ChannelName": "Instagram",
+		"imgUrl": "/images/social-icons/instagram.png",
+		"SocialPageLink": "http://instagram.com/",
+		"SocialMedActive": true,
+		"id": 4,
+		"Edit": false
+	},
+	{
+
+		"sequence": 5,
+		"ChannelName": "Foursquare",
+		"imgUrl": "/images/social-icons/foursquare.png",
+		"SocialPageLink": "http://foursquare.com/",
+		"SocialMedActive": false,
+		"id": 5,
+		"Edit": false
+	},
+	{
+
+		"sequence": 6,
+		"ChannelName": "Yelp",
+		"imgUrl": "/images/social-icons/yelp.png",
+		"SocialPageLink": "http://yelp.com/",
+		"SocialMedActive": false,
+		"id": 6,
+		"Edit": false
+		
+	},
+	{
+		"sequence": 7,
+		"ChannelName": "Youtube",
+		"imgUrl": "/images/social-icons/youtube.png",
+		"SocialPageLink": "http://youtube.com/",
+		"SocialMedActive": true,
+		"id": 7,
+		"Edit": false
+		},
+	{
+		"sequence": 8,
+		"ChannelName": "Googleplus",
+		"imgUrl": "/images/social-icons/googleplus.png",
+		"SocialPageLink": "http://plus.google.com/",
+		"SocialMedActive": false,
+		"id": 8,
+		"Edit": false
+	},
+	{
+		"sequence": 9,
+		"ChannelName": "LinkedIn",
+		"imgUrl": "/images/social-icons/linkedin.png",
+		"SocialPageLink": "http://linkedin.com/",
+		"SocialMedActive": false,
+		"id": 9,
+		"Edit": false
+	},
+		
+		{
+		"sequence": 10,
+		"ChannelName": "Flickr",
+		"imgUrl": "/images/social-icons/flickr.png",
+		"SocialPageLink": "http://www.flickr.com/people",
+		"SocialMedActive": false,
+		"id": 10,
+		"Edit": false
+	},
+	{
+		"sequence": 11,
+		"ChannelName": "Blog",
+		"imgUrl": "/images/social-icons/blogger.png",
+		"SocialPageLink": "Your Blog Link",
+		"SocialMedActive": false,
+		"id": 11,
+		"Edit": false
+	}
+]

@@ -1,0 +1,11 @@
+<tr class="<%= isDefault ? 'active' : ''%>" data-sequence="<%= sequence %>">
+	<td class="left-align indented-l"><%= isDefault ? 'Default (' + occasion + ')' : occasion %></td>
+	<td><%= startDate %></td>
+	<td><%= endDate %></td>
+	<td><button type="button" class="icon icon-btn icon-2x icon-edit"></button></td>
+	<td>
+		<% if (!isDefault) { %> 
+			<button type="button" class="icon icon-btn icon-2x icon-trash"></button> 
+		<% } %>
+	</td>
+</tr>

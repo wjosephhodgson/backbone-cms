@@ -1,0 +1,42 @@
+<% @title = "eSat - More" %>
+
+
+<% @myaccount = [
+  [
+    "General Settings",
+    "../../#more/general-settings",
+    "v. 1.0 <br> Description coming soon."
+  ]
+] %>
+
+  <p class="lead">My Account consists of the acount management pages, as well as the header and footer (contained in the global modules section).</p>
+  <% @myaccount.each do |name, path, desc, totOpts, opt1name, opt1params, opt2name, opt2params, opt3name, opt3params| %>
+    <div class="row-fluid">
+      <div class="span6">
+        <h4><%=h name %></h4>
+        <div class="btn-group">
+          <% if totOpts %>
+          <button type="button" class="btn btn-primary" data-toggle="dropdown">
+            <b>Select View</b>
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="<%= path + opt1params %>"><%= opt1name %></a></li>
+            <li><a href="<%= path + opt2params %>"><%= opt2name %></a></li>
+            <% if opt3name %>
+            <li><a href="<%= path + opt3params %>"><%= opt3name %></a></li>
+            <% end %>
+          </ul>
+            <% else %>
+          <a class="btn btn-primary" href="<%= path %>">View Page</a>
+          <% end %>
+          <a class="btn" href="<%= path %>/doc">Doc</a>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid" style="margin-top:20px; border-bottom:1px solid #333; margin-bottom:20px; padding-bottom:20px;"">
+      <div class="span6">
+      <p><%= desc %></p>
+      </div>
+    </div>
+  <% end %>

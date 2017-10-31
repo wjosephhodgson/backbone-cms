@@ -1,0 +1,37 @@
+<section id="code-standards" class="l-wrapper top-margin">
+  <h2>Code Standards</h2>
+
+  <p>A syntactical overview of the eSat's front-end code base.</p>
+  <br>
+  <p>eSAT is built using <a href="http://smacss.com/" target="_blank">SMACSS</a> and <a href="http://oocss.org/" target="_blank">OOCSS</a> style architecture built within a fluid grid system for the layout. The grid system is a 12 column responsive grid layout based on the 960 Grid System. The class structure used for the CSS is as follows:
+</p>
+<br>
+<p>The class structure is as follows:</p>
+<br>
+<li><p>l-* classes are in the 'layout' directory</p></li>
+<li><p>m-* classes are in the 'modules' directory</p></li>
+<li><p>is-* interactive state classes are in their corresponding module file.</p></li>
+<br>
+<div class="m-code l-wrapper container_4 d-container_12">
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <pre class="prettyprint linenums lang-html">
+  &lt;!-- container starts --&gt;
+  &lt;div class="container_4 d-container_12"&gt;
+    &lt;div class="grid-2 d-grid_6"&gt;
+      &lt;p class="is-visible"&gt;Content...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="grid-2 d-grid_6"&gt;
+      &lt;p class="is-visible"&gt;Content...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+ &lt;!-- container ends --&gt;
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</section>

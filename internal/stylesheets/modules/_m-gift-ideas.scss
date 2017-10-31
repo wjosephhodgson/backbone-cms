@@ -1,0 +1,284 @@
+.m-gift-ideas-content {
+  margin-bottom: 2em;
+}
+
+.m-gift-ideas-content-header {
+  font-size: em(26px);
+  padding: 0;
+  margin-bottom: 0.5em;
+
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.m-gift-ideas-content-inner {
+  margin-bottom: 1em;
+}
+
+.m-gift-ideas-content-inner-header {
+  padding: 0 ;
+  margin-bottom: 0.5em;
+}
+
+.m-gift-ideas-content-aside {
+  padding: 1em 2em 1em;
+  border-top: 1px solid $accent-grey;
+  border-bottom: 1px solid $accent-grey;
+  margin-bottom: 1em;
+}
+
+.m-gift-ideas-content-aside-header {
+  font-size: em(26px);
+  line-height: 1.2em;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.m-gift-ideas-content-list {
+  li {
+    padding-left: 1em;
+  }
+}
+
+.m-gift-ideas-page-header {
+  font-size: em(24px);
+  margin-bottom: 0.5em;
+  padding: 0 0 0.5em;
+  text-align: left;
+
+  @include mobile {
+    text-align: center;
+    padding: 0;
+  }
+}
+
+.m-gift-ideas-content-link{
+  font-size: em(16px);
+  display: block;
+  margin-bottom: 0.25em;
+}
+
+.m-gift-ideas-sidebar-container {
+
+  @include mobile {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 2em;
+    float: left !important;
+  }
+}
+
+.m-gift-ideas-sidebar, .m-gift-ideas-sidebar-mobile {
+  border: 1px dotted $dark-grey;
+  padding: 0.5em 1em;
+  background-color: $grey;
+
+  .icon-geopin, .icon-phone, .icon-email {
+    position: absolute;
+  }
+}
+
+.m-gift-ideas-sidebar-mobile {
+  margin-top: 1.5em;
+}
+
+.m-gift-ideas-sidebar-header {
+  margin-bottom: 0.5em;
+}
+
+.m-gift-ideas-sidebar-content {
+  display: block;
+
+  .phone {
+    padding-top: 0.1em;
+    padding-bottom: 0.2em;
+  }
+
+  .email {
+    padding-top: 0.3em;
+    padding-bottom: 0.5em;
+
+    a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .address {
+    margin-bottom: 0.5em;
+  }
+
+  .m-gift-ideas-sidebar-content-text {
+    padding-left: 2em;
+    line-height: 1.4em;
+  }
+  &:first-child {
+    margin-top: 1em;
+  }
+}
+
+///////////////////////////////////////////
+
+.m-gift-ideas-nav .no-bullet a {
+  color: $black;
+  font-family: $sans-stack-heavy;
+}
+.m-gift-ideas-nav {
+  line-height:2;
+
+  &.m-gift-ideas-nav-mobile {
+    margin-top: 0.4em;
+    a {
+      padding-left: 4%;
+    }
+  }
+}
+
+
+.m-gift-ideas .d-grid_6 ul, .d-grid_6 ol {
+  position:relative;
+  font-size:1.30769em;
+}
+
+.m-gift-ideas .d-grid_6 ul, .m-gift-ideas .d-grid_6 ol {
+  position:relative;
+  font-size:1.30769em;
+}
+
+.m-gift-ideas .d-grid_6 ul {
+  left:1.1em;
+  margin-bottom:1em;
+}
+
+.m-gift-ideas .d-grid_6 ol {
+  margin-top:0;
+  left:-1.1em;
+}
+
+.m-gift-ideas-spacing {
+  margin:1em 0 -2em 0;
+}
+.m-gift-ideas .m-gift-ideas-bordered {
+  position:relative;
+  margin:0.4em 0 0.4em 0;
+  border-top:1px solid $accent-grey;
+  border-bottom:1px solid $accent-grey;
+}
+
+@media screen and (min-width:961px) {
+  .m-gift-ideas .m-shopping-cart-header {
+    margin-bottom:0.4em;
+  }
+  .m-gift-ideas .m-gift-ideas-bordered {
+    padding:0.7em 1em 0.7em 1em;
+  }
+  .m-gift-ideas-adjust {
+    position:relative;
+    left:1.3em;
+  }
+  .m-gift-ideas .instance-three .m-sidebar-recipient-area {
+    //height:180px;
+  }
+}
+
+@media screen and (max-width:960px) {
+  .gift-ideas-nav-toggle {
+    margin-top:1em;
+    left:0;
+    background-color: $grey;
+    border-top:1px solid $accent-grey;
+    border-bottom:1px solid $accent-grey;
+    width:100%;
+    height:3em;
+    padding:0.65em 0 0 1.1em;
+  }
+ .m-gift-ideas .m-gift-ideas-bordered {
+    padding:0.7em 0 0.7em 0.7em;
+  }
+  .m-gift-ideas .m-nav .m-nav-list .m-nav-list-item {
+    padding:0;
+  }
+  .m-gift-ideas .divider {
+    margin-bottom:0.3em;
+  }
+  .m-gift-ideas .nav-hidden {
+    cursor:pointer;
+  }
+}
+
+.m-gift-ideas-block {
+  margin: 1em 0 3em;
+  .m-gift-ideas-block-title {
+    font-family: $serif-stack-bold;
+  }
+  .m-gift-ideas-block-paragraph {
+    margin-bottom: 0;
+  }
+  &.m-gift-ideas-block-alt {
+    background:$grey;
+    padding: 1.5em 1em;
+  }
+}
+.m-gift-ideas-l-image-35 {
+  .m-gift-ideas-image {
+    max-width: 100%;
+    @include desktop(){
+      float: left;
+      width: 32%;
+      margin-right: 3%;
+    }
+  }
+}
+.m-gift-ideas-l-image-20 {
+  .m-gift-ideas-image {
+    max-width: 100%;
+    float: left;
+    width: 20%;
+    min-width: 10em;
+    margin-right: 3%;
+  }
+}
+.m-gift-ideas-r-image-20 {
+  .m-gift-ideas-image {
+    max-width: 100%;
+    float: right;
+    width: 20%;
+    min-width: 10em;
+    margin-left: 3%;
+  }
+}
+.m-gift-ideas-l-image-30 {
+  .m-gift-ideas-image {
+    max-width: 100%;
+    @include desktop(){
+      float: left;
+      width: 26%;
+      margin-left: 1%;
+      margin-right: 3%;
+    }
+
+  }
+}
+.m-gift-ideas-r-image-50 {
+  .m-gift-ideas-image {
+    max-width: 100%;
+    @include desktop(){
+      float: right;
+      margin-left: 3%;
+      width: 47%;
+    }
+  }
+}
+
+.m-gift-ideas-l-block-30 {
+  @include desktop(){
+    width: 30%;
+  }
+}
+.m-gift-ideas #bestsellersCaro {
+  margin: 0 !important;
+}

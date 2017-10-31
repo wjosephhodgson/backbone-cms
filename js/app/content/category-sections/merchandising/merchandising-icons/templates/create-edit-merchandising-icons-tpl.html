@@ -1,0 +1,109 @@
+<div class="row row-spaced">
+    <div class="col-12">
+        <div class="clearfix section-title">
+            <h2 class="pull-left"><%= id ? "Edit " : "Add New " %> Merchandising Icons</h2>
+            <div class="btn-panel">
+                <% if((id) && (type==="Custom")) { %> <button type="button" id="delete-btn" class="btn btn-cancel btn-panel pull-left ">Delete</button> <% } %>
+
+                <button type="button" id="cancel-btn" class="btn btn-other btn-panel pull-left">Cancel</button>
+                <button type="button" id="save-btn" class="btn btn-submit btn-panel"> Save</button>
+                <div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="y-space-top-m"> 
+    You can use this page to <%= id ? "modify your" : "create a new" %> Merchandising Icon. You can associate the icon with products or change the icon image.
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row row-spaced panel alert-panel">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-1">
+                <div class="icon icon-3x icon-warning"></div>
+            </div>
+            <div class="col-11 alert-text">
+                This is a generic placeholder for error messages in eSAT. <br>
+                In the live app, this will be a real message and will be hidden by default.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row row-spaced panel">
+    <form id="create-edit-merchandising-icon-form" name="create-edit-merchandising-icon-form" class="form-section">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-12">
+                    <div class="panel-title">Icon Info</div>
+                </div>
+            </div>
+            <div class="row row-spaced form-section">
+                <div class="col-6 form-section">
+                    <label>Merchandising Icon Name</label><i title="This is the name you give to the icon for record-keeping purposes. It is never seen by your customer." class="icon icon-tool-tip x-space-s"></i>
+                    <% if(type==="Teleflora") { %>
+                        <input type="text" id="f-create-edit-icon-name" name="f-create-edit-icon-name" value="<%= merchandisingIconName %>" disabled>
+                    <% } else { %>
+                        <input type="text" id="f-create-edit-icon-name" name="f-create-edit-icon-name" value="<%= merchandisingIconName %>">
+                    <% } %>
+                </div>
+                <div class="col-2">
+                    <div class="label">Status</div>
+                    <div class="centered-content-container">
+                        <input <%=  merchandisingActiveStatus ? 'checked' : ''%> type="checkbox" id="<%= 'merchandising-icon-active-' + id %>" name="<%= 'merchandising-icon-active-' + id %>" class="on-off-switch merchandisingActive-switch" />
+                        <label for="<%= 'merchandising-icon-active-' + id %>" class="on-off-switch-label">
+                        <div class="on-off-switch-state">on</div>
+                        </label>
+                    </div>
+                </div>
+                <div class="col-4 form-section">
+                    <label class="">Type</label>
+                    <input type="text" id="f-create-edit-icon-type" name="f-create-edit-icon-type" value="<%= type %>" disabled>
+                </div>
+            </div>
+            <div class="row row-spaced">
+                <div class="col-6 form-section">
+                    <label for="f-attribute-tag-icon">Icon Display Name </label><i title="If there is no image uploaded for the icon, this is the text that will be displayed instead." class="icon icon-tool-tip x-space-s"></i>
+                    <% if(type==="Teleflora") { %>
+                        <input type="text" id="f-attribute-tag-icon" name="f-attribute-tag-icon" value="<%= merchandisingIconTag %>" disabled>
+                    <% } else { %>
+                        <input type="text" id="f-attribute-tag-icon" name="f-attribute-tag-icon" value="<%= merchandisingIconTag %>">
+                    <% } %>
+                </div>
+                <div class="col-2 form-section">
+                    <% if(type==="Teleflora") { %>
+                    <% } else { %>
+                        <div class="label">Image<i title="Use this button to change the icon image." class="icon icon-tool-tip x-space-s"></i></div>
+                        <button type="button" id="merchandising-btn-logo" name="merchandising-btn-logo" class="icon icon-btn icon-image btn-file icon-3x"></button>
+                    <% } %>
+                </div>
+                <div class="col-4 form-section">
+                    <div class="label y-space-bottom-s">Image Preview<i title="This is the image for your merchandising icon." class="icon icon-tool-tip x-space-s"></i> </div>
+                    <img id="preview-merchandising-Img" class="icon icon-2x" src="<%= merchandisingconImage %>" style="max-height:60%; max-width:60%;">
+                </div>
+            </div>
+            <div class="row row-spaced">
+                <div class="col-12 y-space-bottom-s">
+                    <div class="clearfix panel-title">Associated Products</div>
+                </div>
+                <div class="col-12">
+                    <div class="">
+                        Selected products that will use this Merchandising Icon
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div id="featured-product"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+

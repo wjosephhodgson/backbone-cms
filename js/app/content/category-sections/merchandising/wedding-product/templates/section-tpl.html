@@ -1,0 +1,13 @@
+<tr class="sortable" data-id="<%= id %>">
+	<td><%= order %></td>
+	<td><%= attribute %></td>
+	<td>
+		<div class="centered-content-container">
+		<input <%= active ? 'checked' : ''%> type="checkbox" id="filter-<%= id %>" name="filter-<%= id %>" class="on-off-switch" />
+	    
+	    <label for="filter-<%= id %>" class="on-off-switch-label">
+	        <div class="on-off-switch-state">on</div>
+	    </label>
+	    </div>
+	</td>
+</tr>

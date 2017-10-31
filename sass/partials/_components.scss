@@ -1,0 +1,242 @@
+.section-title {
+    border-bottom: 2px solid $color-accent-2;
+    height: 3.5em;
+
+    & > h2 {
+        position: relative;
+        margin: 0;
+        top: 0.45em;
+        font-size: 1.9em;
+    }
+}
+
+.section-title-with-sub-title {
+    @include clearfix();
+
+    padding-bottom: $space-s;
+    border-bottom: 2px solid $color-accent-2;
+
+    & h2 {
+        position: relative;
+        margin: 0;
+        font-size: 1.9em;
+    }
+
+    & h3 {
+        margin: 0;
+    }
+}
+
+.panel {
+    margin-left: 0;
+    margin-right: 0;
+    background-color: $color-neutral-1;
+    border: 1px solid $color-border-2;
+    padding: $space-s;
+    @include border-radius(5px);
+
+    &.transparent {
+        background-color: transparent;
+    }
+
+    &.alert-panel{
+        background-color: $color-accent-4;
+
+        .alert-text{
+            font-size: $font-size-l;
+        }
+    }
+
+    &.hidden-field-tip {
+        display:none;
+        z-index:200;
+        top:90%;
+        position:absolute;
+        .alert-text {
+            font-size: 1em;
+        }
+        .icon-warning {
+            margin-top: 4px;
+        }
+    }
+
+}
+
+
+
+.panel-title {
+    border-bottom: 2px solid $color-accent-2;
+    padding-bottom: $space-xs;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: $space-xs;
+}
+
+.panel-subtitle {
+    display: inline;
+    text-align: right;
+    float: right;
+    margin: 0.1em 0.2em 0em 0em;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+.panel-list {
+    @extend .panel;
+
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.listing {
+    @extend .compact-list;
+
+    background-color: white;
+    border: 1px solid $color-border-1;
+    @include border-radius(3px);
+
+    & li {
+        padding: $space-s $space-l;
+        border-bottom: 1px solid $color-border-1;
+
+        &.highlighted {
+            background-color: $color-accent-2-light !important;
+        }
+    }
+
+    & li:last-child {
+        border: 0;
+    }
+}
+
+.grid-2 {
+    & .grid-item {
+        float: left;
+        width: 46%;
+        margin: 2%;
+    }
+}
+
+.grid-2-closed {
+    border: 1px solid $color-border-1;
+    @include border-radius(3px);
+
+    & .grid-item {
+        @extend .col-6;
+        border: 1px solid $color-border-1;
+        padding: $space-s;
+
+        &.active {
+            background-color: $color-accent-2-light;
+        }
+    }
+}
+
+.grid-3-closed {
+    @include border-radius(3px);
+
+    & > .grid-item {
+        @extend .col-4;
+        border: 1px solid $color-border-1;
+        padding: $space-s;
+    }
+}
+
+.grid-4-closed {
+    @include border-radius(3px);
+
+    & > .grid-item {
+        @extend .col-3;
+        border: 1px solid $color-border-1;
+        padding: $space-s;
+
+    }
+}
+
+.grid-6-closed {
+    @include border-radius(3px);
+
+    & > .grid-item {
+        @extend .col-2;
+        border: 1px solid $color-border-1;
+        padding: $space-s;
+    }
+}
+
+.scroll-container {
+    background-color: white;
+    height: 375px;
+    width: 100%;
+    overflow: auto;
+
+    &.auto-resize {
+        height: auto;
+        max-height: 300px;
+    }
+}
+
+.display-container {
+    @extend .scroll-container;
+    @extend .center-align;
+    border: 1px solid $color-border-1;
+    overflow: hidden;
+    padding: $space-s;
+
+    & > img {
+        @extend .fit-container;
+    }
+}
+
+.hover-tip {
+    visibility: hidden;
+    position: absolute;
+    font-weight: bold;
+    cursor: default;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: $color-accent-2-light;
+    opacity: .7;
+}
+
+.hover-tip-overlay {
+    position: relative;
+
+    &:hover {
+        & > .hover-tip {
+            visibility: visible;
+        }
+    }
+
+    &.active {
+    	& > .hover-tip {
+    		visibility: visible;
+    	}
+    }
+}
+
+.detail-block {
+
+    .row {
+        position: relative;
+    }
+
+    .detail-divider {
+        position: absolute;
+        left: 25.55%;
+        top: -20%;
+        bottom: -20%;
+        background-color: $color-neutral-5;
+        width: 2px;
+    }
+
+    .detail-title {
+        font-size: $font-size-xl;
+    }
+
+    .detail-text {
+        font-size: $font-size-xl;
+    }
+
+}

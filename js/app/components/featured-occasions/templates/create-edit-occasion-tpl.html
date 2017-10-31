@@ -1,0 +1,67 @@
+<form id="create-edit-form" class="row row-spaced panel form-section">
+
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Featured Occasion</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="pull-right">
+				<button type="button" id="cancel-btn" type="button" class="btn btn-other x-space-s">Cancel</button>
+				<button type="button" id="save-btn" type="button" class="btn btn-submit pull-right">
+					<% if (!id) { %><i class="icon icon-add icon-lg"></i><% } %>Save
+				</button>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="row row-spaced">
+		<div class="col-6 form-section">
+			<label for="f-occasion">Occasion</label><i title="Use the dropdown to select which occasion you would like featured." class="icon icon-tool-tip x-space-s"></i>
+			<div class="select-container">
+			    <select id="f-occasion" name="f-occasion">
+			        <% for(var i = 0, j = allOccasions.length; i < j; ++i) {%>
+			        	<option value="<%= allOccasions[i].id %>" <%= allOccasions[i].occasion === occasion ? 'selected' : ''%>><%= allOccasions[i].occasion + '&#160;&#160;&#160;&#160;&#160;&#160;|&#160;&#160;&#160;ID ' + allOccasions[i].id + '&#160;&#160;&#160;&#160;|&#160;&#160;&#160;' + allOccasions[i].type %></option>
+			        <% } %>
+			    </select>
+			</div>
+		</div>
+
+		<div class="col-6 form-section">
+			<label for="f-occasion-label">Occasion Label</label><i title="What should this occasion say? This is what the online customer will see." class="icon icon-tool-tip x-space-s"></i>
+			<input type="text" id="f-occasion-label" name="f-occasion-label" value="<%= label %>">
+		</div>
+	</div>
+	<% if( (!noText) ){ %>
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<label for="f-occasion-text">Occasion Text</label><i title="Use this to give the online customers an idea of what this category is all about." class="icon icon-tool-tip x-space-s"></i>
+			<textarea class="size-2" name="f-occasion-text" id="f-occasion-text"><%= text %></textarea>
+		</div>
+	</div>
+	<% } %>
+
+	<div class="row row-spaced">
+		<div class="col-6 form-section">
+			<label for="f-view-all-text">View All Text</label><i title="What would you like the link to the category to say?" class="icon icon-tool-tip x-space-s"></i>
+			<input type="text" id="f-view-all-text" name="f-view-all-text" value="<%= viewAllText %>">
+		</div>
+		<% if (!isDefault) { %>
+		<div class="col-3 form-section">
+			<label for="f-start-date">Start Date</label><i title="When you want to start featuring this category?" class="icon icon-tool-tip x-space-s"></i>
+			<div class="date-container">
+				<input type="text" id="f-start-date" name="f-start-date" class="date" value="<%= startDate %>">
+			</div>
+		</div>
+		<div class="col-3 form-section">
+			<label for="f-end-date">End Date</label><i title="When do you want to stop featuring this category?" class="icon icon-tool-tip x-space-s"></i>
+			<div class="date-container">
+				<input type="text" id="f-end-date" name="f-end-date" class="date" value="<%= endDate %>">
+			</div>
+		</div>
+		<% } %>
+	</div>
+</form>

@@ -1,0 +1,204 @@
+[
+
+	{
+		"id": 1,
+		"sequence": 1,
+		"imgUrl":"images/icons/addon-balloon.jpg",
+		"name": "Party",
+		"galleryStatus": true,
+		"type":"Teleflora",
+		"sections": [
+			{
+			"id": 1,
+			"sequence": 1,
+			"sectionImage":"http://www.telefloramarketing.com/mock/bouquet-1.png",
+			"sectionName": "Religious & Cultural Traditions",
+			"sectionCaption":"Lorem Ipsum latin word stuff to filll in space",
+			"sectionStatus": true,
+			"imgType": "Teleflora"
+			},
+			{
+			"id": 2,
+			"sequence": 2,
+			"sectionImage":"http://www.telefloramarketing.com/mock/bouquet-2.png",
+			"sectionName": "Funeral & Sympathy Etiquette",
+			"sectionCaption":"Lorem Ipsum latin word stuff to filll in space",
+			"sectionStatus": true,
+			"imgType": "Teleflora"
+			},
+			{
+			"id": 3,
+			"sequence": 3,
+			"sectionImage":"http://www.telefloramarketing.com/mock/bouquet-3.png",
+			"sectionName": "Symbolic Meaning of Funeral Flower",
+			"sectionCaption":"Lorem Ipsum latin word stuff to filll in space",
+			"sectionStatus": true,
+			"imgType": "Teleflora"
+			},
+			{
+			"id": 4,
+			"sequence": 4,
+			"sectionImage":"http://www.telefloramarketing.com/mock/bouquet-4.png",
+			"sectionName": "Symbolic Meaning of Funeral Flower",
+			"sectionCaption":"Lorem Ipsum latin word stuff to filll in space",
+			"sectionStatus": false,
+			"imgType": "Teleflora"
+			}
+		],
+		"mainTitle": "Main Title & Copy",
+		"metaTitle": "Meta Title",
+		"metaKeywords": "Meta Keywords",
+		"metaDescription": "Meta Description",
+		"metaTags": "Meta Tags"
+	},
+	{
+		"id": 2,
+		"sequence": 2,
+		"name": "Reception",
+		"galleryStatus": true,
+		"type":"Custom",
+		"sections": [
+			{
+			"id": 1,
+			"sequence": 1,
+			"sectionImage":"http://www.telefloramarketing.com/mock/bouquet-1.png",
+			"sectionName": "Religious & Cultural Traditions",
+			"sectionCaption":"Lorem Ipsum latin word stuff to filll in space",
+			"sectionStatus": true,
+			"imgType": "Custom"
+			},
+			{
+			"id": 2,
+			"sequence": 2,
+			"sectionImage":"http://www.telefloramarketing.com/mock/bouquet-2.png",
+			"sectionName": "Funeral & Sympathy Etiquette",
+			"sectionCaption":"Lorem Ipsum latin word stuff to filll in space",
+			"sectionStatus": true,
+			"imgType": "Custom"
+			},
+			{
+			"id": 3,
+			"sequence": 3,
+			"sectionImage":"http://www.telefloramarketing.com/mock/bouquet-3.png",
+			"sectionName": "Symbolic Meaning of Funeral Flower",
+			"sectionCaption":"Lorem Ipsum latin word stuff to filll in space",
+			"sectionStatus": true,
+			"imgType": "Custom"
+			},
+			{
+			"id": 4,
+			"sequence": 4,
+			"sectionImage":"http://www.telefloramarketing.com/mock/bouquet-4.png",
+			"sectionName": "Symbolic Meaning of Funeral Flower",
+			"sectionCaption":"Lorem Ipsum latin word stuff to filll in space",
+			"sectionStatus": false,
+			"imgType": "Custom"
+			}
+		],
+		"mainTitle": "Main Title & Copy",
+		"metaTitle": "Meta Title",
+		"metaKeywords": "Meta Keywords",
+		"metaDescription": "Meta Description",
+		"metaTags": "Meta Tags"
+	},
+	{
+		"id": 3,
+		"sequence": 3,
+		"name": "Ceremony",
+		"galleryStatus": true,
+		"type":"Custom",
+		"sections": [
+			{
+			"id": 1,
+			"sequence": 1,
+			"sectionImage":"http://www.telefloramarketing.com/mock/bouquet-1.png",
+			"sectionName": "Religious & Cultural Traditions",
+			"sectionCaption":"Lorem Ipsum latin word stuff to filll in space",
+			"sectionStatus": true,
+			"imgType": "Custom"
+			},
+			{
+			"id": 2,
+			"sequence": 2,
+			"sectionImage":"http://www.telefloramarketing.com/mock/bouquet-2.png",
+			"sectionName": "Funeral & Sympathy Etiquette",
+			"sectionCaption":"Lorem Ipsum latin word stuff to filll in space",
+			"sectionStatus": true,
+			"imgType": "Custom"
+			},
+			{
+			"id": 3,
+			"sequence": 3,
+			"sectionImage":"http://www.telefloramarketing.com/mock/bouquet-3.png",
+			"sectionName": "Symbolic Meaning of Funeral Flower",
+			"sectionCaption":"Lorem Ipsum latin word stuff to filll in space",
+			"sectionStatus": true,
+			"imgType": "Custom"
+			},
+			{
+			"id": 4,
+			"sequence": 4,
+			"sectionImage":"http://www.telefloramarketing.com/mock/bouquet-4.png",
+			"sectionName": "Symbolic Meaning of Funeral Flower",
+			"sectionCaption":"Lorem Ipsum latin word stuff to filll in space",
+			"sectionStatus": false,
+			"imgType": "Custom"
+			}
+		],
+		"mainTitle": "Main Title & Copy",
+		"metaTitle": "Meta Title",
+		"metaKeywords": "Meta Keywords",
+		"metaDescription": "Meta Description",
+		"metaTags": "Meta Tags"
+	},
+	{
+		"id": 4,
+		"sequence": 4,
+		"name": "Preparation",
+		"galleryStatus": false,
+		"type":"Custom",
+		"sections": [
+			{
+			"id": 1,
+			"sequence": 1,
+			"sectionImage":"http://www.telefloramarketing.com/mock/bouquet-1.png",
+			"sectionName": "Religious & Cultural Traditions",
+			"sectionCaption":"Lorem Ipsum latin word stuff to filll in space",
+			"sectionStatus": true,
+			"imgType": "Custom"
+			},
+			{
+			"id": 2,
+			"sequence": 2,
+			"sectionImage":"http://www.telefloramarketing.com/mock/bouquet-2.png",
+			"sectionName": "Funeral & Sympathy Etiquette",
+			"sectionCaption":"Lorem Ipsum latin word stuff to filll in space",
+			"sectionStatus": true,
+			"imgType": "Custom"
+			},
+			{
+			"id": 3,
+			"sequence": 3,
+			"sectionImage":"http://www.telefloramarketing.com/mock/bouquet-3.png",
+			"sectionName": "Symbolic Meaning of Funeral Flower",
+			"sectionCaption":"Lorem Ipsum latin word stuff to filll in space",
+			"sectionStatus": true,
+			"imgType": "Custom"
+			},
+			{
+			"id": 4,
+			"sequence": 4,
+			"sectionImage":"http://www.telefloramarketing.com/mock/bouquet-4.png",
+			"sectionName": "Symbolic Meaning of Funeral Flower",
+			"sectionCaption":"Lorem Ipsum latin word stuff to filll in space",
+			"sectionStatus": false,
+			"imgType": "Custom"
+			}
+		],
+		"mainTitle": "Main Title & Copy",
+		"metaTitle": "Meta Title",
+		"metaKeywords": "Meta Keywords",
+		"metaDescription": "Meta Description",
+		"metaTags": "Meta Tags"
+	}
+]

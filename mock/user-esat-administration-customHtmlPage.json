@@ -1,0 +1,32 @@
+[
+{
+	"id": 1,
+	"CustomHTMLPageName": "FAQ Page",
+	"CustomHTMLPageActive": true
+},
+{
+	"id": 2,
+	"CustomHTMLPageName": "Contact eFlorist Support",
+	"CustomHTMLPageActive": true
+},
+{
+	"id": 3,
+	"CustomHTMLPageName": "SEO Made Easy",
+	"CustomHTMLPageActive": true
+},
+{
+	"id": 4,
+	"CustomHTMLPageName": "Product Announcements",
+	"CustomHTMLPageActive": true
+},
+{
+	"id": 5,
+	"CustomHTMLPageName": "eFlorist Insights",
+	"CustomHTMLPageActive": true
+},
+{
+	"id": 6,
+	"CustomHTMLPageName": "eFlorist Security",
+	"CustomHTMLPageActive": true
+}
+]

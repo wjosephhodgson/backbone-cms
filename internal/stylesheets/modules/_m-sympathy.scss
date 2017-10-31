@@ -1,0 +1,156 @@
+.m-sympathy {
+  .active {
+    color: $dark-grey;
+    cursor: default;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  #serviceTypeLink {
+    border-right: 1px solid $accent-grey;
+    padding-right: 5px;
+    margin-right: 2px;
+  }
+}
+
+.hide-this {
+  @include opacity(0);
+}
+
+.m-sympathy-service-link {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.m-sympathy-banner {
+  background-color: $grey;
+}
+
+.m-sympathy-banner-bg {
+  background-image: url('../images/sympathy/sympathy_header.jpg') !important;
+}
+
+.m-sympathy-service {
+  margin-bottom: 3em;
+
+  @include desktop() {
+    padding-right: 3%;
+    margin-bottom: 0;
+  }
+}
+
+.m-sympathy-home {
+  @include desktop() {
+    float: right !important;
+    padding-left: 3%;
+  }
+}
+
+.m-sympathy-home-list {
+  margin-top: 1.7em;
+}
+
+.m-sympathy-service-list, .m-sympathy-home-list {
+  list-style: none;
+}
+
+#serviceColorList {
+  @include desktop() {
+    text-align: left;
+
+    .non-icon-info {
+      text-align: center;
+    }
+  }
+}
+
+#serviceTypeList {
+  @include mobile() {
+    border-bottom: 1px solid $accent-grey;
+  }
+}
+
+.m-sympathy-list-item {
+  width: 200px;
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0 2%;
+  margin-bottom: 2em;
+  vertical-align: top;
+  line-height: 1.33;
+
+  @include desktop() {
+    width: 200px;
+    margin-right: 2.2%;
+    margin-left: 0;
+
+    &:nth-child(even), &.nth-child-even {
+      margin-right: 0;
+      margin-left: 2.2%;
+    }
+  }
+
+  a {
+    color: $black;
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+
+  &.m-sympathy-service-color-item {
+    width: 90px;
+    margin-bottom: 1em;
+
+    @include desktop() {
+      margin-right: 4%;
+    }
+
+    @include desktop() {
+      &:nth-child(even), &.nth-child-even {
+        margin-left: 0;
+      }
+
+      &:nth-child(4n), &.nth-child-4n {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.m-sympathy-see-more-item {
+  display: block;
+  text-align: left;
+
+  @include desktop() {
+    margin-bottom: -1em;
+  }
+}
+
+.m-sympathy-content-section {
+  @include desktop() {
+    background-image: url("../images/shelf.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    .m-sympathy-content-div {
+      width: 32.633% !important;
+    }
+  }
+
+  a {
+    font-size: 1.153846154em;
+    display: block;
+  }
+
+  img {
+    vertical-align: bottom;
+  }
+
+  article {
+    margin-top: 1.5em;
+  }
+}

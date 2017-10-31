@@ -1,0 +1,72 @@
+/*
+Syntax error: Undefined variable: "$esat-font-stack".
+        on line 19 of ./stylesheets/internal/lists_tables.scss
+
+14: 
+15: // General Table Alignment
+16: .table .table-row .table-data, .table .table-row .table-data-alt, .table .table-row .table-data-alt2{text-align:center;}
+17: .esat-first-cell, .table-head-esat .esat-first-cell{text-align:left!important;}
+18: .table .table-row .table-data-alt:first-child{padding-left:10px;}
+19: .table .table-row .table-header, .table .table-row .table-header-alt{font-family:$esat-font-stack !important; font-size: 15pt; text-transform:lowercase;}
+20: 
+21: // Content Box
+22: .esat_content_box_text{margin-bottom: 1em; font-size:14px;}
+23: .esat_content_box_btn{}
+
+Backtrace:
+./stylesheets/internal/lists_tables.scss:19
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/script/variable.rb:49:in `_perform'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/script/node.rb:40:in `perform'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/script/list.rb:71:in `block in _perform'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/script/list.rb:71:in `map'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/script/list.rb:71:in `_perform'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/script/node.rb:40:in `perform'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:298:in `visit_prop'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `map'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `map'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:7:in `visit'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/tree/root_node.rb:20:in `render'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/engine.rb:315:in `_render'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/engine.rb:262:in `render'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:201:in `each'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin.rb:81:in `update_stylesheets'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin.rb:54:in `check_for_updates'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/sass-3.2.14/lib/sass/plugin/rack.rb:51:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/lint.rb:49:in `_call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/lint.rb:37:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/showexceptions.rb:24:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/commonlogger.rb:33:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/chunked.rb:43:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+C:/Ruby200/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+C:/Ruby200/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+C:/Ruby200/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+C:/Ruby200/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$esat-font-stack\".\A         on line 19 of ./stylesheets/internal/lists_tables.scss\A \A 14: \A 15: // General Table Alignment\A 16: .table .table-row .table-data, .table .table-row .table-data-alt, .table .table-row .table-data-alt2{text-align:center;}\A 17: .esat-first-cell, .table-head-esat .esat-first-cell{text-align:left!important;}\A 18: .table .table-row .table-data-alt:first-child{padding-left:10px;}\A 19: .table .table-row .table-header, .table .table-row .table-header-alt{font-family:$esat-font-stack !important; font-size: 15pt; text-transform:lowercase;}\A 20: \A 21: // Content Box\A 22: .esat_content_box_text{margin-bottom: 1em; font-size:14px;}\A 23: .esat_content_box_btn{}"; }

@@ -1,0 +1,81 @@
+.m-login {
+  //position: relative;
+  //width: 100%;
+  margin-bottom: 1.8em !important;
+
+  @include desktop(){
+    margin-bottom: 4em !important;
+    border-right: 1px solid $select-grey;
+  }
+
+  .btn-facebook {
+    display: block;
+    margin: 0 auto;
+    padding-left: 3.2em;
+    font-size: 1.0em;
+    width: 18.45em;
+    margin-bottom: 1.2em;
+
+    @include desktop(){
+      margin: 0;
+      padding-left: 3.2em;
+      font-size: 1.0em;
+      width: 18.45em;
+      margin-bottom: 1.2em;
+    }
+  }
+}
+
+.m-login-form {
+  text-align: left;
+
+  @include desktop(){
+    text-align: left;
+  }
+}
+
+.m-login-form-forgot-pw {
+  display: block;
+  font-size: 1em;
+  margin-top: 0.5em;
+  text-align: center;
+
+  @include desktop(){
+    text-align: left;
+  }
+}
+
+.m-login-form-right{
+
+  text-align: left;
+
+  @include desktop(){
+    padding-left: 4.15em;
+  }
+}
+
+.m-login-btn-submit{
+  display: block;
+  margin: 0 auto;
+  margin-top: 1.2em;
+
+  @include desktop(){
+    display: inline-block;
+    margin: 0;
+  }
+}
+
+.m-login-subheader {
+  //new to teleflora?
+  font-size: 1.846em; //24px
+  padding-bottom: 0.5em; //16px
+  margin-bottom: 0.5em;
+  text-align: center;
+
+  @include desktop() {
+    padding-bottom: 1.2em;
+    margin-bottom: 0.0em;
+    text-align: left;
+    margin-top: 1em;
+  }
+}

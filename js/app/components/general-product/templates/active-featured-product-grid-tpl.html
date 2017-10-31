@@ -1,0 +1,23 @@
+<div data-id="<%= id %>" class="grid-item hover-tip-overlay">
+  <% if(hoverTitle) { %>
+  <div class="hover-tip">
+    <div class="row row-spaced center-align">
+      <%= name %>
+    </div>
+  </div>
+  <% } %>
+	<img src="<%= imgUrl %>">
+
+  <% if(!hoverTitle) { %>
+    <div class="row row-spaced center-align">
+      <%= name %>
+    </div>
+  <% } %>
+  <% if(!disabled) { %>
+	<div class="row bottom-overlay">
+		<div class="col-12">
+			<button type="button" class="icon icon-trash icon-btn fa-lg pull-left"></button>
+		</div>
+	</div>
+  <% } %>
+</div>

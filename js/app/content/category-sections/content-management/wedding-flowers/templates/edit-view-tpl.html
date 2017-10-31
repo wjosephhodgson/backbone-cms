@@ -1,0 +1,155 @@
+<div id="section-modal" class="form-section left-align">
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="section-title clearfix">
+				<h2 class="pull-left"><% if (id) { %><%= sectionTitle %><% } else { %>Add New<% } %></h2>
+				<div class="btn-panel">
+					<button type="button" id="save-btn" class="btn btn-submit pull-right">Save</button>
+			        <% if (id) { %>
+			        	<% if(federated) {%><% }else{ %>
+			        	<button type="button" id="delete-btn"class="btn btn-cancel">Delete</button>
+			        	<% } %>
+			        <% } %>
+			        <button type="button" id="cancel-btn"class="btn btn-other">Cancel</button>
+					<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+	<div class="row row-spaced panel form-section">
+		<div class="row">
+			<div class="col-6">
+				<label for="f-section-title">Section Title<i class="icon icon-tool-tip x-space-s" title="This is the name of the flower/color."></i></label>
+				<input type="text" <%= federated === true ? 'disabled ' : '' %>id="f-section-title" name="f-section-title" value="<%= sectionTitle %>">
+			</div>
+			<div class="col-2">
+				<div class="label">Active</div>
+				<input <%= sectionStatus ? 'checked' : '' %> type="checkbox" id="f-sectionStatus" name="f-sectionStatus" class="on-off-switch" />
+				<label for="f-sectionStatus" class="on-off-switch-label">
+				<div class="on-off-switch-state">on</div>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 form-section">
+				<label for="f-sectionDescription" class="pull-left">Section Description<i title="This descriptive text will appear next to the name of the flower/color." class="icon icon-tool-tip x-space-s"></i></label>
+				<textarea name="f-sectionDescription" <%= federated === true ? 'disabled ' : '' %>id="f-sectionDescription" class="size-2"><%= sectionDescription %></textarea>
+			</div>
+		</div>
+	</div>
+
+	<!-- Left Image Section Start -->
+	<div class="row row-spaced panel form-section">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">Left Image - Section</div>
+			</div>
+		</div>
+		<div class="row row-spaced">
+			<div class="col-4">
+				<label for="f-left-image-title" class="pull-left">Image Title<i class="icon icon-tool-tip x-space-s" title="This is the name of the image and appears directly underneath it."></i></label>
+				<input type="text" <%= federated === true ? 'disabled ' : '' %>id="f-left-image-title" name="f-left-image-title" value="<%= leftTitle %>">
+			</div>
+			<% if(federated) {%><% }else{ %>
+			<div class="col-4">
+				<div class="label">Photo Upload</div>
+				<button type="button" class="image-upload icon icon-btn icon-image btn-file icon-2x y-space-s" id="leftimagebutton" value="<%= leftImage %>"></button>
+			</div>
+			<% } %>
+			<div class="col-4 center-align">
+				<div class="center-align"><img id="f-left-image"  class="center-align  small-table-image" src="<%= leftImage %>" alt=""></div>
+			</div>
+		</div>
+	
+		<div class="row">
+			<div class="col-12 form-section">
+				<label for="f-left-sectionDescription" class="pull-left">Image Caption<i title="This descriptive text is displayed just underneath the Image Title." class="icon icon-tool-tip x-space-s"></i></label>
+				<textarea name="f-left-sectionDescription" <%= federated === true ? 'disabled ' : '' %>id="f-left-sectionDescription" class="size-2"><%= leftCaption %></textarea>
+			</div>
+			<div class="col-12 right-align">Max. 120 Characters</div>
+		</div>
+	</div>
+	<!-- Left Image Section End -->
+
+	<!-- Middle Image Section Start -->
+	<div class="row row-spaced panel form-section">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">Middle Image - Section</div>
+			</div>
+		</div>
+		<div class="row row-spaced">
+			<div class="col-4">
+				<label for="f-middle-image-title" class="pull-left">Image Title<i class="icon icon-tool-tip x-space-s" title="This is the name of the image and appears directly underneath it."></i></label>
+				<input type="text" <%= federated === true ? 'disabled ' : '' %>id="f-middle-image-title" name="f-middle-image-title" value="<%= middleTitle %>">
+			</div>
+			<% if(federated) {%><% }else{ %>
+			<div class="col-4">
+				<div class="label">Photo Upload</div>
+				<button type="button" id="middleimagebutton" class="image-upload icon icon-btn icon-image btn-file icon-2x y-space-s" value="<%= middleImage %>"></button>
+			</div>
+			<% } %>
+			<div class="col-4 center-align">
+				<div class="center-align"><img id="f-middle-image"  class="center-align  small-table-image" src="<%= middleImage %>" alt=""></div>
+			</div>
+		</div>
+	
+		<div class="row">
+			<div class="col-12 form-section">
+				<label for="f-middle-sectionDescription" class="pull-left">Image Caption<i title="This descriptive text is displayed just underneath the Image Title." class="icon icon-tool-tip x-space-s"></i></label>
+				<textarea name="f-middle-sectionDescription" <%= federated === true ? 'disabled ' : '' %>id="f-middle-sectionDescription" class="size-2"><%= middleCaption %></textarea>
+			</div>
+			<div class="col-12 right-align">Max. 120 Characters</div>
+		</div>
+	</div>
+	<!-- Middle Image Section End -->
+
+	<!-- Right Image Section Start -->
+	<div class="row row-spaced panel form-section">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">Right Image - Section</div>
+			</div>
+		</div>
+		<div class="row row-spaced">
+			<div class="col-4">
+				<label for="f-right-image-title" class="pull-left">Image Title<i class="icon icon-tool-tip x-space-s" title="This is the name of the image and appears directly underneath it."></i></label>
+				<input type="text" <%= federated === true ? 'disabled ' : '' %>id="f-right-image-title" name="f-right-image-title" value="<%= rightTitle %>">
+			</div>
+			<% if(federated) {%><% }else{ %>
+			<div class="col-4">
+				<div class="label">Photo Upload</div>
+				<button type="button" id="rightimagebutton" class="image-upload icon icon-btn icon-image btn-file icon-2x y-space-s" value="<%= rightImage %>"></button>
+			</div>
+			<% } %>
+			<div class="col-4 center-align">
+				<div class="center-align"><img id="f-right-image" class="center-align  small-table-image" src="<%= rightImage %>" alt=""></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 form-section">
+				<label for="f-right-sectionDescription" class="pull-left">Image Caption<i title="This descriptive text is displayed just underneath the Image Title." class="icon icon-tool-tip x-space-s"></i></label>
+				<textarea name="f-right-sectionDescription" <%= federated === true ? 'disabled ' : '' %>id="f-right-sectionDescription" class="size-2"><%= rightCaption %></textarea>
+			</div>
+			<div class="col-12 right-align">Max. 120 Characters</div>
+		</div>
+	</div>
+	<!-- Right Image Section End -->
+</div>

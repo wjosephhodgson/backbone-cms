@@ -1,0 +1,25 @@
+#shop-value-icons #active-items {
+	background-color: white;
+
+	& .grid-item {
+		position: relative;
+		padding-bottom: $space-xl;
+		height: 120px;
+	}
+
+	& .icon-trash {
+		position: absolute;
+		bottom: $space-s;
+		left: $space-s;
+	}
+
+	& img {
+		height: auto;
+		width: 40%;
+		max-width: 120px * .4;
+	}
+}
+
+#promo-display, #tile-display {
+	//height: 400px;
+}

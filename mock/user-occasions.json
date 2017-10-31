@@ -1,0 +1,31 @@
+[
+	{
+		"id": 1,
+		"occasion": "Birthday for Him",
+		"occasionId": 1,
+		"isDefault": true,
+		"label":"Birthday for Him label",
+		"text":"Birthday for Him text",
+		"viewAllText":"View all text for Birthday for Him"
+	},
+	{
+		"id": 2,
+		"occasion": "Mother's Day",
+		"occasionId": 8,
+		"startDate": "05/02/14",
+		"endDate": "05/11/14",
+		"label":"Mother's Day label",
+		"text":"Mother's Day text",
+		"viewAllText":"View all text for Mother's Day"
+	},
+	{
+		"id": 3,
+		"occasion": "Valentine's Day",
+		"occasionId": 7,
+		"startDate": "02/01/14",
+		"endDate": "02/14/14",
+		"label":"Valentine's Day label",
+		"text":"Valentine's Day text",
+		"viewAllText":"View all text for Valentine's Day"
+	}
+]

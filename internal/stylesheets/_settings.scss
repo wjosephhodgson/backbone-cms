@@ -1,0 +1,64 @@
+$ui-sprite-path:"../images/ui-sprite.svg";
+
+//// colors
+$dark-grey: #787878;
+$light-grey: #efefef;
+$select-grey: #dedede;
+$accent-grey: #cccccc;
+$grey: #f5f5f5;
+
+$pink: #fa3c7a;
+$dark-pink: #e4376f;
+$light-pink: #ffeaed;
+$pink-var: #ff8ac1;
+$red: #e20000;
+$orange: #ff7800;
+$light-orange: #ffc53e;
+$yellow: #ffd200;
+$light-yellow: #faf243;
+$green: #7fcf29;
+$light-green: #c1ee27;
+$dark-green: #18a75d;
+$blue: #39579a;
+$purple: #a859cd;
+$dark-purple: #581456;
+$lavender: #ac246b;
+
+$facebook: #39579a;
+
+
+
+$white: #fff;
+$black: #242424;
+
+// typography
+
+$sans-stack: "Avenir LT W01 65 Medium", Helvetica, sans-serif;
+$sans-stack-book: "Avenir LT W01 45 Book", Helvetica, sans-serif;
+$sans-stack-heavy: "Avenir LT W01 85 Heavy", Helvetica, sans-serif;
+
+$serif-stack: "Bembo W01", Georgia, "Times New Roman", serif;
+$serif-stack-bold: "Bembo MT W01 Bold", Georgia, "Times New Roman", serif;
+
+// compass configs for vertical rythm (http://compass-style.org/reference/compass/typography/vertical_rhythm/)
+
+$base-font-size: 13px;
+$base-line-height: 22px;
+
+// vertical rythm
+
+$padding-small: 0.33333333333em;
+$padding-medium: 0.6666666666em;
+$padding-large: 1em;
+$padding-xlarge: 1.53846153846em;
+
+// responsive
+
+$break-small: 960px;
+$break-medium: 960px;
+$break-large: 960px;
+$break-phone: 578px;
+
+// misc
+
+$border-radius: 3px;

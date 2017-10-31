@@ -1,0 +1,380 @@
+// Table of Contents
+
+// .m-navbar-has-subnav
+// .m-navbar-secondlevel
+// breakpoint1
+.m-navbar{
+  overflow:visible;
+  height:7.69230769231em;
+  z-index:2;
+  top: 0;
+  left:0;
+  border-bottom:1px solid $accent-grey;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.05);
+  @include translate3d(0, 0, 0);
+
+  &.m-navbar-cart{
+    height: 4.692308em;
+  }
+
+  ul {
+    padding: 0; //firefox fix
+  }
+}
+  .no-csstransforms3d .m-navbar {left:0;}
+
+.touch .m-navbar{
+  @include transition(height, 0.5s);
+}
+
+.touch .m-navbar.is-tablet-expanded{
+  height:34.75em;
+  &.is-quickshop-expanded-tablet{height:20em;}
+}
+
+.touch .master-header{
+  @include transition(height, 0.5s);
+
+  &.is-tablet-expanded{
+    height:34.75em;
+      &.is-quickshop-expanded-tablet{height:20em;}
+  }
+}
+
+.m-navbar-link{
+  margin-left:0;
+  width:100%;
+}
+
+.m-navbar-item.m-navbar-search-wrapper{
+  position:absolute;
+  top:2.15em;
+  width:18em;
+  margin:0px; //can't be added as class
+  z-index: 1000;
+}
+
+.m-navbar-search{
+  padding: 0.4em 2em 0.4em 0.4em !important;
+  width:100% !important;
+  font-size:0.95em;
+}
+.m-navbar-search-btn{
+  right: 5px;
+  top: 3px;
+}
+
+.m-navbar-toplevel{
+  top:5.2em;
+
+  .m-navbar-quickshop{
+    position:relative;
+
+    .m-navbar-secondlevel{
+      width: 21em;
+      padding: 0 2em;
+      right: 0px;
+    }
+  }
+}
+
+.m-navbar-item{
+  width: auto;
+  float: left;
+  z-index:99;
+
+  padding:0 !important;
+  margin-right:0.5em;
+  border-bottom:0;
+
+  &.m-navbar-item-first{
+    .m-navbar-link{
+      width:8.5em;
+      margin-left:0;
+      padding-left:0 !important;
+    }
+  }
+
+  &.m-navbar-quickshop{
+    float:right;
+    margin-right: 0;
+
+    &:after{
+      display:none;
+    }
+  }
+}
+
+.touch nav.m-navbar.is-tablet-expanded .m-navbar-toplevel .m-navbar-quickshop .m-navbar-secondlevel {
+  width: 940px;
+}
+
+
+.touch nav.m-navbar.is-tablet-expanded #quickForm .form-field{width:30%; margin-left:3%; display:block; float:left;}
+
+.is-subnav-expanded #calendarTrigger{
+  color: $white !important;
+  &:after{background-image:none; display:none;}
+}
+
+#calendarTrigger{
+  text-transform:uppercase;
+  text-decoration:none;
+
+  .m-navbar-secondlevel{
+    height:0em;
+  }
+
+  &:after{background-image:none; display:none;}
+}
+
+#quickForm{
+  margin-top: 2em;
+}
+
+
+.m-navbar-toplevel > .m-navbar-item > .m-navbar-link{
+  padding:0.5em 0.5em 0.4em 0.5em;
+
+  &.m-subnav-trigger{
+
+    &:after{
+      position:relative;
+      z-index:1;
+    }
+  }
+}
+
+.m-navbar-item.is-subnav-expanded > .m-navbar-link, .m-navbar-link.is-subnav-expanded{
+    background: $pink;
+    color: $white;
+    border-top-left-radius:3px;
+    border-top-right-radius:3px;
+
+    &.m-subnav-trigger:after{background-position: -162px -22px;}
+
+  }
+
+
+.m-navbar-link.m-subnav-trigger:after, .m-navbar-title.m-subnav-trigger:after{
+  height: 0.65em;
+
+  margin-top:0.5em;
+  margin-right:0;
+  margin-left:0.30769230769em;
+
+  background-position: -162px -6px;
+  background-size: 20em;
+}
+
+.m-navbar-secondlevel{
+  top: 2.4em;
+  right:0;
+  z-index:2;
+
+  width:100%;
+  display:none;
+
+  padding-top:0.2em;
+  background:transparent;
+
+  @include translate3d(0, 0, 0);
+
+  -moz-transition:none;
+  -webkit-transition:none;
+  -o-transition:none;
+  transition:none;
+
+  .m-navbar-link:hover{
+    background:transparent;
+    color:$pink;
+  }
+
+  .m-navbar-link{
+    width:auto;
+
+    margin-left:0;
+    margin-bottom: 0.4em;
+    padding: 0.25em 0;
+  }
+
+  &.m-navbar-secondlevel-price{
+    height:22em;
+
+    .m-navbar-set{height:22em;}
+  }
+}
+.no-csstransforms3d .m-navbar-secondlevel {
+  position: absolute;
+}
+
+.m-navbar-set{
+  position:relative;
+  width:25%;
+  height: 27em;
+  display:block;
+  float:left;
+
+  padding:0 2%;
+  margin-right: 5px;
+  margin-left: -8px;
+
+  border-left:1px solid $accent-grey;
+
+  &:first-of-type{border-left:0; margin-left:0;}
+
+  .m-navbar-link.alt-pink{
+    font-family:$sans-stack;
+    font-size:1.15384615385em;
+    text-transform:none;
+  }
+
+  &.m-navbar-set-large{
+    width:50%;
+
+    .m-navbar-thumbnail{width:24% !important;}
+
+    .m-navbar-item{
+      width:50%;
+      margin-right: 0;
+
+      &.m-navbar-divider{width:100%;}
+    }
+  }
+}
+
+.m-navbar-price{
+
+  .fluid{
+    width:98%;
+    padding:0 1%;
+  }
+}
+
+.m-navbar-collection{
+  margin-top:1.5em;
+
+  .fluid{width:98%;}
+  .m-navbar-link{width:100%;}
+}
+
+.m-navbar-secondlevel .m-navbar-item{
+  width:100%;
+  float:left;
+}
+
+.m-navbar-divider{
+  background:transparent;
+
+  .m-navbar-title{
+    width:100%;
+    display:block;
+    float:left;
+
+    padding: 0.5em 0 0.15em;
+
+    margin-bottom: 0.4em;
+
+    font-family:$serif-stack;
+    font-size:1.3em;
+    text-transform:none;
+
+    border-bottom: 1px solid $accent-grey;
+  }
+}
+
+.m-navbar-upcoming{
+  margin-bottom:0.75em;
+
+  .m-navbar-link{
+    width:11.5em;
+    line-height: 1.3em;
+  }
+}
+
+.m-navbar-fulltitle{
+  width:98% !important;
+  margin:0.5em 1% 0;
+  border-bottom:1px solid $grey;
+
+  .m-navbar-link{float:right;}
+}
+
+.m-navbar-fulltitle-title{
+  float:left;
+
+  font-size:1.2em;
+  font-family:$serif-stack;
+}
+
+.m-navbar-short .m-navbar-set{
+  height: 19em;
+}
+
+.m-navbar-price .m-navbar-link{width:100%;}
+
+.m-navbar-toplevel.is-subnav-expanded{
+  @include translate3d(0, 0, 0);
+}
+  .no-csstransforms3d .m-navbar-toplevel.is-subnav-expanded { left: 0;}
+
+.m-navbar-quick-text{
+  position:absolute;
+  bottom:0.95em;
+  left:-4.5em;
+
+  font-size:1.05em;
+  opacity:1;
+  @include transition(opacity, 0.25s);
+}
+
+.is-subnav-expanded .m-navbar-quick-text{opacity:0;}
+
+.m-navbar-pinkline{
+  position:absolute;
+  top:0;
+  z-index:9;
+
+  display:block;
+  width:100%;
+  height:3px;
+
+  background:$pink;
+}
+
+.m-navbar-quickshop .m-navbar-pinkline{
+  left:0;
+}
+
+.m-navbar-secondlevel-bkg{
+  position:absolute;
+  top: 7.6em;
+  right:0;
+  z-index:1;
+  overflow:hidden;
+
+  width:100%;
+  height:0em;
+  display:block;
+
+  border-left:1px solid $accent-grey;
+  border-right:1px solid $accent-grey;
+  @include translate3d(0, 0, 0);
+
+  background: $white;
+  box-shadow: 0 -6px 0 #fff, 0 3px 3px rgba(0, 0, 0, 0.05);
+
+  @include transition(height, 0.25s);
+
+  &.is-expanded{height:27.2em;border-bottom:1px solid $accent-grey;}
+  &.is-quickshop{width:21em; &.is-expanded{height:31.25em;}}
+}
+// .no-csstransforms3d .m-navbar-secondlevel-bkg { left: 0; }
+
+// IE Addons
+.oldie {
+  .m-navbar-quick-text {
+    left: -5em;
+  }
+}
+

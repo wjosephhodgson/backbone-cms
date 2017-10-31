@@ -1,0 +1,17 @@
+define(function(){ return function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class="row row-spaced x-space-s left-align">\r\n    <div class="row form-section">\r\n    \t<div class="col-12">\r\n        \t<div class="clearfix section-title">\r\n            \t<h2 class="pull-left" >Edit Mega Menu Content</h2>\r\n\t\t    \t<button type="button" id="cancel-btn" class="btn btn-other btn-panel pull-right">Cancel</button>\r\n            \t<button type="button" id="save-btn" class="btn btn-submit btn-panel pull-right"> Save</button>\r\n\t\t\t\t<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>\r\n    \t\t</div>\r\n      \t</div>\r\n    </div>\r\n\r\n  \t<div class="row">\r\n\t\t<div class="col-12" >\r\n\t\t\t<h4 class="pull-left">Edit Content of HTML block in eSAT mega menu</h4>\t\t \r\n\t\t</div>\r\n\t</div>\r\n\r\n<!-- Hidden Alert Message -->\r\n\r\n<div class="row panel alert-panel">\r\n  <div class="col-12">\r\n    <div class="row">\r\n      <div class="col-1">\r\n        <div class="icon icon-3x icon-warning"></div>\r\n      </div>\r\n      <div class="col-11 alert-text">\r\n                     This is a generic placeholder for error messages in eSAT. <br>\r\n                     In the live app, this will be a real message and will be hidden by default.\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- Hidden Alert Message -->\r\n\r\n\r\n <div class="row row-spaced form-section">\r\n\r\n       <div class="col-2 form-section">\r\n\t\t\t<div class="label"> Status </div>\r\n\t\t\t\r\n\r\n\t\t\t<input ' +
+((__t = ( MegaMenuActive ? 'checked' : '' )) == null ? '' : __t) +
+' type="checkbox" id="f-create-edit-MegaMenu-Active" name="f-create-edit-MegaMenu-Active" class="on-off-switch"/>\r\n\r\n\t\t\t<label for="f-create-edit-MegaMenu-Active" class="on-off-switch-label">\r\n\t\t\t    <div class="on-off-switch-state">on</div>\r\n\t\t\t</label>\r\n         </div>\r\n        <div class="col-5 form-section"> \r\n\t    \t<label for="f-AssociatedMenu-name"> Associated Menu Section</label>\r\n\r\n\t\t\t<input id="f-AssociatedMenu-name" name="f-AssociatedMenu-name" type="text" value="' +
+((__t = ( MegaMenuAssociatedSection )) == null ? '' : __t) +
+'" disabled />\r\n\t\t  </div>\r\n\r\n          \r\n\t    <div class="col-5 form-section">\r\n\t        <label for="f-blocktitle-name"> Block Title in the Menu <i title="???" class="icon icon-tool-tip"></i>\r\n\t\t\t</label>\r\n\r\n            <input id="f-blocktitle-name" name="f-blocktitle-name" type="text" value="' +
+((__t = ( MegaMenuBlockTitle )) == null ? '' : __t) +
+'" />\t\r\n\r\n     </div>\r\n\r\n\r\n\t</div>\t\t\r\n\r\n\r\n<div class="row row-spaced">\r\n\t\t\t<div class="col-5 pull-left form-section">\r\n\t\t\t\t<label for="f-megaMenu-page-content" class="pull-left"> Edit HTML Block </label>\r\n\t\t\t\t<i title="Edit or Create a Page Content" class="icon icon-tool-tip pull-left" style="position: relative;"></i>\r\n\t\t\t</div>\r\n\t</div>\r\n\r\n<div class="row form-section" >\r\n\t\t<div class="col-12 form-section">\r\n\r\n\t\t\t<textarea name="f-megaMenu-page-content" id="f-megaMenu-page-content" class="size-2 tinymce" >' +
+((__t = ( MegaMenuBlockContent )) == null ? '' : __t) +
+'</textarea>\r\n \r\n\t     </div>\r\n\r\n\t</div>\r\n\r\n\r\n</div> <!-- Mega Memu ends here -->\r\n';
+
+}
+return __p
+};});

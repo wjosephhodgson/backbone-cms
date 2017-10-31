@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name":"Homagepage Promo Image 1",
+    "url":"http://www.telefloramarketing.com/mock/promo-1.jpg",
+    "type":"image/jpeg",
+    "global":false
+  },
+  {
+    "id": 2,
+    "name":"Homagepage Promo Image 2",
+    "url":"http://www.telefloramarketing.com/mock/promo-2.jpg",
+    "type":"image/jpeg",
+    "global":false
+  },
+  {
+    "id": 3,
+    "name":"Homagepage Promo Image 3",
+    "url":"http://www.telefloramarketing.com/mock/promo-3.png",
+    "type":"image/png",
+    "global":false
+  },
+  {
+    "id": 4,
+    "name":"Homagepage Promo Image 4",
+    "url":"http://www.telefloramarketing.com/mock/promo-4.png",
+    "type":"image/png",
+    "global":false
+  }
+]

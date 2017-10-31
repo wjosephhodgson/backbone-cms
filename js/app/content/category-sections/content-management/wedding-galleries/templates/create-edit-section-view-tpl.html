@@ -1,0 +1,61 @@
+<!-- start create edit section model -->
+<div id="section-modal">
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="section-title clearfix">
+				<h2 class="pull-left">
+				<%= id ? 'Edit': 'Create' %> Wedding Gallery
+				</h2>
+				<div class="btn-panel">
+					<button id="cancel-btn" type="button" class="btn btn-other">Cancel</button>
+					<button id="save-section-btn" type="button" class="btn btn-submit"><% if(!id) { %><i class="icon icon-add"></i><% } %>Save</button>
+					<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+	<!-- Start of Gallery Panel -->
+	<div class="row row-spaced panel form-section">
+		<div class="row">
+			<div class="col-5 form-section">
+				<label for="f-sectionName" class="pull-left">Photo Name<i title="This is the name of the photo." class="icon icon-tool-tip x-space-s"></i></label>
+				<input type="text" id="f-sectionName" name="f-sectionName" value="<%= sectionName %>" autofocus>
+			</div>
+			<div class="col-4">
+				<div class="label">Photo Upload <i class="icon icon-tool-tip" title="Add a photo to your gallery"></i></div>
+				<button type="button"  class="image-upload icon icon-btn icon-image btn-file icon-2x y-space-s" value="<%= sectionImage %>"></button>
+			</div>
+
+		</div>
+
+		<div class="row">
+			<div class="col-12 center-align">
+				<div class="center-align"><img id="f-tile-image-upload"  class="center-align  small-table-image" src="<%= sectionImage %>" alt=""></div> 
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 form-section">
+				<label for="f-sectionCaption" class="pull-left">Photo Caption<i title="This caption appears alongside the photo to describe it." class="icon icon-tool-tip x-space-s"></i></label>
+				<textarea name="f-sectionCaption" id="f-sectionCaption" class="size-3"><%= sectionCaption %></textarea>
+			</div>
+		</div>    
+	</div>
+	<!-- End of Gallery Panel -->
+</div>

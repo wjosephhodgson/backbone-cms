@@ -1,0 +1,220 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Sitewide Meta Tags</h2>
+			<button type="button" id="save-btn" class="btn btn-submit pull-right">Save Changes</button>
+			<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+		</div>
+	</div>
+</div>
+      <!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+
+<div class="row row-spaced">
+	<div class="col-12">
+		We have default meta data set up for you, but if you would like to make changes, you can make those changes on this page.
+	</div>
+</div>
+
+<div class="row row-spaced form-section">
+	<div class="col-12">
+		<div class="label">Use default meta info<i title="If this setting is turned ON, your site will use all of the eFlorist default meta data. If it is turned OFF, you can use the fields below to specify individual meta info for different types of pages." class="icon icon-tool-tip x-space-s"></i></div>
+		<input <%= defaultInfoActive ? 'checked' : '' %> type="checkbox" id="f-defaultInfoActive" name="f-defaultInfoActive" class="on-off-switch" />
+		<label for="f-defaultInfoActive" class="on-off-switch-label">
+		    <div class="on-off-switch-state">on</div>
+		</label>
+	</div>
+</div>
+
+<!--// Section 1 - Home Page Meta [Start] //-->
+<div class="row row-spaced panel form-section">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Home Page</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<label for="f-homeTitle">Page &#60;title&#62;</label><i class="icon icon-tool-tip x-space-s" title="This is the short description in the very top of your window that tells the name of the page you are on. You should set this to something like 'Anniversary Flowers | XYZ Flower Shop'"></i>
+			<input <%= defaultInfoActive ? 'disabled' : '' %> type="text" class="f-meta-title" id="f-homeTitle" name="f-homeTitle" value="<%= defaultInfoActive ? homeTitle : homeTitleCustom %>">
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-6 form-section">
+			<label for="f-homeDesc">Meta Description</label><i class="icon icon-tool-tip x-space-s" title="These are just a few short keywords that tell the search engines what your category is about. Don't use too many, or it can actually hurt your ranking. Best practice is to use four keywords or less. You can use things like, 'flowers in city name', 'get well flowers', or 'hospital delivery.'"></i>
+			<textarea <%= defaultInfoActive ? 'disabled' : '' %> class="f-meta-desc size-2" name="f-homeDesc" id="f-homeDesc"><%= defaultInfoActive ? homeDesc : homeDescCustom %></textarea>
+		</div>
+
+		<div class="col-6 form-section">
+			<label for="f-homeKwords">Keywords</label><i class="icon icon-tool-tip x-space-s" title="When coming from a search engine, this is the first thing a customer will see, so make it count! Has your designer won floral awards? This is the place to let customers know."></i>
+			<textarea <%= defaultInfoActive ? 'disabled' : '' %> name="f-homeKwords" id="f-homeKwords" class="size-2"><%= defaultInfoActive ? homeKwords : homeKwordsCustom %></textarea>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<label for="f-homeTags">Additional Tags</label><i class="icon icon-tool-tip x-space-s" title="Need to place a few extra tags in your page header? You can do that here."></i>
+			<textarea <%= defaultInfoActive ? 'disabled' : '' %> id="f-homeTags" name="f-homeTags"><%= defaultInfoActive ? homeTags : homeTagsCustom %></textarea>
+			<div class="row"><div class="col-12">Please include the full HTML (such as &lt;meta&gt;) in the Additional Tags field.</div></div>
+		</div>
+	</div>
+</div>
+<!--// Section 1 - Home Page Meta [Stop] //-->
+
+<div class="row row-spaced panel form-section">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">About Us Page</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<label for="f-aboutTitle">Page &#60;title&#62;</label><i class="icon icon-tool-tip x-space-s" title="This is the short description in the very top of your window that tells the name of the page you are on. You should set this to something like 'Anniversary Flowers | XYZ Flower Shop'"></i>
+			<input <%= defaultInfoActive ? 'disabled' : '' %> type="text" class="f-meta-title" id="f-aboutTitle" name="f-aboutTitle" value="<%= defaultInfoActive ? aboutTitle : aboutTitleCustom %>">
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-6 form-section">
+			<label for="f-aboutDesc">Meta Description</label><i class="icon icon-tool-tip x-space-s" title="When coming from a search engine, this is the first thing a customer will see, so make it count! Has your designer won floral awards? This is the place to let customers know."></i>
+			<textarea <%= defaultInfoActive ? 'disabled' : '' %> class="f-meta-desc size-2" name="f-aboutDesc" id="f-aboutDesc"><%= defaultInfoActive ? aboutDesc : aboutDescCustom %></textarea>
+		</div>
+
+		<div class="col-6 form-section">
+			<label for="f-aboutKwords">Keywords</label><i class="icon icon-tool-tip x-space-s" title="These are just a few short keywords that tell the search engines what your category is about. Don't use too many, or it can actually hurt your ranking. Best practice is to use four keywords or less. You can use things like, 'flowers in city name', 'get well flowers', or 'hospital delivery.'"></i>
+			<textarea <%= defaultInfoActive ? 'disabled' : '' %> name="f-aboutKwords" id="f-aboutKwords" class="f-meta-keywords size-2"><%= defaultInfoActive ? aboutKwords : aboutKwordsCustom %></textarea>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<label for="f-aboutTags">Additional Tags</label><i class="icon icon-tool-tip x-space-s" title="Need to place a few extra tags in your page header? You can do that here."></i>
+			<textarea <%= defaultInfoActive ? 'disabled' : '' %> id="f-aboutTags" name="f-aboutTags"><%= defaultInfoActive ? aboutTags : aboutTagsCustom %></textarea>
+			<div class="row"><div class="col-12">Please include the full HTML (such as &lt;meta&gt;) in the Additional Tags field.</div></div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced panel form-section">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Category Pages</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<label for="f-catTitle">Page &#60;title&#62;</label><i class="icon icon-tool-tip x-space-s" title="This is the short description in the very top of your window that tells the name of the page you are on. You should set this to something like 'Anniversary Flowers | XYZ Flower Shop'"></i>
+			<input <%= defaultInfoActive ? 'disabled' : '' %> type="text" id="f-catTitle" class="f-meta-title" name="f-catTitle" value="<%= defaultInfoActive ? catTitle : catTitleCustom %>">
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-6 form-section">
+			<label for="f-catDesc">Meta Description</label><i class="icon icon-tool-tip x-space-s" title="When coming from a search engine, this is the first thing a customer will see, so make it count! Has your designer won floral awards? This is the place to let customers know."></i>
+			<textarea <%= defaultInfoActive ? 'disabled' : '' %> class="f-meta-desc size-2" name="f-catDesc" id="f-catDesc"><%= defaultInfoActive ? catDesc : catDescCustom %></textarea>
+		</div>
+
+		<div class="col-6 form-section">
+			<label for="f-catKwords">Keywords</label><i class="icon icon-tool-tip x-space-s" title="These are just a few short keywords that tell the search engines what your category is about. Don't use too many, or it can actually hurt your ranking. Best practice is to use four keywords or less. You can use things like, 'flowers in city name', 'get well flowers', or 'hospital delivery.'"></i>
+			<textarea <%= defaultInfoActive ? 'disabled' : '' %> name="f-catKwords" id="f-catKwords" class="f-meta-keywords size-2"><%= defaultInfoActive ? catKwords : catKwordsCustom %></textarea>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<label for="f-catTags">Additional Tags</label><i class="icon icon-tool-tip x-space-s" title="Need to place a few extra tags in your page header? You can do that here."></i>
+			<textarea <%= defaultInfoActive ? 'disabled' : '' %> id="f-catTags" name="f-catTags"><%= defaultInfoActive ? catTags : catTagsCustom %></textarea>
+			<div class="row"><div class="col-12">Please include the full HTML (such as &lt;meta&gt;) in the Additional Tags field.</div></div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced panel form-section">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Product Pages</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<label for="f-prodTitle">Page &#60;title&#62;</label><i class="icon icon-tool-tip x-space-s" title="This is the short description in the very top of your window that tells the name of the page you are on. You should set this to something like 'Anniversary Flowers | XYZ Flower Shop'"></i>
+			<input <%= defaultInfoActive ? 'disabled' : '' %> type="text" class="f-meta-title" id="f-prodTitle" name="f-prodTitle" value="<%= defaultInfoActive ? prodTitle : prodTitleCustom %>">
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-6 form-section">
+			<label for="f-prodDesc">Meta Description</label><i class="icon icon-tool-tip x-space-s" title="When coming from a search engine, this is the first thing a customer will see, so make it count! Has your designer won floral awards? This is the place to let customers know."></i>
+			<textarea <%= defaultInfoActive ? 'disabled' : '' %> class="f-meta-desc size-2" name="f-prodDesc" id="f-prodDesc"><%= defaultInfoActive ? prodDesc : prodDescCustom %></textarea>
+		</div>
+
+		<div class="col-6 form-section">
+			<label for="f-prodKwords">Keywords</label><i class="icon icon-tool-tip x-space-s" title="These are just a few short keywords that tell the search engines what your category is about. Don't use too many, or it can actually hurt your ranking. Best practice is to use four keywords or less. You can use things like, 'flowers in city name', 'get well flowers', or 'hospital delivery.'"></i>
+			<textarea <%= defaultInfoActive ? 'disabled' : '' %> name="f-prodKwords" id="f-prodKwords" class="f-meta-keywords size-2"><%= defaultInfoActive ? prodKwords : prodKwordsCustom %></textarea>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<label for="f-prodTags">Additional Tags</label><i class="icon icon-tool-tip x-space-s" title="Need to place a few extra tags in your page header? You can do that here."></i>
+			<textarea <%= defaultInfoActive ? 'disabled' : '' %> id="f-prodTags" name="f-prodTags"><%= defaultInfoActive ? prodTags : prodTagsCustom %></textarea>
+			<div class="row"><div class="col-12">Please include the full HTML (such as &lt;meta&gt;) in the Additional Tags field.</div></div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced panel form-section">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Help Page</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<label for="f-helpTitle">Page &#60;title&#62;</label><i class="icon icon-tool-tip x-space-s" title="This is the short description in the very top of your window that tells the name of the page you are on. You should set this to something like 'Anniversary Flowers | XYZ Flower Shop'"></i>
+			<input <%= defaultInfoActive ? 'disabled' : '' %> type="text" class="f-meta-title" id="f-helpTitle" name="f-helpTitle" value="<%= defaultInfoActive ? helpTitle : helpTitleCustom %>">
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-6 form-section">
+			<label for="f-helpDesc">Meta Description</label><i class="icon icon-tool-tip x-space-s" title="When coming from a search engine, this is the first thing a customer will see, so make it count! Has your designer won floral awards? This is the place to let customers know."></i>
+			<textarea <%= defaultInfoActive ? 'disabled' : '' %> class="f-meta-desc size-2" name="f-helpDesc" id="f-helpDesc"><%= defaultInfoActive ? helpDesc : helpDescCustom %></textarea>
+		</div>
+
+		<div class="col-6 form-section">
+			<label for="f-helpKwords">Keywords</label><i class="icon icon-tool-tip x-space-s" title="These are just a few short keywords that tell the search engines what your category is about. Don't use too many, or it can actually hurt your ranking. Best practice is to use four keywords or less. You can use things like, 'flowers in city name', 'get well flowers', or 'hospital delivery.'"></i>
+			<textarea <%= defaultInfoActive ? 'disabled' : '' %> name="f-helpKwords" id="f-helpKwords" class="f-meta-keywords size-2"><%= defaultInfoActive ? helpKwords : helpKwordsCustom %></textarea>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<label for="f-helpTags">Additional Tags</label><i class="icon icon-tool-tip x-space-s" title="Need to place a few extra tags in your page header? You can do that here."></i>
+			<textarea <%= defaultInfoActive ? 'disabled' : '' %> id="f-helpTags" name="f-helpTags"><%= defaultInfoActive ? helpTags : helpTagsCustom %></textarea>
+			<div class="row"><div class="col-12">Please include the full HTML (such as &lt;meta&gt;) in the Additional Tags field.</div></div>
+		</div>
+	</div>
+</div>

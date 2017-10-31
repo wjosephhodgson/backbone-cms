@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name":"Flowers for the Casket",
+    "url":"http://www.telefloramarketing.com/mock/sympathy-type-1.jpg",
+    "type":"image/jpeg",
+    "global":false
+  },
+  {
+    "id": 2,
+    "name":"Photo and Urn Tributes",
+    "url":"http://www.telefloramarketing.com/mock/sympathy-type-2.jpg",
+    "type":"image/jpeg",
+    "global":false
+  },
+  {
+    "id": 3,
+    "name":"Standing Sprays and Wreaths",
+    "url":"http://www.telefloramarketing.com/mock/sympathy-type-3.jpg",
+    "type":"image/jpeg",
+    "global":false
+  }
+]

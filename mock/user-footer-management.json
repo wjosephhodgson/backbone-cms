@@ -1,0 +1,8 @@
+{
+	"address1":          "123 Fakestreet",
+	"address2":          "Faesville CA 12345",
+	"customFooterText":  "",
+	"addressDisplay":    "Display Address",
+	"customAddress":     "",
+	"emailSignup":       false
+}

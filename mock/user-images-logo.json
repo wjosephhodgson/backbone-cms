@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "name":"My Teleflora Logo",
+    "url":"http://www.telefloramarketing.com/mock/logo-1.jpg",
+    "type":"image/jpeg",
+    "global":false
+  }
+]

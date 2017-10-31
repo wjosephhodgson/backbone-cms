@@ -1,0 +1,42 @@
+[
+	{
+		"id": 1,
+		"ProductCatalogName": "Gift Fulfillment",
+		"SubscribeStatus": true
+	},
+	{
+		"id": 2,
+		"ProductCatalogName": "Gift Tree Products",
+		"SubscribeStatus": true
+	},
+	{
+		"id": 3,
+		"ProductCatalogName": "Grower Direct Flowers",
+		"SubscribeStatus": true
+	},
+	{
+		"id": 4,
+		"ProductCatalogName": "Grower Direct Plants",
+		"SubscribeStatus": true
+	},
+	{
+		"id": 5,
+		"ProductCatalogName": "JH Wedding 07",
+		"SubscribeStatus": true
+	},
+	{
+		"id": 6,
+		"ProductCatalogName": "John Henry Sympathy",
+		"SubscribeStatus": true
+	},
+	{
+		"id": 7,
+		"ProductCatalogName": "McCarthy Group Products",
+		"SubscribeStatus": true
+	},
+	{
+		"id": 8,
+		"ProductCatalogName": "Team Floral Products - Members Only",
+		"SubscribeStatus": true
+	}
+]

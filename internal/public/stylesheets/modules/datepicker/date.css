@@ -1,0 +1,79 @@
+/*
+Syntax error: Undefined variable: "$sans-stack".
+        on line 93 of ./stylesheets/modules/datepicker/date.scss
+
+88:     table-layout: fixed;
+89:     font-size: inherit;
+90:     width: 100%;
+91:     margin-top: .75em;
+92:     margin-bottom: .5em;
+93:     font-family: $sans-stack;
+94: 
+95:     @media (min-height: 33.875em) {
+96:       margin-bottom: .75em;
+97:     }
+98: 
+
+Backtrace:
+./stylesheets/modules/datepicker/date.scss:93
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/script/variable.rb:49:in `_perform'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/script/node.rb:40:in `perform'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:298:in `visit_prop'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `map'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `map'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `map'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:7:in `visit'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/root_node.rb:20:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/engine.rb:315:in `_render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/engine.rb:262:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:201:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/plugin.rb:81:in `update_stylesheets'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/plugin.rb:54:in `check_for_updates'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/plugin/rack.rb:51:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/lint.rb:49:in `_call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/lint.rb:37:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/showexceptions.rb:24:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/commonlogger.rb:33:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/chunked.rb:43:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$sans-stack\".\A         on line 93 of ./stylesheets/modules/datepicker/date.scss\A \A 88:     table-layout: fixed;\A 89:     font-size: inherit;\A 90:     width: 100%;\A 91:     margin-top: .75em;\A 92:     margin-bottom: .5em;\A 93:     font-family: $sans-stack;\A 94: \A 95:     @media (min-height: 33.875em) {\A 96:       margin-bottom: .75em;\A 97:     }\A 98: "; }

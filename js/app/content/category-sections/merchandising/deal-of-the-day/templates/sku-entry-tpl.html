@@ -1,0 +1,54 @@
+<div class="col-12">
+<% if(isBaseSku == true) { %>
+  <div class="row form-section y-space-top-m">
+    <div class="col-6-20">
+      <label for="name-<%= id %>">Label</label><i class="icon icon-tool-tip x-space-s" title="This is a name used to distinguish the different price points for this product. Ex: Standard, Deluxe, Premium"></i>
+    </div>
+<% if(type2 !== 'Browse Only') { %>
+ 
+    <div class="col-4-20">
+      <label for="f-suggestedPrice-<%= id %>">Suggested Price</label><i class="icon icon-tool-tip x-space-s" title="This is the Teleflora suggested price for this product."></i>
+    </div>
+
+    <div class="col-4-20">
+      <label for="f-myPrice-<%= id %>">My Price</label><i class="icon icon-tool-tip x-space-s" title="This is the current price for the product on your site."></i>
+
+    </div>
+    <div class="col-4-20">
+      <label for="f-holidayPrice-<%= id %>">Holiday Upgrade</label><i class="icon icon-tool-tip x-space-s" title="During holidays, this is how much the product price will be increased."></i>
+
+    </div>
+<% } %>
+  </div>
+<% } %>  
+  <div class="row form-section">
+    <div class="col-6-20">
+      <input <%= type === 'Teleflora' ? 'disabled' : '' %> type="text" id="name-<%= id %>" name="name-<%= id %>" value="<%= skuLabel %>" disabled>
+    </div>
+<% if(type2 !== 'Browse Only') { %>
+  <% if(type === 'Teleflora') { %>
+  <% } %>
+    <div class="col-4-20 form-section">
+      <div class="dollar-container">
+      <input type="text" id="f-suggestedPrice-<%= id %>" disabled name="f-suggestedPrice" class="f-suggestedPrice" value="<%= suggestedPrice %>">
+      </div>
+    </div>
+    <div class="col-4-20 form-section">
+      <div class="dollar-container">
+      <input type="text" id="f-myPrice-<%= id %>" name="f-myPrice" class="f-myPrice" value="<%= myPrice %>">
+      </div>
+    </div>
+    <div class="col-4-20 form-section">
+      <div class="dollar-container">
+      <input type="text" id="f-holidayPrice-<%= id %>" name="f-holidayPrice" class="f-holidayPrice" value="<%= holidayPrice %>">
+      </div>
+    </div>
+<% } %>
+
+  </div>
+
+<% if(isBaseSku == true) { %>
+  <div id="product-image-modal"></div>
+<% } %>
+
+</div>

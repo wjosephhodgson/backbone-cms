@@ -1,0 +1,12 @@
+<tr>
+    <td class="left-align indented-l"><%= CustomHTMLPageName %></td>
+    <td class="left-align hide-overflow">  
+        <div class="centered-content-container">
+            <input <%= CustomHTMLPageActive ? 'checked' : ''%> type="checkbox" id="<%= 'custom-html-active-' + id %>" name="<%= 'custom-html-active-' + id %>" class="on-off-switch customHTMLActive-switch" />
+            <label for="<%= 'custom-html-active-' + id %>" class="on-off-switch-label">
+                <div class="on-off-switch-state">on</div>
+            </label>
+        </div>
+    </td> 
+    <td class="left-align"><button type="button" class="icon icon-btn icon-2x icon-edit"></button></td> 
+</tr>

@@ -1,0 +1,164 @@
+.btn {
+	border: 0;
+	outline: none;
+	opacity: 1;
+	color: white;
+	font-weight: bold;
+	font-size: $font-size-input;
+	text-transform: uppercase;
+	letter-spacing: .15em;
+	min-height: $height-input;
+	padding: $space-s $space-l;
+	@include border-radius($border-radius);
+	@include single-transition(opacity, 200ms, ease-in-out);
+
+	&:hover {
+		opacity: 0.7;
+	}
+
+	&.compact {
+		letter-spacing: .1em;
+		padding: $space-s;
+	}
+}
+
+.btn-xs {
+	border: 0;
+	outline: none;
+	opacity: 1;
+	color: white;
+	font-weight: bold;
+	font-size: $font-size-input-xs;
+	text-transform: uppercase;
+	letter-spacing: .15em;
+	min-height: $height-input-xs;
+	padding: $space-xs $space-m;
+	@include border-radius($border-radius);
+	@include single-transition(opacity, 200ms, ease-in-out);
+
+	&:hover {
+		opacity: 0.7;
+	}
+
+	&.compact {
+		letter-spacing: .1em;
+		padding: $space-xs;
+	}
+
+
+}
+
+.btn-clear {
+	border: 0;
+	outline: none;
+	opacity: 1;
+
+	font-size: 13px;
+	color: $color-neutral-6;
+	padding: $space-s;
+	background-color: transparent;
+
+	@include single-transition(color, 100ms);
+
+	&:hover {
+		color: $color-accent-2;
+	}
+}
+
+.btn-submit {
+  background-color: #35c10a;
+}
+
+.btn-cancel {
+  background-color:#BD100B;
+}
+
+.btn-other {
+  background-color:$color-neutral-2;
+}
+
+.btn-quick-link {
+	border: 1px solid $color-border-1;
+	color: $color-font-1;
+	background-color: $color-neutral-1;
+
+	@include border-radius(6px);
+}
+
+.btn-panel {
+	float: right;
+	margin-left: $space-l;
+
+	& > .btn {
+		margin: 0 $space-xs;
+	}
+	position: relative;
+}
+
+.btn-file {
+	position: relative;
+	overflow: hidden;
+}
+
+.btn-container-space-s {
+	& > .btn {
+		margin-right: $space-s;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.row-btn {
+	margin-top: 2.2em;
+}
+
+// Fixing Buttons & input fields for Manage Reward Sections
+.buttonwithlabel {
+	padding-top: 10px;
+}
+
+.buttonwithoutlabel {
+	padding-top: 26px;
+}
+
+.noPaddingLeft {
+	padding-left: 0px;
+}
+
+.textboxlesswidth {
+	width: 17%;
+}
+
+.collesswidth {
+	width: 20%;
+}
+
+.textboxmorewidth {
+	width: 27%;
+}
+
+.rewardSettingsButtonWidths1 {
+	width: 19%;
+}
+
+.rewardSettingsButtonWidths {
+	width: 24%;
+}
+
+.programNameTextWidth {
+	width: 38%;
+}
+
+.paddingwithoutlabel {
+	padding-top: 16px;
+}
+
+.customsizewidth {
+	width: 11%;
+}
+
+.btn-shadow {
+	@include box-shadow(0 0 14px 0 rgba(50, 50, 50, .75));
+}

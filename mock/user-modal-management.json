@@ -1,0 +1,64 @@
+[
+	{
+		"id": 1,
+		"name": "Product ABC modal",
+		"startDate":"01/01/2015",
+		"endDate":"02/01/2015",
+		"type":"Custom",
+		"status":true,
+		"size":"Medium",
+		"modalShowsOn":"Home Page"
+	},
+	{
+		"id":2,
+		"name": "Product HUG",
+		"startDate":"02/01/2015",
+		"endDate":"03/01/2015",
+		"type":"Custom",
+		"status":true,
+		"size":"Custom",
+		"modalWidth":400,
+		"modalHeight":400,
+		"modalShowsOn":"Home Page"
+	},
+	{
+		"id":3,
+		"name": "Product A022 modal",
+		"startDate":"03/01/2015",
+		"endDate":"03/03/2015",
+		"type":"Teleflora",
+		"status":true,
+		"size":"Large",
+		"modalShowsOn":"Home Page"
+	},
+	{
+		"id":4,
+		"name": "XZY Product Modal",
+		"startDate":"04/01/2015",
+		"endDate":"06/01/2015",
+		"type":"Teleflora",
+		"status":true,
+		"size":"Medium",
+		"modalShowsOn":"Home Page"
+	},
+	{
+		"id":5,
+		"name": "Number One Modal",
+		"startDate":"01/01/2015",
+		"endDate":"02/01/2015",
+		"type":"Teleflora",
+		"status":true,
+		"size":"Medium",
+		"modalShowsOn":"Home Page"
+	},
+	{
+		"id":6,
+		"name": "Number Two Modal",
+		"startDate":"06/01/2015",
+		"endDate":"07/01/2015",
+		"type":"Teleflora",
+		"status":true,
+		"size":"Small",
+		"modalShowsOn":"Home Page"
+	}
+]

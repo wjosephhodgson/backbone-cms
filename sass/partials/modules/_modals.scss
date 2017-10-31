@@ -1,0 +1,119 @@
+#modal-container-fixed {
+	width: 100% !important;
+	min-width: $min-width-app;
+	max-width: 1.5 * $min-width-app;
+}
+
+#another-modal-container, #image-mgmt-edit-modal-container {
+	width: 100% !important;
+	min-width: $min-width-app;
+	max-width: 1.5 * $min-width-app;
+}
+
+#condition-type-modal {
+	text-align: left;
+}
+
+.ui-dialog{
+	#search-results{
+		li{
+			cursor:pointer;
+		}
+
+		li:hover{
+			background-color:$color-accent-2;
+		}
+
+		li.active{
+			background-color:$color-accent-2-light;
+		}
+	}
+}
+
+.page-change-modal {
+	max-width: 600px;
+}
+
+#image-modal {
+	min-width: 600px;
+}
+
+#product-image-modal {
+	max-width: 900px;
+}
+
+#f-product-image-modal {
+	max-width: 900px;
+	padding:5px 10px;
+
+	.grid-item{
+		border: 1px solid $color-border-1;
+		text-align: center;
+		position:relative;
+		&.active{
+			border: 3px solid $color-accent-2;
+		}
+		.product-image-dimensions{
+			background: rgba(255, 255, 255, 0.66);
+			z-index: 999;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+		.icon-tool-tip{
+			z-index: 999;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}		
+	}
+}
+
+#product-price-modal {
+	width: 700px;
+}
+
+#adv-promo-modal {
+	width: 700px;
+}
+
+#push-modal {
+	width: 700px;
+}
+
+// Manage Reward Modal
+#reward-modal {
+    max-width: 800px;
+}
+
+#bulk-modal {
+    max-width: 600px;
+}
+
+#upcoming-modal {
+	max-width: 700px;
+}
+
+@media screen and (max-width: 720px) {
+
+	// Edit Modal for Floral App Settings
+	#adv-promo-modal {
+		width: 680px;
+	}
+
+	#CustomHtmlPage-modal {
+		padding: .5em .8em;
+	}
+
+}
+
+#f-product-modal-form {
+  width: 750px;
+  .f-price::-ms-clear {
+    display: none;
+  }
+}
+
+#form-builder-modal{
+	width: 787px!important;
+}

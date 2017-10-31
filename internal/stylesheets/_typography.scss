@@ -1,0 +1,175 @@
+@import "compass/typography";
+
+
+// Base config
+
+$base-font-size: 13px !default;
+$base-line-height: 22px !default;
+
+@include establish-baseline($base-font-size);
+
+
+/////
+// Main body and base styles
+/////
+
+body {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-family: $serif-stack;
+  color: $black;
+}
+
+/////
+// Headline styles
+/////
+
+#{headings()} {
+  font-size: em(16px);
+  margin: 0;
+
+  &.sans-serif{font-family:$sans-stack;}
+  &.caps{text-transform:uppercase;}
+  &.lighten{color:$dark-grey;}
+  &.border-bottom{border-bottom:1px solid $accent-grey;}
+}
+
+h1 {
+  font-size: em(32px);
+  line-height: 1em;
+  margin: 0;
+  padding: $padding-medium 0;
+  border-bottom: 1px solid $accent-grey;
+
+  &.no-border{
+    border-bottom:none;
+  }
+}
+
+h2 {
+  font-size: em(24px);
+  padding: 0 0 $padding-large;
+}
+
+h3{
+  font-size: em(17px);
+}
+
+h4 {
+  font-size: em(15px);
+}
+
+h5 {
+  font-size: em(15px);
+}
+
+h5.sized-up{
+  font-size: 1.385em;
+  margin-bottom:0.5em;
+}
+
+h6 {
+  font-size: em(13px);
+}
+
+h5, h6{
+  width:100%;
+  font-family: $serif-stack-bold;
+  font-weight:normal;
+}
+
+
+
+/////
+// Paragraph/copy styles
+/////
+
+p {
+  font-size: em(17px);
+  margin: 0 0 $padding-small;
+}
+
+
+/////
+// Link styles
+/////
+
+a {
+  color: $pink;
+  text-decoration: none;
+  font-family: $sans-stack;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  h1 &,
+  h2 &,
+  h3 &,
+  h4 &,
+  h5 &,
+  h6 &,
+  p & {
+    font-family: inherit;
+  }
+}
+
+hr {
+  border:0px;
+  border-top:1px solid $accent-grey;
+  background-color:$accent-grey;
+  color:$accent-grey;
+  margin: em(15px) 0;
+}
+
+
+@include tablet {
+  h1 {
+    border: 0 none transparent;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+label {
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-kerning: auto;
+  text-rendering: none;
+}
+.link-list{
+  margin:em(10px) 0 em(25px);
+  padding:0;
+  list-style:none;
+
+  a{
+    color:$dark-grey;
+    &:hover {
+      color:$black;
+    }
+  }
+}
+
+.avenir {
+    font-family: $sans-stack;
+}
+.avenir-book {
+    font-family: $sans-stack-book;
+}
+.avenir-heavy {
+    font-family: $sans-stack-heavy;
+}
+
+.bembo {
+    font-family: $serif-stack;
+}
+.bembo-bold {
+    font-family: $serif-stack-bold;
+}
+
+.text-small{font-size:0.8em;}
+.text-tight{line-height:1em;}

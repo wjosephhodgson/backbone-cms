@@ -1,0 +1,24 @@
+// Icons in Tables
+.table .fa{font-size: 17pt; color:#8d8d8d;}
+
+// Header Row Class for Tables
+.table-head-esat{
+	background-color:#f2f5ea;
+}
+.table-head-esat th{
+	border: 1px solid #bfc0bc;
+	padding:10px!important;
+	color:#ff7e00;
+	text-align:center!important;
+}
+
+// General Table Alignment
+.table .table-row .table-data, .table .table-row .table-data-alt, .table .table-row .table-data-alt2{text-align:center;}
+.esat-first-cell, .table-head-esat .esat-first-cell{text-align:left!important;}
+.table .table-row .table-data-alt:first-child{padding-left:10px;}
+.table .table-row .table-header, .table .table-row .table-header-alt{font-family:$esat-font-stack !important; font-size: 15pt; text-transform:lowercase;}
+
+// Content Box
+.esat_content_box_text{margin-bottom: 1em; font-size:14px;}
+.esat_content_box_btn{}
+

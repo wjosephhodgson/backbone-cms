@@ -1,0 +1,149 @@
+<div id="image-modal" class="form-section left-align">
+	<form id="image-modal-form">
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="section-title clearfix">
+				<h2 class="pull-left"><% if( imgOption == true ){%>Edit Image<%}else{%>Edit Link<%}%></h2>
+				<div class="btn-panel">
+					<button type="button" id="save-btn" class="btn btn-submit pull-right">Save</button>
+					<button type="button" id="cancel-btn"class="btn btn-other">Cancel</button>
+					<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Hidden Alert Message -->
+	<div class="row panel alert-panel hidden-alt" id="img-error">
+	  <div class="col-12">
+		<div class="row">
+		  <div class="col-1">
+			<div class="icon icon-3x icon-warning"></div>
+		  </div>
+		  <div class="col-11 alert-text">
+				No image has been selected. <br>
+				Please upload an image before saving.
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<!-- Hidden Alert Message -->
+
+	<div class="row row-spaced panel">
+		<% if( imgOption == true ){%>
+		<div class="row">
+			<div class="col-12 form-section">
+				<label for="f-label">Image Label<i class="icon icon-tool-tip x-space-s" title="This is the name of the image. This also will be displayed as text on top of the image if enabled."></i></label>
+				<div class="switch-input-container">
+					<input type="text" id="f-label" name="f-label" value="<%= label %>" class="switch-input-input" data-disabled="f-label-active">
+					<div class="switch-input-switch">
+						<input <%= labelActive ? 'checked' : '' %> type="checkbox" id="f-label-active" name="f-label-active" class="on-off-switch toggle-switch" />
+			            <label for="f-label-active" class="on-off-switch-label">
+			                <div class="on-off-switch-state">on</div>
+			            </label>
+		            </div>
+		        </div>						
+			</div>
+		</div>
+		<div class="row row-spaced">
+			<div class="col-8 form-section">
+				<label for="f-link">Image Link <i title="If a user clicks on the image, it will take them to this link. If no URL is entered, there will be no link associated with the image." class="icon icon-tool-tip x-space-s"></i></label>
+				<div class="switch-input-container">
+					<input <%= linkActive ? '' : 'disabled' %> type="text" id="f-link" name="f-link" value="<%= link %>" class="switch-input-input" data-disabled="f-link-active">
+					<div class="switch-input-switch">
+						<input <%= linkActive ? 'checked' : '' %> type="checkbox" id="f-link-active" name="f-link-active" class="on-off-switch toggle-switch" />
+			            <label for="f-link-active" class="on-off-switch-label">
+			                <div class="on-off-switch-state">on</div>
+			            </label>
+		            </div>
+		        </div>				
+			</div>
+			<div class="col-4 form-section" data-hide="f-link-active">
+				<div class="label">Open Link in New Window</div>
+				<input <%= newWindow ? 'checked' : '' %> type="checkbox" id="f-link-new-window" name="f-link-new-window" class="on-off-switch" />
+				<label for="f-link-new-window" class="on-off-switch-label">
+				    <div class="on-off-switch-state">on</div>
+				</label>	
+			</div>
+		</div>
+			<% if( subTextOption == true ){%>
+			<div class="row">
+				<div class="col-12 form-section">
+					<label for="f-subtext">Sub Text<i class="icon icon-tool-tip x-space-s" title="The sub text will be displayed underneath the Label if enabled."></i></label>
+					<div class="switch-input-container">
+						<input type="text" id="f-subtext" name="f-subtext" value="<%= subtext %>" class="switch-input-input" data-disabled="f-subtext-active">
+						<div class="switch-input-switch">
+							<input <%= subtextActive ? 'checked' : '' %> type="checkbox" id="f-subtext-active" name="f-subtext-active" class="on-off-switch toggle-switch" />
+				            <label for="f-subtext-active" class="on-off-switch-label">
+				                <div class="on-off-switch-state">on</div>
+				            </label>
+			            </div>
+			        </div>						
+				</div>
+			</div>				
+			<%}%>
+			<% if( btnTextOption == true ){%>
+			<div class="row">
+				<div class="col-12 form-section">
+					<label for="f-subtext">Button Text<i class="icon icon-tool-tip x-space-s" title="The button text will be displayed on a button underneath the Label and Sub Text if enabled."></i></label>
+					<div class="switch-input-container">
+						<input type="text" id="f-btntext" name="f-btntext" value="<%= btntext %>" class="switch-input-input" data-disabled="f-btntext-active">
+						<div class="switch-input-switch">
+							<input <%= btnActive ? 'checked' : '' %> type="checkbox" id="f-btntext-active" name="f-btntext-active" class="on-off-switch toggle-switch" />
+				            <label for="f-btntext-active" class="on-off-switch-label">
+				                <div class="on-off-switch-state">on</div>
+				            </label>
+			            </div>
+			        </div>						
+				</div>
+			</div>				
+			<%}%>			
+		<% } else { %>
+		<div class="row">
+			<div class="col-12 form-section">
+				<label for="f-label">Label</label>
+				<input type="text" id="f-label" name="f-label" value="<%= label %>">
+			</div>
+		</div>		
+		<div class="row">
+			<div class="col-8 form-section">
+				<label for="f-link" class="pull-left">Link<i title="If a user clicks on the image, it will take them to this link. If no URL is entered, there will be no link associated with the image." class="icon icon-tool-tip x-space-s"></i></label>
+				<input type="text" id="f-link" name="f-link" value="<%= link %>">
+			</div>
+			<div class="col-4 form-section">
+				<div class="label">Open Link in New Window</div>
+				<input <%= newWindow ? 'checked' : '' %> type="checkbox" id="f-link-new-window" name="f-link-new-window" class="on-off-switch" />
+				<label for="f-link-new-window" class="on-off-switch-label">
+				    <div class="on-off-switch-state">on</div>
+				</label>	
+			</div>			
+		</div>		
+		<% } %>
+	</div>
+
+	<!-- Image Section Start -->
+	<% if( imgOption == true ){%>
+	<div class="row row-spaced panel form-section">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">Image</div>
+			</div>
+		</div>
+		<div class="row row-spaced">
+			<div class="col-6">
+				<% if( dimOption != false ){ %>
+					<div class="label">Photo Upload - <%=dimOption%></div>
+				<% } else {%>
+					<div class="label">Photo Upload</div>
+				<%}%>
+				<button type="button" class="image-upload icon icon-btn icon-image btn-file icon-2x y-space-s"></button>
+			</div>
+			<div class="col-4 center-align">
+				<div class="center-align"><img id="f-img" class="center-align small-table-image" src="<%= imgPath %>"></div>
+			</div>
+		</div>
+	</div>
+	<%}%>
+	<!-- Image Section End -->
+	</form>
+</div>

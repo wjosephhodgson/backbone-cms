@@ -1,0 +1,44 @@
+.m-checkout-header-container {
+  .m-checkout-header-steps {
+    border-bottom:1px solid $accent-grey;
+    padding-bottom:0.5em;
+
+    .m-checkout-header-step {
+      margin-right: 1em;
+
+      .m-checkout-header-step-title {
+        font-family: $serif-stack;
+        font-size: em(24px);
+      }
+
+      .m-checkout-header-step-circle {
+        @include border-radius(100%);
+        position:relative;
+        top:-0.2em;
+        padding:0.3em 0.6em;
+        line-height:0;
+        width:0;
+        height:0;
+        font-family: $sans-stack-heavy;
+        color: $white;
+      }
+
+      &.active {
+        .m-checkout-header-step-circle {
+          background: $green;
+        }
+      }
+
+      &.inactive {
+        .m-checkout-header-step-title {
+          color: $accent-grey;
+        }
+
+        .m-checkout-header-step-circle {
+          background: $accent-grey;
+        }
+      }
+    }
+  }
+}
+

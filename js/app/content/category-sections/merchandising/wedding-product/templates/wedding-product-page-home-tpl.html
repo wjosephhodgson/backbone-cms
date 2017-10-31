@@ -1,0 +1,106 @@
+<div class="row row-spaced">
+  <div class="col-12">
+    <div class="section-title">
+      <h2 class="pull-left">Wedding Products Page</h2>
+	  <div class="btn-panel">
+        <button type="button" id="save-btn" class="btn btn-submit">Save</button>
+        <div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+      </div>      
+    </div>
+  </div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row row-spaced">
+  <div class="col-12">
+    Use this section to manage the Wedding Products page of your site. You can change the page settings as well as what is featured on this page.
+  </div>
+</div>
+
+<!-- Start of Page Header -->
+<div class="panel form-section">
+    <div class="row">
+      <div class="col-6 form-section">
+        <label for="f-pageHeaderTitle">Page Header Title</label><i class="icon icon-tool-tip x-space-s" title="This title will appear at the top of the page."></i>
+        <input type="text" id="f-pageHeaderTitle" name="f-pageHeaderTitle" value="<%= pageHeaderTitle %>">
+      </div>
+     <div class="col-5 form-section">
+        <div class="pull-left">
+          <div class="label">Enable Wedding Products<i title="If this setting is turned OFF, the Wedding Products page will be deactivated and will not appear on your site." class="icon icon-tool-tip x-space-s"></i></div>
+          <input <%= statusWedding ? 'checked' : '' %> type="checkbox" id="f-statusWedding" name="f-statusWedding" class="on-off-switch" />
+          <label for="f-statusWedding" class="on-off-switch-label">
+            <div class="on-off-switch-state">on</div>
+          </label>
+        </div>
+      </div>
+    </div>  <!-- End of Row -->
+
+  <div class="row row-spaced">
+    <div class="col-12 form-section">
+        <label for="f-pageHeaderDescription">Page Header Description</label><i title="This descriptive text will appear underneath the page title." class="icon icon-tool-tip x-space-s"></i>
+        <textarea name="f-pageHeaderDescription" id="f-pageHeaderDescription" class="size-3"><%= pageHeaderDescription %></textarea>
+    </div>
+  </div> <!-- End of Row -->
+	<div class="row">
+		<div class="col-12">
+			<div id="service-type-container"></div>
+		</div>
+	</div>
+</div> 
+<!-- End of Page Header -->
+
+<!-- Start of SEO Information -->
+<div class="panel form-section row row-spaced">
+  <div class="row">
+    <div class="col-12">
+      <div class="panel-title"><i class="icon icon-closed x-space-s" id="optional"></i>SEO Information (optional)</div>
+    </div>
+  </div>
+
+  <div id="accordion">
+
+    <div class="row row-spaced">
+      <div class="col-12 form-section">
+        <label for="f-meta-title">Page &#60;title&#62;</label><i class="icon icon-tool-tip x-space-s" title="This is the text displayed in the tab at the top of your browser window."></i>
+        <input type="text" id="f-meta-title" name="f-meta-title" value="<%= metaTitle %>">
+      </div>
+    </div>
+
+    <div class="row row-spaced">
+      <div class="col-6 form-section">
+        <label for="f-meta-keywords">Meta Keywords</label><i class="icon icon-tool-tip x-space-s" title="This area allows you to enter a few comma separated keywords that describe your page."></i>
+        <textarea name="f-meta-keywords" id="f-meta-keywords" class="size-2"><%= metaKeywords %></textarea>
+      </div>
+
+      <div class="col-6 form-section">
+          <label for="f-meta-desc">Meta Description</label><i title="This is the text shown on search engines for your page and should consist of short clear sentences." class="icon icon-tool-tip x-space-s"></i>
+          <textarea name="f-meta-desc" id="f-meta-desc" class="size-2"><%= metaDescription %></textarea>
+      </div>
+    </div>
+
+    <div class="row row-spaced">
+      <div class="col-12 form-section">
+          <label for="f-meta-tags">Additional Tags</label><i title="This area is for any additional meta tags that may be used for tracking or other purposes that you would like in the page &lt;head&gt;." class="icon icon-tool-tip x-space-s"></i>
+          <textarea name="f-meta-tags" id="f-meta-tags" class="size-2"><%= metaTags %></textarea>
+          <div class="row"><div class="col-12">Please include the full HTML (such as &lt;meta&gt;) in the Additional Tags field.</div></div>
+      </div>
+    </div>
+
+  </div> <!-- End of Accordian -->
+</div>
+<!-- End of SEO Information -->

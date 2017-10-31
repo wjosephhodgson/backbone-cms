@@ -1,0 +1,17 @@
+[
+	{
+		"title":"About The Company",
+		"sequence": 1,
+		"id": 1
+	},
+	{
+		"title":"Store Hours",
+		"sequence": 2,
+		"id": 2
+	},
+	{
+		"title":"Contact Information",
+		"sequence": 3,
+		"id": 3
+	}
+]

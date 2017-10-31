@@ -1,0 +1,56 @@
+<div id="create-edit-modal">
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="section-title clearfix">
+				<h2 class="pull-left"><%= id ? 'Edit ' : 'Add New ' %> Code</h2>
+				<div class="btn-panel">
+					<button type="button" id="save-btn" class="btn btn-submit pull-right">Save</button>
+			        <button type="button" id="cancel-btn"class="btn btn-other">Cancel</button>
+					<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+	<div class="row row-spaced form-section">
+		<div class="col-2 left-align">
+			<div class="label">Active<i title="Set this to on in order for this delivery fee to be active." class="icon icon-tool-tip x-space-s"></i></div>
+			<input <%= active ? 'checked' : '' %> type="checkbox" id="f-active" name="f-active" class="on-off-switch" />
+			<label for="f-active" class="on-off-switch-label">
+			    <div class="on-off-switch-state">on</div>
+			</label>
+		</div>
+		<div class="col-4 left-align">
+			<label for="f-siteID">Site ID</label><i class="icon icon-tool-tip x-space-s" title="???"></i>
+			 <input <%= id ? 'disabled' : '' %> type="text" id="f-siteID" name="f-siteID" value="<%= siteID %>" autofocus>
+		</div>
+		<div class="col-4 left-align">
+			<label for="f-floralCode">Floral Code</label><i class="icon icon-tool-tip x-space-s" title="???"></i>
+			<input type="text" id="f-floralCode" name="f-floralCode" value="<%= floralCode %>">
+		</div>
+	</div>
+</div>
+
+
+
+
+
+

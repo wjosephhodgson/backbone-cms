@@ -1,0 +1,472 @@
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="clearfix section-title">
+				<h2 class="pull-left">Homepage Customization</h2>
+					<button type="button" id="save-btn" class="btn btn-submit pull-right">Save Changes</button>
+					<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			This page will allow you to customize the homepage of your site. You can change the occasion shown on the homepage, the homepage tiles, and other items related to your chosen homepage layout. To choose your homepage layout you'll need to go to the "Homepage Settings" page.
+		</div>
+	</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+	<!-- Add a place to put the featured occasion view -->
+	<div class="row row-spaced panel form-section">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Homepage Message H1<i title="This field controls your H1 tag. This is the first tag any Search Engine looks for when they spider your page. This should be a brief summation about your site. It should not be updated frequently." class="icon icon-tool-tip x-space-s"></i></div>
+					<button type="button" class="btn btn-submit btn-reset pull-right">RESET</button>
+				</div>				
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				<input type="text" maxlength="100" value="<%= h1 %>">
+			</div>
+		</div>
+	</div>
+
+	<div id="featured-occasion-container"></div>
+
+	<div class="row row-spaced panel form-section">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Shop Information</div>
+					<button type="button" class="btn btn-submit btn-reset pull-right">RESET</button>
+				</div>				
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				<label for="f-shop-info">Shop Information</label><i title="You can enter any text you'd like about your shop in this area. For example, a short description can help brand your shop as local, national, or family owned." class="icon icon-tool-tip x-space-s"></i>
+				<textarea class="size-3" name="f-shop-info" id="f-shop-info"><%= shopInfo %></textarea>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced panel">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Slideshow</div>
+					<button type="button" class="btn btn-submit btn-reset pull-right">RESET</button>
+				</div>
+			</div>
+		</div>		
+		<div id="linked-images-1"></div>
+	</div>
+
+	<div class="row row-spaced panel">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Occasion Tiles</div>
+					<button type="button" class="btn btn-submit btn-reset pull-right">RESET</button>
+				</div>				
+			</div>
+		</div>		
+		<div id="linked-images-2"></div>
+	</div>
+
+	<div class="row row-spaced panel">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Mason Gallery</div>
+					<button type="button" class="btn btn-submit btn-reset pull-right">RESET</button>
+				</div>				
+			</div>
+		</div>		
+		<div id="linked-images-3"></div>
+	</div>
+
+	<div class="row row-spaced panel">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Quick Links</div>
+					<button type="button" class="btn btn-submit btn-reset pull-right">RESET</button>
+				</div>
+			</div>
+		</div>		
+		<div id="linked-images-4"></div>
+	</div>
+
+	<div class="row row-spaced panel">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Slideshow with Quick Links Sidebar</div>
+					<button type="button" class="btn btn-submit btn-reset pull-right">RESET</button>
+				</div>
+			</div>
+		</div>		
+		<div id="linked-images-5"></div>
+		<div id="linked-images-6"></div>
+	</div>	
+
+	<div class="row row-spaced panel">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Custom HTML</div>
+					<button type="button" class="btn btn-submit btn-reset pull-right">RESET</button>
+				</div>
+			</div>
+		</div>		
+		<div class="row">
+			<div class="col-6 form-section select-container y-space-top-m">
+				<div class="label">Select HTML Layout</div>
+				<select name="f-html-option" id="f-html-option">
+					<option selected value="3">3 Windowed Custom HTML Blocks</option>
+					<option value="1">1 Windowed Custom HTML Block</option>
+					<option value="2">1 Full Screen Custom HTML Block</option>
+				</select>
+			</div>
+			<div class="col-6 form-section y-space-top-m" id="html-title">
+				<div class="label">Section Title</div>
+				<input type="text" name="f-html-title" id="f-html-title">
+			</div>
+		</div>
+		<div class="row row-spaced" id="html-1b">
+			<div class="col-12 form-section">
+				<div class="label">Custom HTML Content</div>
+				<textarea name="f-html-content-1b" id="f-html-content-1b" class="wysiwyg size-2"></textarea>
+			</div>
+		</div>
+		<div class="row row-spaced" id="html-1">
+			<div class="col-12 form-section">
+				<div class="label">Custom HTML Content 1</div>
+				<textarea name="f-html-content-1" id="f-html-content-1" class="wysiwyg size-2"></textarea>
+			</div>
+		</div>		
+		<div class="row row-spaced" id="html-2">
+			<div class="col-12 form-section">
+				<div class="label">Custom HTML Content 2</div>
+				<textarea name="f-html-content-2" id="f-html-content-2" class="wysiwyg size-2"></textarea>
+			</div>
+		</div>
+		<div class="row row-spaced" id="html-3">
+			<div class="col-12 form-section">
+				<div class="label">Custom HTML Content 3</div>
+				<textarea name="f-html-content-3" id="f-html-content-3" class="wysiwyg size-2"></textarea>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced panel form-section">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Background Video</div>
+					<button type="button" class="btn btn-submit btn-reset pull-right">RESET</button>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced">
+			<div class="col-12 form-section">
+				<div class="label">Custom HTML Content</div>
+				<textarea name="f-bgvid-html" id="f-bgvid-html" class="wysiwyg size-2"><%= videoBgContent %></textarea>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-d-6 col-12 form-section">
+				<label for="button-text">Button Text</label><i title="The button text will be displayed on a button underneath the custom html content if enabled." class="icon icon-tool-tip x-space-s"></i>
+				<div class="switch-input-container">
+					<input disabled="" type="text" id="f-videobtntext" name="f-videobtntext" value="" class="switch-input-input">
+					<div class="switch-input-switch">
+						<input type="checkbox" id="f-videobtntextactive" name="f-videobtntextactive" class="on-off-switch toggle-switch">
+			            <label for="f-videobtntextactive" class="on-off-switch-label">
+			                <div class="on-off-switch-state">on</div>
+			            </label>
+		            </div>
+		        </div>
+			</div>
+			<div class="col-d-6 col-12 form-section">
+				<label for="button-link">Button Link</label><i title="Where would you like customers to go when they click the button? This is usually a category page, product page, or custom page." class="icon icon-tool-tip x-space-s"></i>
+				<input data-disabled="f-videobtntextactive" disabled="" type="text" id="f-videobtnlink" name="f-videobtnlink">
+			</div>
+		</div>
+		<div class="row panel alert-panel hidden-alt" id="video-alert-panel">
+		  <div class="col-12">
+		    <div class="row">
+		      <div class="col-1">
+		        <div class="icon icon-3x icon-warning"></div>
+		      </div>
+		      <div class="col-11 alert-text left-align">
+		        Videos must use the .mp4 file type. Please upload a valid video.
+		      </div>
+		    </div>
+		  </div>
+		</div>		
+		<div class="row row-spaced">
+			<div class="col-6">
+				<div class="label">Video Upload - mp4 only, 4mb max<i title="Upload a video here. It must be in .mp4 format and less than 4mb in size." class="icon icon-tool-tip x-space-s"></i></div>
+				<input type="file" class="hidden-alt" id="f-videobg">
+				<button type="button" id="bg-video-btn" class="video-upload icon icon-btn icon-movie btn-file icon-2x y-space-s"></button>
+			</div>
+			<div class="col-4 center-align">
+				<% if (videoBgUrl != '' ){ %>
+					<video width="320" height="200" controls id="bg-video-preview">
+						<source src="<%=videoBgUrl%>" type="video/mp4" id="bg-video-source">
+					</video>
+				<%} else { %>
+					<video width="320" height="200" controls class="hidden-alt" id="bg-video-preview">
+						<source type="video/mp4" id="bg-video-source">
+					</video>
+				<% } %>
+			</div>
+		</div>		
+		<div class="row row-spaced">
+			<div class="col-6">
+				<div class="label">Photo Upload<i title="Upload a background image here - sometimes background videos are not supported by all devices such as mobile phones. If the video is not displayed, the image will be shown in its place." class="icon icon-tool-tip x-space-s"></i></div>
+				<button type="button" id="img-btn-6" class="image-upload icon icon-btn icon-image btn-file icon-2x y-space-s"></button>
+			</div>
+			<div class="col-4 center-align">
+				<div class="center-align"><img id="f-img-6" class="center-align small-table-image"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced panel form-section">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Parallax</div>
+					<button type="button" class="btn btn-submit btn-reset pull-right">RESET</button>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced">
+			<div class="col-12 form-section">
+				<div class="label">Custom HTML Content</div>
+				<textarea name="f-parallax-html" id="f-parallax-html" class="wysiwyg size-2"></textarea>
+			</div>
+		</div>
+		<div class="row row-spaced">
+			<div class="col-4">
+				<div class="label">Photo Upload</div>
+				<button type="button" id="img-btn-7" class="image-upload icon icon-btn icon-image btn-file icon-2x y-space-s"></button>
+			</div>
+			<div class="col-4 center-align">
+				<div class="center-align"><img id="f-img-7" class="center-align small-table-image"></div>
+			</div>
+		</div>		
+		<div class="row">
+			<div class="col-d-6 col-12 form-section">
+				<label for="button-text">Button Text</label><i title="The button text will be displayed on a button underneath the Label and Sub Text if enabled." class="icon icon-tool-tip x-space-s"></i>
+				<div class="switch-input-container">
+					<input disabled="" type="text" id="f-parabtntext" name="f-parabtntext" value="" class="switch-input-input" data-disabled="f-paratextactive">
+					<div class="switch-input-switch">
+						<input type="checkbox" id="f-paratextactive" name="f-paratextactive" class="on-off-switch toggle-switch">
+			            <label for="f-paratextactive" class="on-off-switch-label">
+			                <div class="on-off-switch-state">on</div>
+			            </label>
+		            </div>
+		        </div>
+			</div>
+			<div class="col-d-6 col-12 form-section">
+				<label for="button-link">Button Link</label><i title="Where would you like customers to go when they click the button? This is usually a category page, product page, or custom page." class="icon icon-tool-tip x-space-s"></i>
+				<input data-disabled="f-paratextactive" disabled="" type="text" id="f-parabtnlink" name="f-parabtnlink">
+			</div>
+		</div>			
+	</div>
+
+	<div class="row row-spaced panel form-section">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Promotional Image Or Video</div>
+					<button type="button" class="btn btn-submit btn-reset pull-right">RESET</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12 form-section">
+				<label for="f-promo-title">Promotional Title </label><i title="This is the large title text for the section of your homepage containing this content." class="icon icon-tool-tip x-space-s"></i>
+				<input type="text" name="f-promo-title" id="f-promo-title" value="<%= promoTitle %>">
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12 form-section">
+				<label for="f-promo-text">Promotional Text </label><i title="This text allows you to describe your promotion in more detail." class="icon icon-tool-tip x-space-s"></i>
+				<textarea class="size-3" name="f-promo-text" id="f-promo-text"><%= promoText %></textarea>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-6">
+				<label for="f-promo-element">Promotional Element</label><i title="You can choose if you'd like to display and image or video next to your promotional text." class="icon icon-tool-tip x-space-s"></i>
+				<div class="select-container">
+					<select id="f-promo-element" name="f-promo-element">
+						<option selected disabled hidden value="<%= promoElement %>"><%= promoElement %></option>
+						<option value="YouTube Video">YouTube Video</option>
+						<option value="Image">Image</option>
+					</select>
+				</div>
+			</div>
+
+			<div id="promo-youtube-input" class="form-section col-6 <%= promoElement === 'YouTube Video' ? '' : 'hidden-alt' %>">
+				<label for="f-youtube-url">YouTube URL</label><i title="This is the web address to the youtube video you'd like to display." class="icon icon-tool-tip x-space-s"></i>
+				<input id="f-youtube-url" class="f-video-url" data-video="0" name="f-youtube-url" type="text" value="<%= youtubeUrl %>">
+			</div>
+
+			<div id="promo-image-input" class="col-6 <%= promoElement === 'YouTube Video' ? 'hidden-alt' : '' %>">
+				<div class="label">Promotional Image<i title="This allows you to upload an image that will be displayed next to your promotional text." class="icon icon-tool-tip x-space-s"></i></div>
+				<button id="f-promo-image-upload" type="button" class="btn btn-other">Select</button>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div id="promo-display" class="col-12 center-align">
+				<iframe class="<%= promoElement === 'YouTube Video' ? '' : 'hidden-alt' %>" id="ytplayer" type="text/html" width="600" height="400"
+				  src="<%= youtubeUrl %>"
+				  frameborder="0"></iframe>
+				<img id="promo-image" class="fit-container <%= promoElement === 'YouTube Video' ? 'hidden-alt' : ''%>" src="<%= promoImageUrl %>" alt="">
+			</div>
+		</div>
+
+		<div class="row row-spaced form-section">
+			<div class="col-6">
+				<label for="f-button-text">Button Text</label><i title="This text will appear as a button that users can click to navigate through your site." class="icon icon-tool-tip x-space-s"></i>
+				<div class="switch-input-container">
+					<input <%= buttonTextActive ? '' : 'disabled' %> type="text" id="f-button-text" name="f-button-text" value="<%= buttonText %>" class="switch-input-input">
+
+					<div class="switch-input-switch">
+						<input <%= buttonTextActive ? 'checked' : '' %> type="checkbox" id="f-button-text-active" name="f-button-text-active" class="on-off-switch" />
+			            <label for="f-button-text-active" class="on-off-switch-label">
+			                <div class="on-off-switch-state">on</div>
+			            </label>
+		            </div>
+		        </div>
+			</div>
+
+			<div class="col-6 form-section">
+				<label for="f-button-link">Button Link</label><i title="Where would you like the customer to go when they click the button?" class="icon icon-tool-tip x-space-s"></i>
+				<input <%= buttonTextActive ? '' : 'disabled' %> type="text" id="f-button-link" name="f-button-link" value="<%= buttonLink %>">
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="row row-spaced panel form-section">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Double Video Bar</div>
+					<button type="button" class="btn btn-submit btn-reset pull-right">RESET</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12 form-section">
+				<label for="f-videos-title">Promotional Title </label><i title="This is the large title text for the section of your homepage containing this content." class="icon icon-tool-tip x-space-s"></i>
+				<input type="text" name="f-videos-title" id="f-videos-title" value="<%= videosTitle %>">
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div id="promo-videos-input-1" class="form-section col-6">
+				<label for="f-videos-url-1">YouTube URL 1</label><i title="This is the web address to the youtube video you'd like to display." class="icon icon-tool-tip x-space-s"></i>
+				<input id="f-videos-url-1" class="f-video-url youtube" data-video="1" name="f-videos-url-1" type="text" value="<%= videoUrl1 %>">
+			</div>
+
+			<div id="promo-videos-input-2" class="form-section col-6">
+				<label for="f-videos-url-2">YouTube URL 2</label><i title="This is the web address to the youtube video you'd like to display." class="icon icon-tool-tip x-space-s"></i>
+				<input id="f-videos-url-2" class="f-video-url youtube" data-video="2" name="f-videos-url-2" type="text" value="<%= videoUrl2 %>">
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div id="video-display-1" class="col-6 center-align">
+				<iframe id="videoplayer1" type="text/html" width="330" height="230" src="<%= videoUrl1 %>" frameborder="0"></iframe>
+			</div>
+			<div id="video-display-2" class="col-6 center-align">
+				<iframe id="videoplayer2" type="text/html" width="330" height="230" src="<%= videoUrl2 %>" frameborder="0"></iframe>
+			</div>			
+		</div>
+	</div>
+
+	<div class="row row-spaced panel">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Shop Value Icons</div>
+					<button type="button" class="btn btn-submit btn-reset pull-right">RESET</button>
+				</div>
+			</div>
+		</div>
+
+	    <div id="shop-value-icon-container" class="row"></div>
+	</div>
+
+	<div class="row row-spaced panel form-section">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Homepage Tile</div>
+					<button type="button" class="btn btn-submit btn-reset pull-right">RESET</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-6 form-section">
+				<label for="f-tile-link">Tile Link</label><i class="icon icon-tool-tip x-space-s" title="This is the location a customers will be directed to when they click this tile."></i>
+				<input type="text" id="f-tile-link" name="f-tile-link" value="<%= tileLink %>">
+			</div>
+			<div class="col-6">
+				<label for="f-tile-title">Title</label><i class="icon icon-tool-tip x-space-s" title="This will be the large text displayed on the tile itself. Category or product names are common for this area."></i>
+				<input type="text" id="f-tile-title" name="f-tile-title" value="<%= tileTitle %>">
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-6">
+				<label for="f-shop-now-text">Shop Now Text</label><i class="icon icon-tool-tip x-space-s" title="This is the small text displayed below the title text. Usually it is something simple, for example, shop now."></i>
+				<input type="text" id="f-shop-now-text" name="f-shop-now-text" value="<%= shopNowText %>">
+			</div>
+			<div class="col-3">
+				<div class="label">Tile Image<i title="This allows you to upload the image to use for this tile." class="icon icon-tool-tip x-space-s"></i></div>
+				<button id="f-tile-image-upload" type="button" class="image-upload icon icon-btn icon-image btn-file icon-2x y-space-sr"></button>
+			</div>
+			<div class="col-3">
+				<img class="fit-container hidden-alt" id="tile-image" src="<%= tileImageUrl %>" alt="">
+			</div>
+		</div>
+
+		<!-- <div id="tile-display" class="row row-spaced">
+			<div class="col-12 center-align">
+				<img class="fit-container" id="tile-image" src="<%= tileImageUrl %>" alt="">
+			</div>
+		</div> -->
+	</div>

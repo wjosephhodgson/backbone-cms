@@ -1,0 +1,92 @@
+.m-whats-next-container {
+  background-color: $grey;
+
+  .m-whats-next-title {
+    margin-bottom: 1.5em;
+    margin-top: 1em;
+    text-align: center;
+
+    .m-whats-next-title-copy {
+      margin-bottom: -0.5em;
+    }
+
+    .header-underline.m-whats-next-underline {
+      width: 50px
+    }
+  }
+}
+
+.m-whats-next-container-margin-top-fix {
+  @include desktop() {
+    margin-top: 2em;
+  }
+}
+
+.m-whats-next-container-border-top-fix {
+  border-top: 1px solid $accent-grey;
+}
+
+.m-whats-next-container-border-top-fix-no-mobile {
+  @include desktop() {
+    border-top: 1px solid $accent-grey;
+  }
+}
+
+.m-whats-next-container-border-bottom-fix {
+  border-bottom: 1px solid $accent-grey;
+}
+
+.m-whats-next-container-top-padding-fix {
+  //used on order detail multiple
+  padding-top: 0.1em;
+}
+
+.m-whats-next-elements-container {
+  text-align: center;
+
+  .m-whats-next-elements-list {
+    margin-left: -3em;
+
+    .m-whats-next-elements-list-item {
+      display: inline-block;
+      margin: 0.0em;
+      padding-bottom: 2em;
+    }
+  }
+}
+
+.m-whats-next-step-container {
+  width: 144px;
+
+  .m-whats-next-no-step {
+    color: $accent-grey;
+
+    label{
+      color: $accent-grey;
+    }
+  }
+
+  .m-whats-next-step-graphics {
+    .m-whats-next-icon{
+      position: relative;
+      left: 72px;
+      top: -21px;
+    }
+    .m-whats-next-icon-image {
+    }
+  }
+
+  .m-whats-next-icon-title {
+    padding-left: 2em;
+
+    .m-whats-next-icon-title-number {
+      margin-bottom: 0em;
+    }
+  }
+}
+
+.m-whats-next-link {
+  padding-bottom: 1em;
+  padding-right: 1em;
+  font-size: 15px !important;
+}

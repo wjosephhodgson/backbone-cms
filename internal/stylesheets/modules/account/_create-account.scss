@@ -1,0 +1,31 @@
+.m-create-account {
+  margin-bottom: 4em !important;
+
+  .m-create-account-description   {
+    margin-top: 1.23em;
+  }
+
+  .btn-facebook {
+    margin-top: 0;
+    margin-bottom: 1.875em;
+    display: inline-block;
+
+    @include desktop() {
+      margin-top: 1.923em; //25px
+      margin-bottom: 0.5em;
+    }
+  }
+
+  .m-create-account-form {
+    text-align: left;
+
+    .m-create-account-form-required {
+      font-size: 1.1em;
+      text-align: right;
+    }
+  }
+  .m-create-account-fb-label {
+    color: $black;
+    font-size: 1.077em;
+  }
+}

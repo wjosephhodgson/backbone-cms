@@ -1,0 +1,207 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Paid Memberships</h2>
+			<div class="btn-panel">
+				<button type="button" id="save-btn" class="btn btn-submit pull-right">Save Changes</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced">
+	<div class="col-12">
+		You can use this section to manage the Paid Membership feature of your site. You can configure the discount that your customers will receive for being members, manage the list of members, and create descriptive text content to help explain the program.
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+
+<!-- Hidden Alert Message for invalid search -->
+<div class="row row-spaced panel alert-panel hidden-alt" id="search-alert">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-1">
+				<div class="icon icon-4x icon-warning"></div>
+			</div>
+			<div class="col-11 alert-text">
+				Please enter search criteria into at least one of the below fields in order to look up membership information.
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+<div class="row row-spaced">
+	<div class="col-12">
+	    <div id="tabs">
+			<ul class="clearfix">
+			<li class="col-6"><a class="center-align fill-container-width" href="#programsettings">Program Settings</a></li>
+			<li class="col-6"><a class="center-align fill-container-width" href="#memberstab">Program Members</a></li>
+			</ul>
+
+			<!-- Start of programsettings Tab -->
+			<div id="programsettings">
+
+				<div id="settings-content">
+					
+					<div id="settings-content">
+						<div class="row row-spaced">
+							<div class="col-3 form-section">
+								<div class="label">Program Status</div>
+								<input <%= status ? 'checked' : '' %> type="checkbox" id="f-status" name="f-status" class="on-off-switch" />
+								<label for="f-status" class="on-off-switch-label">
+								<div class="on-off-switch-state">on</div>
+								</label>
+							</div>
+							<div class="col-4 form-section">
+								<label for="f-programName">Program Name</label><i class="icon icon-tool-tip x-space-s" title="This is the unique name of your paid membership program."></i>
+								<input type="text" id="f-programName" name="f-programName" value="<%= programName %>">
+							</div>	
+						</div>
+
+						<div class="row row-spaced form-section">
+							<div class="col-4">
+								<div class="label">Discount <i class="icon icon-tool-tip x-space-s" title="This is the discount your members will receive when ordering from your site."></i></div>
+								<div class="select-container">
+									<select id="f-markupMarkdown" name="f-markupMarkdown">
+										<option selected disabled hidden value="<%= discountOptions %>"><%= discountOptions %></option>
+										<option value="$5">$5</option>
+										<option value="$10">$10</option>
+										<option value="$20">$20</option>
+										<option value="10%">10%</option>
+										<option value="20%">20%</option>
+										<option value="Free Delivery">Free Delivery</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+						<div class="row row-spaced">
+							<div id="tiny-mce-container-faq" class="col-12 form-section">
+								<label for="section-description">FAQ Content</label><i title="This is a descriptive text area that you can use to help answer questions your customers may have about the membership program." class="icon icon-tool-tip x-space-s"></i>
+								<textarea name="section-descriptionOne" id="section-descriptionOne" class="tinymce"><%= faqContent %></textarea>
+							</div>
+						</div>
+
+						<div class="row row-spaced">
+							<div id="tiny-mce-container-legal" class="col-12 form-section">
+								<label for="section-description">Legal Content</label><i title="This descriptive text area can be used to elaborate on the fine print legal info for the program." class="icon icon-tool-tip x-space-s"></i>
+								<textarea name="section-descriptionTwo" id="section-descriptionTwo" class="tinymce"><%= legalContent%></textarea>
+							</div>
+						</div>
+
+						<div class="row row-spaced">
+							<div id="tiny-mce-container-myaccounts" class="col-12 form-section">
+								<label for="section-description">Membership Page Description</label><i title="This text is displayed on the membership page." class="icon icon-tool-tip x-space-s"></i>
+								<textarea name="section-descriptionThree" id="section-descriptionThree" class="tinymce"><%= accountContent %></textarea>
+							</div>
+						</div>
+
+						<div class="row row-spaced">
+							<div id="tiny-mce-container-myaccounts" class="col-12 form-section">
+								<label for="section-description">Membership Signup Description</label><i title="This descriptive text area is displayed when your customers wish to sign up for the membership program." class="icon icon-tool-tip x-space-s"></i>
+								<textarea name="section-descriptionFour" id="section-descriptionFour" class="tinymce"><%= accountSignupContent %></textarea>
+							</div>
+						</div>
+
+					</div>					
+
+				</div>
+
+			</div><!-- End of Account Tab -->
+			
+	        <!-- Start of memberstab Tab -->
+			<div id="memberstab">
+
+				<div class="row">
+					<div class="col-12">
+						<div class="panel-title">Search</div>
+					</div>
+				</div>
+
+				<div class="row row-spaced form-section">
+					<div class="col-4">
+						<div class="search-container">
+							<input type="text" id="firstNameSearch" name="firstNameSearch" placeholder="Search by First Name"> 
+						</div>
+					</div>
+
+					<div class="col-4">
+						<div class="search-container">
+							<input type="text" id="lastNameSearch" name="lastNameSearch" placeholder="Search by Last Name">
+						</div>
+					</div>
+				</div>
+
+				<div class="row row-spaced form-section">
+					<div class="col-8">
+						<div class="search-container">
+							<input type="text" id="emailSearch" name="emailSearch" placeholder="Search by Email">
+						</div>
+					</div>
+
+					<div class="col-3 pull-right buttonwithlabel">
+						<button type="button" id="search-btn" class="btn btn-submit">SEARCH</button>
+					</div>
+				</div>
+
+				<div class="search-results">
+					<div class="row">
+						<div class="col-12">
+							<div class="panel-title">Member Account Information</div>
+						</div>
+					</div>
+
+					<!-- Start of Rewards Table -->
+					<div class="row row-spaced">
+						<div class="col-12">
+							<table id="member-table" class="table alternate">
+								<thead>
+									<tr>
+										<th class="th-3-20 left-align">First Name <i class="icon left-offset-xs"></i></th>
+										<th class="th-3-20 left-align">Last Name<i class="icon left-offset-xs"></i></th>
+										<th class="th-2-20 left-align">Email Address <i class="icon left-offset-xs"></i></th>
+										<th class="th-2-20 left-align">Status<i class="icon left-offset-xs"></i></th>
+									</tr>
+								</thead>
+								<tbody id="member-list"></tbody>
+							</table>
+						</div>
+					</div>
+					<!-- End of members Table -->
+
+					<div class="row">
+						<div class="col-12">
+							<div class="panel-title">Download Account Data</div>
+						</div>
+					</div>
+					<div class="row row-spaced">
+						<div class="col-3">
+							<button type="button" id="download-btn" class="btn btn-submit">Export csv</button>
+						</div>
+					</div>
+
+				</div><!-- end of search-results -->
+			</div><!-- End of Settings Tab -->
+
+	    </div><!-- End of Tabs Section -->
+	</div><!-- end of col-12 -->
+</div><!-- end of row -->

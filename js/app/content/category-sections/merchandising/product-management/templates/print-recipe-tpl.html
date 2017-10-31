@@ -1,0 +1,78 @@
+<div id="print-recipe-info" class="row row-spaced form-section">
+        <div class="clearfix section-title">
+            <h3 class="pull-left left-pad-xs">Print Preview</h3>
+            <div class="btn-panel">
+                <button type="button" id="cancel-btn" class="btn btn-other">Cancel</button>
+                <button type="button" id="print-btn" class="btn btn-submit">Print</button>
+            </div>
+        </div>
+
+        </div>
+
+        <!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+        
+<div id="print-recipe-section" >
+
+  <div class="row row-spaced x-space-s form-section">
+
+	  <div class="col-12 form-section y-space-s" >
+
+			 <label for="f-name">Product Name</label>
+					
+					<input <%= type === 'Teleflora' ? 'disabled' : '' %> type="text" id="f-name" name="f-name" value="<%= name %>">
+					  	
+					  	 </div>
+
+					  </div>
+   
+ <div class="row row-spaced x-space-s form-section">
+               
+
+    <div class="col-12 form-section" >
+
+				   <div class="label y-space-bottom-s"> Image </div>
+
+
+      <img class="fit-container" src="<%= "http://s7d2.scene7.com/is/image/Teleflora/" + number + "?wid=270&hei=250&fmt=jpeg&qlt=90,0&op_sharpen=0&resMode=bilin&op_usm=1.0,0.5,1.0,0&iccEmbed=0&layer=1&opac=0&layer=2&opac=55&layer=5&opac=0" %>">
+
+                   </div>
+          </div>
+
+<div class="row row-spaced x-space-s form-section">
+	<div class="col-12" > 
+			<label for="f-description">Product Description</label><i class="icon icon-tool-tip x-space-s"></i>
+						<textarea <%= type === 'Teleflora' ? 'disabled' : '' %> name="f-description" id="f-description" class="size-3"><%= description %></textarea>
+				  	</div>
+		</div>
+
+
+<div class="row row-spaced x-space-s form-section" >
+
+		<div class="col-12">
+					<label for="f-description">Product Recipe</label><i class="icon icon-tool-tip x-space-s"></i>
+
+
+              	<textarea <%= type === 'Teleflora' ? 'disabled' : ''%> name="f-recipe" id="f-recipe" class="size-4"><%= recipe %></textarea>
+ 
+	          </div>
+
+	</div>
+</div>
+	 

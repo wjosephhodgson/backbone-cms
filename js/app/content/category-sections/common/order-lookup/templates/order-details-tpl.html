@@ -1,0 +1,572 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Order Details</h2>
+			<div class="btn-panel">
+				<button class="btn btn-submit pull-right" id="order-lookup-resend-btn"><i class="icon icon-undo"></i>Resend</button>
+				<button id="print-btn" class="btn btn-submit pull-right"><i class="icon icon-print"></i>Print</button>
+				<button id="cancel-btn" class="btn btn-other pull-right">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+
+<div class="row row-spaced">
+	<div class="col-12">View the selected order details below</div>
+</div>
+
+<!--// Order Info [Start] //-->
+<div class="row row-spaced panel">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">Order Information</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Order Date</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= orderDate %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Confirmation No.</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= confirmationNumber %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Dove No.</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= doveNumber %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Delivery Date</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= deliveryDate %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// Order Info [End] //-->
+
+<!--// Recipient Info [Start] //-->
+<div class="row row-spaced panel">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">Recipient/Delivery Information</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">First Name</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= recipientFirstName %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Last Name</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= recipientLastName %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Phone Number</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= recipientPhoneNumber %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Email</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= recipientEmail %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Address</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= recipientAdress %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">				
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">City</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= recipientCity %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">				
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">State</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= recipientState %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">				
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Zip/Postal Code</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= recipientZip %></div>
+					</div>
+				</div>												
+			</div>
+		</div>
+
+	</div>
+</div>
+<!--// Recipient Info [End] //-->
+
+<!--// Item Ordered [Start] //-->
+<div class="row row-spaced panel">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">Item Ordered</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Occasion Code</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= occasionCode %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Item ID</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= itemId %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Item Name</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= itemName %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Add-Ons</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= addOns %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Special Instructions</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= specialInstructions %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Card Message</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= cardMessage %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Signature</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= signature %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// Item Ordered [End] //-->
+
+<!--// Sender Info [Start] //-->
+<div class="row row-spaced panel">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">Sender Information</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">First Name</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= senderFirstName %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Last Name</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= senderLastName %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Phone Number</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= senderPhoneNumber %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Email</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= senderEmail %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Address</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= senderAdress %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">			
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">City</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= senderCity %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">				
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">State</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= senderState %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">				
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Zip/Postal Code</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= senderZip %></div>
+					</div>
+				</div>					
+			</div>
+		</div>
+	</div>
+</div>
+<!--// Sender Info [End] //-->
+
+<!--// Misc Info [Start] //-->
+<div class="row row-spaced panel">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">Miscellaneous Information</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Delivery Method</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= deliveryMethod %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Source Code</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= sourceCode %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Promotion Code</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= promotionCode %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// Misc Info [End] //-->
+
+<!--// Order Totals [Start] //-->
+<div class="row row-spaced panel">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">Order Totals</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Products</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= productTotal %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Add-Ons</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= upsellTotal %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Promotions</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= promotionTotal %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Fees</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= feeTotal %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Taxes</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= taxTotal %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Order Total</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= orderTotal %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// Order Totals [End] //-->
+
+<!--// Payment Information [Start] //-->
+<div class="row row-spaced panel">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">Payment Information</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Payment Type</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= paymentType %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Credit Card Type</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= creditCardType %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Card or Account No./PayPal Email</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><span id="credit-card-number"><%= creditCardAccountNumberPayPalEmail %></span> <% if(!creditCardAccountNumberPayPalEmail.match('@')) { %><button id="toggle-credit-card-number-btn" class="icon icon-btn icon-search"></button><% } %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Full Name On Card</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= creditCardName %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Gift Card Number</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= giftCardNumber %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// Payment Information [End] //-->

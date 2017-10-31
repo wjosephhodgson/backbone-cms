@@ -1,0 +1,9 @@
+<tr>
+	<td class="left-align"><%= promoCode %></td>
+	<td><%= startDate %></td>
+	<td><%= endDate %></td>
+	<td><% if( discountType == 'Dollars Off' ) { %>$<%= discountAmt %><% } else { %><%= discountAmt %>%<% } %></td>
+	<td><%= condition %></td>
+	<td><button type="button" class="icon icon-btn icon-2x icon-edit"></button></td>
+	<td><% if( !federated ) { %><button type="button" class="icon icon-btn icon-2x icon-trash"></button><% } %></td>
+</tr>

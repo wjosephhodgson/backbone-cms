@@ -1,0 +1,211 @@
+// sprite
+
+@mixin sprite($img: "../images/ui-sprite.svg", $x: 0, $y: 0) {
+  background-image: url($img);
+  background-position: $x $y;
+  background-repeat: no-repeat;
+}
+
+
+// icon helper
+
+@mixin icon( $x, $y, $width, $height, $display:inline-block ){
+  @include sprite("../images/ui-sprite.svg", $x, $y);
+  width: $width;
+  height: $height;
+  display: $display;
+  text-indent: -9999px;
+}
+
+// translate
+@mixin translate3d($x, $y, $z) {
+  -webkit-transform: translate3d($x, $y, $z);
+  -moz-transform: translate3d($x, $y, $z);
+  -o-transform: translate3d($x, $y, $z);
+  transform: translate3d($x, $y, $z);
+}
+
+// transform
+@mixin transform($params) {
+  -webkit-transform: $params;
+  -moz-transform: $params;
+  transform: $params;
+}
+
+// transition
+@mixin transition($transition-property, $transition-duration) {
+  -webkit-transition: $transition-property $transition-duration;
+  -moz-transition: $transition-property $transition-duration;
+  -ms-transition: $transition-property $transition-duration;
+  -o-transition: $transition-property $transition-duration;
+  transition: $transition-property $transition-duration;
+}
+
+// transition with timing function
+@mixin full-transition($transition-property, $transition-duration, $transition-timing-function) {
+  -webkit-transition: $transition-property $transition-duration $transition-timing-function;
+  -moz-transition: $transition-property $transition-duration $transition-timing-function;
+  -ms-transition: $transition-property $transition-duration $transition-timing-function;
+  -o-transition: $transition-property $transition-duration $transition-timing-function;
+  transition: $transition-property $transition-duration $transition-timing-function;
+}
+
+// vert padding mixin
+@mixin vertPadding($break, $val){
+  @media screen and (min-width: $break){
+    padding-top:$val;
+    padding-bottom:$val;
+  }
+}
+
+/////
+// wildcard min-width media query
+/////
+
+@mixin wildcard($breakpoint){
+  @media screen and (min-width: $breakpoint){
+    @content;
+  }
+}
+
+/////
+// wildcard max-width media query
+/////
+
+@mixin wildcard-max($breakpoint){
+  @media screen and (max-width: $breakpoint){
+    @content;
+  }
+}
+
+/////
+// Anything below $break-small
+/////
+
+@mixin mobile() {
+  @media screen and (max-width: $break-small){
+    @content;
+  }
+}
+
+/////
+// Anything above $break-small
+/////
+
+@mixin tablet() {
+  @media screen and (max-width: $break-small){
+    @content;
+  }
+}
+
+/////
+// Anything above $break-medium
+/////
+
+@mixin desktop() {
+  @media screen and (min-width: $break-medium + 1px){
+    @content;
+  }
+}
+
+// helpers/conversion
+
+/////
+// Converts a value to em
+/////
+
+@function em( $value, $context:$base-font-size ) {
+  @if $value == 0 {
+    @return 0;
+  }
+  @return $value/$context + 0em;
+}
+
+/////
+// Converts a value to px
+/////
+
+@function px( $value ) {
+  @if $value == 0 {
+    @return 0;
+  }
+  @return $value + 0px;
+}
+
+
+
+/////
+// Creates a triangle just by using borders
+//
+// Valid directions are up, right, down and left (no quotes)
+/////
+@mixin border-triangle( $width, $height, $color, $direction ){
+  width: 0;
+  height: 0;
+
+  @if $direction == up {
+    border-left: $width/2 solid transparent;
+    border-right: $width/2 solid transparent;
+    border-bottom: $height solid $color;
+  }
+  @if $direction == right {
+    border-top: $width/2 solid transparent;
+    border-bottom: $width/2 solid transparent;
+    border-left: $height solid $color;
+  }
+  @if $direction == down {
+    border-left: $width/2 solid transparent;
+    border-right: $width/2 solid transparent;
+    border-top: $height solid $color;
+  }
+  @if $direction == left {
+    border-top: $width/2 solid transparent;
+    border-bottom: $width/2 solid transparent;
+    border-right: $height solid $color;
+  }
+}
+
+// Border Radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// Opacity
+@mixin opacity($alpha) {
+  -webkit-opacity: $alpha / 100;
+  -moz-opacity: $alpha / 100;
+  -khtml-opacity: $alpha / 100;
+  opacity: $alpha / 100;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=" + $alpha + ")"; // first!
+  filter: alpha(opacity=$alpha);
+}
+
+// Box shadow
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+// Clearfix
+@mixin clearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Border Bottom
+@mixin border-bottom(){
+  border-bottom:1px solid $accent-grey;
+}

@@ -1,0 +1,13 @@
+<tr <% if (imgType !== "Teleflora") { %>class="sortable"<% } %> data-id="<%= id %>">
+	<% if (imgType !== "Teleflora") { %>
+	<td><i class="icon icon-arrows icon-2x"></i></td>
+	<% } %>
+	<td><img src=<%= sectionImage %> class="sectionImage small-table-image"></td>
+	<td class="left-align"><%= sectionName %></td>
+	<td>
+		<input <%= sectionStatus ? 'checked' : '' %> type="checkbox"  id="<%= id %>" name="<%= id %>" class="on-off-switch"/>
+		<label for="<%= id %>" class="on-off-switch-label left-offset-l"><div class="on-off-switch-state">on</div></label>
+    </td>
+	<td><% if( imgType === 'Custom'){ %><button type="button" id="f-tile-image-upload" class="image-upload icon icon-btn icon-edit icon-2x"></button><% } %></td>
+	<td><% if( imgType === 'Custom'){ %><button type="button" class="icon icon-btn icon-trash icon-2x"></button><% } %></td>
+</tr>

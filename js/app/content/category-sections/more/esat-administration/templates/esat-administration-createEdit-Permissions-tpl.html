@@ -1,0 +1,59 @@
+ <form name="f-permissions-menu-names" id="f-edit-permissions-menu-page" class="left-align">
+    <div class="row row-spaced x-space-s left-align">
+    
+        <div class="row form-section">
+            <div class="col-12">
+                <div class="section-title">
+                    <h2 id="savedDisplayMoved"class="pull-left">Edit eSAT User Group Access Level</h2>
+                    <div role="tooltip" data-parent="savedDisplayMoved" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+                    <button type="button" id="cancel-btn" class="btn btn-other btn-panel pull-right">Cancel</button>
+                    <button type="button" id="save-btn" class="btn btn-submit btn-panel pull-right"> Save</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hidden Alert Message -->
+        <div class="row row-spaced panel alert-panel">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-1">
+                        <div class="icon icon-3x icon-warning"></div>
+                    </div>
+                    <div class="col-11 alert-text">
+                        This is a generic placeholder for error messages in eSAT. <br>
+                        In the live app, this will be a real message and will be hidden by default.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hidden Alert Message -->
+
+        <div class="row row-spaced">
+            <div class="col-12">
+                Add or edit permissions and access level for eSAT user groups. Check or uncheck different sections<br> to assign or remove access level for this user group.
+            </div>
+        </div>
+
+        <div class="row row-spaced form-section">
+            <div class="col-6">
+                <div class="label pull-left"> User Group Name</div>
+                <input id="f-UserGroup-name" name="-UserGroup-name" type="text" value="<%= UserGroups %>" disabled>   
+            </div>
+        </div>
+
+        <div class="row row-spaced"> 
+            <div class="col-12">
+                <table class="table alternate">
+                    <thead>
+                        <tr class="highlighted">
+                            <th class="col-4">Permissions</th>
+                            <th class="col-8 left-indent left-align">eSAT Menu Sections</th>
+                        </tr>
+                    </thead>
+                    <tbody id="Permissions-MenuNames-List"></tbody>
+                </table>
+            </div>    
+        </div>
+
+    </div>  <!-- Template Ends Here -->
+</form>

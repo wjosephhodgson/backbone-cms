@@ -1,0 +1,29 @@
+<span>
+	<div id="<%= 'l' + id %>" class="site-theme-layout-theme grid-item hover-tip-overlay <%= name === 'Seasonal' ? 'seasonal-layout' : '' %>">
+		<div class="hover-tip outline">
+			<div class="row row-spaced center-align">
+				<div class="col-12 y-space-s">
+					<%= name %>	
+				</div>
+			</div>
+		</div>
+
+		<img class="fill-container" src="<%= imgUrl %>" alt="">
+	</div>
+
+	<div class="hidden-alt site-theme-color-schemes">
+		<% for(var i = 0, j = colorSchemes.length; i < j; ++i) { %>
+			<div id="<%= 'l' + id + 's' + colorSchemes[i].id %>" class="grid-item color-scheme hover-tip-overlay">
+				<div class="hover-tip outline">
+					<div class="row row-spaced center-align">
+						<div class="col-12 y-space-s">
+							<%= colorSchemes[i].name %>	
+						</div>
+					</div>
+				</div>
+
+				<img class="fill-container" src="<%= colorSchemes[i].imgUrl %>" alt="">
+			</div>
+		<% } %>
+	</div>
+</span>

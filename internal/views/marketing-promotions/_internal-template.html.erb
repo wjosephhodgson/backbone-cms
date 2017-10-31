@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= @title %></title>
+    <link rel="stylesheet" href="/stylesheets/internal/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/internal/bootstrap-responsive.min.css">
+    <script type="text/javascript" src="/javascripts/lib/jquery.js"></script>
+    <script type="text/javascript" src="/javascripts/internal/bootstrap.min.js"></script>
+
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  <div class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-inner">
+      <ul class="nav">
+        <li><a href="<%= domain %>">Home</a></li>
+        <li><a href="<%= domain %>global">Global Elements</a></li>
+        <li><a href="<%= domain %>layouts">Layouts</a></li>
+        <li><a href="<%= domain %>modules">Modules</a></li>
+      </ul>
+    </div>
+    <!-- .navbar-inner -->
+  </div>
+  <!-- .navbar.navbar-inverse -->
+
+    <div class="container">
+      <header><h1><%= @title %></h1></header>
+      <%= yield %>
+    </div>
+    <!-- .container -->
+  </body>
+</html>

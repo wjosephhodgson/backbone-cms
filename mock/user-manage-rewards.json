@@ -1,0 +1,35 @@
+[
+	{
+		"id":1,
+		"firstName":"Jeffrey",
+		"lastName":"Takaki",
+		"emailAddress":"jtakaki@teleflora.com",
+		"optInDate":"01/19/2015",
+		"optOutDate":"07/19/2015",
+		"accountStatus":"Good",
+		"addSubPoints":"Add",
+		"currentBalance":100
+	},
+	{
+		"id":2,
+		"firstName":"Philip",
+		"lastName":"Emokpare",
+		"emailAddress":"pemokpare@teleflora.com",
+		"optInDate":"01/12/2015",
+		"optOutDate":"07/12/2015",
+		"accountStatus":"Good",
+		"addSubPoints":"Add",
+		"currentBalance":300
+	},
+	{
+		"id":3,
+		"firstName":"Joseph",
+		"lastName":"Hodgson",
+		"emailAddress":"jhodgson@teleflora.com",
+		"optInDate":"12/12/2006",
+		"optOutDate":"07/12/2015",
+		"accountStatus":"Good",
+		"addSubPoints":"Add",
+		"currentBalance":1800
+	}
+]

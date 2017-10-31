@@ -1,0 +1,51 @@
+<div id="create-category">
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="clearfix section-title">
+				<h2 class="pull-left">Create Category</h2>
+				<div class="btn-panel">
+					<button type="button" id="cancel-btn" class="btn btn-other">Cancel</button>
+					<button type="button" id="continue-btn" class="btn btn-submit">Continue</button>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+	<div class="row row-spaced">
+		<div class="col-12">
+			Select a layout for your new category from the dropdown below. This can either be a Category/Subcategory which features a large list of products, or a Landing Page to help direct your shoppers to the categories they are looking for.
+		</div>
+	</div>
+
+	<form id="create-form" class="row row-spaced panel">
+		<div class="col-12 form-section">
+			<div class="row">
+				<div class="col-6">
+					<div class="select-container">
+						<select name="f-layout-select" id="f-layout-select">
+							<option selected disabled hidden value="">Select Layout</option>
+							<option value="category">Category/Subcategory</option>
+							<option value="landing">Landing Page</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

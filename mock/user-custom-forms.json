@@ -1,0 +1,160 @@
+[
+	{
+		"id":1,
+		"formName":"Event Consultation Request",
+		"formUrl": "event-consultation",
+		"formEmail": "customerservice@michaelsflowershop.com",
+		"active": true,
+		"metaDesc":"Event consultations by the flower shop",
+		"pageTitle":"Flower Shop - Event Consultation",
+		"metaKeywords":"flower shop, event consultation",
+		"metaTags":"",
+		"fields": [
+	          {
+	            "label": "What is your name?",
+	            "field_type": "text",
+	            "required": true,
+	            "field_options": {},
+	            "cid": "c1"
+	          },
+	          {
+	          	"label": "Your phone number",
+	          	"field_type": "number",
+	          	"required": false,
+	          	"field_options": {},
+	          	"cid": "c2"
+	          },
+	          {
+	          	"label": "Your email address",
+	          	"field_type": "email",
+	          	"required": true,
+	          	"field_options": {},
+	          	"cid": "c3"
+	          },	          
+	          {
+	          	"label": "Requested consultation date",
+	          	"field_type": "date",
+	          	"required": false,
+	          	"field_options": {},
+	          	"cid": "c4"
+	          },  
+	          {
+	            "label": "Would you prefer to be contacted by phone or email?",
+	            "field_type": "radio",
+	            "required": true,
+	            "field_options": {
+	                "options": [{
+	                    "label": "Phone",
+	                    "checked": true
+	                }, {
+	                    "label": "Email",
+	                    "checked": false
+	                }],
+	                "include_other_option": false
+	            },
+	            "cid": "c10"
+	          }		
+		]
+	},
+	{
+		"id":2,
+		"formName":"Customer Satisfaction Survey",
+		"formUrl": "customer-satisfaction-survey",
+		"formEmail": "customersatisfaction@michaelsflowershop.com",
+		"active": true,
+		"metaDesc":"Customer Satisfaction Survey",
+		"fields": [
+	          {
+	            "label": "How would you rate the service overall?",
+	            "field_type": "dropdown",
+	            "required": true,
+	            "field_options": {
+	                "options": [{
+	                    "label": "1 - slow",
+	                    "checked": false
+	                }, {
+	                    "label": "2 - average",
+	                    "checked": true
+	                }, {
+	                    "label": "3 - fast",
+	                    "checked": false
+	                }],
+	                "include_other_option": false
+	            },
+	            "cid": "c1"
+	          },
+	          {
+	            "label": "How fast was the service?",
+	            "field_type": "dropdown",
+	            "required": true,
+	            "field_options": {
+	                "options": [{
+	                    "label": "1 - slow",
+	                    "checked": false
+	                }, {
+	                    "label": "2 - average",
+	                    "checked": true
+	                }, {
+	                    "label": "3 - fast",
+	                    "checked": false
+	                }],
+	                "include_other_option": false
+	            },
+	            "cid": "c10"
+	          },
+	          {
+	          	"label": "Comments",
+	          	"field_type": "paragraph",
+	          	"required": false,
+	          	"cid": "c11"
+	          }
+		]
+	},	
+	{
+		"id":3,
+		"formName":"Custom Form 3",
+		"formUrl": "custom-form-3",
+		"formEmail": "michael@michaelsflowershop.com",
+		"active": true,
+		"metaDesc":"Custom Form 3",
+		"fields": [
+			{
+				"label": "Do you have a website?",
+				"field_type": "website",
+				"required": false,
+				"field_options": {},
+				"cid": "c1"
+			},
+			{
+				"label": "Please enter your clearance number",
+				"field_type": "text",
+				"required": true,
+				"field_options": {},
+				"cid": "c6"
+			},
+			{
+				"label": "Security personnel #82?",
+				"field_type": "radio",
+				"required": true,
+				"field_options": {
+				    "options": [{
+				        "label": "Yes",
+				        "checked": false
+				    }, {
+				        "label": "No",
+				        "checked": false
+				    }],
+				    "include_other_option": true
+				},
+				"cid": "c10"
+			},
+			{
+				"label": "Medical history",
+				"field_type": "file",
+				"required": true,
+				"field_options": {},
+				"cid": "c14"
+			} 
+		]
+	}
+]

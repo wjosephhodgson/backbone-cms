@@ -1,0 +1,103 @@
+<form id="f-product-modal-form" novalidate="novalidate">
+<div class="row row-spaced">
+  <div class="col-12">
+    <div class="clearfix">
+      <div class="panel-title left-align">Edit Product <%= number %> <div class="panel-subtitle"><%= type1 %> Product <%= pid %></div></div>
+    </div>
+  </div>
+</div>
+
+  <% if( type1 === 'Teleflora' ) { %>
+    <div class="row row-spaced">
+      <div class="col-1"></div>
+      <div class="col-7 left-align form-section">
+        <label for="f-name">Name</label>
+        <input <%= type1 === 'Teleflora' ? 'disabled' : '' %> type="text" id="f-name" name="f-name" value="<%= name %>">
+      </div>
+      <div class="col-2 form-section left-align">
+        <div class="label">Active</div>
+        <input <%= active ? 'checked' : '' %> type="checkbox" id="f-active" name="f-active" class="on-off-switch" />
+        <label for="f-active" class="on-off-switch-label left-align">
+            <div class="on-off-switch-state">on</div>
+        </label>
+      </div>  
+    </div>
+
+    <div class="row y-space-top-m">
+      <div class="col-1"></div>
+      <div class="col-4 left-align form-section">
+        <label for="f-label-1">Price Point Label</label>
+        <input <%= type1 === 'Teleflora' ? 'disabled' : '' %> type="text" class="f-label" id="f-label-1" name="f-label-1" value="<%= baseSkuLabel %>">
+      </div>
+      <div class="col-2 left-align form-section">
+        <label for="f-sprice-1">Suggested Price</label>
+        <div class="dollar-container left-align">
+          <input disabled type="text" id="f-sprice-1" name="f-sprice-1" class="f-sprice" value="<%= baseSuggested %>">
+        </div>
+      </div>        
+      <div class="col-2 left-align form-section">
+        <label for="f-price-1"><%= type1 === 'Teleflora' ? 'My ' : '' %>Price</label>
+        <div class="dollar-container left-align">
+          <input type="text" id="f-price-1" name="f-price-1" class="f-price" value="<%= baseSkuPrice %>">
+        </div>
+      </div>
+      <div class="col-2 left-align form-section">
+        <label for="f-holiday-1">Holiday Upgrade</label>
+        <div class="dollar-container left-align">
+          <input type="text" id="f-holiday-1" name="f-holiday-1" class="f-holiday" value="<%= holidayPrice %>">
+        </div>
+      </div>  
+    </div>
+
+      <div id="children"></div>
+  <% } else { %>
+    <div class="row row-spaced">
+      <div class="col-1"></div>
+      <div class="col-7 left-align form-section">
+        <label for="f-name">Name</label>
+        <input <%= type1 === 'Teleflora' ? 'disabled' : '' %> type="text" id="f-name" name="f-name" value="<%= name %>">
+      </div>
+      <div class="col-2 form-section left-align">
+        <div class="label">Active</div>
+        <input <%= active ? 'checked' : '' %> type="checkbox" id="f-active" name="f-active" class="on-off-switch" />
+        <label for="f-active" class="on-off-switch-label left-align">
+            <div class="on-off-switch-state">on</div>
+        </label>
+      </div>  
+    </div>
+
+    <div class="row y-space-top-m">
+      <div class="col-1"></div>
+      <div class="col-4 left-align form-section">
+        <label for="f-label-1">Price Point Label</label>
+        <input <%= type1 === 'Teleflora' ? 'disabled' : '' %> type="text" class="f-label" id="f-label-1" name="f-label-1" value="<%= baseSkuLabel %>">
+      </div>  
+      <div class="col-3 left-align form-section">
+        <label for="f-price-1"><%= type1 === 'Teleflora' ? 'My ' : '' %>Price</label>
+        <div class="dollar-container left-align">
+          <input type="text" id="f-price-1" name="f-price-1" class="f-price" value="<%= baseSkuPrice %>">
+        </div>
+      </div>
+      <div class="col-3 left-align form-section">
+        <label for="f-holiday-1">Holiday Upgrade</label>
+        <div class="dollar-container left-align">
+          <input type="text" id="f-holiday-1" name="f-holiday-1" class="f-holiday" value="<%= holidayPrice %>">
+        </div>
+      </div>  
+    </div>
+
+      <div id="children"></div>
+  <% } %>
+
+
+
+<div class="row row-spaced">
+  <div class="col-12 y-space-top-m">
+    <div class="btn-container-space-s">
+      <button id="cancel-prod" type="button" class="btn btn-other"><%= cancelBtnText %></button>
+      <button id="confirm-prod" type="button" class="btn btn-submit"><%= confirmBtnText %></button>
+      <div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+    </div>
+  </div>
+</div>
+</form>

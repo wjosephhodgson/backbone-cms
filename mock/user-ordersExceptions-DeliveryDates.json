@@ -1,0 +1,37 @@
+[
+{
+	 "id": 1,
+	 "exceptionReason": "Mother's Day",
+	 "exceptionDate": "5/10/2015"	
+},
+{
+	 "id": 2,
+	 "exceptionReason": "Christmas Eve",
+	 "exceptionDate": "12/24/2015"	
+},
+{
+	 "id": 3,
+	 "exceptionReason": "New Year's Day",
+	 "exceptionDate": "1/01/2016"	
+},
+{
+	 "id": 4,
+	 "exceptionReason": "Exception Day 1",
+	 "exceptionDate": "10/20/2015"	
+},
+{
+	 "id": 5,
+	 "exceptionReason": "Exception Day 2",
+	 "exceptionDate": "11/12/2015"	
+},
+{
+	 "id": 6,
+	 "exceptionReason": "Exception Day 3",
+	 "exceptionDate": "12/08/2015"	
+},
+{
+	 "id": 7,
+	 "exceptionReason": "Exception Day 4",
+	 "exceptionDate": "7/10/2015"	
+}
+]

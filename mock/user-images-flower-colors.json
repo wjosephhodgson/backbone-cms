@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name":"Inherited Flower Colors",
+    "url":"flower-colors/inherited",
+    "type":"folder",
+    "global":true
+  },
+  {
+    "id": 2,
+    "name":"Flower Color 2",
+    "url":"http://www.telefloramarketing.com/mock/flower-colors-2.jpg",
+    "type":"image/jpeg",
+    "global":false
+  },
+  {
+    "id": 3,
+    "name":"Flower Color 3",
+    "url":"http://www.telefloramarketing.com/mock/flower-colors-3.jpg",
+    "type":"image/jpeg",
+    "global":false
+  },
+  {
+    "id": 4,
+    "name":"Flower Color 4",
+    "url":"http://www.telefloramarketing.com/mock/flower-colors-4.jpg",
+    "type":"image/jpeg",
+    "global":false
+  },
+  {
+    "id": 5,
+    "name":"Flower Color 5",
+    "url":"http://www.telefloramarketing.com/mock/flower-colors-5.jpg",
+    "type":"image/jpeg",
+    "global":false
+  },
+  {
+    "id": 6,
+    "name":"Flower Color 6",
+    "url":"http://www.telefloramarketing.com/mock/flower-colors-6.jpg",
+    "type":"image/jpeg",
+    "global":false
+  },
+  {
+    "id": 7,
+    "name":"Flower Color 7",
+    "url":"http://www.telefloramarketing.com/mock/flower-colors-7.jpg",
+    "type":"image/jpeg",
+    "global":false
+  },
+  {
+    "id": 8,
+    "name":"Flower Color 8",
+    "url":"http://www.telefloramarketing.com/mock/flower-colors-8.jpg",
+    "type":"image/jpeg",
+    "global":false
+  },
+  {
+    "id": 9,
+    "name":"Flower Color 9",
+    "url":"http://www.telefloramarketing.com/mock/flower-colors-9.jpg",
+    "type":"image/jpeg",
+    "global":false
+  }
+]

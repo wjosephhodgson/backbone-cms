@@ -1,0 +1,86 @@
+    <script type="text/javascript">
+          var pickerLoad = false;
+          var domain = '<%= domain %>';
+          initLoad = true;
+
+          Modernizr.load([
+           {
+               both: [
+                  '<%= domain %>javascripts/lib/jquery.js',
+                  <% @assets.each do |item| %>
+                  '<%= domain %><%= item %>',
+                  <% end %>
+                  '<%= domain %>javascripts/internal/prettify.js',
+                  '<%= domain %>stylesheets/internal/prettify-solarized-light.css',
+                  '<%= domain %>javascripts/modules/bootstrap-tooltip.js',
+                  '<%= domain %>javascripts/lib/hammer.min.js',
+                  '<%= domain %>javascripts/teleflora.js',
+                  '<%= domain %>javascripts/homepage.js',
+              ],
+
+                complete: function(){
+                      prettyPrint();
+                }
+            }
+          ]);
+
+          //sticky sidebar nav
+          $(function(){
+            $(window).scroll(function(){
+                // console.log($(window).scrollTop());
+                var scrollTopHeight = 330;
+                if($(window).scrollTop() >= scrollTopHeight) {
+                    $('.m-sidebar-nav-desktop').addClass('affixed');
+                }
+                else {
+                    $('.m-sidebar-nav-desktop').removeClass('affixed');
+                }
+            });
+          });
+
+
+
+          //sidebar nav top level elements
+          $(function() {
+
+            $('.m-sidebar-section').click(function(e){
+              e.preventDefault();
+
+              $('.m-sidebar-nav-list-item').each(function(){
+                   $(this).removeClass('active');
+              });
+              $(this).parent().addClass('active');
+
+
+              var target = this.hash;
+              $target = $(target);
+              $('html, body').animate({
+                  'scrollTop': $target.offset().top
+              }, 500, function () {
+                  window.location.hash = target;
+              });
+            });
+
+            //sidebar nav nested elements
+            $('.no-caps').click(function(e){
+              e.preventDefault();
+
+              $('.no-caps').each(function(){
+                   $(this).parent().removeClass('active');
+              });
+              $(this).parent().addClass('active');
+
+              var target = this.hash;
+              $target = $(target);
+              $('html, body').animate({
+                  'scrollTop': $target.offset().top
+              }, 500, function () {
+                  window.location.hash = target;
+              });
+            });
+          });
+
+    </script>
+  </body>
+</html>
+

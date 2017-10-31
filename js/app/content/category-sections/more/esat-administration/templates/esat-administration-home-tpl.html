@@ -1,0 +1,132 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">eSAT Administration</h2>
+			<div class="btn-panel">
+				<button type="button" id="cancel-btn" class="btn btn-other">Cancel</button>
+				<button type="button" id="save-btn" class="btn btn-submit">Save</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+		<div class="y-space-top-xs">This section is used to manage various pieces of eSAT. You can configure the content on the home page, build new custom content pages, configure the mega menu content, and change permissions to control who has access to what pages of eSAT.</div>
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row row-spaced panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div id="tabs">
+	<ul>
+		<li class="right-pad-tabs"><a class="esat-management-edit-tab" href="#homepage-Content">Home Page Content</a></li>
+		<li class="right-pad-tabs"><a class="esat-management-edit-tab" href="#custom-HtmlPages">Custom HTML Pages</a></li>
+		<li class="right-pad-tabs"><a class="esat-management-edit-tab" href="#Mega-menu-blocks">Mega Menu Content</a></li>
+		<li class="right-pad-tabs"><a class="esat-management-edit-tab" href="#Permissions" class="right-pad-tabs">Permissions</a></li>
+	</ul>
+
+
+	<div id="homepage-Content">
+	    <div class="row">
+	        <div class="col-12">
+	           <div class="panel-title">eSAT Home Page Content </div>
+	        </div>
+	    </div>
+
+	    <div id="tiny-mce-container" class="row row-spaced panel form-section">
+			<div class="row">
+				<div class="col-12">     
+					<textarea id="f-home-page-content" class="size-4 tinymce y-space-s" name="f-home-page-content" disabled><%= HomePageContent %></textarea>
+				</div>
+			</div>
+		</div>
+	</div>  <!-- HOMEPAGE CONTENT ENDS HERE -->
+
+	<div id="custom-HtmlPages">
+	    <div class="row">
+	        <div class="col-12">
+	           <div class="panel-title y-space-top-m">eSAT HTML Pages<button type="button" id="add-new-CustomHTMLPage-btn" class="btn btn-submit pull-right y-space-top-nm"><i class="icon icon-add"></i>New Page</button></div>
+			</div>
+		</div>
+
+      	<div class="row row-spaced"> 
+			<div class="col-12 y-space-top-l">
+				<table class="table alternate">
+					<thead>
+						<tr class="highlighted">
+							<th class="col-6 left-align indented-l">Page Name</th>
+							<th class="col-2 left-align">Status</th>
+							<th class="col-2 left-align">Edit</th>
+						</tr>
+					</thead>
+					<tbody id="CustomHTMLPages-List"></tbody>
+				</table>
+			</div>		
+		</div>
+	    
+	    <div id="CustomHtmlPage-modal"></div>
+	</div> <!-- CUSTOM HTML PAGES ENDS HERE -->
+
+	<div id="Mega-menu-blocks">
+	    <div class="row">
+			<div class="col-12">
+				<div class="panel-title">Mega Menu Content</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced"> 
+			<div class="col-12 y-space-top-l">
+				<table class="table alternate">	
+					<thead>
+						<tr class="highlighted">
+							<th class="col-5 left-align indented-l">Menu Main Sections</th>
+							<th class="col-1 left-align">Edit</th>
+						</tr>
+					</thead>
+					<tbody id="MegaMenuPages-List"></tbody>
+				</table>
+			</div>		
+		</div>
+
+		<div id="MegaMenuPage-modal"></div>
+	</div> <!-- MEGA MENU CONTENT-->
+
+	<div id="Permissions">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">eSat Permissions/Access Levels</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced"> 
+			<div class="col-12 y-space-top-l">
+				<table class="table alternate">
+					<thead>
+						<tr class="highlighted">
+							<th class="col-5 left-align indented-l">User Groups</th>
+							<th class="col-1 left-align">Edit</th>
+						</tr>
+					</thead>
+					<tbody id="Permissions-List"></tbody>
+				</table>
+			</div>		
+		</div>
+	    
+		<div id="Permissions-modal"></div>
+	</div> <!-- PERMISSIONS -->
+
+</div> <!-- TABS LINKS ENDS HERE-->
+

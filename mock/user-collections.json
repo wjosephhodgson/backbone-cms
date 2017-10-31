@@ -1,0 +1,248 @@
+[
+	{
+		"id": 1,
+		"name": "Monet's Garden",
+		"collectionType": "Teleflora",
+		"parent": 0,
+		"startDate": "07/15/14",
+		"endDate": "09/15/16",
+		"active": true,
+		"sharingActive": true,
+		"subHeaderActive": true,
+		"children": [2],
+		"imgUrl1": "/images/mock/collectionbg-1.jpg",
+		"imgUrl2": "/images/mock/collectionlogo-1.jpg",
+		"imgUrl3": "/images/mock/bouquet-1.png", 
+		"imgUrl4": "/images/mock/aboutus-1.jpg"
+	},
+	{
+		"id": 2,
+		"name": "Monet's Garden",
+		"collectionType": "Teleflora",
+		"parent": 1,
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"sharingActive": true,
+		"subHeaderActive": true,
+		"imgUrl1": "/images/mock/collectionleft-1.jpg",
+		"imgUrl2": "/images/mock/collectionright-1.jpg",
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+
+	},
+	{
+		"id": 3,
+		"name": "Parisian Elegance",
+		"collectionType": "Teleflora",
+		"parent": 0,
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"sharingActive": true,
+		"subHeaderActive": true,
+		"children": [4, 5],
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"id": 4,
+		"name": "Subcollection 1",
+		"collectionType": "Teleflora",
+		"parent": 3,
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"sharingActive": true,
+		"subHeaderActive": true,
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"id": 5,
+		"name": "Subcollection 2",
+		"collectionType": "Teleflora",
+		"parent": 3,
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"sharingActive": true,
+		"subHeaderActive": true,
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"id": 6,
+		"name": "Lovely Lillies",
+		"collectionType": "Custom",
+		"parent": 0,
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"sharingActive": true,
+		"subHeaderActive": true,
+		"children": [7, 8],
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"id": 7,
+		"name": "Subcollection 1",
+		"collectionType": "Custom",
+		"parent": 6,
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"sharingActive": true,
+		"subHeaderActive": true,
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"id": 8,
+		"name": "Subcollection 2",
+		"collectionType": "Custom",
+		"parent": 6,
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"sharingActive": true,
+		"subHeaderActive": true,
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"id": 9,
+		"name": "Autumn Harvest",
+		"collectionType": "Teleflora",
+		"parent": 0,
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"sharingActive": true,
+		"subHeaderActive": true,
+		"children": [],
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	}
+]

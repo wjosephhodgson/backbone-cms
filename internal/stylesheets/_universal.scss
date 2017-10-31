@@ -1,0 +1,54 @@
+html{
+  position: relative;
+  overflow-y:scroll;
+  overflow-x: scroll;
+  overflow-scrolling: touch;
+}
+//universal styles
+html.no-scroll{
+  overflow-x: hidden;
+  overflow-y:scroll;
+  overflow-scrolling: auto;
+  width: 100%;
+  height: 100%;
+
+  body{height:100%;}
+}
+
+body{
+  position:relative;
+  overflow-x:hidden;
+  min-height: 50em;
+  min-width:320px;
+  width: 100%;
+}
+
+.touch a{-webkit-tap-highlight-color:transparent;}
+
+*{
+  box-sizing:border-box;
+  -moz-box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+html.oldie{
+  width:960px;
+  display:block;
+  margin:0 auto;
+  border-right:0;
+
+  .m-navbar-offcanvas-divider{display:none;}
+
+}
+
+.oldie{
+  #navTrigger{display:none;}
+}

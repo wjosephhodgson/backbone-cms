@@ -1,0 +1,125 @@
+<div id="p-new-about-us">
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="clearfix section-title">
+				<h2 class="pull-left"><%= id ? 'Edit ' : 'Add ' %> About Us Section</h2>
+				<div class="btn-panel">
+					<button id="cancel-btn" class="btn btn-other">Cancel</button>
+					<button id="save-btn" class="btn btn-submit pull-right">
+						<% if(!id) { %><i class="icon icon-add icon-lg"></i><% } %>Save
+					</button>
+					<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+
+	<% if( title == "About The Company ") { %>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			Use this to tell your customers the history of your company.
+		</div>
+	</div>
+
+	<% } else if ( title == "Store Hours" ) { %>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			Use this section to list your store hours and any days you may be closed, such as Christmas.
+		</div>
+	</div>
+
+	<% } else if ( title == "Contact Information" ) { %>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			List your contact information, such as phone number, address, and email here.
+		</div>
+	</div>
+
+	<% } else { %>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			Use this to tell your customers the history of your company.
+		</div>
+	</div>
+
+	<% } %>
+
+	<form id="create-edit-form" class="row row-spaced panel form-section">
+		<div class="row row-spaced">
+			<div class="col-6 form-section">
+				<label for="title">Section Title</label>
+				<input type="text" id="title" name="title" value="<%= title %>">
+			</div>
+			<div class="col-6">
+				<div class="label">Display Section<i title="Do you want customers to see this section in your About Us page? If so, leave this turned on.
+" class="icon icon-tool-tip x-space-s"></i></div>
+				<input <%= sectionActive ? 'checked' : '' %> type="checkbox" id="section-active" name="section-active" class="on-off-switch" />
+		        <label for="section-active" class="on-off-switch-label">
+		            <div class="on-off-switch-state">on</div>
+		        </label>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				<label for="section-description">Section Description</label><i title="How did your Flower Shop begin? Use this section to tell your customers what makes your company special." class="icon icon-tool-tip x-space-s"></i>
+				<textarea name="section-description" id="section-description" class="tinymce"><%= sectionDescription %></textarea>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">Section Image</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-3">
+				<div class="label">Display Image<i title="Would you like to display an image with this section? Leave this on." class="icon icon-tool-tip x-space-s"></i></div>
+				<input <%= imgActive ? 'checked' : '' %> type="checkbox" id="image-active" name="image-active" class="on-off-switch" />
+		        <label for="image-active" class="on-off-switch-label">
+		            <div class="on-off-switch-state">on</div>
+		        </label>
+			</div>
+
+			<div id="preview-img-btn" class="col-3 <%= imgActive ? '' : 'hidden-alt' %>">
+				<div class="label">Promotional Image<i title="Use this to upload your image." class="icon icon-tool-tip x-space-s"></i></div>
+				<button type="button" id="promotional-img-file" class="btn btn-other btn-file">
+					Select
+				</button>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-6 center-align">
+				<div id="preview-img" class="display-container <%= imgActive && imgUrl ? '' : 'hidden-alt' %>">
+					<img id="promotional-img" src="<%= imgUrl %>" alt="">
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

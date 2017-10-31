@@ -1,0 +1,22 @@
+<tr> 
+    <td class="left-align"><%= merchandisingIconName %></td>
+    <td class="left-align"><%= merchandisingIconTag %></td>
+    <td class="left-align"><img id="display-image-content" class="fit-container" src="<%= merchandisingconImage %>"></td>
+    <td class="left-align"><%= type %></td>
+    <td class="left-align hide-overflow">  
+        <div class="centered-content-container">
+            <input <%= merchandisingActiveStatus ? 'checked' : ''%> type="checkbox" id="<%= 'merchandising-icon-status-active-' + id %>" name="<%= 'merchandising-icon-status-active-' + id %>" data-id="<%=id%>" class="on-off-switch merchandisingActive-switch" />
+            <label for="<%= 'merchandising-icon-status-active-' + id %>" class="on-off-switch-label">
+                <div class="on-off-switch-state">on</div>
+            </label>
+        </div>
+    </td> 
+    <td class="left-align">
+        <button type="button" class="icon icon-btn icon-2x icon-edit"></button>
+    </td>        
+    <td class="left-align"> 
+        <% if(type === "Custom") { %>  
+            <button type="button" class="icon icon-btn icon-2x icon-trash"></button>  
+        <% } %>
+    </td>    
+</tr>

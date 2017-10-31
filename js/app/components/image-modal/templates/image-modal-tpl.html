@@ -1,0 +1,40 @@
+<div id="image-modal">
+  <div id="aviary" class="hidden-alt"></div>
+  <div class="row row-spaced">
+    <div class="col-12">
+      <div class="clearfix section-title">
+        <h2 class="pull-left">Select an Image</h2>
+        <button type="button" id="cancel-btn" class="btn btn-other pull-right">Cancel</button>
+        <button type="button" id="back-btn" class="btn btn-other x-space-m pull-right hidden">Go Back One Level</button>
+      </div>
+    </div>
+  </div>
+  <div class="row panel alert-panel hidden-alt">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-1">
+          <div class="icon icon-3x icon-warning"></div>
+        </div>
+        <div class="col-11 alert-text left-align">
+          You have uploaded an invalid image file.  Please upload image files that have
+          extensions '.gif', '.jpg', '.jpeg', '.bmp' or '.png'.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-spaced">
+    <div id="edit-btn-panel" class="col-6 left-align">
+      <button type="button" id="delete-btn" class="btn btn-cancel hidden-alt">Delete</button>
+      <button type="button" id="edit-btn" class="btn btn-other x-space-s hidden-alt">Edit</button>
+      <button type="button" id="select-btn" class="btn btn-submit hidden-alt">Select</button>
+    </div>
+    <div class="col-6 pull-right right-align form-section">
+      <button type="button" class="btn btn-submit btn-file">
+        <input type="file" id="upload-btn">
+        <i class="icon icon-add icon-lg"></i> Upload Image
+      </button>
+    </div>
+  </div>
+  <div id="image-grid" class="row row-spaced"></div>
+</div>

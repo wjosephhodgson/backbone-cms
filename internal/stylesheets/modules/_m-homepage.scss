@@ -1,0 +1,407 @@
+.m-homepage {
+  .header {
+    font-size: 1.615em;
+    padding-bottom: 0;
+
+    @include desktop() {
+      font-size: 2.461em;
+      margin-bottom: 3px;
+    }
+  }
+
+  .icon-circle-down-arrow-pink {
+    cursor: pointer;
+  }
+
+  .subheader {
+    font-size: 1.076em;
+
+    @include desktop() {
+      font-size: 1.307em;
+    }
+  }
+
+  .btn {
+    margin-bottom: 0;
+  }
+
+  .light {
+    .header a, .subheader { color: $black; }
+    .header-underline { @include opacity(30); background-color: $black; }
+  }
+  .dark {
+    .header a, .subheader { color: $white; }
+    .header-underline { @include opacity(50); background-color: $white; }
+  }
+  .pink {
+    .header a { color: $lavender; }
+    .header-underline { @include opacity(30); background-color: $black; }
+  }
+
+  .m-homepage-middle-promo {
+    background-color: $dark-purple;
+    padding: 2em;
+
+    @include desktop() {
+      padding: 0;
+    }
+
+    .m-homepage-middle-promo-image {
+      @include desktop() {
+        float: left;
+        line-height: 0;
+      }
+    }
+
+    .m-homepage-middle-promo-text {
+      max-width: 320px;
+      margin: 0 auto;
+
+      @include desktop() {
+        float: left;
+        margin-top: 2em;
+        text-align: left;
+        padding: 3em;
+        max-width: 100%;
+      }
+
+      .m-homepage-middle-promo-text-p {
+        color: $white;
+        font-size: 1.307em;
+
+        @include desktop() {
+          font-size: 2.461em;
+          line-height: 1.2;
+        }
+
+        .teleflora-logo {
+          color: $pink;
+          font-family: $sans-stack;
+        }
+      }
+      .m-homepage-middle-promo-text-link {
+        font-size: 1.153em;
+      }
+    }
+  } // end quick shop
+
+
+  .m-homepage-popular-bouquets {
+    p {
+      font-size: 1.076em;
+    }
+  } // end popular products
+
+
+  .m-homepage-bottom-collection {
+    .header {
+      padding-top: 0.6em;
+
+      @include desktop() {
+        padding-top: 1em;
+      }
+    }
+
+    .m-homepage-bottom-collection-products {
+      margin-top: 2em;
+    } // end bottom collection products
+
+    .m-homepage-bottom-collection-link {
+      @include mobile() {
+        margin-top: 2em;
+      }
+    }
+  } // end bottom collection
+
+  .m-homepage-bottom-promo {
+    .header {
+      padding-top: 0.6em;
+
+      @include desktop() {
+        padding-top: 1em;
+      }
+    }
+
+    .m-homepage-bottom-promo-fg {
+      margin-top: 1em;
+      display: inline-block;
+      background-image: url("../images/homepage/m-promo-fg.png");
+      background-position: top center;
+      background-repeat: no-repeat;
+      width: 235px;
+      height: 180px;
+
+      @include desktop() {
+        background-image: url("../images/homepage/promo-fg.png");
+        width: 439px;
+        height: 329px;
+      }
+    }
+
+    .m-homepage-bottom-promo-text {
+      max-width: 340px;
+      margin: 1em auto;
+    }
+  } // end bottom promo
+
+
+  .m-homepage-recommendations {
+    .m-homepage-recommendations-header {
+      margin-top: 2.5em;
+      margin-bottom: 1em;
+      display: inline-block;
+
+      @include mobile() {
+        text-align: left;
+      }
+
+      @include desktop() {
+        margin-top: 4em;
+        margin-bottom: 1em;
+      }
+
+      .m-navbar-cal-birthday {
+        float: left;
+
+        @include desktop() {
+          float: none;
+          display: inline-block;
+        }
+
+        .m-navbar-cal {
+          vertical-align: middle;
+          float: none;
+          display: inline-block;
+        }
+      }
+
+      .m-homepage-recommendations-header-text {
+        vertical-align: middle;
+        font-size: 1.307em;
+
+        @include desktop() {
+          font-size: 1.846em;
+        }
+
+        @include mobile() {
+          text-align: left;
+        }
+      }
+    }
+
+    .m-homepage-recommendations-link {
+      margin: 1.5em 0 2em;
+      display: inline-block;
+      width: 100%;
+      max-width: 280px;
+
+      @include desktop() {
+        //font-size: 1.153em;
+      }
+    }
+  }
+
+  .m-homepage-recommendations-more {
+    text-align: left;
+    margin: 1em auto;
+    width: 76%;
+    border-top: 1px solid $accent-grey;
+
+    @include desktop() {
+      width: 100%;
+    }
+
+    @include wildcard-max(28em) {
+      width: 100%;
+    }
+
+    article {
+      @include mobile() {
+        border-top: 1px solid $accent-grey;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        min-height: 7em;
+      }
+
+      @include desktop() {
+        border-left: 1px solid $accent-grey;
+        padding-left: 1em;
+        min-height: 13.5em;
+      }
+
+      &:first-child {
+        border: none;
+        padding-left: 0;
+      }
+
+      .m-homepage-recommendations-header {
+        margin-top: 0.5em;
+        margin-bottom: 1em;
+        font-size: 1.307em;
+
+        @include mobile() {
+          text-align: left;
+        }
+      }
+
+      .m-homepage-recommendations-table {
+        width: 100%;
+
+        td {
+          padding-bottom: 0.5em;
+        }
+      }
+
+      .m-homepage-recommendations-table-left-col {
+        text-transform: uppercase;
+        color: $dark-grey;
+        font-family: $sans-stack-heavy;
+        padding-right: 0.5em;
+        vertical-align: top;
+
+        @include mobile() {
+          width: 4.5em;
+        }
+      }
+
+      .m-homepage-recommendations-table-middle-col {
+        padding-right: 0.5em;
+        font-size: 1.307em;
+
+        @include desktop() {
+          min-width: 180px;
+          max-width: 195px;
+        }
+
+        .m-tooltip, .c-tooltip {
+          text-align: center;
+        }
+      }
+
+      .m-homepage-recommendations-table-right-col {
+        font-size: 1.153em;
+        float: right;
+        vertical-align: top;
+
+        @include desktop() {
+          float: none;
+        }
+      }
+
+      .m-homepage-recommendations-table-link {
+        font-size: 1.153em;
+      }
+    }
+
+    .m-homepage-recommendations-holidays {
+      @include mobile() {
+        margin-top: 0;
+      }
+    }
+
+    .m-homepage-recommendations-facebook {
+      @include desktop() {
+        width: 33.333%;
+      }
+    }
+
+    .btn-facebook {
+      margin-top: 1.3em;
+    }
+  }
+}
+
+.m-stretch-bg-container, .featured-narrow {
+  position: absolute;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+
+  @include desktop() {
+    height: 360px;
+  }
+
+  @include wildcard-max(50em) {
+    height: 45%;
+    max-height: 220px;
+  }
+
+  @include wildcard-max(28em) {
+    max-height: 175px;
+  }
+
+  .m-stretch-bg, .featured-narrow-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center top;
+
+    @include desktop() {
+      width: 1400px;
+      height: 360px;
+      left: 50%;
+      margin-left: -700px;
+    }
+  }
+  .featured-narrow-bg {
+    @include mobile() {
+      height: 265px;
+    }
+  }
+} // end stretch bg container
+
+
+
+.featured-narrow {
+  // its being used on pdp featured collection on bottom of page
+  height: 265px;
+  @include desktop() {
+    height: 285px;
+  }
+  @include wildcard-max(28em) {
+    max-height: 265px;
+  }
+}
+
+
+.m-homepage-quick-shop {
+  .m-homepage-quick-shop-intro {
+    font-size: 1.384em;
+    margin-bottom: 1.25em;
+
+    @include desktop() {
+      font-size: 1.646em;
+    }
+
+    .avenir-heavy {
+      text-transform: uppercase;
+      color: $pink;
+    }
+  }
+  .quick-form {
+    max-width: 320px;
+    margin: 0 auto;
+
+    @include desktop() {
+      max-width: 100%;
+
+      .form-field {
+        display: inline-block;
+        max-width: 205px;
+        margin-left: 1em;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &.no-results-quick-shop {
+    margin-top: 2em;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1em;
+  }
+} // end quickshop
+

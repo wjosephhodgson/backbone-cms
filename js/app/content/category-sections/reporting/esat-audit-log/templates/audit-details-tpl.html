@@ -1,0 +1,200 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">eSAT Audit Log Details</h2>
+			<div class="btn-panel">
+<!-- 				<button class="btn btn-submit pull-right" id="order-lookup-resend-btn"><i class="icon icon-undo"></i>Resend</button> -->
+				<button class="btn btn-submit pull-right"><i class="icon icon-print"></i>Print</button>
+				<button id="cancel-btn" class="btn btn-other pull-right">Cancel</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row panel alert-panel">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-1">
+				<div class="icon icon-3x icon-warning"></div>
+			</div>
+			<div class="col-11 alert-text">
+				This is a generic placeholder for error messages in eSAT. <br>
+				In the live app, this will be a real message and will be hidden by default.
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row row-spaced">
+	<div class="col-12">View the selected audit log details below.</div>
+</div>
+
+<!--// Order Info [Start] //-->
+<div class="row row-spaced panel">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">Shop Info &amp; Date Range</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Shop Name</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= shopName %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Teleflora ID</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= telefloraID %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Site ID</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= siteID %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Start Date</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= startDate %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">End Date</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= endDate %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">User ID</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= userID %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// Order Info [End] //-->
+
+<!--// Recipient Info [Start] //-->
+<div class="row row-spaced panel">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">Activity Details</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Creation Time</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= creationTime %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Page</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= page %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Audit Action</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= action %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Item Name</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= itemName %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Item New Value</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= itemNewValue %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">				
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Item Old Value</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= itemOldValue %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced-s detail-block">
+			<div class="col-12">				
+				<div class="row">
+					<div class="col-12">
+						<div class="col-3 right-align detail-title">Audit Item ID</div>
+						<div class="detail-divider"></div>
+						<div class="col-9 left-align detail-text"><%= auditItemID %></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--// Recipient Info [End] //-->
+

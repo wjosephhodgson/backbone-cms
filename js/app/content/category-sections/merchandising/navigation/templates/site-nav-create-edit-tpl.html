@@ -1,0 +1,71 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left"><%= id ? 'Edit ' : 'Add New ' %>Navigation Menu</h2>
+			<div class="btn-panel">
+				<% if(type === "Custom") { %> <button type="button" id="delete-btn" class="btn btn-cancel">Delete</button> <% } %>
+				<% if(type === "Teleflora") { %> <button type="button" id="reset-btn" class="btn btn-other">Reset</button> <% } %>
+				<button type="button" id="cancel-btn" class="btn btn-other">Cancel</button>
+				<button type="button" id="save-btn" class="btn btn-submit pull-right">
+					<i class="icon icon-add icon-lg"></i>Save
+				</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row panel alert-panel">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-1">
+				<div class="icon icon-3x icon-warning"></div>
+			</div>
+			<div class="col-11 alert-text">
+				This is a generic placeholder for error messages in eSAT. <br>
+				In the live app, this will be a real message and will be hidden by default.
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row row-spaced">
+	<div class="col-12">
+		Use this page to manage your site's top navigation menu. You can create anything as simple as a small set of links to specific categories to a robust mega menu showcasing things like featured collections or products.
+	</div>
+</div>
+
+<div class="row row-spaced">
+	<div class="col-4 form-section">
+		<div class="label">Menu Name<i title="Text should go here." class="icon icon-tool-tip x-space-s"></i></div>
+		<input type="text" id="f-nav-group-name" name="f-nav-group-name" value="<%= id ? title : '' %>">
+	</div>
+	<div class="col-3 form-section">
+		<div class="label">Dropdown Menu<i title="If this setting is turned on, this menu will be a dropdown-style mega menu. If this is turned off, this will simply be a static link on your site." class="icon icon-tool-tip x-space-s"></i></div>
+		<input <%= dropdown ? 'checked' : '' %> type="checkbox" id="f-dropdown" name="f-dropdown" class="switch on-off-switch">
+		<label for="f-dropdown" class="on-off-switch-label">
+		<div class="on-off-switch-state">on</div></label>
+	</div>	
+	<div class="col-4 form-section" id="f-menu-link-wrap">
+		<div class="label">Link URL<i title="If you have the dropdown setting turned off, use this field to give a URL for the link." class="icon icon-tool-tip x-space-s"></i></div>
+		<input type="text" id="f-menuLink" name="f-menuLink" value="<%= menuLink %>">		
+	</div>
+</div>
+
+<div id="tabs" class="row row-spaced ui-tabs ui-widget ui-widget-content ui-corner-all">
+	<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
+	    <li class="ui-state-default ui-corner-top ui-tabs-active ui-state-active" role="tab" tabindex="0" aria-controls="site-activation" aria-labelledby="ui-id-6" aria-selected="true" aria-expanded="true">
+		    <a class="general-settings-tab ui-tabs-anchor" href="#site-activation" role="presentation" tabindex="-1" id="ui-id-6">
+			    <div id="nav-menu-group"><%= title %></div>
+		    </a>
+	    </li>
+	</ul>
+	<div id="Menu-items" class="ui-tabs-panel ui-widget-content ui-corner-bottom">
+		<ul id="f-item-list"></ul>
+		<div class="clear clearfix"></div>
+	</div>
+</div>
+<div class="row row-spaced y-space-top-l"></div>
+<div class="row row-spaced" id="f-item-edit-area"></div>

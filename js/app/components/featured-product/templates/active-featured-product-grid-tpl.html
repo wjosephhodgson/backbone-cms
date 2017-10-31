@@ -1,0 +1,27 @@
+<%
+	var activeState;
+	if( active == true ){
+		activeState = 'grid-item-active'
+	} else {
+		activeState = 'grid-item-inactive'
+	}
+%><div data-id="<%= id %>" class="grid-item hover-tip-overlay <%= activeState %>">
+	<div class="hover-tip">
+		<div class="row row-spaced center-align">
+			<%= number %>
+		</div>
+
+		<div class="row row-spaced center-align">
+			<%= name %>
+		</div>
+	</div>
+	<img src="<%= imgA1 %>">
+
+	<div class="row bottom-overlay">
+		<div class="col-12">
+			<button type="button" class="icon icon-trash icon-btn fa-lg pull-left"></button>
+			<button type="button" class="icon icon-edit icon-btn fa-lg pull-right"></button>
+		</div>
+	</div>
+
+</div>

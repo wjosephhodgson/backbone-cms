@@ -1,0 +1,310 @@
+[
+  {
+    "id":1,
+    "name":"Balloons",
+    "imgUrl":"images/icons/addon-balloon.jpg",
+    "active": true,
+    "type":"Teleflora",
+    "isDefault": false,
+    "pricePoints":[
+        {
+            "isDefault": false,
+            "label":"Small",
+            "price":"5.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Medium",
+            "price":"10.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Large",
+            "price":"15.00"
+        }
+    ],
+    "products":[],
+    "applyAutoActive": true,
+    "taxFreeActive": true
+  },
+  {
+    "id":2,
+    "name":"Chocolate Box",
+    "imgUrl":"images/icons/addon-chocolate.jpg",
+    "active": true,
+    "type":"Teleflora",
+    "isDefault": false,
+    "pricePoints":[
+        {
+            "isDefault": false,
+            "label":"Small",
+            "price":"5.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Medium",
+            "price":"10.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Large",
+            "price":"15.00"
+        }
+    ],
+    "products":[],
+    "applyAutoActive": true,
+    "taxFreeActive": true
+  },
+  {
+    "id":3,
+    "name":"Stuffed Animal",
+    "imgUrl":"images/icons/addon-bear.jpg",
+    "active": true,
+    "type":"Teleflora",
+    "isDefault": false,
+    "pricePoints":[
+        {
+            "isDefault": false,
+            "label":"Small",
+            "price":"5.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Medium",
+            "price":"10.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Large",
+            "price":"15.00"
+        }
+    ],
+    "products":[],
+    "applyAutoActive": true,
+    "taxFreeActive": true
+  },
+  {
+    "id":4,
+    "name":"Wine",
+    "imgUrl":"images/icons/addon-wine.jpg",
+    "active": true,
+    "type":"Teleflora",
+    "isDefault": false,
+    "pricePoints":[
+        {
+            "isDefault": false,
+            "label":"Small",
+            "price":"5.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Medium",
+            "price":"10.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Large",
+            "price":"15.00"
+        }
+    ],
+    "products":[],
+    "applyAutoActive": true,
+    "taxFreeActive": true
+  },
+  {
+    "id":5,
+    "name":"Balloons 2",
+    "imgUrl":"images/icons/addon-balloon.jpg",
+    "active": true,
+    "type":"Custom",
+    "isDefault": false,
+    "pricePoints":[
+        {
+            "isDefault": false,
+            "label":"Small",
+            "price":"5.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Medium",
+            "price":"10.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Large",
+            "price":"15.00"
+        }
+    ],
+    "products":[],
+    "applyAutoActive": true,
+    "taxFreeActive": true
+  },
+  {
+    "id":6,
+    "name":"Chocolate Box 2",
+    "imgUrl":"images/icons/addon-chocolate.jpg",
+    "active": false,
+    "type":"Custom",
+    "isDefault": false,
+    "pricePoints":[
+        {
+            "isDefault": false,
+            "label":"Small",
+            "price":"5.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Medium",
+            "price":"10.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Large",
+            "price":"15.00"
+        }
+    ],
+    "products":[],
+    "applyAutoActive": true,
+    "taxFreeActive": true
+  },
+  {
+    "id":7,
+    "name":"Stuffed Animal 2",
+    "imgUrl":"images/icons/addon-bear.jpg",
+    "active": false,
+    "type":"Custom",
+    "isDefault": false,
+    "pricePoints":[
+        {
+            "isDefault": false,
+            "label":"Small",
+            "price":"5.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Medium",
+            "price":"10.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Large",
+            "price":"15.00"
+        }
+    ],
+    "products":[],
+    "applyAutoActive": true,
+    "taxFreeActive": true
+  },
+  {
+    "id":8,
+    "name":"Wine 2",
+    "imgUrl":"images/icons/addon-wine.jpg",
+    "active": true,
+    "type":"Custom",
+    "isDefault": false,
+    "pricePoints":[
+        {
+            "isDefault": false,
+            "label":"Small",
+            "price":"5.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Medium",
+            "price":"10.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Large",
+            "price":"15.00"
+        }
+    ],
+    "products":[],
+    "applyAutoActive": true,
+    "taxFreeActive": true
+  },
+  {
+    "id":9,
+    "name":"Balloons 3",
+    "imgUrl":"images/icons/addon-balloon.jpg",
+    "active": false,
+    "type":"Teleflora",
+    "isDefault": false,
+    "pricePoints":[
+        {
+            "isDefault": false,
+            "label":"Small",
+            "price":"5.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Medium",
+            "price":"10.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Large",
+            "price":"15.00"
+        }
+    ],
+    "products":[],
+    "applyAutoActive": true,
+    "taxFreeActive": true
+  },
+  {
+    "id":10,
+    "name":"Chocolate Box 3",
+    "imgUrl":"images/icons/addon-chocolate.jpg",
+    "active": true,
+    "type":"Teleflora",
+    "isDefault": false,
+    "pricePoints":[
+        {
+            "isDefault": false,
+            "label":"Small",
+            "price":"5.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Medium",
+            "price":"10.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Large",
+            "price":"15.00"
+        }
+    ],
+    "products":[],
+    "applyAutoActive": true,
+    "taxFreeActive": true
+  },
+  {
+    "id":11,
+    "name":"Stuffed Animal 3",
+    "imgUrl":"images/icons/addon-bear.jpg",
+    "active": false,
+    "type":"Teleflora",
+    "isDefault": false,
+    "pricePoints":[
+        {
+            "isDefault": false,
+            "label":"Small",
+            "price":"5.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Medium",
+            "price":"10.00"
+        },
+        {
+            "isDefault": false,
+            "label":"Large",
+            "price":"15.00"
+        }
+    ],
+    "products":[],
+    "applyAutoActive": true,
+    "taxFreeActive": true
+  }
+]

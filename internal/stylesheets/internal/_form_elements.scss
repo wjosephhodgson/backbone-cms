@@ -1,0 +1,79 @@
+//
+// General
+//
+input, textarea, select, .form-message{
+	font-family:$esat-font-stack;
+}
+
+
+//
+// Buttons
+//
+.btn{
+	border: 1px solid #606060;
+	border-radius: 10px;
+}
+.btn-orange{
+	background-color:#ff7e00;
+	&:hover{
+		background-color:#ff9b3a;
+	}
+	&:active{
+		background-color:#ed8c2e;
+	}
+}
+
+.btn-white{	
+	background-color:#f4f4f4;
+	color:#757575;
+	&:hover{
+		background-color:#ffffff;
+	}
+	&:active{
+		background-color:#f0f0f0;
+	}
+}
+
+.btn-gray{	
+	background-color:#838383;
+	&:hover{
+		background-color:#a6a6a6;
+	}
+	&:active{
+		background-color:#8d8c8c;
+	}
+}
+
+.nav-square{
+	max-width:40px;
+}
+
+.nav-circle{
+	max-width:40px;
+	border-radius: 40px;
+}
+
+//
+// Select Menus
+//
+select:focus{
+	box-shadow: 0px 0px 1px 1px #ff7e00;
+}
+
+//
+// Input Labels
+//
+input[type="text"], input[type="email"], input[type="url"], input[type="tel"], input[type="number"], input[type="search"], input[type="password"], textarea{
+	background-color:#f6f6f6;
+}
+
+
+//
+// Sprite Sheet
+//
+
+.custom-checkbox .custom-radio-label:before, .custom-radio .custom-radio-label:before{background-position: -75px -36px;}
+.radio-checked + .custom-radio-label:before{background-position: -101px -36px;}
+.custom-checkbox .custom-checkbox-label:before, .custom-radio .custom-checkbox-label:before{background-position: -16px -36px;}
+.custom-checkbox input[type="checkbox"]:checked ~ input + .custom-checkbox-label:before, .custom-checkbox input[type="checkbox"]:checked + .custom-checkbox-label:before, .custom-radio input[type="checkbox"]:checked ~ input + .custom-checkbox-label:before, .custom-radio input[type="checkbox"]:checked + .custom-checkbox-label:before{background-position: -42px -36px;}
+.custom-checkbox input[type="radio"]:checked ~ input + .custom-radio-label:before, .custom-checkbox input[type="radio"]:checked + .custom-radio-label:before, .custom-radio input[type="radio"]:checked ~ input + .custom-radio-label:before, .custom-radio input[type="radio"]:checked + .custom-radio-label:before{background-position: -101px -36px;}

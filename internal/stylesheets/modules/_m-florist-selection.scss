@@ -1,0 +1,225 @@
+.d-container_12 .d-grid_12.m-florist-selection-header-container{
+  //extension of grid to fit payment options on bottom of page on desktop
+  @include desktop() {
+    width: 100%
+  }
+}
+
+.m-florist-selection-header-container{
+  //container for flosrist selection breadcrumbs and headers
+  padding-bottom: 0.7em;
+  margin-bottom: 1em;
+  @include desktop() {
+    margin-left: 0em !important;
+  }
+}
+.m-florist-selection-header {
+  //used on the main title of the page
+  font-size: 1.846em;
+  line-height: 1.2em;
+  margin-bottom: 0.0em;
+  padding-bottom: 0.0em;
+  text-align: center;
+  @include desktop() {
+    text-align: left;
+  }
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+.d-container_12 .d-grid_12.m-florist-selection-skip-container{
+  //extension of grid to fit payment options on bottom of page on desktop
+  @include desktop() {
+    width: 100% !important;
+  }
+}
+
+.m-florist-selection-skip-container{
+  margin-bottom: 1em;
+  @include desktop() {
+    margin-left: 0em !important;
+    margin-top: -1em;
+  }
+  .m-florist-selection-skip-copy{
+    font-size: 17px;
+    @include desktop() {
+      margin-left: 0em !important;
+      margin-right: 2.2em;
+    }
+  }
+  .m-florist-selection-skip-btn{
+    @include desktop() {
+      margin-left: 0em;
+      margin-right: 0em;
+      padding-top: 0.5em;
+    }
+  }
+  .m-florist-selection-next-btn{
+    @include desktop() {
+      margin-top: -1.2em;
+      padding-top: 0.5em;
+      margin-left: 1.4em;
+      margin-right: 0em;
+    }
+  }
+
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+.m-florist-selection-item-header{
+  //Gray shopping cart individual item header
+  background-color: $light-grey;
+  height: 3em;
+  border-top: 1px solid $accent-grey;
+  @include desktop() {
+    border-left: 1px solid $accent-grey;
+    border-right: 1px solid $accent-grey;
+  }
+  @include mobile() {
+    border-bottom: 1px solid $accent-grey;
+  }
+}
+.m-florist-selection-item-header-content{
+  padding-top: 0.7em;
+  .m-florist-selection-item-header-number{
+    font-size: 17px;
+    font-family: $serif-stack-bold;
+    font-weight: normal;
+    @include desktop() {
+      margin-left: 0.4em;
+    }
+  }
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.m-florist-selection-item-content-container{
+  //used with the clearfix at the end of a shopping cart item to box the item in a border
+  @include desktop() {
+    max-width: em(940px);
+    margin:0 auto;
+    border: 1px solid $accent-grey;
+    margin-bottom: 1.5em;
+  }
+}
+
+.m-florist-selection-item-bouquet-info{
+  //bouquet image + info + price container
+  border-bottom: 1px solid $accent-grey;
+  padding-top: 1.5em;
+  .m-florist-selection-image{
+    //bouquet image
+    position: relative;
+    top: -15px;
+  }
+  .m-florist-selection-bouquet-info-copy{
+    //copy with item text
+    @include desktop() {
+      padding-left: 1em;
+    }
+  }
+  .m-florist-selection-price{
+    //price label on the bouquet info + price
+    color: black;
+    font-family: $sans-stack-heavy;
+    padding-top: 0.2em;
+  }
+}
+/////////////////////////////////////////////////////////////////
+.m-florist-selection-florist-list-container{
+  //container for florist lists
+  padding-top: 1.5em;
+  @include desktop() {
+    margin-bottom: 1em;
+  }
+  .m-florist-selection-florist-list-title{
+    margin-bottom: 1em;
+    margin-left: 0.7em;
+  }
+  .m-florist-selection-item-radios{
+    //<ul>  containing the actual radio btns as <li>
+    margin-right: -11em;
+    //display: inline-block;
+  }
+  .custom-radio.m-florist-selection-radio{
+    //to control layout of radio btns
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+    //display: inline-block;
+    @include desktop() {
+      margin: 0 auto;
+    }
+  }
+  .m-florist-custom-radio-us-choose{
+    border: 1px dotted $dark-grey;
+    padding-top: 0.6em;
+    margin-top: 0em;
+    @include mobile() {
+      width: 184px;
+    }
+  }
+  .custom-radio-label.m-florist-custom-radio-us-choose:before {
+    top: 8px;
+    left: 4px;
+  }
+
+  // .custom-radio-label.m-florist-custom-radio-label{
+  //   //margin-right: 0em;
+  //   padding-bottom: 0.9em;
+  //   @include mobile() {
+  //     max-width: 184px;
+  //     max-height: 60px;
+  //     margin-bottom: 2.5em;
+  //   }
+  // }
+}
+.grid_2.m-florist-custom-radio-grid_2{
+  width: auto;
+  max-height: 100px;
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////
+.m-florist-selection-divider{
+  //used on mobile to divide cart items from SKIP THIS & NEXT btns
+  margin-top: 0.5em;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+.d-grid_12.m-florist-selection-botom-container{
+  //extension of grid to fit payment options on bottom of page on desktop
+    @include desktop() {
+      margin-left: 0em;
+      margin-right: 0em;
+    }
+  }
+.d-container_12 .d-grid_12.m-florist-selection-botom-container{
+  //extension of grid to fit payment options on bottom of page on desktop
+  @include desktop() {
+    width: 100%
+  }
+}
+.m-florist-selection-next-step-container{
+  //container for next step btns... x2 in desktop and 1 in mobile
+  padding-top: 1em;
+  @include desktop() {
+    padding-top: 1em;
+    margin-bottom: 1.5em;
+  }
+  .m-florist-selection-next-step-skip-btn{
+    margin-bottom: -0.5em;
+    @include desktop() {
+      margin-left: 0em;
+      margin-right: 0.7em;
+    }
+  }
+  .m-florist-selection-next-step-next-btn{
+    margin-top: 0em;
+    @include desktop() {
+      margin-top: -1.2em;
+      margin-right: 0em;
+      float: right !important;
+    }
+  }
+}
+//////////////////////////
+/////////////////////////
+// breakpoint1
+/////////////////////////
+

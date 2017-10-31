@@ -1,0 +1,158 @@
+<div class="col-12">
+<div class="row row-spaced form-section left-align">
+	<div class="clearfix section-title">
+		<h2 id="saved-DisplayMoved" class="pull-left left-pad-xs">
+			<%= id ? "Edit " : "Add New " %>Account Information
+		</h2>
+		<div role="tooltip" data-parent="saved-DisplayMoved" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+
+		<div class="btn-panel">
+			<button type="button" id="save-btn" class="btn btn-submit btn-panel"> Save</button>
+			<button type="button" id="cancel-btn" class="btn btn-other btn-panel">Cancel</button>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+	<div class="row">
+	  <div class="col-1">
+		<div class="icon icon-3x icon-warning"></div>
+	  </div>
+		<div class="col-11 alert-text left-align">
+			This is a generic placeholder for error messages in eSAT. <br>
+			In the live app, this will be a real message and will be hidden by default.
+		</div>
+	</div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row row-spaced form-section left-align">
+	<div class="col-3">
+		<div class="label">Account Status</div>
+		<div class="select-container">
+			<select id="f-accountStatus" name="f-accountStatus">
+				<option selected disabled hidden value="<%= accountStatus %>"><%= accountStatus %></option>
+				<option value="Good">Good</option>
+				<option value="Warning">Warning</option>
+				<option value="Does not qualify">Does not qualify</option>
+			</select>
+		</div>
+	</div>
+	<div class="col-2">
+		<label for="f-firstName">First Name</label><i class="icon icon-tool-tip x-space-s" title="???"></i>
+		<input type="text" id="f-firstName" name="f-firstName" value="<%= firstName %>" disabled>
+	</div>
+	<div class="col-2">
+		<label for="f-lastName">Last Name</label><i class="icon icon-tool-tip x-space-s" title="???"></i>
+		<input type="text" id="f-lastName" name="f-lastName" value="<%= lastName %>" disabled>
+	</div>
+	<div class="col-5">
+		<label for="f-emailAddress">Email Address</label><i class="icon icon-tool-tip x-space-s" title="???"></i>
+		<input type="text" id="f-emailAddress" name="f-emailAddress" value="<%= emailAddress %>" disabled>
+	</div>
+</div>
+
+<form id="f-adjustForm" name="f-adjustForm">
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="panel-title left-align">Adjust Member Reward Points</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-3 left-align form-section">
+			<label for="f-pointsAdjustment">Amount</label><i class="icon icon-tool-tip x-space-s" title="???"></i>
+			<input type="text" id="f-pointsAdjustment" name="f-pointsAdjustment" value="<%= pointsAdjustment %>">
+		</div>
+		<div class="col-3 left-align form-section">
+			<div class="select-container">
+				<label for="f-addSubPoints">Add/Subtract</label>
+				<select id="f-addSubPoints" name="f-addSubPoints">
+					<option value=""></option>
+					<option value="Add">Add</option>
+					<option value="Subtract">Subtract</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-5 left-align form-section">
+			<label for="f-adjustmentDescription">Adjustment Description</label><i class="icon icon-tool-tip x-space-s" title="???"></i>
+			<input type="text" id="f-adjustmentDescription" maxlength="100" name="f-adjustmentDescription" value="<%= adjustmentDescription %>">
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-2">
+			<button class="btn btn-submit x-pad-m pull-left" id="apply-points-btn" type="button">
+				Apply
+			</button>
+		</div>
+		<div class="col-4">
+			<div class="padded-s ui-widget ui-corner-all ui-widget-content tooltip-change tooltip-save hidden-alt">
+				<div class="icon icon-added"></div>
+				Adjustment successful
+			</div>
+		</div>
+	</div>
+</form>
+
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="panel-title left-align">Recent Member Rewards Activity History</div>
+	</div>
+</div>
+
+
+<div class="row row-spaced"> 
+	<div class="col-12 y-space-top-l">
+		<table class="table alternate">
+
+			<thead>
+				<tr class="highlighted">
+					<th class="col-1 left-align">Date</th>
+					<th class="col-2 left-align">Reward Activity</th>
+					<th class="col-1 left-align">Points Accrued/Deducted</th>
+					<th class="col-1 left-align">Current Point Balance</th>
+					<th class="col-1 left-align">Promotion Code</th>
+					<th class="col-1 left-align">Promotion Offer</th>
+					<th class="col-1 left-align">Expiration Date</th>
+				</tr>
+			</thead>
+
+			<tbody id="rewards-points-table">
+				<tr>
+					<td class="left-align">10/15/2015</td>
+					<td class="left-align">Points Adjustment</td>
+					<td class="left-align">+ 100</td>
+					<td class="left-align td-total">300</td>
+					<td class="left-align"></td>
+					<td class="left-align">10% off</td>
+					<td class="left-align">12/31/2015</td>
+				</tr>
+				<tr>
+					<td class="left-align">11/1/2015</td>
+					<td class="left-align">Points Redemption</td>
+					<td class="left-align">- 50</td>
+					<td class="left-align td-total">250</td>
+					<td class="left-align">flowers</td>
+					<td class="left-align"></td>
+					<td class="left-align">11/15/2015</td>
+				</tr>
+				<tr>
+					<td class="left-align">11/1/2015</td>
+					<td class="left-align">Order DTB009<br/>Confirmation #4691008</td>
+					<td class="left-align">+ 150</td>
+					<td class="left-align td-total">500</td>
+					<td class="left-align"></td>
+					<td class="left-align"></td>
+					<td class="left-align"></td>
+				</tr>
+			</tbody>
+
+		</table>
+	</div> 
+</div> 
+</div>

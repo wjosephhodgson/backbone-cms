@@ -1,0 +1,113 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Email List Management</h2>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced panel alert-panel hidden">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-1">
+				<div class="icon icon-3x icon-warning"></div>
+			</div>
+			<div class="col-11 alert-text">
+				Error message text here
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+
+<div class="row row-spaced">
+	<div class="col-12">
+		Use this section to manage your customer email list. You can view and download a list of your existing customers or upload a new list to add a new set of customer emails.
+	</div>
+</div>
+
+<div class="row row-spaced y-space-top-xl">
+	<div class="col-4">
+		<button type="button" id="download-btn" class="btn btn-download btn-submit pull-left"><div class="icon icon-1p5x icon-save"></div> Download List</button>
+	</div>
+
+	<div class="col-3 pull-right">
+		<button type="button" id="sample-btn" class="btn btn-other pull-right"> Sample File</button>
+	</div>
+</div>
+
+<div class="row row-spaced panel form-section updateEmailListPanel">
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="panel-title clearfix">
+				<div class="y-space-top-m pull-left">Update Email List</div>
+				<div class="btn-panel">
+					<button id="save-btn" class="btn btn-submit">Upload</button>
+				</div>
+			</div>		
+		</div>
+	</div>
+
+	<div class="row row-spaced panel alert-panel hidden" id="modal-alert">
+		<div class="col-12">
+			<div class="row">
+				<div class="col-1">
+					<div class="icon icon-3x icon-warning"></div>
+				</div>
+				<div class="col-11 alert-text">
+					You must select a CSV file to upload.
+				</div>
+			</div>
+		</div>
+	</div>	
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div>Column headings in the CSV file must be exactly the same as in the sample file.</div>
+		</div>
+	</div>
+
+
+	<div class="row row-spaced y-space-top-xl">
+		<div class="col-5 select-container form-section left-align">
+			<div class="label">Select Update Method</div>
+			<select name="f-email-update-method" id="f-email-update-method">
+				<option value="">Please select a method</option>
+				<option value="Add New Records">Add New Records</option>
+				<option value="Opt Out Existing Records">Opt Out Existing Records</option>
+				<option value="Add New &amp; Opt In Existing Records">Add New &amp; Opt In Existing Records</option>
+			</select>
+		</div>
+		<div class="col-4 form-section">
+			
+			<div class="label hidelabel">Select File to Upload</div>
+	    	<button type="button" id="uploadimage" class="btn btn-other btn-file hidebutton">
+	    		<input type="file" id="file-btn"> Browse...
+	    	</button>
+	    	
+	    	<input type='text' class="hidden pathName" value="<%= pathName %>">	
+	    		
+		</div>
+	</div>
+
+	<div class="row row-spaced y-space-top-m"></div>
+
+</div>

@@ -1,0 +1,21 @@
+<tr>
+    <td class="left-align indented-s"><%= name %></td>
+    <td class="left-align">
+        <%= collectionType %>
+    </td>
+    <td>
+        <div class="centered-content-container hide-overflow">
+            <input <%= parentActive && active ? 'checked' : '' 
+            %> type="checkbox" class="on-off-switch" id="<%= 'f-' + id %>" name="<%= 'f-' + id %>"/>
+            <label for="<%= 'f-' + id %>" class="on-off-switch-label">
+                <div class="on-off-switch-state">on</div>
+            </label>
+        </div>
+    </td>
+    <td>
+        <button class="icon icon-btn icon-2x icon-edit"></button>
+    </td>
+    <td>
+        <button class="icon icon-btn icon-2x icon-trash"></button>
+    </td>
+</tr>

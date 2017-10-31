@@ -1,0 +1,105 @@
+<section id="toggle-animations" class="l-wrapper top-margin">
+  <h2>Toggle Animations</h2>
+  <p>Click or tap toggle animations. Toggle animations are animations that toggle (add or remove) a class of 'active', to display or hide their full contents.</p>
+
+  <!-- toggle section starts -->
+  <div class="m-faq-section top-margin" id="deliveryInfo">
+    <h3 class="m-faq-section-header bembo-bold">Section Header</h3>
+    <!-- toggle container starts -->
+    <div class="m-faq-items">
+      <!-- FAQ item starts -->
+      <div class="m-faq-item">
+        <a class="m-faq-toggle" href="#collapse1" data-parent="#deliveryInfo">
+          <h5 class="m-faq-item-header">
+            Individual Section Title
+          </h5>
+        </a>
+        <p class="m-faq-item-content" data-id="#collapse1">
+          Suspendisse sed facilisis massa, et ultricies justo. Morbi viverra ultrices orci, vehicula dapibus arcu egestas sit amet. Sed ut sapien leo. Nunc eu tellus sagittis, sollicitudin quam vel, aliquam nunc. In dapibus id dui eget fringilla. Nullam laoreet eu elit vitae lacinia. Nam non consequat nulla, sed dictum nisl. Fusce eleifend quam quis bibendum sodales. Maecenas leo metus, pellentesque quis velit vel, gravida lobortis lectus.
+        </p>
+      </div>
+      <!-- FAQ item ends -->
+      <!-- FAQ item starts -->
+      <div class="m-faq-item">
+        <a class="m-faq-toggle" href="#collapse2" data-parent="#deliveryInfo">
+          <h5 class="m-faq-item-header">
+            Individual Section Title
+          </h5>
+        </a>
+        <p class="m-faq-item-content" data-id="#collapse2">
+          Suspendisse sed facilisis massa, et ultricies justo. Morbi viverra ultrices orci, vehicula dapibus arcu egestas sit amet. Sed ut sapien leo. Nunc eu tellus sagittis, sollicitudin quam vel, aliquam nunc. In dapibus id dui eget fringilla. Nullam laoreet eu elit vitae lacinia. Nam non consequat nulla, sed dictum nisl. Fusce eleifend quam quis bibendum sodales. Maecenas leo metus, pellentesque quis velit vel, gravida lobortis lectus.
+        </p>
+      </div>
+      <!-- FAQ item ends -->
+      <!-- FAQ item starts -->
+      <div class="m-faq-item">
+        <a class="m-faq-toggle" href="#collapse3" data-parent="#deliveryInfo">
+          <h5 class="m-faq-item-header">
+            Individual Section Title
+          </h5>
+        </a>
+        <p class="m-faq-item-content" data-id="#collapse3">
+          Suspendisse sed facilisis massa, et ultricies justo. Morbi viverra ultrices orci, vehicula dapibus arcu egestas sit amet. Sed ut sapien leo. Nunc eu tellus sagittis, sollicitudin quam vel, aliquam nunc. In dapibus id dui eget fringilla. Nullam laoreet eu elit vitae lacinia. Nam non consequat nulla, sed dictum nisl. Fusce eleifend quam quis bibendum sodales. Maecenas leo metus, pellentesque quis velit vel, gravida lobortis lectus.
+        </p>
+      </div>
+      <!-- FAQ item ends -->
+    </div>
+    <!-- toggle container ends -->
+  </div>
+  <!-- toggle section ends -->
+  <div class="clear"></div>
+  <!-- code demo starts -->
+  <div class="m-code l-wrapper top-margin">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <pre class="prettyprint linenums lang-html">
+  &lt;!-- toggle section starts --&gt;
+  &lt;div class="m-faq-section" id="deliveryInfo"&gt;
+    &lt;h3 class="m-faq-section-header bembo-bold"&gt;Section Header&lt;/h3&gt;
+    &lt;!-- toggle container starts --&gt;
+    &lt;div class="m-faq-items"&gt;
+      &lt;!-- FAQ item starts --&gt;
+      &lt;div class="m-faq-item"&gt;
+        &lt;a class="m-faq-toggle" href="#collapse1" data-parent="#deliveryInfo"&gt;
+          &lt;h5 class="m-faq-item-header"&gt;
+           Individual Section Title
+         &lt;/h5&gt;
+       &lt;/a&gt;
+       &lt;p class="m-faq-item-content" data-id="#collapse1"&gt;
+         Suspendisse sed facilisis massa, et ultricies justo. Morbi viverra ultrices orci, vehicula dapibus arcu egestas sit amet. Sed ut sapien leo. Nunc eu tellus sagittis, sollicitudin quam vel, aliquam nunc. In dapibus id dui eget fringilla. Nullam laoreet eu elit vitae lacinia. Nam non consequat nulla, sed dictum nisl. Fusce eleifend quam quis bibendum sodales. Maecenas leo metus, pellentesque quis velit vel, gravida lobortis lectus.
+       &lt;/p&gt;
+     &lt;/div&gt;
+     &lt;!-- FAQ item ends --&gt;
+   &lt;/div&gt;
+   &lt;!-- toggle container ends --&gt;
+ &lt;/div&gt;
+ &lt;!-- toggle section ends --&gt;
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- code demo ends -->
+
+
+</section>
+<!-- toggle-animations section ends -->
+<script type="text/javascript">
+      initLoad = true;
+      Modernizr.load([
+        {
+          both: [
+            '<%= domain %>stylesheets/modules/modal.css',
+            '<%= domain %>javascripts/lib/jquery.easing.js',
+            '<%= domain %>javascripts/faq.js',
+            '<%= domain %>javascripts/modules/bootstrap-modalmanager.js',
+            '<%= domain %>javascripts/modules/bootstrap-modal.js',
+          ],
+          complete: function(){
+          }
+        }
+      ]);
+</script>

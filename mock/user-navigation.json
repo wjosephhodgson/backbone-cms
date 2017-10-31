@@ -1,0 +1,164 @@
+[
+	{
+		"title":"Mothers Day",
+		"sequence": 1,
+		"id": 1,
+		"type": "Teleflora",
+		"entries": [
+			{
+				"id": "0001",
+				"sequence": "1",
+				"contentType": "Custom List",
+				"contentLabel": "Mom List Links",
+				"columns": 1,
+				"showMore": true,
+				"showMoreLabel": "",
+				"showMoreLink": "",
+				"navContent": "<div class='col-12'>Mothers Day Cool Site</div><div class='col-12'>My Mom Stuff</div><div class='col-12'>Link 3</div><div class='col-12'>Link 4</div><div class='col-12'>Link 5</div><div class='col-12'>Link 6</div>",
+				"content": [
+					{
+						"id": "00001",
+						"sequence": "1",
+						"label": "Mothers Day Cool Site",
+						"url": "http://www.mothersday.com",
+						"newWindow": true
+					},
+					{
+						"id": "00002",
+						"sequence": "2",
+						"label": "My Mom Stuff",
+						"url": "http://myflowershop.com/momstuff",
+						"newWindow": false
+					},
+					{
+						"id": "00003",
+						"sequence": "3",
+						"label": "Link 3",
+						"url": "http://www.mothersday.com",
+						"newWindow": true
+					},
+					{
+						"id": "00004",
+						"sequence": "4",
+						"label": "Link 4",
+						"url": "http://myflowershop.com/momstuff",
+						"newWindow": false
+					},
+					{
+						"id": "00005",
+						"sequence": "5",
+						"label": "Link 5",
+						"url": "http://www.mothersday.com",
+						"newWindow": true
+					},
+					{
+						"id": "00006",
+						"sequence": "6",
+						"label": "Link 6",
+						"url": "http://myflowershop.com/momstuff",
+						"newWindow": false
+					}											
+				]
+			},
+			{
+				"id": "0002",
+				"sequence": "2",
+				"contentType": "Products",
+				"contentLabel": "Mom products",
+				"columns": 1,
+				"navContent": "<div style='text-align:center;'><div class='col-6'><div class='row'><div class='col-12'><img src='images/mock/product-2.png' height='80'></div></div><div class='row'><div class='col-12'>$49.99</div></div></div><div class='col-6'><div class='row'><div class='col-12'><img src='images/mock/product-3.png' height='80'></div></div><div class='row'><div class='col-12'>$59.99</div></div></div></div><div style='text-align:center;'><div class='col-6'><div class='row'><div class='col-12'><img src='images/mock/product-5.png' height='80'></div></div><div class='row'><div class='col-12'>$49.99</div></div></div><div style='text-align:center;'><div class='col-6'><div class='row'><div class='col-12'><img src='images/mock/product-4.png' height='80'></div></div><div class='row'><div class='col-12'>$59.99</div></div></div>",
+				"content": [
+					{
+						"id": "372559",
+						"featured": true,
+						"rank": 1
+				    }, 
+				    {
+						"id": "372689",
+						"featured": true,
+						"rank": 2
+				    },
+				    {
+						"id": "458488",
+						"featured": true,
+						"rank": 3
+				    },
+				    {
+						"id": "372730",
+						"featured": true,
+						"rank": 4
+				    }				    
+				]
+			}
+		]
+	},
+	{
+		"title":"Birthdays",
+		"sequence": 2,
+		"id": 2,
+		"type": "Teleflora",
+		"entries": [
+			{
+				"id": "0001",
+				"sequence": "1",
+				"columns": 2,
+				"contentType": "Custom HTML",
+				"contentLabel": "Some cool birthday stuff",
+				"navContent": "<div class='col-12'>This is an example of a 2 column Custom HTML navigation menu item.</div>",
+				"html": "This is an example of a 2 column Custom HTML navigation menu item."
+			},
+			{
+				"id": "0002",
+				"sequence": "2",
+				"columns": 1,
+				"navContent": "<div class='col-12'>$0 - $40</div><div class='col-12'>$45 - $70</div><div class='col-12'>$80 - $120</div><div class='col-12'>$120 - $180</div><div class='col-12'>$180+</div>",
+				"contentType": "Price Ranges",
+				"contentLabel": "Shop by price"
+			}
+		]		
+	},
+	{
+		"title":"Occasions",
+		"sequence": 3,
+		"id": 3,
+		"type": "Teleflora",
+		"entries": [
+			{
+				"id": "0001",
+				"sequence": "1",
+				"columns": 2,
+				"contentType": "Collections",
+				"navContent": "<div class='col-12'><img width='320' src='images/mock/collections-nav.jpg'></div>",
+				"contentLabel": "Collections"
+			},
+			{
+				"id": "0002",
+				"sequence": "2",
+				"contentType": "Categories",
+				"columns": 1,
+				"parent": 12,
+				"navContent": "<div class='col-12'><div class='row'><div class='col-12'>Anniversary</div></div><div class='row'><div class='col-12'>Birthday</div></div><div class='row'><div class='col-12'>Congratulations</div></div><div class='row'><div class='col-12'>Corporate Gifts</div></div><div class='row'><div class='col-12'>Funeral & Sympathy</div></div><div class='row'><div class='col-12'>Get Well Soon</div></div> <div class='row'><div class='col-12' style='color:#FF4273'>Shop All Occasions</div></div></div>",
+				"contentLabel": "Shop by Category",
+				"showMore": true,
+				"showMoreLabel": "Shop All Occasions",
+				"showMoreLink": ""				
+			},
+			{
+				"id": "0003",
+				"sequence": "3",
+				"columns": 1,
+				"navContent": "<div class='col-12'><img height='180' src='images/mock/upcoming-nav.jpg'></div>",
+				"contentType": "Upcoming Occasions",
+				"contentLabel": "Upcoming Occasions"
+			}
+		]		
+	},
+	{
+		"title":"About Us",
+		"sequence": 4,
+		"id": 4,
+		"type": "Custom",
+		"dropdown": false,
+		"menuLink": "/about-us"
+	}
+]

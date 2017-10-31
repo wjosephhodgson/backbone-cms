@@ -1,0 +1,66 @@
+{
+	"searchTermStatus": true,
+	"sections": [
+
+		{
+			"id": 1,
+			"searchTerm": "Anniversary",
+			"type": "Teleflora",
+			"landingPageOrBannerImage":"Landing Page",
+			"imageAlt":"Party Balloons",
+			"bannerImage":"/images/mock/sidebarbanner.jpg",
+			"landingPageURL":"www.teleflora.com",
+			"searchActiveStatus": true
+		},
+		{
+			"id": 2,
+			"searchTerm": "Birthday",
+			"type": "Custom",
+			"landingPageOrBannerImage":"Banner Image",
+			"imageAlt":"Party Balloons",
+			"bannerImage":"http://www.telefloramarketing.com/mock/flower-colors-2.jpg",
+			"landingPageURL":"http://www.teleflora.com",
+			"searchActiveStatus": true
+		},
+		{
+			"id": 3,
+			"searchTerm": "Search Term 3",
+			"type": "Custom",
+			"landingPageOrBannerImage":"Landing Page",
+			"imageAlt":"Party Balloons",
+			"bannerImage":"http://www.telefloramarketing.com/mock/flower-colors-2.jpg",
+			"landingPageURL":"http://www.teleflora.com",
+			"searchActiveStatus": true
+		},
+		{
+			"id": 4,
+			"searchTerm": "Search Term 4",
+			"type": "Teleflora",
+			"landingPageOrBannerImage":"Landing Page",
+			"imageAlt":"Party Balloons",
+			"bannerImage":"http://www.telefloramarketing.com/mock/flower-colors-2.jpg",
+			"landingPageURL":"http://www.teleflora.com",
+			"searchActiveStatus": true
+		},
+		{
+			"id": 5,
+			"searchTerm": "Search Term 5",
+			"type": "Custom",
+			"landingPageOrBannerImage":"Landing Page",
+			"imageAlt":"Party Balloons",
+			"bannerImage":"http://www.telefloramarketing.com/mock/flower-colors-2.jpg",
+			"landingPageURL":"http://www.teleflora.com",
+			"searchActiveStatus": true
+		},
+		{
+			"id": 6,
+			"searchTerm": "Search Term 6",
+			"type": "Teleflora",
+			"landingPageOrBannerImage":"Banner Image",
+			"imageAlt":"Party Balloons",
+			"bannerImage":"http://www.telefloramarketing.com/mock/flower-colors-2.jpg",
+			"landingPageURL":"http://www.teleflora.com",
+			"searchActiveStatus": true
+		}
+	]
+}

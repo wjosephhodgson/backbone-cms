@@ -1,0 +1,371 @@
+[
+	{
+		"id": 1,
+		"name":"Occasions",
+		"categoryType": "Teleflora",
+		"groupLevelActive": true,
+		"pageType": "landing",
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"children": [2, 3, 4, 7, 8, 9, 10, 11]
+	},
+
+	{
+		"id": 2,
+		"name":"Anniversary",
+		"categoryType": "Teleflora",
+		"pageType": "category",
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"parent": 1,
+		"featured": true,
+		"featuredRank": 1,
+		"children": [],
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+
+	{
+		"id": 3,
+		"name":"Back to school",
+		"categoryType": "Teleflora",
+		"groupLevelActive": true,
+		"pageType": "category",
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"parent": 1,
+		"featured": true,
+		"featuredRank": 2,
+		"children": [],
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+
+	{
+		"id": 4,
+		"name":"Birthday",
+		"categoryType": "Teleflora",
+		"pageType": "landing",
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"parent": 1,
+		"children": [5, 6]
+	},
+
+	{
+		"id": 5,
+		"name":"Birthday for Him",
+		"categoryType": "Teleflora",
+		"pageType": "category",
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"parent": 4,
+		"featured": true,
+		"featuredRank": 1,
+		"children": [],
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+
+	{
+		"id": 6,
+		"name":"Birthday for Her",
+		"categoryType": "Teleflora",
+		"pageType": "category",
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"parent": 4,
+		"featured": true,
+		"featuredRank": 2,
+		"children": [],
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+
+	{
+		"id": 7,
+		"name":"Corporate gifts",
+		"categoryType": "Teleflora",
+		"pageType": "category",
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"parent": 1,
+		"featured": true,
+		"featuredRank": 3,
+		"children": [],
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+
+	{
+		"id": 8,
+		"name":"Funeral & sympathy",
+		"categoryType": "Teleflora",
+		"pageType": "category",
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"parent": 1,
+		"featured": true,
+		"featuredRank": 4,
+		"children": [],
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+
+	{
+		"id": 9,
+		"name":"Get well",
+		"categoryType": "Teleflora",
+		"pageType": "category",
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"parent": 1,
+		"featured": true,
+		"featuredRank": 5,
+		"children": [],
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+
+	{
+		"id": 10,
+		"name":"Graduation",
+		"categoryType": "Teleflora",
+		"pageType": "category",
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"parent": 1,
+		"featured": true,
+		"featuredRank": 6,
+		"children": [],
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+
+	{
+		"id": 11,
+		"name":"Housewarming",
+		"categoryType": "Custom",
+		"pageType": "category",
+		"groupLevelActive": true,
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"parent": 1,
+		"featured": true,
+		"featuredRank": 7,
+		"children": [],
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+
+	{
+		"id": 12,
+		"name":"Flower Type",
+		"categoryType": "Teleflora",
+		"pageType": "landing",
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"children": []
+	},
+
+	{
+		"id": 13,
+		"name":"Custom Landing",
+		"categoryType": "Custom",
+		"pageType": "landing",
+		"groupLevelActive": true,
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"children": []
+	},
+
+	{
+		"id": 14,
+		"name":"Ungrouped Categories",
+		"ungrouped":true,
+		"categoryType": "",
+		"groupLevelActive": true,
+		"pageType": "landing",
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"children": [15, 16]
+	},
+
+	{
+		"id": 15,
+		"name":"Halloween",
+		"categoryType": "Custom",
+		"pageType": "category",
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"parent": 14,
+		"featured": true,
+		"featuredRank": 1,
+		"children": []
+	},
+
+	{
+		"id": 16,
+		"name":"Make Someone Smile Week",
+		"categoryType": "Custom",
+		"pageType": "category",
+		"startDate": "07/15/14",
+		"endDate": "09/15/14",
+		"active": true,
+		"parent": 14,
+		"featured": true,
+		"featuredRank": 2,
+		"children": []
+	}
+
+]

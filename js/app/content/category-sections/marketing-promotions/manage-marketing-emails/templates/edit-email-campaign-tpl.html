@@ -1,0 +1,96 @@
+<div id="m-create-edit-email-campaign">
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="clearfix section-title">
+				<h2 class="pull-left">Edit Marketing Email</h2>
+				<div class="btn-panel">
+					<button type="button" id="cancel-btn" class="btn btn-other">Cancel</button>
+					<button type="button" id="save-btn" class="btn btn-submit pull-right">Save</button>
+					<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			Use the tools below to edit your emails. Select the products, add a promotion code, and choose your own email subject.
+		</div>
+	</div>
+
+	<form id="edit-form" class="row row-spaced panel form-section">
+		<div class="panel-title">Email Settings</div>
+		<div class="row row-spaced">
+			<div class="col-2">
+				<div class="label">Active</div>
+				<input <%= editable ? '' : 'disabled' %> <%= active ? 'checked' : '' %> type="checkbox" id="f-active" name="f-active" class="on-off-switch" />
+				<label for="f-active" class="on-off-switch-label">
+				    <div class="on-off-switch-state">on</div>
+				</label>
+			</div>
+
+			<div class="col-4">
+				<label for="f-name">Email Name</label>
+				<input disabled type="text" id="f-name" name="f-name" value="<%= name %>">
+			</div>
+
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-6 form-section">
+				<label for="f-subject">Email Subject</label><i class="icon icon-tool-tip x-space-s" title="This is the first thing your customer will see when looking at this email, so we like to use something catchy to get them to open the email."></i>
+				<input <%= editable ? '' : 'disabled' %> type="text" id="f-subject" name="f-subject" value="<%= customSubject ? customSubject : subject %>">
+			</div>
+			<div class="col-3">
+				<label for="send-date">Send Date</label><i title="This is the date the email will be sent out." class="icon icon-tool-tip x-space-s"></i>
+				<input disabled type="text" id="send-date" name="send-date" class="date" value="<%= sendDate %>">
+			</div>
+			<div class="col-3">
+				<label for="pull-date">Product Pull Date</label><i title="This is the deadline for selecting the products you'd like to feature." class="icon icon-tool-tip x-space-s"></i>
+				<input disabled type="text" id="pull-date" name="pull-date" class="date" value="<%= pullDate %>">
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-6">
+				<label for="f-featured-products-num">Number of Featured Products</label>
+				<input disabled type="text" id="f-featured-products-num" name="f-featured-products-num" value="<%= featuredProductsNum %>">
+			</div>
+
+			<div class="col-6">
+				<label for="f-promotion-code">Promotion Code Included</label><i class="icon icon-tool-tip x-space-s" title="Including a promotion code really increases your chances of receiving an order. Include your promotion code here."></i>
+				<input type="text" id="f-promotion-code" name="f-promotion-code" value="<%= promotionCode %>">
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+
+			<div class="col-12">
+				<label for="f-description">Marketing Description</label><i class="icon icon-tool-tip x-space-s" title="This descriptive text is shown in the banner of the email. Using this to explain an offer along with the promotion code field is a great way to generate new orders from repeat customers."></i>
+				<textarea class="size-1"><%= description %></textarea>
+			</div>
+
+		</div>
+	</form>
+
+	<div id="featured-product"></div>
+</div>

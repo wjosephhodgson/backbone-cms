@@ -1,0 +1,23 @@
+<tr>
+	<td class="left-align"><%= offer %></td>
+	<td><%= startDate %></td>
+	<td><%= endDate %></td>
+	<td>
+		<% if( send == true ) { %>
+			<button type="button" class="icon icon-btn icon-2x fa fa-check"></button>
+		<% } else { %>
+			<button type="button" title="This push notification has already been sent out." class="icon icon-btn btn-tool-tip icon-2x"></button>
+		<% } %>
+	</td>
+	<td><%= notified %><br><%= notifyTime %></td>
+	<td>
+		<% if( !federated ) { %>		
+			<% if( send ) { %>
+				<button type="button" class="icon icon-btn icon-2x icon-search"></button>
+			<% } else { %>
+				<button type="button" class="icon icon-btn icon-2x icon-edit"></button>
+			<% } %>
+		<% } %>
+	</td>
+	<td><% if( !federated && !send ) { %><button type="button" class="icon icon-btn icon-2x icon-trash"></button><% } %></td>
+</tr>

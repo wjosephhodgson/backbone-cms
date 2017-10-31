@@ -1,0 +1,46 @@
+[
+	{
+		"locationDescription":"Michael's on 5th | Los Angeles, CA",
+		"sequence": 1,
+		"state": "CA",
+		"country": "United States",
+		"id": 1,
+		"address1": "5th Street",
+		"city": "Los Angeles",
+		"zip": "90064",
+		"florists": [
+			{
+				"id": 1,
+				"tfid": "00002917"
+			},
+			{
+				"id": 2,
+				"tfid": "00002918"
+			},
+			{
+				"id": 3,
+				"tfid": "00002919"
+			}
+		]
+	},
+	{
+		"locationDescription":"Michael's on Olympic | Los Angeles, CA",
+		"sequence": 2,
+		"state": "CA",
+		"country": "United States",
+		"id": 2,
+		"address1": "Olympic Boulevard",
+		"city": "Los Angeles",
+		"zip": "90064"
+	},
+	{
+		"locationDescription":"Michael's on West Hills | West Hills, CA",
+		"sequence": 3,
+		"state": "CA",
+		"country": "United States",
+		"id": 3,
+		"address1": "West Hills Street",
+		"city": "West Hillds",
+		"zip": "90020"
+	}
+]

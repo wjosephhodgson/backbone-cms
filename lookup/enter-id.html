@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Site Lookup</title>
+	<link rel="stylesheet" href="/css/styles.css">
+	<script src="../js/vendor/jquery.js"></script>
+	<script src="../js/vendor/jquery-datatables.js"></script>
+	<script src="../js/vendor/jquery-validate-base.js"></script>
+	<script src="../js/vendor/jquery-validate.js"></script>
+	<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>
+	<script>
+
+		$( document ).ready(function() {
+	
+			$("#myform").validate({
+				rules: {
+					enterid: {
+						required: true,
+						number: true,
+						minlength: 8,
+						maxlength: 8
+					}
+				}
+			});
+
+		});
+
+	</script>
+</head>
+<body>
+	<div id="login" class="full-screen">
+		<section id="enter-id-box">
+			<form id="myform" action="/#more/first-time-site-setup">
+				<div class="row row-spaced enterIDWrapper form-section">
+					<label for="field">Enter Teleflora ID</label>
+					<input type="number" class="form-section" id="field" name="enterid">
+				<div style="text-align: center; margin-top: 20px;"> 
+					<input type="submit" value="Create Site" class="btn btn-submit btn-shadow">
+				</div>
+				</div>
+			</form>
+	    </section>
+	</div>
+	<footer id="footer" class="row">
+		<div class="relative">
+			<div class="container">
+				<div class="pull-left">
+					Need Help? 866.983.3992 | eFlorist@teleflora.com
+				</div>
+				<div class="pull-right">
+					<img src="/images/myteleflora.png" alt="">
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

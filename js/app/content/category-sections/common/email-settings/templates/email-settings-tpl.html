@@ -1,0 +1,159 @@
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="clearfix section-title">
+				<h2 class="pull-left">Email Settings</h2>
+				<div class="btn-panel">
+					<button type="button" id="cancel-btn" class="btn btn-other">Cancel</button>
+					<button type="button" id="save-btn" class="btn btn-submit">Save Changes</button>
+					<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+   
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			This page controls other non-marketing emails that are sent out on your behalf. Use this page to change an email address, choose a theme for emails, and more.
+		</div>
+	</div>
+
+	<div class="row row-spaced panel form-section">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">Merchant Confirmation Emails</div>
+			</div>
+		</div>
+		<div class="row row-spaced form-section">
+			<div class="col-6">
+				<div class="label">
+					Send Merchant Confirmation Emails<i title="Merchant confirmation emails go to you when an order is placed on your website, and include information on that order. We recommend keeping this turned on so you'll know as soon as someone places an order on your website." class="icon icon-tool-tip x-space-s"></i>
+				</div>
+				<input <%= merchantConfirmationActive ? 'checked' : '' %> type="checkbox" id="merchant-confirmation-active" name="merchant-confirmation-active" class="on-off-switch" />
+		        <label for="merchant-confirmation-active" class="on-off-switch-label">
+		            <div class="on-off-switch-state">on</div>
+		        </label>
+			</div>
+
+			<div class="col-6 form-section">
+				<label for="merchant-confirmation-email">Merchant Confirmation Email Address</label><i title="Which address should you confirmations go to? Enter it here." class="icon icon-tool-tip x-space-s"></i>
+				<input type="text" id="merchant-confirmation-email" name="merchant-confirmation-email" value="<%= merchantConfirmationEmail %>" autofocus>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced panel form-section">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">Transactional Email Settings</div>
+			</div>
+		</div>
+
+		<div id="current-layout-container" class="row row-spaced"></div>
+
+		<div class="row row-spaced">
+			<div class="col-6">
+				<div class="label">
+					Order Confirmation Emails<i title="This is sent to your customer to let them know the order went through successfully. We recommend leaving this turned on." class="icon icon-tool-tip x-space-s"></i>
+				</div>
+				<input <%= orderConfirmationActive ? 'checked' : '' %> type="checkbox" id="order-confirmation-active" name="order-confirmation-active" class="on-off-switch" />
+		        <label for="order-confirmation-active" class="on-off-switch-label">
+		            <div class="on-off-switch-state">on</div>
+		        </label>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				<label for="confirmation-email-header">Confirmation Email Header</label><i title="You can thank your customers for their business at the top of the confirmation email here." class="icon icon-tool-tip x-space-s"></i>
+				<textarea class="size-3" name="confirmation-email-header" id="confirmation-email-header" maxlength="1000"><%= confirmationEmailHeader %></textarea>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				<label for="confirmation-email-footer">Confirmation Email Footer</label><i title="Need to let you customers know something about their order delivery? You can enter that information here." class="icon icon-tool-tip x-space-s"></i>
+				<textarea class="size-3" name="confirmation-email-footer" id="confirmation-email-footer" maxlength="1000"><%= confirmationEmailFooter %></textarea>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-3">
+				<div class="label">
+					Thank You Emails<i title="This email is automatically sent out on your behalf to thank your customer for their order. We recommend leaving this turned on." class="icon icon-tool-tip x-space-s"></i>
+				</div>
+				<input <%= thankYouActive ? 'checked' : '' %> type="checkbox" id="thank-you-active" name="thank-you-active" class="on-off-switch" />
+		        <label for="thank-you-active" class="on-off-switch-label">
+		            <div class="on-off-switch-state">on</div>
+		        </label>
+			</div>
+
+			<div class="col-3">
+				<div class="label">
+					Welcome Emails<i title="We send these emails out to your customers after they sign up for an account on your website. We recommend leaving this turned on." class="icon icon-tool-tip x-space-s"></i>
+				</div>
+				<input <%= welcomeActive ? 'checked' : '' %> type="checkbox" id="welcome-active" name="welcome-active" class="on-off-switch" />
+		        <label for="welcome-active" class="on-off-switch-label">
+		            <div class="on-off-switch-state">on</div>
+		        </label>
+			</div>
+
+			<div class="col-3">
+				<div class="label">
+					Gift Reminders<i title="Your customers can sign up for gift reminders, and your website will send them an email automatically to remind them of the event. We recommend leaving this turned on." class="icon icon-tool-tip x-space-s"></i>
+				</div>
+				<input <%= giftRemindersActive ? 'checked' : '' %> type="checkbox" id="gift-reminders-active" name="gift-reminders-active" class="on-off-switch" />
+		        <label for="gift-reminders-active" class="on-off-switch-label">
+		            <div class="on-off-switch-state">on</div>
+		        </label>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced panel form-section">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">Cart Abandonment Email Settings</div>
+			</div>
+		</div>	
+		<div class="row row-spaced">
+			<div class="col-4 form-section">
+				<div class="label">
+					Send Cart Abandonment Emails<i title="Enabling this setting will send emails to your registered customers who leave your site with items in the cart." class="icon icon-tool-tip x-space-s"></i>
+				</div>
+				<input <%= cartAbandon ? 'checked' : '' %> type="checkbox" id="cartAbandon-active" name="cartAbandon-active" class="on-off-switch" />
+		        <label for="cartAbandon-active" class="on-off-switch-label">
+		            <div class="on-off-switch-state">on</div>
+		        </label>
+			</div>			
+			<div class="col-4 form-section">
+				<div class="label">Promo Code in Email</div>
+				<input type="text" name="f-cartPromo" id="f-cartPromo" value="<%= cartPromo %>">
+			</div>
+		</div>
+		<div class="row row-spaced">
+			<div class="col-12 form-section">
+				<div class="label">Email Message</div>
+				<textarea class="size-2" name="f-cartText" id="f-cartText"><%= cartText %></textarea>
+			</div>
+		</div>
+	</div>

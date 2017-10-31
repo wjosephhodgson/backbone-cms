@@ -1,0 +1,107 @@
+#lookup-box {
+	@include box-shadow(0 0 14px 0 rgba(50, 50, 50, .75));
+	@include border-radius($border-radius);
+	background-color: white;
+	margin: $footer-height auto;
+	margin-bottom: 20%;
+	height: 645px;
+	width: 500px;
+	text-align: center;
+	padding: $space-l;
+}
+
+// CSS for Edit Modal in First-Time-Setup
+#site-lookup-box {
+
+	@include border-radius($border-radius);
+	background-color: white;
+	margin: $site-footer-height auto;
+	margin-bottom: 10%;
+	height: 635px;
+	width: 500px;
+	text-align: center;
+	padding: $space-l;
+}
+// CSS for enter-id.html 
+#enter-id-box {
+	@include box-shadow(0 0 14px 0 rgba(50, 50, 50, .75));
+	@include border-radius($border-radius);
+	background-color: white;
+	margin: $footer-height auto;
+	margin-bottom: 10%;
+	height: 300px;
+	width: 500px;
+	text-align: center;
+	padding: $space-l;
+}
+
+.enterIDWrapper {
+	width: 60%;
+	margin: 0 auto
+}
+
+#site-table {
+
+	max-width: 230px;
+	max-height: 475px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+	display: block;
+
+	thead {
+		display: none;
+	}
+
+	tbody {
+		display: block;
+	}
+
+	tr {
+		display: block;
+		width: 95%;
+		float: left;
+		padding: 15px 5px;
+		font-size: $font-size-l;
+		border-bottom: 1px solid $color-border-1;
+		clear: both;
+		text-overflow: ellipsis;
+		&:hover {
+			background-color: $color-accent-2;
+			cursor: pointer;
+		}
+	}
+
+	tr:last-child {
+		border-bottom: 0px;
+	}
+
+	td {
+		display: block;
+		width: 100%;
+		float: left;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+
+
+}
+
+#site-table_wrapper {
+	#site-table_length {
+		display: none;
+	}
+	
+	#site-table_filter {
+		display: none;
+	}
+
+	#site-table_info {
+		display: none;
+	}
+
+	#site-table_paginate {
+		display: none;
+	}
+}

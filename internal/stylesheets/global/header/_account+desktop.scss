@@ -1,0 +1,69 @@
+
+
+.m-account-signin .btn-facebook{margin-bottom: 2px;}
+
+.m-account-arrow{
+  position:absolute;
+  top:-12px;
+  left:33px;
+
+  width:16px;
+  height:14px;
+  display:block;
+
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOCAYAAAAmL5yKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2tpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowQTgwMTE3NDA3MjA2ODExODhDNjkyMzI4NUM3M0JERSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpBNjZBRUQ2MDJBQ0IxMUUzODU1QkYyMkMxNDYwMUU0OCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpBNjZBRUQ1RjJBQ0IxMUUzODU1QkYyMkMxNDYwMUU0OCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1NTBkZjRhMC04ODQyLTRkZDUtOGVjYi1hNjhmMmE5NTc4YWEiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MEE4MDExNzQwNzIwNjgxMTg4QzY5MjMyODVDNzNCREUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6YaBv6AAABT0lEQVR42qSRMUvDQBTH311tAqZVtA04NMVGkeIa6O6mg5/CIbtu4kcRnESXksFBSCDt1JDSQjqkIS79BE5xSUz7fBGUqK1W+oO74d3//+7e/zgiwqI1GAyuaJ3+pmHZNo/hcHhSLBYf0jR9IU1L07SneTo+r+g4zj5j7FZV1UK9Xt+kktHpdDaWamBZliQIQltRlK1SqQTVahVkWT4sl8s3uq7/vDA/D8H6/f7dZDLBPLPZDIMgQDq7zDRfPHmz67rn4/EYp9MpfidJEhyNRilpjvNNPs29Xu/I87zXOI5xEVEUIYX73O129z6acAqL2batiKJ432g01mh+WESWSa1W25YkqW2a5npWKxiGIVJIj3RwUKlU4C/IDDTODuWySx4jC+2ajGf0ZbAsZIYwDIFGumC+72Oz2QTOOfwHegXQz7wHgbACHFZk5QZvAgwAwRwIVQOD4/YAAAAASUVORK5CYII=');
+}
+
+#logInForm{
+  margin-top: 1em;
+}
+
+.m-account{
+  right: 7em;
+  z-index:999;
+  overflow:hidden;
+  visibility:hidden;
+  width: 25em;
+  height: 0em;
+  padding-top:0em;
+  background:$white;
+  @include translate3d(0, -0.2em, 0);
+  opacity:0;
+  @include transition(0.30s, ease-in-out);
+
+  &.is-loggedin{
+    width: 16.25em;
+    height: 18.5em !important;
+    top: -0.6em;
+    right: 24.5em;
+    padding-top: 0;
+    border-top:0;
+
+    .m-nav{width:16.25em;}
+    .m-account-arrow{
+      left:90%;
+      top:-10px;
+      z-index: 99;
+    }
+  }
+}
+  .no-csstransforms3d .m-account {top:-0.2em;}
+
+.m-account .m-nav .m-nav-list .m-nav-list-item{padding-left: 0.75em;}
+
+.is-account-expanded .m-supernav-account-status.is-loggedin:after{
+  background-position:-189px -0px;
+}
+
+
+.is-account-expanded .m-account {
+  z-index:999999;
+  height: 35em;
+  overflow:visible;
+  visibility:visible;
+  @include translate3d(0, -2.3em, 0);
+  opacity:1;
+  top: -0.4em;
+}
+  .no-csstransforms3d .is-account-expanded .m-account{top:-2.3em;}
+

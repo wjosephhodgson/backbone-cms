@@ -1,0 +1,32 @@
+.m-checkout-footer-link {
+  font-size: 15px;
+}
+
+.m-checkout-footer-logos {
+  float: right;
+  text-align: right;
+}
+.m-checkout-footer-logo {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.m-checkout-footer-logo-tahwte {
+  margin-bottom: 0.4em;
+}
+
+.m-checkout-footer-logo-mcafee {
+  margin-bottom: 0.9em;
+}
+
+$breakpoint-tablet2: 31em;
+
+.m-show-line-after-tablet {
+  margin-bottom: 1.5em;
+}
+
+@media all and (min-width:$breakpoint-tablet2) {
+  .m-show-line-after-tablet {
+    display: none;
+  }
+}

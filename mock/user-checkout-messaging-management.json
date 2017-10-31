@@ -1,0 +1,57 @@
+[
+	{
+	 "id": 1,
+	 "AssociatedPage": "Shopping Basket Page",
+	 "StartDate": "01/23/2015",
+	 "EndDate": "01/23/2017",
+	 "type": "Teleflora",
+	 "CheckoutMessagingActive": true,
+	 "CheckoutMessagingEditStatus": false,
+	 "CheckoutMessagingDeleteStatus": false
+	},
+	{
+	 "id": 2,
+	 "AssociatedPage": "Checkout Delivery Page",
+	 "StartDate": "01/23/2015",
+	 "EndDate": "01/23/2017",
+	 "type": "Teleflora",
+	 "CheckoutMessagingActive": true,
+	 "CheckoutMessagingEditStatus": false,
+	 "CheckoutMessagingDeleteStatus": false
+	},
+	{
+	 "id": 3,
+	 "AssociatedPage": "Checkout Payment Page",
+	 "StartDate": "01/23/2015",
+	 "EndDate": "01/23/2017",
+	 "type": "Teleflora",
+	 "CheckoutMessagingActive": true,
+	 "CheckoutMessagingEditStatus": false,
+	 "CheckoutMessagingDeleteStatus": false
+	},
+	{
+	 "id": 4,
+	 "AssociatedPage": "Shopping Basket Page",
+	 "StartDate": "01/23/2015",
+	 "EndDate": "01/23/2017",
+	 "type": "Custom",
+	 "holidayMessage": "Mother's day is here",
+	 "taxAndShippingInformation": "Shipping within California cos $10.00 for small boxes via USPS",
+	 "CheckoutMessagingActive": true,
+	 "CheckoutMessagingEditStatus": true,
+	 "CheckoutMessagingDeleteStatus": true
+	},
+		{
+	 "id": 5,
+	 "AssociatedPage": "Checkout Delivery Page",
+	 "StartDate": "01/23/2015",
+	 "EndDate": "01/23/2017",
+	 "type": "Custom",
+	 "holidayMessage": "Merry Christmas from Michael's Flower Shop",
+	 "cutOffTimeInformation": "",
+	 "deliveryInformation": "Delivery Cut off is at 6 pm",
+	 "CheckoutMessagingActive": true,
+	 "CheckoutMessagingEditStatus": true,
+	 "CheckoutMessagingDeleteStatus": true
+	}
+]

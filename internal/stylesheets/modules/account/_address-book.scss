@@ -1,0 +1,13 @@
+$breakpoint-table: 32em;
+
+.m-address-book {
+  text-align: left;
+}
+
+@media all and (min-width:$breakpoint-table) {
+  .m-address-book-table {
+    .hide-after-tablet {
+      display: table-cell;
+    }
+  }
+}

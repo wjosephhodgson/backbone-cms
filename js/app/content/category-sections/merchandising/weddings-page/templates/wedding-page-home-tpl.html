@@ -1,0 +1,163 @@
+
+<form id="create-edit-f-wedding-page" name="create-edit-f-wedding-page">
+<div class="row row-spaced">
+  <div class="col-12">
+    <div class="section-title">
+      <h2 class="pull-left">Wedding Landing Page</h2>
+      <div class="btn-panel">
+        <button type="button" id="save-btn" class="btn btn-submit">Save</button>
+        <div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row row-spaced">
+  <div class="col-12">
+    Use this section to manage your site's main wedding page. This is the first thing your customers will see after clicking on the Weddings link on your site. You can add unique testimonials and change settings such as the page text and email consultation form.
+  </div>
+</div>
+
+
+<div class="panel">
+    <div class="row row-spaced">
+      <div class="col-6 form-section">
+        <label for="f-pageHeaderTitle">Page Header Title</label><i class="icon icon-tool-tip x-space-s" title="This is the text which will be displayed at the top of your wedding landing page."></i>
+        <input type="text" id="f-pageHeaderTitle" name="f-pageHeaderTitle" value="<%= pageHeaderTitle %>">
+      </div>
+      <div class="col-2 form-section pull-right">
+        <div class="label">Active<i title="If this setting is turned OFF, the wedding landing page will be deactivated and will not appear on your site." class="icon icon-tool-tip x-space-s"></i></div>
+        <input <%= active ? 'checked' : '' %> type="checkbox" id="f-active" name="f-active" class="on-off-switch" />
+        <label for="f-active" class="on-off-switch-label">
+          <div class="on-off-switch-state">on</div>
+        </label>
+      </div>    
+      <div class="col-12 form-section">
+          <label for="f-pageHeaderDescription">Page Header Description</label><i title="You may use this area to describe the way your flower shop does weddings. This descriptive text shows up at the top of the page." class="icon icon-tool-tip x-space-s"></i>
+          <textarea name="f-pageHeaderDescription" id="f-pageHeaderDescription" class="size-3"><%= pageHeaderDescription %></textarea>
+      </div>
+    </div> <!-- End of Row -->
+    <div class="row row-spaced">       
+      <div class="col-2 form-section">
+        <div class="pull-left">
+          <div class="label">Social Media Share Icons<i title="If this setting is ON, social media sharing icons will be displayed on the wedding landing page." class="icon icon-tool-tip x-space-s"></i></div>
+          <input <%= socialMedia ? 'checked' : '' %> type="checkbox" id="f-socialMedia" name="f-socialMedia" class="on-off-switch center-align" />
+          <label for="f-socialMedia" class="on-off-switch-label">
+            <div class="on-off-switch-state">on</div>
+          </label>
+        </div>
+      </div>
+      <div class="col-2 form-section">
+        <div class="label">Consultation Form<i title="If this setting is ON, your customers can fill out a form that will be emailed to you in order to request a wedding consultation." class="icon icon-tool-tip x-space-s"></i></div>
+        <input <%= enableConsultation ? 'checked' : '' %> type="checkbox" id="f-enableConsultation" name="f-enableConsultation" class="on-off-switch center-align" />
+        <label for="f-enableConsultation" class="on-off-switch-label">
+          <div class="on-off-switch-state">on</div>
+        </label>
+      </div>
+      <div class="col-6 consultationSection hidden form-section">
+        <label for="f-consultationEmail">Consultation Email Address</label><i class="icon icon-tool-tip x-space-s" title="This is the email address to which consultation form requests will be mailed."></i>
+        <input type="text" id="f-consultationEmail" name="f-consultationEmail" value="<%= consultationEmail %>" class="y-space-top-ll">
+      </div>
+    </div>
+    <div class="row row-spaced">
+      <div class="col-4 form-section image-section">
+        <div class="label">Background Image <i class="icon icon-tool-tip" title="Use the button below to specify a large background image for the top of your wedding landing page."></i></div>
+        <button type="button" id="f-tile-image-upload" class="image-upload icon icon-btn icon-image btn-file icon-3x y-space-s"></button>
+      </div>
+      <div class="col-3 form-section">
+        <div class="label">Background Preview </div>
+        <img id="f-image-1-preview" class="fill-container-width" src="<%= backgroundImage %>" alt="">
+      </div>    
+    </div>
+</div>
+
+
+
+<!-- Start of Section table -->
+<div class="panel row row-spaced form-section">
+  <div class="panel-title">Testimonial Management</div>
+  <div class="row row-spaced">
+    <div class="col-12">
+      <button type="button" id="add-section-btn"class="btn btn-submit pull-right"><i class="icon icon-add icon-lg"></i> New Testimonial</button>
+    </div>
+  </div>
+  <div class="row row-spaced">
+    <div class="col-12">
+      <table class="table alternate">
+        <thead>
+          <tr>
+            <th class="col-1">Sequence</th>
+            <th class="col-2 left-align">Customer Name</th>
+            <th class="col-3 left-align">Testimonial</th>
+            <th class="col-2 center-align">Image</th>
+            <th class="col-1">Edit</th>
+            <th class="col-1">Status</th>
+            <th class="col-1">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="section-list"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- End of Section Table -->
+
+<!-- Start of SEO Information -->
+<div class="panel form-section row row-spaced">
+  <div class="row">
+    <div class="col-12">
+      <div class="panel-title"><i class="icon icon-closed x-space-s" id="optional"></i>SEO Information (optional)</div>
+    </div>
+  </div>
+
+  <div id="accordion">
+
+    <div class="row row-spaced">
+      <div class="col-12 form-section">
+        <label for="f-meta-title">Page &#60;title&#62;</label><i class="icon icon-tool-tip x-space-s" title="This is the text displayed in the tab at the top of your browser window."></i>
+        <input type="text" id="f-meta-title" name="f-meta-title" value="<%= metaTitle %>">
+      </div>
+    </div>
+
+    <div class="row row-spaced">
+      <div class="col-6 form-section">
+        <label for="f-meta-keywords">Meta Keywords</label><i class="icon icon-tool-tip x-space-s" title="This area allows you to enter a few comma separated keywords that describe your page."></i>
+        <textarea name="f-meta-keywords" id="f-meta-keywords" class="size-2"><%= metaKeywords %></textarea>
+      </div>
+
+      <div class="col-6 form-section">
+          <label for="f-meta-desc">Meta Description</label><i title="This is the text shown on search engines for your page and should consist of short clear sentences." class="icon icon-tool-tip x-space-s"></i>
+          <textarea name="f-meta-desc" id="f-meta-desc" class="size-2"><%= metaDescription %></textarea>
+      </div>
+    </div>
+
+    <div class="row row-spaced">
+      <div class="col-12 form-section">
+          <label for="f-meta-tags">Additional Tags</label><i title="This area is for any additional meta tags that may be used for tracking or other purposes that you would like in the page &lt;head&gt;." class="icon icon-tool-tip x-space-s"></i>
+          <textarea name="f-meta-tags" id="f-meta-tags" class="size-2"><%= metaTags %></textarea>
+          <div class="row"><div class="col-12">Please include the full HTML (such as &lt;meta&gt;) in the Additional Tags field.</div></div>
+      </div>
+    </div>
+
+  </div> <!-- End of Accordian -->
+</div>
+<!-- End of SEO Information -->
+
+
+</form>

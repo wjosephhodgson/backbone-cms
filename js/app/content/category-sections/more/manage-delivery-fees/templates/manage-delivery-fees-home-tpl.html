@@ -1,0 +1,208 @@
+<form id="p-manage-delivery-fees-home" name="p-manage-delivery-fees-home">
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="section-title">
+			<h2 class="pull-left">Manage Delivery Fees</h2>
+			<button type="button" id="save-btn" class="btn btn-submit pull-right">Save Changes</button>
+			<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced">
+	<div class="col-12">
+		Use this page to manage your delivery fees, and to set up delivery fees for other areas you also serve.
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row row-spaced panel form-section">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Standard Delivery Fee</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="row label-row form-section">
+				<div class="col-3"><label for="f-deliveryFee">Delivery Fee<i class="icon icon-tool-tip x-space-s" title="This is your default delivery fee. We recommend using the local delivery fee here."></i></label></div>
+				<div class="col-1"></div>
+				<div class="col-6"><label for="f-deliveryFeeName">Delivery Fee Name<i class="icon icon-tool-tip x-space-s" title="This is what your customers will see when they see this fee."></i></label></div>
+			</div>
+			<div class="row"></div>
+		</div>
+		<div class="col-3 form-section">
+			<div class="dollar-container">
+			<input type="text" id="f-deliveryFee" name="f-deliveryFee" value="<%= deliveryFee %>">
+			</div>
+		</div>
+		<div class="col-1"></div>
+		<div class="col-6 form-section">
+			<input type="text" id="f-deliveryFeeName" maxlength="28" name="f-deliveryFeeName" value="<%= deliveryFeeName %>">
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<div class="row label-row">
+				<div class="col-3"><label for="f-additionalFee">Additional Fee<i class="icon icon-tool-tip x-space-s" title="Are there any other fees aside from delivery you charge? You can put those here."></i></label></div>
+				<div class="col-1"></div>
+				<div class="col-6"><label for="f-additionalFeeName">Additional Fee Name<i class="icon icon-tool-tip x-space-s" title="What is this additional fee called?"></i></label></div>
+			</div>
+			<div class="row"></div>
+		</div>
+		<div class="col-3 form-section">
+		<div class="dollar-container">
+			<input type="text" id="f-additionalFee" name="f-additionalFee" value="<%= additionalFee %>">
+		</div>
+		</div>
+		<div class="col-1"></div>
+		<div class="col-6 form-section">
+			<input type="text" id="f-additionalFeeName" maxlength="28" name="f-additionalFeeName" value="<%= additionalFeeName %>">
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="row label-row">
+				<div class="col-3">
+					<label for="f-wireFee">Wire Fee<i class="icon icon-tool-tip x-space-s" title="Do you charge a wire out fee? If so, put that here."></i></label>
+				</div>
+				<div class="col-1"></div>
+				<div class="col-6">
+					<div class="bottom-aligned">
+						<label for="f-wireFeeName">Wire Fee Name<i class="icon icon-tool-tip x-space-s" title="What would you like to call your wire fee?"></i></label>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-3 form-section">
+				<div class="dollar-container">
+					<input type="text" id="f-wireFee" name="f-wireFee" value="<%= wireFee %>">
+				</div>
+				</div>
+				<div class="col-1"></div>
+				<div class="col-6 form-section">
+					<input type="text" id="f-wireFeeName" maxlength="28" name="f-wireFeeName" value="<%= wireFeeName %>">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-4"><div class="label">Activate In-Store Pickup Fee<i title="Do you charge a fee for customers to pick up in your store? If so, turn this option on." class="icon icon-tool-tip x-space-s"></i></div>
+		<input <%= inStorePickupFeeActive ? 'checked' : '' %> type="checkbox" id="f-inStorePickupFeeActive" name="f-inStorePickupFeeActive" class="on-off-switch" />
+		<label for="f-inStorePickupFeeActive" class="on-off-switch-label">
+			<div class="on-off-switch-state">on</div>
+		</label>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div id="in-store-pickup-fee-container" class="col-12 <%= inStorePickupFeeActive ? '' : 'hidden-alt'%>">
+			<div class="row label-row">
+				<div class="col-3"><label for="f-inStorePickupFee">In-Store Pickup Fee<i class="icon icon-tool-tip x-space-s" title="Do you charge a fee for customers to pick up in your store? If so, put that fee here."></i></label></div>
+				<div class="col-1"></div>
+				<div class="col-6"><label for="f-inStorePickupFeeName">In-Store Pickup Fee Name<i class="icon icon-tool-tip x-space-s" title="What would you like to call your In-Store Pickup Fee?"></i></label></div>
+			</div>
+
+			<div class="row">
+				<div class="col-3">
+				<div class="dollar-container">
+					<input type="text" id="f-inStorePickupFee" name="f-inStorePickupFee" value="<%= inStorePickupFee %>">
+				</div>
+				</div>
+				<div class="col-1"></div>
+				<div class="col-6 form-section">
+					<input type="text" id="f-inStorePickupFeeName" maxlength="28" name="f-inStorePickupFeeName" value="<%= inStorePickupFeeName %>">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="row label-row">
+				<div class="col-4"><div class="label">One Delivery Fee to Same Address on Same Order on Same Day<i class="icon icon-tool-tip x-space-s" title="Leave this turned on to charge a single delivery if two orders are delivered to the same address on the same day."></i></div></div>
+			</div>
+
+			<div class="row">
+				<div class="col-4">
+					<input <%= oneDeliveryFeeActive ? 'checked' : '' %> type="checkbox" id="f-oneDeliveryFeeActive" name="f-oneDeliveryFeeActive" class="on-off-switch" />
+					<label for="f-oneDeliveryFeeActive" class="on-off-switch-label">
+					    <div class="on-off-switch-state">on</div>
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced panel">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Location Based Fees</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			Use this section to set up custom delivery fees by zip code, city, state, distance or facility name.
+		</div>
+	</div>
+
+	<div class="row row-spaced form-section">
+		<div class="col-12">
+			<div class="row">
+				<div class="col-6"><div class="label">Enable Location Based Fees<i title="Do you want to charge different fees for delivering to a different area than you normally deliver to? If so, set this to on." class="icon icon-tool-tip x-space-s"></i></div></div>
+			</div>
+			<div class="row">
+				<div class="col-6"><input <%= overrideAllCustomActive ? 'checked' : '' %> type="checkbox" id="f-overrideAllCustomActive" name="f-overrideAllCustomActive" class="on-off-switch" />
+			<label for="f-overrideAllCustomActive" class="on-off-switch-label">
+			    <div class="on-off-switch-state">on</div>
+			</label></div>
+				<div class="col-6 y-space-s"><button type="button" id="setup-by-destination-btn" class="btn btn-submit pull-right">Continue</button></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced panel">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Date & Time Based Fees</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			Use this section to set up seasonal delivery fees to add to your standard delivery fee during different date ranges.
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			<button type="button" id="setup-by-date-time-btn" class="btn btn-submit pull-right">Continue</button>
+		</div>
+	</div>
+</div>
+</form>

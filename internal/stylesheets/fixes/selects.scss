@@ -1,0 +1,11 @@
+@import "../settings";
+
+.no-webkit select{
+  padding-top:0.56em;
+  padding-bottom:0.56em;
+  padding-right: 1em;
+
+
+  background-image: none;
+  border:1px solid $accent-grey;
+}

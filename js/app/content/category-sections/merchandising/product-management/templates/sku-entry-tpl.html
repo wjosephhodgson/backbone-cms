@@ -1,0 +1,87 @@
+<div class="col-12">
+<% if(isBaseSku == true) { %>
+  <div class="row form-section y-space-top-m">
+    <div class="col-6-20">
+      <label for="name-<%= id %>">Price Point Label</label><i class="icon icon-tool-tip x-space-s" title="This is a name used to distinguish the different price points for this product. Ex: Standard, Deluxe, Premium"></i>
+    </div>
+<% if(type2 !== 'Browse Only') { %>
+  <% if(type === 'Teleflora') { %>
+    <div class="col-4-20">
+      <label for="f-suggestedPrice-<%= id %>">Suggested Price</label><i class="icon icon-tool-tip x-space-s" title="This is the Teleflora suggested price for this product."></i>
+    </div>
+  <% } %>
+    <div class="col-4-20">
+      <label for="f-myPrice-<%= id %>"><%= type === 'Teleflora' ? 'My' : '' %> Price</label><i class="icon icon-tool-tip x-space-s" title="This is the current price for the product on your site."></i>
+
+    </div>
+    <div class="col-4-20">
+      <label for="f-holidayPrice-<%= id %>">Holiday Upgrade</label><i class="icon icon-tool-tip x-space-s" title="During holidays, this is how much the product price will be increased."></i>
+
+    </div>
+<% } %>
+    <div class="<%= type === 'Teleflora' ? 'col-2-20' : 'col-3-20' %>">
+      <label for="f-image">Image</label><i class="icon icon-tool-tip x-space-s" title="This allows you to upload product images for this product to be shown on your site."></i>
+    </div>
+<% if(type2 !== 'Browse Only') { %>
+  <% if(type !== 'Teleflora') { %>
+  <!-- if(type !== 'Teleflora' && canDelete) { -->
+    <div class="<%= type === 'Teleflora' ? 'col-2-20' : 'col-3-20' %>">
+      <label for="f-delete">Delete</label>
+    </div>
+  <% } %>
+<% } %>
+  </div>
+<% } %>  
+  <div class="row form-section">
+    <div class="col-6-20">
+      <input <%= type === 'Teleflora' ? 'disabled' : '' %> type="text" id="name-<%= id %>" name="name-<%= id %>" value="<%= skuLabel %>">
+    </div>
+<% if(type2 !== 'Browse Only') { %>
+  <% if(type === 'Teleflora') { %>
+    <div class="col-4-20 form-section">
+      <div class="dollar-container">
+      <input disabled type="text" id="f-suggestedPrice-<%= id %>" name="f-suggestedPrice-<%= id %>" class="f-suggestedPrice" value="<%= suggestedPrice %>">
+      </div>
+    </div>
+  <% } %>
+    <div class="col-4-20 form-section">
+      <div class="dollar-container">
+      <input type="text" id="f-myPrice-<%= id %>" name="<%= type === 'Teleflora' ? 'f-myPrice-teleflora': 'f-myPrice' %>" class="<%= type === 'Teleflora' ? 'f-myPrice-teleflora': 'f-myPrice' %>" value="<%= myPrice %>">
+      </div>
+    </div>
+    <div class="col-4-20 form-section">
+      <div class="dollar-container">
+      <input type="text" id="f-holidayPrice-<%= id %>" name="f-holidayPrice" class="f-holidayPrice" value="<%= holidayPrice %>">
+      </div>
+    </div>
+<% } %>
+
+<% if(type === 'Teleflora') { %>
+    <div class="col-2-20">
+      <img class="y-space-top-xs" src="<%= "http://s7d2.scene7.com/is/image/Teleflora/" + number + "?wid=40&fmt=jpeg&qlt=90,0&op_sharpen=0&resMode=bilin&op_usm=1.0,0.5,1.0,0&iccEmbed=0&layer=1&opac=0&layer=2&opac=55&layer=5&opac=0" %>">
+    </div>
+<% } else { %>
+    <div class="col-3-20">
+      <% if(imgA1) { %>
+        <img class="y-space-top-xs image-upload" src="<%= imgA1 %>">
+      <% } else { %>
+        <button type="button" class="icon icon-btn icon-image icon-2x y-space-s image-upload"></button>
+      <% } %>
+    </div>
+<% } %>
+
+<% if(type2 !== 'Browse Only') { %>
+  <% if(type !== 'Teleflora') { %>
+  <!-- if(type !== 'Teleflora' && canDelete) { -->
+    <div class="<%= type === 'Teleflora' ? 'col-2-20' : 'col-3-20' %>">
+      <button type="button" class="icon icon-btn icon-trash icon-2x y-space-s"></button>
+    </div>
+  <% } %>
+<% } %>
+  </div>
+
+<% if(isBaseSku == true) { %>
+  <div id="product-image-modal"></div>
+<% } %>
+
+</div>

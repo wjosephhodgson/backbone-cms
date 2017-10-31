@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-5">
+    <input <%= type === 'Teleflora' ? 'disabled' : '' %> type="text" class="f-label" name="f-label" value="<%= label %>">
+  </div>
+  <div class="col-2">
+    <div class="dollar-container form-section">
+      <% if( index == 1 ){ var priceName = 'f-price-1' } else { priceName = 'f-price' } %>
+      <input type="text" class="f-price" name="<%= priceName %>" value="<%= price %>" id="f-price-<%= index %>">
+    </div>
+  </div>
+
+   <% if(type !== 'Teleflora' && isDefault === false) { %>
+  <div class="col-2">
+    <button type="button" class="y-space-top-m icon icon-trash icon-btn icon-2x"></button>
+  </div>
+  <% } %>
+
+
+</div>

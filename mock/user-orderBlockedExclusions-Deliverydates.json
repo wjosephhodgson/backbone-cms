@@ -1,0 +1,73 @@
+[
+{
+ "id": 1,
+ "closureReason": "Owner's Vacation",
+ "startDate": "03/21/2015",
+ "resumeDate":"03/22/2015",
+ "repeatsYearly": "No"
+},
+{
+ "id": 2,
+ "closureReason": "Closure Reason 1",
+ "startDate": "03/22/2015",
+ "resumeDate":"03/24/2015",
+ "repeatsYearly": "Yes"
+},
+{
+ "id": 3,
+ "closureReason": "Closure Reason 2",
+ "startDate": "03/23/2015",
+ "resumeDate":"03/25/2015",
+ "repeatsYearly": "Yes"
+}
+,
+{
+ "id": 4,
+ "closureReason": "4th of July",
+ "startDate": "07/04/2015",
+ "resumeDate":"07/05/2015",
+ "repeatsYearly": "No"
+},
+{
+ "id": 5,
+ "closureReason": "Closure Reason 3",
+ "startDate": "09/11/2015",
+ "resumeDate":"09/17/2015",
+ "repeatsYearly": "No"
+},
+{
+ "id": 6,
+ "closureReason": "Closure Reason 4",
+ "startDate": "09/12/2015",
+ "resumeDate":"09/17/2015",
+ "repeatsYearly": "No"
+},
+{
+ "id": 7,
+ "closureReason": "Closure Reason 5",
+ "startDate": "09/13/2015",
+ "resumeDate":"09/17/2015",
+ "repeatsYearly": "No"
+},
+{
+ "id": 8,
+ "closureReason": "Closure Reason 6",
+ "startDate": "09/14/2015",
+ "resumeDate":"09/17/2015",
+ "repeatsYearly": "No"
+},
+{
+ "id": 9,
+ "closureReason": "Closure Reason 7",
+ "startDate": "09/16/2015",
+ "resumeDate":"09/17/2015",
+ "repeatsYearly": "No"
+},
+{
+ "id": 10,
+ "closureReason": "Christmas Day",
+ "startDate": "12/25/2015",
+ "resumeDate":"12/27/2015",
+ "repeatsYearly": "No"
+}
+]

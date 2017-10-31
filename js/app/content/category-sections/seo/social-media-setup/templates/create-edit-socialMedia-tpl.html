@@ -1,0 +1,98 @@
+
+<div id="p-social-media-edit-new" class="row row-spaced panel">
+
+  <form id="create-edit-form" name="f-create-edit-social" class="form-section"> 
+
+    <div class="row">
+
+      <div class="col-12">
+                <div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+                <button type="button" id="save-btn" class="btn btn-submit btn-panel pull-right"> Save</button>
+            <%  if(id) { %>  <button type="button" id="delete-btn" class="btn btn-cancel btn-panel pull-right ">Delete</button> <% } %>
+ 
+                <button type="button" id="cancel-btn" class="btn btn-other btn-panel pull-right">Cancel</button>
+                
+        <div class="panel-title y-space-top-l"><%= id ? "Edit " : "Add New " %>Social Media Channel</div>
+
+       </div>
+    </div>
+<!-- Hidden Alert Message -->
+
+<div class="row row-spaced panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+
+<div class="row panel alert-panel hidden-alt">
+
+    <div class="col-12">
+
+      <div class="row">
+        <div class="col-1">
+          <div class="icon icon-3x icon-warning"></div>
+
+        </div>
+
+        <div class="col-11 alert-text left-align">
+          You have uploaded an invalid image file.  Please upload image files that have
+          extensions '.gif', '.jpg', '.jpeg', '.bmp' or '.png'.
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+<div class="row y-space-s"> 
+
+    <div class="col-12">
+
+    <div class="row">
+      <div class="col-7 form-section">
+
+        <label for="f-ChannelName">Channel Name</label>
+
+        <input type="text" id="f-socialChannel-Name" name="f-socialChannel-Name" value="<%= ChannelName %>"/>
+
+      </div>
+
+      <div id="channelImg-dv" class="col-5 form-section">
+
+        <div class="channelLogoDiv label form-section">Channel Logo</div>
+
+        <button type="button" id="btn-logo" name="logobutton"  class="icon icon-btn icon-image btn-file icon-2x socialBtn">
+
+        </button> 
+
+       <img id="edit-Img" class="icon icon-2x mediaIcon" <% if(id) { %> src="<%= imgUrl %>" <% } %> src="<%= imgUrl %>"  style="max-height:60%; max-width:60%; border-radius:10px;">
+
+      </div>
+   </div>
+    </div>
+
+</div>
+
+ <div class="row y-space-s">
+    <div class="col-9 form-section">
+        <label for="f-ChannelLink">Social Media Channel Link</label>
+          <input type="text" id="f-ChannelLink" name="f-ChannelLink" value="<%= SocialPageLink %>">
+      </div>
+    </div>
+
+ </form>
+
+</div>

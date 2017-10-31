@@ -1,0 +1,16 @@
+<div class="grid-item hover-tip-overlay clickable<%= active ? ' active' : '' %><%= global ? ' global' : ' custom' %> <%= type !== 'image' ? type : '' %>">
+	<div class="hover-tip">
+		<div class="row row-spaced center-align"><%= fileName %></div>
+		<div class="row row-spaced center-align"><%= dimensions %></div>
+	</div>
+	<div class="img-grid-inner">
+		<% if (type.indexOf('image') > -1) { %>
+			<img id="img_<%= id %>" class="fit-container" src="<%= url %>" alt="<%= name %>"/>
+			<% if( global ) { %><i title="This is a global image so it cannot be modified." class="icon icon-tool-tip icon-tool-tip-federated federated-bottom-right"></i><% } %>
+		<% } else { %>
+			<div class="grid-label"><%= name %></div>
+		<% } %>
+		
+	</div>
+	<div class="img-modal-name" id="img_name_<%= id %>"><%= title %></div>
+</div>

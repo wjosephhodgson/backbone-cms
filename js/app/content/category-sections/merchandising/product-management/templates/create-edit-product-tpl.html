@@ -1,0 +1,617 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="section-title clearfix">
+			<h2 class="pull-left"><%= id ? 'Edit ' : 'Create ' %>Product</h2>
+			<div class="btn-panel">
+					<!-- Start of button  - confirmation modal -->
+		<% if(type === "Teleflora") { %>
+				<button type="button" id="reset-btn" class="btn btn-submit">Reset</button>
+		<% } %>	
+		<!-- end of Button - confirmation modal -->
+				<button id="cancel-btn" type="button" class="btn btn-other">Cancel</button>
+				<button id="save-btn" type="button" class="btn btn-submit"><% if(!id) { %><i class="icon icon-add"></i><% } %>Save</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row row-spaced">
+	<div class="col-12">
+		Here you can <%= id ? 'edit ' : 'create ' %> products for your site. This page will allow you to change all of the details for each individual product.
+	</div>
+</div>
+
+<div class="row row-spaced panel form-section">
+	<div class="row">
+
+		<div class="col-12">
+			<div class="panel-title">Product Details <div class="panel-subtitle"><%= type %> Product  |  ID <%= id %></div></div>
+		</div>
+	</div>
+	<div class="row y-space-top-m">
+		<div class="col-4 form-section">
+			<label for="f-name">Name</label><i class="icon icon-tool-tip x-space-s" title="This is the name of the product that will be displayed across the website."></i>
+			<input  type="text" id="f-name" name="<%= type === "Teleflora" ? 'f-name-teleflora': 'f-name' %>" value="<%= name %>">
+			<div class="col-12 alert-panel panel hidden-field-tip">
+				<div class="row">
+					<div class="col-1">
+						<div class="icon icon-lg icon-warning"></div>
+					</div>
+					<div class="col-10 alert-text">
+						Be advised that changing the name of the product will also change the URL of that product page. This can negatively impact your website SEO.
+					</div>
+				</div>
+			</div>			
+		</div>
+		<div class="col-3 form-section">
+			<label for="f-number">Item Number</label><i class="icon icon-tool-tip x-space-s" title="This is the product price point number that can be used to reference or search for the product."></i>
+			<input type="text" id="f-number" name="f-number" value="<%= number %>" <% if(type === 'Teleflora') { %>disabled<% } %>>
+		</div>
+		<div class="col-3">
+			<label for="f-type2">Delivery Type</label>
+			<div class="select-container">
+			    <select id="f-type2" name="f-type2">
+			        <option selected disabled hidden value="<%= type2 %>"><%= type2 %></option>
+			        <option value="Hand Delivered">Hand Delivered</option>
+			        <% if(type !== 'Teleflora') { %><option value="Drop Shipped">Drop Shipped</option><% } %>
+			        <option value="Browse Only">Browse Only</option>
+			    </select>
+			</div>
+		</div>
+		<div class="col-2">
+			<div class="label">Active<i title="This toggles is the product is active or inactive. If it is active it will be shown on your site. If it is inactive it will be removed." class="icon icon-tool-tip x-space-s"></i></div>
+			<input <%= active ? 'checked' : '' %> type="checkbox" id="f-active" name="f-active" class="on-off-switch" />
+			<label for="f-active" class="on-off-switch-label">
+			    <div class="on-off-switch-state">on</div>
+			</label>
+		</div>
+	</div>
+	<div class="row row-spaced">
+		<% if(type !== 'Teleflora') { %>
+		<div class="col-4">
+			<label for="f-type3">Product Type</label>
+			<div class="select-container">
+			    <select id="f-type3" name="f-type3">
+			        <option selected disabled hidden value="<%= type3 %>"><%= type3 %></option>
+			        <option value="Basket Arrangement">Basket Arrangement</option>
+			        <option value="Boutonniere">Boutonniere</option>
+			        <option value="Container Arrangement">Container Arrangement</option>
+			        <option value="Corsage">Corsage</option>
+			        <option value="Gift Basket">Gift Basket</option>
+			        <option value="Plant">Plant</option>
+			        <option value="Specialty Arrangement">Specialty Arrangement</option>
+			        <option value="Sympathy">Sympathy (set piece)</option>
+			        <option value="Vase Arrangement">Vase Arrangement</option>
+			        <option value="Wedding Bouquet Holder">Wedding Bouquet (hand-tied or holder)</option>
+			        <option value="Wedding Bouquet Wired">Wedding Bouquet (wired and taped)</option>
+			        <option value="Wreaths">Wreaths/Swags</option>
+			        <option value="Other">Other</option>
+			    </select>
+			</div>
+		</div>
+		<% } %>
+	</div>
+	<% if (type2 === "Drop Shipped") { %>
+		<div class="row row-spaced">
+	    <div class="col-12">
+	      <div class="panel-title">
+	        Drop Shipping Methods
+	      </div>
+	    </div>
+	  </div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				<table class="table alternate">
+					<thead>
+						<th>Drop Shipping Method</th>
+						<th>Default Fee</th>
+						<th>Override Fee</th>
+						<th>Status</th>
+					</thead>
+					<tbody id="dropship-list"></tbody>
+	  		</table>
+			</div>
+		</div>
+	<% } %>
+
+
+</div>
+
+<div id="tabs">
+	<ul>
+		<li><a class="product-management-edit-tab" href="#product-info">Product Info & Image</a></li>
+		<li><a class="product-management-edit-tab" href="#addons">Add-Ons</a></li>
+		<li><a class="product-management-edit-tab" href="#categories">Categories</a></li>
+		<li><a class="product-management-edit-tab" href="#attributes">Attributes</a></li>
+		<li><a class="product-management-edit-tab" href="#related-products">Related Products</a></li>
+		<li><a class="product-management-edit-tab" href="#settings">Settings</a></li>
+		<% if(type == 'Teleflora') { %><li><a class="product-management-edit-tab" href="#product-recipe">Recipe</a></li><% } %>
+	</ul>
+
+    <div id="product-info">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Price Points</div>
+					<% if(type !== 'Teleflora') { %>
+						<button id="add-sku-btn" type="button" class="btn btn-submit pull-right"><i class="icon icon-add"></i>Add Price Point</button>
+					<% } %>
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced panel alert-panel hidden-alt" id="sku-alert">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-1">
+						<div class="icon icon-4x icon-warning"></div>
+					</div>
+					<div class="col-11 alert-text">
+						You are allowed a maximum of 12 Price Points per product
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="sku-list"></div>
+
+		<div class="panel">
+			<div class="row row-spaced">
+				<div class="col-12">
+					<div class="panel-title clearfix">Product Information</div>
+				</div>
+			</div> 
+
+			<% if(type2 !== 'Browse Only') { %>
+				<div class="row ">
+					<div class="col-12 form-section">
+						<label for="f-description">Product Description</label><i title="This is a block of text that will be shown on the product detail page for this product." class="icon icon-tool-tip x-space-s"></i>
+						<textarea  name="f-description" id="f-description" class="size-3"><%= description %></textarea>
+				  	</div>
+				</div>
+
+		    <% } %>
+
+			<div class="row">
+			  	<div class="col-12">
+				  	<div class="form-section">
+						<label for="f-additionalInfo">Additional Product Info</label><i title="This is a smaller text area that is shown underneath the Product Description." class="icon icon-tool-tip x-space-s"></i>
+						<textarea  name="f-additionalInfo" id="f-additionalInfo" class="size-2"><%= additionalInfo %></textarea>
+						<div class="row"><div class="col-12">Please include the full HTML (such as &lt;meta&gt;) in the Additional Tags field.</div></div>
+				  	</div>
+			  	</div>
+			</div>
+		</div>
+
+			<div class="row row-spaced hidden-alt" id="applyToAllSkus">
+				<div class="col-12 form-section">
+				    <div class="label">Show Descriptions of All Price Points<i title="If this is turned ON, you can specify the description fields for each price point of this product. If it is OFF, the descriptions above will apply to all price points." class="icon icon-tool-tip x-space-s"></i></div>
+				    <input type="checkbox" id="f-productDescriptionVariants" name="f-productDescriptionVariants" class="on-off-switch" />						    
+				    <label for="f-productDescriptionVariants" class="on-off-switch-label">
+				        <div class="on-off-switch-state">on</div>
+				    </label>
+				</div>
+		    </div>
+
+			<div class="row form-section additionalProductInfo hidden-alt">
+				
+				<div class="col-12">
+					<div id="sku-product-description-list"></div>
+				</div>
+			</div>
+
+				<!-- <div class="row">
+				</div> -->
+<!-- 
+			</div> -->
+
+	  <div id="additional-information" class="row row-spaced clearfix">
+	    <div class="col-12">
+	    	<div class="panel-title"><i class="icon icon-closed x-space-s"></i>Additional Information (optional)</div>
+	    </div>
+	  </div>
+
+	  <div class="accordion">
+
+	  	<% if((type2 !== 'Browse Only')) { %>
+	  		<div class="panel row row-spaced hideSection">
+		  		<div class="row">
+		  			<div class="col-12">
+						<div class="panel-title">Discount Price <i title="This is the discount price of the product." class="icon icon-tool-tip x-space-s"></i></div>
+					</div>
+			  	</div>
+			  	<div class="row form-section y-space-top-m">
+			  		<div class="col-12">
+			  			<div class="row form-section col-12">
+
+							  <div class="col-3 form-section">
+							    <label for="f-discountAmount">Discount Amount</label><i class="icon icon-tool-tip x-space-s" title="This is how much you would like to discount the product."></i>
+							    <div class="dollar-container">
+							    <input type="text" id="f-discountAmount" name="f-discountAmount" value="<%= discountAmount %>">
+							  	</div>
+							  </div>
+
+							  <div class="col-3 form-section">
+							    <label for="f-discountStartDate">Start Date</label><i title="The discount will be offered starting on this date." class="icon icon-tool-tip x-space-s"></i>
+							    <div class="date-container">
+							        <input  type="text" id="f-discountStartDate" name="f-discountStartDate" class="date" value="<%= discountStartDate %>">
+							    </div>
+							  </div>
+
+							  <div class="col-3 form-section">
+							    <label for="f-discountEndDate">End Date</label><i title="The discount will no longer be available on this date." class="icon icon-tool-tip x-space-s"></i>
+							    <div class="date-container">
+							        <input type="text" id="f-discountEndDate" name="f-discountEndDate" class="date" value="<%= discountEndDate %>">
+							    </div>
+							  </div>
+
+							  <div class="col-3">
+							    <div class="label">Show All Price Points<i title="This toggles if the discount will be applied to all variants of this product." class="icon icon-tool-tip x-space-s"></i></div>
+							    <input type="checkbox" id="f-discountVariantsActive" name="f-discountVariantsActive" class="on-off-switch" />
+							    <label for="f-discountVariantsActive" class="on-off-switch-label">
+							        <div class="on-off-switch-state">on</div>
+							    </label>
+							  </div>
+						</div>
+			  		</div>
+                <div class="row x-space-s">
+			  		<div id="sku-discount-list" class="col-12 <%= discountVariantsActive ? 'hidden-alt' : '' %>">
+
+
+			  		</div>
+			  	</div>
+
+			</div>
+		</div>
+		<% } %>
+
+
+
+		
+  		 <div class="panel row row-spaced">
+	  		<div class="row">
+	  			<div class="col-12">
+					 <div class="panel-title">SEO Information <i title="This area will allow you to edit the search engine optimization information for this product." class="icon icon-tool-tip x-space-s"></i></div>
+				</div>
+		  	</div>
+		  	<div class="row form-section y-space-top-m">
+		  		<div class="col-12">
+		  			<div class="row form-section col-12">
+						<div class="col-12 form-section">
+			  				<label for="f-meta-title">Page Title</label><i class="icon icon-tool-tip x-space-s" title="This is the text that appears in the page tab at the top of your browser window while looking at the product."></i>
+			  				<input type="text" id="f-meta-title" name="f-meta-title" value="<%= metaTitle %>">
+						</div>
+			  			<div class="col-6 form-section">
+			  				<label for="f-meta-desc">Meta Description</label><i class="icon icon-tool-tip x-space-s" title="This is the text that appears on search engines and should consist of a short simple paragraph describing the product."></i>
+			  				<textarea name="f-meta-desc" id="f-meta-desc" class="size-2"><%= metaDescription %></textarea>
+			  			</div>
+			  			<div class="col-6 form-section">
+			  				<label for="f-meta-keywords">Keywords</label><i class="icon icon-tool-tip x-space-s" title="Here you can list a few comma separated keywords that describe your product."></i>
+			  				<textarea id="f-meta-keywords" name="f-meta-keywords" class="size-2"><%= metaKeywords %></textarea>
+			  			</div>
+			  			<div class="col-12 form-section">
+			  				<label for="f-meta-tags">Additional Tags</label><i class="icon icon-tool-tip x-space-s" title="Here you can add any additional meta tags you need for tracking or other purposes. This area is optional."></i>
+			  				<textarea name="f-meta-tags" id="f-meta-tags" class="size-3"><%= metaTags %></textarea>
+			  				<div class="row"><div class="col-12">Please include the full HTML (such as &lt;meta&gt;) in the Additional Tags field.</div></div>
+			  			</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	  </div>
+
+  </div>
+  <!-- end product info -->
+
+  <!-- start add ons -->
+  <div id="addons">
+  	<div class="row row-spaced">
+  		<div class="col-12" id="addons-container">
+  		</div>
+  	</div>
+  </div>
+  <!-- end add ons -->
+
+  <!-- start categories -->
+  <div id="categories">
+  	<div class="row row-spaced">
+	    <div class="col-12">
+	      <div class="panel-title">
+	        Product Categories
+	      </div>
+	    </div>
+	  </div>
+	  <div class="row row-spaced">
+	  	<div id="main-categories-container" class="col-12">
+
+	  	</div>
+	  </div>
+	  <div class="row row-spaced form-section">
+	  	<div class="col-12">
+	  		<div class="label">Show All Price Points<i title="This will toggle applying the option to all variants of this particular product." class="icon icon-tool-tip x-space-s"></i></div>
+	  		<input type="checkbox" id="f-categoriesVariantsActive" name="f-categoriesVariantsActive" class="on-off-switch" />
+	  		<label for="f-categoriesVariantsActive" class="on-off-switch-label">
+	  		    <div class="on-off-switch-state">on</div>
+	  		</label>
+	  	</div>
+	  </div>
+
+	  <div class="<%= categoriesVariantsActive ? 'hidden-alt' : '' %>" id="sku-categories-container"></div>
+  </div>
+  <!-- end categories -->
+
+  <!-- start attributes -->
+  <div id="attributes">
+  	<div class="row row-spaced">
+	    <div class="col-12">
+	      <div class="panel-title">
+	        Product Attributes
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="row row-spaced panel form-section">
+	  	<div class="col-12">
+	  		<div class="row row-spaced">
+			  	<div class="col-6">
+			  		<label for="f-productClassification">Product Classification</label>
+			  		<div class="select-container">
+			  		    <select id="f-productClassification" name="f-productClassification">
+			  		        <option selected disabled hidden value="<%= productClassification %>"><%= productClassification %></option>
+			  		        <option value="Bouquet">Bouquet</option>
+			  		        <option value="Plant">Plant</option>
+			  		        <option value="Gift Basket">Gift Basket</option>
+			  		        <option value="Vase">Vase</option>
+			  		    </select>
+			  		</div>
+			  	</div>
+			  	<div class="col-6">
+			  		<label for="f-productOrientation">Product Orientation</label>
+			  		<div class="select-container">
+			  		    <select id="f-productOrientation" name="f-productOrientation"<% if(type === 'Teleflora') { %> disabled<% } %>>
+			  		        <option selected disabled hidden value="<%= productOrientation %>"><%= productOrientation %></option>
+			  		        <option value="One Sided">One Sided</option>
+			  		        <option value="All Around">All Around</option>
+			  		        <option value="N/A">N/A</option>
+			  		    </select>
+			  		</div>
+			  	</div>	
+		  	</div>
+		  	<% if(type !== 'Teleflora') { %>
+		  	<div class="row row-spaced">
+		  		<div class="col-3">
+			  		<div class="label">Keepsake</div>
+			  		<input type="checkbox" id="f-keepsake" name="f-keepsake" class="on-off-switch" />
+			  		<label for="f-keepsake" class="on-off-switch-label">
+			  		    <div class="on-off-switch-state">on</div>
+			  		</label>		  			
+		  		</div>
+		  		<div class="col-3 f-keepsake-field">
+					<div class="label">Keepsake Image<i title="This should be a square image, preferable 212px x 212px." class="icon icon-tool-tip x-space-s"></i></div>
+					<button type="button" id="f-keepsake-img" class="image-upload icon icon-btn icon-image btn-file icon-2x y-space-s"></button>
+		  		</div>
+		  		<div class="col-3 f-keepsake-field">
+					<div class="label">Keepsake Preview</div>
+					<div id="f-keepsake-preview"></div>
+		  		</div>
+		  	</div>
+		  	<div class="row row-spaced f-keepsake-field">
+				<div class="col-12 form-section">
+					<label for="f-keepsake-text">Keepsake Description</label>
+					<textarea name="f-keepsake-text" id="f-keepsake-text" class="size-3" aria-invalid="false"></textarea>
+			  	</div>		  		
+		  	</div>
+		  	<% } %>
+	  	</div>  	
+	  </div>
+
+	  <% if(type !== 'Teleflora') { %>
+	  <div class="row row-spaced">
+	    <div class="col-12">
+	      <div class="panel-title">
+	        Flowers in This Bouquet
+	      </div>
+	    </div>
+	  </div>  
+	  <div class="row row-spaced">
+	  	<div id="main-flower-container" class="col-12">
+	  	</div>
+	  </div>
+	  <% } %>
+
+	  <div class="row row-spaced">
+	    <div class="col-12">
+	      <div class="panel-title">
+	        Bouquet Style
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="row row-spaced">
+	  	<div id="bouquet-style-container" class="col-12">
+
+	  	</div>
+	  </div>
+
+	  <div class="row row-spaced">
+	    <div class="col-12">
+	      <div class="panel-title">
+	        Colors in This Bouquet
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="row row-spaced">
+	  	<div id="bouquet-color-container" class="col-12">
+
+	  	</div>
+	  </div>
+
+	  <div class="row row-spaced">
+	    <div class="col-12">
+	      <div class="panel-title">
+	        Size (Dimensions)
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="row row-spaced panel form-section">
+		  <div class="col-3 form-section">
+		    <label for="f-width"><%= skuLabel %> Width</label><i class="icon icon-tool-tip x-space-s" title="This is the approximate width of the product once it has been created."></i>
+		    <input type="text" id="f-width" name="f-width" value="<%= width %>">
+		  </div>
+		  <div class="col-3 form-section">
+		    <label for="f-height"><%= skuLabel %> Height</label><i class="icon icon-tool-tip x-space-s" title="This is the approximate height of the product once it has been created."></i>
+		    <input type="text" id="f-height" name="f-height" value="<%= height %>">
+		  </div>
+		
+
+		        <div class="row">
+			  		<div id="sku-size-dimension-list" class="col-12 <%= sizeDimensionVariantsActive ? 'hidden-alt' : '' %>">
+
+
+			  		</div>
+			  	</div>
+        </div>
+
+
+	  <div class="<%= attributesVariantsActive ? 'hidden-alt' : '' %>" id="sku-flowers-container"></div>
+  </div>
+  <!-- end attributes -->
+
+  <!-- start related products -->
+  <div id="related-products">
+  	<div class="row row-spaced">
+	    <div class="col-12">
+	      <div class="panel-title">
+	        Related Products
+	      </div>
+	    </div>
+	  </div>
+	  <div class="row row-spaced">
+	  	<div class="col-12">
+	  		Select up to 5 products to show in the "You May Also Like" section at the bottom of the product page.
+	  	</div>
+	  </div>
+
+	  <div id="related-products-container"></div>
+  </div>
+  <!-- end related products -->
+
+  <!-- start settings -->
+  <div id="settings">
+<% if(type2 === 'Hand Delivered') { %>
+  	<div class="row row-spaced">
+	    <div class="col-12">
+	      <div class="panel-title">
+	        Delivery
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="row row-spaced form-section">
+	  	<div class="col-4">
+	  		<div class="label">Local Delivery Only<i title="This toggles if the product is available only in your area, or if anyone can purchase it." class="icon icon-tool-tip x-space-s"></i></div>
+	  		<input <%= localDeliveryActive ? 'checked' : '' %> type="checkbox" id="f-localDeliveryActive" name="f-localDeliveryActive" class="on-off-switch" />
+	  		<label for="f-localDeliveryActive" class="on-off-switch-label">
+	  		    <div class="on-off-switch-state">on</div>
+	  		</label>
+	  	</div>
+	  	<div class="col-4">
+	  		<div class="label">No Same-Day Delivery<i title="This toggles if this product is available for same day delivery or not." class="icon icon-tool-tip x-space-s"></i></div>
+	  		<input <%= noSameDayDeliveryActive ? 'checked' : '' %> type="checkbox" id="f-noSameDayDeliveryActive" name="f-noSameDayDeliveryActive" class="on-off-switch" />
+	  		<label for="f-noSameDayDeliveryActive" class="on-off-switch-label">
+	  		    <div class="on-off-switch-state">on</div>
+	  		</label>
+	  	</div>
+	  	<div class="col-4">
+	  		<div class="label">In-Store pickup only<i title="This toggles if this product is only available for in-store pickup or if it is deliverable." class="icon icon-tool-tip x-space-s"></i></div>
+	  		<input <%= inStorePickupActive ? 'checked' : '' %> type="checkbox" id="f-inStorePickupActive" name="f-inStorePickupActive" class="on-off-switch" />
+	  		<label for="f-inStorePickupActive" class="on-off-switch-label">
+	  		    <div class="on-off-switch-state">on</div>
+	  		</label>
+	  	</div>
+  	</div>
+ <% } %>
+
+		<% if(type2 !== 'Browse Only') { %>
+	  <div class="row row-spaced">
+	    <div class="col-12">
+	      <div class="panel-title">
+	        <%= type2 === 'Drop Shipped' ? 'Product Settings' : 'Others' %>
+	      </div>
+	    </div>
+	  </div>
+		<% } %>
+
+  	<div class="row row-spaced form-section">
+  		<% if(type2 !== 'Browse Only') { %>
+  		<div class="col-4">
+  			<div class="label">Tax Free<i title="If this is turned ON, the price of this product will not be included when calculating sales tax at the end of an order." class="icon icon-tool-tip x-space-s"></i></div>
+  			<input <%= taxFreeActive ? 'checked' : '' %> type="checkbox" id="f-taxFreeActive" name="f-taxFreeActive" class="on-off-switch" />
+  			<label for="f-taxFreeActive" class="on-off-switch-label">
+  			    <div class="on-off-switch-state">on</div>
+  			</label>
+  		</div>
+  		<% } %>
+
+	  	<div class="col-4">
+	  		<label for="f-merchandisingHighlight">Merchandising Icon</label>
+	  		<div class="select-container">
+			    <select id="f-merchandisingHighlight" name="f-merchandisingHighlight">
+		        <option selected disabled hidden value="<%= merchandisingHighlight %>"><%= merchandisingHighlight %></option>
+		        <option value="Sold Out">Sold Out</option>
+		        <option value="Hot">Hot</option>
+		        <option value="Best Seller">Best Seller</option>
+		        <option value="Promo">Promo</option>
+			    </select>
+	  		</div>
+	  	</div>
+  	</div>
+  </div>
+  <!-- end settings -->
+<div>
+  <!-- start recipe -->
+  <% if(type == 'Teleflora') { %>
+  <div id="product-recipe">
+  	<div class="row row-spaced">
+	    <div class="col-12">
+	      <div class="panel-title clearfix">
+	      	<div class="y-space-top-m pull-left">Product Recipe</div>
+	        <button id="print-recipe-btn" type="button" class="btn btn-submit pull-right"><i class="icon icon-print"></i>Print Recipe</button>
+	      </div>
+	    </div> 
+	  </div>
+  	<div class="row row-spaced form-section">
+  		<div class="col-12">
+  			  <textarea name="f-recipe" id="f-recipe" class="size-4" disabled><%= recipe %></textarea>
+  		</div>
+  	</div>
+  </div> 
+  <% } %>
+  <!-- end recipe -->
+  		    <div id="print-recipe-modal"></div>
+
+  </div>
+</div>

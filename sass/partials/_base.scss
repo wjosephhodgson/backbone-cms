@@ -1,0 +1,33 @@
+* {
+    &, &:before, &:after {
+	   @include box-sizing(border-box);
+    }
+}
+
+html {
+	height: 100%;
+}
+
+body {
+    font-family: $main-font;
+    font-size: $base-font-size;
+    color: $color-font-1;
+    min-height: 100%;
+    position: relative;
+    padding-bottom: $footer-height + $space-s;
+    overflow-y: scroll;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+
+// Get rid of stupid input number thing
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}

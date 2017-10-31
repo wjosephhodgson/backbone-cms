@@ -1,0 +1,147 @@
+html {
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  overflow-scrolling: touch;
+}
+
+html.no-scroll {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  overflow-scrolling: auto;
+  width: 100%;
+  height: 100%;
+}
+html.no-scroll body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  min-height: 50em;
+  min-width: 320px;
+  width: 100%;
+}
+
+.touch a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+html.oldie {
+  width: 960px;
+  display: block;
+  margin: 0 auto;
+  border-right: 0;
+}
+html.oldie .m-navbar-offcanvas-divider {
+  display: none;
+}
+
+.oldie #navTrigger {
+  display: none;
+}
+
+.m-bookmarks-bar {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: -28.7em;
+  margin-right: 0%;
+  z-index: 999;
+  -webkit-transition: bottom 0.25s;
+  -moz-transition: bottom 0.25s;
+  -ms-transition: bottom 0.25s;
+  -o-transition: bottom 0.25s;
+  transition: bottom 0.25s;
+}
+.m-bookmarks-bar .m-product-mini {
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: bottom 0.25s;
+  -moz-transition: bottom 0.25s;
+  -ms-transition: bottom 0.25s;
+  -o-transition: bottom 0.25s;
+  transition: bottom 0.25s;
+}
+@media screen and (min-width: 961px) {
+  .m-bookmarks-bar {
+    bottom: -28.5em;
+  }
+}
+
+.m-bookmarks-bar-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5em;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  background-color: whitesmoke;
+}
+
+#booksCaro {
+  width: 85%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 961px) {
+  #booksCaro {
+    width: 92%;
+  }
+}
+#booksCaro .flex-direction-nav .flex-prev {
+  left: -3em !important;
+  top: 12em;
+}
+#booksCaro .flex-direction-nav .flex-next {
+  right: -3em !important;
+  top: 12em;
+  text-align: left;
+}
+#booksCaro .flex-direction-nav a {
+  position: absolute !important;
+}
+#booksCaro .flex-control-paging {
+  bottom: -1em;
+}
+
+#bookmarksContent {
+  padding-top: 3.5em;
+  height: 28.5em;
+  background-color: white;
+}
+
+.is-bookmarks-ready .m-bookmarks-bar {
+  bottom: -25.7em;
+}
+
+.is-bookmarks-expanded .m-bookmarks-bar {
+  bottom: 0;
+}
+
+.is-bookmark-removed.m-product-mini {
+  bottom: -28.5em;
+}
+
+.is-bookmark-added.m-product-mini {
+  bottom: -28.5em;
+}
+
+#bookmarksBar .m-product-mini p {
+  display: none;
+}

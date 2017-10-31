@@ -1,0 +1,19 @@
+.tooltip-change{
+	display:none;
+	width:225px;
+	z-index:4;
+	
+	&.ui-tooltip{
+
+	}
+	&.tooltip-invalid{
+		background-color: $color-accent-error-light;
+	}
+	&.tooltip-save{
+		background-color: $color-accent-5;
+		width:210px;
+	}
+	&.tooltip-nosave{
+		width:240px;
+	}		
+}

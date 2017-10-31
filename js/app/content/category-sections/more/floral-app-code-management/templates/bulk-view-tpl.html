@@ -1,0 +1,76 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="section-title clearfix">
+			<h2 class="pull-left">Bulk Upload Codes</h2>
+			<div class="btn-panel">
+				<button type="button" id="save-btn" class="btn btn-submit pull-right">Save</button>
+		        <button type="button" id="cancel-btn"class="btn btn-other">Cancel</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row row-spaced form-section">
+	<div class="col-6">
+		<div class="row row-spaced panel codeHeightMin">
+			<div class="col-12">
+				<div class="panel-title">
+					Download Sample Data
+				</div>
+			</div>
+			<div class="col-12 y-space-top-s">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum officiis perspiciatis dolor impedit dolore temporibus mollitia maxime.
+			</div>
+			<div class="col-12 y-space-top-s">
+				<button type="button" class="btn btn-submit">DOWNLOAD</button>	
+			</div>
+		</div>
+	</div>
+	<div class="col-6">
+		<div class="row row-spaced panel codeHeightMin">
+			<div class="col-12">
+				<div class="panel-title">
+					Upload Selected Files
+				</div>
+			</div>
+			<div class="col-12 y-space-top-s">
+				For users with high volume code additions, upload a CSV file for bulk import. Column headings in the CSV file must be exactly the same as in the sample file.
+			</div>
+
+			<!-- Showing file path when selected -->
+			<div class="col-12  panel alert-panel hidden" id="modal-alert">
+				<div class="row">
+					<div class="col-1">
+						<div class="icon icon-3x icon-warning"></div>
+					</div>
+					<div class="col-11 alert-text">
+						You must select a CSV file to upload.
+					</div>
+				</div>
+			</div>		
+			<div class="col-12 y-space-top-s">
+				<button type="button" id="uploadimage" class="btn btn-other btn-file hidebutton">
+		    		<input type="file" id="file-btn">Browse</button>	
+		    	<input type='text' class="hidden pathName" value="<%= pathName %>">	
+			</div>
+		</div>
+	</div>	
+</div>

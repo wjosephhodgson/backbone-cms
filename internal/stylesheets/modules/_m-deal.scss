@@ -1,0 +1,116 @@
+.m-deal-header-bg-container {
+  height: 260px;
+}
+
+.m-deal-header-bg {
+  background-image: url('../images/deal/dod_header.jpg');
+  position: absolute;
+  width: 1400px;
+  height: 260px;
+  z-index: -1;
+  margin-left: -700px;
+  left: 50%;
+}
+
+.m-deal-header-banner {
+  text-indent: -9999px;
+  background-image: url('../images/deal/title_ribbon.png');
+  height: 57px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.m-deal-header-text {
+  width: 90%;
+  margin: 1em auto 1.6em;
+  text-align: center;
+  font-size: 1.307692308em;
+  line-height: 1.2;
+
+  @include desktop() {
+    width: 520px;
+    font-size: 1.615384615em;
+  }
+}
+
+.m-deal {
+  label, .m-pdp-form-extra-container {
+    text-align: left;
+  }
+
+  .m-social-container {
+    text-align: center;
+  }
+
+  .m-pdp-form {
+    width: 100%;
+    margin: 0 auto;
+
+    @include desktop() {
+      width: 50%;
+    }
+  }
+
+  .m-pdp-form-radios-container {
+    @include mobile {
+      padding-top: 1.5em;
+
+      .m-pdp-custom-radio {
+        width: 18%;
+        margin-right: 2%;
+
+        .custom-radio-label {
+          padding-left: 2.0em;
+        }
+
+        label {
+          margin: 0.25em 0 0 0;
+        }
+      }
+    }
+  }
+
+  .m-deal-zip-section {
+    @include desktop() {
+      text-align: left;
+    }
+  }
+
+  .btn-submit {
+    @include mobile() {
+      margin-bottom: 1.6em;
+    }
+  }
+}
+
+.m-deal-price-select-wrapper {
+  .m-pdp-custom-radio {
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  @include mobile {
+    width: 100%;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+    .m-pdp-custom-radio {
+      display: inline;
+    }
+  }
+}
+
+$breakpoint-tablet: 670px;
+
+@media all and (max-width:$breakpoint-tablet) {
+  .m-pdp-form-zip, .m-pdp-form-date, .m-deal-occasion, .m-deal-recipient {
+    width: 98% !important;
+  }
+
+  .m-pdp-form-date {
+    margin-bottom: 0;
+  }
+}

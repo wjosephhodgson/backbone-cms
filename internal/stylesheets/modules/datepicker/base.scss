@@ -1,0 +1,91 @@
+@import "../../settings";
+@import "../../universal";
+
+/* ==========================================================================
+   $BASE-PICKER
+   ========================================================================== */
+
+/**
+* The picker input element.
+*/
+.picker__input {
+  cursor: default;
+
+  /**
+  * When the picker is opened, the input element is “activated”.
+  */
+  .picker__input.picker__input--active {
+    border-color: $black;
+  }
+}
+
+/**
+ * Note: the root picker element should __NOT__ be styled
+ * more than what’s here. Style the `.picker__holder` instead.
+ */
+.picker {
+  text-align: left;
+  color: $black;
+  position: absolute;
+  z-index: 9;
+  width: 100%;
+
+  /**
+   * The holder is the only “scrollable” top-level container element.
+   * The holder is the base of the picker.
+   */
+  .picker__holder {
+    width: 100%;
+    overflow-y: auto;
+    bottom: 1em;
+
+    -webkit-overflow-scrolling: touch;
+
+    position: absolute;
+    background: $white;
+    border: 1px solid #aaaaaa;
+
+    min-width: 190px;
+    /* max-width: 320px; */
+    max-height: 0;
+
+    @include opacity(0);
+
+    -webkit-transform: translateY(-1em) perspective(600px) rotateX(10deg);
+    -moz-transform: translateY(-1em) perspective(600px) rotateX(10deg);
+    transform: translateY(-1em) perspective(600px) rotateX(10deg);
+
+    -webkit-transition: all 0.15s ease-out, max-height 0 0.15s;
+    -moz-transition: all 0.15s ease-out, max-height 0 0.15s;
+    transition: all 0.15s ease-out, max-height 0 0.15s;
+  }
+}
+
+/**
+ * When the picker opens...
+ */
+.picker--opened .picker__holder {
+  max-height: 30em;
+
+  @include opacity(100);
+
+  -webkit-transform: translateY(0) perspective(600px) rotateX(0);
+  -moz-transform: translateY(0) perspective(600px) rotateX(0);
+  transform: translateY(0) perspective(600px) rotateX(0);
+
+  -webkit-transition: all 0.15s ease-out, max-height 0;
+  -moz-transition: all 0.15s ease-out, max-height 0;
+  transition: all 0.15s ease-out, max-height 0;
+}
+
+.is-tablet-expanded {
+  #deliveryDateQuickShop + .picker {
+    z-index: 99;
+
+    .picker__holder {
+      bottom: -10em;
+    }
+  }
+}
+
+@import "date";

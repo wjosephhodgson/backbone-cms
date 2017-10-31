@@ -1,0 +1,19 @@
+.m-ask-expert-container {
+  border: 1px dotted $dark-grey;
+  background-color: $grey;
+  margin-left: 1em;
+  padding-top: 0.4em;
+  padding-left: 1em;
+  width: 235px;
+  z-index: 99;
+
+  position: fixed;
+  bottom: 0px;
+  left: auto;
+
+  display: none;
+  a{
+    font-size: 15px;
+    font-family: $sans-stack;
+  }
+}

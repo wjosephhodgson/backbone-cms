@@ -1,0 +1,1046 @@
+ <form id="shop-information-first-site-setup" name="shop-information-first-site-setup">
+    <div class="row row-spaced">
+      <div class="col-12">
+        <div class="section-title">
+          <h2 class="pull-left">First Time Site Setup</h2>
+             <div class="btn-panel">
+                <a href="lookup/"><button type="button" id="cancel-btn" class="btn btn-other">Cancel</a></button>
+                <button type="button" id="create-site-btn" class="btn btn-submit">Create Site</button>
+                <div role="tooltip" data-parent="create-site-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hidden Alert Message -->
+
+    <div class="row panel alert-panel y-space-bottom-xxl">
+      <div class="col-12 y-space-s">
+        <div class="row">
+          <div class="col-1">
+            <div class="icon icon-3x icon-warning"></div>
+          </div>
+          <div class="col-11 alert-text">
+                         This is a generic placeholder for error messages in eSAT. <br>
+                         In the live app, this will be a real message and will be hidden by default.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hidden Alert Message -->
+
+    <div id="tabs">
+      <ul>
+        <li class="right-pad-tabs"><a class="first-time-setup-edit-tab" href="#shop-Information">Shop Information</a></li>
+        <li class="right-pad-tabs"><a class="first-time-setup-edit-tab" href="#payment-and-Checkout">Payment & Checkout</a></li>
+        <li class="right-pad-tabs"><a class="first-time-setup-edit-tab" href="#siteDesign">Site Design</a></li>
+      </ul>
+
+
+    <div id="shop-Information">
+         <div class="row row-spaced panel">
+
+              <div class="row">
+                  <div class="col-12">
+                      <div class="panel-title">
+                          Shop Information
+                      </div>
+                  </div>
+              </div>
+
+              <div class="row row-spaced">
+                  <div class="col-6 form-section">
+                      <label for="teleflora-id">Teleflora ID</label><i class="icon icon-tool-tip x-space-s" title="This ID number is unique to this shop. Do not change this without direct instruction from the supervisor."></i>
+                      <input type="text" id="teleflora-id" name="teleflora-id" value="<%= TelefloraID %>">
+                  </div>
+                  <div class="col-6 form-section">
+                      <label for="f-shop-info-url">URL</label><i class="icon icon-tool-tip x-space-s" title="This is the domain name that will direct to the website. Do not change this without a request from the shop. Check with the supervisor if unsure."></i>
+                      <input type="text" id="f-shop-info-url" name="f-shop-info-url" value="<%= URL %>">
+                  </div>
+              </div>
+
+              <div class="row row-spaced">
+                  <div class="col-6 form-section">
+                      <label for="shop-name">Shop Name</label>
+                      <input type="text" id="shop-name" name="shop-name" value="<%= ShopName %>">
+                  </div>
+
+                  <div class="col-6 form-section">
+                      <div class="col-10 noPaddingLeft">
+                        <label for="f-site-parent">Site Parent</label>
+                        <input type="text" id="f-site-parent" name="f-site-parent" value="<%= SiteParent %>" disabled>
+                      </div>
+                      <div class="col-2 buttonwithoutlabel">
+                        <button type="button" id="edit-parent-btn" class="icon icon-edit icon-btn icon-2x"></button>
+                      </div>
+                  </div>
+              </div>
+
+          <div class="row row-spaced">
+              <div class="col-6 form-section">
+                  <label for="address-1">Address 1</label>
+                  <input type="text" id="address-1" name="address-1" value="<%= address1 %>">
+              </div>
+              <div class="col-6 form-section">
+                  <label for="address-2">Address 2</label>
+                  <input type="text" id="address-2" name="address-2" value="<%= address2 %>">
+              </div>
+          </div>
+
+          <div class="row row-spaced">
+              <div class="col-6 form-section">
+                  <label for="city">City</label>
+                  <input type="text" id="city" name="city" value="<%= city %>">
+              </div>
+              <div class="col-3 form-section">
+                  <label id="stateProvinceLabel" for="state"><%= country === "United States" ? "State" : "Province" %></label>
+                  <div class="select-container">
+                      <select id="state" name="state">
+                          <option selected disabled hidden value="<%= state %>"><%= state %></option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="AL">
+                              Alabama
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="AK">
+                              Alaska
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="AZ">
+                              Arizona
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="AR">
+                              Arkansas
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="CA">
+                              California
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="CO">
+                              Colorado
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="CT">
+                              Connecticut
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="DE">
+                              Delaware
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="DC">
+                              District of Columbia
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="FL">
+                              Florida
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="GA">
+                              Georgia
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="HI">
+                              Hawaii
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="ID">
+                              Idaho
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="IL">
+                              Illinois
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="IN">
+                              Indiana
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="IA">
+                              Iowa
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="KS">
+                              Kansas
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="KY">
+                              Kentucky
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="LA">
+                              Louisiana
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="ME">
+                              Maine
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="MD">
+                              Maryland
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="MA">
+                              Massachusetts
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="MI">
+                              Michigan
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="MN">
+                              Minnesota
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="MS">
+                              Mississippi
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="MO">
+                              Missouri
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="MT">
+                              Montana
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="NE">
+                              Nebraska
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="NV">
+                              Nevada
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="NH">
+                              New Hampshire
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="NJ">
+                              New Jersey
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="NM">
+                              New Mexico
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="NY">
+                              New York
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="NC">
+                              North Carolina
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="ND">
+                              North Dakota
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="OH">
+                              Ohio
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="OK">
+                              Oklahoma
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="OR">
+                              Oregon
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="PA">
+                              Pennsylvania
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="PR">
+                              Puerto Rico
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="RI">
+                              Rhode Island
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="SC">
+                              South Carolina
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="SD">
+                              South Dakota
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="TN">
+                              Tennessee
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="TX">
+                              Texas
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="UT">
+                              Utah
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="VT">
+                              Vermont
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="VA">
+                              Virginia
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="WA">
+                              Washington
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="WV">
+                              West Virginia
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="WI">
+                              Wisconsin
+                          </option>
+
+                          <option class="state" <%= country === "United States" ? "" : "hidden" %> value="WY">
+                              Wyoming
+                          </option>
+
+                          <option class="province" <%= country === "United States" ? "hidden" : "" %> value="AB">
+                              Alberta
+                          </option>
+
+                          <option class="province" <%= country === "United States" ? "hidden" : "" %> value="BC">
+                              British Columbia
+                          </option>
+
+                          <option class="province" <%= country === "United States" ? "hidden" : "" %> value="MB">
+                              Manitoba
+                          </option>
+
+                          <option class="province" <%= country === "United States" ? "hidden" : "" %> value="NB">
+                              New Brunswick
+                          </option>
+
+                          <option class="province" <%= country === "United States" ? "hidden" : "" %> value="NF">
+                              Newfoundland and Labrador
+                          </option>
+
+                          <option class="province" <%= country === "United States" ? "hidden" : "" %> value="NT">
+                              Northwest Territories
+                          </option>
+
+                          <option class="province" <%= country === "United States" ? "hidden" : "" %> value="NS">
+                              Nova Scotia
+                          </option>
+
+                          <option class="province" <%= country === "United States" ? "hidden" : "" %> value="NU">
+                              Nunavut
+                          </option>
+
+                          <option class="province" <%= country === "United States" ? "hidden" : "" %> value="ON">
+                              Ontario
+                          </option>
+
+                          <option class="province" <%= country === "United States" ? "hidden" : "" %> value="PE">
+                              Prince Edward Island
+                          </option>
+
+                          <option class="province" <%= country === "United States" ? "hidden" : "" %> value="QC">
+                              Quebec
+                          </option>
+
+                          <option class="province" <%= country === "United States" ? "hidden" : "" %> value="SK">
+                              Saskatchewan
+                          </option>
+
+                          <option class="province" <%= country === "United States" ? "hidden" : "" %> value="YT">
+                              Yukon
+                          </option>
+                      </select>
+                  </div>
+              </div>
+              <div class="col-3 form-section">
+                  <label id="zipPostalLabel" for="zip"><%= country === "United States" ? "Zip Code" : "Postal Code" %></label>
+                  <input class="<%= country === "United States" ? "zipUS" : "zipCA" %>" type="text" id="zip" name="zip" value="<%= zip %>">
+              </div>
+          </div>
+
+          <div class="row row-spaced">
+              <div class="col-6 form-section">
+                  <label for="country">Country</label>
+                  <div class="select-container">
+                      <select id="country" name="country">
+                          <option selected disabled hidden value="<%= country %>"><%= country %></option>
+
+                          <option value="United States">United States</option>
+                          <option value="Canada">Canada</option>
+                      </select>
+                  </div>
+              </div>
+              <div class="col-6 form-section">
+                  <label for="local-phone-number">Local Phone Number</label>
+                  <input type="tel" id="local-phone-number" name="local-phone-number" value="<%= localPhone %>">
+              </div>
+          </div>
+
+          <div class="row row-spaced">
+              <div class="col-6 form-section">
+                  <label for="alternate-phone-number">Toll Free/Alternate Phone Number</label>
+                  <input type="tel" id="alternate-phone-number" name="alternate-phone-number" value="<%= tollfreeAlternatePhone %>">
+              </div>
+              <div class="col-6 form-section">
+                  <label for="public-email">Public Email Address</label>
+                  <input type="email" id="public-email" name="public-email" value="<%= publicEmailAddress %>">
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="col-12">
+                  <div class="panel-title">
+                      Contact Information
+                  </div>
+              </div>
+          </div>
+
+          <div class="row row-spaced">
+              <div class="col-6 form-section">
+                  <label for="contact-name">Contact Name</label><i class="icon icon-tool-tip x-space-s" title="This is our point of contact at the shop."></i>
+                  <input type="text" id="contact-name" name="contact-name" value="<%= contactName %>">
+              </div>
+
+          </div>
+
+          <div class="row row-spaced">
+              <div class="col-6 form-section">
+                  <label for="contact-phone-number">Contact Phone Number</label><i class="icon icon-tool-tip x-space-s" title="This appears on the website as the contact phone number for the shop."></i>
+                  <input type="tel" id="contact-phone-number" name="contact-phone-number" value="<%= contactPhone %>">
+              </div>
+
+              <div class="col-6 form-section">
+                  <label for="contact-alternate-phone-number">Alternate Phone Number</label><i class="icon icon-tool-tip x-space-s" title="This will show up on the site along with the contact phone number."></i>
+                  <input type="tel" id="contact-alternate-phone-number" name="contact-alternate-phone-number" value="<%= contactAlternatePhoneNumber %>">
+              </div>
+          </div>
+
+          <div class="row row-spaced">
+              <div class="col-6 form-section">
+                  <label for="contact-email">Contact Email Address</label><i class="icon icon-tool-tip x-space-s" title="This will show up on the site with the contact information on the about us page."></i>
+                  <input type="email" id="contact-email" name="contact-email" value="<%= contactEmail %>">
+              </div>
+              <div class="col-6 form-section">
+                  <label for="contact-fax-number">Contact Fax Number</label><i class="icon icon-tool-tip x-space-s" title="This will show up on the site with the contact information on the about us page."></i>
+                  <input type="tel" id="contact-fax-number" name="contact-fax-number" value="<%= contactFaxNumber %>">
+              </div>
+          </div>
+
+          </div>
+
+
+
+
+    </div>  <!-- Shopping Information Ends here-->
+
+
+    <div id="payment-and-Checkout">
+        <div class="row row-spaced panel">
+            <div class="row">
+                <div class="col-12">
+                    <div class="panel-title">
+                        Payment Types Accepted
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-spaced">
+              <div class="col-6 form-section y-space-bottom-m">
+                <label for="f-pos-system-parent">Point of Sale System</label>
+                <div class="select-container">
+                    <select id="f-pos-system-parent" name="f-pos-system-parent">
+                        <option selected disabled hidden value="<%= posSystem %>"><%= posSystem %></option>
+                        <option value="Daisy">Daisy</option>
+                        <option value="Eagle">Eagle</option>
+                        <option value="RTI">RTI</option>
+                        <option value="Dove POS">Dove POS</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+              </div>
+            </div>
+
+          <div class="row row-spaced form-section y-space-bottom-m">
+            <div class="col-3 form-section y-space-bottom-m">
+                <div class="label">Accepted Cards</div>
+                <button type="button" id="configure-accepted-cards-btn" class="btn btn-submit">Configure</button>
+            </div>
+
+            <div class="col-4 form-section">
+                <label for="credit-card-authorization">Credit Card Authorization</label><i class="icon icon-tool-tip x-space-s" title="Use this to set up their method of credit card processing."></i>
+                <div class="select-container">
+                    <select id="credit-card-authorization" name="credit-card-authorization">
+                        <option selected disabled hidden value="<%= creditCardAuthorization %>"><%= creditCardAuthorization %></option>
+                        <option value="Authorize and Capture">Authorize and Capture</option>
+                        <option value="CVV/AVS Only">CVV/AVS Only</option>
+                        <option value="No CC Processing">No CC Processing</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-4 form-section">
+                <div class="label">Security Code Required<i class="icon icon-tool-tip x-space-s" title="Leave this turned on if the florist would like the CVV code to be required."></i></div>
+                <input <%= securityCodeActive ? 'checked' : '' %> type="checkbox" id="security-code-active" name="security-code-active" class="on-off-switch" />
+                <label for="security-code-active" class="on-off-switch-label">
+                    <div class="on-off-switch-state">on</div>
+                </label>
+            </div>
+          </div>
+
+
+             <!-- tax start -->
+        <div class="row">
+            <div class="col-12">
+                <div class="panel-title">Tax Rate</div>
+            </div>
+        </div>
+
+        <div class="row row-spaced">
+            <div class="col-8 form-section">
+                <div class="label">Use Automatic Tax Calculations<i class="icon icon-tool-tip x-space-s"></i></div>
+                <input <%= automaticTaxCalculationsActive ? 'checked' : '' %> type="checkbox" id="f-automatic-tax-calculations-active" name="f-automatic-tax-calculations-active" class="on-off-switch" />
+                <label for="f-automatic-tax-calculations-active" class="on-off-switch-label">
+                    <div class="on-off-switch-state">on</div>
+                </label>
+            </div>
+
+            <div class="col-4 form-section">
+                <label for="f-tax-rate">Tax Rate (%)</label>
+                <input <%= automaticTaxCalculationsActive ? 'disabled' : '' %> type="text" id="f-tax-rate" name="f-tax-rate" value="<%= taxRate %>">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 form-section">
+                <div class="panel-title">Tax Calculations</div>
+            </div>
+        </div>
+
+        <div class="row row-spaced">
+            <div class="col-4 form-section">
+                <div class="label">Tax on Delivery Fees<i class="icon icon-tool-tip x-space-s" title="Leave this turned on to charge tax on the delivery fee."></i></div>
+                <input <%= taxDeliveryFeeActive ? 'checked' : '' %> type="checkbox" id="tax-delivery-fee-active" name="tax-delivery-fee-active" class="on-off-switch" />
+                <label for="tax-delivery-fee-active" class="on-off-switch-label">
+                    <div class="on-off-switch-state">on</div>
+                </label>
+            </div>
+
+            <div class="col-4 form-section">
+                <div class="label">Tax Local Deliveries Only<i class="icon icon-tool-tip x-space-s" title="Leave this turned off to charge tax on all deliveries."></i></div>
+                <input <%= taxLocalOnlyActive ? 'checked' : '' %> type="checkbox" id="tax-local-only" name="tax-local-only" class="on-off-switch" />
+                <label for="tax-local-only" class="on-off-switch-label">
+                    <div class="on-off-switch-state">on</div>
+                </label>
+            </div>
+
+            <div class="col-4 form-section">
+                <label for="tax-calculation">Tax Calculation</label><i class="icon icon-tool-tip x-space-s" title="Choose whether to charge tax by line item or by product total."></i>
+                <div class="select-container">
+                    <select id="tax-calculation" name="tax-calculation">
+                        <option selected disabled hidden value="<%= taxCalculation %>"><%= taxCalculation %></option>
+                        <option value="By Line Item">By Line Item</option>
+                        <option value="Product Total Only">Product Total Only</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    <!-- tax end -->
+
+        <div class="row row-spaced">
+            <div class="col-4 form-section">
+                <label for="currency-symbol">Currency Symbol</label>
+                <input type="text" id="currency-symbol" name="currency-symbol" value="<%= currencySymbol %>">
+            </div>
+
+            <div class="col-4 form-section">
+                <label for="currency-label">Currency Label</label>
+                <input type="text" id="currency-label" name="currency-label" value="<%= currencyLabel %>">
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-12 y-space-top-l">
+                <div class="panel-title">
+                    Additional Payment Methods
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-spaced form-section">
+            <div class="col-4">
+                <div class="label">House Accounts<i class="icon icon-tool-tip x-space-s" title="Turn this on if the florist would like to accept House Accounts online."></i></div>
+                <input <%= houseAccountsActive ? 'checked' : '' %> type="checkbox" id="house-accounts-active" name="house-accounts-active" class="on-off-switch" />
+                <label for="house-accounts-active" class="on-off-switch-label">
+                    <div class="on-off-switch-state">on</div>
+                </label>
+            </div>
+
+            <div class="col-4">
+                <div class="label">Pay In Store<i class="icon icon-tool-tip x-space-s" title="Turn this on if the florist would like to allow customers to place an order for pickup, and then pay in store."></i></div>
+                <input <%= payInStoreActive ? 'checked' : '' %> type="checkbox" id="pay-in-store-active" name="pay-in-store-active" class="on-off-switch" />
+                <label for="pay-in-store-active" class="on-off-switch-label">
+                    <div class="on-off-switch-state">on</div>
+                </label>
+            </div>
+
+            <div class="col-4">
+                <div class="label">JCB<i class="icon icon-tool-tip x-space-s"></i></div>
+                <input <%= jcbActive ? 'checked' : '' %> type="checkbox" id="jcb-active" name="jcb-active" class="on-off-switch" />
+                <label for="jcb-active" class="on-off-switch-label">
+                    <div class="on-off-switch-state">on</div>
+                </label>
+            </div>
+
+        </div>
+
+        <div class="row row-spaced form-section">
+            <div class="col-4">
+                <div class="label">Carte Blanche<i class="icon icon-tool-tip x-space-s" title="Turn this on if the florist would like to accept Carte Blanche online."></i></div>
+                <input <%= carteBlancheActive ? 'checked' : '' %> type="checkbox" id="carte-blanche-active" name="carte-blanche-active" class="on-off-switch" />
+                <label for="carte-blanche-active" class="on-off-switch-label">
+                    <div class="on-off-switch-state">on</div>
+                </label>
+            </div>
+
+            <div class="col-4">
+                <div class="label">PayPal<i class="icon icon-tool-tip x-space-s"></i></div>
+                <button type="button" id="configure-paypal-btn" class="btn btn-submit">Configure</button>
+            </div>
+
+            <div class="col-4">
+                <div class="label">Gift Cards<i class="icon icon-tool-tip x-space-s" title="Turn this on if the florist would like to accept gift cards online."></i></div>
+                <input <%= giftCardsActive ? 'checked' : '' %> type="checkbox" id="gift-cards-active" name="gift-cards-active" class="on-off-switch" />
+                <label for="gift-cards-active" class="on-off-switch-label">
+                    <div class="on-off-switch-state">on</div>
+                </label>
+            </div>
+      </div>
+
+
+
+
+          <div class="row">
+            <div class="col-12 y-space-top-l">
+              <div class="panel-title">Available Delivery Days</div>
+            </div>
+          </div>
+
+          <div class="row row-spaced">
+            <div class="col-12">
+              <table class="table alternate form-section" id="m-delivery-days-table">
+                <thead>
+                  <tr>
+                    <th class="col-4">Day</th>
+                    <th class="col-2">Availability</th>
+                    <th class="col-4">Cutoff Time</th>
+                  </tr>
+                </thead>
+                <tbody id="m-delivery-days-list"></tbody>
+              </table>
+            </div>
+          </div>
+
+          
+          </div>
+
+     
+
+      <div class="row row-spaced panel">
+        <div class="row">
+          <div class="col-12">
+            <div class="panel-title">Standard Delivery Fee</div>
+          </div>
+        </div>
+
+        <div class="row row-spaced">
+          <div class="col-12 form-section">
+            <div class="row label-row">
+              <div class="col-3"><label for="f-deliveryFee">Delivery Fee<i class="icon icon-tool-tip x-space-s" title="This is your default delivery fee. We recommend using the local delivery fee here."></i></label></div>
+              <div class="col-1"></div>
+              <div class="col-6 form-section"><label for="f-deliveryFeeName">Delivery Fee Name<i class="icon icon-tool-tip x-space-s" title="This is what your customers will see when they see this fee."></i></label></div>
+            </div>
+            <div class="row"></div>
+          </div>
+          <div class="col-3 form-section">
+            <div class="dollar-container">
+            <input type="text" id="f-deliveryFee" name="f-deliveryFee" value="<%= deliveryFee %>">
+            </div>
+          </div>
+          <div class="col-1"></div>
+          <div class="col-6 form-section">
+            <input type="text" id="f-deliveryFeeName" name="f-deliveryFeeName" value="<%= deliveryFeeName %>">
+          </div>
+        </div>
+
+        <div class="row row-spaced">
+          <div class="col-12">
+            <div class="row label-row">
+              <div class="col-3 form-section"><label for="f-additionalFee">Additional Fee<i class="icon icon-tool-tip x-space-s" title="Are there any other fees aside from delivery you charge? You can put those here."></i></label></div>
+              <div class="col-1"></div>
+              <div class="col-6 form-section"><label for="f-additionalFeeName">Additional Fee Name<i class="icon icon-tool-tip x-space-s" title="What is this additional fee called?"></i></label></div>
+            </div>
+            <div class="row"></div>
+          </div>
+          <div class="col-3 form-section">
+          <div class="dollar-container form-section">
+            <input type="text" id="f-additionalFee" name="f-additionalFee" value="<%= additionalFee %>">
+          </div>
+          </div>
+          <div class="col-1"></div>
+          <div class="col-6 form-section">
+            <input type="text" id="f-additionalFeeName" name="f-additionalFeeName" value="<%= additionalFeeName %>">
+          </div>
+        </div>
+
+        <div class="row row-spaced">
+          <div class="col-12 form-section">
+            <div class="row label-row">
+              <div class="col-3 form-section">
+                <label for="f-wireFee">Wire Fee<i class="icon icon-tool-tip x-space-s" title="Do you charge a wire out fee? If so, put that here."></i></label>
+              </div>
+              <div class="col-1"></div>
+              <div class="col-6 form-section">
+                <div class="bottom-aligned">
+                  <label for="f-wireFeeName">Wire Fee Name<i class="icon icon-tool-tip x-space-s" title="What would you like to call your wire fee?"></i></label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-3 form-section">
+              <div class="dollar-container form-section">
+                <input type="text" id="f-wireFee" name="f-wireFee" value="<%= wireFee %>">
+              </div>
+              </div>
+              <div class="col-1"></div>
+              <div class="col-6 form-section">
+                <input type="text" id="f-wireFeeName" name="f-wireFeeName" value="<%= wireFeeName %>">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row row-spaced">
+          <div class="col-4 form-section"><div class="label">Activate In-Store Pickup Fee<i title="Do you charge a fee for customers to pick up in your store? If so, turn this option on." class="icon icon-tool-tip x-space-s"></i></div>
+          <input <%= inStorePickupFeeActive ? 'checked' : '' %> type="checkbox" id="f-inStorePickupFeeActive" name="f-inStorePickupFeeActive" class="on-off-switch" />
+          <label for="f-inStorePickupFeeActive" class="on-off-switch-label">
+            <div class="on-off-switch-state">on</div>
+          </label>
+          </div>
+        </div>
+
+        <div class="row row-spaced">
+          <div id="in-store-pickup-fee-container" class="col-12 <%= inStorePickupFeeActive ? '' : 'hidden-alt'%>">
+            <div class="row label-row form-section">
+              <div class="col-3"><label for="f-inStorePickupFee">In-Store Pickup Fee<i class="icon icon-tool-tip x-space-s" title="Do you charge a fee for customers to pick up in your store? If so, put that fee here."></i></label></div>
+              <div class="col-1"></div>
+              <div class="col-6 form-section"><label for="f-inStorePickupFeeName">In-Store Pickup Fee Name<i class="icon icon-tool-tip x-space-s" title="What would you like to call your In-Store Pickup Fee?"></i></label></div>
+            </div>
+
+            <div class="row">
+              <div class="col-3 form-section">
+              <div class="dollar-container form-section">
+                <input type="text" id="f-inStorePickupFee" name="f-inStorePickupFee" value="<%= inStorePickupFee %>">
+              </div>
+              </div>
+              <div class="col-1"></div>
+              <div class="col-6 form-section">
+                <input type="text" id="f-inStorePickupFeeName" name="f-inStorePickupFeeName" value="<%= inStorePickupFeeName %>">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row row-spaced">
+          <div class="col-12">
+            <div class="row label-row ">
+              <div class="col-4 form-section"><div class="label">One Delivery Fee to Same Address on Same Order on Same Day<i class="icon icon-tool-tip x-space-s" title="Leave this turned on to charge a single delivery if two orders are delivered to the same address on the same day."></i></div></div>
+            </div>
+
+            <div class="row">
+              <div class="col-4 form-section">
+                <input <%= oneDeliveryFeeActive ? 'checked' : '' %> type="checkbox" id="f-oneDeliveryFeeActive" name="f-oneDeliveryFeeActive" class="on-off-switch" />
+                <label for="f-oneDeliveryFeeActive" class="on-off-switch-label">
+                    <div class="on-off-switch-state">on</div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    </div>  <!--Payment and Checkout Ends here-->
+
+
+
+    <div id="siteDesign">
+          <div class="row row-spaced panel">
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="panel-title">
+                        Site Design
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row panel alert-panel hidden-alt">
+
+                <div class="col-12 y-space-bottom-xxl">
+
+                  <div class="row">
+                    <div class="col-1">
+                      <div class="icon icon-3x icon-warning"></div>
+
+                    </div>
+
+                <div class="col-11 alert-text left-align">
+                      You have uploaded an invalid image file.  Please upload image files that have
+                      extensions '.gif', '.jpg', '.jpeg', '.bmp' or '.png'.
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+
+
+
+
+            <div class="row row-spaced">
+
+                <div class="row y-space-bottom-l form-section">
+                         <div class="col-5 form-section ">
+
+                            <button type="button" class="fileUpload btn btn-Boostrap btn-primary">
+                                <span><i class="icon icon-add icon-lg"></i> Shop Logo</span>
+                                <input id="upload-shop-logo" name="upload-shop-logo" type="file" class="upload" accept="image/*"/>
+                              </button>
+                          </div>
+
+                          <div class="col-6 Upload-Logo-Div">
+
+                              <img id="preview-img" class="fit-container"  style="max-height:60%; padding: 10px; max-width:60%;" src="<%= shopLogo %>">
+                            
+                          </div>
+
+
+                  </div>
+              </div>
+
+
+<!--         <form id="p-site-theme" name="p-site-theme">
+ -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="panel-title">
+                        Site Theme
+                    </div>
+                </div>
+            </div>
+
+
+              <div class="row row-spaced x-space-s">
+                <div class="col-12">
+                  Make your website your own by choosing your theme and layout. Select from the options below.
+                </div>
+              </div>
+
+              <div class="row row-spaced x-space-s">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="panel-title">Theme Selection</div>
+                  </div>
+                </div>
+
+                <div class="row row-spaced">
+                  <div class="col-6">
+                    <h3 class="title">Your Current Theme</h3>
+
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="display-container">
+                          <img id="display-image" class="fill-container" src="<%= layoutImgUrl %>" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-6">
+                    <div class="row">
+                      <div class="col-12 clearfix">
+                        <h3 class="title pull-left">Layout Options</h3><button type="button" id="back-btn" class="hidden-alt btn-clear pull-right no-padding"><i class="icon icon-left-chevron x-space-s"></i>Back</button>
+                      </div>
+                    </div>
+
+
+                    <div class="row">
+                      <div class="col-12">
+                        <div id="layout-theme-container" class="grid-2-closed scroll-container">
+
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row row-spaced">
+                      <div id="seasonal-toggle" class="col-12 <%= selectedThemeName === 'Seasonal' ? '' : 'hidden-alt'%>">
+                        <div class="label">Use Automatic Seasonal Rotation<i title="???" class="icon icon-tool-tip x-space-s"></i></div>
+                        <input <%= automaticSeasonalRotationActive ? 'checked' : '' %> type="checkbox" id="f-automatic-seasonal-rotation-active" name="f-automatic-seasonal-rotation-active" class="on-off-switch" />
+                        <label for="f-automatic-seasonal-rotation-active" class="on-off-switch-label">
+                            <div class="on-off-switch-state">on</div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+              <div class="row row-spaced x-space-s form-section">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="panel-title">Header Settings</div>
+                  </div>
+                </div>
+
+                <div class="row row-spaced">
+
+                  <div class="col-4 form-section select-container">
+                    <div class="label">Header Layout</div>
+                    <select id="f-header-layout" name="f-header-layout">
+                      <option selected disabled hidden value="<%= headerLayout %>"><%= headerLayout %></option>
+                      <option value="Layout 1">Layout 1</option>
+                      <option value="Layout 2">Layout 2</option>
+                    </select>
+                  </div>
+
+                  <div class="col-4 form-section">
+                    <div class="label">Display Social Media Icons</div>
+                    <input <%= headerIcons ? 'checked' : '' %> type="checkbox" id="f-header-icons" name="f-header-icons" class="on-off-switch" />
+                    <label for="f-header-icons" class="on-off-switch-label">
+                        <div class="on-off-switch-state">on</div>
+                    </label>      
+                  </div>
+                  <div class="col-4 form-section">
+                    <div class="label">Display Quick Shop<i title="The Quick Shop feature allows your customers to search by occasion for fast and easy product results." class="icon icon-tool-tip x-space-s"></i></div>
+                    <input <%= headerQuickShop ? 'checked' : '' %> type="checkbox" id="f-header-quick-shop" name="f-header-quick-shop" class="on-off-switch" />
+                    <label for="f-header-quick-shop" class="on-off-switch-label">
+                        <div class="on-off-switch-state">on</div>
+                    </label>      
+                  </div>
+
+                </div>
+
+              </div>
+
+    
+
+<!--          <form id="m-hompeage-settings" name="m-hompeage-settings">
+ -->
+                <div class="row row-spaced x-space-s">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="panel-title">Homepage Layout</div>
+                    </div>
+                  </div>
+
+                  <div id="homepage-layout-container" class="row row-spaced"></div>
+
+                  <div class="row row-spaced">
+                    <div class="col-12">
+                      <div class="panel-title">Homepage Featured Items</div>
+                    </div>
+                  </div>
+
+                  <div class="row row-spaced form-section">
+
+                  <div class="col-12">
+
+                    <div class="row">
+
+                      <div class="col-4 form-section">
+                        <label for="f-featured-item-count">Featured Item Count</label><i class="icon icon-tool-tip x-space-s" title="Select how many items you'd like to feature on your homepage."></i>
+
+                        <div class="select-container">
+                          <select id="f-featured-item-count" name="f-featured-item-count">
+                              <option selected disabled hidden value="<%= featuredItemCount %>"><%= featuredItemCount %></option>
+                              <% for(var i = 0, j = activeLayout.maxNumber; i < j; ++i) { %>
+                              <option value="<%= i + 1 %>"><%= i + 1 %></option>
+                              <% } %>
+                          </select>
+                        </div>
+
+                      </div>
+
+
+                      <div class="col-4">
+                        <div class="label">Suggested Number of Items<i class="icon icon-tool-tip x-space-s" title="We think the homepage looks best with <%= activeLayout.suggestedNumber %> featured products."></i></div>
+                        <div id="suggested-count-display" class="y-space-s btn btn-other text-2x center-align"><%= activeLayout.suggestedNumber %></div>
+                      </div>
+
+                      <div class="col-4">
+                        <div class="label">Maximum Number of Items<i class="icon icon-tool-tip x-space-s" title="This is the maximum number of items you can feature on your homepage with the layout you selected."></i></div>
+                        <div id="max-count-display" class="y-space-s btn btn-other text-2x center-align"><%= activeLayout.maxNumber %></div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  </div>
+
+                </div>
+
+                <div class="row row-spaced x-space-s">
+
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="panel-title">Homepage Footer Text<i title="Not sure about our default homepage footer? You can write your own footer here!" class="icon icon-tool-tip x-space-s"></i></div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-12 form-section">
+                      <textarea class="size-2" name="f-homepage-footer-text" id="f-homepage-footer-text"><%= homepageFooterText %></textarea>
+                    </div>
+                  </div>
+
+                  <div class="row row-spaced">
+
+                    <div class="col-12 form-section">
+                      <div class="label">Display Default SEO Text</div>
+                      <input <%= defaultFooter ? 'checked' : '' %> type="checkbox" id="f-defaultFooter" name="f-defaultFooter" class="on-off-switch" />
+                      <label for="f-defaultFooter" class="on-off-switch-label">
+                          <div class="on-off-switch-state">on</div>
+                      </label>
+                    </div>
+                  </div>  
+                  
+                </div>
+
+
+
+
+    </div>  <!-- Site Design ends here -->
+
+ <div id="configure-modal"></div>
+
+</div> <!-- Tabs Ends Here -->
+
+</form>

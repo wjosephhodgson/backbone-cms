@@ -1,0 +1,17 @@
+define(function(){ return function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<form id="create-new-closure-deliverydate" name="create-new-closure-deliverydate" class="left-align">\r\n   <div class="row row-spaced">\r\n\t<div class="col-12">\r\n\t\t<div class="clearfix section-title">\r\n\t\t\t<h3 class="pull-left">Create New Closure (Delivery Block)</h3>\r\n\t\t\t<div class="btn-panel">\r\n\t\t\t\t<button type="button" id="cancel-btn" class="btn btn-other">Cancel</button>\r\n\t\t\t\t<button type="button" id="save-btn" class="btn btn-submit"><div class="icon icon-add"></div>Save</button>\r\n\t\t\t\t<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n\r\n<!-- Hidden Alert Message -->\r\n\r\n<div class="row panel alert-panel">\r\n  <div class="col-12">\r\n    <div class="row">\r\n      <div class="col-1">\r\n        <div class="icon icon-3x icon-warning"></div>\r\n      </div>\r\n      <div class="col-11 alert-text">\r\n                     This is a generic placeholder for error messages in eSAT. <br>\r\n                     In the live app, this will be a real message and will be hidden by default.\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- Hidden Alert Message -->\r\n\r\n<div class="row">\r\n\t<div class="col-12">\r\n\t\t<div class="pull-left"> Enter the Start and Resume Dates for blocking delivery to your website </div>\r\n\t</div>\r\n</div>\r\n\r\n<div class="row row-spaced form-section y-space-top-m">\r\n   <div class="col-12">\r\n   \t   <label for"f-closure-reason" class="pull-left"> Closure Reason or Description </label>\r\n\t   <input type="text" id="f-closure-reason" name="f-closure-reason" value="' +
+((__t = ( closureReason )) == null ? '' : __t) +
+'">\r\n\r\n   </div>\r\n</div>\r\n\r\n<div class="row row-spaced">\r\n\t\t<div class="col-4 form-section">\r\n\t\t\t<label for="start-date">Start Block On</label>\r\n\t\t\t<div class="date-container">\r\n\t\t\t\t<input type="text" id="start-date" name="start-date" class="date" value="' +
+((__t = ( startDate )) == null ? '' : __t) +
+'">\r\n\t\t    </div>\r\n\t    </div>\r\n   <div class="col-4 form-section">\r\n\t\t\t\t<label for="resume-date">Resume Orders On</label><i title="This is the date you resume delivery date for your site" class="icon icon-tool-tip x-space-s"></i>\r\n\t\t\t\t<div class="date-container">\r\n\t\t\t\t\t<input type="text" id="resume-date" name="resume-date" class="date" value="' +
+((__t = ( resumeDate )) == null ? '' : __t) +
+'">\r\n\t\t\t\t</div>\r\n\r\n\t\t\t</div>\r\n\r\n       <div class="col-4 form-section">\r\n       \t\t\t\t<label for="repeats-yearly-active">Repeats Every Year</label><i title="Repeat this Closure yearly for your site" class="icon icon-tool-tip x-space-s"></i>\r\n\r\n\t\t    <input ' +
+((__t = ( repeatsYearly ? 'checked' : '')) == null ? '' : __t) +
+' type="checkbox" id="repeats-yearly-active" name="repeats-yearly-active" class="on-off-switch f-repeats-YearlyActive" />\r\n\r\n\t          <label for="repeats-yearly-active" class="on-off-switch-label">\r\n\r\n\t              <div class="on-off-switch-state">on</div>\r\n\t        </label>\r\n\r\n\t    </div>\r\n\r\n\r\n  </div>\r\n\r\n</form>';
+
+}
+return __p
+};});

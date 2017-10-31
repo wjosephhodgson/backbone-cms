@@ -1,0 +1,111 @@
+<div class="row row-spaced form-section x-space-s left-align">
+ <div class="row row-spaced form-section">
+        <div class="clearfix section-title">
+            <h2 id="saved-DisplayMoved" class="pull-left left-pad-xs"><%= id ? "Edit " : "Add New " %>eSAT Custom HTML Page</h2>
+           <div role="tooltip" data-parent="saved-DisplayMoved" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+
+            <div class="btn-panel">
+                        <button type="button" id="save-btn" class="btn btn-submit btn-panel pull-right"> Save</button>
+                        <% if(id) { %>
+			                <button type="button" id="delete-btn" class="btn btn-cancel btn-panel pull-right ">Delete</button>
+		                <% } %>
+		                <button type="button" id="cancel-btn" class="btn btn-other btn-panel pull-right">Cancel</button>
+
+
+            </div>
+        </div>
+
+        </div>
+
+
+  <div class="row row-spaced form-section">
+
+	  <div class="col-12 form-section" >
+
+			<h4 class="pull-left">Add or edit content of the eSAT page below.</h4>
+
+					  </div>
+				</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<form id="customhtmlpage-form">
+ <div class="row row-spaced">
+               
+
+  		<div class="col-2 form-section">
+			<label for="customHtmlPage-status"> Status </label>
+			
+
+			<input <%= CustomHTMLPageActive ? 'checked' : '' %> type="checkbox" id="f-create-edit-page-Active" name="f-create-edit-page-Active" class="on-off-switch"/>
+
+			<label for="f-create-edit-page-Active" class="on-off-switch-label">
+			    <div class="on-off-switch-state">on</div>
+			</label>
+         </div>
+          
+
+          <div class="col-5 form-section"> 
+	    	<label for="f-page-Name"> Page Name</label><i title="Edit or Create a Page Name" class="icon icon-tool-tip x-space-s"></i>
+			
+
+			<input id="f-customHTML-page-name" name="f-customHTML-page-name" type="text" value="<%= CustomHTMLPageName %>" />		
+		</div>
+
+		<div class="col-5 form-section">
+		   <label for="f-customHTML-page-url"> Page URL</label><i title="Edit or Create a Page URL" class="icon icon-tool-tip x-space-s"></i>
+			<input id="f-customHTML-page-url" name="f-customHTML-page-url" type="text" value="<%= CustomHTMLPageURL %>" />		
+		</div>
+
+
+
+
+</div> <!-- End Status Col here -->
+</form>
+
+
+	<div class="row row-spaced form-section">
+		<div class="col-5 pull-left">
+			<label for="f-customHTML-page-content" class="pull-left"> Meta Tags</label>
+			<i title="Edit or Create Meta Tags(SEO)" class="icon icon-tool-tip pull-left" style="position: relative;"></i>
+		</div>
+		<div class="col-12" > 
+	        <textarea id="f-customHTMLMetaTags" name="f-customHTMLMetaTags" class="size-2" ><%= CustomHTMLPageMetaTags %></textarea>
+		</div>
+	</div>  <!-- End Meta Tags here -->
+
+
+<div class="row row-spaced form-section">
+			<div class="col-5 pull-left">
+				<label for="f-customHTML-page-content" class="pull-left"> Create/Edit the Page Content </label>
+				<i title="Edit or Create a Page Content" class="icon icon-tool-tip pull-left" style="position: relative;"></i>
+			</div>
+
+	</div>
+
+<div class="row form-section" >
+
+		<div class="col-12">
+
+			<textarea name="f-customHTML-page-content" id="f-customHTML-page-content" class="size-2 tinymce" ><%= CustomHTMLPageContent %></textarea>
+ 
+	     </div>
+
+	</div>
+
+</div>

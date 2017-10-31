@@ -1,0 +1,30 @@
+// ============================================================================
+// Category Settings
+// ============================================================================
+.panel-list-row {
+	height: 4.3em;
+	line-height: 2.7em;
+	padding: 0.8em 3em;
+	border-bottom: 1px solid #939393;
+
+	& h4 {
+		margin: 0;
+	}
+
+	& .select-container {
+		&:before {
+			top: 0;
+			bottom: 0;
+		}
+	}
+
+	& select {
+		margin: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	.panel-list > &:last-child {
+		border: 0;
+	}
+}

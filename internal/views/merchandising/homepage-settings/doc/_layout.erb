@@ -1,0 +1,21 @@
+<% @cssAssets = [
+  "../../../stylesheets/internal/bootstrap.min.css",
+  "../../../stylesheets/internal/bootstrap-responsive.min.css",
+  "../../../stylesheets/internal/site.css"
+] %>
+
+<% @jsAssets = [
+  "./../../../javascripts/internal/bootstrap.min.js",
+  "./../../../javascripts/internal/prettify.js"
+] %>
+
+
+<% @navItems = [
+  ["Home", "../index.html"],
+  ["Styleguide", "../styleguide/index.html"],
+  ["Global Modules", "../global/index.html"],
+  ["Layouts", "../layouts/index.html"],
+  ["Modules", "../modules/index.html"]
+] %>
+
+<%= render :template => "/_internal-template" %>

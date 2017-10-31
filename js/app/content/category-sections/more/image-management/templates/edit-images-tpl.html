@@ -1,0 +1,97 @@
+<div class="row row-spaced">
+  <div class="col-12">
+    <div class="clearfix section-title">
+      <h2 class="pull-left">Image Management - <%= name %></h2>
+      <div class="btn-panel">
+      <button type="button" id="back-btn" class="btn btn-other">Back</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row row-spaced">
+  <div class="col-12">
+    <%= name === 'Promotional' ? 'Use this page to delete and upload new promotional images for your website' : ''%>
+    <%= name === 'Tile' ? 'Use this page to delete and upload new tile images for your website.' : ''%>
+    <%= name === 'Collections' ? 'Use this page to delete and upload new images for the Collection pages of your website.' : ''%>
+    <%= name === 'Logo' ? 'Use this page to delete and upload new images for the logo of your website.' : ''%>
+    <%= name === 'About Us' ? 'Use this page to delete and upload new images for the About Us page of your website.' : ''%>
+    <%= name === 'Custom HTML' ? 'Use this page to delete and upload new images for the custom HTML pages of your website.' : ''%>
+    <%= name === 'Products' ? 'Use this page to delete and upload new images for the product pages of your website.' : ''%>
+    <%= name === 'Add Ons' ? 'Use this page to upload new images or edit existing images for add-on products on your website such as mylar balloons or stuffed animals.' : ''%>
+    <%= name === 'Social Media Icons' ? 'Use this page to upload new images or edit existing images for your custom social media links.' : ''%>
+    <%= name === 'Sympathy Types' ? 'Use this page to upload new images or edit existing images for your custom sympathy type categories (such as "For the Home" or "For the Service").' : ''%>
+    <%= name === 'Subscription Product' ? 'Use this page to upload new images or edit existing images for your subscription product.' : ''%>
+    <%= name === 'Wedding Product' ? 'Use this page to upload new images or edit existing images for wedding products on your site.' : ''%>
+    <%= name === 'Marketing Campaigns' ? 'Use this page to upload new images or edit existing images for custom marketing campaigns you have created.' : ''%>
+    <%= name === 'Wedding Galleries' ? 'Use this page to upload new images or edit existing images for your wedding gallery showcase.' : ''%>
+    <%= name === 'Deal of the Day Product' ? 'Use this page to upload new images or edit existing images for your Deal of the Day product.' : ''%>
+    <%= name === 'Testimonial Image' ? 'Use this page to upload new images or edit existing images for your customer testimonials.' : ''%>
+    <%= name === 'Flower Colors' ? 'Use this page to upload new images or edit existing images for custom wedding flower color categories.' : ''%>
+    <%= name === 'Homepage' ? 'Use this page to upload new images or edit existing images for your site\'s homepage.' : ''%>
+    <%= name === 'Wedding Testimonials' ? 'Use this page to upload new images or edit existing images for your customer wedding testimonials.' : ''%>
+    <%= name === 'Wedding Landing Page' ? 'Use this page to upload new images or edit existing images for your wedding landing page.' : ''%>
+    <%= name === 'Wedding Categories' ? 'Use this page to upload new images or edit existing images for your wedding categories (such as "Ceremony" or "Reception").' : ''%>
+    <%= name === 'Merchandising Icons' ? 'Use this page to upload new images or edit existing images for merchandising icons attached to your products.' : ''%>
+    <%= name === 'Manage Search Terms' ? 'Use this page to upload new images or edit existing images for search results page banners.' : ''%>
+    <%= name === 'Bonus Bloom Program' ? 'Use this page to upload new images or edit existing images for your own Bonus Bloom program.' : ''%>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+
+<div class="row panel alert-panel hidden-alt">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text left-align">
+        There already exists a folder with that name. Please choose another name.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row row-spaced">
+  <% if( global == true ) { %>
+  <div class="col-4 left-align">
+    <button type="button" id="copy-btn" class="btn btn-submit hidden-alt">Download</button>
+  </div>
+  <% } else { %>
+  <div class="col-4 left-align">
+    <button type="button" id="delete-btn" class="btn btn-cancel hidden-alt">Delete</button>
+    <button type="button" id="edit-btn" class="btn btn-other x-space-s hidden-alt">Edit</button>
+  </div>
+  <div class="col-8 pull-right right-align form-section">
+    <button type="button" id="new-folder-btn" class="btn btn-submit x-space-s"><i class="icon icon-add icon-lg"></i>Create Folder</button>
+
+    <button type="button" class="btn btn-submit btn-file">
+      <input type="file" id="upload-btn" accept="image/*">
+      <i class="icon icon-add icon-lg"></i> Upload File
+    </button>
+  </div>
+  <% } %>
+</div>
+
+<div id="aviary" class="hidden-alt"></div>
+<div id="image-grid" class="row row-spaced"></div>
+<div id="image-mgmt-edit-modal-container"></div>

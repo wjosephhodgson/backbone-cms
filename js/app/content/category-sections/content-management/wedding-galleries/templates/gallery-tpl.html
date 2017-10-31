@@ -1,0 +1,16 @@
+<tr data-id="<%= id %>">
+	<td class="left-align"><%= name %></td>
+	<td>
+		<input <%= galleryStatus ? 'checked' : '' %> type="checkbox"  id="<%= id %>" name="<%= id %>" class="on-off-switch"/>
+		<label for="<%= id %>" class="on-off-switch-label">
+			<div class="on-off-switch-state">on</div>
+		</label>
+	</td>
+	<td>
+		<% if( type === 'Custom'){ %>
+			<button type="button" class="icon icon-edit icon-btn icon-2x"></button>
+		<% } else { %>
+			<button type="button" class="icon icon-search icon-btn icon-2x"></button>
+		<% } %>
+	</td>
+</tr>

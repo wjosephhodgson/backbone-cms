@@ -1,0 +1,205 @@
+[
+  {
+    "id": 1,
+    "name":"About Us",
+    "hash":"about-us",
+    "url":"/mock/user-images-about-us.json",
+    "primary": true,
+    "global": false
+  },
+  {
+    "id": 2,
+    "name":"Collections",
+    "hash":"collections",
+    "url":"/mock/user-images-collections.json",
+    "primary": true,
+    "global": false
+  },
+  {
+    "id": 3,
+    "name":"Custom HTML",
+    "hash":"custom-html",
+    "url":"/mock/user-images-custom-html.json",
+    "primary": true,
+    "global": false
+  },
+  {
+    "id": 4,
+    "name":"Promotional",
+    "hash":"promotional",
+    "url":"/mock/user-images-promotional.json",
+    "primary": true,
+    "global": false
+  },
+  {
+    "id": 5,
+    "name":"Tile",
+    "hash":"tile",
+    "url":"/mock/user-images-tile.json",
+    "primary": true,
+    "global": false
+  },
+  {
+    "id": 6,
+    "name":"Logo",
+    "hash":"logo",
+    "url":"/mock/user-images-logo.json",
+    "primary": true,
+    "global": false
+  },
+  {
+    "id": 7,
+    "name":"Products",
+    "hash":"products",
+    "url":"/mock/user-images-products.json",
+    "primary": true,
+    "global": false
+  },
+  {
+    "id": 8,
+    "name":"Sympathy",
+    "hash":"sympathy",
+    "url":"/mock/user-images-sympathy.json",
+    "primary": true,
+    "global": false
+  },
+  {
+    "id": 9,
+    "name":"Sympathy Types",
+    "hash":"sympathy-types",
+    "url":"/mock/user-images-sympathy-types.json",
+    "primary": true,
+    "global": false
+  },
+  {
+    "id": 10,
+    "name":"Flower Colors",
+    "hash":"flower-colors",
+    "url":"/mock/user-images-flower-colors.json",
+    "primary": true,
+    "global": false
+  },
+  {
+    "id": 11,
+    "name":"Wedding Categories",
+    "hash":"wedding-categories",
+    "url":"/mock/user-images-wedding-categories.json",
+    "primary": true,
+    "global": false
+  },
+  {
+   "id":  12,
+   "name":"Social Media Icons",
+   "hash":"social-media-icons",
+   "url":"/mock/user-images-social-icons.json",
+   "primary": true,
+    "global": false
+  },
+  {
+   "id":  13,
+   "name":"Bonus Bloom Program",
+   "hash":"bonus-bloom-media",
+   "url":"/mock/user-images-bonus-bloom.json",
+   "primary": true,
+   "global": false
+  },
+  {
+    "id": 14,
+    "name":"Add Ons",
+    "hash":"add-ons",
+    "url":"/mock/user-images-add-ons.json",
+    "primary": true,
+    "global": false
+  },
+  {
+    "id": 15,
+    "name":"Wedding Galleries",
+    "hash":"wedding-gallery",
+    "url":"/mock/user-images-wedding-galleries.json",
+    "primary": true,
+    "global": false
+  },
+  {
+    "id": 16,
+    "name":"Inherited Flower Colors",
+    "hash":"flower-colors/inherited",
+    "url":"/mock/global-images-flower-colors.json",
+    "primary": false,
+    "nested": true,
+    "global": true
+  },
+  {
+    "id": 17,
+    "name":"Inherited Add Ons",
+    "hash":"add-ons/inherited",
+    "url":"/mock/global-images-add-ons.json",
+    "primary": false,
+    "nested": true,
+    "global": true
+  },
+  {
+   "id":  18,
+   "name":"Merchandising Icons",
+   "hash":"merchandising-icons-media",
+   "url":"/mock/user-images-merchandising-icons.json",
+   "primary": true,
+   "global": false
+  },
+  {
+   "id":  19,
+   "name":"Manage Search Terms",
+   "hash":"manage-search-terms",
+   "url":"/mock/user-images-manage-search-terms.json",
+   "primary": true,
+   "global": false
+  },
+  {
+   "id":  20,
+   "name":"Floral App Settings",
+   "hash":"floral-app-settings",
+   "url":"/mock/user-images-floral-app-settings.json",
+   "primary": true,
+   "global": false
+  },
+  {
+   "id":  21,
+   "name":"Wedding Landing Page",
+   "hash":"weddings-page",
+   "url":"/mock/user-images-weddings-page.json",
+   "primary": true,
+   "global": false
+  },
+  {
+   "id":  22,
+   "name":"Wedding Testimonials",
+   "hash":"weddings-page",
+   "url":"/mock/user-images-weddings-testimonials.json",
+   "primary": true,
+   "global": false
+  },
+  {
+   "id":  23,
+   "name":"Wedding Product",
+   "hash":"wedding-product",
+   "url":"/mock/user-images-wedding-product.json",
+   "primary": true,
+   "global": false
+  },
+  {
+    "id": 24,
+    "name": "Subscription Product",
+    "hash": "subscription-product",
+    "url": "/mock/user-images-subscription-product.json",
+    "primary": true,
+    "global": true
+  },
+  {
+    "id": 25,
+    "name": "Homepage",
+    "hash": "homepage",
+    "url": "/mock/user-images-homepage.json",
+    "primary": true,
+    "global": false
+  }  
+
+]

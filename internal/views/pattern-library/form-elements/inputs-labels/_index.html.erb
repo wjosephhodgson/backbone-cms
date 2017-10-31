@@ -1,0 +1,158 @@
+<section id="inputs-labels" class="l-wrapper top-margin">
+  <h2>Inputs / Labels</h2>
+  <p>Teleflora uses a variety of inputs and labels. This section covers both the UI of these modules and also the active states, validation, and error handling.</p>
+
+  <!-- responsive form fields start -->
+  <div class="container_4 d-container_12 clearfix top-margin">
+    <div class="grid_4 d-grid_6 alpha d-alpha m-pattern-library-offset">
+      <input type="text" value="Input without label" />
+    </div>
+    <div class="grid_4 d-grid_6 alpha">
+      <label>Generic Label</label>
+      <input type="text" value="This Input field has 50% width" />
+    </div>
+  </div>
+  <!-- responsive form fields ends -->
+  <div class="clear"></div>
+  <!-- inputs code demo starts -->
+  <div class="m-code l-wrapper top-margin">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <pre class="prettyprint linenums lang-html">
+  &lt;!-- responsive form fields start --&gt;
+  &lt;div class="container_4 d-container_12 clearfix top-margin"&gt;
+    &lt;div class="grid_4 d-grid_6 alpha d-alpha"&gt;
+      &lt;input type="text" value="Input without label" /&gt;
+    &lt;/div&gt;
+    &lt;div class="grid_4 d-grid_6 alpha"&gt;
+      &lt;label&gt;Generic Label&lt;/label&gt;
+      &lt;input type="text" value="This input field has 50% width" /&gt;
+    &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;!-- responsive form fields ends --&gt;
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- inputs code demo ends -->
+
+  <!-- form fields starts -->
+  <div class="form-field top-margin">
+    <label>
+      Generic Label + tool tip
+      <a class="icon-info" href="javascript:void(0);">
+        <span class="m-tooltip m-form-demo-tooltip">Demo of ToolTip element used on a form environment.</span>
+      </a>
+    </label>
+    <input type="text" value="Text input" />
+  </div>
+  <div class="form-field">
+    <label class="error-label">*required field - error style sample</label>
+    <input class="error-border" type="text" />
+    <span class="is-error" >Please fill the required field</span>
+  </div>
+  <!-- form fields end -->
+  <div class="clear"></div>
+  <!-- inputs code demo starts -->
+  <div class="m-code l-wrapper top-margin">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <pre class="prettyprint linenums lang-html">
+  &lt;!-- form fields starts --&gt;
+  &lt;div class="form-field"&gt;
+    &lt;label&gt;
+      Generic Label + tool tip
+      &lt;a class="icon-info" href="javascript:void(0);"&gt;
+        &lt;span class="m-tooltip m-form-demo-tooltip"&gt;Demo of ToolTip element used on a form environment.&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/label&gt;
+    &lt;input type="text" value="Text input" /&gt;
+ &lt;/div&gt;
+ &lt;div class="form-field"&gt;
+   &lt;label class="error-label"&gt;*required field - error style sample&lt;/label&gt;
+   &lt;input class="error-border" type="text" /&gt;
+   &lt;span class="is-error"&gt;Please fill the required field&lt;/span&gt;
+ &lt;/div&gt;
+ &lt;!-- form fields end --&gt;
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- inputs code demo ends -->
+  <div class="top-margin">
+    <!-- checkboxes start -->
+    <div class="custom-checkbox grid_2 d-grid_3">
+      <input type="checkbox" id="checkbox1" />
+      <label for="checkbox1" class="custom-checkbox-label"><span class="label-alt-text">Checkbox Label</span></label>
+    </div>
+    <div class="custom-checkbox grid_2 d-grid_3">
+      <input type="checkbox" id="checkbox2" checked/>
+      <label for="checkbox2" class="custom-checkbox-label" ><span class="label-alt-text">Checkbox Label</span></label>
+    </div>
+    <!-- checkboxes end -->
+    <!-- radio buttons start -->
+    <div class="custom-radio grid_2 d-grid_3">
+      <input id="radio1" type="radio" name="radio" value="value-a" />
+      <label for="radio1" class="custom-radio-label"><span class="label-alt-text">Radio Label</span></label>
+    </div>
+    <div class="custom-radio grid_2 d-grid_3">
+      <input id="radio2" type="radio" name="radio" value="value-b" checked /><label for="radio2" class="custom-radio-label"><span class="label-alt-text">Radio Label</span></label>
+    </div>
+    <!-- radio buttons end -->
+  </div>
+  <div class="clear"></div>
+  <!-- input button code demo starts -->
+  <div class="m-code l-wrapper top-margin">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <pre class="prettyprint linenums lang-html">
+  &lt;!-- checkboxes start --&gt;
+  &lt;div class="custom-checkbox grid_2 d-grid_3"&gt;
+    &lt;input type="checkbox" id="checkbox1" /&gt;
+    &lt;label for="checkbox1" class="custom-checkbox-label"&gt;&lt;span class="label-alt-text"&gt;Checkbox Label&lt;/span&gt;&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class="custom-checkbox grid_2 d-grid_3"&gt;
+    &lt;input type="checkbox" id="checkbox2" checked/&gt;
+    &lt;label for="checkbox2" class="custom-checkbox-label" &gt;&lt;span class="label-alt-text"&gt;Checkbox Label&lt;/span&gt;&lt;/label&gt;
+  &lt;/div&gt;
+ &lt;!-- checkboxes end --&gt;
+ &lt;!-- radio buttons start --&gt;
+ &lt;div class="custom-radio grid_2 d-grid_3"&gt;
+   &lt;input id="radio1" type="radio" name="radio" value="value-a" /&gt;
+   &lt;label for="radio1" class="custom-radio-label"&gt;&lt;span class="label-alt-text"&gt;Radio Label&lt;/span&gt;&lt;/label&gt;
+ &lt;/div&gt;
+ &lt;div class="custom-radio grid_2 d-grid_3"&gt;
+   &lt;input id="radio2" type="radio" name="radio" value="value-b" checked /&gt;&lt;label for="radio2" class="custom-radio-label"&gt;&lt;span class="label-alt-text"&gt;Radio Label&lt; /span&gt;&lt;/label&gt;
+ &lt;/div&gt;
+ &lt;!-- radio buttons end --&gt;
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- input button code demo ends -->
+</section>
+<script type="text/javascript">
+      initLoad = true;
+      Modernizr.load([
+        {
+          both: [
+            '<%= domain %>javascripts/lib/jquery.js',
+            '<%= domain %>javascripts/modules/bootstrap-tooltip.js',
+          ],
+          complete: function(){
+          }
+        }
+      ]);
+</script>

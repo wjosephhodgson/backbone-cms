@@ -1,0 +1,91 @@
+.table {
+  width: 100%;
+  margin-top: 2.46em;
+  margin-bottom: 1em;
+  text-align: left;
+
+  .table-head {
+    text-transform: uppercase;
+    color: $dark-grey;
+    vertical-align: bottom;
+  }
+
+  .table-body {
+    font-size: 1.3076em;
+    line-height: 1.3;
+    vertical-align: top;
+  }
+
+  .table-row {
+    .table-header, .table-header-alt {
+      padding-left: 3.4em;
+      line-height: 1.307;
+      padding-bottom: 0.769em;
+      border-bottom: 1px solid $accent-grey;
+      font-family: $sans-stack !important;
+      font-weight: lighter !important;
+      text-align: left;
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+
+    .table-header-alt{
+      padding-left: 0em;
+      padding-right: 4em;
+    }
+
+    .table-data, .table-data-alt, .table-data-alt2 {
+      padding-top: 0.769em;
+      padding-left: 2.8em;
+      padding-bottom: 0.769em;
+      max-width: 10em;
+      padding-top: 0.8em;
+
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+
+    .table-data-alt{
+      padding-left: 0em;
+      max-width: 6.8em;
+    }
+
+    .table-data-alt2{
+      padding-left: 0em;
+      max-width: 6.8em;
+      padding-right: 0em;
+    }
+
+    .table-data-bottom-border {
+      border-bottom: 1px solid $accent-grey;
+    }
+  }
+
+  .table-mobile-button {
+    border-bottom: 1px solid $accent-grey;
+    padding-top: 0.8em;
+    padding-bottom: 2.5em;
+    font-size: 13px;
+
+    a {
+      margin: 0.2em auto;
+      width: 100%;
+      max-width: 240px;
+    }
+  }
+
+  .last-td {
+    vertical-align: middle;
+    font-size: 15px;
+  }
+}
+
+@include desktop() {
+  .table-wide {
+    margin-right: 0;
+    margin-left: 3%;
+  }
+}

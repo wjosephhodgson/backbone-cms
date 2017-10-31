@@ -1,0 +1,167 @@
+
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Promotion Codes Reporting</h2>
+		</div>
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row row-spaced">
+	<div class="col-12">
+		This section reports the number of orders and total sales related to promotion codes in a specific date range
+	</div>
+</div>
+
+<form name="promoCode-date-form" id="promoCode-date-form">
+   <div class="row row-spaced panel form-section">
+			
+	<div class="row row-spaced form-section">
+            <div class="col-6">
+	               <label class="x-space"> Report by Specific Promotion Code </label>
+			<i class="icon icon-tool-tip x-space-s" title="Search for a specific Promotion Code."></i>
+			<div>
+				<input type="text" id="f-promo-code-search-value" name="f-promo-code-search-value" placeholder="Enter the Promotion Code...">
+			</div>
+	      </div>
+
+	</div>
+     
+ 	 <div class="label x-space"> Report Time Period </div>
+		
+
+		<div class="row row-spaced form-section">
+			<div class="col-d-3 col-6 form-section">
+				<label for="start-date">From:</label>
+				<div class="date-container">
+					<input type="text" id="start-date" name="start-date" class="date">
+				</div>
+			</div>
+			<div class="col-d-3 col-6 form-section">
+				<label for="end-date">To:</label>
+				<div class="date-container">
+					<input type="text" id="end-date" name="end-date" class="date">
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="row">
+			
+			<div class="col-d-3 form-section">
+				<label for="f-site-dropdown">Site:</label>
+				<div class="select-container">
+					<select name="f-site-dropdown" id="f-site-dropdown">
+						<option selected disabled hidden value=""></option>
+						<option selected="selected" value="Combined">Combined</option>
+						<option value="Jennys">Jennys</option>
+						<option value="Lehrers">Lehrer's Flowers</option>
+						<option value="Martinas">Martina's Flowers</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="col-d-3 col-6 form-section">
+				<button type="button" id="go-btn" class="btn btn-submit row-btn">GO <i class="icon icon-right-circle-chevron icon-lg"></i></button>
+			</div>
+		</div>
+</div>
+	</form>
+
+
+<div class="row row-spaced panel form-section promo-Code-Report" style="display: none;">
+
+ 	<div class="row">
+		<div class="col-12">
+			<div class="clearfix section-title">
+				<h3 class="pull-left">Promotion Codes Reporting Table </h3>
+				<div class="btn-panel">
+                   <button id="print-promoCodes-btn" type="button" class="btn btn-submit"><i class="icon icon-print"></i>Print</button>
+		           <button id="export-btn" type="button" class="btn btn-submit pull-right"><i class="icon icon-export"></i>Export</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<div id="print-promo-codes-section">
+    <div class="row row-spaced">
+		<div class="col-12">
+			<table  class="table">
+				
+				<thead>
+					<tr class="highlighted">
+						<th class="col-2 left-align indented-l"></th>
+						<th class="col-2 left-align"></th>
+						<th class="col-2 left-align">Total Discount Given</th>
+						<th class="col-2 left-align">Orders</th>
+						<th class="col-2 left-align">Total Sales</th>
+						<th class="col-2 left-align">Average Order Value</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr class="rounded-table-container">
+						<td class="left-align">Total/Average</td>
+						<td class="left-align"></td>
+						<td class="left-align"><%= totalDiscount %></td>
+						<td class="left-align"><%= totalOrders %></td>
+						<td class="left-align"><%= totalSales %></td>
+						<td class="left-align"><%= averageOrderValues %></td> 
+					</tr>
+				</tbody>
+
+			</table>
+		</div>		
+	</div>
+	<div class="row row-spaced"> 
+		<div class="col-12">
+			<table id="promo-code-table" class="table alternate">
+				
+				<thead>
+					<tr class="highlighted">
+						<th class="col-2 left-align indented-l">Date <button data-attribute="promocodeReportDate" class="icon icon-btn icon-sort sort-btn"></button></th>
+					  <th class="col-2 left-align">Promo Code <button data-attribute="promoCode" class="icon icon-btn icon-sort sort-btn"></button></th>
+						<th class="col-2 left-align">Total Discount Given <button data-attribute="discountAmount" class="icon icon-btn icon-sort sort-btn"></button></th>
+						<th class="col-2 left-align">Orders <button data-attribute="Orders" class="icon icon-btn icon-sort sort-btn"></button></th>
+						<th class="col-2 left-align">Total Sales <button data-attribute="sales" class="icon icon-btn icon-sort sort-btn"></button></th>
+						<th class="col-2 left-align">Average Order Value <button data-attribute="orderValue" class="icon icon-btn icon-sort sort-btn"></button></th>
+					</tr>
+				</thead> 		
+
+				<tbody id="promo-codes-ReportingTable">
+				</tbody>
+
+			</table>
+		</div>		
+	</div>
+    
+
+    <div>
+
+    </div>
+
+
+</div>
+
+
+</div>

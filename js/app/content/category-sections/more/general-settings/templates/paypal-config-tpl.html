@@ -1,0 +1,55 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Configure PayPal</h2>
+			<div class="btn-panel">
+				<button id="cancel-btn" class="btn btn-other">Cancel</button>
+				<button id="save-btn" class="btn btn-submit">Save Changes</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+
+<form id="edit-form" class="row form-section">
+    <div class="col-12">
+        <div class="row row-spaced">
+            <div class="col-2 form-section left-align">
+                <div class="label">Active<i class="icon icon-tool-tip x-space-s" title="If this is turned ON, your shoppers will be able to use PayPal to pay for orders if properly configured with a correct PayPal merchant account."></i></div>
+                <div class="centered-content-container">
+                    <input <%= payPalActive ? 'checked' : '' %> type="checkbox" id="f-paypal-active" name="f-paypal-active" class="on-off-switch" />
+                    <label for="f-paypal-active" class="on-off-switch-label">
+                        <div class="on-off-switch-state">on</div>
+                    </label>
+                </div>
+            </div>
+        	<div class="col-5 form-section left-align">
+                <label for="f-paypal-email-address">PayPal Email Address</label><i class="icon icon-tool-tip x-space-s" title="Enter the email address associated with the florist's PayPal account here."></i>
+                <input id="f-paypal-email-address" name="f-paypal-email-address" type="email" value="<%= payPalEmailAddress %>">
+        	</div>
+
+        	<div class="col-5 form-section left-align">
+                <label for="f-paypal-pos-account-number" class="label">POS Account Number</label><i class="icon icon-tool-tip x-space-s" title="Enter the Point of Sale Account Number here."></i>
+                <input id="f-paypal-pos-account-number" name="f-paypal-pos-account-number" type="text" value="<%= payPalPosAccountNumber %>">
+        	</div>
+        </div>
+    </div>
+</form>

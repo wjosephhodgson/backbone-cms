@@ -1,0 +1,82 @@
+[
+    {
+        "code":"save20",
+        "id":1,
+        "discountAmount":20,
+        "discountType":"Dollar Off",
+        "startDate":"2/20/2015",
+        "endDate":"4/10/2015"
+       },
+    {
+        "code":"Teleflora10",
+        "id":2,
+        "discountAmount":10,
+        "discountType":"Dollar Off",
+        "startDate":"2/20/2015",
+        "endDate":"4/10/2015",
+        "federated":true
+    },
+    {
+        "code":"NOFEES",
+        "id":3,
+        "discountAmount":100,
+        "discountType":"Percentage Off",
+        "startDate":"2/10/2015",
+        "endDate":"2/14/2015",
+        "category":"Delivery/Service Fee",
+        "number":"02"
+    },
+    {
+        "code":"ROSE",
+        "id":4,
+        "discountAmount":10,
+        "discountType":"Percentage Off"
+    },
+    {
+        "code":"YELP-",
+        "id":5,
+        "bulk":true,
+        "discountAmount":15,
+        "discountType":"Dollar Off",
+        "startDate":"3/1/2015",
+        "endDate":"5/1/2015"
+    },
+    {
+        "code":"BCC Promo",
+        "id":6,
+        "bcc": true,
+        "bccPromoDetail": "$10 off, no minimum purchase required"
+    },
+    {
+        "code":"PromoCode 7",
+        "id":7
+    },
+    {
+        "code":"PromoCode 8",
+        "id":8
+    },
+    {
+        "code":"PromoCode 9",
+        "id":9
+    },
+    {
+        "code":"PromoCode 10",
+        "id":10
+    },
+    {
+        "code":"PromoCode 11",
+        "id":11
+    },
+    {
+        "code":"PromoCode 12",
+        "id":12
+    },
+    {
+        "code":"PromoCode 13",
+        "id":13
+    },
+    {
+        "code":"PromoCode 14",
+        "id":14
+    }
+]

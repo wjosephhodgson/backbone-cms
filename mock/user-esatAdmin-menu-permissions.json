@@ -1,0 +1,1579 @@
+ [
+   {
+	"id": 1,
+	"UserGroups": "eFlorist Support - Tier 1",
+	"MenuEntries": [
+	{
+			 "id": 1,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Products & Messaging"	
+			},
+			{
+			 "id": 2,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Homepage Customization"	
+			},
+			{
+			 "id": 3,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Homepage Settings"	
+			},
+			{
+			 "id": 4,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Categories"	
+			},
+			{
+			 "id": 5,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Collections"	
+			},
+			{
+			 "id": 6,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Site Navigations"	
+			},
+			{
+			 "id": 7,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Category Settings"	
+			},
+			{
+			 "id": 8,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Sympathy Page"	
+			},
+			{
+			 "id": 9,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Products"	
+			},
+			{
+			 "id": 10,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Add-Ons"	
+			},
+			{
+			 "id": 11,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Product Page Settings"	
+			},                                          
+			{
+			 "id": 12,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "About Us"	
+			},
+			{
+			 "id": 13,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Help"	
+			},
+			{
+			 "id": 14,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Custom HTML Pages"	
+			},
+			{
+			 "id": 15,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Landing Page"	
+			},
+			{
+			 "id": 16,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Product Page"	
+			},
+			{
+			 "id": 17,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Galleries Page"	
+			},
+			{
+			 "id": 18,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Flowers Page"	
+			},                                             
+			{
+			 "id": 19,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Marketing Emails"	
+			},
+			{
+			 "id": 20,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Email Settings"	
+			},
+			{
+			 "id": 21,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Marketing Campaigns"	
+			},
+			{
+			 "id": 22,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Promotion Codes"	
+			},                                              
+			{
+			 "id": 23,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Footer Management"	
+			},
+			{
+			 "id": 24,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "About Us"	
+			},
+			{
+			 "id": 25,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Site Meta Tags"	
+			},
+			{
+			 "id": 26,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Social Media Setup"	
+			},                                          
+			{
+			 "id": 27,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Orders & Traffic"	
+			},
+			{
+			 "id": 28,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Source Codes"	
+			},
+			{
+			 "id": 29,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Promotion Codes"	
+			},
+			{
+			 "id": 30,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Top Products"	
+			},
+			{
+			 "id": 31,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Referrals"	
+			},
+			{
+			 "id": 32,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Find a Florist"	
+			},
+			{
+			 "id": 33,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Online Search"	
+			},
+			{
+			 "id": 34,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Order Lookup"	
+			},
+			{
+			 "id": 35,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Google Analytics"	
+			},                                           
+			{
+			 "id": 36,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "General Settings"	
+			},
+			{
+			 "id": 37,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "eSAT Administration"	
+			},
+			{
+			 "id": 38,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Email List Management"	
+			},
+			{
+			 "id": 39,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Store Locations"
+			},
+			{
+			 "id": 40,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Homepage Settings"	
+			},
+			{
+			 "id": 41,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Category Settings"	
+			},
+			{
+			 "id": 42,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Product Page Settings"	
+			},
+			{
+			 "id": 43,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Checkout Configuration"	
+			},
+			{
+			 "id": 44,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Customer Accounts"
+			},
+			{
+			 "id": 45,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Email Settings"	
+			},
+			{
+			 "id": 46,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Delivery Days & Times"	
+			},
+			{
+			 "id": 47,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Order Lookup"	
+			},
+			{
+			 "id": 48,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Drop Shipping Setup"	
+			},
+			{
+			 "id": 49,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Delivery Fees"	
+			},
+			{
+			 "id": 50,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Site Theme"
+			},
+			{
+			 "id": 51,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Image Management"	
+			}
+         
+       ]
+
+	},
+
+   {
+	"id": 2,
+	"UserGroups": "eFlorist Support - Tier 2",
+	"MenuEntries": [
+{
+			 "id": 1,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Products & Messaging"	
+			},
+			{
+			 "id": 2,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Homepage Customization"	
+			},
+			{
+			 "id": 3,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Homepage Settings"	
+			},
+			{
+			 "id": 4,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Categories"	
+			},
+			{
+			 "id": 5,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Collections"	
+			},
+			{
+			 "id": 6,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Site Navigations"	
+			},
+			{
+			 "id": 7,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Category Settings"	
+			},
+			{
+			 "id": 8,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Sympathy Page"	
+			},
+			{
+			 "id": 9,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Products"	
+			},
+			{
+			 "id": 10,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Add-Ons"	
+			},
+			{
+			 "id": 11,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Product Page Settings"	
+			},                                          
+			{
+			 "id": 12,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "About Us"	
+			},
+			{
+			 "id": 13,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Help"	
+			},
+			{
+			 "id": 14,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Custom HTML Pages"	
+			},
+			{
+			 "id": 15,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Landing Page"	
+			},
+			{
+			 "id": 16,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Product Page"	
+			},
+			{
+			 "id": 17,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Galleries Page"	
+			},
+			{
+			 "id": 18,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Flowers Page"	
+			},                                             
+			{
+			 "id": 19,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Marketing Emails"	
+			},
+			{
+			 "id": 20,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Email Settings"	
+			},
+			{
+			 "id": 21,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Marketing Campaigns"	
+			},
+			{
+			 "id": 22,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Promotion Codes"	
+			},                                              
+			{
+			 "id": 23,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Footer Management"	
+			},
+			{
+			 "id": 24,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "About Us"	
+			},
+			{
+			 "id": 25,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Site Meta Tags"	
+			},
+			{
+			 "id": 26,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Social Media Setup"	
+			},                                          
+			{
+			 "id": 27,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Orders & Traffic"	
+			},
+			{
+			 "id": 28,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Source Codes"	
+			},
+			{
+			 "id": 29,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Promotion Codes"	
+			},
+			{
+			 "id": 30,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Top Products"	
+			},
+			{
+			 "id": 31,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Referrals"	
+			},
+			{
+			 "id": 32,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Find a Florist"	
+			},
+			{
+			 "id": 33,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Online Search"	
+			},
+			{
+			 "id": 34,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Order Lookup"	
+			},
+			{
+			 "id": 35,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Google Analytics"	
+			},                                           
+			{
+			 "id": 36,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "General Settings"	
+			},
+			{
+			 "id": 37,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "eSAT Administration"	
+			},
+			{
+			 "id": 38,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Email List Management"	
+			},
+			{
+			 "id": 39,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Store Locations"
+			},
+			{
+			 "id": 40,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Homepage Settings"	
+			},
+			{
+			 "id": 41,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Category Settings"	
+			},
+			{
+			 "id": 42,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Product Page Settings"	
+			},
+			{
+			 "id": 43,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Checkout Configuration"	
+			},
+			{
+			 "id": 44,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Customer Accounts"
+			},
+			{
+			 "id": 45,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Email Settings"	
+			},
+			{
+			 "id": 46,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Delivery Days & Times"	
+			},
+			{
+			 "id": 47,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Order Lookup"	
+			},
+			{
+			 "id": 48,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Drop Shipping Setup"	
+			},
+			{
+			 "id": 49,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Delivery Fees"	
+			},
+			{
+			 "id": 50,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Site Theme"
+			},
+			{
+			 "id": 51,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Image Management"	
+			}
+       ]
+
+	},
+
+   {
+	"id": 3,
+	"UserGroups": "eFlorist Support - Administrator",
+	"MenuEntries": [{
+			 "id": 1,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Products & Messaging"	
+			},
+			{
+			 "id": 2,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Homepage Customization"	
+			},
+			{
+			 "id": 3,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Homepage Settings"	
+			},
+			{
+			 "id": 4,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Categories"	
+			},
+			{
+			 "id": 5,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Collections"	
+			},
+			{
+			 "id": 6,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Site Navigations"	
+			},
+			{
+			 "id": 7,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Category Settings"	
+			},
+			{
+			 "id": 8,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Sympathy Page"	
+			},
+			{
+			 "id": 9,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Products"	
+			},
+			{
+			 "id": 10,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Add-Ons"	
+			},
+			{
+			 "id": 11,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Product Page Settings"	
+			},                                          
+			{
+			 "id": 12,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "About Us"	
+			},
+			{
+			 "id": 13,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Help"	
+			},
+			{
+			 "id": 14,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Custom HTML Pages"	
+			},
+			{
+			 "id": 15,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Landing Page"	
+			},
+			{
+			 "id": 16,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Product Page"	
+			},
+			{
+			 "id": 17,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Galleries Page"	
+			},
+			{
+			 "id": 18,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Flowers Page"	
+			},                                             
+			{
+			 "id": 19,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Marketing Emails"	
+			},
+			{
+			 "id": 20,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Email Settings"	
+			},
+			{
+			 "id": 21,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Marketing Campaigns"	
+			},
+			{
+			 "id": 22,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Promotion Codes"	
+			},                                              
+			{
+			 "id": 23,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Footer Management"	
+			},
+			{
+			 "id": 24,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "About Us"	
+			},
+			{
+			 "id": 25,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Site Meta Tags"	
+			},
+			{
+			 "id": 26,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Social Media Setup"	
+			},                                          
+			{
+			 "id": 27,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Orders & Traffic"	
+			},
+			{
+			 "id": 28,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Source Codes"	
+			},
+			{
+			 "id": 29,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Promotion Codes"	
+			},
+			{
+			 "id": 30,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Top Products"	
+			},
+			{
+			 "id": 31,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Referrals"	
+			},
+			{
+			 "id": 32,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Find a Florist"	
+			},
+			{
+			 "id": 33,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Online Search"	
+			},
+			{
+			 "id": 34,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Order Lookup"	
+			},
+			{
+			 "id": 35,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Google Analytics"	
+			},                                           
+			{
+			 "id": 36,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "General Settings"	
+			},
+			{
+			 "id": 37,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "eSAT Administration"	
+			},
+			{
+			 "id": 38,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Email List Management"	
+			},
+			{
+			 "id": 39,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Store Locations"
+			},
+			{
+			 "id": 40,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Homepage Settings"	
+			},
+			{
+			 "id": 41,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Category Settings"	
+			},
+			{
+			 "id": 42,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Product Page Settings"	
+			},
+			{
+			 "id": 43,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Checkout Configuration"	
+			},
+			{
+			 "id": 44,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Customer Accounts"
+			},
+			{
+			 "id": 45,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Email Settings"	
+			},
+			{
+			 "id": 46,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Delivery Days & Times"	
+			},
+			{
+			 "id": 47,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Order Lookup"	
+			},
+			{
+			 "id": 48,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Drop Shipping Setup"	
+			},
+			{
+			 "id": 49,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Delivery Fees"	
+			},
+			{
+			 "id": 50,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Site Theme"
+			},
+			{
+			 "id": 51,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Image Management"	
+			}
+       ]
+
+	},
+
+   {
+	"id": 4,
+	"UserGroups": "Florist User - Full Access",
+	"MenuEntries": [
+{
+			 "id": 1,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Products & Messaging"	
+			},
+			{
+			 "id": 2,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Homepage Customization"	
+			},
+			{
+			 "id": 3,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Homepage Settings"	
+			},
+			{
+			 "id": 4,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Categories"	
+			},
+			{
+			 "id": 5,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Collections"	
+			},
+			{
+			 "id": 6,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Site Navigations"	
+			},
+			{
+			 "id": 7,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Category Settings"	
+			},
+			{
+			 "id": 8,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Sympathy Page"	
+			},
+			{
+			 "id": 9,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Products"	
+			},
+			{
+			 "id": 10,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Add-Ons"	
+			},
+			{
+			 "id": 11,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Product Page Settings"	
+			},                                          
+			{
+			 "id": 12,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "About Us"	
+			},
+			{
+			 "id": 13,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Help"	
+			},
+			{
+			 "id": 14,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Custom HTML Pages"	
+			},
+			{
+			 "id": 15,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Landing Page"	
+			},
+			{
+			 "id": 16,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Product Page"	
+			},
+			{
+			 "id": 17,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Galleries Page"	
+			},
+			{
+			 "id": 18,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Flowers Page"	
+			},                                             
+			{
+			 "id": 19,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Marketing Emails"	
+			},
+			{
+			 "id": 20,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Email Settings"	
+			},
+			{
+			 "id": 21,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Marketing Campaigns"	
+			},
+			{
+			 "id": 22,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Promotion Codes"	
+			},                                              
+			{
+			 "id": 23,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Footer Management"	
+			},
+			{
+			 "id": 24,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "About Us"	
+			},
+			{
+			 "id": 25,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Site Meta Tags"	
+			},
+			{
+			 "id": 26,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Social Media Setup"	
+			},                                          
+			{
+			 "id": 27,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Orders & Traffic"	
+			},
+			{
+			 "id": 28,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Source Codes"	
+			},
+			{
+			 "id": 29,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Promotion Codes"	
+			},
+			{
+			 "id": 30,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Top Products"	
+			},
+			{
+			 "id": 31,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Referrals"	
+			},
+			{
+			 "id": 32,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Find a Florist"	
+			},
+			{
+			 "id": 33,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Online Search"	
+			},
+			{
+			 "id": 34,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Order Lookup"	
+			},
+			{
+			 "id": 35,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Google Analytics"	
+			},                                           
+			{
+			 "id": 36,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "General Settings"	
+			},
+			{
+			 "id": 37,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "eSAT Administration"	
+			},
+			{
+			 "id": 38,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Email List Management"	
+			},
+			{
+			 "id": 39,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Store Locations"
+			},
+			{
+			 "id": 40,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Homepage Settings"	
+			},
+			{
+			 "id": 41,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Category Settings"	
+			},
+			{
+			 "id": 42,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Product Page Settings"	
+			},
+			{
+			 "id": 43,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Checkout Configuration"	
+			},
+			{
+			 "id": 44,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Customer Accounts"
+			},
+			{
+			 "id": 45,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Email Settings"	
+			},
+			{
+			 "id": 46,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Delivery Days & Times"	
+			},
+			{
+			 "id": 47,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Order Lookup"	
+			},
+			{
+			 "id": 48,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Drop Shipping Setup"	
+			},
+			{
+			 "id": 49,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Delivery Fees"	
+			},
+			{
+			 "id": 50,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Site Theme"
+			},
+			{
+			 "id": 51,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Image Management"	
+			}
+       ]
+
+	},
+
+   {
+	"id": 5,
+	"UserGroups": "Florist User - Site Manager",
+	"MenuEntries": [
+ {
+			 "id": 1,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Products & Messaging"	
+			},
+			{
+			 "id": 2,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Homepage Customization"	
+			},
+			{
+			 "id": 3,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Homepage Settings"	
+			},
+			{
+			 "id": 4,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Categories"	
+			},
+			{
+			 "id": 5,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Collections"	
+			},
+			{
+			 "id": 6,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Site Navigations"	
+			},
+			{
+			 "id": 7,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Category Settings"	
+			},
+			{
+			 "id": 8,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Sympathy Page"	
+			},
+			{
+			 "id": 9,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Products"	
+			},
+			{
+			 "id": 10,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Add-Ons"	
+			},
+			{
+			 "id": 11,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Product Page Settings"	
+			},                                          
+			{
+			 "id": 12,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "About Us"	
+			},
+			{
+			 "id": 13,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Help"	
+			},
+			{
+			 "id": 14,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Custom HTML Pages"	
+			},
+			{
+			 "id": 15,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Landing Page"	
+			},
+			{
+			 "id": 16,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Product Page"	
+			},
+			{
+			 "id": 17,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Galleries Page"	
+			},
+			{
+			 "id": 18,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Flowers Page"	
+			},                                             
+			{
+			 "id": 19,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Marketing Emails"	
+			},
+			{
+			 "id": 20,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Email Settings"	
+			},
+			{
+			 "id": 21,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Marketing Campaigns"	
+			},
+			{
+			 "id": 22,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Promotion Codes"	
+			},                                              
+			{
+			 "id": 23,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Footer Management"	
+			},
+			{
+			 "id": 24,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "About Us"	
+			},
+			{
+			 "id": 25,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Site Meta Tags"	
+			},
+			{
+			 "id": 26,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Social Media Setup"	
+			},                                          
+			{
+			 "id": 27,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Orders & Traffic"	
+			},
+			{
+			 "id": 28,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Source Codes"	
+			},
+			{
+			 "id": 29,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Promotion Codes"	
+			},
+			{
+			 "id": 30,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Top Products"	
+			},
+			{
+			 "id": 31,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Referrals"	
+			},
+			{
+			 "id": 32,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Find a Florist"	
+			},
+			{
+			 "id": 33,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Online Search"	
+			},
+			{
+			 "id": 34,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Order Lookup"	
+			},
+			{
+			 "id": 35,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Google Analytics"	
+			},                                           
+			{
+			 "id": 36,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "General Settings"	
+			},
+			{
+			 "id": 37,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "eSAT Administration"	
+			},
+			{
+			 "id": 38,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Email List Management"	
+			},
+			{
+			 "id": 39,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Store Locations"
+			},
+			{
+			 "id": 40,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Homepage Settings"	
+			},
+			{
+			 "id": 41,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Category Settings"	
+			},
+			{
+			 "id": 42,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Product Page Settings"	
+			},
+			{
+			 "id": 43,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Checkout Configuration"	
+			},
+			{
+			 "id": 44,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Customer Accounts"
+			},
+			{
+			 "id": 45,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Email Settings"	
+			},
+			{
+			 "id": 46,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Delivery Days & Times"	
+			},
+			{
+			 "id": 47,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Order Lookup"	
+			},
+			{
+			 "id": 48,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Drop Shipping Setup"	
+			},
+			{
+			 "id": 49,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Delivery Fees"	
+			},
+			{
+			 "id": 50,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Site Theme"
+			},
+			{
+			 "id": 51,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Image Management"	
+			}
+       ]
+
+	},
+	{
+	"id": 6,
+	"UserGroups": "Florist User - Consultant",
+	"MenuEntries": [
+{
+			 "id": 1,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Products & Messaging"	
+			},
+			{
+			 "id": 2,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Homepage Customization"	
+			},
+			{
+			 "id": 3,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Homepage Settings"	
+			},
+			{
+			 "id": 4,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Categories"	
+			},
+			{
+			 "id": 5,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Collections"	
+			},
+			{
+			 "id": 6,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Site Navigations"	
+			},
+			{
+			 "id": 7,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Category Settings"	
+			},
+			{
+			 "id": 8,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Sympathy Page"	
+			},
+			{
+			 "id": 9,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Products"	
+			},
+			{
+			 "id": 10,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Add-Ons"	
+			},
+			{
+			 "id": 11,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Product Page Settings"	
+			},                                          
+			{
+			 "id": 12,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "About Us"	
+			},
+			{
+			 "id": 13,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Help"	
+			},
+			{
+			 "id": 14,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Custom HTML Pages"	
+			},
+			{
+			 "id": 15,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Landing Page"	
+			},
+			{
+			 "id": 16,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Product Page"	
+			},
+			{
+			 "id": 17,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Galleries Page"	
+			},
+			{
+			 "id": 18,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Wedding Flowers Page"	
+			},                                             
+			{
+			 "id": 19,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Marketing Emails"	
+			},
+			{
+			 "id": 20,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Email Settings"	
+			},
+			{
+			 "id": 21,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Marketing Campaigns"	
+			},
+			{
+			 "id": 22,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Promotion Codes"	
+			},                                              
+			{
+			 "id": 23,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Footer Management"	
+			},
+			{
+			 "id": 24,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "About Us"	
+			},
+			{
+			 "id": 25,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Site Meta Tags"	
+			},
+			{
+			 "id": 26,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Social Media Setup"	
+			},                                          
+			{
+			 "id": 27,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Orders & Traffic"	
+			},
+			{
+			 "id": 28,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Source Codes"	
+			},
+			{
+			 "id": 29,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Promotion Codes"	
+			},
+			{
+			 "id": 30,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Top Products"	
+			},
+			{
+			 "id": 31,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Referrals"	
+			},
+			{
+			 "id": 32,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Find a Florist"	
+			},
+			{
+			 "id": 33,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Online Search"	
+			},
+			{
+			 "id": 34,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Order Lookup"	
+			},
+			{
+			 "id": 35,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Google Analytics"	
+			},                                           
+			{
+			 "id": 36,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "General Settings"	
+			},
+			{
+			 "id": 37,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "eSAT Administration"	
+			},
+			{
+			 "id": 38,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Email List Management"	
+			},
+			{
+			 "id": 39,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Store Locations"
+			},
+			{
+			 "id": 40,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Homepage Settings"	
+			},
+			{
+			 "id": 41,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Category Settings"	
+			},
+			{
+			 "id": 42,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Product Page Settings"	
+			},
+			{
+			 "id": 43,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Checkout Configuration"	
+			},
+			{
+			 "id": 44,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Customer Accounts"
+			},
+			{
+			 "id": 45,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Email Settings"	
+			},
+			{
+			 "id": 46,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Delivery Days & Times"	
+			},
+			{
+			 "id": 47,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Order Lookup"	
+			},
+			{
+			 "id": 48,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Drop Shipping Setup"	
+			},
+			{
+			 "id": 49,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Manage Delivery Fees"	
+			},
+			{
+			 "id": 50,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Site Theme"
+			},
+			{
+			 "id": 51,
+			 "PermissionsActiveStatus": true,
+			 "MenuName": "Image Management"	
+			}
+       ]
+
+	}
+
+]

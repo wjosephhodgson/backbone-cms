@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name":"Flower Color 1",
+    "url":"http://www.telefloramarketing.com/mock/flower-colors-5.jpg",
+    "type":"image/jpeg",
+    "global":true
+  },
+  {
+    "id": 2,
+    "name":"Flower Color 2",
+    "url":"http://www.telefloramarketing.com/mock/flower-colors-2.jpg",
+    "type":"image/jpeg",
+    "global":true
+  },
+  {
+    "id": 3,
+    "name":"Flower Color 3",
+    "url":"http://www.telefloramarketing.com/mock/flower-colors-3.jpg",
+    "type":"image/jpeg",
+    "global":true
+  },
+  {
+    "id": 4,
+    "name":"Flower Color 4",
+    "url":"http://www.telefloramarketing.com/mock/flower-colors-4.jpg",
+    "type":"image/jpeg",
+    "global":true
+  }
+]

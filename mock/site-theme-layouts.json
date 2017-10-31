@@ -1,0 +1,116 @@
+[
+	{
+		"id": 1,
+		"name":"Theme1",
+		"imgUrl":"http://placehold.it/130x130/",
+		"colorSchemes":[
+			{
+				"id": 1,
+				"name":"Red",
+				"imgUrl":"http://placehold.it/130x130/ff0000/000000"
+			},
+			{
+				"id": 2,
+				"name":"Orange",
+				"imgUrl":"http://placehold.it/130x130/ff9900/000000"
+			},
+			{
+				"id": 3,
+				"name":"Yellow",
+				"imgUrl":"http://placehold.it/130x130/ffff00/000000"
+			}
+
+		]
+	},
+
+	{
+		"id": 2,
+		"name":"Theme2",
+		"imgUrl":"http://placehold.it/130x130/",
+		"colorSchemes":[
+			{
+				"id": 1,
+				"name":"Green",
+				"imgUrl":"http://placehold.it/130x130/00ff00/000000"
+			},
+
+			{
+				"id": 2,
+				"name":"Blue",
+				"imgUrl":"http://placehold.it/130x130/0000ff/000000"
+			},
+
+			{
+				"id": 3,
+				"name":"Purple",
+				"imgUrl":"http://placehold.it/130x130/6600cc/000000"
+			}
+		]
+	},
+
+	{
+		"id": 3,
+		"name":"Theme3",
+		"imgUrl":"http://placehold.it/130x130/",
+		"colorSchemes":[
+			{
+				"id": 1,
+				"name":"Red",
+				"imgUrl":"http://placehold.it/130x130/ff0000/000000"
+			},
+
+			{
+				"id": 2,
+				"name":"Orange",
+				"imgUrl":"http://placehold.it/130x130/ff9900/000000"
+			},
+
+			{
+				"id": 3,
+				"name":"Yellow",
+				"imgUrl":"http://placehold.it/130x130/ffff00/000000"
+			},
+
+			{
+				"id": 4,
+				"name":"Green",
+				"imgUrl":"http://placehold.it/130x130/00ff00/000000"
+			},
+
+			{
+				"id": 5,
+				"name":"Blue",
+				"imgUrl":"http://placehold.it/130x130/0000ff/000000"
+			},
+
+			{
+				"id": 6,
+				"name":"Purple",
+				"imgUrl":"http://placehold.it/130x130/6600cc/000000"
+			}
+		]
+	},
+
+	{
+		"id": 4,
+		"name":"Seasonal",
+		"imgUrl":"http://placekitten.com/g/275/275",
+		"colorSchemes":[
+			{
+				"id": 1,
+				"name":"Valentine's",
+				"imgUrl":"http://placekitten.com/g/300/300"
+			},
+			{
+				"id": 2,
+				"name":"Thanksgiving",
+				"imgUrl":"http://placekitten.com/g/325/325"
+			},
+			{
+				"id": 3,
+				"name":"Christmas",
+				"imgUrl":"http://placekitten.com/g/350/350"
+			}
+		]
+	}
+]

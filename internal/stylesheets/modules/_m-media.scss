@@ -1,0 +1,152 @@
+.m-media {
+  .m-about-sidebar {
+    margin-top: 2em;
+    padding: 0.5em;
+  }
+  .m-sidebar-nav-desktop > .m-sidebar-nav-list {
+    margin-bottom: 2em;
+  }
+}
+
+.m-media-category-breadcrumb {
+  display: none;
+}
+
+.m-media-content {
+  @include desktop {
+    width: 75% !important;
+  }
+}
+
+
+.m-media-content-header {
+  @include mobile {
+    font-size: em(21px);
+    padding: 0.5em 0 0.666em;
+  }
+
+  @include desktop {
+    font-size: em(24px);
+    padding-top: 0;
+    padding-bottom: 0.5em;
+    border: none;
+  }
+}
+
+.m-media-content-items {
+  border-top: 1px solid $accent-grey;
+
+  &.viewing-single {
+    border: none;
+  }
+}
+
+.m-media-item-breadcrumb {
+  display: none;
+}
+
+.m-media-content-item {
+  display: block;
+  clear: both;
+  padding: 1em 0;
+  border-bottom: 1px solid $accent-grey;
+
+  &.viewing-single{
+    padding-top:0;
+  }
+
+  .m-media-content-item-date {
+    @include mobile {
+      padding-top: 0.75em;
+    }
+  }
+}
+
+.m-media-content-item-category {
+  @include mobile {
+    width: 49% !important;
+  }
+
+  @include desktop {
+    width: 100% !important;
+    margin-top: 0.5em;
+  }
+
+  .btn {
+    padding: 1em 0.5em;
+    margin-right: 0;
+    letter-spacing: normal;
+  }
+}
+.m-media-content-item-header {
+  margin-bottom: 0.5em;
+}
+
+.m-media-page-header {
+  font-size: em(24px);
+  margin-bottom: 0.5em;
+  padding-top: 0;
+  padding-bottom: 0.5em;
+  text-align: left;
+
+  @include mobile {
+    padding: 0;
+    text-align: center;
+  }
+}
+
+.m-media-content-item-inner {
+  @include desktop {
+    padding-right: 1em;
+  }
+}
+
+.m-media-content-item-full-content {
+  //display: none;
+  .m-media-content-item-text {
+    margin-bottom: 0.666em;
+  }
+}
+
+.m-media-content-item-actions {
+  margin-top: 0.666em;
+}
+.m-media-read-more {
+  font-size: em(15px);
+  cursor: pointer;
+}
+
+.m-media-content-item-media {
+  width: 100%;
+  position: relative;
+  height: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+  @include mobile {
+    display: block;
+    text-align: center;
+    background-color: whitesmoke;
+
+    img, iframe {
+      display: block;
+      margin: 0 auto;
+      border: none;
+    }
+  }
+
+  @media screen and (max-width: 500px){
+    img, iframe {
+      width: 100%;
+    }
+  }
+}
+
+.m-media-content-sidebar {
+  @include desktop {
+    float: right !important;
+  }
+}
+.m-about-sidebar-header {
+  padding-bottom: 0.25em;
+}

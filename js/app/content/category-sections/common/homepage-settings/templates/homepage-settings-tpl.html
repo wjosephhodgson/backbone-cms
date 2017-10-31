@@ -1,0 +1,132 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Homepage Settings</h2>
+			<button type="button" id="save-btn" class="btn btn-submit pull-right">Save Changes</button>
+			<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+		</div>
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+
+<div class="row row-spaced">
+	<div class="col-12">
+		Use this page to manage the settings of your homepage. Select the layout you want to use, choose how many products you want to feature, and more!
+	</div>
+</div>
+
+<div class="row row-spaced panel">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Homepage Layout</div>
+		</div>
+	</div>
+
+	<div id="homepage-layout-container" class="row row-spaced"></div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="panel-title">Homepage Featured Items</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced form-section">
+		<div class="col-12">
+			<div class="row">
+				<div class="col-4 form-section">
+					<label for="f-featured-item-count">Featured Item Count</label><i class="icon icon-tool-tip x-space-s" title="Select how many items you'd like to feature on your homepage."></i>
+					<div class="select-container">
+				    <select id="f-featured-item-count" name="f-featured-item-count">
+				        <option selected disabled hidden value="<%= featuredItemCount %>"><%= featuredItemCount %></option>
+				        <% for(var i = 0, j = activeLayout.suggestedNumber; i < j; ++i) { %>
+				        <option value="<%= i + 1 %>"><%= i + 1 %></option>
+				        <% } %>
+				    </select>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="label">Suggested Number of Items<i class="icon icon-tool-tip x-space-s" id="featured-products-number-text" title=""></i></div>
+					<div id="suggested-count-display" class="y-space-s btn btn-other text-2x center-align"><%= activeLayout.suggestedNumber %></div>
+				</div>
+				<div class="col-4">
+					<div class="label">Maximum Number of Items<i class="icon icon-tool-tip x-space-s" title="This is the maximum number of items you can feature on your homepage with the layout you selected."></i></div>
+					<div id="max-count-display" class="y-space-s btn btn-other text-2x center-align"><%= activeLayout.maxNumber %></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Homepage Product Settings</div>
+		</div>
+	</div>
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<div class="label">Use Transparent Background Images When Available <i class="icon icon-tool-tip x-space-s" title="If this is ON, homepage products will use .png images for those products if they exist. If OFF, those products will use the .jpg files which have faster load times." class="icon icon-tool-tip x-space-s"></i></div>
+			<input <%= transparent ? 'checked' : '' %> type="checkbox" id="f-transparent" name="f-transparent" class="on-off-switch" />
+			<label for="f-transparent" class="on-off-switch-label">
+			    <div class="on-off-switch-state">on</div>
+			</label>
+		</div>
+	</div>	
+
+</div>
+
+<div class="row row-spaced panel">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Homepage Footer Text<i class="icon icon-tool-tip x-space-s" title="Not sure about our default homepage footer? You can write your own footer here!" class="icon icon-tool-tip x-space-s"></i></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-12 form-section">
+			<textarea class="size-2" name="f-homepage-footer-text" id="f-homepage-footer-text"><%= homepageFooterText %></textarea>
+		</div>
+	</div>
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<div class="label">Display Default SEO Text</div>
+			<input <%= defaultFooter ? 'checked' : '' %> type="checkbox" id="f-defaultFooter" name="f-defaultFooter" class="on-off-switch" />
+			<label for="f-defaultFooter" class="on-off-switch-label">
+			    <div class="on-off-switch-state">on</div>
+			</label>
+		</div>
+	</div>	
+</div>
+
+<div class="row row-spaced panel">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Homepage Personalization</div>
+		</div>
+	</div>
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<div class="label">Enable Personalization <i class="icon icon-tool-tip x-space-s" title="Enable Homepage Personalization to personalize your homepage for your registered shoppers." class="icon icon-tool-tip x-space-s"></i></div>
+			<input <%= personalization ? 'checked' : '' %> type="checkbox" id="f-personalization" name="f-personalization" class="on-off-switch" />
+			<label for="f-personalization" class="on-off-switch-label">
+			    <div class="on-off-switch-state">on</div>
+			</label>
+		</div>
+	</div>	
+</div>

@@ -1,0 +1,315 @@
+<div class="row row-spaced">
+  <div class="col-12">
+    <div class="section-title">
+      <h2 class="pull-left">Edit Deal of the Day</h2>
+      <div class="btn-panel">
+		<button type="button" id="reset-btn" class="btn btn-other">Reset</button>
+        <button type="button" id="save-btn" class="btn btn-submit pull-right">Save Changes</button>
+        <!-- <div class="togglePanel"> -->
+			
+		<!-- </div> -->
+        <div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row row-spaced">
+	<div class="col-12">
+		Use this page to manage your Deal of the Day (florist choice) product. You can specify the images that will appear to adjust the look and feel of your Deal of the Day page as well as change other settings such as merchandised categories.
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row row-spaced panel form-section">
+	<div class="panel-title">
+		Product Details
+	</div> 
+	<div class="row row-spaced">
+		<div class="col-4">
+			<label for="f-name">Name<i class="icon icon-tool-tip x-space-s" title="You can use this field to override the product name if you do not wish to use the default name of Deal of the Day."></i></label>
+			<input type="text" id="f-name" name="f-name" value="<%= name %>">
+		</div>
+		<div class="col-4">
+			<label for="f-number">Item Number<i class="icon icon-tool-tip x-space-s" title="This is the product's unique ID number."></i></label>
+			<input type="text" id="f-number" number="f-number" value="<%= number %>" disabled>
+		</div>
+		<div class="col-2">
+			<label for="f-status">Active<i class="icon icon-tool-tip x-space-s" title="Turning this OFF will disable the Deal of the Day product so that your customers will not be able to purchase it."></i></label>
+			<input <%= status ? 'checked' : '' %> type="checkbox" id="f-status" name="f-status" class="on-off-switch" />
+			<label for="f-status" class="on-off-switch-label">
+			<div class="on-off-switch-state">on</div>
+			</label>
+		</div>
+	</div>
+</div>
+
+
+<div class="row row-spaced">
+	<div class="col-12">
+		<div id="tabs">
+			<ul class="clearfix">
+				<li class="col-3"><a class="center-align fill-container-width" href="#productinfo">Product Info &amp; Images</a></li>
+				<li class="col-3"><a class="center-align fill-container-width" href="#add-ons">Add-Ons</a></li>
+				<li class="col-3"><a class="center-align fill-container-width" href="#categories">Categories</a></li>
+				<li class="col-3"><a class="center-align fill-container-width" href="#settings">Settings</a></li>
+			</ul>
+
+			<div id="productinfo">
+
+
+             <div class="row panel alert-panel hidden-alt">
+
+                <div class="col-12 y-space-bottom-xxl">
+
+                  <div class="row">
+                    <div class="col-1">
+                      <div class="icon icon-3x icon-warning"></div>
+
+                    </div>
+
+                <div class="col-11 alert-text left-align">
+                      You have uploaded an invalid image file.  Please upload image files that have
+                      extensions '.gif', '.jpg', '.jpeg', '.bmp' or '.png'.
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+
+
+
+
+				<div class="row row-spaced form-section">
+					<div class="col-12">
+						<div class="panel-title dotdpaneltitle">
+							Product Images
+						</div>
+					</div>
+				</div>	
+		
+				<div class="row row-spaced form-section">
+					<div class="col-3">
+						<label for="f-background-image">Background Image<i class="icon icon-tool-tip x-space-s" title="Use the button below to change the page's Background Image."></i></label>
+						<button type="button" id="f-background-image-btn" class="image-upload icon icon-btn icon-image icon-3x y-space-s"></button>
+					</div>
+					<div class="col-3 Upload-Logo-Div">
+					     <label for="f-background-image">Background Preview<i class="icon icon-tool-tip x-space-s" title="This is the large background image which will appear at the top of your Deal of the Day product page."></i></label>
+                           <img id="f-background-image" class="y-space-top-s center-align small-dotd-image" src="<%= backgroundImage %>" alt="">
+					</div>		
+				</div>
+
+				<div class="row row-spaced form-section">
+					<div class="col-3 image-section">
+
+						<div class="label">Product Image<i class="icon icon-tool-tip x-space-s" title="Use the button below to change the page's Product Image."></i></div>
+
+						<button type="button" id="f-image-url-1" class="icon icon-btn icon-image btn-file icon-3x y-space-s">
+							<input id="upload-product-Image-logo" name="upload-product-Image-logo" type="file" accept="image/*"/>
+						</button>
+
+                        
+					</div>
+
+					<div class="col-3 Upload-Logo-Div">
+					     <label for="f-product-image">Product Image Preview<i class="icon icon-tool-tip x-space-s" title="This is the product image for your Deal of the Day product. It will be shown on the Deal of the Day page as well as any other pages where it is merchandised such as categories."></i></label>
+                           <img id="f-product-image" class="y-space-top-s center-align small-dotd-image" src="<%= productImage %>" alt="">
+					</div>					
+				</div>
+
+				<div class="row">
+					<div class="col-12">
+						<div class="panel-title clearfix">
+							<div class="y-space-top-m pull-left">Price Points</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row row-spaced panel alert-panel hidden-alt" id="sku-alert">
+					<div class="col-12">
+						<div class="row">
+							<div class="col-1">
+								<div class="icon icon-4x icon-warning"></div>
+							</div>
+							<div class="col-11 alert-text">
+							You are allowed a maximum of 6 Price Points per product
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row row-spaced panel alert-panel hidden" id="pricepoint-alert">
+					<div class="col-12">
+						<div class="row">
+							<div class="col-1">
+								<div class="icon icon-3x icon-warning"></div>
+							</div>
+							<div class="col-11 alert-text">
+								You must have at least one price point
+							</div>
+						</div>
+					</div>
+				</div>	
+
+				<div id="sku-list"></div>
+
+				<div class="row">
+					<div class="col-12">
+						<div class="panel-title clearfix">
+							<div class="y-space-top-m pull-left">Product Information</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row row-spaced">
+					<div class="col-12">
+					  	<div class="form-section">
+							<label for="f-description">Product Description</label><i title="You can specify descriptive text here for your Deal of the Day product which will be shown on the Deal of the Day page." class="icon icon-tool-tip x-space-s"></i>
+							<textarea  name="f-description" id="f-description" class="size-3"><%= description %></textarea>
+					  	</div>
+				  	</div>
+			  	</div>
+
+				<!-- Start of SEO Information -->
+		        <div class="panel form-section row row-spaced">
+				  <div class="row">
+				    <div class="col-12">
+				      <div class="panel-title"><i class="icon icon-closed x-space-s" id="optional"></i>SEO Information (optional)</div>
+				    </div>
+				  </div>
+
+				  <div id="accordion">
+
+				    <div class="row row-spaced">
+				      <div class="col-12 form-section">
+				        <label for="f-meta-title">Page &#60;title&#62;</label><i class="icon icon-tool-tip x-space-s" title="This is the text displayed in the tab at the top of your browser window."></i>
+				        <input type="text" id="f-meta-title" name="f-meta-title" value="<%= metaTitle %>">
+				      </div>
+				    </div>
+
+				    <div class="row row-spaced">
+				      <div class="col-6 form-section">
+				        <label for="f-meta-keywords">Meta Keywords</label><i class="icon icon-tool-tip x-space-s" title="This area allows you to enter a few comma separated keywords that describe your page."></i>
+				        <textarea name="f-meta-keywords" id="f-meta-keywords" class="size-2 "><%= metaKeywords %></textarea>
+				      </div>
+
+				      <div class="col-6 form-section">
+				          <label for="f-meta-desc">Meta Description</label><i title="This is the text shown on search engines for your page and should consist of short clear sentences." class="icon icon-tool-tip x-space-s"></i>
+				          <textarea name="f-meta-desc" id="f-meta-desc" class="size-2 "><%= metaDescription %></textarea>
+				      </div>
+				    </div>
+
+				    <div class="row row-spaced">
+				      <div class="col-12 form-section">
+				          <label for="f-meta-tags">Additional Tags</label><i title="This area is for any additional meta tags that may be used for tracking or other purposes that you would like in the page &lt;head&gt;." class="icon icon-tool-tip x-space-s"></i>
+				          <textarea name="f-meta-tags" id="f-meta-tags" class="size-2 "><%= metaTags %></textarea>
+				          <div class="row"><div class="col-12">Please include the full HTML (such as &lt;meta&gt;) in the Additional Tags field.</div></div>
+				      </div>
+				    </div>
+				  
+				  </div>
+
+				</div>
+		        <!-- End of SEO Information -->  
+
+
+			</div><!-- End of productinfo -->
+
+
+			<!-- Start of Add-Ons Tab -->
+			<div id="add-ons">
+				<div class="row">
+					<div class="col-12">
+						<div id="addons-container"></div>
+					</div>
+				</div>
+			</div>
+			<!-- End of Addons Tab -->
+
+			<!-- Start of Categories Tab -->
+			<div id="categories">
+
+				<div class="row">
+					<div class="col-12">
+						<div class="panel-title">
+							Product Categories
+						</div>
+					</div>
+				</div>
+
+				<div class="row row-spaced">
+					<div class="col-12">
+						<div id="categories-container"></div>
+					</div>
+				</div>
+
+			</div>
+			<!-- End of Categories Tab -->
+			
+			<!-- Start of Settings Tab -->
+			<div id="settings">
+				<div class="row row-spaced form-section">
+					<div class="col-12">
+						<div class="panel-title">
+							Delivery
+						</div>
+					</div>
+				</div>
+				<div class="row row-spaced form-section">
+					<div class="col-4">
+						<div class="label">In Store Pickup Only<i title="If this setting is ON, your customers will not be able to specify a delivery address for the product and must pick it up in your store." class="icon icon-tool-tip x-space-s"></i></div>
+						<input <%= inStorePickupActive ? 'checked' : '' %> type="checkbox" id="f-inStorePickup" name="f-inStorePickup" class="on-off-switch" />
+						<label for="f-inStorePickup" class="on-off-switch-label">
+						<div class="on-off-switch-state">on</div>
+						</label>
+					</div>
+				</div>
+				<div class="row row-spaced form-section">
+					<div class="col-12">
+						<div class="panel-title">
+							Others
+						</div>
+					</div>
+				</div>
+				<div class="row row-spaced form-section">
+					<div class="col-4">
+						<div class="label">Tax Free<i title="If this setting is turned ON, the price of this product will not be included in orders when calculating sales tax at the end of the order." class="icon icon-tool-tip x-space-s"></i></div>
+						<input <%= taxFreeActive ? 'checked' : '' %> type="checkbox" id="f-taxFree" name="f-taxFree" class="on-off-switch" />
+						<label for="f-taxFree" class="on-off-switch-label">
+						<div class="on-off-switch-state">on</div>
+						</label>
+					</div>
+					<div class="col-4 form-section select-container">
+						<div class="label">Merchandising Icon<i title="You may specify a Merchandising Icon here such as Bestseller or New to market this product further." class="icon icon-tool-tip x-space-s"></i></div>
+						<select name="f-merchandisingHighlights" id="f-merchandisingHighlights">
+					    	<option selected id="All" value="All"><%= merchandisingHighlight %></option>
+					    	<option id="one" value="One">One</option>
+					    	<option id="two" value="Two">Two</option>
+					    	<option id="three" value="Three">Three</option>
+					    	<option id="four" value="Four">Four</option>
+						</select>				
+					</div>
+				</div>
+			</div>
+			<!-- End of Settings Tab -->
+		</div>
+	</div>
+</div>
+
+
+

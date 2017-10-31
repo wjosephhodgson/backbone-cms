@@ -1,0 +1,44 @@
+[
+	{
+		"id": 1,
+		"name":"BestSeller",
+		"url":"/images/mock/merchandising-Icons/BestSeller.jpg",
+		"type":"image/jpg",
+	    "global":false
+	},
+	{
+		"id": 2,
+		"name":"Hot",
+		"url":"/images/mock/merchandising-Icons/Hot.jpg",
+		"type":"image/jpg",
+	    "global":false
+	},
+	{
+		"id": 3,
+		"name":"LoveRocksSweepstak",
+		"url":"/images/mock/merchandising-Icons/LoveRocksSweepstak.jpg",
+		"type":"image/jpg",
+	    "global":false
+	},
+	{
+		"id": 4,
+		"name":"nba0",
+		"url":"/images/mock/merchandising-Icons/nba0.jpg",
+		"type":"image/jpg",
+	    "global":false
+	},
+	{
+		"id": 5,
+		"name":"New",
+		"url":"/images/mock/merchandising-Icons/New.jpg",
+		"type":"image/jpg",
+	    "global":false
+	},
+	{
+		"id": 6,
+		"name":"SoldOut",
+		"url":"/images/mock/merchandising-Icons/SoldOut.jpg",
+		"type":"image/jpg",
+	    "global":false
+	}
+]

@@ -1,0 +1,136 @@
+<div class="row row-spaced">
+    <div class="col-12">
+        <div class="clearfix section-title">
+            <h2 class="pull-left">Custom Delivery Fee By City</h2>
+            <div class="btn-panel">
+                <button type="button" id="cancel-btn" class="btn btn-other">Cancel</button>
+                <button type="button" id="continue-btn" class="btn btn-submit">Continue</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel hidden">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-1">
+                <div class="icon icon-3x icon-warning"></div>
+            </div>
+            <div class="col-11 alert-text">
+                Alert area placeholder.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-12 left-align">
+                <p>Select the city you want to create a custom delivery fee for.</p>
+            </div>
+        </div>
+
+        <div class="row row-spaced">
+            <div class="col-6 form-section">
+                <label for="f-country">Country</label>
+                <div class="select-container">
+
+                 <select id="f-country" name="f-country">
+                     <option selected disabled hidden value="<%= country %>"><%= country %></option>
+
+                     <option value="United States">United States</option>
+                     <option value="Canada">Canada</option>
+             </select>
+                </div>
+            </div>
+
+            <div class="col-6 form-section">
+             <label id="stateProvinceLabel" for="f-state"><%= country === "United States" ? "State" : "Province" %></label>
+                <div class="select-container">
+                   <select id="f-state" name="f-state">
+                   
+        <option selected disabled hidden value="<%= state %>"><%= state %></option>
+            <% if (country === 'United States') { %>
+                    <% for(var i = 0, j = stateList.length; i < j; ++i) { %>
+                <% if(stateList[i].type === 'state') { %>
+                    <option value="<%= stateList[i].value %>" class="<%= stateList[i].type %>">
+            <%= stateList[i].name %>
+            </option>
+                <% } %>
+            <% } %>
+                <% for(i = 0, j = stateList.length; i < j; ++i) { %>
+                        <% if(stateList[i].type !== 'state') { %>
+                <option hidden value="<%= stateList[i].value %>" class="<%= stateList[i].type %>">
+                        <%= stateList[i].name %>
+                </option>
+                    <% } %>
+                    <% } %>
+                <% } else { %>
+                        <% for(var i = 0, j = stateList.length; i < j; ++i) { %>
+                            <% if(stateList[i].type !== 'state') { %>
+                    <option value="<%= stateList[i].value %>" class="<%= stateList[i].type %>">
+                        <%= stateList[i].name %>
+                    </option>
+                        <% } %>
+                        <% } %>
+<% for(i = 0, j = stateList.length; i < j; ++i) { %>
+            <% if(stateList[i].type === 'state') { %>
+                    <option hidden value="<%= stateList[i].value %>" class="<%= stateList[i].type %>">
+                    <%= stateList[i].name %>
+                </option>
+                <% } %>
+                <% } %>
+                <% } %>
+                    </select>
+                </div>      
+            </div>
+        </div>
+
+        <div class="row row-spaced">
+           
+                    <div class="col-6">
+                        <div class="form-section">
+                            <label for="f-city">Search for City</label><i class="icon icon-tool-tip x-space-s" title="???"></i>
+                            <div>
+                                <input type="text" id="f-city" name="f-city" value="<%= city %>">
+                            </div>
+                        </div>                    
+                        <div class="">
+                            <button type="button" class="btn btn-other city-search-btn" id="search-btn">Lookup</button>
+                        </div>
+                    </div>
+
+
+                    <div class="col-6">
+                        <table id="city-search-table" class="table-list left-align clickable-search-results">
+                          <thead>
+                            <tr class="highlighted">
+                              <th class="col-4">City Search Result</th>
+                            </tr>
+                          </thead>
+                          <tbody id="search-results"></tbody>
+                        </table>
+                    </div>  
+            
+        </div>
+    </div>
+</div>    

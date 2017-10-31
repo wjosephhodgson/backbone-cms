@@ -1,0 +1,107 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Customer Accounts Management</h2>
+			<div class="btn-panel">
+				<button type="button" id="cancel-btn" class="btn btn-other">Cancel</button>
+				<button type="button" id="save-btn" class="btn btn-submit">Save</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+		<div class="y-space-top-xs"> Use this section to view your customers' information </div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row row-spaced panel">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Customer Accounts Settings</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced form-section y-space-top-xl">
+		<div class="col-5">
+			<label for="f-facebook-label2">Website's Facebook App ID</label><i class="icon icon-tool-tip x-space-s" title="You can specify your Facebook app ID here."></i>
+			<input type="text" id="f-facebookApp" name="f-facebook-label" value="<%= FacebookAppId %>">
+		</div>
+
+		<div class="col-3">
+			<div class="label">Order Tracking <i title="Use this setting to enable or disable order tracking for your customers' accounts." class="icon icon-tool-tip x-space-s"></i></div>
+			<input <%= OrderTrackingActive ? 'checked' : '' %> type="checkbox" id="f-orderTracking-active" name="f-orderTracking-active" class="on-off-switch" />
+			<label for="f-orderTracking-active" class="on-off-switch-label">
+			    <div class="on-off-switch-state">on</div>
+			</label>
+		</div>
+
+		<div class="col-3">
+			<div class="label">Provide Statement <i title="You can use this setting to enable or disable statements from being provided for your customer accounts." class="icon icon-tool-tip x-space-s"></i></div>
+			<input <%= ProvideStatementActive ? 'checked' : '' %> type="checkbox" id="f-statement-active" name="f-statement-active" class="on-off-switch" />
+			<label for="f-statement-active" class="on-off-switch-label">
+			    <div class="on-off-switch-state">on</div>
+			</label>
+		</div>
+
+ 	</div>
+</div>
+
+
+<div class="row row-spaced panel">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Customer Accounts List</div>
+		</div>
+	</div>
+
+	<div class="row y-space-top-xl y-space-bottom-l">
+		<div class="col-12">
+			<div class="btn-panel pull-left">
+				<button type="button" class="fileUpload btn btn-Boostrap btn-primary">
+					<span><i class="icon icon-add icon-lg"></i>  UPLOAD NEW LIST</span>
+					<input type="file" class="upload" />
+				</button>
+				<button id="download-list-btn" type="button" class="btn btn-submit ">
+					<i class="icon icon-export"></i>DOWNLOAD LIST
+				</button> 
+				<button type="button" id="sample-file-btn" class="btn btn-other">SAMPLE FILE</button>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="row x-space-m">
+	   <div class="col-12 y-space-bottom-l">
+			<p>Upload File should contain the following 3 fields: </p>
+			<p> - First Name </p>
+			<p> - Last Name </p>
+			<p> - Email </p>
+
+			<p> Optional Fields in the file: </p>
+			<p> - Address1 </p>
+			<p> - Address2 </p>
+			<p> - City </p>
+			<p> - State </p>
+			<p> - Zip code </p>
+			<p> - Country  </p>
+			<p> - Phone  </p>
+			<p> - Opt-in status (Yes/No)
+	   </div>
+	</div>
+</div>

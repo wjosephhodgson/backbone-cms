@@ -1,0 +1,69 @@
+//scss file for the interactive rating stars
+// Downloaded and adapted from: http://plugins.learningjquery.com/half-star-rating/
+
+.rating {
+  cursor: pointer;
+  margin: 0em 0em 0em 0em;
+  clear: both;
+  display: block;
+
+  &:after {
+    content: '.';
+    display: block;
+    height: 0;
+    width: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+.star {
+  float: left;
+  width: 17px;
+  height: 16px;
+  overflow: hidden;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+
+.star-left, .star-right {
+  //this is used for half values, half stars
+  width: 8px;
+}
+
+.star {
+  background: url(../images/rating/star.png) no-repeat 0 0px;
+  a {
+    background: url(../images/rating/star.png) no-repeat 0 0px;
+  }
+}
+
+.star-left {
+  background: url(../images/rating/star-left.png) no-repeat 0 0px;
+  a {
+    background: url(../images/rating/star-left.png) no-repeat 0 0px;
+  }
+}
+
+.star-right {
+  background: url(../images/rating/star-right.png) no-repeat 0 0px;
+  a {
+    background: url(../images/rating/star-right.png) no-repeat 0 0px;
+  }
+}
+
+.star a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-position: 0 0px;
+}
+
+div.rating div {
+  &.on a {
+    background-position: 0 -16px;
+  }
+  &.hover a, a:hover {
+    background-position: 0 -32px;
+  }
+}

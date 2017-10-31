@@ -1,0 +1,99 @@
+<form id="create-edit-form" class="form-section">
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="section-title clearfix">
+			<h2 class="pull-left"><% if (id) { %>Edit <%= searchTerm %><% } else { %>Add New<% } %></h2>
+			<div class="btn-panel">
+				<button type="button" id="save-btn" class="btn btn-submit pull-right">Save</button>
+		        <button type="button" id="cancel-btn"class="btn btn-other">Cancel</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced">
+	<div class="col-12">
+		Build your own search terms, and when a customer uses one that matches, you can control the banner or page that is shown. 
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row panel alert-panel">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-1">
+				<div class="icon icon-3x icon-warning"></div>
+			</div>
+			<div class="col-11 alert-text">
+				This is a generic placeholder for error messages in eSAT. <br>
+				In the live app, this will be a real message and will be hidden by default.
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row-spaced panel">
+	<div class="row row-spaced form-section">
+		<div class="col-4 form-section">
+			<div class="switch-input-switch">
+				<div class="label">Search Term Status<i title="If you do not wish to display a special banner on your search results page, or redirect users to selected landing pages, you can choose to turn this functionality off." class="icon icon-tool-tip x-space-s"></i></div>
+				<input <%= searchActiveStatus ? 'checked' : '' %> type="checkbox" id="f-searchActiveStatus" name="f-searchActiveStatus" class="on-off-switch"/>
+				<label for="f-searchActiveStatus" class="on-off-switch-label">
+					<div class="on-off-switch-state">on</div>
+				</label>
+			</div>
+		</div>
+		<div class="col-6 form-section">
+			<label for="f-searchTerm">Search Term</label><i class="icon icon-tool-tip x-space-s" title="Enter the specific search term you want to have special options such as a banner image or landing page link for here."></i>
+		    <input type="text" id="f-searchTerm" name="f-searchTerm" value="<%= searchTerm %>" <%= type === "Custom" ? '' : 'disabled' %>>
+		</div>
+	</div>
+
+	<div class="row row-spaced form-section">
+		<div class="col-4 form-section">
+			<label for="f-landingPageOrBannerImage">Banner/Landing Page</label>
+			<div class="select-container">
+				<select id="f-landingPageOrBannerImage" name="f-landingPageOrBannerImage" <%= type === "Custom" ? '' : 'disabled' %>>
+					<option selected disabled hidden value="<%= landingPageOrBannerImage %>"><%= landingPageOrBannerImage %></option>
+					<option id="bannerSelect" value="Banner Image">Banner Image</option>
+					<option id="landingSelect" value="Landing Page">Landing Page</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-6 form-section table-container-two hidden">
+			<label for="f-landingPageURL">Landing Page URL</label><i class="icon icon-tool-tip x-space-s" title="	Choose a page to direct your search term. For instance, Birthday. You can have anyone who searches for Birthday, land on the Birthday category, instead of searching for all bouquets that have the word Birthday associated to it. "></i>
+			<input type="text" id="f-landingPageURL" name="f-landingPageURL" value="<%= landingPageURL %>" <%= type === "Custom" ? '' : 'disabled' %>>
+		</div>		
+	</div>
+
+
+	<div class="table-container-one hidden">
+		<div class="row row-spaced">
+			<div class="col-12 form-section">
+				<div class="panel-title">Banner Image Settings</div>
+			</div>
+		</div>
+		<div class="row row-spaced form-section">
+				<div class="col-12">Use this option to display a banner when a search term matches. Upload your own custom banner to display for your search term: Upload a file up to 4MB in size. Use image editor to make any updates you need! We suggest your final banner be 775 pixels wide. Max File Size: 100KB</div>
+		</div>
+		<div class="row row-spaced form-section">
+			<div class="col-3 form-section image-section">
+				<label for="f-banner-image-upload" style="margin-right:20px;">Banner Image<i class="icon icon-tool-tip x-space-s" title="Use the button below to configure a banner image for this search term."></i></label>
+				<button type="button" id="f-banner-image-upload" class="image-upload icon icon-btn icon-image btn-file icon-4x y-space-s"></button>
+			</div>
+			<div class="col-3 form-section image-form-section" id="f-image-1">
+				<label for="f-banner-image">Banner Preview<i class="icon icon-tool-tip x-space-s" title="The banner image associated with this search term can be previewed below. This will be displayed when your shopper enters the search term."></i></label>
+					<img id="f-banner-image"  name="f-banner-image" class="center-align y-space-s fill-container-width small-table-image" src="<%= bannerImage %>" alt="">
+			</div>	
+			<div class="col-6">
+				<label for="f-imageAlt">Image Alt</label><i class="icon icon-tool-tip x-space-s" title="This is the alt text associated with the banner image and is used for search engine optimization purposes."></i>
+				<input type="text" id="f-imageAlt" name="f-imageAlt" value="<%= imageAlt %>" <%= type === "Custom" ? '' : 'disabled' %>>
+			</div>
+		</div>
+	</div>
+
+</div>
+	
+</form>

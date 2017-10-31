@@ -1,0 +1,58 @@
+<div class="row row-spaced">
+  <div class="col-12">
+    <div class="clearfix section-title">
+      <h2 class="pull-left">Manage Add-Ons</h2>
+      <div class="btn-panel">
+        <button type="button" id="save-btn" class="btn btn-submit">Save</button>
+        <div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row row-spaced">
+  <div class="col-12">
+    From this section you can manage all of the add-on products on your site such as mylar balloons and stuffed animals. You can edit the add-ons from the list below, specify which products you would like the add-on associated with, and even add new custom add-ons.
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12">
+    <button id="add-btn" class="btn btn-submit pull-right"><i class="icon icon-add icon-lg"></i> New Add-On</button>
+  </div>
+</div>
+
+<div class="row row-spaced">
+  <div class="col-12">
+    <table id="add-on-table" class="table alternate">
+      <thead>
+        <tr>
+          <th></th>
+          <th class="th-7-20 left-align">Name<i class="icon left-offset-xs"></i></th>
+          <th class="th-2-20">Image</th>
+          <th class="th-4-20">Add-On Type</th>
+          <th class='th-3-20'>Active</th>
+          <th class="th-2-20">Edit</th>
+          <th class="th-2-20">Delete</th>
+        </tr>
+      </thead>
+      <tbody id="add-on-list"></tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Manage Product Attributes</h2>
+			<div class="btn-panel">
+				<button type="button" id="save-btn" class="btn btn-submit pull-right">Save Changes</button>
+				<button type="button" id="cancel-btn" class="btn btn-other">Cancel</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced">
+	<div class="col-12">
+		Use the following section to designate products that are not purchasable from your site. These products can be available to purchase in store, or they could be used for gallery. Common Browse Only products are Wedding and Sympathy products.
+	</div>
+</div>
+
+<div class="row row-spaced form-section">
+	<div class="col-5">
+		<label for="f-selectedAttribute">Select Attribute<i class="icon icon-tool-tip x-space-s" title="Choose an attribute from the list below and then you can associate products with that attribute."></i></label>
+		<div class="select-container">
+			<select id="f-selectedAttribute" name="f-selectedAttribute">
+				<option selected disabled hidden value="<%= selectedAttribute %>"><%= selectedAttribute %></option>
+				<option id="browseValue" value="1">Browse Only</option>
+				<option id="instoreValue" value="2">In Store Pick-Up Only</option>
+				<option id="localDeliveryValue" value="3">Local Delivery Only</option>
+				<option id="noSameDayValue" value="4">No Same-Day Delivery</option>
+				<option id="taxFreeValue" value="5">Tax Free</option>
+			</select>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced form-section panel" id="table-container-one" style="display:none;">
+	<div class="col-12">
+		<div id="browse-only-table"></div>
+	</div>
+</div>
+<div class="row row-spaced form-section panel" id="table-container-two" style="display:none;">
+	<div class="col-12">
+		<div id="instore-pickup-only-table"></div>
+	</div>
+</div>
+<div class="row row-spaced form-section panel" id="table-container-three" style="display:none;">
+	<div class="col-12">
+		<div id="local-delivery-only-table"></div>
+	</div>
+</div>
+<div class="row row-spaced form-section panel" id="table-container-four" style="display:none;">
+	<div class="col-12">
+		<div id="nosamedaydeliver-table"></div>
+	</div>
+</div>
+<div class="row row-spaced form-section panel" id="table-container-five" style="display:none;">
+	<div class="col-12">
+		<div id="tax-free-table"></div>
+	</div>
+</div>

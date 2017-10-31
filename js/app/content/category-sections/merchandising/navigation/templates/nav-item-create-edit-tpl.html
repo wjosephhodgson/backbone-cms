@@ -1,0 +1,65 @@
+
+
+	<div class="col-12 panel y-space-bottom-m">
+		<div class="row y-space-bottom-m">
+			<div class="col-12">
+				<div class="btn-panel" id="f-nav-item-btn-panel">
+					<button type="button" id="save-btn" class="btn btn-submit pull-right">Save</button>
+					<button type="button" id="cancel-btn" class="btn btn-other pull-right">Cancel</button>
+					<button type="button" id="delete-btn" class="btn btn-cancel pull-right">Delete</button>
+					<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+				</div>			
+				<div class="panel-title y-space-top-m">Menu Section</div>
+			</div>
+		</div>
+
+		<div class="row panel alert-panel hidden-alt" id="min-products-error">
+		  <div class="col-12">
+			<div class="row">
+			  <div class="col-1">
+				<div class="icon icon-3x icon-warning"></div>
+			  </div>
+			  <div class="col-11 alert-text">
+				Navigation menu product sections must have at least 1 product featured in them. <br>
+				Please select at least 1 product below before saving.
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="row panel alert-panel hidden-alt" id="min-cats-error">
+		  <div class="col-12">
+			<div class="row">
+			  <div class="col-1">
+				<div class="icon icon-3x icon-warning"></div>
+			  </div>
+			  <div class="col-11 alert-text">
+				Navigation menu category sections must have at least 1 category featured in them. <br>
+				Please select at least 1 category below before saving.
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-6 form-section select-container">
+				<label for="f-content-type">Nav Item Type<i class="icon icon-tool-tip x-space-s" title=""></i></label>
+					<select id="f-content-type" name="f-content-type">
+				    	<option selected disabled hidden value="<%= contentType %>"><%= contentType %></option>
+				    	<option value="Categories">Categories</option>
+				    	<option value="Collections">Collections</option>
+				    	<option value="Custom HTML">Custom HTML</option>
+				    	<option value="Custom List">Custom List</option>
+				    	<option value="Price Ranges">Price Ranges</option>
+				    	<option value="Products">Products</option>
+				    	<option value="Upcoming Occasions">Upcoming Occasions</option>
+					</select>
+			</div>
+		</div>
+		<form id="create-edit-form" name="create-edit-form">
+		<div class="row row-spaced y-space-top-m" id="f-content-type-area">
+			
+		</div>
+		</form>
+		
+	</div>

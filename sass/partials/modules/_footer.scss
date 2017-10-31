@@ -1,0 +1,19 @@
+// ============================================================================
+// Footer
+// ============================================================================
+#footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin-top: $space-s;
+	padding: $space-s;
+	background-color: $color-neutral-1;
+	border-top: 1px solid $color-border-3;
+	height: $footer-height;
+	color: $color-neutral-6;
+
+	& img {
+		vertical-align: middle;
+	}
+}

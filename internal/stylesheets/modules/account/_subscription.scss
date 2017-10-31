@@ -1,0 +1,30 @@
+.m-subscription {
+  position: relative;
+  width: 100%;
+  margin-bottom: 4em !important;
+}
+
+.m-subscription-form {
+  text-align: left;
+
+}
+
+.m-subscription-form-checks {
+  text-align: left;
+}
+
+.m-subscription-form-checks-textarea {
+  text-align: left;
+  padding-left: 2.3em;
+  width: 22.3em;
+  @include desktop(){
+  }
+}
+
+.m-subscriptions-padding{
+    padding-top: 0.4em;
+}
+
+.custom-checkbox-label{
+  margin-right: 2.2em !important;
+}

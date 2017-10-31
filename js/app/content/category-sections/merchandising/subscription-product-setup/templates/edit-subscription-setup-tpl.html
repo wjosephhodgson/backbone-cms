@@ -1,0 +1,536 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="section-title clearfix">
+			<h2 class="pull-left">Edit Subscription Product</h2>
+			<div class="btn-panel">
+				<button type="button" id="reset-btn" class="btn btn-other">Reset</button>
+				<button id="save-btn" type="button" class="btn btn-submit">Save</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-1">
+				<div class="icon icon-3x icon-warning"></div>
+			</div>
+			<div class="col-11 alert-text">
+				This is a generic placeholder for error messages in eSAT.
+				<br>
+				In the live app, this will be a real message and will be hidden by default.
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced panel form-section">
+
+	<div class="row">
+		<div class="col-12 y-space-bottom-m">
+			<div class="panel-title">Product Details</div>
+		</div>
+	</div>
+
+	<div class="row">
+
+		<div class="col-4 form-section">
+
+			<label for="f-name-product-sub">Name</label> <i class="icon icon-tool-tip x-space-s" title="This is the title of the subscription product."></i>
+			<input type="text" id="f-name-product-sub" name="f-name-product-sub" value="<%= subcriptionName %>">
+
+		</div>
+
+		<div class="col-4 form-section">
+
+			<label for="f-product-number">Product Number</label> <i class="icon icon-tool-tip x-space-s" title="This is the unique product ID number."></i>
+
+			<input type="text" id="f-product-number" name="f-product-number" value="<%= productNumber %>" disabled>
+		</div>
+
+		<div class="col-4 form-section">
+			<div class="label">
+				Active <i title="If this is turned OFF, the subscription product will be inactive and will not be available for purchase on your site." class="icon icon-tool-tip x-space-s"></i>
+			</div>
+			<input <%= SubscriptionActive ? 'checked' : '' %>
+			type="checkbox" id="f-subscription-active" name="f-subscription-active" class="on-off-switch"/>
+			<label for="f-subscription-active" class="on-off-switch-label">
+				<div class="on-off-switch-state">on</div>
+			</label>
+		</div>
+
+	</div>
+
+	<div class="row row-spaced">
+
+		<div class="col-12 form-section">
+			<label for="f-subscription-subtitle">Subtitle</label>
+			<i class="icon icon-tool-tip x-space-s" title="The subtitle is shown on the details page for your subscription product and is used to describe the product."></i>
+
+			<textarea id="f-subscription-subtitle" name="f-subscription-subtitle" class="size-2" maxlength="500">
+				<%= subscriptionSubtitle %></textarea>
+
+			<span class="pull-right">
+				<span id="character-count">500</span>
+				<span>Characters remaining (500 maximum)</span>
+			</span>
+
+		</div>
+
+	</div>
+
+</div>
+
+<form id="edit-subscription-products" name="edit-subscription-products">
+	<!--  ALL TABS Below -->
+	<div id="tabs" class="y-space-top-l">
+		<ul>
+			<li class="col-4 center-align">
+				<a class="url-management-edit-tab" href="#ProductInfo-Image-tab">Product Info & Image</a>
+			</li>
+			<li class="col-4 center-align">
+				<a class="url-management-edit-tab" href="#Category-tab">Categories</a>
+			</li>
+			<li class="col-4 center-align">
+				<a class="url-management-edit-tab" href="#settings-tab">Settings</a>
+			</li>
+		</ul>
+
+		<div id="ProductInfo-Image-tab">
+
+			<div class="row row-spaced">
+
+				<div class="row form-section x-space-s form-section">
+					<div class="col-12 y-space-bottom-m form-section">
+						<div class="panel-title">Subscription Product Images</div>
+					</div>
+				</div>
+
+				<!-- Holiday Subscription -->
+				<div class="row y-space-bottom-m x-space-s form-section">
+					<div class="col-3 form-section">
+						<div class="label">Holiday Subscription</div>
+						<button type="button" id="upload-holiday-logo" name="upload-holiday-logo"  class="icon icon-btn icon-image btn-file icon-3x holidayBtn"></button>
+					</div>
+					<div class="col-3 Holiday-Upload-Logo-Div preview-wrapper hidden-alt">
+						<div class="label">Holiday Image Preview</div>
+						<img id="preview-holiday-img" class="fit-container" src="<%= holidayLogo %>">
+					</div>
+				</div>
+				<!-- Holiday Subscription-->
+
+				<!-- Monthly Subscription -->
+				<div class="row y-space-bottom-m x-space-s form-section">
+					<div class="col-3 form-section">
+						<div class="label">Monthly Subscription</div>
+						<button type="button" id="upload-monthly-logo" name="upload-monthly-logo"  class="icon icon-btn icon-image btn-file icon-3x monthlyBtn"></button>
+					</div>
+					<div class="col-3 Monthly-Upload-Logo-Div preview-wrapper hidden-alt">
+						<div class="label">Monthly Image Preview</div>
+						<img id="preview-monthly-img" class="fit-container" src="<%= monthlyLogo %>">
+					</div>
+				</div>
+				<!-- Monthly Subscription-->
+
+				<!-- Custom Subscription -->
+				<div class="row y-space-bottom-m x-space-s form-section">
+					<div class="col-3 form-section">
+						<div class="label">Custom Subscription</div>
+						<button type="button" id="upload-custom-logo" name="upload-custom-logo"  class="icon icon-btn icon-image btn-file icon-3x customBtn"></button>
+					</div>
+					<div class="col-3 Custom-Upload-Logo-Div preview-wrapper hidden-alt">
+						<div class="label">Custom Image Preview</div>
+						<img id="preview-custom-img" class="fit-container" src="<%= customLogo %>">
+					</div>
+				</div>
+				<!-- Custom Subscription -->
+
+				<!-- Subscription Product Image -->
+				<div class="row y-space-bottom-m x-space-s form-section">
+					<div class="col-3 form-section">
+						<div class="label">Subscription Product Image</div>
+						<button type="button" id="upload-product-image" class="icon icon-btn icon-image btn-file icon-3x y-space-s">
+							<input id="upload-product-Image" name="upload-product-image" type="file" accept="image/*"/>
+						</button>
+					</div>
+					<div class="col-3 Product-Upload-Logo-Div preview-wrapper hidden-alt">
+						<div class="label">Subscription Product Image Preview</div>
+						 <img id="f-product-image" class="fit-container" src="<%= productLogo %>" alt="">
+					</div>
+				</div>
+				<!-- Subscription Product Image -->
+
+				<div class="row x-space-s form-section">
+					<div class="col-12 y-space-bottom-m">
+						<div class="panel-title">Price Points</div>
+					</div>
+				</div>
+				<div class="row x-space-s">
+
+					<div class="col-6 form-section">
+
+						<label for="f-basic-price-point">Label</label>
+						<i class="icon icon-tool-tip x-space-s" title="This is the name of each price point."></i>
+						<input type="text" id="f-basic-price-point" name="f-basic-price-point" value="<%= basicpricePoint %>" disabled></div>
+
+					<div class="col-3 form-section">
+
+						<label for="f-basic-suggested-price">Suggested Price</label>
+						<i class="icon icon-tool-tip x-space-s" title="This is the Teleflora suggested price for each price point."></i>
+						<div class="dollar-container">
+							<input type="text" id="f-basic-suggested-price" name="f-basic-suggested-price" value="<%= basicSuggestedPrice %>" disabled></div>
+						</div>
+
+					<div class="col-3 form-section">
+
+						<label for="f-basic-myPrice">My Price</label>
+						<div class="dollar-container">
+							<input type="text" id="f-basic-myPrice" name="f-basic-myPrice" value="<%= basicMyPrice %>">
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row x-space-s form-section">
+
+					<div class="col-6 form-section">
+						
+						<input type="text" id="f-deluxe-price-point" name="f-deluxe-price-point" value="<%= deluxepricePoint %>" disabled>
+					</div>
+
+					<div class="col-3 form-section">
+						<div class="dollar-container">
+							<input type="text" id="f-deluxe-suggestedprice" name="f-deluxe-suggestedprice" value="<%= deluxeSuggestedPrice %>" disabled>
+						</div>
+					</div>
+
+					<div class="col-3 form-section">
+						<div class="dollar-container">
+							<input type="text" id="f-deluxe-myPrice" name="f-deluxe-myPrice" value="<%= deluxeMyPrice %>">
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row x-space-s form-section">
+
+					<div class="col-6 form-section">
+
+						<input type="text" id="f-premium-price-point" name="f-premium-price-point" value="<%= premiumPricePoint %>" disabled>
+					</div>
+
+					<div class="col-3 form-section">
+
+						<div class="dollar-container">
+							<input type="text" id="f-premium-suggested-price" name="f-premium-suggested-price" value="<%= premiumSuggestedPrice %>" disabled></div>
+						</div>
+
+					<div class="col-3 form-section">
+						<div class="dollar-container">
+							<input type="text" id="f-premium-MyPrice" name="f-premium-MyPrice" value="<%= premiumMyPrice %>">
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row x-space-s form-section">
+					<div class="col-12 y-space-bottom-m">
+						<div class="panel-title">Product Information</div>
+					</div>
+				</div>
+
+				<div class="row x-space-s form-section">
+
+					<div class="col-12 form-section">
+
+						<label for="f-holiday-subscription">Holiday Subscription Description</label>
+						<i class="icon icon-tool-tip x-space-s" title="This is a descriptive text area that is shown for the holiday option for the subscription product."></i>
+
+						<textarea id="f-holiday-subscription" name="f-holiday-subscription" class="size-2">
+							<%= holidayDescription %></textarea>
+					</div>
+
+				</div>
+
+				<div class="row x-space-s form-section">
+
+					<div class="col-12 form-section">
+
+						<label for="f-monthly-subscription-description">Monthly Subscription Description</label>
+						<i class="icon icon-tool-tip x-space-s" title="This is a descriptive text area that is shown for the monthly option for the subscription product."></i>
+
+						<textarea id="f-monthly-subscription-description" name="f-monthly-subscription-description" class="size-2">
+							<%= monthlySubscriptionDescription %></textarea>
+					</div>
+
+				</div>
+
+				<div class="row x-space-s">
+					<div class="col-12 form-section">
+
+						<label for="f-custom-subscription-description">Custom Subscription Description</label>
+						<i class="icon icon-tool-tip x-space-s" title="This is a descriptive text area that is shown for the custom option for the subscription product."></i>
+
+						<textarea id="f-custom-subscription-description" name="f-custom-subscription-description" class="size-2">
+							<%= customSubscriptionDescription %></textarea>
+					</div>
+
+				</div>
+
+				<div id="subscription-seo-information" class="row row-spaced clearfix">
+					<div class="col-12 x-space-s">
+						<div class="panel-title x-space-s">
+							<i class="icon icon-closed x-space-s"></i>
+							SEO Information (optional)
+						</div>
+					</div>
+				</div>
+
+				<div class="accordion">
+					<div class="panel row row-spaced x-space-s">
+
+						<div class="row form-section y-space-top-m">
+							<div class="col-12">
+								<div class="row">
+									<div class="col-12 form-section">
+										<label for="f-meta-title">Page &#60;title&#62;</label>
+										<i class="icon icon-tool-tip x-space-s" title="This is the text that appears in the page tab at the top of your browser window while looking at the product."></i>
+										<input type="text" id="f-meta-title" name="f-meta-title" value="<%= metaTitle %>">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-6 form-section">
+										<label for="f-meta-keywords">Keywords</label>
+										<i class="icon icon-tool-tip x-space-s" title="Here you can list a few comma separated keywords that describe your product."></i>
+										<textarea id="f-meta-keywords" name="f-meta-keywords" class="size-2">
+											<%= metaKeywords %></textarea>
+									</div>
+
+									<div class="col-6 form-section">
+										<label for="f-meta-desc">Meta Description</label>
+										<i class="icon icon-tool-tip x-space-s" title="This is the text that appears on search engines and should consist of a short simple paragraph describing the product."></i>
+										<textarea name="f-meta-desc" id="f-meta-desc" class="size-2" maxlength="256">
+											<%= metaDescription %></textarea>
+										<p class="pull-right">
+											<span id="meta-description-character-count">256</span>
+											<span>Characters remaining (256 maximum)</span>
+										</p>
+
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-12 form-section">
+										<label for="f-additional-tags">Additional Tags</label>
+										<i class="icon icon-tool-tip x-space-s" title="Here you can add any additional meta tags you need for tracking or other purposes. This area is optional."></i>
+
+										<textarea name="f-additional-tags" id="f-additional-tags" class="size-3">
+											<%= additionalTags %></textarea>
+										<div class="row"><div class="col-12">Please include the full HTML (such as &lt;meta&gt;) in the Additional Tags field.</div></div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+		<!-- Product & Images -->
+		<div id="Category-tab">
+			<div class="row">
+				<div class="col-12 form-section y-space-top-m">
+					<div class="x-space-s">
+					<div class="panel-title">Assign to Categories</div>
+					</div>
+				</div>
+			</div>		
+			<div class="row">
+				<div class="col-12">
+					<div class="x-space-s">
+					<div id="categories-container"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Category Tabs Ends here -->
+
+		<div id="settings-tab">
+			<div class="row">
+				<div class="col-12">
+					<div class="row">
+
+						<div class="x-space-s">
+							<div class="col-12">
+								<div class="row row-spaced">
+									<div class="col-12 form-section">
+										<div class="panel-title">Payment Settings</div>
+									</div>
+								</div>
+								<div class="row row-spaced">
+									<div class="col-12">
+										
+									Please verify with your Point of Sale system support team that you are able to use the Pay on Delivery solution in order to charge your customer at the time of delivery. If you are using Teleflora to process your credit cards, or your customer selects Paypal, Teleflora will authorize and/or capture the funds for the first bouquet. The remaining bouquets will need to be charged prior to delivery.
+								
+									</div>
+								</div>
+								<div class="row row-spaced">
+									<div class="col-4 form-section">
+
+										<div class="label">Pay on Delivery Option <i class="icon icon-tool-tip x-space-s" title=""></i></div>
+
+										<input <%= payatDeliveryActive ? 'checked' : '' %>
+										type="checkbox" id="pay-at-delivery" name="pay-at-delivery" class="on-off-switch"/>
+										<label for="pay-at-delivery" class="on-off-switch-label">
+											<div class="on-off-switch-state">on</div>
+										</label>
+									</div>
+
+									<div class="col-4 form-section">
+										<div class="label">Pay on Delivery Discount <i class="icon icon-tool-tip x-space-s" title=""></i></div>
+
+										<div class="select-container">
+											<select id="discount-amount-pay-at-delivery">
+												<option selected hidden value="<%= discountAmountPayatDelivery %>
+													">
+													<%= discountAmountPayatDelivery %></option>
+												<option value="5%">5%</option>
+												<option value="10%">10%</option>
+												<option value="15%">15%</option>
+												<option value="20%">20%</option>
+												<option value="25%">25%</option>
+											</select>
+
+										</div>
+
+									</div>
+								</div>
+								<div class="row row-spaced">
+
+									<div class="col-4 form-section">
+
+										<div class="label">Penalty Fee  <i class="icon icon-tool-tip x-space-s" title=""></i></div>
+
+										<input <%= penaltyFeeActive ? 'checked' : '' %>
+										type="checkbox" id="f-penalty-fee-active" name="f-penalty-fee-active" class="on-off-switch"/>
+										<label for="f-penalty-fee-active" class="on-off-switch-label">
+											<div class="on-off-switch-state">on</div>
+										</label>
+									</div>
+
+									<div class="col-4 form-section">
+
+										<label for="f-penalty-message">Penalty Fee Message <i class="icon icon-tool-tip x-space-s" title=""></i></label>
+										<i class="icon icon-tool-tip x-space-s" title=""></i>
+
+										<input type="text" id="f-penalty-message" name="f-penalty-message" value="<%= penaltyMessage %>">
+									</div>
+
+								</div>
+
+								<div class="row row-spaced">
+									<div class="col-4 form-section">
+
+										<div class="label">Pay in Full Option <i class="icon icon-tool-tip x-space-s" title=""></i></div>
+
+										<input <%= payInFullActive ? 'checked' : '' %>
+										type="checkbox" id="pay-in-fullActive" name="pay-in-fullActive" class="on-off-switch"/>
+										<label for="pay-in-fullActive" class="on-off-switch-label">
+											<div class="on-off-switch-state">on</div>
+										</label>
+									</div>
+
+									<div class="col-4 form-section">
+										<div class="label">Pay in Full Discount <i class="icon icon-tool-tip x-space-s" title=""></i></div>
+
+										<div class="select-container">
+											<select id="discount-amount-payInFull">
+												<option selected hidden value="<%= discountAmountPayInFull %>
+													">
+													<%= discountAmountPayInFull %></option>
+												<option value="5%">5%</option>
+												<option value="10%">10%</option>
+												<option value="15%">15%</option>
+												<option value="20%">20%</option>
+												<option value="25%">25%</option>
+											</select>
+
+										</div>
+									</div>
+									
+								</div>
+
+			
+
+							</div>
+						</div>
+					</div>
+
+					<div class="row row-spaced">
+						<div class="x-space-s">
+							<div class="col-12">
+								<div class="row row-spaced">
+									<div class="col-12 form-section">
+										<div class="panel-title">Other Settings</div>
+									</div>
+								</div>
+								<div class="row row-spaced">
+									<div class="col-4 form-section">
+
+										<div class="label">
+											In-Store Pickup Only
+											<i title="." class="icon icon-tool-tip x-space-s"></i>
+
+										</div>
+
+										<input <%= InstorePickupActive ? 'checked' : '' %>
+										type="checkbox" id="in-store-pickup" name="in-store-pickup" class="on-off-switch"/>
+										<label for="in-store-pickup" class="on-off-switch-label">
+											<div class="on-off-switch-state">on</div>
+										</label>
+
+									</div>		
+									<div class="col-3 form-section">
+
+										<div class="label">Tax Free</div>
+
+										<input <%= taxfreeActive ? 'checked' : '' %>
+										type="checkbox" id="tax-free-active" name="tax-free-active" class="on-off-switch"/>
+										<label for="tax-free-active" class="on-off-switch-label">
+											<div class="on-off-switch-state">on</div>
+										</label>
+									</div>
+
+									<div class="col-4 form-section">
+										<div class="label">Merchandising Icons</div>
+
+										<div class="select-container">
+											<select id="merchandising-icons">
+												<option selected hidden value="<%= merchandisingIcons %>"> <%= merchandisingIcons %>  </option>
+												<option value="New">New</option>
+												<option value="BestSeller">BestSeller</option>
+												<option value="Hot">Hot</option>
+												<option value="Most Viewed">Most Viewed</option>
+											</select>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<!-- Tabs Ends here -->
+</form>

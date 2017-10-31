@@ -1,0 +1,79 @@
+.m-nav {
+  text-align: left;
+
+  .m-nav-sub-list {
+    left:1em;
+  }
+
+  .m-nav-list, .m-nav-sub-list  {
+    position:relative;
+    width:100%;
+    height:auto;
+    margin:0;
+    padding:0;
+    list-style:none;
+    @include transition(transform, 0.50s);
+
+    .m-nav-list-item {
+      padding: 0.4em 0 0.4em 0;
+    }
+
+    .m-nav-list-item, .m-nav-sub-list-item {
+      .m-nav-list-item-link {
+        position:relative;
+        font-family:$sans-stack-heavy;
+        color:$black;
+        text-decoration:none !important;
+        text-transform:uppercase;
+
+        &.no-caps {
+          text-transform: none;
+        }
+
+        &:hover {
+          color: $pink;
+        }
+      }
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &.active {
+        > a {
+          color: $pink;
+
+          &:after {
+            visibility: visible;
+          }
+        }
+      }
+    }
+
+    .m-nav-list-item {
+      > a:after {
+        position:relative;
+        visibility: hidden;
+        content: "\0000a0\0000a0";
+        width: 0.7em;
+        height: 0.9em;
+        display: inline;
+        margin-left:5px;
+        margin-top: 1px;
+        background-image: url("../images/ui-sprite.svg");
+        background-position: -128px 0px;
+        background-repeat: no-repeat;
+        vertical-align:-1px;
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.no-svg {
+  .m-nav-list-item > a:after {
+    background-image: url("../images/ui-sprite.png") !important;
+  }
+}

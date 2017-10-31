@@ -1,0 +1,26 @@
+<tr>
+  	<td class="left-align"><%= occasionName %></td>
+
+    <td class="left-align"><%= linkPath %></td>
+    
+    <td class="center-align"> <%= occasionDate %></td>
+  	
+
+    <td class="center-align hide-overflow">  
+  	
+     <div class="centered-content-container">
+
+        <input <%= upcomingOccasionsActive ? 'checked' : ''%> type="checkbox" id="<%= 'upcoming-occasion-active-' + id %>" name="<%= 'upcoming-occasion-active-' + id %>" class="on-off-switch upcomingOccasionActive-switch" />
+
+            <label for="<%= 'upcoming-occasion-active-' + id %>" class="on-off-switch-label">
+
+                  <div class="on-off-switch-state">on</div>
+            </label>
+
+      </div>
+
+    </td> 
+   
+   <td class="center-align"> <button type="button" class="icon icon-btn icon-2x icon-edit"></button> </td> 
+
+</tr>

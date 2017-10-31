@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name":"Add Ons Image 1",
+    "url":"images/icons/addon-balloon.jpg",
+    "type":"image/jpeg",
+    "global":true
+  },
+  {
+    "id": 2,
+    "name":"Add Ons Image 2",
+    "url":"images/icons/addon-chocolate.jpg",
+    "type":"image/jpeg",
+    "global":true
+  },
+  {
+    "id": 3,
+    "name":"Add Ons Image 3",
+    "url":"images/icons/addon-bear.jpg",
+    "type":"image/jpeg",
+    "global":true
+  }
+]

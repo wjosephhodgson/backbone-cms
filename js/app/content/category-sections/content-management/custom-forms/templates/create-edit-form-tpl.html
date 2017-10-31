@@ -1,0 +1,129 @@
+<form id="create-edit-form-page" name="create-edit-form-page">
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="section-title clearfix">
+			<h2 class="pull-left"><%= id ? 'Edit ' : 'Create ' %>Form</h2>
+			<div class="btn-panel">
+				<button id="cancel-btn" type="button" class="btn btn-other">Cancel</button>
+				<button id="save-btn" type="button" class="btn btn-submit"><i class="icon icon-add"></i>Save</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced">
+	<div class="col-12">
+		Use this page to make a custom form for your site. You can change all of the form's settings using this page. To add specific form fields, click the "edit form fields" button below.
+	</div>
+</div>
+
+<div class="row row-spaced panel form-section">
+	<div class="row">
+		<div class="col-6 form-section">
+			<label for="f-form-name">Form Name</label><i class="icon icon-tool-tip x-space-s" title="Use this to name your page something you will remember like 'design classes.' Your customers will not see this name on the page, it's for your eyes only."></i>
+			<input type="text" id="f-form-name" name="f-form-name" value="<%= formName %>">
+		</div>
+
+		<div class="col-3 form-section">
+			<div class="label">Active</div>
+			<input <%= active ? 'checked' : '' %> type="checkbox" id="f-active" name="f-active" class="on-off-switch" />
+			<label for="f-active" class="on-off-switch-label">
+			    <div class="on-off-switch-state">on</div>
+			</label>
+		</div>
+		<div class="col-3 form-section">
+			<div class="label">Captcha</div>
+			<input <%= captcha ? 'checked' : '' %> type="checkbox" id="f-captcha" name="f-captcha" class="on-off-switch" />
+			<label for="f-captcha" class="on-off-switch-label">
+			    <div class="on-off-switch-state">on</div>
+			</label>
+		</div>	
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-6 form-section">
+			<label for="f-form-url">Page URL</label><i class="icon icon-tool-tip x-space-s" title="How are people going to find this page? The URL is like an address and should look something like this: www.yourwebsite.com/designclasses.asp"></i>
+			<input type="text" id="f-form-url" name="f-form-url" value="<%= formUrl %>">
+		</div>
+		<div class="col-6 form-section">
+			<label for="f-form-email">Email Results To</label><i class="icon icon-tool-tip x-space-s" title="Form results will be emailed to the address entered here."></i>
+			<input type="text" id="f-form-email" name="f-form-email" value="<%= formEmail %>">
+		</div>
+	</div>
+
+	<div class="row row-spaced">		
+		<div class="col-3 form-section">
+			<label for="f-start-date">Start Date</label><i title="When should this page begin showing live on your website?" class="icon icon-tool-tip x-space-s"></i>
+			<div class="date-container">
+				<input type="text" id="f-start-date" name="f-start-date" class="date" value="<%= startDate %>">
+			</div>
+		</div>
+		<div class="col-3 form-section">
+			<label for="f-end-date">End Date</label><i title="What should this page stop showing live on your website?" class="icon icon-tool-tip x-space-s"></i>
+			<div class="date-container">
+				<input type="text" id="f-end-date" name="f-end-date" class="date" value="<%= endDate %>">
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div id="tiny-mce-container" class="col-12 form-section">
+			<div class="label">Page Header  <i title="This is a custom content area which will be displayed above the form fields on this page." class="icon icon-tool-tip x-space-s"></i></div>
+			<textarea id="f-page-header" name="f-page-header" id="f-page-header" class="tinymce"><%= pageHeader %></textarea>
+		</div>
+	</div>
+</div>
+
+<div id="form-builder-modal"></div>
+
+<div class="row row-spaced panel form-section">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Form Fields</div>
+		</div>
+	</div>	
+	<div class="row row-spaced">
+		<div class="col-12">
+			<button type="button" class="btn btn-submit" id="edit-btn">Edit form fields</button>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced panel form-section">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Form SEO Information</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<label for="f-page-title">Page &#60;title&#62;</label><i title="This will show up at the top of the window while the customer is on the page. We like something like 'Flower Design Classes | XYZ Flower Shop'" class="icon icon-tool-tip x-space-s"></i>
+			<input type="text" id="f-page-title" name="f-page-title" value="<%= pageTitle %>">
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-6 form-section">
+			<label for="f-meta-desc">Meta Description</label><i title ="If a customer is coming from a search engine, this is the first thing they will see about your page. Use this to let them know one or two sentences about your page." class="icon icon-tool-tip x-space-s"></i>
+			<textarea name="f-meta-desc" id="f-meta-desc" class="size-2"><%= metaDesc %></textarea>	
+		</div>
+
+		<div class="col-6 form-section">
+			<label for="f-meta-keywords">Meta Keywords</label><i title ="Use this to input a few words that describe your page like floral education or floral design. Don't use more than 3 or 4 keywords, since more can hurt your search ranking." class="icon icon-tool-tip x-space-s"></i>
+			<textarea name="f-meta-keywords" id="f-meta-keywords" class="size-2"><%= metaKeywords %></textarea>	
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12 form-section">
+			<label for="f-meta-tags">Additional Meta Tags</label><i class="icon icon-tool-tip x-space-s" title="Need to include some extra HTML tags on this page? You can place those here."></i>
+			<textarea id="f-meta-tags" class="size-2" name="f-meta-tags"><%= metaTags %></textarea>
+			<div class="row"><div class="col-12">Please include the full HTML (such as &lt;meta&gt;) in the Additional Tags field.</div></div>
+		</div>
+	</div>
+
+</div>
+
+</form>

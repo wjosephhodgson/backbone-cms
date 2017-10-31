@@ -1,0 +1,146 @@
+
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Top Products</h2>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row row-spaced">
+	<div class="col-12">
+		This section reports the top 50 best selling products for your eFlorist website for the selected date range. It shows you
+		how many of each product were sold.
+	</div>
+</div>
+
+<form name="topProducts-date-form" id="topProducts-date-form">
+  <div class="row row-spaced panel form-section">
+ 	 <div class="label x-space"> Report Time Period </div>
+		
+       
+		<div class="row row-spaced form-section">
+			<div class="col-d-5 col-6 form-section">
+				<label for="start-date">From:</label>
+				<div class="date-container">
+					<input type="text" id="start-date" name="start-date" class="date">
+				</div>
+			</div>
+
+			<div class="col-d-5 col-6 form-section">
+				<label for="end-date">To:</label>
+				<div class="date-container">
+					<input type="text" id="end-date" name="end-date" class="date">
+				</div>
+			</div>
+
+	  </div>
+
+
+	  <div class="row">
+
+			<div class="col-d-5 col-6 form-section">
+				<label for="f-site-dropdown">Site:</label>
+				<div class="select-container">
+					<select name="f-site-dropdown" id="f-site-dropdown">
+						<option selected disabled hidden value=""></option>
+						<option selected="selected" value="Combined">Combined</option>
+						<option value="Jennys">Jennys</option>
+						<option value="Lehrers">Lehrer's Flowers</option>
+						<option value="Martinas">Martina's Flowers</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="col-d-5 col-6 form-section">
+				<button type="button" id="go-btn" class="btn btn-submit row-btn">GO <i class="icon icon-right-circle-chevron icon-lg"></i></button>
+			</div>
+
+
+		</div>
+</div>
+	</form>
+
+<div id="show-report-Chart-section" class="form-section top-Products-Report" style="visibility: hidden;">
+   <div class="row row-spaced panel form-section">
+
+
+ 	<div class="row">
+		<div class="col-12">
+			<div class="clearfix section-title">
+				<h3 class="pull-left"> Top Products Report Charts (Units Sold) </h3>
+				<div class="btn-panel">
+                   <button id="print-productChart-btn" type="button" class="btn btn-submit"><i class="icon icon-print"></i>Print</button>
+		           <button id="export-btn" type="button" class="btn btn-submit pull-right"><i class="icon icon-export"></i>Export</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<div class="row row-spaced">
+   <div id="chart_div" align='center'></div>
+
+   </div>
+
+  <!-- Graph Goes Here -->
+
+</div>
+
+
+ 	<div class="row row-spaced panel">
+		<div class="col-12">
+			<div class="clearfix section-title">
+				<h3 class="pull-left">Top 50 Products Report Table </h3>
+			</div>
+		</div>
+	
+
+
+
+<div id="print-top-products-section">
+	<div class="row row-spaced "> 
+		<div class="col-12 y-space-top-xl">
+			<table class="table alternate">
+				
+				<thead>
+					<tr class="highlighted">
+						<th class="col-1 left-align indented-l">Rank</th>
+						<th class="col-2 left-align">Product Id</th>
+						<th class="col-6 left-align">Product Name</th>
+						<th class="col-1 left-align"># Sold</th>
+					</tr>
+				</thead>
+
+					<tbody id="top-products-ReportingTable">
+					</tbody>
+
+			</table>
+				
+				</div>		
+			
+			</div>
+
+  
+    </div>
+
+     </div>
+
+
+</div>

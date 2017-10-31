@@ -1,0 +1,123 @@
+.m-international-deliveries {
+	margin-bottom:5em;
+}
+
+.m-international-deliveries-page-header {
+  font-size: em(24px);
+  margin-bottom: 0.5em;
+  padding: 0;
+  text-align: left;
+  padding-bottom: 0.5em;
+
+  @include mobile {
+    text-align: center;
+    border-bottom:1px solid $accent-grey;
+  }
+}
+
+.m-international-deliveries-header {
+  border-bottom: none;
+  font-size: 1.84615384615385em;
+  padding-bottom: 0;
+  @include desktop {
+    padding-top: 1.5em !important;
+  }
+}
+
+
+.m-international-deliveries ul, .m-international-deliveries-list {
+	list-style:none;
+	line-height:2;
+  padding-left: 1.5em;
+  font-family: $serif-stack;
+
+  @include mobile {
+    line-height:2.3;
+  }
+}
+.m-international-deliveries .m-international-deliveries-link {
+	color: $black;
+  font-family: inherit;
+}
+.m-international-deliveries .no-desktop a {
+	color: $pink;
+}
+.m-international-deliveries-underline {
+	padding: 0 0 0.36667em 0;
+	border-bottom:1px solid $accent-grey;
+  @include mobile {
+    margin-bottom: 0.75em;
+  }
+}
+.m-international-deliveries h2 {
+	font-family: $sans-stack;
+	line-height:1em;
+	display:block;
+	color: $dark-grey;
+	text-transform:uppercase;
+	font-size:1em;
+}
+
+@media screen and (min-width:961px) {
+	.d-international-deliveries-shift {
+		position:relative;
+		left:0.3em;
+	}
+	.border-right {
+		position:relative;
+		top:-1em;
+		border-right:1px solid $accent-grey;
+		height:440px;
+		margin-bottom:-2.0em;
+	}
+
+  .border-right-hidden {
+    border-right: none;
+  }
+}
+
+@media screen and (max-width:960px) {
+	.international-deliveries-mobile-toggle {
+		display:none;
+	}
+	.m-international-deliveries .icon-arrow-down-black {
+		position:relative;
+		top:0.2em;
+		background-position: -2px -75px;
+		background-size: 29em;
+		width: 1.5em;
+	}
+	.m-international-deliveries .icon-arrow-up-black-category {
+		position:relative;
+		top:0.2em;
+		background-position: -2px -65px;
+		background-size: 29em;
+		width: 1.5em;
+	}
+}
+.m-international-deliveries-list {
+  ul {
+    .m-international-deliveries-list-item {
+      font-size: 1.307em;
+    }
+  }
+}
+.m-international-deliveries-p {
+  margin: 1em 0;
+}
+
+.m-international-deliveries-globe {
+  margin: 1em 0;
+  width: 100%;
+  border-top: 1px solid $accent-grey;
+  border-bottom: 1px solid $accent-grey;
+  .m-international-deliveries-globe-text {
+    padding: 0.9em 0 0.9em 3em;
+    background-image: url("../images/globe.png");
+    background-repeat: no-repeat;
+    background-position: 0.5em center;
+    display: block;
+    font-size: 1.769em;
+    line-height: 1.1em;
+  }
+}

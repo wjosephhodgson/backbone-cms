@@ -1,0 +1,9 @@
+{
+	"featuredItemCount": 2,
+  "featuredLayout": {
+    "id":3,
+    "active": true,
+    "suggestedNumber":6,
+    "maxNumber": 25
+  }
+}

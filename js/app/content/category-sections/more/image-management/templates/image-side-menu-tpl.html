@@ -1,0 +1,14 @@
+<ul id="side-nav">
+  <li class="side-nav-title">
+    <i class="icon icon-prefix icon-folder icon-2x"></i>
+    Image Folders
+  </li>
+
+  <% for (var i = 0, j = imageFolders.length; i < j; ++i) { %>
+    <% if(!imageFolders[i].nested) {%>
+    <a href="<%= baseUrl + imageFolders[i].hash %>">
+      <li><%= imageFolders[i].name %></li>
+    </a>
+    <% } %>
+  <% } %>
+</ul>

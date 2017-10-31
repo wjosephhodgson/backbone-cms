@@ -1,0 +1,89 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Manage Delivery Days & Times</h2>
+			<button type="button" id="save-btn" class="btn btn-submit pull-right">Save Changes</button>
+			<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row row-spaced">
+	<div class="col-12">
+		Use this page to set up which days the shop is open and closed, as well as the cut-off time for a delivery. For example, if a shop closes at 5 p.m., they probably couldn't get an order built and delivered if it was placed at 4:30. We recommend setting the cutoff time for deliveries at least 2 hours before you close for the day.<br><br>
+		All times shown are Central Time.
+	</div>
+</div>
+
+<div class="row row-spaced panel">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Available Delivery Days</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			<table class="table alternate form-section" id="m-delivery-days-table">
+				<thead>
+					<tr>
+						<th class="col-4">Day</th>
+						<th class="col-2">Availability</th>
+						<th class="col-4">Cutoff Time</th>
+					</tr>
+				</thead>
+				<tbody id="m-delivery-days-list"></tbody>
+			</table>
+		</div>
+	</div>
+
+ 	<div class="row row-spaced">
+		<div class="col-12 y-space-top-xl">
+		<div class="panel-title">Exceptions to Delivery Dates
+              <button type="button" style="margin-top: -19px;" id="add-new-Exception-btn" class="btn btn-submit pull-right"><i class="icon icon-add"></i>ADD NEW EXCEPTION</button>
+		  </div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-12">
+			Use this section to add specific days exception to the days of the week you are normally closed and not available for delivery.
+			Your website will take deliveries on these exception dates.
+		</div>
+	</div>
+
+
+    <!-- Exceptions Delivery Dates Table -->
+	<div class="row row-spaced"> 
+		  <div class="col-12 y-space-top-l">
+			<table id="Exceptions-Delivery-Table" class="table alternate">
+				<thead>
+					<tr>
+						<th class="col-7 left-align indented-l">Exception Reason</th>
+						<th class="col-4 left-align">Exception Date</th>
+						<th class="col-1 left-align">Delete</th>
+					</tr>
+				</thead>
+				<tbody id="ExceptionsDeliveryDates-List"></tbody>
+			</table>
+		</div>		
+	</div>	
+</div>
+
+<div id="create-new-Exception-deliveryDateModal"></div>  <!--Create New Exceptiion Modal -->

@@ -1,0 +1,114 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Manage Collections</h2>
+			<button id="save-btn" class="btn btn-submit pull-right">Save Changes</button>
+			<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row row-spaced">
+	<div class="col-12">
+		Collections offer a unique way to show off a group of products unique to you and your shop. This page will help you manage all of your collections. 
+	</div>
+</div>
+
+<div class="row row-spaced">
+	<div class="col-12">
+		<button id="new-collection-btn" class="btn btn-submit pull-right">
+			<i class="icon icon-add icon-lg"></i>New Collection
+		</button>
+	</div>
+</div>
+
+<div id="collection-table" class="div-table">
+	<div class="div-table-head">
+	    <div class="row">
+		    <div class="col-4 left-align td-collection">Collection</div>
+		    <div class="col-2 td-collection-type">Collection Type</div>
+		    <div class="col-1 td-page-type">Page Type</div>
+		    <div class="col-1 td-start-date">Start Date</div>
+		    <div class="col-1 td-end-date">End Date</div>
+		    <div class="col-2 td-status">Status</div>
+		    <div class="col-1 td-edit">Edit</div>
+	    </div>
+    </div>
+
+    <div class="div-table-body" id="collection-list"></div>
+</div>
+
+
+<form class="row row-spaced form-section panel" id="f-manage-collections">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Main Collections Page Settings</div>
+		</div>
+	</div>
+	
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<label for="f-meta-title">Middle Section Title</label>
+			<input type="text" id="f-middle-section-title" name="f-middle-section-title" value="<%= middleSectionTitle %>">
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<label for="f-meta-title">Middle Section Subtitle</label>
+			<textarea type="text" id="f-middle-section-sub-title" name="f-middle-section-sub-title"><%= middleSectionSubTitle %> </textarea>
+		</div>
+	</div>
+
+		<div class="row">
+		    <div class="col-12">
+		      <div class="panel-title"><i class="icon icon-closed x-space-s" id="optional"></i>SEO Information</div>
+		    </div>
+		</div>
+
+	<div id="accordion">
+
+		<div class="row row-spaced">
+			<div class="col-12 form-section">
+				<label for="f-meta-title">Page &lt;title&gt;</label><i class="icon icon-tool-tip x-space-s" title="This will let you adjust the text displayed in the tabs at the top of the browser window."></i>
+				<input type="text" id="f-meta-title" name="f-meta-title" value="<%= metaTitle %>">
+			</div>
+		</div>
+		<div class="row row-spaced">
+			<div class="col-6 form-section">
+				<label for="f-meta-keywords">Meta Keywords</label><i title="Here you can list a few comma separated keywords that describe your collection." class="icon icon-tool-tip x-space-s"></i>
+				<textarea class="size-1" id="f-meta-keywords" name="f-meta-keywords"><%= metaKeywords %></textarea>
+			</div>
+			<div class="col-6 form-section">
+				<label for="f-meta-desc">Meta Description</label><i title="This is the text displayed on search engines. It should consist of a few short and simple sentences that describe your collection." class="icon icon-tool-tip x-space-s"></i>
+				<textarea class="size-1" name="f-meta-desc" id="f-meta-desc"><%= metaDescription %></textarea>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12 form-section">
+				<label for="f-additional-tags">Additional Tags</label><i class="icon icon-tool-tip x-space-s" title="Here you can enter a few additional meta tags for use in tracking or other purposes. This area is optional."></i>
+				<textarea name="f-additional-tags" id="f-additional-tags" class="size-2"><%= additionalTags %></textarea>
+				<div class="row"><div class="col-12">Please include the full HTML (such as &lt;meta&gt;) in the Additional Tags field.</div></div>
+			</div>
+		</div>
+
+	</div>
+
+</form>

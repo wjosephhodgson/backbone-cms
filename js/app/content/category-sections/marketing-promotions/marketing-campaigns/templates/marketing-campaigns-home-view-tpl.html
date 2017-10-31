@@ -1,0 +1,54 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Marketing Campaigns</h2>
+			<div class="btn-panel">
+				<button type="button" id="cancel-btn" class="btn btn-other">Cancel</button>
+				<button type="button" id="save-btn" class="btn btn-submit">Save</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+				<a id="new-btn" href="<%= baseUrl %>create"><button type="button" class="btn btn-submit"><i class="icon icon-add icon-lg"></i>New Campaign</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row row-spaced">
+	<div class="col-12">
+		Use the settings of this page to create marketing campaigns and edit marketing banners on different pages of your website.
+	</div>
+</div>
+
+<div class="row row-spaced">
+	<div class="col-12">
+		<table id="product-table" class="table alternate">
+			<thead>
+				<tr class="form-section">
+					<th class="th-4-20">Campaign Name</th>
+					<th class="th-2-20">Type</th>
+					<th class="th-2-20">Start Date</th>
+					<th class="th-2-20">End Date</th>
+					<th class="th-2-20">Priority</th>
+					<th class="th-2-20">Status</th>
+					<th class="th-1-20">Edit</th>
+				</tr>
+			</thead>
+			<tbody id="product-list"></tbody>
+		</table>
+	</div>
+</div>

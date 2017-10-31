@@ -1,0 +1,10 @@
+.m-navbar-item.is-subnav-expanded > .m-navbar-link, .m-navbar-link.is-subnav-expanded, .m-navbar-pinkline{
+	background:#177dfd;
+}
+.alt-pink, .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus{
+	color:#177dfd!important;
+}
+.m-navbar-set .m-navbar-link.alt-pink{
+	font-family:$esat-font-stack;
+}
+

@@ -1,0 +1,13 @@
+{
+	"subcriptionName": "My Subscription Product",
+	"productNumber": "65048",
+	"basicpricePoint": "Price Point 1",
+	"basicSuggestedPrice": "59.00",
+	"basicMyPrice": "62.00",
+	"deluxepricePoint": "Price Point 2",
+	"deluxeSuggestedPrice": "69.00",
+	"deluxeMyPrice": "70.00",
+	"premiumPricePoint": "Price Point 3",
+	"premiumSuggestedPrice": "79.00",
+	"premiumMyPrice": "80.00"
+}

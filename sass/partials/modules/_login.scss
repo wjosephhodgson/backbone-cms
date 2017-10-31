@@ -1,0 +1,44 @@
+#login {
+	background-image: url("/images/login-bg.png");
+	background-size: cover;
+	
+	& .main-title {
+		font-size: 3em;
+		margin: 0;
+	}
+
+	& #footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	& .section-title {
+		height: auto;
+	}
+
+	& .col-6:first-child {
+		border-right: 2px solid $color-neutral-3;
+	}
+}
+
+.full-screen {
+	position: fixed;
+	overflow-y: scroll;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+#login-box {
+	@include box-shadow(0 0 14px 0 rgba(50, 50, 50, .75));
+	@include border-radius($border-radius);
+	background-color: white;
+	margin: $footer-height auto;
+	height: 600px;
+	width: 500px;
+	text-align: center;
+	padding: $space-l;
+}

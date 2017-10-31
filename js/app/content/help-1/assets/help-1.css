@@ -1,0 +1,35 @@
+#help-content-right {  }
+
+#help-content-right #help-content { font-size:1.4em; }
+
+#help-content .help-tile { background-color: #eeeeee; margin:5px; padding:0px 0px 4px 0px; }
+
+	.help-tile h1 { font-size:1.1em; border-bottom:2px solid #ffa836; margin:0px 10px 10px 10px; padding:10px 0px 3px 0px; }
+
+		.help-tile h1 .icon { cursor:pointer; }
+		.help-tile h1 .icon:hover { color:#ffa836; }
+	
+	.help-tile section {  }
+
+	.help-tile ul { margin:0px; padding:0px 0px 0px 10px; }
+
+	.help-tile li { margin:0px 0px 15px 18px; }
+
+		.help-tile li a:hover { color:#ffa836; }
+
+#help-content .help-tile-1 {  }
+
+#help-content .help-tile-2 {  }
+
+#help-content #help-view-more { text-align:center; font-size:1.3em; border:2px solid #bcbcbc; cursor:pointer; padding:10px 0px; margin:0px 5px; background-color:#DCDCDC;  }
+	
+	#help-content #help-view-more:hover { background-color: #eeeeee; color:#ffa836; border-color:#ffa836; }
+
+	#help-content #help-view-more .icon-add { margin: 0px 8px 0px -10px; }
+
+#help-content .heavy { font-weight:bold; }
+#help-content .red { color:#ff0112; }
+
+#help-content img.fit-container { max-width:80%; width:auto; }
+
+	#help-content .help-screen { border:1px solid #bcbcbc; margin:auto; text-align:center;}

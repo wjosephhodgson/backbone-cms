@@ -1,0 +1,90 @@
+$account-height: 35.85em;
+$loggedin-height: 19.25em;
+$padding-large: 1.5em;
+
+.m-account{
+  position:absolute;
+  z-index:8;
+  width:100%;
+  height:$account-height;
+
+  padding-top:1em;
+
+  background:$white;
+  border:1px solid $accent-grey;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+  opacity:0;
+  @include translate3d(0, -34.85em, 0);
+  @include full-transition(all, 0.30s, ease-in-out);
+
+  h1{
+    text-align:center;
+  }
+
+  &.is-loggedin{
+    height: $loggedin-height;
+
+    .m-nav {
+      .m-nav-list {
+        .m-nav-list-item {
+          padding-left: 1em;
+
+          &:first-child {
+            padding-top: 0.4em;
+          }
+        }
+      }
+    }
+  }
+}
+  .no-csstransforms3d .m-account {top: -($account-height + 1);}
+
+.m-account-signin{
+  padding:$padding-large 3em;
+
+  .form-wrapper{
+    margin:0 auto;
+    max-width: 240px;
+  }
+}
+
+.m-account .m-nav .m-nav-list .m-nav-list-item{
+  border-top:1px solid $accent-grey;
+}
+
+
+
+
+.m-supernav-account-status.is-loggedin{
+  text-indent: -1000px;
+  @include wildcard(400px){
+    text-indent: 0px;
+  }
+  &:after{
+    content: " ";
+    display: block;
+    float:right;
+
+    width: 0.85em;
+    height: 0.52em;
+
+    margin-top: 0.6em;
+    margin-left:0.5em;
+
+    background-image: url("../images/ui-sprite.svg");
+    background-position:-189px -8px;
+    background-repeat: no-repeat;
+
+    @include transition(margin, 0.1s);
+  }
+
+  &:hover:after{
+    margin-top: 0.55em;
+  }
+}
+
+.no-svg {
+  .m-supernav-account-status.is-loggedin:after {
+    background-image: url("../images/ui-sprite.png") !important;
+  }
+}

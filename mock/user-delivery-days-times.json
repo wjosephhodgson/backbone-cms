@@ -1,0 +1,51 @@
+[
+	{
+		"id": 1,
+		"name":"Sunday",
+		"active": false,
+		"cutofftime": "11:00",
+		"cutoffampm": "AM"
+	},
+	{
+		"id": 2,
+		"name":"Monday",
+		"active": true,
+		"cutofftime": "5:00",
+		"cutoffampm": "PM"
+	},
+	{
+		"id": 3,
+		"name":"Tuesday",
+		"active": true,
+		"cutofftime": "3:30",
+		"cutoffampm": "PM"
+	},
+	{
+		"id": 4,
+		"name":"Wednesday",
+		"active": true,
+		"cutofftime": "4:30",
+		"cutoffampm": "PM"
+	},
+	{
+		"id": 5,
+		"name":"Thursday",
+		"active": true,
+		"cutofftime": "3:30",
+		"cutoffampm": "PM"
+	},
+	{
+		"id": 6,
+		"name":"Friday",
+		"active": true,
+		"cutofftime": "5:30",
+		"cutoffampm": "PM"
+	},
+	{
+		"id": 7,
+		"name":"Saturday",
+		"active": false,
+		"cutofftime": "6:30",
+		"cutoffampm": "PM"
+	}			
+]

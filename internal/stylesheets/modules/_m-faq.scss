@@ -1,0 +1,64 @@
+.m-faq-page-header {
+	font-size: em(24px);
+	margin-bottom: 0.5em;
+	padding-top: 0;
+	padding-bottom: 0.5em;
+	text-align: left;
+
+	@include mobile {
+	  padding: 0;
+	  text-align: center;
+	}
+}
+
+.m-faq-content-header {
+  font-size: em(24px);
+  margin-bottom: 0.5em;
+  padding: 0;
+
+  @include mobile {
+  	padding-top: 0.3em;
+  }
+}
+
+.m-faq-item {
+	border-bottom: 1px solid $accent-grey;
+
+	.m-faq-item-header {
+		font-size: em(16px);
+		padding: 0;
+		margin: 0;
+	}
+	.m-faq-item-content {
+		padding: 0 0 0.7em 0;
+		overflow: hidden;
+		display: none;
+	}
+}
+
+.m-faq-section {
+	margin: 1em 0 2em;
+
+	.m-faq-section-header {
+		background-color: $green;
+		color: white;
+		padding: 0.5em;
+		width: 100%;
+		margin-top: 1em;
+	}
+}
+
+.m-faq-toggle {
+	color: $black;
+	display: block;
+	position: relative;
+	width: auto;
+	height: auto;
+
+  padding: 1em 0;
+
+	&:hover, &:active {
+		text-decoration: none;
+	}
+}
+

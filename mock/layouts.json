@@ -1,0 +1,37 @@
+[
+	{
+		"id":1,
+		"name":"Layout 1",
+		"imgUrl":"http://placekitten.com/g/400/600"
+	},
+
+	{
+		"id":2,
+		"name":"Layout 2",
+		"imgUrl":"http://placekitten.com/g/300/450"
+	},
+
+	{
+		"id":3,
+		"name":"Layout 3",
+		"imgUrl":"http://placekitten.com/g/200/300"
+	},
+
+	{
+		"id":4,
+		"name":"Layout 4",
+		"imgUrl": "http://placekitten.com/g/400/600"
+	},
+
+	{
+		"id":5,
+		"name":"Layout 5",
+		"imgUrl": "http://placekitten.com/g/300/450"
+	},
+
+	{
+		"id":6,
+		"name":"Layout 6",
+		"imgUrl": "http://placekitten.com/g/200/300"
+	}
+]

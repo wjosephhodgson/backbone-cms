@@ -1,0 +1,79 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Store Locations</h2>
+			<button type="button" id="save-btn" class="btn btn-submit pull-right">Save Changes</button>
+			<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced">
+	<div class="col-12">
+		Does your business have more than one location? If so, you can use this page to add and manage those different locations. These can be seen by your customers when selecting In Store Pickup as a delivery method.
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+<!-- Hidden Alert Message -->
+
+<div class="row row-spaced panel form-section">
+	<div class="col-6">
+		<div class="label">Allow In Store Pickup <i title="Leave this turned off if the florist does not allow in store pickup." class="icon icon-tool-tip x-space-s"></i></div>
+		<input <%= active ? 'checked' : '' %> type="checkbox" id="f-pickup-active" name="f-pickup-active" class="on-off-switch" />
+		<label for="f-pickup-active" class="on-off-switch-label">
+		    <div class="on-off-switch-state">on</div>
+		</label>
+	</div>
+
+	<div class="col-6">
+		<label for="f-pickup-label">In Store Pickup Label</label><i class="icon icon-tool-tip x-space-s" title="How should the option on the website actually read? Example: 'Pick up in store'"></i>
+		<input type="text" name="f-pickup-label" id="f-pickup-label" value="<%= label %>">
+	</div>
+</div>
+
+<div class="row row-spaced panel">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Store Locations</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+		<button type="button" id="new-btn" class="btn btn-submit pull-right">
+			<i class="icon icon-add"></i> New Location
+		</button>
+		</div>
+	</div>
+
+	<table class="table alternate">
+		<thead>
+			<tr>
+				<th class="col-1"></th>
+				<th class="col-1">Sequence</th>
+				<th class="col-6 left-align">Description <button type="button" id="sort-btn" class="icon icon-btn icon-sort x-space-s"></button></th>
+				<th class="col-2">In Store Pickup</th>
+				<th class="col-1">Edit</th>
+				<th class="col-1">Delete</th>
+			</tr>
+		</thead>
+		<tbody id="location-list"></tbody>
+	</table>
+</div>

@@ -1,0 +1,22 @@
+<%
+	var activeState;
+	if( active == true ){
+		activeState = 'list-item-active'
+	} else {
+		activeState = 'list-item-inactive'
+	}
+%><tr data-id="<%= id %>" class="<%= activeState %>">
+	<td><%= rank %></td>
+	<td><%= number %></td>
+	<% if(!disabled) { %>
+	<td>
+		<button type="button" class="icon icon-edit icon-btn icon-2x"></button>
+	</td>
+
+	<td>
+		<button type="button" class="icon icon-trash icon-btn icon-2x"></button>
+	</td>
+	<% } else { %>
+	<td class="left-align"><%= name %></td>
+	<% } %>
+</tr>

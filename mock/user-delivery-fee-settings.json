@@ -1,0 +1,13 @@
+{
+	"deliveryFee": "0.00",
+	"deliveryFeeName":"",
+	"additionalFee": "0.00",
+	"additionalFeeName":"",
+	"wireFee": "0.00",
+	"wireFeeName":"",
+	"oneDeliveryFeeActive": true,
+	"overrideAllCustomActive": false,
+	"inStorePickupFeeActive": true,
+	"inStorePickupFee": "0.00",
+	"inStorePickupFeeName": ""
+}

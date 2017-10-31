@@ -1,0 +1,14 @@
+{
+	"reqDelZip": true,
+	"reqDelPhone": true,
+	"useAVS": true,
+	"subPolicy": "Hidden",
+	"delInfoText": "",
+	"reminderDisplay": true,
+	"reminderDefault": "Checked",
+	"displayTC": true,
+	"TCtext": "",
+	"emailDefault": "Checked",
+	"emailMessage": "",
+	"confHeadline": ""
+}

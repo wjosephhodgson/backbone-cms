@@ -1,0 +1,190 @@
+.m-featured-collection {
+  .m-featured-collection-text {
+    max-width: 600px;
+    margin:  0.5em auto 1em;
+
+    @include desktop() {
+      margin-top: 0;
+    }
+  }
+} // end featured collection
+
+.m-featured-dock {
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 0.25em;
+  display: inline-block;
+
+  @include mobile() {
+    width: 90% !important;
+    margin-left: 0 !important;
+  }
+
+  @include desktop() {
+    margin-top: 2em;
+    min-height: 30em;
+  }
+
+  .m-product-mini {
+    width: 100%;
+    max-width: 90px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    line-height: 17px;
+
+    @include wildcard(43em) {
+      max-width: 120px;
+    }
+
+    @include desktop() {
+      width: 215px;
+      max-width: 260px;
+      margin-left: -2%;
+      margin-right: -2%;
+    }
+
+    &.focus {
+      z-index: 1;
+    }
+
+    .m-product-mini-price {
+      margin-top: 0.4em;
+    }
+  }
+}
+
+.oldie {
+  .m-featured-dock {
+    .m-product-mini {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+.m-featured-bottom-collection {
+  .m-featured-bottom-collection-title {
+    padding-top: 0.6em;
+  }
+
+  .m-featured-bottom-collection-subtitle {
+    @include mobile() {
+      font-size: 1.076em;
+    }
+  }
+
+  .m-featured-bottom-collection-link {
+    @include mobile() {
+      margin-top: 2em;
+    }
+  }
+} // end bottom collection
+
+
+.no-js{
+  .m-featured-collection-parallax .m-featured-title{opacity:1;}
+  .m-featured-collection-parallax .m-featured-dock{opacity:1;}
+}
+
+.m-featured-collection-parallax {
+  position:relative;
+  // height:46em;
+
+  &.no-text{height:36em;}
+
+  .m-featured-title {
+    margin-top:0.5em;
+    opacity:1;
+    width: 80%;
+    //min-height: 110px;
+
+    @include desktop() {
+      opacity:0;
+      //width: 400px;
+    }
+
+    @include wildcard-max(50em){
+      width: 50%;
+    }
+
+    @include wildcard-max(32em){
+      width: 90%;
+    }
+  }
+
+  .m-product-mini {
+    max-width:none;
+    width: 19%;
+    margin-left:0;
+    margin-right:0;
+
+    @include wildcard-max(50em) {
+      width: 20% !important;
+
+      &.hide-in-mobile {
+        display: none;
+      }
+    }
+
+    @include wildcard-max(32em) {
+      margin-top: 1em;
+      width: 32% !important;
+    }
+  }
+
+  .m-featured-dock {
+    width:100%;
+    opacity:1;
+
+    @include desktop() {
+      opacity: 0;
+      width: 1100px;
+      margin-left: -80px;
+      margin-top: 4em;
+      min-height: 325px;
+    }
+  }
+
+  .m-stretch-bg-container {
+    @include wildcard-max(50em) {
+      height: 50%;
+      max-height: 220px;
+    }
+
+    @include wildcard-max(32em) {
+      max-height: 175px;
+      min-height: 175px;
+    }
+
+    .m-stretch-bg {
+      height: 420px;
+      bottom: 0;
+      background-position: center bottom;
+
+      @include desktop() {
+        background-position: center top;
+      }
+    }
+  }
+} //#parallaxDock
+
+@include mobile() {
+  .m-featured-collection-first {
+    .m-featured-dock {
+      margin-top: 0;
+    }
+    .m-product-mini {
+      margin-top: 0.307em;
+    }
+  }
+}
+
+
+
+// IE Fix
+.oldie {
+  .m-featured-title, .m-promo-title {
+    background: none !important;
+  }
+}

@@ -1,0 +1,64 @@
+
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Google Analytics Setup</h2>
+			<button type="button" id="save-btn" class="btn btn-submit pull-right">Save Changes</button>
+			<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+		</div>
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row row-spaced">
+	<div class="col-12">
+		Want to use Google Analytics to analyze the traffic coming to your site? Google Analytics gives you great information and demographics on your customers, and this page allows you to set up the whole thing.
+	</div>
+</div>
+
+<div class="row row-spaced panel form-section">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Google Analytics Account</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-6">
+			<label for="f-googleAccount">Google Account</label><i class="icon icon-tool-tip x-space-s" title="When you create a Google Analytics account, it gives an account number or UA-code. Place that here."></i>
+			<input type="text" name="f-googleAccount" id="f-googleAccount" value="<%= googleAccount %>">
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced panel form-section">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Conversion Code</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			<label for="f-googleConversionTrackingCode">Google Conversion Tracking Code</label><i class="icon icon-tool-tip x-space-s" title="Google will give a tracking code to insert into your webpages. Place that here."></i>
+			<textarea name="f-googleConversionTrackingCode" id="f-googleConversionTrackingCode" class="size-3"><%= googleConversionTrackingCode %></textarea>
+		</div>
+	</div>
+</div>
+

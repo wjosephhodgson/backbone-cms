@@ -1,0 +1,90 @@
+{
+		"layoutImgUrl":"http://placehold.it/130x130/ff0000/000000",
+		"automaticSeasonalRotationActive": true,
+		"selectedThemeName": "Theme1 Red",
+		"selectedThemeId": 1,
+		"selectedThemeSchemeId": 1,
+		"featuredItemCount": 2,
+		"featuredLayout": {
+		    "id":3,
+		    "active": true,
+		    "suggestedNumber":6,
+		    "maxNumber": 25
+		},
+		"internalTestingUrl":"http://123456.telefloristonline.com",
+		"TelefloraID": "123987",
+		"URL": "www.michaelsflowershop.com",
+		"ShopName": "Michael's Flower Shop",
+		"shopLogo": "/images/myteleflora.png",
+		"address1": "11444 Olympic Blvd",
+		"SiteParent": "Teleflora",
+		"address2": "",
+		"city":"Los Angeles",
+		"state":"California",
+		"zip":"92604",
+		"country":"United States",
+		"localPhone": "(800) - 835 - 3356",
+		"alternatePhoneNumber": "",
+		"publicEmailAddress": "michael@michaelsflowershop.com",
+		"contactName":"Michael",
+		"contactPhone":"555-555-5555",
+		"contactAlternatePhoneNumber":"",
+		"contactEmail":"michael@mailinator.com",
+		"contactFaxNumber":"",
+		"phoneInHeaderActive": true,
+		"phoneNumberDisplayed": "Primary Phone",
+		"clickCallActive": true,
+		"mobileSiteRedirectActive": true,
+		"translationsActive": true,
+		"currencySymbol": "$",
+		"currencyLabel": "",
+		"pointOfSaleSystem": "RTI",
+		"creditCardAuthorization": "Authorize and Capture",
+		"securityCodeActive": false,
+		"houseAccountsActive": false,
+		"jcbActive": false,
+		"carteBlancheActive": false,
+		"payInStoreActive": false,
+		"giftCardsActive": true,
+		"creditCardVisaActive": true,
+		"creditCardMasterCardActive": true,
+		"creditCardDiscoverActive": true,
+		"creditCardAmericanExpressActive": true,
+		"paypalActive": true,
+		"payPalEmailAddress":"fakester@fakemail.edu",
+		"payPalPosAccountNumber":"90210",
+		"payPalActive": true,
+		"data": [
+			{
+			"tfid":"00005557",
+			"url":"www.teleflora.com",
+			"name":"Teleflora dot com",
+			"vendorid":"25",
+			"group":"Teleflora"
+			},
+			{
+			"tfid":"26027900",
+			"name":"Orange City Floral",
+			"url":"www.orangecityfloral.com",
+			"vendorid":"3426",
+			"group":"Teleflora"
+			},
+			{
+			"tfid":"46222800",
+			"name":"Fallons Flowers",
+			"url":"www.fallonsflowers.com",
+			"vendorid":"123",
+			"group":"McCarthy"
+			},
+			{
+			"tfid":"15989700",
+			"name":"Seacliff Florist",
+			"url":"www.seacliffflorist.com",
+			"vendorid":"645",
+			"group":"Other"
+			}
+		]
+	
+
+}
+

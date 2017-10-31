@@ -1,0 +1,398 @@
+// Calendar
+.ui-datepicker {
+  color: #333;
+  background-color: white;
+  border: 2px solid #BCBCBC;
+  border-radius: 3px;
+  padding: $space-s;
+}
+
+.ui-widget-header {
+  border-bottom: 2px solid #ff9f23;
+  font-weight: bold;
+}
+
+.ui-state-disabled {
+  cursor: default !important;
+}
+
+.ui-state-default {
+  color: #505050;
+  font-weight: bold;
+}
+
+.ui-state-highlight {
+  border: 1px solid #fed22f;
+  color: #ff9f23;
+}
+.ui-datepicker.hide-year{
+  .ui-datepicker-year{ display: none; }
+}
+// Modal
+// Develop all styles with mobile in mind
+.ui-dialog {
+  font-size: 1em;
+  background: none;
+  background-color: transparent;
+  outline: none;
+  /*position:fixed!important;*/
+  border: 0 !important;
+  width: 100% !important;
+  left: 0 !important;
+  right: 0 !important;
+  text-align: center;
+  padding: $space-s;
+  overflow: visible;
+  z-index: 21;
+
+  // reposition title for modals
+  & .section-title > h2 {
+    top: .5em;
+  }
+
+  .hide-calendar .ui-datepicker-calendar {
+    display: none !important;
+}
+
+  // Fit modal contents
+  & .ui-dialog-titlebar {
+    display: none;
+  }
+
+  // Hide the jQuery default button to delete
+  & .ui-button {
+    display: none;
+  }
+}
+
+.ui-dialog-content {
+  display: inline-block !important;
+  background-color: white !important;
+  @include border-radius($border-radius);
+}
+
+// Make modal darker
+.ui-widget-overlay {
+  opacity: .70 !important; /* Make sure to change both of these, as IE only sees the second one */
+  filter: Alpha(Opacity=70) !important;
+  background-color: black !important; /* This will make it darker */
+  z-index: 20;
+  position:fixed;
+}
+
+// Tool tip
+.ui-tooltip {
+  border: 2px solid $color-border-2;
+  background: $color-font-2;
+}
+
+// Search filter table
+.search-filters {
+  background-color: #fff;
+  position: absolute;
+  padding: $space-s;
+  @include border-radius(5px);
+  @include box-shadow(2px 2px 6px 1px #555555);
+}
+
+.ui-progressbar-value {
+    border: 1px solid #aaaaaa;
+    background: #cccccc url("../images/backgrounds/ui-bg_highlight-soft_75_cccccc_1x100.png") 50% 50% repeat-x;
+    color: #222222;
+    font-weight: bold;
+    max-width: 100%!important;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;    
+}
+
+.ui-progressbar .ui-progressbar-value {
+  margin: 0px!important;
+}
+
+.progress-label {
+    position: absolute;
+    left: 47%;
+    top: 4px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;  
+}
+
+#progressbar.loading{
+  .ui-progressbar-value {
+    opacity: 0.25;
+    background: #cccccc url("../images/backgrounds/download.gif") 50% 50% repeat-x;
+  }
+}
+
+.ui-tabs {
+  & > .ui-widget-header {
+    border-bottom: 0;
+  }
+
+  & .ui-tabs-panel {
+    border: 1px solid $color-neutral-4;
+    padding: 1em;
+  }
+
+  & .ui-tabs-nav {
+    padding: 0;
+
+    & li {
+      @include border-radius(5px 5px 0 0);
+
+      background-color: $color-neutral-1;
+      border: 1px solid $color-neutral-4;
+      margin: 0;
+
+      &.ui-state-hover {
+        background-color: white;
+      }
+
+      &.ui-tabs-active {
+        background-color: white;
+        border-bottom: 1px solid white;
+        cursor: default;
+        outline: none;
+      }
+    }
+  }
+}
+
+// data tables
+th.sorting {
+  & > .icon {
+    @extend .icon-sort;
+    margin-left: .1em;
+  }
+}
+
+th.sorting_asc {
+  & > .icon {
+    @extend .icon-sort-asc;
+    margin-left: .1em;
+  }
+}
+
+th.sorting_desc {
+  & > .icon {
+    @extend .icon-sort-desc;
+    margin-left: .1em;
+  }
+}
+
+.data-tables-pagination {
+  float: right;
+  position: relative;
+  padding: $space-s;
+  margin-right: 2em;
+
+  & .paginate_button {
+    @include lighten-gradient($color-border-2);
+    @extend .icon;
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: $space-xs;
+    bottom: $space-xs;
+    height: 2em;
+    width: 2em;
+    font-size: 1em;
+    color: black;
+    text-align: center;
+
+    &.previous {
+      @include border-radius($border-radius 0 0 $border-radius);
+      right: 100%;
+      line-height: 2em;
+
+      @extend .icon-left-chevron;
+    }
+
+    &.next {
+      @include border-radius(0 $border-radius $border-radius 0);
+      left: 100%;
+      line-height: 2em;
+
+       @extend .icon-right-chevron;
+    }
+  }
+}
+
+.ui-slider-handle {
+	background-color: $color-neutral-4;
+	border: 1px solid $color-border-2;
+	@include border-radius($border-radius);
+}
+
+.ui-slider {
+	border: 1px solid $color-border-2;
+	background-color: $color-neutral-7;
+}
+
+.ui_tpicker_hour, .ui_tpicker_minute {
+	margin: $space-s;
+}
+
+%ui-datepicker-arrow {
+  @extend .icon;
+  text-align: center;
+  top: $space-xs !important;
+  cursor: pointer;
+}
+
+.ui-datepicker-next {
+  @extend %ui-datepicker-arrow;
+  @extend .icon-right-chevron;
+
+  &:hover {
+    right: 2px !important;
+  }
+}
+
+.ui-datepicker-prev {
+  @extend %ui-datepicker-arrow;
+  @extend .icon-left-chevron;
+
+  &:hover {
+    left: 2px !important;
+  }
+}
+
+.ui-datepicker-unselectable.ui-state-disabled > .ui-state-default {
+  color: $color-neutral-2;
+}
+
+.mce-tinymce {
+  margin: $space-s 0 !important;
+}
+
+.ui-icon {
+  @extend .icon;
+}
+
+.ui-icon-triangle-1-e {
+  @extend .fa-plus-square;
+  text-indent: 0 !important;
+}
+
+.ui-icon-triangle-1-s {
+  @extend .fa-minus-square;
+  text-indent: 0 !important;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-tabs-loading a {
+  outline-color: transparent;
+}
+
+// To fix Featured Product View Filter Button padding space when more than one table was rendered within the same view.
+.filterButtonLabel.ui-button-text-only .ui-button-text {
+  padding: .1em .1em;
+}
+
+// used in floral app settings
+.medium-table-image {
+  max-width: 50%;
+}
+
+// First Time Setup - Edit Modal
+.siteTitle {
+    border-bottom: 2px solid $color-accent-2;
+    height: 1.5em;
+
+    & > h2 {
+        position: relative;
+        margin: 0;
+        top: 0.45em;
+        font-size: 1.9em;
+    }
+}
+
+
+.textOverflow {
+    max-width: 1em;
+    white-space: nowrap; 
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.federated-top-right-product-settings {
+  top: -9px;
+  left: 91px;
+}
+
+.ui-sortable-helper {
+  // max-width: 20em;
+  // white-space: nowrap; 
+  // overflow: none;
+  .textOverflow {
+    max-width: 999em;
+  }
+  &.grid-item .hover-tip {
+    padding: 10px;
+  }
+}
+
+// ************** 
+// For Datatables in first-time-setup
+
+th a {
+  color: #fff;
+}
+th a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.dynatable-search {
+  float: right;
+  margin-bottom: 10px;
+}
+
+.dynatable-pagination-links {
+  float: right;
+}
+
+.dynatable-record-count {
+  display: block;
+  padding: 5px 0;
+}
+
+.dynatable-pagination-links span,
+.dynatable-pagination-links li {
+  display: inline-block;
+}
+
+.dynatable-page-link,
+.dynatable-page-break {
+  display: block;
+  padding: 5px 7px;
+}
+
+.dynatable-page-link {
+  cursor: pointer;
+}
+
+.dynatable-active-page,
+.dynatable-disabled-page {
+  cursor: text;
+}
+.dynatable-active-page:hover,
+.dynatable-disabled-page:hover {
+  text-decoration: none;
+}
+
+.dynatable-active-page {
+  background: #71AF5A;
+  border-radius: 5px;
+  color: #fff;
+}
+.dynatable-active-page:hover {
+  color: #fff;
+}
+.dynatable-disabled-page,
+.dynatable-disabled-page:hover {
+  background: none;
+  color: #999;
+}

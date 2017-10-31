@@ -1,0 +1,18 @@
+// m-breadcrumbs
+
+.m-breadcrumbs {
+  position:relative;
+  // used on bread crumbs
+  color: $dark-grey;
+  font-family: $sans-stack-heavy;
+  font-size: 1em;
+  margin-top: 0;
+  top:-0.7em;
+  padding-bottom: 0.3em;
+  text-align: left;
+  text-transform: none;
+  // font color for bread crumbs
+  .breadcrumbs-link {
+    color: $dark-grey;
+  }
+}

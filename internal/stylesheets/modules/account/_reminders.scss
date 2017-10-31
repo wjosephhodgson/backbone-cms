@@ -1,0 +1,26 @@
+$breakpoint-table: 32em;
+
+.m-reminders {
+  text-align: left;
+
+  .m-reminders-table {
+    .icon-reminder {
+      margin-right: 0.5em;
+      @include desktop {
+        margin-right: 1.5em;
+      }
+    }
+  }
+}
+
+@media all and (min-width:$breakpoint-table) {
+  .m-reminders-table {
+    .hide-after-tablet {
+      display: table-cell;
+    }
+  }
+}
+
+.m-reminders-heck-padding{
+  margin: 0 auto;
+}

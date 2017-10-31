@@ -1,0 +1,73 @@
+.m-supernav{
+  height:0;
+  box-shadow:none;
+  background:transparent;
+}
+
+.m-supernav-item{
+  position:relative;
+  width:auto;
+  display:inline;
+  float:left;
+}
+
+.m-supernav-icon{
+  width: 1.25em;
+  height: 1.25em;
+  float:left;
+  margin-right:0.4em;
+
+  &.icon-cart{
+    float:none;
+  }
+}
+
+.m-supernav-content{
+  float:left;
+  color:$dark-grey;
+  margin-right:1.5em;
+  margin-top: -3px;
+}
+
+.m-supernav-logo{
+  position:absolute;
+  top: 1.3em;
+  width:9.4em;
+  height: 2.23em;
+  margin:0;
+
+  svg{height: 100%;width: 9.4em;}
+}
+
+.m-supernav-account-status {
+  margin-left:0;
+}
+
+.m-supernav-ask{
+  width:auto;
+}
+
+.m-supernav-number{
+  width:auto;
+  float:left;
+}
+
+.m-supernav-cart{
+  width:55px !important;
+  height:20px;
+  right:0 !important;
+  margin-top:3px;
+
+  .m-supernav-content{
+    right:0;
+    margin-top:-6px;
+    margin-right:0;
+  }
+}
+
+.m-supernav-right-tray{
+  position:absolute;
+  top:2.5em;
+  right: 19em !important;
+  width: auto !important;
+}

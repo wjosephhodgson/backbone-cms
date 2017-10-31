@@ -1,0 +1,24 @@
+<header id="featuredCollection" class="m-featured-collection-parallax m-featured-collection light d-container_12 m-pattern-library-masthead clearfix m-featured-collection-first">
+<style type="text/css" scoped="">
+  .m-homepage-bottom-collection-bg{background-image: url('<%= domain %>images/homepage/m-mothers-bg.jpg');}
+
+  @media screen and (min-width:961px){
+    .m-homepage-bottom-collection-bg{background-image: url('<%= domain %>images/homepage/mothers-bg-tall.jpg');}
+  }
+
+  .oldie .m-homepage-bottom-collection-bg{background-image: url('<%= domain %>images/homepage/mothers-bg-tall.jpg');}
+</style>
+<div class="m-stretch-bg-container m-pattern-library-bg-container" style="background-color: #FBE7E0;">
+  <div class="m-stretch-bg m-featured-collection-bg m-homepage-bottom-collection-bg"></div>
+</div>
+<div class="container_4 d-grid_12 m-pattern-library-masthead">
+  <!-- content wrapper -->
+  <div class="l-wrapper">
+    <hgroup class="m-featured-text m-padding-top-xlarge">
+      <h1 class="header"><%= @title %></h1>
+      <h3 class="subheader top-margin-small"><%= @desc %></h3>
+    </hgroup>
+  </div> <!-- end wrapper -->
+</div> <!-- end container -->
+
+</header>

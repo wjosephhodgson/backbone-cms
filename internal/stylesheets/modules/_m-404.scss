@@ -1,0 +1,29 @@
+.m-404-recommended-section {
+  //background and section bottom border used on the featured bouquets mobile & desktop
+  background-image: url(../images/shelf.png);
+  background-size: 100% 45px;
+  background-repeat: no-repeat;
+
+  @include desktop() {
+    background-position: 0em 9.3em;
+  }
+  @include mobile() {
+    background-position: 0em 8.0em;
+  }
+}
+
+.m-404-sidebar {
+  padding: 0.5em 1em;
+  border: 1px dotted $dark-grey;
+
+  .m-404-sidebar-title {
+    border-bottom: 1px solid $accent-grey;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.2em;
+    text-align: left;
+  }
+}
+
+.m-category-flower-row {
+  padding-left: 0;
+}

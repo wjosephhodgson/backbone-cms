@@ -1,0 +1,19 @@
+<tr>
+	<td><%= startDate %></td>
+	<td><%= endDate %></td>
+	<td>$<%= fee %></td>
+	<td>
+		<div class="centered-content-container">
+			<input <%= active ? 'checked' : '' %> type="checkbox" id="<%= 'ddf' + id %>" name="<%= 'ddf' + id %>" class="on-off-switch" />
+			<label for="<%= 'ddf' + id %>" class="on-off-switch-label no-margin">
+			    <div class="on-off-switch-state">on</div>
+			</label>
+		</div>
+	</td>
+	<td>
+		<button class="icon icon-btn icon-edit icon-2x"></button>
+	</td>
+	<td>
+		<button class="icon icon-btn icon-trash icon-2x"></button>
+	</td>
+</tr>

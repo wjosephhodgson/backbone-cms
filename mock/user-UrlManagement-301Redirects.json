@@ -1,0 +1,52 @@
+[
+	{
+		"id": 1,
+		"oldUrl": "www.abcflorist.com/category.asp?rcid=99999",
+		"PermanentRedirectToURL": "www.abcflorist.com/category/9999.jsp"	
+	},
+	{
+		"id": 2,
+		"oldUrl": "www.abcflorist.com/category.asp?rcid=99999",
+		"PermanentRedirectToURL": "www.abcflorist.com/category/9999.jsp"	
+	},
+	{
+		"id": 3,
+		"oldUrl": "www.abcflorist.com/category.asp?rcid=99999",
+		"PermanentRedirectToURL": "www.abcflorist.com/category/9999.jsp"	
+	},
+	{
+		"id": 4,
+		"oldUrl": "www.abcflorist.com/category.asp?rcid=99999",
+		"PermanentRedirectToURL": "www.abcflorist.com/category/9999.jsp"	
+	},
+	{
+		"id": 5,
+		"oldUrl": "www.abcflorist.com/category.asp?rcid=99999",
+		"PermanentRedirectToURL": "www.abcflorist.com/category/9999.jsp"	
+	},
+	{
+		"id": 6,
+		"oldUrl": "www.abcflorist.com/category.asp?rcid=99999",
+		"PermanentRedirectToURL": "www.abcflorist.com/category/9999.jsp"	
+	},
+	{
+		"id": 7,
+		"oldUrl": "www.abcflorist.com/category.asp?rcid=99999",
+		"PermanentRedirectToURL": "www.abcflorist.com/category/9999.jsp"	
+	},
+	{
+		"id": 8,
+		"oldUrl": "www.abcflorist.com/category.asp?rcid=99999",
+		"PermanentRedirectToURL": "www.abcflorist.com/category/9999.jsp"	
+	},
+	{
+		"id": 9,
+		"oldUrl": "www.abcflorist.com/category.asp?rcid=99999",
+		"PermanentRedirectToURL": "www.abcflorist.com/category/9999.jsp"	
+	},
+	{
+		"id": 10,
+		"oldUrl": "www.abcflorist.com/category.asp?rcid=99999",
+		"PermanentRedirectToURL": "www.abcflorist.com/category/9999.jsp"	
+	}
+]

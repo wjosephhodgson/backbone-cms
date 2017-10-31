@@ -1,0 +1,46 @@
+.l-content{
+  margin-top: em(25px);
+  margin-bottom: 5em;
+
+  &.l-content-clear-margin{
+    margin:0 !important;
+    min-height: 0;
+  }
+
+  &.l-content-clear-margin-bottom{
+    margin-bottom:0em !important;
+  }
+
+  &.l-content-clear-margin-top{
+    margin-top:0em !important;
+  }
+}
+
+.l-content-narrow, .l-content-medium, .l-content-wide{
+  text-align: center;
+}
+
+.l-content-homepage {
+  margin-bottom: 5em;
+}
+
+.l-content-collection {
+  margin-top: em(25px);
+  margin-bottom: 0;
+}
+
+.l-content-collection-header {
+  margin-top: em(25px);
+  margin-bottom: 0;
+  @include mobile {
+    margin-top: 0;
+  }
+}
+
+.l-content-checkout-header {
+  margin-top: em(25px);
+}
+
+.l-content-password {
+    text-align: left;
+}

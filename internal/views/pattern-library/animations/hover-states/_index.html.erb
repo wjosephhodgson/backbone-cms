@@ -1,0 +1,184 @@
+ <section id="hover-states" class="l-wrapper">
+  <h2>Hover States</h2>
+  <p>
+    Teleflora site animations for hover states on desktop or touch events on tablet/mobile.
+    <br><br>
+    The first hover state appears on product detail pages and is used as a zoom indicator. This hover state is only available on desktop and does not have an equivalent on tablet or mobile.
+    <br><br>
+    The second animation is a hover state that is used on the product landing pages. The hover displays an overlapping button that when clicked initiates a drop down product preview. This hover state is only available on desktop and does not have an equivalent on tablet or mobile.
+    <br><br>
+    The third hover state is a tooltip that is used to provide additional information about a specific element. This hover state becomes a tap on tablet and mobile.
+    <br><br>
+    The fourth hover state is a parallax effect. On hover the element in focus increases in size while the other elements in the container decrease. This hover state is bound to the class of 'm-featured-collection-parallax'.
+  </p>
+
+
+  <div class="m-pdp-main-img-container hide-on-smaller-than-tablet top-margin">
+    <img class="m-pdp-main-img" src="http://placehold.it/200x300" alt="Image">
+  </div>
+  <div class="clear"></div>
+  <div class="m-code l-wrapper top-margin hide-on-smaller-than-tablet top-margin">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <pre class="prettyprint linenums lang-html">
+  &lt;div class="m-pdp-main-img-container hide-on-smaller-than-tablet"&gt;
+    &lt;img class="m-pdp-main-img" src="http://placehold.it/200x300" alt="Image"&gt;
+  &lt;/div&gt;
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="m-product-mini-image d-grid_3" style="width: 160px;">
+    <a href="javascript:void(0);" class="btn btn-light btn-quickview no-mobile">Quick view</a>
+    <a href="javascript:void(0);">
+      <figure>
+        <img src="http://placehold.it/160x200" alt="About the image">
+      </figure>
+    </a>
+  </div>
+  <div class="clear"></div>
+  <div class="m-code l-wrapper top-margin">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <pre class="prettyprint linenums lang-html">
+  &lt;div class="m-product-mini-image"&gt;
+    &lt;a href="#" class="btn btn-light btn-quickview no-mobile"&gt;Quick view&lt;/a&gt;
+    &lt;a href="#"&gt;
+      &lt;figure&gt;
+        &lt;img src="http://placehold.it/160x200" alt="About the image"&gt;
+      &lt;/figure&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+<!--   <div id="pdpTooltip" class="top-margin">
+    <a href="javascript:void(0);" data-toggle="tooltip" title="" data-original-title="This is a hover state tooltip">
+      <img src="http://placehold.it/100x100" alt="About the image">
+    </a>
+  </div>
+  <div class="clear"></div>
+  <div class="m-code l-wrapper top-margin">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <pre class="prettyprint linenums lang-html">
+  &lt;a href="#" data-toggle="tooltip" title="" data-original-title="This is a hover state tooltip"&gt;
+    &lt;img src="http://placehold.it/100x100" alt="About the image"&gt;
+  &lt;/a&gt;
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div> -->
+
+  <!-- collection starts -->
+  <div id="mothersCollection" class="m-featured-collection-parallax top-margin d-container_12 clearfix">
+    <!-- products container starts -->
+    <div class="m-featured-dock clearfix" style="margin: 0px auto !important; min-height: 0em !important;">
+      <!-- first container starts -->
+      <div class="m-product-mini" data-order="1">
+        <a href="javascript:void(0);">
+          <figure class="fluid">
+            <img src="http://placehold.it/272x340" alt="image">
+          </figure>
+        </a>
+        <a href="javascript:void(0);" class="m-product-mini-price">$00.00</a>
+        <a href="javascript:void(0);" class="m-product-mini-buynow">Copy</a>
+      </div>
+      <!-- first container ends -->
+      <!-- second container starts -->
+      <div class="m-product-mini" data-order="2">
+        <a href="javascript:void(0);">
+          <figure class="fluid">
+            <img src="http://placehold.it/272x340" alt="image">
+          </figure>
+        </a>
+        <a href="javascript:void(0);" class="m-product-mini-price">$00.00</a>
+        <a href="javascript:void(0);" class="m-product-mini-buynow">Copy</a>
+      </div>
+      <!-- second container ends -->
+      <!-- third container starts -->
+      <div class="m-product-mini" data-order="3">
+        <a href="javascript:void(0);">
+          <figure class="fluid">
+            <img src="http://placehold.it/272x340" alt="image">
+          </figure>
+        </a>
+        <a href="javascript:void(0);" class="m-product-mini-price">$00.00</a>
+        <a href="javascript:void(0);" class="m-product-mini-buynow">Copy</a>
+      </div>
+      <!-- third container ends -->
+    </div>
+    <!-- products container ends -->
+  </div>
+  <!-- collection ends -->
+
+  <div class="clear"></div>
+  <div class="m-code l-wrapper top-margin">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <pre class="prettyprint linenums lang-html">
+  &lt;!-- collection starts --&gt;
+  &lt;div id="mothersCollection" class="m-featured-collection-parallax top-margin d-container_12 clearfix"&gt;
+    &lt;!-- products container starts --&gt;
+    &lt;div class="m-featured-dock clearfix"&gt;
+      &lt;!-- first container starts --&gt;
+      &lt;div class="m-product-mini" data-order="1"&gt;
+        &lt;a href="#"&gt;
+          &lt;figure class="fluid"&gt;
+            &lt;img src="http://placehold.it/272x340" alt="image"&gt;
+         &lt;/figure&gt;
+       &lt;/a&gt;
+       &lt;a href="#" class="m-product-mini-price"&gt;$00.00&lt;/a&gt;
+       &lt;a href="#" class="m-product-mini-buynow"&gt;Copy&lt;/a&gt;
+     &lt;/div&gt;
+     &lt;!-- first container ends --&gt;
+   &lt;/div&gt;
+   &lt;!-- products container ends --&gt;
+ &lt;/div&gt;
+ &lt;!-- collection ends --&gt;
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</section>
+<!-- hover state ends -->
+<script type="text/javascript">
+      var pickerLoad = false;
+      var PDPlogged=false; //This should be taken out, on pdp.js Modernizr.loggedin should be used
+      var domain = '<%= domain %>';
+      initLoad = true;
+      Modernizr.load([
+        {
+          both: [
+            '<%= domain %>javascripts/lib/jquery.js',
+            '<%= domain %>javascripts/modules/bootstrap-tooltip.js',
+            '<%= domain %>javascripts/lib/hammer.min.js',
+            '<%= domain %>javascripts/teleflora.js',
+            '<%= domain %>javascripts/parallax.js',
+          ],
+          complete: function(){
+            $("#mothersCollection").telelax();
+          }
+        }
+      ]);
+</script>

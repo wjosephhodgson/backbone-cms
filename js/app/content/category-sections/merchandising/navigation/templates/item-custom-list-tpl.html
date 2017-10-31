@@ -1,0 +1,68 @@
+<div class="col-12">
+
+	<div class="row row-spaced">
+		<div class="col-6 form-section">
+			<div class="label">Custom List Label<i class="icon icon-tool-tip x-space-s" title=""></i></div>
+			<input type="text" name="f-custom-list-label" id="f-custom-list-label" value="<%= contentLabel %>">
+		</div>
+		<div class="col-6 form-section select-container">
+			<div class="label">Column Width<i class="icon icon-tool-tip x-space-s" title=""></i></div>
+			<select name="f-custom-list-columns" id="f-custom-list-columns">
+		    	<option selected disabled hidden value="<%= columns %>"><%= columns %></option>
+		    	<option value="1">1 Column</option>
+		    	<option value="2">2 Columns</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			<table class="table alternate">
+				<thead>
+					<tr>
+						<th class="col-1">Sequence</th>
+						<th class="col-4 left-align">Label</th>
+						<th class="col-5 left-align">URL</th>
+						<th class="col-1">Open In New Window</th>
+						<th class="col-1">Delete</th>
+					</tr>
+				</thead>
+				<tbody id="custom-list-list"></tbody>
+			</table>	
+		</div>	
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12 y-space-top-s">
+			<button type="button" id="add-new-customLink-btn" class="btn btn-submit"><i class="icon icon-add icon-lg"></i> Add Link</button> 
+		</div>
+	</div>
+
+	<div class="row row-spaced y-space-top-m">
+		<div class="col-12">
+			<div class="panel-title">
+				"Show More" Link
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-3 form-section">
+			<div class="label">Enable "Show More" Link</div>
+			<input <%= showMore ? 'checked' : '' %> type="checkbox" id="f-showMore" name="f-showMore" class="switch on-off-switch">
+			<label for="f-showMore" class="on-off-switch-label"><div class="on-off-switch-state"></div>on</label>
+		</div>
+	</div>
+
+	<div class="row row-spaced row-show-more hidden-alt">
+		<div class="col-6 form-section">
+			<div class="label">Link Label</div>
+			<input type="text" name="f-showMoreLabel" class="f-showMoreLabel" id="f-showMoreLabel" value="<%= showMoreLabel %>">
+		</div>
+		<div class="col-6 form-section">
+			<div class="label">Link URL</div>
+			<input type="text" name="f-showMoreLink" class="f-showMoreLink" id="f-showMoreLink" value="<%= showMoreLink %>">
+		</div>			
+	</div>
+	
+</div>

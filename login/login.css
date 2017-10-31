@@ -1,0 +1,60 @@
+#login-box {
+	position:relative;
+}
+#loading-overlay{
+	opacity:.85;
+	background-color:#fff;
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:500px;
+	height:500px;
+	z-index:1000;
+}
+
+#loading-overlay.hidden{
+	display:none;
+}
+
+#loading-spinner {
+	background-image:url('../images/spinner.gif');
+	height:64px;
+	width:64px;
+	position:absolute;
+	top:189px;
+	left:215px;
+
+}
+
+#loading-text {
+	position:absolute;
+	top:266px;
+	left:209px;
+	font-size:1.5em;
+	color:#000;
+}
+
+#ie11-modal {
+	font-size:1.5em;
+}
+#login-browsers {
+	width:70%;
+	text-align:center;
+	margin:2em auto;
+}
+#login-browsers a {
+	display:inline-block;
+	padding:1em;
+}
+
+#ie11-trigger {
+	cursor: pointer;
+	font-weight:bold;
+}
+#ie11-trigger:hover{
+	color:#ffa836;
+}
+
+#ie11-steps {
+	display:none;
+}

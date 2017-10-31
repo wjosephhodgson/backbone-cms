@@ -1,0 +1,54 @@
+// ============================================================================
+// Side Nav
+// ============================================================================
+#side-nav, .side-nav {
+	@extend .compact-list;
+
+	& li {
+		@include single-transition(all, 200ms);
+		background-color: $color-neutral-4;
+		border-top: 1px solid $color-border-2;
+		border-bottom: 1px solid $color-border-2;
+		
+		font-size: 1.1em;
+		padding: $space-s $space-l;
+		padding-right: 0;
+
+		&.side-nav-title {
+			background-color: $color-neutral-1;
+			font-weight: bold;
+			text-transform: uppercase;
+		}
+	}
+
+	& > a {
+		&:hover, , &.selected {
+			& > li {
+				background-color: white;
+				color: $color-accent-2;
+				border-left: 4px solid $color-accent-2;	
+			}
+		}
+	}
+}
+
+#side-menu {
+	padding-left: 0px;
+}
+
+#side-menu-inner {
+	overflow: hidden;
+	left: 0px;
+	height: auto;
+	margin-bottom: -5000px;
+    padding-bottom: 5000px;
+	background-color: $color-neutral-1;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+// @-moz-document url-prefix() {
+// 	#side-menu-inner {
+// 		bottom: -5000px;
+// 	}
+// }

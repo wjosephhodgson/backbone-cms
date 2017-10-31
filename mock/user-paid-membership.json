@@ -1,0 +1,32 @@
+[
+	
+	{
+		"id":1,
+		"firstName":"Philip",
+		"lastName":"Emokpare",
+		"emailAddress":"pemokpare@teleflora.com",
+		"memberstatus": true
+	},
+	{
+		"id":2,
+		"firstName":"Joseph",
+		"lastName":"Hodgson",
+		"emailAddress":"jhodgson@teleflora.com",
+		"memberstatus": true
+	},
+	{
+		"id":3,
+		"firstName":"Michael",
+		"lastName":"Tetzlaff",
+		"emailAddress":"mtetzlaff@teleflora.com",
+		"memberstatus": true
+	},
+	{
+		"id":4,
+		"firstName":"Jeffrey",
+		"lastName":"Takaki",
+		"emailAddress":"jtakaki@teleflora.com",
+		"memberstatus": false
+	}
+]
+

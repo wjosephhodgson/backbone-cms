@@ -1,0 +1,31 @@
+<tr>
+	<td class="left-align"><%= name %></td>
+  <td>
+    <img class="fit-container" src="<%= imgA1 %>">
+  </td>
+	<td><%= number %></td>
+  <td><%= type %></td>
+  <td>
+    <div class="dollar-container form-section">
+      <input type="text" id="f-myPrice-<%= id %>" name="<%= type === "Teleflora" ? 'f-myPrice-Teleflora' : 'f-myPrice'%>" class="<%= type === "Teleflora" ? 'f-myPrice-Teleflora' : 'f-myPrice'%>" value="<%= myPrice %>">
+    </div>
+  </td>
+  <td>
+    <div class="dollar-container form-section">
+      <input type="text" id="f-holidayPrice-<%= id %>" name="f-holidayPrice" class="f-holidayPrice" value="<%= holidayPrice %>">
+    </div>
+  </td>
+  <td>
+    <div class="v-center">
+      <input <%= active ? 'checked' : '' %> type="checkbox" id="active-<%= id %>" name="active-<%= id %>" class="on-off-switch" />
+      <label for="active-<%= id %>" class="on-off-switch-label">
+        <div class="on-off-switch-state">on</div>
+      </label>
+    </div>
+  </td>
+  <td>
+    <a class="edit-link" href="<%= baseUrl + 'edit/' + id %>">
+      <button class="icon icon-edit icon-btn icon-2x"></button>
+    </a>
+  </td>
+</tr>

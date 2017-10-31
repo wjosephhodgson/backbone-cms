@@ -1,0 +1,25 @@
+<div class="col-12">
+
+	<div class="row row-spaced">
+		<div class="col-6 form-section">
+			<div class="label">Custom HTML Label</div>
+			<input type="text" name="f-custom-html-label" id="f-custom-html-label" value="<%= contentLabel %>">
+		</div>
+		<div class="col-6 form-section select-container">
+			<div class="label">Column Width</div>
+			<select name="f-custom-html-columns" id="f-custom-html-columns">
+		    	<option selected disabled hidden value="<%= columns %>"><%= columns %></option>
+		    	<option value="1">1 Column</option>
+		    	<option value="2">2 Columns</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="row row-spaced y-space-top-m">
+		<div class="col-12 form-section">
+			<div class="label">Custom HTML Block Content</div>
+			<textarea name="f-custom-html-content" id="f-custom-html-content" class="size-2"><%= html %></textarea>
+		</div>
+	</div>
+	
+</div>

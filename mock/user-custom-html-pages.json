@@ -1,0 +1,62 @@
+[
+	{
+		"id":1,
+		"pageName":"History",
+		"pageUrl": "history",
+		"active": true,
+		"wrapper": true,
+		"metaDesc":"History of my flower shop",
+		"pageTitle":"Flower Shop - History",
+		"metaKeywords":"flower shop, history",
+		"metaTags":"",
+		"pageMainContent":"<h2><span style='text-decoration: underline; color: #ff6600;'>Our History</span></h2><p style='color: #565556; font-family: Arial, Helvetica, sans-serif; font-size: 13px;'><strong>Hansen's Flower Shop and Greenhouse has proudly served Fairfield County since 1920.</strong>&nbsp;We are family owned and operated. Hansen's Flower shop has been voted Best Florist each year since 1999 by the Fairfield County Weekly. We are committed to offering only the finest floral arrangements and gifts, backed by service that is friendly and prompt. Because all of our customers are important, our professional staff is dedicated to making your experience a pleasant one. That is why we always go the extra mile to make your floral gift perfect.<br />Let Hansen's Flower Shop and Greenhouse be your first choice for flowers.</p><p style='color: #565556; font-family: Arial, Helvetica, sans-serif; font-size: 13px; text-align: center;'>&nbsp;</p><p style='color: #565556; font-family: Arial, Helvetica, sans-serif; font-size: 13px; text-align: center;'><a style='border: black; font-size: 8pt; color: black; font-family: Arial, Verdana, helvetica; text-decoration: none;' href='http://www.fairfieldweddingandevents.com/?page_id=187' target='_blank'><img style='border: 0px;' src='http://fairfieldweddingandevents.com/images/letter-logo-button2.png' alt='' width='205' height='206' /></a></p><p style='color: #565556; font-family: Arial, Helvetica, sans-serif; font-size: 13px; text-align: center;'><em><strong><span style='font-size: small; color: #c41188;'>A Family of Florists:</span></strong></em><br /><strong><a style='border: black; font-size: 8pt; color: #000000; font-family: Arial, Verdana, helvetica; text-decoration: none;' href='http://www.brucesflowershop.com/' target='_blank'>Bruce's Flower Shop</a>:</strong>&nbsp;454 Main Avenue, Norwalk<br /><strong><a style='border: black; font-size: 8pt; color: #000000; font-family: Arial, Verdana, helvetica; text-decoration: none;' href='http://www.irenesgardenparty.com/' target='_blank'>Irene's Flower Shop</a>:</strong>&nbsp;600 Main Street, Monroe<br /><strong><a style='border: black; font-size: 8pt; color: #000000; font-family: Arial, Verdana, helvetica; text-decoration: none;' href='http://www.hansensfloralarts.com/' target='_blank'>Hansen's Floral Arts</a>:</strong>&nbsp;240 Post Road East, Westport</p>"
+	},
+	{
+		"id":2,
+		"pageName":"Events",
+		"pageUrl": "events",
+		"active": true,
+		"wrapper": true,
+		"metaDesc":"Events at my flower shop",
+		"pageTitle":"Flower Shop - Events",
+		"metaKeywords":"flower shop, events",
+		"metaTags":"",
+		"pageMainContent":"<h2><span style='text-decoration: underline; color: #ff6600;'>Events At Our Flower Shop</span></h2><p>See below for our exciting 2015 event calendar. Please join us for our design classes and floral expos to get an inside look into how to create your very own floral designs. We also offer open house days at our greenhouse where you can take a look around and take home something of your own from our local garden.</p><ul><li><strong>Jan</strong></li><ul><li>1/5 - Winter floral design class</li><li>1/13 - Greenhouse open house<br /><br /></li></ul><li><strong>Feb</strong></li><ul><li>2/20 - Greenhouse open house<br /><br /></li></ul><li><strong>Mar</strong></li><ul><li>3/2 - Spring floral design class</li><li>3/19 - Greenhouse open house<br /><br /></li></ul><li><strong>April</strong></li><ul><li>4/9 - Greenhouse open house</li><li>4/11 - Plant care and keeping class</li><li>4/25 - Greenhouse open house<br /><br /></li></ul><li><strong>May</strong></li><ul><li>5/29 - Summer design class<br /><br /></li></ul><li><strong>Jun</strong></li><ul><li>6/10 - Everything Roses class</li><li>6/29 - Greenhouse open house<br /><br /></li></ul><li><strong>Jul</strong></li><ul><li>7/18 - Greenhouse open house<br /><br /></li></ul><li><strong>Aug</strong></li><ul><li>8/2 - Fall design class</li><li>8/11 - Greenhouse open house<br /><br /></li></ul><li><strong>Sep</strong></li><ul><li>No events scheduled<br /><br /></li></ul><li><strong>Oct</strong></li><ul><li>10/7 - Greenhouse open house<br /><br /></li></ul><li><strong>Nov</strong></li><ul><li>11/4 - Winter design class</li><li>11/5 - Design Your Own Wreath contest<br /><br /></li></ul><li><strong>Dec</strong></li><ul><li>No events scheduled</li></ul></ul><p>&nbsp;</p>"
+	},
+	{
+		"id":3,
+		"pageName":"Custom Page 1",
+		"pageUrl": "custom-page-1",
+		"active": true,
+		"wrapper": true,
+		"metaDesc":"Description of Custom Page 1",
+		"pageTitle":"Flower Shop - Custom Page 1",
+		"metaKeywords":"flower shop, custom page 1",
+		"metaTags":"",
+		"pageMainContent":"Custom Page 1 Content"
+	},
+	{
+		"id":4,
+		"pageName":"Custom Page 2",
+		"pageUrl": "custom-page-2",
+		"active": true,
+		"wrapper": false,
+		"metaDesc":"Description of Custom Page 2",
+		"pageTitle":"Flower Shop - Custom Page 2",
+		"metaKeywords":"flower shop, custom page 2",
+		"metaTags":"",
+		"pageMainContent":"Custom Page 2 Content"
+	},
+	{
+		"id":5,
+		"pageName":"Custom Page 3",
+		"pageUrl": "custom-page-3",
+		"active": true,
+		"wrapper": true,
+		"metaDesc":"Description of Custom Page 3",
+		"pageTitle":"Flower Shop - Custom Page 3",
+		"metaKeywords":"flower shop, custom page 3",
+		"metaTags":"",
+		"pageMainContent":"Custom Page 3 Content"
+	}
+]

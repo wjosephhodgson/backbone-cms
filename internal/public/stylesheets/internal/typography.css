@@ -1,0 +1,18 @@
+/* Typography Page ONLY */
+table tr {
+  border-bottom: 1px solid #f2f2f2;
+}
+table tr th {
+  padding: 0 5px;
+}
+table tr td {
+  padding: 10px 5px;
+  border-left: 1px solid #F2F2F2;
+}
+table tr td:first-child {
+  border-left: none;
+}
+
+.m-collection-header {
+  border-bottom: none;
+}

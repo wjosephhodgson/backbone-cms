@@ -1,0 +1,188 @@
+<div class="row row-spaced panel">
+	<div class="row panel alert-panel hidden">
+		<div class="col-12">
+			<div class="row">
+				<div class="col-1">
+					<div class="icon icon-3x icon-warning"></div>
+				</div>
+				<div class="col-11 alert-text">
+					You have reached the maximum number of items allowed.<br>Please remove items you have selected if you wish to add more.
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="<%= disabled ? 'col-12' : 'col-7' %>">
+			<div class="row">
+				<div class="col-12">
+					<h4 class="title pull-left"><%= activeTitle %></h4>
+
+					<% if(!hideGrids && !hideLists) { %>
+					<div id="view-control" class="pull-right">
+						<button type="button" id="list-view" class="icon icon-btn icon-colored icon-list fa-lg"></button>
+						<button type="button" id="grid-view" class="icon icon-btn icon-colored icon-category fa-lg active"></button>
+					</div>
+					<% } %>
+				</div>
+			</div>
+
+			<div id="product-container" class="scroll-container">
+				<% if(!hideLists) { %>
+				<table id="product-table" class="table-list alternate hidden-alt">
+					<thead>
+						<tr>
+							<% if(!disabled) { %>
+								<% if(!images) { %>
+									<th class="col-10 left-align"><%= activeTableTitle %></th>
+									<% if(showCategoryID) { %>
+										<th class="col-2">ID</th>
+									<% } %>
+									<th class="col-2 right-align">Delete</th>
+								<% } else { %>
+								<!-- statusactive used to create wedding-products tablehead -->
+									<% if(!statusactive) { %>
+									<th class="col-7 left-align"><%= activeTableTitle %></th>
+									<th class="col-2 left-align"></th>
+									<% if(showCategoryID) { %>
+										<th class="col-2">ID</th>
+									<% } %>
+									<th class="col-2 right-align">Delete</th>
+									<% } else { %>
+										<th class="col-1 left-align">Sequence</th>
+										<th class="col-6 left-align"><%= activeTableTitle %></th>
+										<th class="col-3 left-align">Image</th>
+										<% if(showCategoryID) { %>
+										<th class="col-1">ID</th>
+										<% } %>
+										<th class="col-1 center-align">Status</th>
+										<th class="col-1 right-align">Delete</th>
+									<% } %>
+								<% } %>
+							<% } else { %>
+							<th class="col-12 left-align"><%= activeTableTitle %></th>
+							<% } %>
+						</tr>
+					</thead>
+
+					<!--  List active products -->
+					<tbody id="product-list"></tbody>
+
+					 <img id="loader-overlay" class="hidden" src="/images/loader-transparent-background.png" style="position: absolute; z-index: 900; left: 0px; top: 0px;">
+
+					  <img id="spinner-gif" class="hidden" src="/images/spinner.gif" style="position: absolute; z-index: 1000; left: 220px; top: 160px; bottom: 5px;">
+				</table>
+				<% } %>
+				<% if(!hideGrids) { %>
+				<div id="product-grid" class="<%= disabled ? 'grid-6-closed' : 'grid-4-closed'  %> hidden-alt clearfix"></div>
+				<% } %>
+			</div>
+		</div>
+
+	<% if (!disabled) { %>
+		<div class="col-5 form-section">
+			<div class="row">
+				<div class="col-12">
+					<div class="row">
+						<div class="col-12">
+							<h4 class="title pull-left"><%= allTitle %></h4>
+							
+							<% if (!nofilter) { %>
+								<button type="button" id="filter-view" class="icon icon-btn icon-colored icon-filter icon-lg pull-right"></button>
+
+								<div id="product-search-checkboxes" class="search-filters">
+									<div class="row row-spaced">
+										<div class="col-12">
+											<h3 class="pull-left no-margin">Filter by:</h3>
+											<button type="button" id="close-filter-view" class="icon icon-btn icon-x icon-lg pull-right"></button>
+										</div>
+									</div>
+
+
+
+									<% if (typeFilter) { %>
+									<div class="row">
+										<div class="clearfix">
+											<div class="col-12">
+												<div class="row">
+													<div class="col-12">
+														<div class="panel-title product-filter-title">Type</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="row row-spaced">
+											<div class="col-6 center-align">
+												<label for="type-custom">Custom</label>
+												<input class="fill-container-width" data-key="type" data-value="Custom" type="checkbox" id="type-custom" checked >
+											</div>
+
+											<div class="col-6 center-align">
+												<label for="type-Teleflora">Teleflora</label>
+												<input class="fill-container-width" data-key="type" data-value="Teleflora" type="checkbox" id="type-Teleflora" checked>
+											</div>
+										</div>
+									</div>
+									<% } %>
+									<% if (statusFilter) { %>
+									<div class="row">
+										<div class="clearfix">
+											<div class="col-12">
+												<div class="row">
+													<div class="col-12">
+														<div class="panel-title product-filter-title">Status</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="row row-spaced">
+											<div class="col-6 center-align">
+												<label for="status-active">Active</label>
+												<input class="fill-container-width" data-key="active" data-value="true" type="checkbox" id="status-active" checked>
+											</div>
+
+											<div class="col-6 center-align">
+												<label for="status-inactive">Inactive</label>
+												<input class="fill-container-width" data-key="active" data-value="false" type="checkbox" id="status-inactive" checked>
+											</div>
+										</div>
+									</div>
+									<% } %>
+
+								</div>
+							<% } %>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="<%= nosearch ? 'no-margin' : 'search-container no-margin' %>">
+				<% if (!nosearch) { %><input id="product-search-input" type="text" placeholder="<%= allSearchPlaceholder %>"><% } %>
+				<div class="scroll-container">
+					<table id="product-search-table" class="table table-list hide-overflow">
+						<thead>
+							<tr>
+								<th data-attribute ="name" class="col-8 hidden">name</th>
+								<th data-attribute ="id" class="col-2 hidden">id</th>
+								<!-- <th data-attribute ="<%= activeAttribute %>" class="col-2 hidden"><%= activeAttribute %></th> -->
+							</tr>
+						</thead>
+					<!-- List all products -->
+					<tbody id="product-search-list" class="search-list"></tbody>
+					</table>
+				</div>
+				<% if( selectAll ) { %>
+				<div class="row">
+					<div class="col-6 y-space-top-s pull-right right-align">
+					  
+						 <button type="button" class="btn-xs btn-submit" id="f-select-all"> Select All</button>
+					</div>					
+				</div>
+				<% } %>						
+			</div>
+		</div>
+	<% } %>
+	</div>
+</div>

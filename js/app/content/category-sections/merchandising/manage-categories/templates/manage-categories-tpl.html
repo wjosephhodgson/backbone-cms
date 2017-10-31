@@ -1,0 +1,78 @@
+<div id="manage-categories">
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="clearfix section-title">
+				<h2 class="pull-left">Manage Categories</h2>
+				<button type="button" id="save-btn" class="btn btn-submit pull-right">Save Changes</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			Here you can create and edit categories for your website. You can change the products shown in your categories, as well as change the active dates and other options. Your existing categories are shown in the list below.
+		</div>
+	</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+	<div class="row row-spaced">
+		<div class="col-5 form-section">
+			<label for="catSearch">Category Search</label>
+			<div class="search-container">
+				<input type="text" class="no-change-trigger" id="catSearch" name="catSearch" placeholder="Enter a category name">
+			</div>
+		</div>		
+		<div class="col-4 pull-right">
+			<button type="button" id="new-category-btn" class="btn btn-submit pull-right y-space-top-btn">
+				<i class="icon icon-add icon-lg"></i>New Category
+			</button>
+		</div>
+	</div>
+
+<!-- 	<table id="category-table" class="table alternate">
+		<thead>
+			<tr>
+				<th class="left-align indented-m col-6">Category</th>
+				<th>Category Type</th>
+				<th>Page Type</th>
+				<th>Start Date</th>
+				<th>End Date</th>
+				<th>Status</th>
+				<th>Edit</th>
+			</tr>
+		</thead>
+		<tbody id="category-list"></tbody>
+	</table> -->
+
+	<div id="category-table" class="div-table">
+		<div class="div-table-head">
+		    <div class="row">
+			    <div class="col-4 left-align td-category">Category</div>
+			    <div class="col-2 td-category-type">Category Type</div>
+			    <div class="col-1 td-page-type">Page Type</div>
+			    <div class="col-1 td-start-date">Start Date</div>
+			    <div class="col-1 td-end-date">End Date</div>
+			    <div class="col-2 td-status">Status</div>
+			    <div class="col-1 td-edit">Edit</div>
+		    </div>
+	    </div>
+
+	    <div class="div-table-body" id="category-list"></div>
+	</div>
+</div>

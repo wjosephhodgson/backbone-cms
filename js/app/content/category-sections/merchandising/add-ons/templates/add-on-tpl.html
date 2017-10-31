@@ -1,0 +1,24 @@
+<tr class="sortable" data-id="<%= id %>">
+  <td><i class="icon icon-arrows icon-2x"></i></td>
+  <td class="left-align"><%= name %></td>
+  <td>
+    <img class="fit-container" src="<%= imgUrl %>">
+  </td>
+  <td><%= type %></td>
+  <td>
+    <div class="v-center">
+      <input <%= active ? 'checked' : '' %> type="checkbox" id="active-<%= id %>" name="active-<%= id %>" class="on-off-switch" />
+      <label for="active-<%= id %>" class="on-off-switch-label">
+        <div class="on-off-switch-state">on</div>
+      </label>
+    </div>
+  </td>
+  <td>
+    <button class="icon icon-edit icon-btn icon-2x"></button>
+  </td>
+  <td>
+    <% if( type == 'Custom' ){ %>
+    <button id="delete-btn" class="icon icon-trash icon-btn icon-2x"></button>
+    <% } %>
+  </td>
+</tr>

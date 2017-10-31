@@ -1,0 +1,506 @@
+[
+	 {
+	 	"sourcecodeReportDate": "06/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "23",
+	 	"Orders": "23",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	 {
+	 	"sourcecodeReportDate": "07/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "44",
+	 	"Orders": "44",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	  {
+	  	"sourcecodeReportDate": "08/15/14",
+	 	"SourceCode": "BBltlflora",
+	 	"sourceCodes": "21",
+	 	"Orders": "21",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	  {
+	  	"sourcecodeReportDate": "08/15/14",
+	 	"SourceCode": "Cltlflora",
+	 	"sourceCodes": "22",
+	 	"Orders": "22",
+	 	"sales":"$295.00",
+	 	"orderValue": "$79.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "09/15/14",
+	 	"SourceCode": "Dltlflora",
+	 	"sourceCodes": "44",
+	 	"Orders": "44",
+	 	"sales":"$359.00",
+	 	"orderValue": "$79.45"
+	 },
+	  {
+	  	"sourcecodeReportDate": "09/15/14",
+	 	"SourceCode": "Vltlflora",
+	 	"sourceCodes": "33",
+	 	"Orders": "33",
+	 	"sales":"$359.00",
+	 	"orderValue": "$74.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "KGtlflora",
+	 	"sourceCodes": "21",
+	 	"Orders": "21",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "MJltlflora",
+	 	"sourceCodes": "34",
+	 	"Orders": "34",
+	 	"sales":"$359.00",
+	 	"orderValue": "$91.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "VSltlflora",
+	 	"sourceCodes": "44",
+	 	"Orders": "44",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "46",
+	 	"Orders": "46",
+	 	"sales":"$359.00",
+	 	"orderValue": "$79.45"
+	   },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "34",
+	 	"Orders": "34",
+	 	"sales":"$359.00",
+	 	"orderValue": "$91.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "44",
+	 	"Orders": "44",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "46",
+	 	"Orders": "46",
+	 	"sales":"$359.00",
+	 	"orderValue": "$79.45"
+	   },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "34",
+	 	"Orders": "34",
+	 	"sales":"$359.00",
+	 	"orderValue": "$91.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "tgddtlflora",
+	 	"sourceCodes": "44",
+	 	"Orders": "44",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "KGtlflora",
+	 	"sourceCodes": "46",
+	 	"Orders": "46",
+	 	"sales":"$359.00",
+	 	"orderValue": "$79.45"
+	   },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "KGtlflora",
+	 	"sourceCodes": "34",
+	 	"Orders": "34",
+	 	"sales":"$359.00",
+	 	"orderValue": "$91.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "KGtlflora",
+	 	"sourceCodes": "44",
+	 	"Orders": "44",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "46",
+	 	"Orders": "46",
+	 	"sales":"$359.00",
+	 	"orderValue": "$79.45"
+	   },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "sdgtlflora",
+	 	"sourceCodes": "34",
+	 	"Orders": "34",
+	 	"sales":"$359.00",
+	 	"orderValue": "$91.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "44",
+	 	"Orders": "44",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "46",
+	 	"Orders": "46",
+	 	"sales":"$359.00",
+	 	"orderValue": "$79.45"
+	   },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "34",
+	 	"Orders": "34",
+	 	"sales":"$359.00",
+	 	"orderValue": "$91.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "44",
+	 	"Orders": "44",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "46",
+	 	"Orders": "46",
+	 	"sales":"$359.00",
+	 	"orderValue": "$79.45"
+	   },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "34",
+	 	"Orders": "34",
+	 	"sales":"$359.00",
+	 	"orderValue": "$91.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "44",
+	 	"Orders": "44",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "46",
+	 	"Orders": "46",
+	 	"sales":"$359.00",
+	 	"orderValue": "$79.45"
+	   },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "34",
+	 	"Orders": "34",
+	 	"sales":"$359.00",
+	 	"orderValue": "$91.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "44",
+	 	"Orders": "44",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "46",
+	 	"Orders": "46",
+	 	"sales":"$359.00",
+	 	"orderValue": "$79.45"
+	   },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "34",
+	 	"Orders": "34",
+	 	"sales":"$359.00",
+	 	"orderValue": "$91.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "44",
+	 	"Orders": "44",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "46",
+	 	"Orders": "46",
+	 	"sales":"$359.00",
+	 	"orderValue": "$79.45"
+	   },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "34",
+	 	"Orders": "34",
+	 	"sales":"$359.00",
+	 	"orderValue": "$91.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "41",
+	 	"Orders": "41",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "45",
+	 	"Orders": "45",
+	 	"sales":"$350.00",
+	 	"orderValue": "$79.45"
+	   },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "34",
+	 	"Orders": "34",
+	 	"sales":"$350.00",
+	 	"orderValue": "$98.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "44",
+	 	"Orders": "44",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "46",
+	 	"Orders": "46",
+	 	"sales":"$359.00",
+	 	"orderValue": "$79.45"
+	   },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "41",
+	 	"Orders": "41",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "45",
+	 	"Orders": "45",
+	 	"sales":"$350.00",
+	 	"orderValue": "$79.45"
+	   },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "34",
+	 	"Orders": "34",
+	 	"sales":"$350.00",
+	 	"orderValue": "$98.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "44",
+	 	"Orders": "44",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "46",
+	 	"Orders": "46",
+	 	"sales":"$359.00",
+	 	"orderValue": "$79.45"
+	   },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "41",
+	 	"Orders": "41",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "45",
+	 	"Orders": "45",
+	 	"sales":"$350.00",
+	 	"orderValue": "$79.45"
+	   },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "34",
+	 	"Orders": "65",
+	 	"sales":"$650.00",
+	 	"orderValue": "$98.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "50",
+	 	"Orders": "60",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "51",
+	 	"Orders": "51",
+	 	"sales":"$359.00",
+	 	"orderValue": "$79.45"
+	   },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "21",
+	 	"Orders": "65",
+	 	"sales":"$650.00",
+	 	"orderValue": "$98.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "54",
+	 	"Orders": "45",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "55",
+	 	"Orders": "56",
+	 	"sales":"$359.00",
+	 	"orderValue": "$79.45"
+	   },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "46",
+	 	"Orders": "46",
+	 	"sales":"$359.00",
+	 	"orderValue": "$79.45"
+	   },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "41",
+	 	"Orders": "41",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "45",
+	 	"Orders": "45",
+	 	"sales":"$350.00",
+	 	"orderValue": "$79.45"
+	   },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "34",
+	 	"Orders": "65",
+	 	"sales":"$650.00",
+	 	"orderValue": "$98.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "50",
+	 	"Orders": "60",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	 {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "46",
+	 	"Orders": "46",
+	 	"sales":"$359.00",
+	 	"orderValue": "$79.45"
+	   },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "41",
+	 	"Orders": "41",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "45",
+	 	"Orders": "45",
+	 	"sales":"$350.00",
+	 	"orderValue": "$79.45"
+	   },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "34",
+	 	"Orders": "65",
+	 	"sales":"$650.00",
+	 	"orderValue": "$98.45"
+	 },
+	   {
+	   	"sourcecodeReportDate": "10/15/14",
+	 	"SourceCode": "Alltlflora",
+	 	"sourceCodes": "50",
+	 	"Orders": "60",
+	 	"sales":"$435.00",
+	 	"orderValue": "$79.45"
+	 }
+  ]

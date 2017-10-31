@@ -1,0 +1,16 @@
+[
+   {
+	"id": 1,
+	"name":"Google Buzz",
+	"url":"/images/mock/googlebuzz.png",
+	"type":"image/png",
+    "global":false
+	},
+	{
+	"id": 2,
+	"name":"Dribble",
+	"url":"/images/mock/dribble.png",
+	"type":"image/png",
+    "global":false
+	}
+]

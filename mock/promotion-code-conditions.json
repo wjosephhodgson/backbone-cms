@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "number": "01",
+    "condition": "Minimum Spend Required",
+    "category": "Order Total"
+  },
+  {
+    "id": 2,
+    "number": "02",
+    "condition": "Minimum Spend Required with Max Allowed Discount",
+    "category": "Order Total"
+  },
+  {
+    "id": 3,
+    "number": "03",
+    "condition": "Tiered Discounts",
+    "category": "Order Total"
+  },
+  {
+    "id": 4,
+    "number": "05",
+    "condition": "Local Delivery",
+    "category": "Item + Add Ons"
+  },
+  {
+    "id": 5,
+    "number": "05",
+    "condition": "Register and Place First Order",
+    "category": "Order Total"
+  },
+  {
+    "id": 6,
+    "number": "01",
+    "condition": "Specific Products discount",
+    "category": "Item + Add Ons"
+  },
+  {
+    "id": 7,
+    "number": "02",
+    "condition": "Specific Category discount",
+    "category": "Item + Add Ons"
+  },
+  {
+    "id": 8,
+    "number": "03",
+    "condition": "Minimum Item total (Item + Add ons) in specific delivery date range",
+    "category": "Item + Add Ons"
+  },
+  {
+    "id": 9,
+    "number": "04",
+    "condition": "In Store Pick-Up Discount",
+    "category": "Item + Add Ons"
+  },
+  {
+    "id": 10,
+    "number": "01",
+    "condition": "Local Delivery",
+    "category": "Delivery/Service Fee"
+  },
+  {
+    "id": 11,
+    "number": "02",
+    "condition": "Minimum Item Total, Or Specific item, Or Specific Category",
+    "category": "Delivery/Service Fee"
+  },
+  {
+    "id": 12,
+    "number": "03",
+    "condition": "Delivery Fee Discount",
+    "category": "Delivery/Service Fee"    
+  }
+]

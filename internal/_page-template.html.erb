@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en" lang="en” xmlns:og="http://opengraphprotocol.org/schema/" class="no-js">
+  <head>
+    <title>Teleflora</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="<%= domain %>stylesheets/screen.css">
+    <link rel="stylesheet" media="screen and (min-width:961px)" type="text/css" href="<%= domain %>stylesheets/screen-desktop.css">
+    
+    <!--[if lt IE 9]>
+      <link rel="stylesheet" type="text/css" href="<%= domain %>stylesheets/screen-desktop.css"/>
+      <script type="text/javascript" src="<%= domain %>javascripts/fixes/respond.min.js"></script>
+      <script type="text/javascript" src="<%= domain %>javascripts/modules/datepicker/legacy.js"></script>    
+    <![endif]-->
+    
+	<script type="text/javascript" src="<%= domain %>javascripts/browser-detection.js"></script>
+    <script type="text/javascript" src="<%= domain %>javascripts/lib/modernizr-dev.js"></script>
+	<script>
+      //individual pages ask for this variable to load their individual resources
+      var initLoad = false;
+      var pickerLoad = false;
+
+
+      /////////////////////////////////////////////////////////////////////
+      ////////////////////////////////////////////////////////////////////
+      //////////////    Internet Explorer Console Log Fix   //////////////
+      ////////////////////////////////////////////////////////////////////
+
+      /*
+        Protect window.console method calls, e.g. console is not defined on IE
+       * unless dev tools are open, and IE doesn't define console.debug
+       */
+      if (!window.console) {
+        window.console = {};
+      }
+      // union of Chrome, FF, IE, and Safari console methods
+      var m = [
+        "log", "info", "warn", "error", "debug", "trace", "dir", "group",
+        "groupCollapsed", "groupEnd", "time", "timeEnd", "profile", "profileEnd",
+        "dirxml", "assert", "count", "markTimeline", "timeStamp", "clear"
+      ];
+      // define undefined methods as noops to prevent errors
+      for (var i = 0; i < m.length; i++) {
+        if (!window.console[m[i]]) {
+          window.console[m[i]] = function() {};
+        }
+      }
+
+    </script>
+  </head>
+
+  <body>
+  <%= render :partial=> "/global/theme-bar/markup" %>
+
+    <div class="m-promo-bar-wrapper">
+      <div class="m-promo-bar-container">
+	<!-- flexslider downloaded from: http://www.woothemes.com/flexslider/ -->
+    <!-- start promo banner flexslider container -->
+        
+        <div id="promobannerHeader" class="flexslider m-category-flexslider"> 
+      <!-- start of flexslider list elements -->
+          <ul class="slides m-category-bestsellers">
+        <!-- flexslider element -->
+            <li>
+              <div class="m-promo-bar">
+                <div class="l-wrapper">
+                  <div class="m-promo-bar-dollar-circle">$</div>
+                  <div class="m-promo-bar-content">
+                    <p> <span class="bembo-bold">Save 20% on all products.</span> Promotion Code: <span class="code">POPPY</span>. Your discounted products are displayed below. </p>
+                    <div class="m-promo-bar-content-link"><a href="#" class="avenir">Click here for details</a></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+        <!-- flexslider element -->
+            <li>
+              <div class="m-promo-bar">
+                <div class="l-wrapper">
+                  <div class="m-promo-bar-dollar-circle">$</div>
+                  <div class="m-promo-bar-content">
+                    <p> <span class="bembo-bold">Save 120% on all products.</span> Promotion Code: <span class="code">ROSESARERED</span>. Your discounted products are displayed below. </p>
+                    <div class="m-promo-bar-content-link"><a href="#" class="avenir">Click here for details</a></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+        <!-- flexslider element -->
+            <li>
+              <div class="m-promo-bar">
+                <div class="l-wrapper">
+                  <div class="m-promo-bar-dollar-circle">$</div>
+                  <div class="m-promo-bar-content">
+                    <p> <span class="bembo-bold">Buy 1 Bear Get 4 Bears Free.</span> Promotion Code: <span class="code">VIOLETSAREBLUE</span>. Your discounted products are displayed below. </p>
+                    <div class="m-promo-bar-content-link"><a href="#" class="avenir">Click here for details</a></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        </div>
+        
+
+
+    <div id="wrapper">
+
+  <%= render :partial=> "/global/header/markup" %>
+
+  <%= yield %>
+
+  <%= render :partial=> "/global/footer/markup" %>
+
+    </div>
+
+<!-- Modal -->
+<div id="passwordModal" class="modal hide fade" tabindex="-1" data-width="460">
+  <!-- modal header container -->
+  <div class="m-pdp-modal-header modal-header m-primary-bg-container">
+    <!--modal header title -->
+    <h5 class="m-pdp-modal-header-text">Verify E-mail for Password Delivery
+      <!-- X to close modal icon inside _icons.scss-->
+      <span><a href="#" data-dismiss="modal" class="pull-right icon-close icon-close-modal"></a></span></h5>
+  </div>
+  <!-- end modal header container -->
+
+  <div class="modal-body">
+    <p>Please verify your e-mail address for password delivery.</p>
+    <p>Once verified, your password will be mailed to the e-mail address you have entered here.</p>
+
+    <p class="errMsg">Please enter your registered email address.</p>
+    
+    <label for="emailForgot">EMAIL</label>
+    <input id="emailForgot" class="email" name="emailForgot" data-type="email" type="email" value="">
+  </div>
+  <div class="modal-footer pdp-modal-footer">
+    <input id="forgotPasswordBtn" name="forgotPasswordBtn" type="submit" class="btn btn-submit" value="get password">
+  </div>
+</div>
+
+  <script type="text/javascript">
+    var domain = "<%= domain %>";
+    var pathToTypeAhead = "<%= domain %>javascripts/json/search_suggestions.json";
+
+    if(Modernizr.oldie) {
+      jquerySrc = '<%= domain %>javascripts/lib/jquery.js';
+    } else {
+      jquerySrc = '<%= domain %>javascripts/lib/jquery-2.0.0.min.js';
+    }
+
+    Modernizr.load([
+      {
+        load: jquerySrc
+      },
+      {
+        load: [
+          //load flexslider.css
+          '<%= domain %>stylesheets/modules/flexslider.css',
+          '<%= domain %>javascripts/lib/jquery.easing.js',
+          '<%= domain %>javascripts/lib/bootstrapTypeaheadCustom.js',
+          '<%= domain %>javascripts/lib/jquery.validate.min.js',
+		  '<%= domain %>javascripts/modules/jquery.mask.js',
+          '<%= domain %>javascripts/lib/hammer.min.js',
+          '<%= domain %>javascripts/formValidation.js',
+          '<%= domain %>javascripts/modules/bootstrap-tooltip.js',
+          '<%= domain %>javascripts/teleflora.js',
+          '<%= domain %>javascripts/theme-bar.js',
+		  '<%= domain %>javascripts/modules/jquery.flexslider-min.js',
+          //loading modal (alert window) js
+          '<%= domain %>javascripts/modules/bootstrap-modalmanager.js',
+          '<%= domain %>javascripts/modules/bootstrap-modal.js',
+          <% @assets.each do |item| %>
+          '<%= domain %><%= item %>',
+          <% end %>
+        ],
+        test: Modernizr.oldie,
+        yep: [
+          '<%= domain %>javascripts/modules/datepicker/picker.js',
+          '<%= domain %>javascripts/modules/datepicker/picker.date.js'
+        ],
+        complete: function() {
+          //individual pages ask for this variable to load their individual resources
+          initLoad = true;
+		  
+		  
+		  // This "If" is or DEMO purposes only
+		  if (teleflora.getParameterByName('promo') == 1){
+            $('.m-promo-bar-container ul li:last-child').remove();
+            $('.m-promo-bar-container ul li:first-child').remove();
+          	}
+          
+          //initialize flexslider after local resources are loaded
+          //see flexslider documentation on http://www.woothemes.com/flexslider/
+          $('#promobannerHeader').flexslider({
+            initDelay: 0,
+            animation: "fade",
+			controlNav: true,
+			directionNav: false,
+			slideshowSpeed: 2000,
+            });
+
+		  // This "If" is or DEMO purposes only
+		  if (teleflora.getParameterByName('promo') == 1){
+            $('.m-promo-bar-container ol').remove();
+          	}
+		  
+        }
+      }
+    ]);
+
+    // modernizr fixes
+    Modernizr.load([
+      {
+        test: Modernizr.webkit,
+        nope: ['' +  domain + 'stylesheets/fixes/selects.css']
+      }/*,
+      {
+        test: Modernizr.touch,
+        yep: ['' +  domain + 'javascripts/lib/fastbutton.js']
+      }*/
+    ]);
+    </script>
+  </body>
+</html>

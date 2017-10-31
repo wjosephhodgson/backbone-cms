@@ -1,0 +1,151 @@
+// Apparently used to avoid flickering of elements while in the state of
+// animation for mobile devices
+%avoid-flicker {
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+}
+
+// Lock body to prevent weird stuff from happening when nav is visible
+body.lock-body {
+	overflow: hidden;
+
+	@include break-desktop() {
+		overflow: auto;
+	}
+}
+
+#page {
+	position: relative;
+}
+
+#page-content {
+	@include break-mobile {
+		.mobile-nav-visible & {
+			max-height: 100vh;
+			overflow: hidden;
+		}
+	}
+}
+
+#mobile-nav {
+	border-right: 1px solid $color-border-2;
+	position: absolute;
+	top: 0;
+	left: -$mobile-nav-width;
+	width: $mobile-nav-width;
+	
+	@extend %avoid-flicker;
+}
+
+.mobile-help-group {
+	.icon-right-chevron {
+		display: none;
+	}
+}
+
+#mobile-nav-overlay {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+
+	.mobile-nav-visible & {
+		display: block;
+	}
+}
+
+#mobile-nav-list {
+	font-size: 16px;
+	font-weight: bolder;
+	text-transform: uppercase;
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+
+	& li {
+		padding: $space-m;
+		border-bottom: 1px solid $color-border-2;
+
+		&.mobile-nav-search {
+			font-size: 12px;
+			border-bottom: 0;
+			font-weight: normal;
+
+			& .search-container {
+				margin: 0;
+			}
+		}
+
+		&.mobile-nav-title {
+			background-color: $color-neutral-7;
+			padding-top: $space-s;
+			padding-bottom: $space-s;
+		}
+	}
+
+	& .link {
+		cursor: pointer;
+	}
+
+	& .link:hover, & a:hover {
+		color: $color-accent-2;
+	}
+
+	&.searching {
+		& > .mobile-nav-sub-list {
+			position: static;
+
+			& > .main-menu-link {
+				display: none;
+			}
+		}
+
+		& > .link {
+			display: none;
+		}
+	}
+}
+
+.mobile-nav-sub-list {
+	@extend .fill-container-width;
+	@extend .compact-list;
+	background-color: #ffffff;
+	position: absolute;
+	overflow-y: auto;
+	top: 66px; // Hardcoded nonsense so search bar can stay visible
+	bottom: 0;
+	left: 100%;
+	z-index: 1; // Go over the social media icons
+
+	& a {
+		text-transform: none;
+		font-weight: normal;
+	}
+}
+
+.mobile-nav-animating {
+	@include single-transition(transform, 300ms, ease-in-out);
+
+	&.left {
+		@include translate3d(-$mobile-nav-width, 0, 0);	
+	}
+
+	&.right {
+		@include translate3d($mobile-nav-width, 0, 0);	
+	}
+}
+
+.mobile-nav-visible {
+	left: $mobile-nav-width;
+
+	@include break-desktop() {
+		left: 0;
+	}
+
+	&.mobile-nav-sub-list {
+		left: 0;
+	}
+}

@@ -1,0 +1,45 @@
+<form id="create-edit-301-PermanentRedirect-form" name="create-edit-301-PermanentRedirect-form" class="form-section"> 
+    <div class="row row-spaced panel x-space-s">
+        <div class="row row-spaced">
+            <div class="col-12">
+                <div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+                <button type="button" id="save-btn" class="btn btn-submit btn-panel pull-right"> Save</button>
+                <% if(id) { %>  <button type="button" id="delete-btn" class="btn btn-cancel btn-panel pull-right ">Delete</button> <% } %>
+                <button type="button" id="cancel-btn" class="btn btn-other btn-panel pull-right">Cancel</button>
+                <div class="panel-title y-space-top-l"><%= id ? "Edit " : "Add New " %>301 Permanent URL Redirect</div>
+            </div>
+        </div>
+        <div class="row row-spaced">
+            <div class="col-12">
+                Please allow up to 30 minutes for your redirects to be reflected on your website.
+            </div>
+        </div>        
+        <!-- Hidden Alert Message -->
+        <div class="row panel alert-panel">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-1">
+                        <div class="icon icon-3x icon-warning"></div>
+                    </div>
+                    <div class="col-11 alert-text">
+                        This is a generic placeholder for error messages in eSAT. <br>
+                        In the live app, this will be a real message and will be hidden by default.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hidden Alert Message -->
+        <div class="row row-spaced y-space-s"> 
+            <div class="col-12 form-section">
+                <label for="f-old-url">Old Url</label><i title="This is the old address. When a user hits this URL, they will be redirected to the URL specified under Redirect To." class="icon icon-tool-tip x-space-s"></i>
+                <input type="text" id="f-old-url" name="f-old-url" value="<%= oldUrl %>"/>
+            </div>
+        </div>
+        <div class="row row-spaced y-space-s">
+            <div class="col-12 form-section">
+                <label for="f-301-Permanent-Redirect">Redirect To</label><i title="This is the new URL. The 301 redirect will take your customers here." class="icon icon-tool-tip x-space-s"></i>
+                <input type="text" id="f-301-Permanent-Redirect" name="f-301-Permanent-Redirect" value="<%= PermanentRedirectToURL %>">
+            </div>
+        </div>
+    </div>
+</form>

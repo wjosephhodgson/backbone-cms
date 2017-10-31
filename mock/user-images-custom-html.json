@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name":"Custom HTML Image 1",
+    "url":"http://www.telefloramarketing.com/mock/html-1.jpg",
+    "type": "image/jpeg",
+    "global":false
+  },
+  {
+    "id": 2,
+    "name":"Custom HTML Image 2",
+    "url":"http://www.telefloramarketing.com/mock/html-2.jpg",
+    "type": "image/jpeg",
+    "global":false
+  },
+  {
+    "id": 3,
+    "name":"Custom HTML Image 3",
+    "url":"http://www.telefloramarketing.com/mock/html-3.png",
+    "type": "image/png",
+    "global":false
+  },
+  {
+    "id": 4,
+    "name":"Custom HTML Image 4",
+    "url":"http://www.telefloramarketing.com/mock/html-4.png",
+    "type": "image/png",
+    "global":false
+  }
+]

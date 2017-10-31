@@ -1,0 +1,13 @@
+{
+	"activateProgram": true,
+	"programName":"Enter Program Name Here",
+	"newRegistration": true,
+	"paymentPage": true,
+	"dollarToPoint":"1",
+	"pointsEarned":"1",
+	"pointsRequired":"1",
+	"numberofDays":"",
+	"promoCodePrefix":"",
+	"discountType":"",
+	"discountAmount":"5%"
+}

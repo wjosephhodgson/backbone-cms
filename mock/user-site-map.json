@@ -1,0 +1,31 @@
+{
+	"xmlUrl": "http://www.yourshopname.com/ef_sitemap.xml",
+	"sections": [
+		{
+			"id": 1,
+			"sequence": 1, 
+			"linkTitle": "Custom Page title 01",
+			"linkUrl": "test-url1"
+		},
+		{
+			"id": 2,
+			"sequence": 2, 
+			"linkTitle": "Custom Page title 02",
+			"linkUrl": "test-url2"
+		},
+		{
+			"id": 3,
+			"sequence": 3, 
+			"linkTitle": "Custom Page title 03",
+			"linkUrl": "test-url3"
+		},
+		{
+			"id": 4,
+			"sequence": 4, 
+			"linkTitle": "Custom Page title 04",
+			"linkUrl": "test-url4"
+		}
+
+	]
+
+}

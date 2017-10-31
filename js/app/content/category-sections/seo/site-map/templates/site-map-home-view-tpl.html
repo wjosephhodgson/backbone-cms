@@ -1,0 +1,56 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="section-title clearfix">
+			<h2 class="pull-left">Site Map</h2>
+			<div class="btn-panel">
+				<button type="button" id="save-btn" class="btn btn-submit pull-right">Save</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced">
+	<div class="col-12">
+		Your site map is a list of pages of your website accessible to search engine crawlers and shoppers. It is set up as a document in XML format and is also a page on your website that lists all the active pages on the site organized in hierarchical fashion. 
+	</div>
+</div>
+
+<div class="panel">
+	<div class="row row-spaced">
+		<div class="col-6 form-section">
+			<label for="f-xmlUrl">Your XML Site Map URL</label><i class="icon icon-tool-tip x-space-s" title="This is the URL to access the XML version of your site map."></i>
+			<input type="text" id="f-xmlUrl" name="f-xmlUrl" value="<%= xmlUrl %>" disabled>
+		</div>
+	</div>
+
+	<!-- Start of Section table -->
+	<div class="row row-spaced">
+		<div class="col-12">
+			<button type="button" id="new-btn" class="btn btn-submit pull-right"><i class="icon icon-add"></i>Add New Link</button>
+			<div class="panel-title y-space-top-l">Manage Site Map<i title="You can use this section to manually configure what links appear on your site map." class="icon icon-tool-tip x-space-s"></i></div>
+		</div>
+	</div>
+	<div class="row row-spaced">
+		<div class="col-12">
+			Use this section to add custom page links to your website's site map.
+		</div>
+	</div>
+	<div class="row row-spaced">
+		<div class="col-12">
+			<table class="table alternate">
+				<thead>
+					<tr>
+						<th class="col-1">Sequence</th>
+						<th class="col-3 left-align">Link Title</th>
+						<th class="col-5 left-align">Link URL</th>
+						<th class="col-1">Edit</th>
+						<th class="col-1">Delete</th>
+					</tr>
+				</thead>
+				<tbody id="section-list"></tbody>
+			</table>
+		</div>
+	</div>
+	<!-- End of Section Table -->
+</div> <!-- panel end -->

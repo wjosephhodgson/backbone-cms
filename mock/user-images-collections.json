@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name":"Monet's Garden Background",
+    "url":"http://www.telefloramarketing.com/mock/collectionbg-1.jpg",
+    "type": "image/jpeg",
+    "global":false
+  },
+  {
+    "id": 2,
+    "name":"Monet's Garden Left",
+    "url":"http://www.telefloramarketing.com/mock/collectionleft-1.jpg",
+    "type": "image/jpeg",
+    "global":false
+  },
+  {
+    "id": 3,
+    "name":"Monet's Garden Right",
+    "url":"http://www.telefloramarketing.com/mock/collectionright-1.jpg",
+    "type": "image/jpeg",
+    "global":false
+  },
+  {
+    "id": 4,
+    "name":"Monet's Garden Logo",
+    "url":"http://www.telefloramarketing.com/mock/collectionlogo-1.jpg",
+    "type": "image/jpeg",
+    "global":false
+  },
+]

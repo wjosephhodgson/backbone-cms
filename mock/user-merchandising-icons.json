@@ -1,0 +1,58 @@
+[
+	{
+		"id": 1,
+		"merchandisingIconName": "New",
+		"merchandisingIconTag": "New!",
+		"merchandisingconImage": "images/mock/merchandising-Icons/New.jpg",
+		"type": "Teleflora",
+		"merchandisingActiveStatus": true
+	},
+	{
+		"id": 2,
+		"merchandisingIconName": "best seller",
+		"merchandisingIconTag": "Best Seller!",
+		"merchandisingconImage": "images/mock/merchandising-Icons/BestSeller.jpg",
+		"type": "Teleflora",
+		"merchandisingActiveStatus": true
+	},
+	{
+		"id": 3,
+		"merchandisingIconName": "hot",
+		"merchandisingIconTag": "HOT!",
+		"merchandisingconImage": "images/mock/merchandising-Icons/Hot.jpg",
+		"type": "Custom",
+		"merchandisingActiveStatus": true
+    },
+	{
+		"id": 4,
+		"merchandisingIconName": "Most Viewed 1",
+		"merchandisingIconTag": "Most Viewed!",
+		"merchandisingconImage": "images/mock/merchandising-Icons/nba0.jpg",
+		"type": "Teleflora",
+		"merchandisingActiveStatus": true
+    },
+    {
+    	"id": 5,
+		"merchandisingIconName": "Most Viewed 2",
+		"merchandisingIconTag": "Most Viewed!",
+		"merchandisingconImage": "images/mock/merchandising-Icons/nba0.jpg",
+		"type": "Custom",
+		"merchandisingActiveStatus": true
+    },
+     {
+        "id": 6,
+		"merchandisingIconName": "Most Viewed 3",
+		"merchandisingIconTag": "Most Viewed!",
+		"merchandisingconImage": "images/mock/merchandising-Icons/nba0.jpg",
+		"type": "Teleflora",
+		"merchandisingActiveStatus": true
+    },
+     {
+        "id": 7,
+		"merchandisingIconName": "Most Viewed 3",
+		"merchandisingIconTag": "Most Viewed!",
+		"merchandisingconImage": "images/mock/merchandising-Icons/nba0.jpg",
+		"type": "Custom",
+		"merchandisingActiveStatus": true
+    }
+]

@@ -1,0 +1,115 @@
+<form id="create-edit-form" name="create-edit-form">
+<div class="row row-spaced">
+  <div class="col-12">
+    <div class="section-title clearfix">
+      <h2 class="pull-left">
+        <%= id ? 'Edit': 'Create' %> Wedding Gallery
+      </h2>
+      <div class="btn-panel">
+        <button id="cancel-btn" type="button" class="btn btn-other">Cancel</button>
+        <% if (type !== "Teleflora") { %>
+        <button id="delete-btn" type="button" class="btn btn-cancel">Delete</button>
+        <% } %>
+        <button id="save-btn" type="button" class="btn btn-submit"><% if(!id) { %><i class="icon icon-add"></i><% } %>Save</button>
+        <div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row row-spaced">
+  <div class="col-12">
+    Here you can <%= id ? 'edit ' : 'create ' %> wedding galleries for your site. This page will allow you to change all of the details for each individual gallery.
+  </div>
+</div>
+
+<!-- Start of Gallery Panel -->
+<div class="row row-spaced panel form-section">
+  <div class="row">
+    <div class="col-5 form-section">
+      <label for="f-name">Name</label><i title="This is the name of the wedding gallery." class="icon icon-tool-tip x-space-s"></i>
+      <input <%= type === 'Teleflora' ? 'disabled' : '' %> type="text" id="f-name" name="f-name" value="<%= name %>" autofocus>
+    </div>  
+    <div class="col-2">
+      <div class="label">
+        Active
+      </div>
+      <input <%= galleryStatus ? 'checked' : '' %> type="checkbox" id="f-galleryStatus" name="f-galleryStatus" class="on-off-switch" />
+      <label for="f-galleryStatus" class="on-off-switch-label">
+        <div class="on-off-switch-state">on</div>
+      </label>
+    </div>
+    <div class="col-3">
+      <label for="f-type">Type</label>
+      <input type="text" id="f-type" name="f-type" value="<%= type %>" disabled>
+    </div> 
+  </div>
+</div>
+
+
+<!-- End of Gallery Panel -->
+
+<!-- Start of Sections Panel -->
+<div class="panel row row-spaced ">
+  <div class="panel-title"> <%=name%> Gallery Photos</div>
+  <% if (type !== "Teleflora") { %>
+  <div class="row row-spaced">
+    <div class="col-12">
+      <button type="button" id="add-photo-btn" class="btn btn-submit pull-right"><i class="icon icon-add icon-lg"></i> Add New Photo</button>
+    </div>
+  </div>
+  <% } %>
+  <div class="row panel alert-panel hidden">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-1">
+          <div class="icon icon-3x icon-warning"></div>
+        </div>
+        <div class="col-11 alert-text">
+          You have reached the maximum number of photos allowed.<br>Please remove photos you have selected if you wish to add more.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row row-spaced">
+    <div class="col-12">
+      <table class="table alternate">
+        <thead>
+          <tr>
+            <% if (type !== "Teleflora") { %>
+            <th class="col-1">Sequence<button data-attribute="sequence" type="button" class="icon icon-btn icon-sort sort-btn"></button></th>
+            <% } %>
+            <th class="col-2">Image</th>
+            <th class="col-4 left-align">Photo Name<button data-attribute="name" type="button" class="icon icon-btn icon-sort sort-btn"></button></th>
+            <th class="col-2">Status</th>
+            <th class="col-1">Edit</th>
+            <th class="col-1">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="section-list"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- End of Sections Panel -->
+
+<div id="print-modal"></div>
+
+
+</form>

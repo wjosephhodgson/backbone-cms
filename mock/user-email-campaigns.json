@@ -1,0 +1,328 @@
+[
+	{
+		"name":"CanadaDay1_2015",
+		"pullDate":"10/25/15",
+		"sendDate":"10/25/15",
+		"subject":"Ready, Set, Summer!",
+		"active": true,
+		"id": 1,
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"name":"Summer2_2015",
+		"pullDate":"9/25/15",
+		"sendDate":"9/25/15",
+		"subject":"Ready, Set, Summer!",
+		"active":true,
+		"id": 2,
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"name":"JustBecause3_2015",
+		"pullDate":"8/15/15",
+		"sendDate":"8/15/15",
+		"subject":"Here's your excuse!",
+		"active":true,
+		"id": 3,
+		"featuredProductsNum": 3,
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"name":"MothersDay@_2015",
+		"pullDate":"6/29/15",
+		"sendDate":"6/29/15",
+		"subject":"3 days left until Mother's Day",
+		"active":true,
+		"id": 4,
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"name":"FathersDay1_2014",
+		"pullDate":"6/11/14",
+		"sendDate":"6/11/14",
+		"subject":"TBD",
+		"active":true,
+		"id": 5,
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"name":"MemorialDay1_2014",
+		"pullDate":"5/21/14",
+		"sendDate":"5/21/14",
+		"subject":"Send Flowers for Memorial Day",
+		"active":true,
+		"id": 6,
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"name":"JuneBday_2014",
+		"pullDate":"4/12/14",
+		"sendDate":"4/12/14",
+		"subject":"Happy Birthday Delivered!",
+		"active":true,
+		"id": 7,
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"name":"MothersDay2_2014",
+		"pullDate":"3/25/14",
+		"sendDate":"3/25/14",
+		"subject":"Make your Mother's Week!  Order flowers today.",
+		"active":true,
+		"id": 8,
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"name":"Easter5_2014",
+		"pullDate":"3/12/14",
+		"sendDate":"3/12/14",
+		"subject":"Easer is this Sunday, order now",
+		"active":true,
+		"id": 9,
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"name":"MarchBday_2014",
+		"pullDate":"2/29/14",
+		"sendDate":"2/29/14",
+		"subject":"MarchBday_2014",
+		"active":true,
+		"id": 10,
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"name":"MothersDay2_2014",
+		"pullDate":"3/25/14",
+		"sendDate":"3/25/14",
+		"subject":"Make your Mother's Week!  Order flowers today.",
+		"active":true,
+		"id": 11,
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"name":"Easter5_2014",
+		"pullDate":"3/12/14",
+		"sendDate":"3/12/14",
+		"subject":"Easer is this Sunday, order now",
+		"active":true,
+		"id": 12,
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"name":"MarchBday_2014",
+		"pullDate":"2/29/14",
+		"sendDate":"2/29/14",
+		"subject":"MarchBday_2014",
+		"active":true,
+		"id": 13,
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	}
+]

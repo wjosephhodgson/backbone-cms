@@ -1,0 +1,178 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Checkout Configuration</h2>
+			<button type="button" id="save-btn" class="btn btn-submit pull-right">Save Changes</button>
+			<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced">
+	<div class="col-12">
+		Use this page to control checkout settings.
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row row-spaced panel form-section">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">Shopping Cart Settings</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-6">
+				<div class="label">Display Upgrades <i class="icon icon-tool-tip x-space-s" title="This will allow users to upgrade products directly from the Basket page."></i></div>
+				<input <%= upgrades ? 'checked' : '' %> type="checkbox" id="f-upgrades" name="f-upgrades" class="switch on-off-switch">
+				<label for="f-upgrades" class="on-off-switch-label"><div class="on-off-switch-state"></div>on</label>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<div class="row row-spaced panel form-section">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">Delivery Page Settings</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-6">
+				<div class="label">Require Zip For Delivery Address <i class="icon icon-tool-tip x-space-s" title="Leave this turned on to prompt the customer to enter their zip code."></i></div>
+				<input <%= reqDelZip ? 'checked' : '' %> type="checkbox" id="f-reqDelZip" name="f-reqDelZip" class="switch on-off-switch">
+				<label for="f-reqDelZip" class="on-off-switch-label"><div class="on-off-switch-state"></div>on</label>
+			</div>
+
+			<div class="col-6">
+				<div class="label">Require Phone Number For Delivery Address <i class="icon icon-tool-tip x-space-s" title="Leave this turned on to prompt the customer to enter a phone number for the delivery address."></i></div>
+				<input <%= reqDelPhone ? 'checked' : '' %> type="checkbox" id="f-reqDelPhone" name="f-reqDelPhone" class="switch on-off-switch">
+				<label for="f-reqDelPhone" class="on-off-switch-label"><div class="on-off-switch-state"></div>on</label>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-6">
+				<div class="label">Address Verification (QAS) <i class="icon icon-tool-tip x-space-s" title="This should be turned on if the shop is using our credit processing."></i></div>
+				<input <%= useAVS ? 'checked' : '' %> type="checkbox" id="f-useAVS" name="f-useAVS" class="switch on-off-switch">
+				<label for="f-useAVS" class="on-off-switch-label"><div class="on-off-switch-state"></div>on</label>
+			</div>
+
+			<div class="select-container col-6">
+				<label for="f-subPolicy">Substitution Policy Option</label> <i title="This setting controls the display of the option for your customers to opt in or out of bouquet substitution. Hidden does not give the customer an option or display this feature. Optional leaves the checkbox there so the customer can opt in or out. Force automatically forces the customer to accept any substitutions." class="icon icon-tool-tip x-space-s"></i>
+				<select id="f-subPolicy" name="subPolicy">
+					<option selected disabled hidden value="<%= subPolicy %>"><%= subPolicy %></option>
+					<option value="Hidden">Hidden</option>
+					<option value="Optional">Optional</option>
+					<option value="Force">Force</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				<label for="f-delInfoText">Delivery Information Text</label> <i class="icon icon-tool-tip x-space-s" title="Information that needs to be relayed to online customers? Put all of that information here."></i>
+				<textarea name="f-delInfoText" id="f-delInfoText" class="size-2"><%= delInfoText %></textarea>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-6">
+				<div class="label">Display Reminder Checkbox <i class="icon icon-tool-tip x-space-s" title="Leave this turned on to give online customers the option to have yearly reminders emailed to them."></i></div>
+				<input <%= reminderDisplay ? 'checked' : '' %> type="checkbox" id="f-reminderDisplay" name="f-reminderDisplay" class="switch on-off-switch">
+				<label for="f-reminderDisplay" class="on-off-switch-label"><div class="on-off-switch-state"></div>on</label>
+			</div>
+
+			<div class="select-container col-6">
+				<label for="f-reminderDefault">Reminder Checkbox Default</label> <i class="icon icon-tool-tip x-space-s" title="Select whether the reminder checkbox should be automatically checked or unchecked."></i>
+				<select id="f-reminderDefault" name="f-reminderDefault">
+					<option selected disabled hidden value="<%= reminderDefault %>"><%= reminderDefault %></option>
+					<option value="Checked">Checked</option>
+					<option value="Unchecked">Unchecked</option>
+				</select>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="row row-spaced panel form-section">
+	<div class="col-12">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Payment Page Settings</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="label">Terms & Conditions Message <i class="icon icon-tool-tip x-space-s" title="Leave this turned on for customers to see the terms & conditions."></i></div>
+			<input <%= displayTC ? 'checked' : '' %> type="checkbox" id="f-displayTC" name="f-displayTC" class="switch on-off-switch">
+			<label for="f-displayTC" class="on-off-switch-label"><div class="on-off-switch-state"></div>on</label>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			<label for="f-TCtext">Terms & Conditions Text</label> <i class="icon icon-tool-tip x-space-s" title="Use this field to replace the default Terms & Conditions."></i>
+			<textarea name="f-TCtext" id="f-TCtext" class="size-2"><%= TCtext %></textarea>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="select-container col-6">
+			<label for="f-emailDefault">Email Signup Checkbox Default</label> <i class="icon icon-tool-tip x-space-s" title="Select whether the email signup checkbox should be automatically checked or unchecked."></i>
+			<select id="f-emailDefault" name="emailDefault">
+				<option selected disabled hidden value="<%= emailDefault %>"><%= emailDefault %></option>
+				<option value="Checked">Checked</option>
+				<option value="Unchecked">Unchecked</option>
+			</select>
+		</div>
+
+		<div class="col-6">
+			<label for="f-emailMessage">Email Signup Message</label> <i class="icon icon-tool-tip x-space-s" title="Use this to let the online customers know that signing up for email campaigns will get them special deals."></i>
+			<input type="text" name="f-emailMessage" id="f-emailMessage" value="<%= emailMessage %>">
+		</div>
+	</div>
+	</div>
+</div>
+
+<div class="row row-spaced panel form-section">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">Confirmation Page Settings</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				<label for="f-confHeadline">Confirmation Headline Text</label> <i class="icon icon-tool-tip x-space-s" title="Any additional information that should be shown on the confirmation page should go here."></i>
+				<textarea name="f-confHeadline" id="f-confHeadline" class="size-2"><%= confHeadline %></textarea>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="featured-occasion-container"></div>

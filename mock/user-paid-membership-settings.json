@@ -1,0 +1,11 @@
+
+	{   
+		"status": true,
+		"programName": "Program Name",
+		"discountOptions": "$5",
+		"faqContent": "FAQ modal content located here.",
+		"legalContent":"Legal modal content located here.",
+		"accountContent":"My account description located here.",
+		"accountSignupContent": "Sign up description located here"
+	}
+	

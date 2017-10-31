@@ -1,0 +1,113 @@
+// header css
+// table of contents
+//
+// settings
+// .m-supernav
+// .m-navbar
+// .is-* classes
+// $break-medium
+
+
+
+//settings
+$navbar-width: 20em;
+$breakpoint1: 28.58em;
+
+#wrapper{
+  width:100%;
+  min-height: 50em;
+  position: relative;
+}
+
+#wrapper, .is-animate-navbar-touch #wrapper{
+  -moz-transition:-moz-transform 0.5s;
+  -webkit-transition:-webkit-transform 0.5s;
+  -o-transition:-o-transform 0.5s;
+  transition:transform 0.5s;
+}
+
+.master-header{
+  position: relative;
+  width: 100%;
+  height: 3.3em;
+  background: $white;
+}
+
+
+/////
+// .m-supernav
+/////
+@import "./header/supernav";
+
+
+/////
+// .m-navbar
+/////
+@import "./header/navbar";
+
+
+/////
+// .m-account
+/////
+@import "./header/account";
+
+
+/////
+// .is-*
+/////
+
+
+.is-navbar-expanded #wrapper{
+  -webkit-transform: translate3d($navbar-width, 0, 0);
+  transform: translate3d($navbar-width, 0, 0);
+}
+  .no-csstransforms3d .is-navbar-expanded #wrapper {left: $navbar-width;}
+
+.m-navbar-toplevel.is-subnav-expanded{
+}
+
+.m-navbar-has-subnav.is-subnav-expanded .m-navbar-secondlevel{
+  display:block;
+  -webkit-transform: translate3d(0em, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.no-csstransforms3d .m-navbar-has-subnav.is-subnav-expanded .m-navbar-secondlevel {right: 0px;}
+
+
+.is-account-expanded .m-account{
+  -webkit-transform: translate3d(0, -0.5em, 0);
+  transform: translate3d(0, -0.5em, 0);
+  opacity:1;
+}
+  .no-csstransforms3d .is-account-expanded .m-account {top: -0.5em;}
+
+.is-subnav-expanded-tablet .m-navbar-secondlevel{
+  display:block;
+  -webkit-transform: translate3d(0em, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+  .no-csstransforms3d .is-subnav-expanded-tablet .m-navbar-secondlevel {left: 0;}
+
+.popupbg{
+  display:block;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background:rgba(255,255,255,0.5);
+  z-index: 1;
+}
+
+
+//////////////////////
+//////////////////////
+//////////////////////
+// $break-medium
+//////////////////////
+//////////////////////
+//////////////////////
+
+@media all and (min-width:$break-medium){
+
+}

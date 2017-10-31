@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name":"Inherited Add Ons",
+    "url":"add-ons/inherited",
+    "type":"folder",
+    "global":true
+  },
+  {
+    "id": 4,
+    "name":"Add Ons Image 4",
+    "url":"images/icons/addon-wine.jpg",
+    "type":"image/jpeg",
+    "global":false
+  }
+]

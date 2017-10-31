@@ -1,0 +1,10 @@
+#f-tax-code {
+	&.editable{
+		
+	}
+	&.disabled{
+		cursor: pointer;
+		background: #ebebe4 url(../images/esat-sprite-1.png) no-repeat calc(100% + 17px) -150px;
+	}
+	
+}

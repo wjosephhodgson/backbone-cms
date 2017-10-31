@@ -1,0 +1,12 @@
+<tr class="<%= isDefault ? 'active' : ''%>">
+	<td class="left-align indented-l">
+    <% if(isDefault && isFederated) { %>
+    <i title="Some elements of the homepage come from a higher node in the federation." class="icon icon-federated icon-lg"></i>
+    <% } %>
+    <%= name %>
+  </td>
+	<td><%= startDate %></td>
+	<td><%= endDate %></td>
+	<td><button class="icon icon-btn icon-2x icon-edit"></button></td>
+	<td><% if(!isDefault) { %><button class="icon icon-btn icon-2x icon-trash"></button><% } %></td>
+</tr>

@@ -1,0 +1,16 @@
+<tr class="sortable" data-id="<%= id %>">
+  <td><%= sequence %></td>
+  <td class="left-align">
+    <%= title %>
+  </td>
+  <td><button type="button" class="icon icon-btn icon-2x icon-edit"></button></td>
+  <td>
+    <div class="v-center">
+      <input <%= display ? 'checked' : '' %> type="checkbox" id="f-display-<%= id %>" name="f-display-<%= id %>" class="on-off-switch" />
+      <label for="f-display-<%= id %>" class="on-off-switch-label">
+          <div class="on-off-switch-state">on</div>
+      </label>
+    </div>
+  </td>
+  <td><button type="button" class="icon icon-btn icon-2x icon-trash"></button></td>
+</tr>

@@ -1,0 +1,54 @@
+[
+{
+		"orderandTrafficReportDate": "07/15/14",
+		"numberofVisitors": 10,
+		"pageViews": 11,
+		"numberofOrders": 12,
+		"totalSales": "$700.00",
+		"averageOrderValues": "$81.00",
+		"conversionRate": 4.2 
+},
+{       "orderandTrafficReportDate": "07/16/14",
+		"numberofVisitors": 35,
+		"pageViews": 21,
+		"numberofOrders": 16,
+		"totalSales": "$620.00",
+		"averageOrderValues": "$51.00",
+		"conversionRate": 10.2
+},
+{       "orderandTrafficReportDate": "07/18/14",
+		"numberofVisitors": 47,
+		"pageViews": 31,
+		"numberofOrders": 13,
+		"totalSales": "$627.00",
+		"averageOrderValues": "$45.00",
+		"conversionRate": 4.2
+},
+{
+	    "orderandTrafficReportDate": "07/19/14",
+		"numberofVisitors": 57,
+		"pageViews": 41,
+		"numberofOrders": 14,
+		"totalSales": "$560.00",
+		"averageOrderValues": "$35.00",
+		"conversionRate": 4.5 
+},
+{       
+	    "orderandTrafficReportDate": "07/20/14",
+		"numberofVisitors": 13,
+		"pageViews": 46,
+		"numberofOrders": 15,
+		"totalSales": "$575.00",
+		"averageOrderValues": "$21.00",
+		"conversionRate": 2.8 
+},
+{
+	    "orderandTrafficReportDate": "07/21/14",
+		"numberofVisitors": 78,
+		"pageViews": 48,
+		"numberofOrders": 25,
+		"totalSales": "$580.00",
+		"averageOrderValues": "$20.00",
+		"conversionRate": 4.3 
+}
+]

@@ -1,0 +1,16 @@
+<div id="side-menu-inner">
+	<ul id="side-nav">
+		<% for (var i = 0, j = subCategories.length; i < j; ++i) { %>
+			<li class="side-nav-title">
+				<i class="icon icon-prefix <%= subCategories[i].iconClass %> icon-2x"></i>
+				<%= subCategories[i].name %>
+			</li>
+
+			<% for (var k = 0, l = subCategories[i].sections.length; k < l; ++k) { %>
+				<a href="<%= baseUrl + subCategories[i].sections[k].url %>">
+					<li><%= subCategories[i].sections[k].name %></li>
+				</a>
+			<% } %>
+		<% } %>
+	</ul>
+</div>

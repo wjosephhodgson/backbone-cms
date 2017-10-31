@@ -1,0 +1,594 @@
+.m-confirmation-header-container{
+  //container for shopping cart icon and title
+  @include mobile() {
+    margin-bottom: 1em;
+    text-align: center;
+    border-bottom: 1px solid $accent-grey;
+  }
+}
+.m-confirmation-header {
+  // //used on the main title of the page
+  font-size: em(24px);
+  padding: 0 0 0.5em 0;
+  margin-bottom: 0.5em;
+
+  @include mobile {
+    padding: 0;
+  }
+}
+
+.m-confirmation-order-number-label{
+  //order number label
+  margin-bottom: 0em;
+  padding-top: 0.45em;
+}
+.m-confirmation-order-number-text{
+  // text with the number
+  font-size: em(17px);
+}
+.m-confirmation-order-number-link{
+  //view recent orders link, for logge in version
+  font-size: 1.15em;
+}
+
+.m-confirmation-content-print {
+  @include desktop {
+    width: 33% !important;
+  }
+
+  @include mobile {
+    padding: 2em 0;
+    margin: 1.5em 0 -0.5em 0;
+    border-top: 1px solid $accent-grey;
+
+    &.no-border {
+      border: none;
+      padding: 1em 0;
+    }
+  }
+}
+.m-confirmation-order-number-print {
+  max-width: 250px;
+  margin-bottom: 0;
+  position: relative;
+  bottom: 0;
+
+  @include desktop {
+    float: right;
+    margin-top: 2em;
+  }
+
+  @include mobile {
+    margin-bottom: 0;
+  }
+}
+
+.m-confirmation-content-text-container {
+  margin-top: 0.2em;
+
+  .m-confirmation-content-text {
+    padding-top: 0.5em;
+    padding-left: 2.0em;
+
+    @include mobile() {
+      //padding-top: 0em;
+    }
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+.m-confirmation-order-number-container{
+  //container for confirmationmessage + number + print confirmation
+  border-bottom: 1px solid $accent-grey;
+  margin-bottom: 1.5em;
+
+  @include desktop() {
+    padding-bottom: 1em;
+  }
+
+  .m-confirmation-order-number-subheader{
+    //used on the icon copy
+    margin-top: 0.4em;
+    margin-left: 0em;
+
+    .m-confirmation-order-number-subheader-copy{
+      //confirmation icon copy
+      padding-top: 0.7em;
+      padding-left: 0.5em;
+
+      @include desktop() {
+        padding-top: 0.6em;
+      }
+    }
+    .m-confirmation-order-number-number-btn{
+      //wrapper for print order btn
+      margin-right: 0em;
+
+      @include desktop() {
+        margin-top: 0.5em;
+      }
+    }
+  }
+
+  .m-confirmation-order-number-number{
+    //used on the order number elements
+    padding-top: 0.5em;
+
+    .m-confirmation-order-number-number-code{
+      //used to wrap the order number + number + link
+      margin-left: 0em;
+
+      @include desktop() {
+        margin-top: 0.7em;
+      }
+      .m-confirmation-order-number-number-label{
+        //order number label
+        margin-bottom: 0em;
+        padding-top: 0.45em;
+      }
+      .m-confirmation-order-number-number-text{
+        // text with the number
+        font-size: 17px;
+      }
+      .m-confirmation-order-number-number-link{
+        //view recent orders link, for logge in version
+        font-size: 1.15em;
+      }
+    }
+  }
+
+  .m-confirmation-order-number-print{
+    //actual print btn
+    max-width: 258px;
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+    @include desktop() {
+      margin-right: 0em;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+.m-confirmation-middle-promo-container{
+  //container for colored promotion image and text
+  background-color: $dark-pink;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  line-height: 1.3em;
+
+  a{
+    color: $white;
+  }
+
+  @include desktop() {
+    padding-left: 0em;
+    margin-top: 1.5em;
+  }
+  .m-confirmation-middle-promo-image {
+    //image of colored promotion
+    @include desktop() {
+      float: left;
+      line-height: 0;
+      margin-left: 0;
+    }
+  }
+  .m-confirmation-middle-promo-text{
+    //text container on colored promotion
+    color: $white;
+    .m-confirmation-middle-promo-text-header {
+      //colored promotion header
+      padding-top: 0.5em;
+      font-size: 24px;
+      line-height: 1em;
+
+      @include desktop() {
+        padding-top: 1em;
+      }
+    }
+    .m-confirmation-middle-promo-text-copy{
+      //colored promotion text
+      font-size: 17px;
+    }
+    .m-confirmation-middle-promo-text-label{
+      //colored promotion label
+      display: block;
+      padding-bottom: 1em;
+      margin-top: 1em;
+
+      @include desktop() {
+        padding-bottom: 0em;
+        margin-top: 0.5em;
+      }
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+.m-confirmation-item-container{
+  margin-top: 1em;
+  min-height: 15em;
+
+  @include wildcard-max(30em) {
+    min-height: 17em;
+  }
+
+  .m-confirmation-item-info{
+    //bouquet image + info + price container
+    padding-top: 1.0em;
+
+    @include desktop() {
+      padding-bottom: 0.1em;
+    }
+    .m-confirmation-item-image{
+      //bouquet image
+      position: relative;
+      top: -10px;
+
+      @include desktop() {
+        width: 160px;
+        height: 200px;
+      }
+    }
+    .m-confirmation-item-copy{
+      //copy with item text
+      @include desktop() {
+        padding-left: 0em;
+        margin-left: 0em;
+      }
+    }
+  }
+}
+
+.oldie .m-confirmation-item-container {
+  min-height: none;
+}
+
+//////////////////////////////////////////////////////////////
+.m-confirmation-item-extra-container{
+  //"add something extra" container
+  margin-top: 0.5em;
+
+  @include desktop() {
+    margin-left: 5em !important;
+    margin-right: 0em !important;
+  }
+
+  //margin-right: 0em !important;
+  .grid_2.confirmation-grid_2{
+    //grid extension for add something extra select labels
+    width:30.0%;
+  }
+  .m-confirmation-item-extra-labels{
+    //add something extra first label
+    margin-left: -0.25em;
+    padding-top: 0.55em;
+  }
+  .m-confirmation-item-extra-selects{
+    //add something extra selects and labels margins
+    margin-top: -1em;
+  }
+  .m-confirmation-item-extra-selects-label{
+    //add something extra, second and third labels
+    margin-top: -0.8em;
+  }
+}
+.grid_2.confirmation-grid_2s{
+  //grid extension for add something extra selects
+  @include desktop() {
+    margin-left: 0.6em;
+  }
+
+  @include mobile() {
+    width:66.0%;
+  }
+}
+.d-grid_7.confirmation-selects{
+  //used to extend the grid system for the select lists on "Add something extra"
+   @include desktop() {
+    width:53.5%%;
+  }
+}
+/////////////////////////////////////////////////////////////////////////////////////
+.m-social-container.m-social-confirmation{
+  //adaptation from social container
+  margin-top: 0em;
+  text-align: left;
+  max-width: 22.2em;
+}
+/////////////////////////////////////////////////////////////////////////////////////
+.m-confirmation-bouquets-container{
+  //used on the bouquets container botom of page
+  text-align: center;
+  .m-confirmation-bouquets-btn{
+    //used on the btn of bouquets on bottom of page
+    margin: 1em 0;
+  }
+}
+////////////////////////////////////////////////////////////////////////////////////
+.m-confirmation-add-btn{
+  margin-top: 2.5em;
+  margin-bottom: 0.5em;
+
+  @include desktop() {
+    margin-top: -0.8em;
+    margin-bottom: 1.4em;
+
+    input{
+      float: right !important;
+    }
+  }
+}
+//////////////////
+
+.m-confirmation-print {
+  display: none;
+}
+
+@media print {
+  @page {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+  }
+
+  .m-confirmation-no-print {
+    display: none;
+  }
+
+  body {
+    min-height: 0 !important;
+  }
+
+  header {
+    display: none;
+  }
+
+  #wrapper {
+    min-height: 0 !important;
+  }
+
+  footer {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  a {
+    display: none;
+  }
+
+  .m-confirmation-print {
+    display: block;
+    position: relative;
+    padding: 0.6667em 0.333em;
+    z-index: 10000;
+
+    .m-account-divider-header {
+      color: black;
+      background: #efefef;
+      -webkit-print-color-adjust: exact;
+      font-family: serif;
+    }
+
+    .m-confirmation-print-intro {
+      margin-bottom: 0.667em;
+      .m-confirmation-print-intro-text {
+        margin-bottom: 0;
+      }
+    }
+
+    .m-confirmation-print-outro {
+      margin: 1em 0 0;
+
+    }
+
+    .m-confirmation-print-details {
+      border-top: 2px solid $accent-grey;
+      // two pixels becase all the detail boxes are pushed up 1px
+      // in order to hide the preceding box's bottom border (see additional notes below)
+
+      .m-account-divider-header {
+        padding: 0;
+        margin: 0;
+        border-left: 1px solid $accent-grey;
+        border-right: 1px solid $accent-grey;
+      }
+    }
+
+    .m-confirmation-print-order-number {
+      font-family: $sans-stack-heavy;
+      font-size: em(16px);
+      margin: 0.666em 0 0.666em;
+    }
+
+    .m-confirmation-print-detail {
+      page-break-inside: avoid;
+      position: relative;
+      font-size: 0.8em;
+      line-height: em(21px);
+      margin-top: -1px !important;
+      // this is here because if the box breaks to a new page on print,
+      // ths preceding box with have a border on the bottom
+
+      table {
+        border-bottom: 1px solid $accent-grey; // border for when the next box page breaks on print
+        width: 100%;
+
+        .border-left {
+          border-left: 1px solid $accent-grey;
+        }
+
+        tr {
+          width: 100%;
+          height: auto;
+          border-left: 1px solid $accent-grey;
+          border-right: 1px solid $accent-grey;
+        }
+
+        td {
+          width: 50%;
+          padding: 1em;
+          vertical-align: top;
+
+          &:last-child {
+            td {
+              &:last-child {
+                font-family: $sans-stack-book;
+                font-size: 0.9em;
+              }
+            }
+          }
+
+          table {
+            border: none;
+
+            tr {
+              border: none;
+
+              td {
+                padding: 0;
+
+                &:first-child {
+                  font-family: $sans-stack-heavy;
+                  font-size: 0.9em;
+                }
+
+                &.grid_2_3 {
+                  width: 66.666%;
+                }
+                &.grid_1_3 {
+                  width: 33.333%;
+                }
+                &.grid_3_4 {
+                  width: 75%;
+                }
+                &.grid_1_4 {
+                  width: 25%;
+                }
+                &.grid_4_4 {
+                  width: 100%;
+                }
+                &.grid_0_4 {
+                  width: 0%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .m-confirmation-print-policies {
+      padding-right: 1.5em;
+
+      p{
+        font-size: 1.2em;
+        line-height: 1.2em;
+        margin-bottom: 0.5em;
+      }
+    }
+
+    .m-confirmation-print-header {
+
+      .logo {
+        float: left;
+        width:8em;
+
+        svg{
+          width:100%;
+          height:2.25em;
+          fill: $pink;
+          transition-property: fill;
+          transition-duration: 0.5s;
+        }
+      }
+
+      .address {
+        float: right;
+        padding-top: 0.5em;
+      }
+    }
+
+    .m-confirmation-print-details-left {
+      border-left: 1px solid $accent-grey;
+    }
+    .m-confirmation-print-details-right {
+      border-right: 1px solid $accent-grey;
+    }
+  }
+}
+
+.m-confirmation-modal {
+  .m-confirmation-modal-inline {
+    display: inline-block;
+  }
+  .m-confirmation-modal-print-price {
+    color: $black;
+  }
+
+  .m-confirmation-modal-print-intro {
+    margin: 1em 0;
+    @include desktop(){
+      margin: 2em 0 1em;
+    }
+    .m-confirmation-modal-print-order-number {
+      font-family: $sans-stack-heavy;
+    }
+
+  }
+  .m-confirmation-modal-print-details {
+    border: 1px solid $accent-grey;
+    margin-bottom: 1em;
+
+    .m-confirmation-modal-detail-block {
+      padding: 1em 0; 
+    }
+    .m-confirmation-modal-print-detail-title {
+      margin: 0;
+    }
+
+    .m-confirmation-modal-print-detail {
+      .m-account-divider-header {
+        margin: 0;
+      }
+      .m-confirmation-modal-table-child {
+        padding: 0 1em;
+        display: block;
+      }
+      .m-confirmation-modal-print-detail-block-parent {
+        display: block;
+        border-bottom: 1px solid $accent-grey;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+      .m-confirmation-modal-print-detail-capgrey {
+        font-family: $sans-stack;
+        color: $dark-grey;
+      }
+      .m-confirmation-modal-print-border-right {
+        @include desktop() {
+          border-right: 1px solid $accent-grey;
+        }
+      }
+      .m-confirmation-modal-print-fine-print {
+        font-size: 1.07692307692308em;
+        line-height: 1.21428571482571em;
+      }
+      .m-confirmation-modal-print-spacing {
+        margin-top: 1.5em;
+      }
+    }
+  }
+
+}
+
+.m-confirmation-underline {
+  display: inline-block;
+}
+.m-confirmation-in-bouquet-copy {
+  margin-top: 0;
+}

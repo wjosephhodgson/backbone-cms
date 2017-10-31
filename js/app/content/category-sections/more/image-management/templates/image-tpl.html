@@ -1,0 +1,21 @@
+<div class="grid-item clickable <%= active ? 'active' : '' %><%= global ? ' global' : ' custom' %> <%= type !== 'image' ? type : '' %>">
+<% if (type.indexOf('image') > -1) { %>
+  <img id="img_<%= id %>" class="fit-container" src="<%= url %>" alt="<%= name %>"/>
+  <% if( global ) { %><i title="This is a global image so it cannot be modified." class="icon icon-tool-tip icon-tool-tip-federated federated-bottom-right"></i><% } %>
+<% } else { %>
+  <div class="grid-label">
+    <%= name %>
+  </div>
+<% } %>
+<% if(type === 'folder') {%>
+  <% if ( global == false ) { %>
+  <div class="row bottom-overlay y-space-s">
+    <div class="col-12">
+      <button type="button" class="icon icon-trash icon-btn fa-lg pull-right"></button>
+    </div>
+  </div>
+  <% } else { %>
+  <i title="This is a global folder so it cannot be modified." class="icon icon-tool-tip icon-tool-tip-federated federated-bottom-right"></i>
+  <% } %>
+<% } %>
+</div>

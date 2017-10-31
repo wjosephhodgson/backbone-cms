@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name":"Product 1",
+    "url":"http://www.telefloramarketing.com/mock/product-1.png",
+    "type":"image/png",
+    "global":false
+  },
+  {
+    "id": 2,
+    "name":"Product 2",
+    "url":"http://www.telefloramarketing.com/mock/product-2.png",
+    "type":"image/png",
+    "global":false
+  },
+  {
+    "id": 3,
+    "name":"Product 3",
+    "url":"http://www.telefloramarketing.com/mock/product-3.png",
+    "type":"image/png",
+    "global":false
+  },
+  {
+    "id": 4,
+    "name":"Product 4",
+    "url":"http://www.telefloramarketing.com/mock/product-4.png",
+    "type":"image/png",
+    "global":false
+  },
+  {
+    "id": 5,
+    "name":"Product 5",
+    "url":"http://www.telefloramarketing.com/mock/product-5.png",
+    "type":"image/png",
+    "global":false
+  }
+]

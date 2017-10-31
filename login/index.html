@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Login</title>
+	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet" href="login.css">
+	<script src="../js/vendor/jquery.js"></script>
+	<script src="../js/vendor/jquery-ui.js"></script>
+	<script src="login.js"></script>
+</head>
+<body>
+	<div id="login" class="full-screen">
+		<section id="login-box">
+			<div id="loading-overlay" class="hidden">
+				<div id="loading-spinner"></div>
+				<div id="loading-text">Signing in...</div>
+			</div>		
+			<h1 class="logo-e main-title">Welcome to <span class="logo-sat"><img src="/images/esatlogo.png"></span></h1>
+			<div class="row panel alert-panel">
+				<div class="col-12">
+					<div class="row">
+						<div class="col-1">
+							<div class="icon icon-2x icon-warning"></div>
+						</div>
+						<div class="col-11 left-align">
+							There is no site that matches that username.<br>Please contact support at eflorist@teleflora.com or 816-983-3932.
+						</div>
+					</div>
+				</div>
+			</div>			
+			<div class="row row-spaced">
+				<div class="col-6 left-align">
+					<h2 class="section-title">
+						New User?
+					</h2>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus facere necessitatibus repudiandae, porro saepe fugit provident.</p>
+
+					<div class="center-align">
+						<button class="btn btn-other">Register</button>
+					</div>
+				</div>
+
+				<form class="col-6 form-section left-align" method="post">
+		<!--<div class="row panel alert-panel">
+			<div class="col-12">
+				<div class="row">
+					<div class="col-2">
+						<div class="icon icon-2x icon-warning"></div>
+					</div>
+					<div class="col-10 alert-text">
+						There is no site that matches that username. Please contact support at eflorist@teleflora.com or 816-983-3932.
+					</div>
+				</div>
+			</div>
+		</div>-->
+					<h2 class="section-title">
+						Sign In
+					</h2>
+
+					<label for="username">Username:</label>
+					<input type="text" id="username" name="username" required>
+
+					<label for="password">Password:</label>
+					<input type="password" id="password" name="password" required>
+					<div class="right-align"><a href="">forgot password?</a></div>
+					<div class="center-align y-space-s"><button class="btn btn-submit" id="btn-login">Sign In</button></div>
+				</form>
+			</div>
+		</section>
+
+		<section id="register-box">
+
+		</section>
+
+		<div id="ie11-modal" style="display:none;">
+			<div class="page-change-modal">
+
+			  <div class="row row-spaced">
+			    <div class="col-12">
+			      <div class="clearfix section-title">
+			        <h2 class="pull-left">Browser Notice</h2>
+			      </div>
+			    </div>
+			  </div>
+
+			  <div class="row row-spaced">
+			    <div class="col-12 left-align login-browser-warning">
+			      You are receiving this notice because the browser you are using, Internet Explorer 11 (IE11), is experiencing technical difficulties which are affecting the self-administration tool. <br><br>If you have already added manage.eflorist.com as a trusted site, simply click OK to continue.<br><br> If this is your first time visiting using IE11, we recommend this easy fix. Quickly upgrade to Google Chrome or Mozilla Firefox, both of which are gold standard, fast, and reliable browsers. Simply click on one of the icons below to download either of the two supported browsers. Once downloaded, you are well on your way to making updates to your site!
+			    	<div id="login-browsers">
+				      <a target="_blank" href="https://www.google.com/chrome/browser/desktop/">
+				      	<img src="browser-chrome.jpg">
+				      </a>
+				      <a target="_blank" href="https://www.mozilla.org/firefox">
+				      	<img src="browser-firefox.jpg">
+				      </a>
+					</div>
+					If you prefer to continue using IE11, no problem. Click <span id="ie11-trigger">here</span> for instructions on how to proceed using IE11.
+
+			    </div>
+
+			    <div class="col-12 left-align" id="ie11-steps">
+			    	To use the self administration tool with IE11, follow these steps:<br><br>
+			    	1. In Internet Explorer, click the <b>Tools</b> icon, then <b>Internet Options</b>. From there, click the <b>Security</b> tab.<br><img src="ie11steps-1.jpg"><br><br>
+			    	2. Select a <b>Web content zone to specify its current security settings</b> box, click <b>Trusted Sites</b>, and then click <b>Sites</b>.<br><img src="ie11steps-2.jpg"><br><br>
+			    	3. In the <b>Add this Web site to the zone</b> box, type <b>https://manage.eflorist.com</b>, and then click <b>Add</b>. Then click <b>OK</b>.
+			    </div>
+			  </div>
+
+				<div class="row row-spaced">
+					<div class="col-12">
+					    <div class="btn-container-space-s">
+					        
+					    	<button id="btn-cancel" class="btn btn-other">OK</button>
+					       
+					    </div>
+				    </div>
+				</div>			  
+
+			</div>
+		</div>
+
+
+		<footer id="footer" class="row">
+			<div class="relative">
+				<div class="container">
+					<div class="pull-left">
+						Need Help? 866.983.3992 | eFlorist@teleflora.com
+					</div>
+					<div class="pull-right">
+						<img src="/images/myteleflora.png" alt="">
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

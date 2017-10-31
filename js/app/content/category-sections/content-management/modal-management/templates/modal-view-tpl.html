@@ -1,0 +1,18 @@
+<tr data-id="<%= id %>">
+	<td class="left-align"><%= name %></td>
+	<td class="left-align"><%= startDate %></td>
+	<td class="left-align"><%= endDate %></td>
+	<td class="left-align"><%= type %></td>
+	<td>
+		<input <%= status ? 'checked' : '' %> type="checkbox"  id="<%= id %>"  data-id="<%=id%>" name="<%= id %>" class="on-off-switch"/>
+		<label for="<%= id %>" class="on-off-switch-label left-offset-l"><div class="on-off-switch-state">on</div></label>
+    </td>
+	<td>
+		<% if( type === 'Custom'){ %>
+		<button type="button" class="icon icon-btn icon-edit icon-2x"></button>
+		<% } else { %>
+		<button type="button" class="icon icon-btn icon-search icon-2x"></button>
+		<% } %>
+	</td>
+	<td><% if( type === 'Custom'){ %><button type="button" class="icon icon-btn icon-trash icon-2x"></button><% } %></td>
+</tr>

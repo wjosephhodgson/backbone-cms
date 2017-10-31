@@ -1,0 +1,188 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Product Page Settings</h2>
+			<div class="btn-panel">
+				<button type="button" id="cancel-btn" class="btn btn-other">Cancel</button>
+				<button type="button" id="save-btn" class="btn btn-submit pull-right">Save Changes</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row row-spaced">
+	<div class="col-12">
+		Use this page to manage how the product page is displayed.
+	</div>
+</div>
+
+
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="row row-spaced form-section">
+			<div class="col-4">
+				<label for="end-date">Product Page Layout Type<i title="This setting controls the layout of the product page." class="icon icon-tool-tip x-space-s"></i></label>
+				<div class="select-container">
+					<select id="f-pageLayoutType" name="f-pageLayoutType">
+					<option selected disabled hidden value="<%= pageLayoutType %>"><%= pageLayoutType %></option>
+					<option value="Standard Layout" preview="catlayout-1">Standard Layout</option>
+					<option value="Holiday Layout" preview="catlayout-2">Holiday Layout</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-6">
+				<img <% if(pageLayoutType=='Standard Layout') { %>src="/images/mock/catlayout-1.png"<% } else { %>src="/images/mock/catlayout-2.png"<% }  %> class="categoryImage">
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				<div class="panel-title">
+					Teleflora Products Labels <i class="icon icon-tool-tip x-space-s" title="You can change the fields below in order to specify custom labels for the default price points for Teleflora products. For example, you could use Small, Medium, and Large instead of the defaults."></i>
+				</div>
+			</div>
+		</div>
+	
+		<div class="row row-spaced form-section">
+			<div class="col-4">
+				<label for="f-customAsShown">Standard</label>
+				<input type="text" id="f-customAsShown" name="f-customAsShown" value="<%= customAsShown %>">
+			</div>
+			<div class="col-4">
+				<label for="f-customDeluxe">Deluxe</label>
+				<input type="text" id="f-customDeluxe" name="f-customDeluxe" value="<%= customDeluxe %>">
+			</div>
+			<div class="col-4">
+				<label for="f-customPremium">Premium</label>
+				<input type="text" id="f-customPremium" name="f-customPremium" value="<%= customPremium %>">
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				<div class="panel-title">
+					Zip Code
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced form-section">
+			<div class="col-3">
+				<div class="label">Zip Code Input<i title="Leave this turned on to allow customers to input the zip code on the product page." class="icon icon-tool-tip x-space-s"></i></div>
+				<input <%= zipInputActive ? 'checked' : '' %> type="checkbox" id="f-zipInputActive" name="f-zipInputActive" class="on-off-switch" />
+				<label for="f-zipInputActive" class="on-off-switch-label">
+				    <div class="on-off-switch-state">on</div>
+				</label>
+			</div>
+
+			<div class="col-3">
+				<div class="label">Require Zip Code<i title="Leave this turned on to require customers to input the zip code on the product page." class="icon icon-tool-tip x-space-s"></i></div>
+				<input <%= requireZipActive ? 'checked' : '' %> type="checkbox" id="f-requireZipActive" name="f-requireZipActive" class="on-off-switch" />
+				<label for="f-requireZipActive" class="on-off-switch-label">
+				    <div class="on-off-switch-state">on</div>
+				</label>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				<div class="panel-title">
+					Merchandising
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced form-section">
+			<div class="col-3">
+				<div class="label">Bouquet Size<i title="Turning this setting on will display product dimensions on the product detail page (if they are specified for the product)." class="icon icon-tool-tip x-space-s"></i></div>
+				<input <%= bouquetSize ? 'checked' : '' %> type="checkbox" id="f-bouquetSize" name="f-bouquetSize" class="on-off-switch" />
+				<label for="f-bouquetSize" class="on-off-switch-label">
+				    <div class="on-off-switch-state">on</div>
+				</label>
+			</div>
+			<div class="col-3">
+				<div class="label">Add-ons<i title="Turning this setting on will display add-ons on the product page such as mylar balloons or stuffed animals." class="icon icon-tool-tip x-space-s"></i></div>
+				<input <%= displayAddOns ? 'checked' : '' %> type="checkbox" id="f-displayAddOns" name="f-displayAddOns" class="on-off-switch" />
+				<label for="f-displayAddOns" class="on-off-switch-label">
+				    <div class="on-off-switch-state">on</div>
+				</label>
+			</div>
+			<div class="col-5">
+				<div class="label">Cross-Selling Section<i title="This setting turns on the following extra merchandising sections on the page: <br>Flowers In This Bouquet<br>Collections<br>You May Also Like<br>Recently Viewed Products." class="icon icon-tool-tip x-space-s"></i></div>
+				<input <%= displayCrossSelling ? 'checked' : '' %> type="checkbox" id="f-displayCrossSelling" name="f-displayCrossSelling" class="on-off-switch" />
+				<label for="f-displayCrossSelling" class="on-off-switch-label">
+				    <div class="on-off-switch-state">on</div>
+				</label>
+			</div>			
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				<div class="panel-title">
+					Social Media
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced form-section">
+			<div class="col-3">
+				<div class="label">Display Share Buttons<i title="Leave this turned on to allow the customer to share the arrangement on social media." class="icon icon-tool-tip x-space-s"></i></div>
+				<input <%= shareButtonsActive ? 'checked' : '' %> type="checkbox" id="f-shareButtonsActive" name="f-shareButtonsActive" class="on-off-switch" />
+				<label for="f-shareButtonsActive" class="on-off-switch-label">
+				    <div class="on-off-switch-state">on</div>
+				</label>
+			</div>		
+		</div>
+
+
+		<div class="row row-spaced form-section">
+			<div class="col-12">
+				<div class="panel-title">Custom Text Fields</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-6 form-section">
+				<label for="f-inStorePickup">In-Store Pickup<i class="icon icon-tool-tip x-space-s" title="This is a small line of text which is displayed only on products set to In-Store Pickup Only."></i></label>
+				<input type="text" id="f-inStorePickup" name="f-inStorePickup" value="<%= inStorePickup %>">
+			</div>
+			<div class="col-6 form-section">
+				<label for="f-localDelivery">Local Delivery<i class="icon icon-tool-tip x-space-s" title="This is a small line of text which is displayed only on products set to Local Delivery Only."></i></label>
+				<input type="text" id="f-localDelivery" name="f-localDelivery" value="<%= localDelivery %>">
+			</div>
+		</div>
+
+		<div class="row row-spaced form-section">
+			<div class="col-6">
+				<label for="f-dropshipProducts">Dropship Products<i class="icon icon-tool-tip x-space-s" title="This is a small line of text which is displayed only on dropship products."></i></label>
+				<input type="text" id="f-dropshipProducts" name="f-dropshipProducts" value="<%= dropshipProducts %>">
+			</div>
+		
+			<div class="col-6 form-section">
+				<label for="f-browseOnly">Browse Only<i class="icon icon-tool-tip x-space-s" title="This is a small line of text which is displayed only on products set to Browse Only and cannot be purchased."></i></label>
+				<input type="text" id="f-browseOnly" name="f-browseOnly" value="<%= browseOnly %>">
+			</div>
+		</div>
+	</div>
+</div><!-- End of Main Row -->
+<div id"product-price-modal"></div>

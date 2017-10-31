@@ -1,0 +1,19 @@
+<div class="col-12">
+
+	<div class="row row-spaced">
+		<div class="col-6 form-section">
+			<div class="label">Products Label<i class="icon icon-tool-tip x-space-s" title=""></i></div>
+			<input type="text" name="f-products-label" id="f-products-label" value="<%= contentLabel %>">
+		</div>
+		<div class="col-6 form-section select-container">
+			<div class="label">Column Width<i class="icon icon-tool-tip x-space-s" title=""></i></div>
+			<select name="f-products-columns" id="f-products-columns">
+		    	<option selected disabled hidden value="<%= columns %>"><%= columns %></option>
+		    	<option value="1 Column">1 Column</option>
+		    	<option value="2 Columns">2 Columns</option>
+			</select>
+		</div>
+	</div>
+
+	<div id="featured-product"></div>
+</div>

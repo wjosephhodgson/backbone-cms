@@ -1,0 +1,69 @@
+<form id="image-modal" class="left-align">
+  <div id="aviary" class="hidden-alt"></div>
+  <div class="row row-spaced">
+    <div class="col-12">
+      <div class="clearfix section-title">
+        <h2 class="pull-left">Edit Image</h2>
+        <div class="btn-panel">
+          <button type="button" class="cancel-btn btn btn-other">Cancel</button>
+          <button type="button" class="save-btn btn btn-submit">Save Changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row row-spaced">
+    <div class="col-12">
+      THIS IS A TEST.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, alias voluptate voluptatum veniam, consectetur iste sapiente provident ad quidem quod rerum ullam sed atque aperiam quibusdam odit earum eum harum.
+    </div>
+  </div>
+
+  <div class="row row-spaced form-section">
+    <div class="col-12">
+      <div class="row row-spaced">
+        <div class="scroll-container auto-resize">
+          <div class="col-3">
+            <div class="row">
+              <div class="col-12">
+              <img id="f-image" class="fit-container" src="<%= url %>" alt="<%= altText %>"/>
+              </div>
+            </div>
+            <div class="row row-spaced">
+              <div class="col-12">
+                <button type="button" title="Edit image with Aviary" class="edit-btn icon icon-edit icon-btn fa-lg">
+                  <div class="icon-text">Edit image with Aviary</div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-9">
+            <div class="row row-spaced">
+              <div><b>File Name:</b> <%= fileName %></div><br>
+              <div><b>File Type:</b> <%= type %></div><br>
+              <div><b>Upload Date:</b> <%= uploadDate %></div><br>
+              <div class="wrap-text"><b>Link URL:</b> <span id="f-url"><%= url %></span></div><br>
+              <div><b>Dimensions:</b> <span id="f-dimensions"><%= dimensions %></span></div><br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row row-spaced">
+        <div class="col-12">
+          <label for="f-title">Title</label>
+          <input type="text" id="f-title" name="f-title" value="<%= title %>">
+        </div>
+      </div>
+      <div class="row row-spaced">
+        <div class="col-12">
+          <label for="f-altText">Alternate Text</label>
+          <input type="text" id="f-altText" name="f-altText" value="<%= altText %>">
+        </div>
+      </div>
+      <div class="row row-spaced">
+        <div class="col-12">
+          <label for="f-description">Description</label>
+          <textarea class="size-2" id="f-description" name="f-description"><%= description %></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

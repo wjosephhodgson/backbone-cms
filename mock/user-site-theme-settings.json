@@ -1,0 +1,46 @@
+{
+	"layoutImgUrl":"http://placehold.it/130x130/ff0000/000000",
+	"logoImgUrl":"/images/myteleflora.png",
+	"automaticSeasonalRotationActive": true,
+	"selectedThemeName": "Red",
+	"selectedThemeId": 1,
+	"selectedThemeSchemeId": 1,
+	"secondaryNav":  [
+		{
+			"id":1,
+			"label": "Google",
+			"sequence":1,
+			"link": "http://google.com"
+		},
+		{
+			"id":2,
+			"label": "CNN",
+			"sequence":2,
+			"link": "http://cnn.com"
+		},
+		{
+			"id":3,
+			"label": "Yahoo",
+			"sequence":3,
+			"link": "http://yahoo.com"
+		},
+		{
+			"id":4,
+			"label": "Teleflora",
+			"sequence":4,
+			"link": "http://teleflora.com"
+		},
+		{
+			"id":5,
+			"label": "Facebook",
+			"sequence":5,
+			"link": "http://facebook.com"
+		},
+		{
+			"id":6,
+			"label": "Twitter",
+			"sequence":6,
+			"link": "http://twitter.com"
+		}		
+	]
+}

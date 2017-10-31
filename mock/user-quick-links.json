@@ -1,0 +1,45 @@
+[
+	{
+		"name": "Homepage Schedule",
+		"nickName": "Homepage",
+		"imgUrl":"images/icons/fv-1-sun.png",
+		"icon": "icon-home",
+		"url":"#merchandising/homepage-customization",
+		"active": true,
+		"rank": 1,
+		"id": 1
+	},
+
+	{
+		"name": "Categories",
+		"nickName": "Categories",
+		"imgUrl":"images/icons/fv-4-leaf.png",
+		"icon": "icon-site-map",
+		"url":"#merchandising/manage-categories",
+		"active": true,
+		"rank": 2,
+		"id": 2
+	},
+
+	{
+		"name": "Product Management",
+		"nickName": "Products",
+		"imgUrl":"images/icons/fv-3-star.png",
+		"icon": "icon-leaf",
+		"url":"#merchandising/products-messaging",
+		"active": true,
+		"rank": 3,
+		"id": 3
+	},
+
+	{
+		"name": "Delivery Dates",
+		"nickName": "Delivery Dates",
+		"imgUrl":"images/icons/fv-2-people.png",
+		"icon": "icon-calendar",
+		"url":"#more/delivery-days-times",
+		"active": true,
+		"rank": 4,
+		"id": 4
+	}
+]

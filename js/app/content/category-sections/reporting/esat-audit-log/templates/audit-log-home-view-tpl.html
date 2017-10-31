@@ -1,0 +1,102 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="section-title">
+			<h2 class="pull-left">eSAT Audit Log</h2>
+		</div>
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row panel alert-panel">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-1">
+				<div class="icon icon-3x icon-warning"></div>
+			</div>
+			<div class="col-11 alert-text">
+				This is a generic placeholder for error messages in eSAT. <br>
+				In the live app, this will be a real message and will be hidden by default.
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+<!-- Hidden Alert Message for invalid search -->
+<div class="row row-spaced panel alert-panel hidden-alt" id="search-alert">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-1">
+				<div class="icon icon-4x icon-warning"></div>
+			</div>
+			<div class="col-11 alert-text">
+				Please enter search criteria into at least one of the below fields in order to look up orders.
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row row-spaced form-section panel">
+	<form id="p-form" class="form-section">
+		<div class="row row-spaced">
+			<div class="col-3 form-section" >
+				<label for="f-teleflora-id">Teleflora ID</label>
+				<input type="text" id="f-teleflora-id" name="f-teleflora-id" class="no-change-trigger">
+			</div>
+
+			<div class="col-3 form-section" >
+				<label for="f-start-date">Start Date</label>
+				<div class="date-container">
+				    <input type="text" id="f-start-date" name="f-start-date" class="date no-change-trigger">
+				</div>
+			</div>
+
+			<div class="col-3 form-section" >
+				<label for="f-end-date">End Date</label>
+				<div class="date-container">
+				    <input type="text" id="f-end-date" name="f-end-date" class="date no-change-trigger">
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced">
+			<div class="col-12 form-section">
+				<div class="row">
+					<div class="col-3 form-section"><label for="f-site-id">Site ID</label></div>
+					<div class="col-3 form-section"><label for="f-user-id">User ID</label></div>
+				</div>
+
+				<div class="row form-section">
+					<div class="col-3 form-section"><input type="text" id="f-site-id" name="f-site-id" class="no-change-trigger"></div>
+					<div class="col-3 form-section"><input type="text" id="f-user-id" name="f-user-id" class="no-change-trigger"></div>
+					<div class="col-3 form-section"><button type="button" class="btn btn-submit y-space-s" id="search-btn">Search</button></div>
+				</div>
+			</div>
+		</div>
+	</form>
+	<div class="showResults">
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title">Audit Search Result</div>
+			</div>
+		</div>
+		<div class="row row-spaced">
+			<div class="col-12">
+				Click on any entry to view the activity details.
+			</div>
+		</div>
+		<table id="audit-table" class="table alternate">
+			<thead>
+				<tr>
+					<th class="left-align">Teleflora ID<button data-attribute="telefloraID" class="icon icon-btn icon-sort sort-btn"></button></th>
+					<th class="left-align">Site ID<button data-attribute="siteID" class="icon icon-btn icon-sort sort-btn"></button></th>
+					<th class="left-align">User ID<button data-attribute="userID" class="icon icon-btn icon-sort sort-btn"></button></th>
+					<th class="left-align">Creation Time<button data-attribute="creationTime" class="icon icon-btn icon-sort sort-btn"></button></th>
+					<th class="left-align">Page<button data-attribute="page" class="icon icon-btn icon-sort sort-btn"></button></th>
+					<th class="left-align">Audit Action<button data-attribute="action" class="icon icon-btn icon-sort sort-btn"></button></th>
+				</tr>
+			</thead>
+			<tbody id="audit-list"></tbody>
+		</table>
+	</div>
+</div>

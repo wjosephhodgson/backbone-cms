@@ -1,0 +1,136 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Manage Products</h2>
+			<div class="btn-panel">
+				<button type="button" id="save-btn" class="btn btn-submit">Save</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+				<button type="button" id="import-btn" class="btn btn-submit"><i class="icon icon-add icon-lg"></i>Import</button>
+				<a id="new-btn" href="<%= baseUrl %>create"><button type="button" class="btn btn-submit"><i class="icon icon-add icon-lg"></i>New Product</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row row-spaced">
+	<div class="col-12">
+		From this section you can manage all of the products on your site. You can modify existing products from the list below or create new products using the "new product" button above.
+	</div>
+</div>
+
+<div class="row row-spaced form-section">
+	<div class="col-3">
+		<label for="selectCategory">Select Category</label>
+		<div class="select-container">
+      <select id="selectCategory" name="selectCategory" class="no-change-trigger">
+      	<option selected hidden disabled value="">All Categories</option>
+      	<option value="">All Categories</option>
+        <% for(var i = 0, j = allOccasions.length; i < j; ++i) {%>
+        	<option value="<%= allOccasions[i].id %>"><%= allOccasions[i].occasion + ' | ID ' + allOccasions[i].id %></option>
+        <% } %>
+	    </select>
+		</div>
+	</div>
+	<div class="col-5">
+		<label for="productSearch">Product Search</label>
+		<div class="search-container">
+			<input type="text" class="no-change-trigger" id="productSearch" name="productSearch" placeholder="Enter the Product Name or Number">
+		</div>
+	</div>
+	<div class="col-4 form-section pull-right">
+		<button type="button" id="filter-view" class="icon icon-btn icon-colored icon-filter icon-lg pull-right y-space-top-xl icon-3x"></button>
+		<div id="product-search-checkboxes" class="search-filters">
+			<div class="row">
+				<div class="col-12">
+					<h3 class="pull-left no-margin product-filter-header">Filter by:</h3>
+					<button type="button" id="close-filter-view" class="icon icon-btn icon-x icon-lg pull-right"></button>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="clearfix">
+					<div class="col-12">
+						<div class="row">
+							<div class="col-12">
+								<div class="panel-title product-filter-title">Type</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row row-spaced">
+					<div class="col-6 center-align">
+						<label for="productCheckbox-Custom">Custom</label>
+						<input class="fill-container-width" data-key="type" data-value="Custom" type="checkbox" checked id="productCheckbox-Custom">
+					</div>
+					<div class="col-6 center-align">
+						<label for="productCheckbox-Teleflora">Teleflora</label>
+						<input class="fill-container-width" data-key="type" data-value="Teleflora" type="checkbox" checked id="productCheckbox-Teleflora">
+					</div>
+				</div>
+			</div>	
+			<div class="row">
+				<div class="clearfix">
+					<div class="col-12">
+						<div class="row">
+							<div class="col-12">
+								<div class="panel-title product-filter-title">Status</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row row-spaced">
+					<div class="col-6 center-align">
+						<label for="productCheckbox-Active">Active</label>
+						<input class="fill-container-width" data-key="type" data-value="Active" type="checkbox" checked id="productCheckbox-Active">
+					</div>
+					<div class="col-6 center-align">
+						<label for="productCheckbox-Inactive">Inactive</label>
+						<input class="fill-container-width" data-key="type" data-value="Inactive" type="checkbox" checked id="productCheckbox-Inactive">
+					</div>
+				</div>
+			</div>	
+
+		</div>		
+	</div>
+</div>
+
+
+
+
+
+
+<div class="row row-spaced">
+	<div class="col-12">
+		<table id="product-table" class="table alternate">
+			<thead>
+				<tr>
+					<th class="clickable th-3-20 left-align">Name <i class="icon left-offset-xs"></i></th>
+					<th class="th-2-20">Image</th>
+					<th class="clickable th-2-20">Number <i class="icon left-offset-xs"></i></th>
+					<th class="clickable th-3-20">Product Type <i class="icon left-offset-xs"></i></th>
+					<th class="clickable th-2-20">My Price <i class="icon left-offset-xs"></i></th>
+					<th class="clickable th-2-20">Holiday Price <i class="icon left-offset-xs"></i></th>
+					<th class='clickable th-2-20'>Active <i class="icon left-offset-xs"></i></th>
+					<th class="th-1-20">Edit</th>
+				</tr>
+			</thead>
+			<tbody id="product-list"></tbody>
+		</table>
+	</div>
+</div>

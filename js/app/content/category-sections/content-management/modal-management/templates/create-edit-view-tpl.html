@@ -1,0 +1,203 @@
+<div class="row row-spaced">
+    <div class="col-12">
+        <div class="section-title clearfix">
+            <h2 class="pull-left">
+                <%= id ? 'Edit': 'Create' %> Modal
+            </h2>
+            <div class="btn-panel">
+                <% if (type !== "Teleflora") { %>
+                    <button id="delete-btn" type="button" class="btn btn-cancel">Delete</button>
+                <% } %>
+                <button id="cancel-btn" type="button" class="btn btn-other">Cancel</button>
+                <button id="save-btn" type="button" class="btn btn-submit"><% if(!id) { %><i class="icon icon-add"></i><% } %>Save</button>
+                <div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-1">
+                <div class="icon icon-3x icon-warning"></div>
+            </div>
+            <div class="col-11 alert-text">
+                This is a generic placeholder for error messages in eSAT. <br>
+                In the live app, this will be a real message and will be hidden by default.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel row-spaced alert-panel hidden-alt" id="min-cat-error">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+        This modal must be associated with at least 1 category. <br>
+        Please select at least 1 category below before saving.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row panel row-spaced alert-panel hidden-alt" id="min-prod-error">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+        This modal must be associated with at least 1 product. <br>
+        Please select at least 1 product below before saving.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row row-spaced panel">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-12">
+                <div class="panel-title">
+                    Modal Info
+                </div>
+            </div>
+        </div>
+        <div class="row row-spaced y-space-top-m">
+            <div class="col-5 form-section">
+                <label for="f-modal-name">Modal Name</label>
+                <input type="text" id="f-modal-name" name="f-modal-name" value="<%= name %>" <%= type === "Custom" ? '' : 'disabled' %>>
+            </div> 
+            <div class="col-2 form-section">
+                <div class="label">Active</div>
+                <input <%= status ? 'checked' : '' %> type="checkbox" id="f-status" name="f-status" class="on-off-switch" />
+                <label for="f-status" class="on-off-switch-label">
+                <div class="on-off-switch-state">on</div>
+                </label>
+            </div>
+            <div class="col-2 form-section">
+                <label for="f-type">Type</label>
+                <input type="text" id="f-type" name="f-type" value="<%= type %>" disabled>
+            </div>
+        </div>
+        <div class="row row-spaced">
+            <div class="col-3 date-container form-section f-startDate">
+                <div class="label">Start Date</div>
+                <input type="text" id="f-startDate" name="f-startDate" class="f-startDate" value="<%= startDate %>" <%= type === "Custom" ? '' : 'disabled' %> >
+            </div>
+            <div class="col-3 date-container form-section f-endDate">
+                <div class="label">End Date</div>
+                <input type="text" id="f-endDate" name="f-endDate" class="f-endDate" value="<%= endDate %>" <%= type === "Custom" ? '' : 'disabled' %>>
+            </div>  
+            <div class="col-3 form-section">
+                <label for="f-size">Modal Size</label>
+                <div class="select-container">
+                    <select id="f-size" name="f-size" <%= type === "Custom" ? '' : 'disabled' %>>
+                        <option selected disabled hidden value="<%= size %>"><%= size %></option>
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="Custom">Custom</option>
+                    </select>
+                </div>
+            </div>
+
+            <div id="customSizeContainer">
+                <div class="col-1 form-section customsizewidth">
+                    <label for="f-modalWidth">Width</label>
+                    <input type="text" id="f-modalWidth" name="f-modalWidth" value="<%= modalWidth %>" <%= type === "Custom" ? '' : 'disabled' %>>
+                </div>
+                <div class="col-1 form-section customsizewidth">
+                    <label for="f-modalHeight">Height</label>
+                    <input type="text" id="f-modalHeight" name="f-modalHeight" value="<%= modalHeight %>" <%= type === "Custom" ? '' : 'disabled' %>>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="tiny-mce-container" class="row row-spaced panel">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-12">
+                <div class="panel-title">
+                Modal Content<i class="icon icon-tool-tip x-space-s" title="Put your content here and use the tools below to edit and style the content to your liking."></i>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 form-section">
+                <textarea id="f-modalContent" class="size-2 tinymce y-space-s" name="f-modalContent"><%= modalContent %></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row row-spaced form-section panel">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-12">
+                <div class="panel-title">
+                    Modal Display
+                </div>
+            </div>
+        </div>
+        <div class="row row-spaced">
+            <div class="col-5">
+                <label for="f-modalShowsOn">Modal Shows On:</label>
+                <div class="select-container">
+                    <select id="f-modalShowsOn" name="f-modalShowsOn" <%= type === "Custom" ? '' : 'disabled' %>>
+                        <option selected disabled hidden value="<%= modalShowsOn %>"><%= modalShowsOn %></option>
+                        <option id="homePage" value="HomePage">Home Page</option>
+                        <option id="categoryPage" value="CategoryPage">Category Page</option>
+                        <option id="productPage" value="ProductPage">Product Page</option>
+                        <option id="basketPage" value="BasketPage">Basket Page</option>
+                        <option id="checkoutDeliveryPage" value="CheckoutDeliveryPage">Checkout Delivery Page</option>
+                        <option id="checkoutBillingPage" value="CheckoutBillingPage">Checkout Billing Page</option>
+                        <option id="orderConfirmationPage" value="OrderConfirmationPage">Order Confirmation Page</option>
+                        <option id="specificPageURL" value="SpecificPageURL">Specific Page URL</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row row-spaced form-section" id="category-banner" style="display:none;">
+            <div class="col-12">
+                <div class="panel-title">
+                    Category Page
+                </div>
+            </div>
+            <div class="col-12">
+                <div id="f-category-table"></div>
+            </div>
+        </div>
+        <div class="row row-spaced form-section" id="product-banner" style="display:none;">
+            <div class="col-12">
+                <div class="panel-title">
+                    Product Page
+                </div>
+            </div>
+            <div class="col-12">
+                <div id="f-product-table"></div>
+            </div>
+        </div>
+        <div class="row row-spaced form-section" id="specific-url-banner" style="display:none;">
+            <div class="col-12">
+                <div class="panel-title">
+                    Specific URL Link:
+                </div>
+            </div>
+            <div class='col-4 y-space-s'>
+                <input type="text" id="f-specificUrl" name="f-specificUrl" value="<%= specificUrl %>" <%= type === "Custom" ? '' : 'disabled' %>>
+            </div>
+        </div>
+    </div>
+</div>

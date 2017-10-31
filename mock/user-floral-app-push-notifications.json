@@ -1,0 +1,45 @@
+[
+	{
+		"id": 1,
+		"offer":"Stop by and save now",
+		"offerMsg": "This is a super great offer. You really should come in and buy something.",
+		"active": true,
+		"startDate":"10/20/2014",
+		"startTime":"6:00",
+		"startAmPm":"PM",
+		"endDate":"10/21/2014",
+		"endTime":"7:00",
+		"endAmPm":"PM",
+		"send":true,
+		"notified":"pending",
+		"sendTime":"future",
+		"notifyTime":"11/21/14 6:00PM",
+		"federated":false
+	},
+	{
+		"id": 2,
+		"offer":"Shop now and get cool rewards",
+		"offerMsg":"These rewards really are the coolest. I promise. You should definitely shop now.",
+		"active": true,
+		"startDate":"11/20/2014",
+		"endDate":"11/21/2014",
+		"send":false,
+		"notified":"notified",
+		"sendTime":"future",
+		"notifyTime":"10/21/14 2:18PM",
+		"federated":false
+	},
+	{
+		"id": 3,
+		"offer":"Free roses to first 50 shoppers",
+		"offerMsg":"It is a crazy good deal. Come in and be one of the first 50 customers to get this offer and you will get a free rose.",
+		"active": true,
+		"startDate":"12/20/2014",
+		"endDate":"12/21/2014",
+		"send":true,
+		"notified":"pending",
+		"sendTime":"future",
+		"notifyTime":"12/21/14 6:00PM",
+		"federated":false
+	}
+]

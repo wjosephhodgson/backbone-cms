@@ -1,0 +1,29 @@
+<tr class="form-section">
+    <td class="left-align"><%= name %></td>
+
+    <td><%= type %></td>
+    <td>
+        <div class="form-section" id="f-startDate-<%= id %>" class="f-startDate">
+            <%= startDate %>
+        </div>    
+    </td>
+    <td>
+        <div class="form-section" id="f-endDate-<%= id %>" class="f-endDate">
+            <%= endDate %>
+        </div>
+    </td>
+    <td><%= priority %></td>
+    <td>
+        <div class="v-center">
+            <input <%= active ? 'checked' : '' %> type="checkbox" id="active-<%= id %>" name="active-<%= id %>" class="on-off-switch" />
+            <label for="active-<%= id %>" class="on-off-switch-label">
+                <div class="on-off-switch-state">on</div>
+            </label>
+        </div>
+    </td>
+    <td>
+        <a class="edit-link" href="<%= baseUrl + 'edit/' + id %>">
+            <button class="icon icon-edit icon-btn icon-2x"></button>
+        </a>
+    </td>
+</tr>

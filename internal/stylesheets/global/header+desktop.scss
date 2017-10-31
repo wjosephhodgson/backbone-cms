@@ -1,0 +1,69 @@
+// header css
+// table of contents
+//
+// settings
+// .m-supernav
+// .m-navbar
+// .is-* classes
+// $break-medium
+
+
+//settings
+$navbar-width: 20em;
+$breakpoint1: 28.58em;
+
+body{
+  min-height: 50em;
+  @include transform(0.5s);
+}
+
+.master-header,.header-checkout{
+  position: relative;
+  width: 100%;
+  height: 7.7em;
+  background: $white;
+
+
+}
+
+
+.header-checkout{
+  height: 5.7em !important;
+
+}
+
+.account-checkout.m-account, .account-checkout.m-account.is-loggedin{right: 1em; margin-top: 2em;}
+
+/////
+// .m-supernav
+/////
+@import "header/supernav+desktop";
+
+
+/////
+// .m-navbar
+/////
+@import "header/navbar+desktop";
+
+/////
+// .m-account
+/////
+@import "header/account+desktop";
+
+
+/////
+// .is-*
+/////
+
+.no-csstransforms3d .is-navbar-expanded {
+  left: $navbar-width;
+}
+
+.is-navbar-expanded{
+  @include translate3d(20em, 0em, 0em);
+}
+
+.m-navbar-has-subnav.is-subnav-expanded .m-navbar-secondlevel{
+  display:none;
+  @include translate3d(0, 0, 0);
+}

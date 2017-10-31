@@ -1,0 +1,836 @@
+[
+    {
+        "name": "Wondrous Wishes",
+        "priority": 2,
+        "number": "T11-1A",
+        "id": "372689",
+        "pricePoints": "Primary",
+        "type": "Teleflora",
+        "type1": "Category Page",
+        "type2": "Category Page",
+        "type3": "Category Page",
+        "type4": "Category Page",
+        "homepageImage": "images/dashboard-ladya-banner.jpg",
+        "mobileHomepageImage": "images/dashboard-ladya-banner.jpg",
+        "sidebarImage":"images/dashboard-ladya-banner.jpg",
+        "gridImage": "images/dashboard-ladya-banner.jpg",
+        "mobileGridImage": "images/dashboard-ladya-banner.jpg",
+        "productImage":"http://www.free-ipad-wallpapers.com/images/previews/flowers/Red-Vivid-Tulips18b.jpg",
+        "sidebarBanner":"/images/mock/SidebarBanner.jpg",
+        "suggestedPrice": "$30.00",
+        "myPrice":"35.00",
+        "holidayPrice":"20.00",
+        "active": true,
+        "categories": [
+            "88888"
+        ],
+        "isBaseSku": true,
+        "skuList":[],
+        "subscription": false,
+        "startDate": "10/31/14",
+        "endDate": "12/25/14",
+        "setEndDate": true,
+        "producttabAltText": "",
+        "landingPageLink": "www.teleflora.com",
+        "catPageLink": "www.teleflora.com",
+        "gridpageLink": "www.teleflora.com",
+        "catLinkActive": true,
+        "gridLinkActive": true,
+        "description":"'Wondrous Wishes' description",
+        "additionalInfo":"'Wondrous Wishes' additional info",
+        "legalInfo":"'Wondrous Wishes' legal info",
+        "metaTitle":"'Wondrous Wishes' meta title",
+        "metaKeywords":"'Wondrous Wishes' meta keywords",
+        "metaDescription":"'Wondrous Wishes' meta description",
+        "metaTags":"'Wondrous Wishes' additional tags",
+        "discountAmount":"",
+        "discountVariantsActive": true,
+        "discountStartDate": "",
+        "discountEndDate": "",
+        "localDeliveryActive": true,
+        "noSameDayDeliveryActive": true,
+        "inStorePickupActive": true,
+        "taxFreeActive": true,
+        "merchandisingHighlight": "",
+        "recipe":"Exotic lillies trises, Impatiens,Margold, Morning Glories,Nastutium,Delphiniums, Crocuses,Daffodils,Dahlias, Fun Modern, Elegant Plox, Roses, Beautiful Sedum, Colorful Petunias.Black-eyed Susans, Aster,Astilbe, Coneflowers, Cosmos, Tulips, Yarrow, Zinnias, Sunflowers",
+
+        "relatedProducts": [
+            "372956"
+        ],
+        "dropshipMethods": [
+            {
+                "id": 1,
+                "overrideFee": "$12.00",
+                "status": true
+            },
+            {
+                "id": 2,
+                "overrideFee": "",
+                "status": true
+            },
+            {
+                "id" : 3,
+                "overrideFee":"",
+                "status":true
+            },
+            {
+                "id" : 4,
+                "overrideFee": "",
+                "status": true
+            }
+        ],
+        "addons": [{"id":1, "active": true}],
+        "flowers":[
+            {
+                "id": 1,
+                "name":"Hydrangea",
+                "imgUrl": "http://www.telefloramarketing.com/mock/bouquet-1.png",
+                "active": true
+            },
+            {
+                "id": 2,
+                "name":"Asiatic Lily",
+                "imgUrl":"http://www.telefloramarketing.com/mock/bouquet-3.png",
+                "active": false
+            },
+            {
+                "id": 3,
+                "name": "Gerbera",
+                "imgUrl": "http://www.telefloramarketing.com/mock/bouquet-4.png",
+                "active": true
+            }
+        ],
+        "bouquetStyles":[
+            {
+                "id": 1,
+                "style":"Exotic",
+                "active": false
+            },
+            {
+                "id": 2,
+                "style":"Elegant",
+                "active": true
+            },
+            {
+                "id": 3,
+                "style":"Fun",
+                "active":true
+            },
+            {
+                "id": 4,
+                "style":"Traditional",
+                "active": false
+            },
+            {
+
+                "id": 5,
+                "style":"Modern",
+                "active": true
+            }
+
+        ],
+        "colors":[
+            {
+                "id": 1,
+                "color": "Red",
+                "active": true
+            },
+            {
+                "id": 2,
+                "color":"Yellow",
+                "active": true
+            },
+            {
+                "id": 3,
+                "color": "White",
+                "active": true
+            },
+            {
+
+                "id": 4,
+                "color": "Blue",
+                "active": false
+            },
+            {
+
+                "id": 5,
+                "color": "Pink",
+                "active": false
+            },
+            {
+                "id": 6,
+                "color": "Beige",
+                "active": false
+            }
+        ],
+        "width":0,
+        "height":0,
+        "productClassification": "Bouquet",
+        "categoriesVariantsActive": true,
+        "attributesVariantsActive": true
+    },
+    {
+        "name": "Rosy Birthday Present",
+        "priority": 3,
+        "number": "T20-1A",
+        "id": "372730",
+        "pricePoints": "Primary",
+        "type": "Teleflora",
+        "type1": "Category Page",
+        "type2": "Category Page",
+        "type3": "Category Page",
+        "type4": "Category Page",
+        "homepageImage": "images/dashboard-ladya-banner.jpg",
+        "mobileHomepageImage": "images/dashboard-ladya-banner.jpg",
+        "sidebarImage":"images/dashboard-ladya-banner.jpg",
+        "gridImage": "images/dashboard-ladya-banner.jpg",
+        "mobileGridImage": "images/dashboard-ladya-banner.jpg",
+        "productImage":"http://www.free-ipad-wallpapers.com/images/previews/flowers/Red-Vivid-Tulips18b.jpg",
+        "suggestedPrice": "$50.00",
+        "myPrice":"75.00",
+        "holidayPrice":"40.00",
+        "active": true,
+        "categories": [
+            "11111", "22222"
+        ],
+        "isBaseSku": true,
+        "skuList":[],
+        "subscription": true,
+        "startDate": "10/31/14",
+        "endDate": "12/25/14",
+        "setEndDate": true,
+        "producttabAltText": "",
+        "landingPageLink": "www.teleflora.com",
+        "description":"'Rosy Birthday Present' description",
+        "additionalInfo":"'Rosy Birthday Present' additional info",
+        "legalInfo":"'Rosy Birthday Present' legal info",
+        "metaTitle":"'Rosy Birthday Present' meta title",
+        "metaKeywords":"'Rosy Birthday Present' meta keywords",
+        "metaDescription":"'Rosy Birthday Present' meta description",
+        "metaTags":"'Rosy Birthday Present' additional tags",
+        "discountAmount":"",
+        "discountVariantsActive": true,
+        "discountStartDate": "",
+        "discountEndDate": "",
+        "localDeliveryActive": true,
+        "noSameDayDeliveryActive": true,
+        "inStorePickupActive": true,
+        "taxFreeActive": true,
+        "merchandisingHighlight": "",
+        "recipe":"Exotic lillies trises, Impatiens,Margold, Morning Glories,Nastutium,Delphiniums, Crocuses,Daffodils,Dahlias, Fun Modern, Elegant Plox, Roses, Beautiful Sedum, Colorful Petunias.Black-eyed Susans, Aster,Astilbe, Coneflowers, Cosmos, Tulips, Yarrow, Zinnias, Sunflowers",
+        "relatedProducts": [
+            "372956"
+        ],
+        "dropshipMethods": [
+            {
+                "id": 1,
+                "overrideFee": "$12.00",
+                "status": true
+            },
+            {
+                "id": 2,
+                "overrideFee": "",
+                "status": true
+            },
+            {
+                "id" : 3,
+                "overrideFee":"",
+                "status":true
+            },
+            {
+                "id" : 4,
+                "overrideFee": "",
+                "status": true
+            }
+        ],
+        "addons": [{"id":1, "active": true}],
+        "flowers":[
+            {
+                "id": 1,
+                "name":"Hydrangea",
+                "imgUrl": "http://www.telefloramarketing.com/mock/bouquet-1.png",
+                "active": true
+            },
+            {
+                "id": 2,
+                "name":"Asiatic Lily",
+                "imgUrl":"http://www.telefloramarketing.com/mock/bouquet-3.png",
+                "active": false
+            },
+            {
+                "id": 3,
+                "name": "Gerbera",
+                "imgUrl": "http://www.telefloramarketing.com/mock/bouquet-4.png",
+                "active": true
+            }
+        ],
+        "bouquetStyles":[
+            {
+                "id": 1,
+                "style":"Exotic",
+                "active": false
+            },
+            {
+                "id": 2,
+                "style":"Elegant",
+                "active": true
+            },
+            {
+                "id": 3,
+                "style":"Fun",
+                "active":true
+            },
+            {
+                "id": 4,
+                "style":"Traditional",
+                "active": false
+            },
+            {
+
+                "id": 5,
+                "style":"Modern",
+                "active": true
+            }
+
+        ],
+        "colors":[
+            {
+                "id": 1,
+                "color": "Red",
+                "active": true
+            },
+            {
+                "id": 2,
+                "color":"Yellow",
+                "active": true
+            },
+            {
+                "id": 3,
+                "color": "White",
+                "active": true
+            },
+            {
+
+                "id": 4,
+                "color": "Blue",
+                "active": false
+            },
+            {
+
+                "id": 5,
+                "color": "Pink",
+                "active": false
+            },
+            {
+                "id": 6,
+                "color": "Beige",
+                "active": false
+            }
+        ],
+        "width":0,
+        "height":0,
+        "productClassification": "Bouquet",
+        "categoriesVariantsActive": true,
+        "attributesVariantsActive": true
+    },
+    {
+        "name": "Make a Wish",
+        "priority": 5,
+        "number": "TEV13-6C",
+        "id": "4584882-3",
+        "pricePoints": "All",
+        "type": "Teleflora",
+        "type1": "Category Page",
+        "type2": "Category Page",
+        "type3": "Category Page",
+        "type4": "Category Page",
+        "homepageImage": "images/dashboard-ladya-banner.jpg",
+        "mobileHomepageImage": "images/dashboard-ladya-banner.jpg",
+        "sidebarImage":"images/dashboard-ladya-banner.jpg",
+        "gridImage": "images/dashboard-ladya-banner.jpg",
+        "mobileGridImage": "images/dashboard-ladya-banner.jpg",
+        "productImage":"http://www.free-ipad-wallpapers.com/images/previews/flowers/Red-Vivid-Tulips18b.jpg",
+        "suggestedPrice": "$30.00",
+        "myPrice":"35.00",
+        "holidayPrice":"25.00",
+        "active": true,
+        "categories": [
+            "33333","44444","55555","66666","77777","88888","99999","12121","34343"
+        ],
+        "isBaseSku": false,
+        "skuLabel": "Premium",
+        "baseSkuId": 458488,
+        "skuList":[],
+        "subscription": false,
+        "startDate": "10/31/14",
+        "endDate": "12/25/14",
+        "setEndDate": true,
+        "producttabAltText": "",
+        "landingPageLink": "www.teleflora.com",
+        "description":"'Make a Wish Premium' description",
+        "additionalInfo":"'Make a Wish Premium' additional info",
+        "legalInfo":"'Make a Wish Premium' legal info",
+        "metaTitle":"'Make a Wish Premium' meta title",
+        "metaKeywords":"'Make a Wish Premium' meta keywords",
+        "metaDescription":"'Make a Wish Premium' meta description",
+        "metaTags":"'Make a Wish Premium' additional tags",
+        "discountAmount":"",
+        "discountVariantsActive": true,
+        "discountStartDate": "",
+        "discountEndDate": "",
+        "localDeliveryActive": true,
+        "noSameDayDeliveryActive": true,
+        "inStorePickupActive": true,
+        "taxFreeActive": true,
+        "merchandisingHighlight": "",
+        "recipe":"Exotic lillies trises, Impatiens,Margold, Morning Glories,Nastutium,Delphiniums, Crocuses,Daffodils,Dahlias, Fun Modern, Elegant Plox, Roses, Beautiful Sedum, Colorful Petunias.Black-eyed Susans, Aster,Astilbe, Coneflowers, Cosmos, Tulips, Yarrow, Zinnias, Sunflowers",
+        "relatedProducts": [
+            "372956"
+        ],
+        "dropshipMethods": [
+            {
+                "id": 1,
+                "overrideFee": "$12.00",
+                "status": true
+            },
+            {
+                "id": 2,
+                "overrideFee": "",
+                "status": true
+            },
+            {
+                "id" : 3,
+                "overrideFee":"",
+                "status":true
+            },
+            {
+                "id" : 4,
+                "overrideFee": "",
+                "status": true
+            }
+        ],
+        "addons": [{"id":1, "active": true}],
+        "flowers":[
+            {
+                "id": 1,
+                "name":"Hydrangea",
+                "imgUrl": "http://www.telefloramarketing.com/mock/bouquet-1.png",
+                "active": true
+            },
+            {
+                "id": 2,
+                "name":"Asiatic Lily",
+                "imgUrl":"http://www.telefloramarketing.com/mock/bouquet-3.png",
+                "active": false
+            },
+            {
+                "id": 3,
+                "name": "Gerbera",
+                "imgUrl": "http://www.telefloramarketing.com/mock/bouquet-4.png",
+                "active": true
+            }
+        ],
+        "bouquetStyles":[
+            {
+                "id": 1,
+                "style":"Exotic",
+                "active": false
+            },
+            {
+                "id": 2,
+                "style":"Elegant",
+                "active": true
+            },
+            {
+                "id": 3,
+                "style":"Fun",
+                "active":true
+            },
+            {
+                "id": 4,
+                "style":"Traditional",
+                "active": false
+            },
+            {
+
+                "id": 5,
+                "style":"Modern",
+                "active": true
+            }
+
+        ],
+        "colors":[
+            {
+                "id": 1,
+                "color": "Red",
+                "active": true
+            },
+            {
+                "id": 2,
+                "color":"Yellow",
+                "active": true
+            },
+            {
+                "id": 3,
+                "color": "White",
+                "active": true
+            },
+            {
+
+                "id": 4,
+                "color": "Blue",
+                "active": false
+            },
+            {
+
+                "id": 5,
+                "color": "Pink",
+                "active": false
+            },
+            {
+                "id": 6,
+                "color": "Beige",
+                "active": false
+            }
+        ],
+        "width":0,
+        "height":0,
+        "productClassification": "Bouquet",
+        "categoriesVariantsActive": true,
+        "attributesVariantsActive": true
+    },
+    {
+        "name": "Exotic Grace",
+        "priority": 0,
+        "number": "T77-1A",
+        "id": "372738",
+        "pricePoints": "Primary",
+        "type": "Custom",
+        "type1": "Category Page",
+        "type2": "Category Page",
+        "type3": "Category Page",
+        "type4": "Category Page",
+        "homepageImage": "images/dashboard-ladya-banner.jpg",
+        "mobileHomepageImage": "images/dashboard-ladya-banner.jpg",
+        "sidebarImage":"images/dashboard-ladya-banner.jpg",
+        "gridImage": "images/dashboard-ladya-banner.jpg",
+        "mobileGridImage": "images/dashboard-ladya-banner.jpg",
+        "productImage":"http://www.free-ipad-wallpapers.com/images/previews/flowers/Red-Vivid-Tulips18b.jpg",
+        "suggestedPrice": "Custom",
+        "myPrice":"60.00",
+        "holidayPrice":"50.00",
+        "active": true,
+        "categories": [
+            "88888", "99999"
+        ],
+        "isBaseSku": true,
+        "skuList":[],
+        "subscription": false,
+        "startDate": "10/31/14",
+        "endDate": "12/25/14",
+        "setEndDate": true,
+        "producttabAltText": "",
+        "producttabimage":"http://www.free-ipad-wallpapers.com/images/previews/flowers/Red-Vivid-Tulips18b.jpg",
+        "landingPageLink": "www.teleflora.com",
+        "description":"'Exotic Grace' description",
+        "additionalInfo":"'Exotic Grace' additional info",
+        "legalInfo":"'Exotic Grace' legal info",
+        "metaTitle":"'Exotic Grace' meta title",
+        "metaKeywords":"'Exotic Grace' meta keywords",
+        "metaDescription":"'Exotic Grace' meta description",
+        "metaTags":"'Exotic Grace' additional tags",
+        "discountAmount":"",
+        "discountVariantsActive": true,
+        "discountStartDate": "",
+        "discountEndDate": "",
+        "localDeliveryActive": true,
+        "noSameDayDeliveryActive": true,
+        "inStorePickupActive": true,
+        "taxFreeActive": true,
+        "merchandisingHighlight": "",
+        "recipe":"",
+        "relatedProducts": [
+            "372956"
+        ],
+        "dropshipMethods": [
+            {
+                "id": 1,
+                "overrideFee": "$12.00",
+                "status": true
+            },
+            {
+                "id": 2,
+                "overrideFee": "",
+                "status": true
+            },
+            {
+                "id" : 3,
+                "overrideFee":"",
+                "status":true
+            },
+            {
+                "id" : 4,
+                "overrideFee": "",
+                "status": true
+            }
+        ],
+        "addons": [{"id":1, "active": true}],
+        "flowers":[
+            {
+                "id": 1,
+                "name":"Hydrangea",
+                "imgUrl": "http://www.telefloramarketing.com/mock/bouquet-1.png",
+                "active": true
+            },
+            {
+                "id": 2,
+                "name":"Asiatic Lily",
+                "imgUrl":"http://www.telefloramarketing.com/mock/bouquet-3.png",
+                "active": false
+            },
+            {
+                "id": 3,
+                "name": "Gerbera",
+                "imgUrl": "http://www.telefloramarketing.com/mock/bouquet-4.png",
+                "active": true
+            }
+        ],
+        "bouquetStyles":[
+            {
+                "id": 1,
+                "style":"Exotic",
+                "active": false
+            },
+            {
+                "id": 2,
+                "style":"Elegant",
+                "active": true
+            },
+            {
+                "id": 3,
+                "style":"Fun",
+                "active":true
+            },
+            {
+                "id": 4,
+                "style":"Traditional",
+                "active": false
+            },
+            {
+
+                "id": 5,
+                "style":"Modern",
+                "active": true
+            }
+
+        ],
+        "colors":[
+            {
+                "id": 1,
+                "color": "Red",
+                "active": true
+            },
+            {
+                "id": 2,
+                "color":"Yellow",
+                "active": true
+            },
+            {
+                "id": 3,
+                "color": "White",
+                "active": true
+            },
+            {
+
+                "id": 4,
+                "color": "Blue",
+                "active": false
+            },
+            {
+
+                "id": 5,
+                "color": "Pink",
+                "active": false
+            },
+            {
+                "id": 6,
+                "color": "Beige",
+                "active": false
+            }
+        ],
+        "width":0,
+        "height":0,
+        "productClassification": "Bouquet",
+        "categoriesVariantsActive": true,
+        "attributesVariantsActive": true
+    },
+    {
+        "name": "Brilliant Birthday Blooms",
+        "priority": 0,
+        "number": "T28-1A",
+        "id": "372956",
+        "pricePoints": "Primary",
+        "type": "Custom",
+        "type1": "Category Page",
+        "type2": "Category Page",
+        "type3": "Category Page",
+        "type4": "Category Page",
+        "homepageImage": "images/dashboard-ladya-banner.jpg",
+        "mobileHomepageImage": "images/dashboard-ladya-banner.jpg",
+        "sidebarImage":"images/dashboard-ladya-banner.jpg",
+        "gridImage": "images/dashboard-ladya-banner.jpg",
+        "mobileGridImage": "images/dashboard-ladya-banner.jpg",
+        "productImage":"http://www.free-ipad-wallpapers.com/images/previews/flowers/Red-Vivid-Tulips18b.jpg",
+        "suggestedPrice": "Custom",
+        "myPrice":"100.00",
+        "holidayPrice":"80.00",
+        "active": true,
+        "img1": "/images/mock/T28-1A.jpg",
+        "img2": "/images/mock/T28-1A.jpg",
+        "img3": "/images/mock/T28-1A.jpg",
+        "img4": "/images/mock/T28-1A.jpg",
+        "categories": [
+            "11111", "22222"
+        ],
+        "isBaseSku": true,
+        "skuList":[],
+        "subscription": true,
+        "startDate": "10/31/14",
+        "endDate": "12/25/14",
+        "setEndDate": true,
+        "producttabAltText": "",
+        "producttabimage":"http://www.free-ipad-wallpapers.com/images/previews/flowers/Red-Vivid-Tulips18b.jpg",
+        "landingPageLink": "www.teleflora.com",
+        "description":"'Brilliant Birthday Blooms' description",
+        "additionalInfo":"'Brilliant Birthday Blooms' additional info",
+        "legalInfo":"'Brilliant Birthday Blooms' legal info",
+        "metaTitle":"'Brilliant Birthday Blooms' meta title",
+        "metaKeywords":"'Brilliant Birthday Blooms' meta keywords",
+        "metaDescription":"'Brilliant Birthday Blooms' meta description",
+        "metaTags":"'Brilliant Birthday Blooms' additional tags",
+        "discountAmount":"",
+        "discountVariantsActive": true,
+        "discountStartDate": "",
+        "discountEndDate": "",
+        "localDeliveryActive": true,
+        "noSameDayDeliveryActive": true,
+        "inStorePickupActive": true,
+        "taxFreeActive": true,
+        "merchandisingHighlight": "",
+        "recipe":"Exotic lillies trises, Impatiens,Margold, Morning Glories,Nastutium,Delphiniums, Crocuses,Daffodils,Dahlias, Fun Modern, Elegant Plox, Roses, Beautiful Sedum, Colorful Petunias.Black-eyed Susans, Aster,Astilbe, Coneflowers, Cosmos, Tulips, Yarrow, Zinnias, Sunflowers",
+        "relatedProducts": [
+            "372738"
+        ],
+        "dropshipMethods": [
+            {
+                "id": 1,
+                "overrideFee": "$12.00",
+                "status": true
+            },
+            {
+                "id": 2,
+                "overrideFee": "",
+                "status": true
+            },
+            {
+                "id" : 3,
+                "overrideFee":"",
+                "status":true
+            },
+            {
+                "id" : 4,
+                "overrideFee": "",
+                "status": true
+            }
+        ],
+        "addons": [{"id":1, "active": true}],
+        "flowers":[
+            {
+                "id": 1,
+                "name":"Hydrangea",
+                "imgUrl": "http://www.telefloramarketing.com/mock/bouquet-1.png",
+                "active": true
+            },
+            {
+                "id": 2,
+                "name":"Asiatic Lily",
+                "imgUrl":"http://www.telefloramarketing.com/mock/bouquet-3.png",
+                "active": false
+            },
+            {
+                "id": 3,
+                "name": "Gerbera",
+                "imgUrl": "http://www.telefloramarketing.com/mock/bouquet-4.png",
+                "active": true
+            }
+        ],
+        "bouquetStyles":[
+            {
+                "id": 1,
+                "style":"Exotic",
+                "active": false
+            },
+            {
+                "id": 2,
+                "style":"Elegant",
+                "active": true
+            },
+            {
+                "id": 3,
+                "style":"Fun",
+                "active":true
+            },
+            {
+                "id": 4,
+                "style":"Traditional",
+                "active": false
+            },
+            {
+
+                "id": 5,
+                "style":"Modern",
+                "active": true
+            }
+
+        ],
+        "colors":[
+            {
+                "id": 1,
+                "color": "Red",
+                "active": true
+            },
+            {
+                "id": 2,
+                "color":"Yellow",
+                "active": true
+            },
+            {
+                "id": 3,
+                "color": "White",
+                "active": true
+            },
+            {
+
+                "id": 4,
+                "color": "Blue",
+                "active": false
+            },
+            {
+
+                "id": 5,
+                "color": "Pink",
+                "active": false
+            },
+            {
+                "id": 6,
+                "color": "Beige",
+                "active": false
+            }
+        ],
+        "width":0,
+        "height":0,
+        "productClassification": "Bouquet",
+        "categoriesVariantsActive": true,
+        "attributesVariantsActive": true
+    }
+]

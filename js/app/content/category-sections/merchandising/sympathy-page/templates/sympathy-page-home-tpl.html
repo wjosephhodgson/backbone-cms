@@ -1,0 +1,253 @@
+<div class="row row-spaced">
+  <div class="col-12">
+    <div class="section-title">
+      <h2 class="pull-left">Sympathy & Funeral Page</h2>
+      <div class="btn-panel">
+        <button type="button" id="save-btn" class="btn btn-submit">Save</button>
+        <div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel row-spaced alert-panel hidden-alt" id="min-error">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+        If you wish to use a section (such as For the Service or For the Home) you must select at least 1 category for that section. Please select at least 1 category for each active section.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row row-spaced">
+  <div class="col-12">
+    Here you can edit your Sympathy & Funeral landing page. If this page is enabled, it is the page your customers will see first when clicking on the Sympathy link on your site. From here you can specify which subcategories you would like featured, add links to landing pages, and change other page settings like the background image.
+  </div>
+</div>
+
+<div class="panel form-section">
+  <div class="row">
+    <div class="col-6 form-section">
+      <label for="f-pageHeaderTitle">Page Header Title</label><i class="icon icon-tool-tip x-space-s" title="This is the title that will be displayed at the top of the Sympathy page."></i>
+      <input type="text" id="f-pageHeaderTitle" name="f-pageHeaderTitle" value="<%= pageHeaderTitle %>">
+    </div>
+
+    <div class="col-3">
+      <div class="pull-right">
+        <div class="label">Active<i title="If this is turned OFF, the Sympathy page will be disabled and will not appear on your site." class="icon icon-tool-tip x-space-s"></i></div>
+        <input <%= active ? 'checked' : '' %> type="checkbox" id="f-active" name="f-active" class="on-off-switch" />
+        <label for="f-active" class="on-off-switch-label">
+          <div class="on-off-switch-state">on</div>
+        </label>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-12 form-section">
+        <label for="f-pageHeaderDescription">Page Header Description</label><i title="This description will show up underneath the Page Header Title and can be used to describe your sympathy services." class="icon icon-tool-tip x-space-s"></i>
+        <textarea name="f-pageHeaderDescription" id="f-pageHeaderDescription" class="size-2"><%= pageHeaderDescription %></textarea>
+    </div>
+  </div>
+
+  <div class="row row-spaced">
+    <div class="col-3 form-section image-section">
+      <div class="label">Background Image <i title="Use the button below to change the background image for the Sympathy page." class="icon icon-tool-tip"></i></div>
+      <button type="button" id="f-image-url-1" class="image-upload icon icon-btn icon-image btn-file icon-2x y-space-s"></button>
+    </div>
+    <div class="col-3">
+      <div class="label">Background Preview <i title="This is the background image which will appear at the top of your Sympathy page." class="icon icon-tool-tip"></i></div>
+      <img id="f-image-1-preview" class="fill-container-width" src="<%= imgUrl1 %>" alt="">
+    </div>
+  </div>
+</div>
+
+
+
+<div class="row row-spaced">
+  <div class="col-12">
+    <div id="tabs">
+      <ul class="clearfix">
+        <li class="col-6"><a class="center-align fill-container-width" href="#service">For the Service</a></li>
+        <li class="col-6"><a class="center-align fill-container-width" href="#home">For the Home</a></li>
+      </ul>
+
+      <div id="service">
+        <div class="row row-spaced form-section">
+          <div class="col-2">
+            <div class="label">Display<i title="Turning this OFF will disable the For the Service section of the page." class="icon icon-tool-tip x-space-s"></i></div>
+            <input <%= serviceDisplayActive ? 'checked' : '' %> type="checkbox" id="f-serviceDisplayActive" name="f-serviceDisplayActive" class="on-off-switch" />
+            <label for="f-serviceDisplayActive" class="on-off-switch-label">
+                <div class="on-off-switch-state">on</div>
+            </label>
+          </div>
+          <div class="col-4 form-section">
+            <label for="f-serviceNameOverride">Name Override</label><i class="icon icon-tool-tip x-space-s" title="You can change the name from For the Service to a custom name here."></i>
+            <input type="text" id="f-serviceNameOverride" name="f-serviceNameOverride" value="<%= serviceNameOverride %>">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="panel-title">By Type</div>
+          </div>
+        </div>
+        <div class="row row-spaced">
+          <div class="col-12">
+            Select the flower types categories you want to appear on the sympathy page under "For the Service" section
+          </div>
+        </div>
+        <div class="row row-spaced">
+          <div class="col-12">
+            <div id="service-type-container"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="home">
+        <div class="row row-spaced form-section">
+          <div class="col-2">
+            <div class="label">Display<i title="Turning this OFF will disable the For the Home section of the page." class="icon icon-tool-tip x-space-s"></i></div>
+            <input <%= homeDisplayActive ? 'checked' : '' %> type="checkbox" id="f-homeDisplayActive" name="f-homeDisplayActive" class="on-off-switch" />
+            <label for="f-homeDisplayActive" class="on-off-switch-label">
+                <div class="on-off-switch-state">on</div>
+            </label>
+          </div>
+          <div class="col-4">
+            <label for="f-homeNameOverride">Name Override</label><i class="icon icon-tool-tip x-space-s" title="You can change the name from For the Home to a custom name here."></i>
+            <input type="text" id="f-homeNameOverride" name="f-homeNameOverride" value="<%= homeNameOverride %>">
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <div class="panel-title">By Type</div>
+          </div>
+        </div>
+        <div class="row row-spaced">
+          <div class="col-12">
+            Select the flower types categories you want to appear on the sympathy page under "For the Home" section
+          </div>
+        </div>
+        <div class="row row-spaced">
+          <div class="col-12">
+            <div id="home-type-container"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="panel form-section row row-spaced">
+      <div class="row">
+        <div class="col-12">
+          <div class="panel-title">Sympathy Giving Guides</div>
+        </div>
+      </div>
+
+      <div class="row row-spaced">
+        <div class="col-4">
+          <label for="f-mainTitle">Giving Guide Section Title</label><i class="icon icon-tool-tip x-space-s" title="This is the title of the Sympathy Giving Guides section of the page"></i>
+          <input type="text" id="f-mainTitle" name="f-mainTitle" value="<%= mainTitle %>">
+        </div>
+
+        <div class="col-8 right-align">
+          <div class="label"> &nbsp </div>
+          <button type="button" id="add-section-btn" class="pull-right btn btn-submit"><i class="icon icon-add icon-lg"></i>New Section</button>
+        </div>
+      </div>
+
+      <div class="row row-spaced">
+        <div class="col-12">
+          <table class="table alternate">
+            <thead>
+              <tr>
+                <th class="col-2">Sequence</th>
+                <th class="col-4 left-align">Section<button type="button" id="sort-btn" data-attribute="title" class="icon icon-btn icon-sort sort-btn"></button></th>
+                <th class="col-2">Edit</th>
+                <th class="col-2">Display</th>
+                <th class="col-2">Delete</th>
+              </tr>
+            </thead>
+            <tbody id="section-list"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="row row-spaced">
+        <div class="col-3 form-section image-section">
+          <div class="label">Image<i class="icon icon-tool-tip" title="Click the button below to change the image that appears in the Giving Guides section of the page."></i></div>
+          <button type="button" id="f-image-url-2" class="image-upload icon icon-btn icon-image btn-file icon-2x y-space-s"></button>
+        </div>
+        <div class="col-3">
+          <div class="label">Image Preview </div>
+          <img id="f-image-2-preview" class="y-space-top-s fill-container-width" src="<%= imgUrl2 %>" alt="">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="panel form-section row row-spaced">
+  <div class="row">
+    <div class="col-12">
+      <div class="panel-title"><i class="icon icon-closed x-space-s" id="optional"></i>SEO Information (optional)</div>
+    </div>
+  </div>
+
+  <div id="accordion">
+
+    <div class="row row-spaced">
+      <div class="col-12 form-section">
+        <label for="f-meta-title">Page &#60;title&#62;</label><i class="icon icon-tool-tip x-space-s" title="This is the text displayed in the tab at the top of your browser window."></i>
+        <input type="text" id="f-meta-title" name="f-meta-title" value="<%= metaTitle %>">
+      </div>
+    </div>
+
+    <div class="row row-spaced">
+      <div class="col-6 form-section">
+        <label for="f-meta-keywords">Meta Keywords</label><i class="icon icon-tool-tip x-space-s" title="This area allows you to enter a few comma separated keywords that describe your page."></i>
+        <textarea name="f-meta-keywords" id="f-meta-keywords" class="size-2"><%= metaKeywords %></textarea>
+      </div>
+
+      <div class="col-6 form-section">
+          <label for="f-meta-desc">Meta Description</label><i class="icon icon-tool-tip x-space-s" title="This is the text shown on search engines for your page and should consist of short clear sentences."></i>
+          <textarea name="f-meta-desc" id="f-meta-desc" class="size-2"><%= metaDescription %></textarea>
+      </div>
+    </div>
+
+    <div class="row row-spaced">
+      <div class="col-12 form-section">
+          <label for="f-meta-tags">Additional Tags</label><i class="icon icon-tool-tip x-space-s" title="This area is for any additional meta tags that may be used for tracking or other purposes that you would like in the page &lt;head&gt;."></i>
+          <textarea name="f-meta-tags" id="f-meta-tags" class="size-2"><%= metaTags %></textarea>
+          <div class="row"><div class="col-12">Please include the full HTML (such as &lt;meta&gt;) in the Additional Tags field.</div></div>
+      </div>
+    </div>
+  
+  </div>
+
+</div>

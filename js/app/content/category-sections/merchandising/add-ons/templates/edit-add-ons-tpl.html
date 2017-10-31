@@ -1,0 +1,148 @@
+<div class="row row-spaced">
+  <div class="col-12">
+    <div class="section-title clearfix">
+      <h2 class="pull-left">
+        <%= id ? 'Edit': 'Create' %> Add-On
+      </h2>
+      <div class="btn-panel">
+        <button id="cancel-btn" type="button" class="btn btn-other">Cancel</button>
+        <button id="save-btn" type="button" class="btn btn-submit"><% if(!id) { %><i class="icon icon-add"></i><% } %>Save</button>
+        <div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row row-spaced">
+  <div class="col-12">
+    Here you can <%= id ? 'edit ' : 'create ' %> add-ons for your site. This page will allow you to change all of the details for each individual add-on.
+  </div>
+</div>
+
+<div class="row row-spaced panel form-section">
+  <div class="row">
+    <div class="col-5 form-section">
+      <label for="f-name">Name</label><i title="This is the name of the add-on. An example would be Balloons." class="icon icon-tool-tip x-space-s"></i>
+      <input <%= type === 'Teleflora' ? 'disabled' : '' %> type="text" id="f-name" name="f-name" value="<%= name %>" autofocus>
+    </div>  
+    <div class="col-2">
+      <div class="label">
+        Active
+      </div>
+      <input <%= active ? 'checked' : '' %> type="checkbox" id="f-active" name="f-active" class="on-off-switch" />
+      <label for="f-active" class="on-off-switch-label">
+        <div class="on-off-switch-state">on</div>
+      </label>
+    </div>
+  </div>
+  <div class="row row-spaced">
+    <div class="col-3">
+      <label for="f-type">Type</label>
+      <input type="text" id="f-type" name="f-type" value="<%= type %>" disabled>
+    </div>  
+    <div class="col-2">
+      <div class="label">
+        Image
+      </div>
+      <div class="centered-content-container" id="img-upload">
+          <img class="y-space-top-xs image-upload <%= imgUrl ? '' : 'hidden-alt' %>" src="<%= imgUrl %>"<% if(type == 'Teleflora') { %> style="cursor:auto;"<% } %>>
+          <button type="button" class="<%= imgUrl ? 'hidden-alt' : '' %> icon icon-btn icon-image icon-2x y-space-s image-upload"></button>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="label">
+        Tax Free <i title="With this setting turned ON, this add-on will not be included in total order prices when tax is calculated." class="icon icon-tool-tip x-space-s"></i>
+      </div>
+      <input <%= taxFreeActive ? 'checked' : '' %> type="checkbox" id="f-taxFreeActive" name="f-taxFreeActive" class="on-off-switch" />
+      <label for="f-taxFreeActive" class="on-off-switch-label">
+        <div class="on-off-switch-state">on</div>
+      </label>
+    </div>    
+  </div>
+</div>
+
+<div class="row row-spaced panel form-section">
+  <div class="row">
+    <div class="col-12">
+      <div class="panel-title clearfix">
+        <div class="y-space-top-m pull-left">Price Points</div>
+        <% if(type !== 'Teleflora') { %>
+        <button id="add-price-point-btn" type="button" class="btn btn-submit pull-right"><i class="icon icon-add"></i>Add More Price Points</button>
+        <% } %>
+      </div>
+    </div>
+  </div>
+
+  <div id="price-point-alert" class="row row-spaced panel alert-panel hidden-alt">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-1">
+          <div class="icon icon-4x icon-warning"></div>
+        </div>
+        <div class="col-11 alert-text">
+          You are allowed a maximum of 6 Price Points per add-on.
+        </div>
+      </div>
+    </div> 
+  </div>
+
+  <div class="row row-spaced">
+    <div class="col-5">
+      <label for="f-label">Label / Size</label>
+    </div>
+    <div class="col-2">
+      <label for="f-price">Price</label>
+    </div>
+    <% if(type !== 'Teleflora') { %>
+    <div class="col-2">
+     <div class="label">Delete</div>
+    </div>
+    <% } %>
+  </div>
+
+
+  <div id="price-point-list"></div>
+</div>
+
+<div class="row row-spaced panel form-section">
+  <div class="row">
+    <div class="col-12">
+      <div class="panel-title">Selected Products</div>
+    </div>
+  </div>
+  <div class="row row-spaced">
+    <div class="col-12">
+      To apply the add-on to specific group of products, use the search feature below and look for products based on different filters available.
+    </div>
+  </div>
+  <% if(type !== 'Teleflora') { %>
+  <div class="row row-spaced">
+    <div class="col-6">
+      <div class="label">
+        Apply to New Teleflora Products Automatically
+      </div>
+      <input <%= applyAutoActive ? 'checked' : '' %> type="checkbox" id="f-applyAutoActive" name="f-applyAutoActive" class="on-off-switch" />
+      <label for="f-applyAutoActive" class="on-off-switch-label">
+        <div class="on-off-switch-state">on</div>
+      </label>
+    </div>
+  </div>
+  <% } %>
+  <div id="featured-product"></div>
+</div>

@@ -1,0 +1,396 @@
+// input classes
+.form-section {
+	& input[type="text"],
+		& input[type="password"],
+		& input[type="url"],
+		& input[type="email"],
+		& input[type="tel"],
+		& input[type="number"],
+		& input[type="color"],
+		& select, & textarea {
+		font-size: $font-size-input;
+		height: $height-input;
+		padding: $space-s;
+		margin: $space-s 0;
+		width: 100%;
+		border: 1px solid $color-border-2;
+		@include border-radius($border-radius);
+	}
+
+	& select {
+		font-weight: bold;
+	}
+
+	& textarea {
+		height: 9em;
+		resize: vertical;
+
+		&.size-1{
+			height: 4em;
+		}
+		&.size-2{
+			height: 6em;
+		}
+		&.size-3{
+			height: 9em;
+		}
+		&.size-4{
+			height: 12em;
+		}
+		&.size-5{
+			height: 15em;
+		}
+	}
+
+	input:disabled, textarea:disabled, select:disabled {
+		background-color: rgb(235, 235, 228);
+	}
+
+	label, .label {
+		font-weight: bold;
+		font-size: 1.1em;
+
+		& + button {
+			margin: $space-s 0;
+		}
+	}
+
+	.solo-label {
+		padding-top: $space-l;
+		font-size: 1.2em;
+	}
+
+	& input[type="file"] {
+		position: absolute;
+		top: -50px;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 0;
+		cursor: pointer;
+	}
+
+	& input[type="color"] {
+		padding: 5px;
+	}
+
+	&.error {
+		label, .label{
+			color: $color-accent-error;
+		}
+
+		input, select, textarea {
+			display: inline;
+			border-color: $color-accent-error;
+			background-color: $color-neutral-8;
+			@include box-shadow( $color-accent-error-light 0px 0px 3px 1px );
+		}
+	}
+}
+
+.select-container {
+	position: relative;
+
+	// &:before {
+	// 	// Down chevron
+	// 	content:'\f078';
+	// 	font-family: FontAwesome;
+
+	// 	position: absolute;
+	// 	top: .5em;
+	// 	right: 0;
+	// 	bottom: .5em;
+	// 	font-size:1.5em;
+	// 	width: 2em;
+	// 	line-height: 2em;
+	// 	text-align: center;
+
+	// 	@include border-radius(0 $border-radius $border-radius 0);
+	// 	@include lighten-gradient($color-border-2);
+	// }
+
+	& > select {
+		padding-right: 3em;
+		background: white url(../images/esat-sprite-1.png) no-repeat calc(100% + 17px) 0;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		appearance: none;
+		cursor: pointer;
+		text-indent: 0.01px;
+		text-overflow: '';
+
+	}
+}
+
+.dollar-container {
+	position: relative;
+
+	&:before {
+		content: '$';
+        position: absolute;
+        font-size: $font-size-input;
+        min-height: 1em;
+        line-height: 1;
+        //margin: $space-s 0;
+        //padding: $space-s;
+        left: 6px;
+        top: 12px;
+        margin:$space-s 0px 0px $space-xs;
+	}
+
+	td &:before {
+		margin: 0;
+	}
+
+	& > input {
+        padding: $space-xs !important;
+        text-align: right;
+	}
+
+	&.fee {
+		display: inline-block;
+		width: 35%;
+	}
+}
+
+.date-container {
+	position: relative;
+
+	// &:before {
+	// 	// Search icon
+	// 	content:'\f073';
+	// 	font-family: FontAwesome;
+
+	// 	position: absolute;
+	// 	top: .5em;
+	// 	right:0;
+	// 	font-size:1.5em;
+	// 	width: 2em;
+	// 	height: 2em;
+	// 	line-height: 2em;
+	// 	text-align: center;
+
+	// 	@include border-radius(0 $border-radius $border-radius 0);
+	// 	@include lighten-gradient($color-border-2);
+	// }
+
+	& > input {
+		padding-right: 3em;
+		background: white url(../images/esat-sprite-1.png) no-repeat;
+		background-position: right -15px top -76px;
+		cursor: pointer;
+	}
+}
+
+.search-container {
+	position: relative;
+	margin-top: $space-s;
+	margin-bottom: $space-s;
+
+	&:before {
+		// Search icon
+		content:'\f002';
+		font-family: FontAwesome;
+
+		position: absolute;
+		top:0;
+		right:0;
+		font-size:1.5em;
+		line-height: 2em;
+		height: 2em;
+		width: 2em;
+		text-align: center;
+
+		@include border-radius(0 $border-radius $border-radius 0);
+		@include lighten-gradient($color-border-2);
+	}
+
+	& > input[type="text"] {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-right: 4em;
+	}
+
+	.error & {
+		margin: 0;
+
+		&:before {
+			//top: 10px;
+		}
+
+		& > input {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.switch-input-container {
+	position: relative;
+
+	& > .switch-input-switch {
+		position: absolute;
+		top: 0;
+		right: 0;
+		overflow: hidden;
+	}
+}
+
+ul.search-list {
+	@extend .compact-list;
+
+	& > li {
+		background-color:white;
+		height: 3em;
+		line-height: 3em;
+		padding: 0 $space-s;
+		border-bottom: 1px solid $color-border-2;
+		border-left: 1px solid $color-border-2;
+		border-right: 1px solid $color-border-2;
+
+		&:last-child {
+			@include border-radius(0 0 5px 5px);
+		}
+	}
+}
+
+// on-off checkbox switch (copied from other)
+input.on-off-switch ~ label.on-off-switch-label {
+	text-align: left;
+}
+
+input.on-off-switch:empty {
+	display: none;
+}
+
+input.on-off-switch:empty ~ label.on-off-switch-label {
+	position: relative;
+	float: left;
+	clear: both;
+	font-size: $font-size-input;
+	line-height: $height-input;
+	text-indent: 4.4em;
+	cursor: pointer;
+	overflow: hidden;
+
+	@include user-select(none);
+
+
+}
+	// fix Mac on/off toggle alignments
+	.mac input.on-off-switch:empty ~ label.on-off-switch-label {
+		text-indent: 4.2em;
+	}
+
+input.on-off-switch:empty ~ label.on-off-switch-label:before,
+input.on-off-switch:empty ~ label.on-off-switch-label:after {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	content: ' ';
+	width: 5.5em;
+	background-color: $color-neutral-5;
+	@include single-transition(all, 100ms, ease-in);
+	@include border-radius($border-radius);
+}
+
+input.small-switch.on-off-switch:empty ~ label.small-label.on-off-switch-label:before,
+input.small-switch.on-off-switch:empty ~ label.small-label.on-off-switch-label:after {
+    width: 4.5em;
+}
+
+input.on-off-switch:empty ~ label.on-off-switch-label:after {
+	width: 1.8em;
+	top: 0.4em;
+	bottom: 0.4em;
+	margin-left: 0.4em;
+	background-color: $color-font-2;
+}
+
+input.small-switch.on-off-switch:empty ~ label.small-label.on-off-switch-label:after {
+    width: 1.5em;
+    top: 0.75em;
+    bottom: 0.75em;
+}
+
+input.on-off-switch:checked ~ label.on-off-switch-label:before {
+	background-color: $color-accent-1;
+}
+
+input.small-switch.on-off-switch:checked ~ label.small-label.on-off-switch-label:before {
+
+}
+
+input.on-off-switch:checked ~ label.on-off-switch-label:after {
+	margin-left: 3.3em;
+}
+
+input.small-switch.on-off-switch:checked ~ label.small-label.on-off-switch-label:after {
+    margin-left: 2.75em;
+}
+
+input.on-off-switch:empty ~ label.on-off-switch-label .on-off-switch-state {
+	&:before {
+		content: 'OFF';
+		right: 9px;
+		position:absolute;
+		top: 0px;
+		color:$color-font-2;
+		min-height:5px;
+		min-width:5px;
+	}
+}
+
+input.small-switch.on-off-switch:empty ~ label.small-label.on-off-switch-label .on-off-switch-state {
+    &:before {
+        right: 17px;
+    }
+}
+
+input.on-off-switch:checked ~ label.on-off-switch-label .on-off-switch-state {
+	&:before{
+		content: 'ON';
+		left: -40px;
+		position:absolute;
+		top: 0px;
+		color:$color-font-2;
+		min-height:5px;
+		min-width:5px;
+	}
+}
+
+.on-off-switch-state {
+	@include border-radius($border-radius);
+	font-weight: bold;
+	color: $color-font-2;
+
+	&.off {
+		right:10px;
+
+		&:before {
+		  content:'OFF';
+		}
+	}
+}
+
+// normalize switches (from global label styles)
+label.on-off-switch-label {
+	margin: $space-s 0;
+	font-size: 1em;
+}
+
+.f-federated {
+	input, select, textarea {
+		background-color: $color-federated-2;
+		&:focus {
+			outline-color: $color-federated-1;
+		}
+	}
+}
+
+// To adjust panel for Email List Management
+.updateEmailListPanel {
+	padding-top: 0px;
+	margin-top: 35px;
+}

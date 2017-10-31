@@ -1,0 +1,145 @@
+<div class="left-align">
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="clearfix section-title">
+				<h2 class="pull-left">Edit Promo Code</h2>
+				<div class="btn-panel">
+					<button type="button" id="cancel-btn" class="btn btn-other">Cancel</button>
+					<button type="button" id="save-btn" class="btn btn-submit pull-right">Save</button>
+					<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Hidden Alert Message -->
+	<div class="row panel alert-panel">
+		<div class="col-12">
+			<div class="row">
+				<div class="col-1">
+					<div class="icon icon-3x icon-warning"></div>
+				</div>
+				<div class="col-11 alert-text">
+					This is a generic placeholder for error messages in eSAT. <br>
+					In the live app, this will be a real message and will be hidden by default.
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Hidden Alert Message -->
+
+	<% if(federated === true) { %>
+		<div class="row row-spaced">
+			<div class="col-4 form-section">
+				<div class="label">Active</div>
+				<input <%= statusActive ? 'checked' : '' %> type="checkbox" id="f-statusActive" name="f-statusActive" class="on-off-switch" />
+				<label for="f-statusActive" class="on-off-switch-label">
+					<div class="on-off-switch-state">on</div>
+				</label>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-6 form-section">
+				<div class="label">Promotion Code</div>
+				<input type="text" name="f-promoCode" id="f-promoCode" value="<%= promoCode %>" disabled>
+			</div>
+			<div class="col-3 form-section date-container">
+				<div class="label">Start Date</div>
+				<input type="text" name="f-startDate" id="f-startDate" class="date" value="<%= startDate %>" disabled>
+			</div>
+			<div class="col-3 form-section date-container">
+				<div class="label">End Date</div>
+				<input type="text" name="f-endDate" id="f-endDate" class="date" value="<%= endDate %>" disabled>
+			</div>			
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12 form-section">
+				<div class="label">Description</div>
+				<input type="text" name="f-description" id="f-description" value="<%= description %>" disabled>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-4 form-section select-container">
+				<div class="label">Discount Amount</div>
+				<select name="f-discountAmount" id="f-discountAmount" disabled>
+					<option value="$5">$5</option>
+					<option value="$10">$10</option>
+					<option value="$20">$20</option>
+					<option value="10%">10%</option>
+					<option value="20%">20%</option>
+				</select>
+			</div>
+			<div class="col-6 form-section select-container">
+				<div class="label">Promotion Conditions</div>
+				<select name="f-conditions" id="f-conditions" disabled>
+					<% if( condition == 'AAP' ) {
+						conditionTitle = 'One Per Device - Auto Apply'
+					} else if ( condition == 'M' ) {
+						conditionTitle = 'Multi Use'
+					} else if ( condition == 'ANP' ) {
+						conditionTitle = 'One Per Device - Do Not Auto Apply'
+					} %>
+					<option selected disabled hidden value="<%= conditionTitle %>"><%= conditionTitle %></option>
+					<option value="AAP">One Per Device - Auto Apply</option>
+					<option value="ANP">One Per Device - Do Not Auto Apply</option>
+					<option value="M">Multi Use</option>
+				</select>
+			</div>
+		</div>
+	<% } else { %>
+		<div class="row row-spaced">
+			<div class="col-6 form-section">
+				<div class="label">Promotion Code</div>
+				<input type="text" name="f-promoCode" id="f-promoCode" value="<%= promoCode %>">
+			</div>
+			<div class="col-3 form-section date-container">
+				<div class="label">Start Date</div>
+				<input type="text" name="f-startDate" id="f-startDate" class="date" value="<%= startDate %>">
+			</div>
+			<div class="col-3 form-section date-container">
+				<div class="label">End Date</div>
+				<input type="text" name="f-endDate" id="f-endDate" class="date" value="<%= endDate %>">
+			</div>			
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12 form-section">
+				<div class="label">Description</div>
+				<input type="text" name="f-description" id="f-description" value="<%= description %>">
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-4 form-section select-container">
+				<div class="label">Discount Amount</div>
+				<select name="f-discountAmount" id="f-discountAmount">
+					<option value="$5">$5</option>
+					<option value="$10">$10</option>
+					<option value="$20">$20</option>
+					<option value="10%">10%</option>
+					<option value="20%">20%</option>
+				</select>
+			</div>
+			<div class="col-6 form-section select-container">
+				<div class="label">Promotion Conditions</div>
+				<select name="f-conditions" id="f-conditions">
+					<% if( condition == 'AAP' ) {
+						conditionTitle = 'One Per Device - Auto Apply'
+					} else if ( condition == 'M' ) {
+						conditionTitle = 'Multi Use'
+					} else if ( condition == 'ANP' ) {
+						conditionTitle = 'One Per Device - Do Not Auto Apply'
+					} %>
+					<option selected disabled hidden value="<%= conditionTitle %>"><%= conditionTitle %></option>
+					<option value="AAP">One Per Device - Auto Apply</option>
+					<option value="ANP">One Per Device - Do Not Auto Apply</option>
+					<option value="M">Multi Use</option>
+				</select>
+			</div>
+		</div>
+	<% } %>
+
+</div>

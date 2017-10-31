@@ -1,0 +1,206 @@
+<div class="row row-spaced">
+  <div class="col-12">
+    <div class="section-title">
+      <h2 class="pull-left">Wedding Flowers</h2>
+      <div class="btn-panel">
+        <button type="button" id="save-btn" class="btn btn-submit pull-right">Save Changes</button>
+        <div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+
+<div class="row row-spaced">
+  <div class="col-12">
+    You can use this section to configure the Wedding Seasonal Flowers and Wedding Flower Colors pages of your site. You can edit the existing flowers/colors from the lists below as well as add to them. You can even use this as an opportunity to showcase some of your own wedding work.
+  </div>
+</div>
+
+<div class="row row-spaced">
+  <div class="col-12">
+    <div id="tabs">
+      <ul class="clearfix">
+        <li class="col-6"><a class="center-align fill-container-width" href="#flowers">Wedding Seasonal Flowers</a></li>
+        <li class="col-6"><a class="center-align fill-container-width" href="#colors">Wedding Flower Colors</a></li>
+      </ul>
+
+      <!-- Start of Flower Tab -->
+      <div id="flowers">
+        <div class="row">
+          <div class="col-12">
+            <div class="panel-title">Wedding Seasonal Flowers Page</div>
+          </div>
+        </div>
+        <div class="row row-spaced">
+          <div class="col-12">
+            There are up to 4 sections available in this page. Click on any section to view or edit the section's information. Also, click on any section's image to edit the image title and caption.
+          </div>
+        </div>
+        <div class="row row-spaced">
+          <div class="col-12">
+            <button type="button" id="new-btn" class="btn btn-submit pull-right"><div class="icon icon-lg icon-add"></div> Add new</button>
+          </div>
+        </div>
+
+        <!-- Start of Section table -->
+        <div class="row row-spaced ">
+          <div class="col-12">
+            <table class="table alternate">
+              <thead>
+                <tr>
+                  <th class="col-1">Section</th>
+                  <th class="col-2">Section Title</th>
+                  <th class="col-2">Section Description</th>
+                  <th class="col-1">Left Image</th>
+                  <th class="col-1">Middle Image</th>
+                  <th class="col-1">Right Image</th>
+                  <th class="col-1">Status</th>
+                  <th class="col-1">Edit</th>
+                </tr>
+              </thead>
+              <tbody id="section-flower-list"></tbody>
+            </table>
+          </div>
+        </div>
+        <!-- End of Section Table -->
+
+        <!-- Start of SEO Information -->
+        <div class="panel form-section row row-spaced">
+          <div class="row">
+            <div class="col-12">
+              <div class="panel-title"><i class="icon icon-closed x-space-s" id="optional-flowers"></i>SEO Information (optional) <i class="icon icon-tool-tip" title="???"></i></div>
+            </div>
+          </div>
+          <div id="accordion-flowers">
+            <div class="row row-spaced">
+              <div class="col-12 form-section">
+                <label for="f-meta-title-flowers">Page &#60;title&#62;</label><i class="icon icon-tool-tip x-space-s" title="???"></i>
+                <input type="text" id="f-meta-title-flowers" name="f-meta-title-flowers" value="<%= metaTitleflowers %>">
+              </div>
+            </div>
+            <div class="row row-spaced">
+              <div class="col-6 form-section">
+                <label for="f-meta-keywords-flowers">Meta Keywords</label><i class="icon icon-tool-tip x-space-s" title="???"></i>
+                <textarea name="f-meta-keywords-flowers" id="f-meta-keywords-flowers" class="size-2"><%= metaKeywordsflowers %></textarea>
+              </div>
+              <div class="col-6 form-section">
+                  <label for="f-meta-desc-flowers">Meta Description</label><i class="icon icon-tool-tip x-space-s"></i>
+                  <textarea name="f-meta-desc-flowers" id="f-meta-desc-flowers" class="size-2"><%= metaDescriptionflowers %></textarea>
+              </div>
+            </div>
+            <div class="row row-spaced">
+              <div class="col-12 form-section">
+                  <label for="f-meta-tags-flowers">Additional Tags</label><i class="icon icon-tool-tip x-space-s"></i>
+                  <textarea name="f-meta-tags-flowers" id="f-meta-tags-flowers" class="size-2"><%= metaTagsflowers %></textarea>
+                  <div class="row"><div class="col-12">Please include the full HTML (such as &lt;meta&gt;) in the Additional Tags field.</div></div>
+              </div>
+            </div>
+          </div> <!-- End of Accordian -->
+        </div>
+        <!-- End of SEO Information -->  
+      </div>
+      <!-- End of Flower Tab -->
+
+       
+
+      <!-- Start of Color Tab -->
+      <div id="colors">
+        <div class="row">
+          <div class="col-12">
+            <div class="panel-title">Wedding Seasonal Colors Page</div>
+          </div>
+        </div>
+        <div class="row row-spaced">
+          <div class="col-12">
+            There are up to 4 sections available in this page. Click on any section to view or edit the section's information. Also, click on any section's image to edit the image title and caption.
+          </div>
+        </div>
+        <div class="row row-spaced">
+          <div class="col-12">
+            <button type="button" id="new-color-btn" class="btn btn-submit pull-right"><div class="icon icon-lg icon-add"></div> Add new</button>
+          </div>
+        </div>
+
+         <!-- Start of Section table -->
+        <div class="row row-spaced ">
+          <div class="col-12">
+            <table class="table alternate">
+              <thead>
+                <tr>
+                  <th class="col-1">Section</th>
+                  <th class="col-2">Section Title</th>
+                  <th class="col-2">Section Description</th>
+                  <th class="col-1">Left Image</th>
+                  <th class="col-1">Middle Image</th>
+                  <th class="col-1">Right Image</th>
+                  <th class="col-1">Status</th>
+                  <th class="col-1">Edit</th>
+                </tr>
+              </thead>
+              <tbody id="section-color-list"></tbody>
+            </table>
+          </div>
+        </div>
+        <!-- End of Section Table -->
+
+        <!-- Start of SEO Information -->
+        <div class="panel form-section row row-spaced">
+          <div class="row">
+            <div class="col-12">
+              <div class="panel-title"><i class="icon icon-closed x-space-s" id="optional-colors"></i>SEO Information (optional) <i class="icon icon-tool-tip" title="???"></i></div>
+            </div>
+          </div>
+          <div id="accordion-colors">
+            <div class="row row-spaced">
+              <div class="col-12 form-section">
+                <label for="f-meta-title-colors">Page &#60;title&#62;</label><i class="icon icon-tool-tip x-space-s" title="???"></i>
+                <input type="text" id="f-meta-title-colors" name="f-meta-title-colors" value="<%= metaTitlecolors %>">
+              </div>
+            </div>
+            <div class="row row-spaced">
+              <div class="col-6 form-section">
+                <label for="f-meta-keywords-colors">Meta Keywords</label><i class="icon icon-tool-tip x-space-s" title="???"></i>
+                <textarea name="f-meta-keywords-colors" id="f-meta-keywords-colors" class="size-2"><%= metaKeywordscolors %></textarea>
+              </div>
+              <div class="col-6 form-section">
+                  <label for="f-meta-desc-colors">Meta Description</label><i class="icon icon-tool-tip x-space-s"></i>
+                  <textarea name="f-meta-desc-colors" id="f-meta-desc-colors" class="size-2"><%= metaDescriptioncolors %></textarea>
+              </div>
+            </div>
+            <div class="row row-spaced">
+              <div class="col-12 form-section">
+                  <label for="f-meta-tags-colors">Additional Tags</label><i class="icon icon-tool-tip x-space-s"></i>
+                  <textarea name="f-meta-tags-colors" id="f-meta-tags-colors" class="size-2"><%= metaTagscolors %></textarea>
+                  <div class="row"><div class="col-12">Please include the full HTML (such as &lt;meta&gt;) in the Additional Tags field.</div></div>
+              </div>
+            </div>
+          </div> <!-- End of Accordian -->
+        </div>
+        <!-- End of SEO Information -->  
+      </div>
+      <!-- End of Color Tab -->
+    <div id="wedding-edit-modal"></div>
+    </div>
+    <!-- End of Tabs -->
+  </div>
+</div>
+  

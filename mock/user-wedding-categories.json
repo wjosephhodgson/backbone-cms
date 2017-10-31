@@ -1,0 +1,27 @@
+{
+  "id":1,
+  "active": false,
+  "name": "Standing Sprays & Wreath",
+  "img": "http://www.telefloramarketing.com/mock/sympathy-type-3.jpg",
+  "type": "Teleflora"
+},
+{
+  "id":2,
+  "active": true,
+  "name": "Photos & Urn Tributes",
+  "img": "http://www.telefloramarketing.com/mock/sympathy-type-2.jpg",
+  "type": "Teleflora"
+},
+{
+  "id":3,
+  "active": false,
+  "name": "Flowers for the Casket",
+  "img": "http://www.telefloramarketing.com/mock/sympathy-type-1.jpg",
+  "type": "Teleflora"
+},
+{
+  "id":4,
+  "active": false,
+  "name": "Funeral Bouquets",
+  "type": "Custom"
+}

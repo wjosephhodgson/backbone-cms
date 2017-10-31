@@ -1,0 +1,46 @@
+.m-account-info {
+
+  @include desktop() {
+    text-align: left;
+  }
+}
+
+//Facebook
+.m-account-facebook-blurb {
+	margin: 0 0 1em;
+}
+.m-account-facebook {
+	&.logged-in {
+		display: none;
+	}
+	.m-account-facebook-information {
+
+		.m-account-facebook-information-img {
+			float: left;
+			height: 3.85em;
+		}
+		.m-account-facebook-information-name {
+			line-height: 2.9386em;
+			font-size: 1.309em;
+			padding-left: 0.5em;
+		}
+	}
+	.form-text-link {
+		margin-bottom: 1em;
+	}
+
+  .btn-facebook {
+    margin: 0 0 $padding-xlarge;
+  }
+}
+
+.facebook {
+	.m-account-facebook {
+		&.logged-in {
+			display: block;
+		}
+		&.not-logged-in {
+			display: none;
+		}
+	}
+}

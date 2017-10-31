@@ -1,0 +1,65 @@
+[
+	{
+		"id": 1,
+		"sequence": 1,
+		"question": "Guarantee",
+		"active": true,
+		"category": "Company Policy Info"
+	},
+	{
+		"id": 2,
+		"sequence": 2,
+		"question": "Can you deliver my order on Sunday?",
+		"active": true,
+		"category": "Company Policy Info"
+	},
+	{
+		"id": 3,
+		"sequence": 3,
+		"question": "Can you deliver to a gated community, secured building, etc.?",
+		"active": true,
+		"category": "Company Policy Info"
+	},
+	{
+		"id": 4,
+		"sequence": 1,
+		"question": "I entered a promotional code, but I didn't get a discount",
+		"active": true,
+		"category": "Ordering and Return Policy Info"
+	},
+	{
+		"id": 5,
+		"sequence": 2,
+		"question": "I didn't get any confirmation.  How can I know you got my order?",
+		"active": true,
+		"category": "Ordering and Return Policy Info"
+	},
+	{
+		"id": 6,
+		"sequence": 3,
+		"question": "What can I do if I keep getting error messages on your website?",
+		"active": true,
+		"category": "Ordering and Return Policy Info"
+	},
+	{
+		"id": 7,
+		"sequence": 1,
+		"question": "What information do you collect?",
+		"active": true,
+		"category": "Security and Privacy Policy Info"
+	},
+	{
+		"id": 8,
+		"sequence": 2,
+		"question": "How do you use \"cookies?\"",
+		"active": true,
+		"category": "Security and Privacy Policy Info"
+	},
+	{
+		"id": 9,
+		"sequence": 3,
+		"question": "How secure is your website?",
+		"active": true,
+		"category": "Security and Privacy Policy Info"
+	}
+]

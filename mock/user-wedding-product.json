@@ -1,0 +1,42 @@
+{
+  "pageHeaderTitle": "Page Header Title",
+  "pageHeaderDescription": "Page Header Description",
+  "metaTitle": "Meta Title",
+  "metaKeywords": "Meta Keywords",
+  "metaDescription": "Meta Description",
+  "metaTags": "Meta Tags",
+  "sections": [
+    {
+      "id":1,
+      "active": true,
+      "name": "Reminescent of Winter Japan",
+      "img": "http://www.telefloramarketing.com/mock/bouquet-1.png",
+      "type": "Teleflora",
+      "sequence":1
+    },
+    {
+      "id":2,
+      "active": false,
+      "name": "Hawaiian Paradise",
+      "img": "http://www.telefloramarketing.com/mock/bouquet-4.png",
+      "type": "Teleflora",
+      "sequence":2
+    },
+    {
+      "id":3,
+      "active": false,
+      "name": "Southern California",
+      "img": "http://www.telefloramarketing.com/mock/bouquet-2.png",
+      "type": "Teleflora",
+      "sequence":3
+    },
+    {
+      "id":4,
+      "active": false,
+      "name": "Funeral Bouquets",
+      "type": "Custom",
+      "sequence":4
+    }
+  ]
+}
+

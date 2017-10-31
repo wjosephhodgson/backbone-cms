@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title":"Homagepage Tile Image 1",
+    "url":"http://www.telefloramarketing.com/mock/tile-1.png",
+    "type":"image/png",
+    "description": "Description",
+    "altText": "Alternate Text",
+    "fileName": "tile-1.png",
+    "uploadDate": "Fri Feb 13 2015 17:19:27 GMT-0800 (Pacific Standard Time)",
+    "dimensions": "460x200",
+    "global":false
+  },
+  {
+    "id": 2,
+    "title":"Homagepage Tile Image 2",
+    "url":"http://www.telefloramarketing.com/mock/tile-2.png",
+    "type":"image/png",
+    "description": "Description",
+    "altText": "Alternate Text",
+    "fileName": "tile-2.png",
+    "uploadDate": "Fri Feb 13 2015 17:19:27 GMT-0800 (Pacific Standard Time)",
+    "dimensions": "460x200",
+    "global":false
+  }
+]

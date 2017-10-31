@@ -1,0 +1,173 @@
+<section id="validation-error-handling" class="l-wrapper top-margin">
+  <h2>Validation / Error Handling</h2>
+
+  <P>Below is a demo form to show the implementation of the <a href="http://jqueryvalidation.org/" target="_tab">jQuery Validation Plugin</a>.<br><br>Please review the documentation of the <a href="http://jqueryvalidation.org/" target="_tab">jQuery Validation Plugin</a>. Visit the link to find a guide on "<span class="bembo-bold">formValidation.js</span>" which centralizes the management and implementation of validation methods.</p>
+  <br>
+  <p>Demo form uses "<span class="bembo-bold">demoValidation.js</span>", a simplified version of formValidation.js</p>
+  <br>
+
+  <!-- form container starts -->
+  <div class="l-content container_4 d-container_12">
+    <div class="l-content-wide l-wrapper">
+      <!-- form starts -->
+      <form id="demoForm" name="demoForm" class="m-account-form" action="#">
+        <div class="clearfix">
+          <div class="d-grid_6">
+            <label for="first_name">*First Name</label>
+            <input id="first_name" name="first_name" class="fluid" type="text"tabindex="1"/>
+          </div>
+          <div class="d-grid_6">
+            <label for="last_name">*Last Name</label>
+            <input id="last_name" name="last_name" class="fluid" type="text"tabindex="2"/>
+          </div>
+          <div class="d-grid_6">
+            <label for="email">*email</label>
+            <input id="email" name="email" class="fluid" type="email" tabindex="3">
+          </div>
+          <div class="d-grid_6">
+            <label for="phone_number">*Phone Number
+              <a class="icon-info pull-right" href="#">more info<span class="m-tooltip m-form-demo-tooltip">This is just a test form.</span></a>
+            </label>
+            <input id="phone_number" name="phone_number" class="fluid" type="tel" tabindex="4"/>
+          </div>
+          <div class="d-grid_6">
+            <label for="country">*Country</label>
+            <select id="country" name="country" class="country" tabindex="5">
+              <option value="">Select Country</option>
+              <option value="United States">United States</option>
+            </select>
+          </div>
+           <div class="d-grid_6">
+            <label for="zip">*Zip/Postal Code</label>
+            <input id="zip" name="zip" class="zip fluid" type="text" tabindex="6"/>
+          </div>
+          <div class="clear"></div>
+          <div class="d-grid_6">
+            <div class="custom-checkbox">
+              <input type="checkbox" id="noCheckCard">
+              <label for="noCheckCard" class="custom-checkbox-label"><span class="label-alt-text">Do Not ask for a Credit Card</label>
+            </div>
+            <label for="cc_number">*Card Number</label>
+            <input id="cc_number" name="cc_number" class="fluid" type="text" tabindex="9"/>
+          </div>
+          <div class="clear"></div>
+          <div class="d-grid_6">
+            <input id="demoBtn" name="demoBtn" type="submit" class="btn btn-submit show-response btn-orange" value="test validation" tabindex="15"/>
+          </div>
+        </div>
+      </form>
+      <!-- form ends -->
+    </div>
+  </div>
+  <!-- form container ends -->
+
+  <div class="clear"></div>
+  <!-- select button code demo starts -->
+  <div class="m-code l-wrapper top-margin">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <pre class="prettyprint linenums lang-html">
+  &lt;!-- form container starts --&gt;
+  &lt;div class="l-content container_4 d-container_12"&gt;
+    &lt;div class="l-content-wide l-wrapper"&gt;
+      &lt;!-- form starts --&gt;
+      &lt;form id="demoForm" name="demoForm" class="m-account-form" action="#"&gt;
+        &lt;div class="clearfix"&gt;
+          &lt;div class="d-grid_6"&gt;
+            &lt;label for="first_name"&gt;*First Name&lt;/label&gt;
+            &lt;input id="first_name" name="first_name" class="fluid" type="text"tabindex="1"/&gt;
+         &lt;/div&gt;
+         &lt;div class="d-grid_6"&gt;
+           &lt;label for="last_name"&gt;*Last Name&lt;/label&gt;
+           &lt;input id="last_name" name="last_name" class="fluid" type="text"tabindex="2"/&gt;
+         &lt;/div&gt;
+         &lt;div class="d-grid_6"&gt;
+           &lt;label for="email"&gt;*email&lt;/label&gt;
+           &lt;input id="email" name="email" class="fluid" type="email" tabindex="3"&gt;
+         &lt;/div&gt;
+         &lt;div class="d-grid_6"&gt;
+           &lt;label for="phone_number"&gt;*Phone Number
+             &lt;a class="icon-info pull-right" href="#"&gt;more info&lt;span class="m-tooltip m-form-demo-tooltip" &gt;This is just a test form.&lt;/span&gt;&lt;/a&gt;
+           &lt;/label&gt;
+           &lt;input id="phone_number" name="phone_number" class="fluid" type="tel" tabindex="4"/&gt;
+         &lt;/div&gt;
+         &lt;div class="d-grid_6"&gt;
+           &lt;label for="country"&gt;*Country&lt;/label&gt;
+           &lt;select id="country" name="country" class="country" tabindex="5"&gt;
+             &lt;option value=""&gt;Select Country&lt;/option&gt;
+             &lt;option value="United States"&gt;United States&lt;/option&gt;
+           &lt;/select&gt;
+         &lt;/div&gt;
+          &lt;div class="d-grid_6"&gt;
+           &lt;label for="zip"&gt;*Zip/Postal Code&lt;/label&gt;
+           &lt;input id="zip" name="zip" class="zip fluid" type="text" tabindex="6"/&gt;
+         &lt;/div&gt;
+         &lt;div class="clear"&gt;&lt;/div&gt;
+         &lt;div class="d-grid_6"&gt;
+           &lt;div class="custom-checkbox"&gt;
+             &lt;input type="checkbox" id="noCheckCard"&gt;
+             &lt;label for="noCheckCard" class="custom-checkbox-label"&gt;&lt;span class="label-alt-text"&gt;Do  Not ask for a Credit Card&lt;/label&gt;
+           &lt;/div&gt;
+           &lt;label for="cc_number"&gt;*Card Number&lt;/label&gt;
+           &lt;input id="cc_number" name="cc_number" class="fluid" type="text" tabindex="9"/&gt;
+         &lt;/div&gt;
+         &lt;div class="clear"&gt;&lt;/div&gt;
+         &lt;div class="d-grid_6"&gt;
+           &lt;input id="demoBtn" name="demoBtn" type="submit" class="btn btn-submit show-response"  value="test validation" tabindex="15"/&gt;
+         &lt;/div&gt;
+       &lt;/div&gt;
+     &lt;/form&gt;
+     &lt;!-- form ends --&gt;
+   &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;!-- form container ends --&gt;
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="top-margin">The main file used from the plugin download is: "<span class="bembo-bold">jquery.validate.min.js</span>" <br><br>
+  The file "<span class="bembo-bold">additional-methods.min.js</span>" (that also comes with the download) offers a series of methods designed to do some special case validation (i.e zip codes, phone numbers, license plates, etc).
+  <br><br>
+  Some methods from "additional-methods.js" were taken, modified and used on the file "<span class="bembo-bold">formValidation.js</span>", which has all the Client Side Form Validation rules, handlers and methods for the Teleflora site.
+  <br><br>
+  The way the Jquery Validation Plugin works is by providing a platform to reduce the amount of code that has to be written to accommodate most of the form validation needs. This does not mean that it's an all in one solution, it still needs to be tailored, and sometimes different form validation functions with it's own exclusive element and business rules have to be coded.
+  <br><br>
+  This is why the plugin also comes with different types of possibilities to do customization. Extended documentation can be found on the plugin site and through out coding forums.
+  <br><br>
+  On its most  simple form, the Validator Plugin works setting up RULES and MESSAGES for those rules. Rules and messages are making reference to the "name" attribute of the form elements. Users can also create Rules referencing a "class", so that it covers a wider range of forms and inputs at the same time (the Teleflora site also uses this mechanism).
+  <br><br>
+  This document is a walk through the way "<span class="bembo-bold">formValidation.js</span>" file is organized, and explains the implementations created for Teleflora.
+  <br><br>
+
+  <ul>
+    <li><h2>About "<span class="bembo-bold">formValidation.js</span>"</h2></li>
+  </ul>
+<br>
+  <label>error styles</label>
+  <p>Three classes are used to display error messages, the SASS code is on "<span class="bembo-bold">_forms.scss</span>":<br>
+    <li><p><span class="bembo-bold">is-error</span>: used for the error message displayed under an invalid form element. It is used inside a &lt;span&gt; tag that it's generated by the plugin, this is one of the main modifications to the "<span class="bembo-bold">jquery.validate.min.js</span>" file.</p></li>
+    <li><p><span class="bembo-bold">error-border</span>: used for the outline of the invalid form element. It is used inside a &lt;input&gt; tag</p></li>
+    <li><p><span class="bembo-bold">error-label</span>: used on the labels of the invalid form element. It is used inside a &lt;label&gt; tag</p></li>
+  </p>
+
+  <br><br>
+
+   <label>validation functions</label>
+    <p>The validation functions used where created to accommodate custom behaviors and rules for proper user interaction and input field consistency in combination with the Validation Plugin, they are called by element handlers.
+
+      <li><p><span class="bembo-bold">validateTextArea</span>: tests to see if an input text area is empty.<br>It's called by the "requiredZipTeleflora" added method to verify zip codes according to site rules.</p></li>
+      <li><p><span class="bembo-bold">updateRecipient</span>: used on "New Gift Reminders" page, it clears first and last name text areas when a recipient is chosen from the select box.<br>It's called by the #recipient select</p></li>
+      <li><p><span class="bembo-bold">updateTxtChck</span>: used on "Edit Reminders" page, it clears the mobile phone number text input area if no check box for text messages is selected. <br>It's called by #five_days_text and #tend_days_text checkboxes</p></li>
+      <li><p><span class="bembo-bold">updateTerritory</span>: used to remove error messages from the State/Territory select when a choice is selected. <br>It's called by .state  .province  and .territory  selects.</p></li>
+      <li><p><span class="bembo-bold">validateCountry</span>: used when the country select is used. It removes error labels when a choice is selected and updates the State/Territory select for US states and Canadian territories, and a text input area for another country when applicable.<br> It has a special validation case that it's used on the "Delivery Info" page, where there might be more than one item for checkout. <br>It's called by .country  selects.</p></li>
+      <li><p><span class="bembo-bold">getCreditCardType</span>: used when validating credit card number input. It determines the type of credit card by looking at the first number typed, this is used to make the credit card logo active and stand out from the other logos. <br>It gets called by "keyupHandler" that is bind to a #cc_number text input area.</p></li>
+      <li><p><span class="bembo-bold">keyupHandler</span>: used as a handler function by the 'keyup' trigger for a #cc_number text input area. <br>It makes a credit card logo active and stand out from the other logos.</p></li>
+    </p>
+
+</section>
+

@@ -1,0 +1,87 @@
+.m-subcategory {
+  @include desktop() {
+    display: inline-block;
+  }
+
+  .m-subcategory-header {
+    font-size: 1.846em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    padding-bottom: 0.5em;
+
+    margin-bottom: 0.2em;
+    padding: 0;
+
+    @include desktop() {
+      text-align: left;
+    }
+  }
+
+  .m-subcategory-header-container {
+    @include desktop() {
+      width: 75%;
+    }
+  }
+
+  .m-subcategory-header-bottom {
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid $accent-grey;
+  }
+
+  .m-subcategory-header-content {
+    text-align: left;
+
+    .m-subcategory-header-text {
+      @include mobile() {
+        text-align: center;
+      }
+    }
+
+    .m-subcategory-header-more-text {
+      font-size: 1.076923077em;
+      line-height: 17px;
+    }
+
+    .m-subcategory-header-more-text {
+      display: none;
+    }
+  }
+
+  .m-subcategory-sort {
+    display: block;
+    float: none;
+    text-align: left;
+
+    @include desktop() {
+      text-align: right;
+      position: absolute;
+      top: 5em;
+      right: 0em;
+      margin: 0;
+    }
+
+    .m-subcategory-sort-span {
+      font-size: 1em;
+      text-transform: uppercase;
+      color: $dark-grey;
+    }
+
+    .m-subcategory-sort-select {
+      display: inline-block;
+      width: 75%;
+    }
+  }
+  // this is for search results b/c the copy is only one line high
+  .m-subcategory-sort-single-line {
+    @include desktop() {
+      top: 1.50em;
+    }
+  }
+  .m-product-container {
+    @include desktop() {
+      width: 74% !important;
+      margin-left: 0;
+    }
+  }
+}

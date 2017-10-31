@@ -1,0 +1,158 @@
+<div id="setting-content" id="setting-content-form">
+	<div class="row row-spaced panel">
+		<div class="col-12">
+			<div class="row row-spaced">
+				<div class="col-12">
+					<div class="panel-title">Program Settings</div>
+				</div>
+			</div>
+			<div class="row row-spaced">
+				<div class="col-3 form-section">
+					<div class="label">Activate Program</div>
+					<input <%= activateProgram ? 'checked' : '' %> type="checkbox" id="f-activateProgram" name="f-activateProgram" class="on-off-switch" />
+					<label for="f-activateProgram" class="on-off-switch-label">
+					<div class="on-off-switch-state">on</div>
+					</label>
+				</div>
+				<div class="col-4 form-section">
+					<label for="f-programName">Program Name</label><i class="icon icon-tool-tip x-space-s" title="You can give your rewards program a unique name that fits your shop."></i>
+					<input type="text" class="f-programName" id="f-programName" name="f-programName" value="<%= programName %>">
+				</div>	
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced panel">
+		<div class="col-12">
+			<div class="panel-title">Program Promotion Details</div>
+		</div>
+		<div class="col-12 form-section">
+			<div class="row">
+				<div class="col-3 solo-label label left-align">Your customers earn</div>
+				<div class="form-section col-2">
+					<input type="text" id="f-dollarToPoint" class="f-dollarToPoint" placeholder="#" name="f-dollarToPoint" value="<%= dollarToPoint %>" required>
+				</div>
+				<div class="col-3 solo-label label collesswidth left-align">points for every</div>
+				<div class="form-section col-2">
+					<input type="text" id="f-pointsRequired" class="f-pointsRequired" placeholder="$" name="f-pointsRequired" value="<%= pointsRequired %>" required>
+				</div>
+				<div class="col-1 solo-label label">spent</div>
+			</div>
+			<div class="row">
+				<div class="col-1 solo-label label right-align">After</div>
+				<div class="form-section col-2">
+					<input type="text" id="f-pointsThreshold" class="f-pointsThreshold" placeholder="#" name="f-pointsThreshold" value="<%= pointsThreshold %>" required>
+				</div>
+				<div class="col-8 solo-label label left-align">points, customers will earn a reward promo code.</div>		
+			</div>
+		</div>
+		<div class="col-12">
+			<div class="row row-spaced form-section">
+				<div class="col-4">
+					<div class="label">Promo Discount Amount</div>
+					<div class="select-container">
+						<select id="f-discountAmount" name="f-discountAmount" class="f-discountAmount">
+						<option selected disabled hidden value="<%discountAmount%>"><%=discountAmount%></option>
+						<option value="FIVEDOLLARS">$5</option>
+						<option value="TENDOLLARS">$10</option>
+						<option value="TWENTYDOLLARS">$20</option>
+						<option value="10PERCENT">10%</option>
+						<option value="TWENTYPERCENT">20%</option>
+						<option value="FREEDELIVERY">Free Delivery</option>
+						</select>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+	<div class="row row-spaced panel">
+		<div class="col-12">
+
+			<div class="row row-spaced">
+				<div class="col-12">
+					<div class="panel-title">Bonus Points</div>
+				</div>
+			</div>
+
+			<div class="row row-spaced">
+				<div class="col-4 form-section">
+					<div class="label">Joining Rewards Program <i title="With this setting enabled, your customers will get bonus points for joining your rewards program." class="icon icon-tool-tip x-space-s"></i></div>
+					<input <%= bonusJoin ? 'checked' : '' %> type="checkbox" id="f-bonusJoin" name="f-bonusJoin" class="on-off-switch f-bonus-toggle" />
+					<label for="f-bonusJoin" class="on-off-switch-label">
+					<div class="on-off-switch-state">on</div>
+					</label>
+				</div>
+				<div class="col-4 form-section f-bonus-points hidden-alt" data-toggle="f-bonusJoin">
+					<div class="label">Bonus Points for Joining</div>
+					<input type="text" name="f-bonusJoinPts" class="f-bonusJoinPts" placeholder="#" id="f-bonusJoinPts" value="<%= bonusJoinPts %>">
+				</div>
+			</div>
+
+			<div class="row row-spaced">
+				<div class="col-4 form-section">
+					<div class="label">Signing Up for Email Reminders <i title="With this setting enabled, your customers will get bonus points for receiving holiday email reminders." class="icon icon-tool-tip x-space-s"></i></div>
+					<input <%= bonusReminders ? 'checked' : '' %> type="checkbox" id="f-bonusReminders" name="f-bonusReminders" class="on-off-switch f-bonus-toggle" />
+					<label for="f-bonusReminders" class="on-off-switch-label">
+					<div class="on-off-switch-state">on</div>
+					</label>
+				</div>
+				<div class="col-4 form-section f-bonus-points hidden-alt" data-toggle="f-bonusReminders">
+					<div class="label">Bonus Points for Reminders</div>
+					<input type="text" name="f-bonusRemindersPts" class="f-bonusRemindersPts" placeholder="#" id="f-bonusRemindersPts" value="<%= bonusRemindersPts %>">
+				</div>
+			</div>
+
+			<div class="row row-spaced">
+				<div class="col-4 form-section">
+					<div class="label">Subscribing to Promo Emails <i title="With this setting enabled, your customers will get bonus points for subscribing to your email marketing list." class="icon icon-tool-tip x-space-s"></i></div>
+					<input <%= bonusPromoEmail ? 'checked' : '' %> type="checkbox" id="f-bonusPromoEmail" name="f-bonusPromoEmail" class="on-off-switch f-bonus-toggle" />
+					<label for="f-bonusPromoEmail" class="on-off-switch-label">
+					<div class="on-off-switch-state">on</div>
+					</label>
+				</div>
+				<div class="col-4 form-section f-bonus-points hidden-alt" data-toggle="f-bonusPromoEmail">
+					<div class="label">Bonus Points for Emails</div>
+					<input type="text" name="f-bonusPromoEmailPts" class="f-bonusPromoEmailPts" placeholder="#" id="f-bonusPromoEmailPts" value="<%= bonusPromoEmailPts %>">
+				</div>
+			</div>
+
+			<div class="row row-spaced">
+				<div class="col-4 form-section">
+					<div class="label">Placing Orders with Add-Ons <i title="With this setting enabled, your customers will get bonus points for placing orders that contain add-ons (like chocolates or balloons)." class="icon icon-tool-tip x-space-s"></i></div>
+					<input <%= bonusAddOn ? 'checked' : '' %> type="checkbox" id="f-bonusAddOn" name="f-bonusAddOn" class="on-off-switch f-bonus-toggle" />
+					<label for="f-bonusAddOn" class="on-off-switch-label">
+					<div class="on-off-switch-state">on</div>
+					</label>
+				</div>
+				<div class="col-4 form-section f-bonus-points hidden-alt" data-toggle="f-bonusAddOn">
+					<div class="label">Bonus Points for Add-On Orders</div>
+					<input type="text" name="f-bonusAddOnPts" class="f-bonusAddOnPts" placeholder="#" id="f-bonusAddOnPts" value="<%= bonusAddOnPts %>">
+				</div>
+			</div>						
+			
+		</div>
+	</div>
+
+
+	<div class="row row-spaced panel">
+		<div class="col-12">
+
+			<div class="row row-spaced">
+				<div class="col-12">
+					<div class="panel-title">Products Featured In Reward Emails</div>
+				</div>
+			</div>
+
+			<div class="row row-spaced">
+				<div class="col-12" id="f-featured-products"></div>
+			</div>
+
+		</div>
+
+
+	</div>
+
+</div>
+
+

@@ -1,0 +1,176 @@
+
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Find A Florist Statistics</h2>
+		</div>
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row row-spaced">
+	<div class="col-12">
+		This section reports the web statistics of Find A Florist for the selected date range.
+	</div>
+</div>
+
+<div class="row row-spaced panel form-section">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Report Time Period</div>
+		</div>
+	</div>
+	<form id="f-find-a-florist-date-form" name="f-find-a-florist-date-form" class="form-section">
+		<div class="row row-spaced form-section">
+			<div class="col-d-5 col-6 form-section">
+				<label for="start-date">From:</label>
+				<div class="date-container">
+					<input type="text" id="start-date" name="start-date" class="date no-change-trigger">
+				</div>
+			</div>
+			<div class="col-d-5 col-6 form-section">
+				<label for="end-date">To:</label>
+				<div class="date-container">
+					<input type="text" disabled id="end-date" name="end-date" class="date no-change-trigger">
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="col-d-5 form-section">
+				<label for="f-site-dropdown">Site:</label>
+				<div class="select-container">
+					<select name="f-site-dropdown" id="f-site-dropdown" class="no-change-trigger">
+						<option selected disabled hidden value=""></option>
+						<option selected="selected" value="Combined">Combined</option>
+						<option value="Jennys">Jennys</option>
+						<option value="Lehrers">Lehrer's Flowers</option>
+						<option value="Martinas">Martina's Flowers</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-d-5 col-6 form-section">
+				<button type="button" id="go-btn" class="btn btn-submit row-btn">GO <i class="icon icon-right-circle-chevron icon-lg"></i></button>
+			</div>
+		</div>
+	</form>
+</div>
+
+<div class="row row-spaced panel form-section find-a-florist-report" style="display:none;">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Find A Florist Website Statistics Report Total</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			<table class="table">
+				
+				<thead>
+					<tr class="highlighted">
+						<th class="col-2 left-align"></th>
+						<th class="col-2 left-align">Top 5 Placement</th>
+						<th class="col-2 left-align">Overall Placement</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td class="left-align indented-l">Total</td>
+						<td class="left-align"><%= totalTopFive %></td>
+						<td class="left-align"><%= totalOverall %></td> 
+					</tr>
+				</tbody>
+
+			</table>
+		</div>		
+	</div>
+</div>
+
+<div class="row row-spaced panel form-section find-a-florist-report" style="display:none;">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Find A Florist Website Statistics Report By Top City</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			<table class="table">
+				
+				<thead>
+					<tr class="highlighted">
+						<th class="col-2 left-align indented-l">Top City</th>
+						<th class="col-2 left-align">Top 5 Placement</th>
+						<th class="col-2 left-align">Overall Placement</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td class="left-align indented-l"><%= topCity %></td>
+						<td class="left-align"><%= cityTopFive %></td>
+						<td class="left-align"><%= cityOverall %></td>
+					</tr>
+				</tbody>
+
+			</table>
+		</div>		
+	</div>
+
+
+ <div class="row row-spaced panel form-section find-a-florist-report" >
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Find A Florist Website Statistics Report By Top 20 Zip Codes</div>
+		</div>
+	</div>
+
+	<div class="row">
+	   <div class="col-12">
+			<div class="btn-panel y-space-top-s">
+                <button id="print-top20Report-btn" type="button" class="btn btn-submit"><i class="icon icon-print"></i>Print</button>
+		           <button id="export-Report-btn" type="button" class="btn btn-submit pull-right"><i class="icon icon-export"></i>Export</button>
+				</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div id="print-top-20-section" class="col-12">
+			<table class="table">
+				
+				<thead>
+					<tr class="highlighted">
+						<th class="col-2 left-align indented-l">Top Zip Code</th>
+						<th class="col-2 left-align">Top 5 Placement</th>
+						<th class="col-2 left-align">Overall Placement</th>
+					</tr>
+				</thead>
+
+				<tbody id="find-a-florist-top20-table">
+				</tbody>
+
+			</table>
+		</div>		
+	</div>
+  </div>
+</div>

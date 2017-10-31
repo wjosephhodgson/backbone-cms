@@ -1,0 +1,73 @@
+<section id="select-menu" class="l-wrapper top-margin">
+  <h2>Select Menu</h2>
+  <p>Select menus appear on the Teleflora site either with or without a description label.</p>
+
+  <!-- select menu form field starts -->
+  <div class="form-field top-margin">
+    <label>Select Menu (generic label)</label>
+    <select>
+      <option>option 1</option>
+      <option>option 2</option>
+      <option>option 3</option>
+    </select>
+  </div>
+  <div class="form-field">
+    <select>
+      <option>without label 1</option>
+      <option>without label 2</option>
+      <option>without label 3</option>
+    </select>
+  </div>
+  <!-- select menu form field ends -->
+  <div class="clear"></div>
+  <!-- select button code demo starts -->
+  <div class="m-code l-wrapper top-margin">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <pre class="prettyprint linenums lang-html">
+  &lt;!-- select menu form field starts --&gt;
+  &lt;div class="form-field"&gt;
+    &lt;label&gt;Select Menu (generic label)&lt;/label&gt;
+    &lt;select&gt;
+      &lt;option&gt;option 1&lt;/option&gt;
+      &lt;option&gt;option 2&lt;/option&gt;
+      &lt;option&gt;option 3&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/div&gt;
+ &lt;!-- select menu form field ends --&gt;
+ &lt;!-- select menu form field starts --&gt;
+  &lt;div class="form-field"&gt;
+   &lt;select&gt;
+     &lt;option&gt;without label 1&lt;/option&gt;
+     &lt;option&gt;without label 2&lt;/option&gt;
+     &lt;option&gt;without label 3&lt;/option&gt;
+   &lt;/select&gt;
+ &lt;/div&gt;
+ &lt;!-- select menu form field ends --&gt;
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- select button code demo ends -->
+</section>
+<!-- select-menu ends -->
+<script type="text/javascript">
+      var pickerLoad = false;
+      var PDPlogged=false; //This should be taken out, on pdp.js Modernizr.loggedin should be used
+      var domain = '<%= domain %>';
+      initLoad = true;
+      Modernizr.load([
+        {
+          test: Modernizr.webkit,
+          nope: ['' +  domain + 'stylesheets/fixes/selects.css']
+        },
+        {
+          test: Modernizr.touch,
+          yep: ['' +  domain + 'javascripts/lib/fastbutton.js']
+        }
+      ]);
+</script>

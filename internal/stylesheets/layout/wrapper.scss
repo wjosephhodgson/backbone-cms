@@ -1,0 +1,21 @@
+.l-wrapper {
+  position:relative;
+
+  @include desktop() {
+    max-width: em(940px);
+
+    margin:0 auto;
+  }
+}
+
+.l-wrapper-adapts {
+  @include mobile() {
+    max-width: 55em;
+    display:block;
+    margin:0 auto !important;
+  }
+
+  @include wildcard-max(45em) {
+    max-width: 26.428571em;
+  }
+}

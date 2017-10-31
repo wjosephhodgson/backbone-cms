@@ -1,0 +1,223 @@
+<% if (id) { %>
+
+<div class="row row-spaced">
+  <div class="col-12">
+    <div class="<%= subtitle ? 'section-title-with-sub-title' : 'section-title' %>">
+      <h2 class="pull-left"><%= title %></h2>
+      <div class="btn-panel">
+        <button type="button" id="cancel-btn" class="btn btn-other">Cancel</button>
+        <% if (id && !bcc) { %><button type="button" id="delete-btn" class="btn btn-other">Delete</button><% } %>
+        <button type="button" id="save-btn" class="btn btn-submit">Save</button>
+        <div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+      </div>
+      <% if(subtitle) { %>
+        <div class="clearfix"></div>
+        <h3><%= subtitle %></h3>
+      <% } %>
+    </div>
+  </div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row row-spaced">
+  <div class="col-12">
+    <%= description %>
+  </div>
+</div>
+
+<% } %>
+
+<div class="row row-spaced panel form-section">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-12">
+        <div class="panel-title">Promotion Details</div>
+      </div>
+    </div>
+
+    <div class="row row-spaced">
+      <div class="col-6 form-section">
+        <label for="f-promoCode">Promotion Code</label><i class="icon icon-tool-tip x-space-s" title="This is the promotion code that customers will need to enter to recieve the discount."></i>
+        <input type="text" class="f-promo-required" id="f-promoCode" name="f-promoCode" value="<%= code %>"<% if(federated || bcc){ %> disabled<% } %>>
+      </div>
+      <div class="col-3 form-section">
+        <div class="label">Active</div>
+        <input <%= active  ? 'checked' : '' %> type="checkbox" id="f-active" name="f-active" class="on-off-switch" />
+        <label for="f-active" class="on-off-switch-label">
+            <div class="on-off-switch-state">on</div>
+        </label>
+      </div>      
+    </div>
+
+
+    <div class="row row-spaced">
+      <% if(title !== 'Promo Discount On Order Total') { %>
+      <div class="col-12">
+        <div class="row">
+          <div class="col-3 form-section">
+            <label for="f-startDate">Start Date</label>
+          </div>
+          <div class="col-3 form-section">
+            <label for="f-endDate">End Date</label>
+          </div>
+          <div class="col-2 form-section">
+            <div class="label">One Time Use</div>
+          </div>
+          <% if (!bcc) { %>
+          <div class="col-2 form-section">
+            <div class="label">Allow Stacking<i title="This sets if the customer is allowed to combine other promo codes with this one on the same order." class="icon icon-tool-tip x-space-s"></i></div>
+          </div>
+          <% } %>
+        </div>
+        <div class="row">
+          <div class="col-3 form-section">
+            <div class="date-container">
+              <input type="text" id="f-startDate" name="f-startDate" class="date f-promo-required" value="<%= startDate %>"<% if(federated || bcc){ %> disabled<% } %>>
+            </div>
+          </div>
+          <div class="col-3 form-section">
+            <div class="date-container">
+              <input type="text" id="f-endDate" name="f-endDate" class="date f-promo-required" value="<%= endDate %>"<% if(federated || bcc){ %> disabled<% } %>>
+            </div>
+          </div>
+          <div class="col-2 form-section">
+            <input <%= oneTimeActive  ? 'checked' : '' %> type="checkbox" id="f-oneTimeActive" name="f-oneTimeActive" class="on-off-switch" <% if(federated || bcc){ %> disabled<% } %> />
+            <label for="f-oneTimeActive" class="on-off-switch-label">
+                <div class="on-off-switch-state">on</div>
+            </label>
+          </div>
+         <% if (!bcc) { %>
+          <div class="col-2 form-section">
+            <input <%= stackingActive  ? 'checked' : '' %> type="checkbox" id="f-stackingActive" name="f-stackingActive" class="on-off-switch"<% if(federated){ %> disabled<% } %> />
+            <label for="f-stackingActive" class="on-off-switch-label">
+                <div class="on-off-switch-state">on</div>
+            </label>
+          </div>
+          <% } %>
+        </div>
+      </div>
+      <% } else { %>
+        <div class="col-3 form-section">
+          <label for="f-startDate">Start Date</label>
+          <div class="date-container">
+            <input type="text" id="f-startDate" name="f-startDate" class="date f-promo-required"<% if(federated){ %> disabled<% } %>>
+          </div>
+        </div>
+        <div class="col-3 form-section">
+          <label for="f-endDate">End Date</label>
+          <div class="date-container">
+            <input type="text" id="f-endDate" name="f-endDate" class="date f-promo-required"<% if(federated){ %> disabled<% } %>>
+          </div>
+        </div>
+           <% if (!bcc) { %>
+        <div class="col-2 form-section">
+          <div class="label">Allow Stacking<i title="This sets if the customer is allowed to combine other promo codes with this one on the same order." class="icon icon-tool-tip x-space-s"></i></div>
+          <input checked type="checkbox" id="f-stackingActive" name="f-stackingActive" class="on-off-switch"<% if(federated){ %> disabled<% } %> />
+          <label for="f-stackingActive" class="on-off-switch-label">
+              <div class="on-off-switch-state">on</div>
+          </label>
+        </div>
+        <% } %>
+      <% } %>
+    </div>
+
+    <% if (!bcc) { %>
+    <div class="row row-spaced">
+      <div class="col-12 form-section">
+        <label for="f-promoDescription">Promotion Description On Front-End</label><i class="icon icon-tool-tip x-space-s" title="This text describes to the customer what this promotion code will provide. It should also list any restrictions, such as minimum order total."></i>
+        <input type="text" class="f-promo-required" id="f-promoDescription" name="f-promoDescription"<% if(federated){ %> disabled<% } %>>
+      </div>
+    </div>
+    <% } %>
+    <% if(bcc) { %>
+    <div class="row row-spaced">
+      <div class="col-12 form-section">
+        <label for="f-bccPromoDetail">Promotion Details</label><i class="icon icon-tool-tip x-space-s" title="BCC Promo Details"></i>
+        <input type="text" id="f-bccPromoDetail" name="f-bccPromoDetail" value="<%= bccPromoDetail %>" disabled>
+      </div>
+    </div>
+    <% } %>
+
+  </div>
+</div>
+
+
+<% if(promotionConditions && !bcc){ %>
+<div class="row row-spaced panel form-section">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-12">
+        <div class="panel-title">Promotion Conditions<%= promotionOffer ? '' : ' and Offer' %></div>
+      </div>
+    </div>
+    <div id="promotion-conditions-container">
+      <%= promotionConditions %>
+    </div>
+  </div>
+</div>
+<% } %>
+
+<% if(promotionOffer && !bcc){ %>
+<div class="row row-spaced panel form-section">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-12">
+        <div class="panel-title">Promotion Offer</div>
+      </div>
+    </div>
+
+    <div id="promotion-offer-container">
+      <div class="row row-spaced">
+        <div class="col-6 form-section">
+          <label for="f-discountType">Discount Type</label>
+          <div class="select-container">
+            <select class="f-promo-required" id="f-discountType" name="f-discountType"<% if(federated){ %> disabled<% } %>>
+              <option selected disabled hidden value="<%= discountType %>"><%= discountType %></option>
+              <option value="Dollar Off">Dollar Off</option>
+              <option value="Percentage Off">Percentage Off</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-6 form-section">
+          <label for="f-discountAmount">Discount Amount</label>
+          <div class="select-container">
+            <select class="f-promo-required" id="f-discountAmount" name="f-discountAmount"<% if(federated){ %> disabled<% } %>>
+              <option selected disabled hidden value="<%= discountAmount %>"><%= discountAmount %></option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+              <option value="25">25</option>
+              <option value="30">30</option>
+              <option value="35">35</option>
+              <option value="40">40</option>
+              <option value="45">45</option>
+              <option value="50">50</option>
+              <option value="75">75</option>
+              <option value="100">100</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+<% } %>

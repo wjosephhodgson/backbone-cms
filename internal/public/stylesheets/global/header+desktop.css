@@ -1,0 +1,69 @@
+/*
+Syntax error: Undefined mixin 'transform'.
+        on line 17 of ./stylesheets/global/header+desktop.scss, in `transform'
+        from line 17 of ./stylesheets/global/header+desktop.scss
+
+12: $navbar-width: 20em;
+13: $breakpoint1: 28.58em;
+14: 
+15: body{
+16:   min-height: 50em;
+17:   @include transform(0.5s);
+18: }
+19: 
+20: .master-header,.header-checkout{
+21:   position: relative;
+22:   width: 100%;
+
+Backtrace:
+./stylesheets/global/header+desktop.scss:17:in `transform'
+./stylesheets/global/header+desktop.scss:17
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:253:in `visit_mixin'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `map'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `map'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:7:in `visit'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/tree/root_node.rb:20:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/engine.rb:315:in `_render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/engine.rb:262:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:201:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/plugin.rb:81:in `update_stylesheets'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/plugin.rb:54:in `check_for_updates'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.14/lib/sass/plugin/rack.rb:51:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/lint.rb:49:in `_call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/lint.rb:37:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/showexceptions.rb:24:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/commonlogger.rb:33:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/chunked.rb:43:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined mixin 'transform'.\A         on line 17 of ./stylesheets/global/header+desktop.scss, in `transform'\A         from line 17 of ./stylesheets/global/header+desktop.scss\A \A 12: $navbar-width: 20em;\A 13: $breakpoint1: 28.58em;\A 14: \A 15: body{\A 16:   min-height: 50em;\A 17:   @include transform(0.5s);\A 18: }\A 19: \A 20: .master-header,.header-checkout{\A 21:   position: relative;\A 22:   width: 100%;"; }

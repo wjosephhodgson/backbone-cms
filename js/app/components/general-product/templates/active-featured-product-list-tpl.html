@@ -1,0 +1,40 @@
+<tr data-id="<%= id %>">
+	<% if(statusactive) { %>
+			<td class="center-align"><i class="icon icon-arrows icon-2x"></i></td>	
+	<% } %>
+	
+	<td class="left-align textOverflow"><%= name %></td>
+
+	<% if(images) { %>
+		<td class="left-align">
+			<% if(img) { %>
+				<img class="y-space-top-xs image-upload-sub" src="<%= img %>" id="f-image-url-<%= id %>">
+			<% } else { %>
+				<button type="button" id="f-image-url-<%= id %>" class="icon icon-btn icon-image icon-2x image-upload-sub"></button>
+			<% } %>
+		</td>
+	<% } %>
+
+	<!-- for category ID, set to true as default. -->
+	<% if(showCategoryID) { %>
+		<td><%=id%></td>
+	<% } %>
+	<!-- End of category ID -->
+
+	<!-- for status button -->
+	<% if(statusactive) { %>
+		<td class="center-align">
+			<input <%= statusactive ? 'checked' : '' %> type="checkbox"  id="<%= id %>" name="<%= id %>" class="on-off-switch"/>
+			<label for="<%= id %>" class="on-off-switch-label">
+				<div class="on-off-switch-state">on</div>
+			</label>
+		</td>
+	<% } %>
+	<!-- end of status button -->
+
+  <% if(!disabled) { %>
+	<td class="right-align">
+		<button type="button" class="icon icon-trash icon-btn icon-2x"></button>
+	</td>
+  <% } %>
+</tr>

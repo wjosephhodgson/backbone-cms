@@ -1,0 +1,152 @@
+.m-supernav{
+  position:absolute;
+  z-index:9;
+  background-color:$white;
+  box-shadow:0 0px 3px rgba(0,0,0,0.25);
+
+  .divider{
+    width:1px;
+    height:3.8em;
+  }
+}
+
+.m-supernav-item:hover{
+  .m-supernav-content{color:#000;}
+  .m-supernav-icon.icon-ask{background-position: -204px -18px;}
+  .m-supernav-icon.icon-user{background-position: -70px -16px;}
+  .icon-cart{
+    background-position: -150px 0px; color:#000;
+  }
+}
+
+.m-supernav-content{
+  color:$dark-grey;
+}
+
+.m-supernav-number:hover {
+  .m-supernav-content {
+    color:$dark-grey;
+  }
+}
+
+.m-supernav-navtrigger{
+  width:3.5em;
+  height:3.5em;
+  margin-right:0.3em;
+  position: relative;
+  z-index: 999;
+}
+
+.m-supernav-logo{
+  width:8em;
+  margin:0.8em 1em 0.2em;
+
+  svg{
+    width:100%;
+    height:2.25em;
+    fill: $pink;
+    transition-property: fill;
+    transition-duration: 0.5s;
+  }
+
+  &:hover svg{
+    fill: darken($pink, 20%);
+    transition-property: fill;
+    transition-duration: 0.5s;
+  }
+}
+
+.no-svg .m-supernav-logo{
+  background:url('../images/logo.png');
+  background-repeat:no-repeat;
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.m-supernav-right-tray{
+  position:absolute;
+  top:1.4em;
+  right:2.5em;
+  width:5em;
+
+  @include wildcard(400px){
+    right:7em;
+    width:11em;
+  }
+}
+
+
+/////
+// account
+/////
+.m-supernav-account{
+  position:relative;
+  width: auto;
+  float: right;
+}
+
+#accountTrigger, #cartTrigger{text-decoration:none;}
+
+.m-supernav-account-status{
+  float: left;
+  margin-top:-0.25em;
+  margin-left: 0.3em;
+  color:$dark-grey;
+}
+
+
+/////
+// cart
+/////
+.m-supernav-cart{
+  position:relative;
+  width:2em;
+  right:-5.5em;
+
+  @include desktop(){
+    width: 3em;
+  }
+
+  .m-supernav-content{
+    position:absolute;
+    right:0;
+    top:0;
+    display:none;
+    margin-top: -0.25em;
+  }
+
+  @include wildcard(400px){
+    width:4.1em;
+    right:-12em;
+
+    .m-supernav-content{
+      display:block;
+    }
+  }
+}
+
+.m-supernav-cart-number{
+  position:absolute;
+  top:1em;
+  left:11em;
+
+  @include mobile {
+    left: 40%;
+  }
+}
+
+
+/////////////////////////
+/////////////////////////
+/////////////////////////
+// breakpoint1
+/////////////////////////
+/////////////////////////
+/////////////////////////
+
+@media all and (min-width:$breakpoint1){
+
+}

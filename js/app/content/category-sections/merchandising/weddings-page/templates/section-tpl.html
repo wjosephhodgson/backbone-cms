@@ -1,0 +1,14 @@
+<tr class="sortable form-section" data-id="<%= id %>">
+	<td><i class="icon icon-arrows icon-2x"></i></td>
+	<td class="left-align"><%= customerName %></td>
+	<td class="left-align"><%= testimonial.substring(0,40) %>...</td>
+	<td><img id="display-image-content" class="fit-container" alt="image preview"  src="<%= imgUrl1 %>"></td>
+	<td><button type="button" class="icon icon-btn icon-edit icon-2x"></button></td>
+	<td>
+		<input <%= display ? 'checked' : '' %> type="checkbox"  id="<%= id %>" name="<%= id %>" class="on-off-switch"/>
+        <label for="<%= id %>" class="on-off-switch-label">
+        	<div class="on-off-switch-state">on</div>
+        </label>
+    </td>
+	<td><button type="button" class="icon icon-btn icon-trash icon-2x"></button></td>
+</tr>

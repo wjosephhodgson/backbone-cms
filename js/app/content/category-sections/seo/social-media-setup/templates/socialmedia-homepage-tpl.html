@@ -1,0 +1,32 @@
+
+<tr class="sortable form-section" data-id="<%= id %>">
+    <td><i class="icon icon-arrows icon-2x"></i></td>
+
+  	<td > <img id="display-image-content" class="fit-container" alt="image preview"  src="<%= imgUrl %>"> </td>
+    
+  	<td><%= ChannelName %></td>
+
+    <td class="form-section">    
+           <input type="text" id="<%= 'f-Social-Link-' + sequence %>" name="<%= 'f-Social-Link-' + sequence %> f-Social-Link" value="<%= SocialPageLink %>" class="f-Social-Link-Home"/>
+
+        </td> 
+           <td class="hide-overflow">
+
+    <div class="centered-content-container">
+
+      <input <%= SocialMedActive ? 'checked' : ''%> type="checkbox" id="<%= 'social-media-active-' + sequence %>" name="<%= 'social-media-active-' + sequence %>" class="on-off-switch SocialMedActive-switch" />
+
+          <label for="<%= 'social-media-active-' + sequence %>" class="on-off-switch-label">
+
+              <div class="on-off-switch-state">on</div>
+        </label>
+
+        </div>
+  </td>  
+      <td>
+   <%  if(Edit) { %> <button type="button" class="icon icon-btn icon-2x icon-edit"></button> <% } %>   
+    </td>   
+   <!-- Show Edit Icon on for Newly Added Social Links -->
+</tr>
+
+

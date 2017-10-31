@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= @title %></title>
+
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <% @cssAssets.each do |item| %>
+      <link rel="stylesheet" type="text/css" href="<%= item %>">
+    <% end %>
+
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <ul class="nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="<%= domain %>pattern-library/">Pattern Library</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sections<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                  <li><a href="<%= domain %>merchandising/">Merchandising</a></li>
+                  <li class="divider"></li>
+                  <li><a href="<%= domain %>more/">More</a></li>
+                  <li class="divider"></li>
+                  <li><a href="<%= domain %>other/">Other</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- .navbar-inner -->
+    </div>
+    <!-- .navbar.navbar-inverse -->
+    <header class="mast">
+      <div class="container">
+        <hgroup>
+          <h1 class="white shadowed"><%= @title %></h1>
+          <h2 class="white shadowed"><%= @desc %></h2>
+        </hgroup>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <!-- .container -->
+
+  <% @jsAssets.each do |item| %>
+    <script type="text/javascript" src="<%= item %>"></script>
+  <% end %>
+    <script type="text/javascript">
+
+    (function(jQuery){
+
+      jQuery( document ).ready( function() {
+
+        prettyPrint();
+
+      } );
+
+    }(jQuery))
+
+    </script>
+  </body>
+</html>

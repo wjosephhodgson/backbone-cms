@@ -1,0 +1,143 @@
+<!-- If type === Custom, disable field, else fields should be enabled. -->
+
+
+<form id="create-edit-checkoutMessaging" name="create-edit-checkoutMessaging">
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="clearfix section-title">
+				<h2 class="pull-left"><%= id ? "Edit " : "Add New " %> Checkout Messaging</h2>
+				<div class="btn-panel">
+					<button type="button" id="save-btn" class="btn btn-submit btn-panel pull-right">Save</button>
+					<% if(id && type != 'Teleflora') { %>
+						<button type="button" id="delete-btn" class="btn btn-cancel btn-panel pull-right ">Delete</button> 
+					
+					<% } %>
+					<button type="button" id="cancel-btn" class="btn btn-other btn-panel pull-right">Cancel</button>
+					<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Hidden Alert Message -->
+	<div class="row panel alert-panel">
+		<div class="col-12">
+			<div class="row">
+				<div class="col-1">
+					<div class="icon icon-3x icon-warning"></div>
+				</div>
+				<div class="col-11 alert-text">
+					This is a generic placeholder for error messages in eSAT. <br>
+					In the live app, this will be a real message and will be hidden by default.
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Hidden Alert Message -->
+
+	<div class="y-space-top-m">
+		Use this page to <%= id ? "edit your" : "create a new" %> checkout message. You can specify the message text, the days the message will remain on your site, and change which page the message appears on. Teleflora created messages cannot be edited. 
+	</div>
+
+	<div class="row row-spaced panel">
+		<% if(type==="Teleflora") { %>
+			<div class="row row-spaced form-section">
+				<div class="col-4 form-section">
+					<label for="f-type2">Associated Page <i title="This is the only page on which the message will appear." class="icon icon-tool-tip x-space-s"></i></label>
+					<div class="select-container">
+						<select id="f-type2" name="f-type2" disabled="">
+							<option selected hidden value="<%= AssociatedPage %>"> <%= AssociatedPage %> </option>
+							<option value="Checkout Payment Page">Checkout Payment Page</option>
+							<option value="Shopping Basket Page">Shopping Basket Page</option>
+							<option value="Checkout Delivery Page">Checkout Delivery Page</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-2">
+					<label for="checkout-messaging-active"> Status </label>
+					<input <%= CheckoutMessagingActive ? 'checked' : ''%> type="checkbox" id="<%= 'checkoutmessaging-status-active-' + id %>" name="<%= 'checkoutmessaging-status-active-' + id %>" class="on-off-switch checkoutMessagingActive-switch" />
+					<label for="<%= 'checkoutmessaging-status-active-' + id %>" class="on-off-switch-label">
+						<div class="on-off-switch-state">on</div>
+					</label>
+				</div>
+				<div class="col-3 form-section">
+					<label for="start-date">Start Date</label>
+					<div class="date-container">
+						<input type="text" id="start-date" name="start-date" class="date" value="<%= StartDate %>" disabled>
+					</div>
+				</div>
+				<div class="col-3 form-section">
+					<label for="end-date">End Date</label>
+					<div class="date-container">
+						<input type="text" id="end-date" name="end-date" class="date" value="<%= EndDate %>" disabled>
+					</div>
+				</div>
+		    </div>
+	    <% } else { %>
+			<div class="row row-spaced form-section">
+				<div class="col-4 form-section">
+					<label for="f-type2">Associated Page <i title="This is the only page on which the message will appear." class="icon icon-tool-tip x-space-s"></i></label>
+					<div class="select-container">
+						<select id="f-type2" name="f-type2">
+							<option selected hidden value="<%= AssociatedPage %>"> <%= AssociatedPage %> </option>
+							<option value="Checkout Payment Page">Checkout Payment Page</option>
+							<option value="Shopping Basket Page">Shopping Basket Page</option>
+							<option value="Checkout Delivery Page">Checkout Delivery Page</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-2">
+					<label for="checkout-messaging-active"> Status </label>
+					<input <%= CheckoutMessagingActive ? 'checked' : ''%> type="checkbox" id="<%= 'checkoutmessaging-status-active-' + id %>" name="<%= 'checkoutmessaging-status-active-' + id %>" class="on-off-switch checkoutMessagingActive-switch" />
+					<label for="<%= 'checkoutmessaging-status-active-' + id %>" class="on-off-switch-label">
+						<div class="on-off-switch-state">on</div>
+					</label>
+				</div>
+				<div class="col-3 form-section">
+					<label for="start-date">Start Date</label>
+					<div class="date-container">
+						<input type="text" id="start-date" name="start-date" class="date" value="<%= StartDate %>">
+					</div>
+				</div>
+				<div class="col-3 form-section">
+					<label for="end-date">End Date</label>
+					<div class="date-container">
+						<input type="text" id="end-date" name="end-date" class="date" value="<%= EndDate %>">
+					</div>
+				</div>
+		    </div>
+	    <% } %>
+
+		<div class="row row-spaced CheckOutEditors y-space-top-s form-section">
+			<% if (AssociatedPage === "Checkout Payment Page") { %>
+				<div class="col-12 y-space-top-xl"> 
+					<label for="f-checkout-holidaymessage-section-checkout-payment">Holiday Message</label><i title="Specify the text content for your message below." class="icon icon-tool-tip x-space-s"></i>   
+					<div id="tiny-mce-container2" class="row row-spaced panel">
+						<textarea id="f-checkout-holidaymessage-section-checkout-payment" class="size-4 tinymce f-checkout-holidaymessage-section-checkout-payment y-space-s" name="f-checkout-holidaymessage-section-checkout-payment">
+						<%= holidayMessage %></textarea>
+					</div>
+				</div>
+			<% } %>
+
+	        <% if (AssociatedPage === "Shopping Basket Page") { %>
+				<div class="col-12 y-space-top-xl"> 
+					<label for="f-checkout-holidaymessage-section-shopping-basket-page">Holiday Message  </label><i title="Specify the text content for your message below." class="icon icon-tool-tip x-space-s"></i>   
+					<div id="tiny-mce-container2" class="row row-spaced panel">
+						<textarea id="f-checkout-holidaymessage-section-shopping-basket-page" class="size-4 tinymce f-checkout-holidaymessage-section-shopping-basket-page y-space-s" name="f-checkout-holidaymessage-section-shopping-basket-page">
+						<%= holidayMessage %></textarea>
+					</div>
+				</div>
+			<% } %>
+
+	        <% if (AssociatedPage === "Checkout Delivery Page") { %>
+				<div class="col-12 y-space-top-xl"> 
+					<label for="f-checkout-holidaymessage-section-checkout-delivery">Holiday Message</label> <i title="Specify the text content for your message below." class="icon icon-tool-tip x-space-s"></i>   
+					<div id="tiny-mce-container2" class="row row-spaced panel">
+						<textarea id="f-checkout-holidaymessage-section-checkout-delivery" class="size-4 tinymce f-checkout-holidaymessage-section-checkout-delivery y-space-s" name="f-checkout-holidaymessage-section-checkout-delivery">
+						<%= holidayMessage %></textarea>
+					</div>
+				</div>
+	        <% } %>
+		</div>
+    </div><!-- Panel Div ends here -->
+</form>

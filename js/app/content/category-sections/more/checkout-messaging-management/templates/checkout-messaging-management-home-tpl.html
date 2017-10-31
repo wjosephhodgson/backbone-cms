@@ -1,0 +1,54 @@
+<form id="checkoutMessagingHome" name="checkoutMessagingHome">
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="clearfix section-title">
+				<h2 class="pull-left">Checkout Message Management</h2>
+				<div class="btn-panel">
+					<button type="button" id="add-new-message-btn" class="btn btn-submit"><i class="icon icon-add"></i>ADD NEW MESSAGE</button>
+					<button type="button" id="save-btn" class="btn btn-submit pull-right">SAVE</button>
+					<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Hidden Alert Message -->
+	<div class="row panel alert-panel">
+		<div class="col-12">
+			<div class="row">
+				<div class="col-1">
+					<div class="icon icon-3x icon-warning"></div>
+				</div>
+				<div class="col-11 alert-text">
+					This is a generic placeholder for error messages in eSAT. <br>
+					In the live app, this will be a real message and will be hidden by default.
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Hidden Alert Message -->
+
+	<div class="y-space-top-m"> 
+		Use can use this section to manage text areas throughout your site's checkout pages. You can also set date ranges on these messages if they are time sensitive. For example, you may want to leave a message up on your delivery page for a week or so if you are experiencing delivery delays due to a snow storm in your area.
+	</div>
+
+  	<div class="row row-spaced form-section"> 
+		<div class="col-12 form-section y-space-top-l">
+			<table id="checkout-table" class="table alternate">
+				<thead>
+					<tr>
+						<th class="col-4 left-align indented-l">Associated Page</th>
+						<th class="col-2 left-align">Start Date</th>
+						<th class="col-2 left-align">End Date</th>
+						<th class="col-2 center-align">Type</th>
+						<th class="col-2 center-align">Status</th>
+						<th class="col-1 center-align">Edit</th>
+						<th class="col-1 center-align">Delete</th>
+					</tr>
+				</thead>
+				<tbody id="CheckoutMessagingMangement-List"></tbody>
+			</table>
+		</div>		
+	</div>
+ <!-- Page Wrapping div row ends here -->
+</form>

@@ -1,0 +1,50 @@
+<tr data-id="<%= id %>" class="data-row">
+	<td><%= name %></td>
+	<td>
+		<div class="centered-content-container">
+			<input <%= active ? 'checked' : '' %> type="checkbox" id="f-day-status-<%= id %>" name="f-day-status-<%= id %>" class="switch on-off-switch">
+			<label for="f-day-status-<%= id %>" class="on-off-switch-label"><div class="on-off-switch-state"></div>on</label>
+		</div>
+	</td>
+	<td>
+		<div class="col-6">
+			<div class="select-container">
+				<select class="f-time-1" name="f-day-time-<%= id %>" id="f-day-time-<%= id %>">
+					<option value="1:00" <%= cutofftime == '1:00' ? 'selected' : '' %>>1:00</option>
+					<option value="1:30" <%= cutofftime == '1:30' ? 'selected' : '' %>>1:30</option>
+					<option value="2:00" <%= cutofftime == '2:00' ? 'selected' : '' %>>2:00</option>
+					<option value="2:30" <%= cutofftime == '2:30' ? 'selected' : '' %>>2:30</option>
+					<option value="3:00" <%= cutofftime == '3:00' ? 'selected' : '' %>>3:00</option>
+					<option value="3:30" <%= cutofftime == '3:30' ? 'selected' : '' %>>3:30</option>
+					<option value="4:00" <%= cutofftime == '4:00' ? 'selected' : '' %>>4:00</option>
+					<option value="4:30" <%= cutofftime == '4:30' ? 'selected' : '' %>>4:30</option>
+					<option value="5:00" <%= cutofftime == '5:00' ? 'selected' : '' %>>5:00</option>
+					<option value="5:30" <%= cutofftime == '5:30' ? 'selected' : '' %>>5:30</option>
+					<option value="6:00" <%= cutofftime == '6:00' ? 'selected' : '' %>>6:00</option>
+					<option value="6:30" <%= cutofftime == '6:30' ? 'selected' : '' %>>6:30</option>
+					<option value="7:00" <%= cutofftime == '7:00' ? 'selected' : '' %>>7:00</option>
+					<option value="7:30" <%= cutofftime == '7:30' ? 'selected' : '' %>>7:30</option>
+					<option value="8:00" <%= cutofftime == '8:00' ? 'selected' : '' %>>8:00</option>
+					<option value="8:30" <%= cutofftime == '8:30' ? 'selected' : '' %>>8:30</option>
+					<option value="9:00" <%= cutofftime == '9:00' ? 'selected' : '' %>>9:00</option>
+					<option value="9:30" <%= cutofftime == '9:30' ? 'selected' : '' %>>9:30</option>
+					<option value="10:00" <%= cutofftime == '10:00' ? 'selected' : '' %>>10:00</option>
+					<option value="10:30" <%= cutofftime == '10:30' ? 'selected' : '' %>>10:30</option>
+					<option value="11:00" <%= cutofftime == '11:00' ? 'selected' : '' %>>11:00</option>
+					<option value="11:30" <%= cutofftime == '11:30' ? 'selected' : '' %>>11:30</option>
+					<option value="12:00" <%= cutofftime == '12:00' ? 'selected' : '' %>>12:00</option>
+					<option value="12:30" <%= cutofftime == '12:30' ? 'selected' : '' %>>12:30</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="col-6">
+			<div class="select-container">
+				<select class="f-time-2" id="f-day-ampm-<%= id %>" name="f-day-ampm-<%= id %>" class="m-deliverydaystimes-timeright">
+					<option value="PM" <%= cutoffampm === 'PM' ? 'selected' : '' %>>PM</option>
+					<option value="AM" <%= cutoffampm === 'AM' ? 'selected' : '' %>>AM</option>
+				</select>
+			</div>
+		</div>
+	</td>
+</tr>

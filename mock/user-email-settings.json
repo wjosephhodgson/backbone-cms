@@ -1,0 +1,14 @@
+{
+	"merchantConfirmationActive": true,
+	"merchantConfirmationEmail": "mtetzlaff@teleflora.com",
+	"orderConfirmationActive": true,
+	"confirmationEmailHeader": "",
+	"confirmationEmailFooter": "",
+	"thankYouActive": true,
+	"welcomeActive": true,
+	"giftRemindersActive": true,
+  "featuredLayout": {
+    "id":1,
+    "active": true
+  }
+}

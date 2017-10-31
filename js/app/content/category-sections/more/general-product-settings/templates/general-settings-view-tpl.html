@@ -1,0 +1,177 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">General Product Settings</h2>
+			<div class="btn-panel">
+				<button type="button" id="cancel-btn" class="btn btn-other">Cancel</button>
+				<button type="button" id="save-btn" class="btn btn-submit pull-right">Save Changes</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row row-spaced">
+	<div class="col-12">
+		Use this page to manage settings for all your site's products.
+	</div>
+</div>
+
+
+<div class="row row-spaced">
+	<div class="col-12">
+		
+				
+		<div class="row row-spaced form-section">
+			<div class="col-4">
+				<label for="f-keepsakes">Keepsakes</label>
+				<div class="select-container">
+					<select id="f-keepsakes" name="f-keepsakes">
+					<option selected disabled hidden value="<%= keepsakes %>"><%= keepsakes %></option>
+					<option value="Add All Keepsakes">Add All Keepsakes</option>
+					<option value="Add Keepsakes I Purchased">Add Keepsakes I Purchased</option>
+					<option value="Never Add Keepsakes">Never Add Keepsakes</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="label">Everday Products</div>
+				<div class="select-container">
+					<select id="f-everydayProducts" name="f-everydayProducts">
+					<option selected disabled hidden value="<%= everydayProducts %>"><%= everydayProducts %></option>
+					<option value="Add All Everyday Products">Add All Everyday Products</option>
+					<option value="Add None">Add None</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-4">
+				<div class="label">Match Teleflora.com Pricing</div>
+				<input <%= alwaysUsePricing ? 'checked' : '' %> type="checkbox" id="f-alwaysUsePricing" name="f-alwaysUsePricing" class="on-off-switch" />
+				<label for="f-alwaysUsePricing" class="on-off-switch-label">
+				<div class="on-off-switch-state">on</div>
+				</label>
+			</div>					
+		</div>
+
+		<div class="row row-spaced panel">
+			<div class="col-12">
+				<div class="row row-spaced">
+					<div class="col-12">
+						<div class="panel-title">
+							Products Pricing
+						</div>
+					</div>
+				</div>				
+
+				<div class="row row-spaced form-section">
+					<div class="col-3">
+						<div class="label">Allow Automatic eFlorist Pricing Updates</div>
+						<input <%= allowAutomaticUpdates ? 'checked' : '' %> type="checkbox" id="f-allowAutomaticUpdates" name="f-allowAutomaticUpdates" class="on-off-switch" />
+						<label for="f-allowAutomaticUpdates" class="on-off-switch-label">
+						<div class="on-off-switch-state">on</div>
+						</label>
+					</div>
+					<div class="col-3">
+						<div class="label">Allow Automatic Group Pricing Updates</div>
+						<input <%= allowAutomaticGroupUpdates ? 'checked' : '' %> type="checkbox" id="f-allowAutomaticGroupUpdates" name="f-allowAutomaticGroupUpdates" class="on-off-switch" />
+						<label for="f-allowAutomaticGroupUpdates" class="on-off-switch-label">
+						<div class="on-off-switch-state">on</div>
+						</label>
+					</div>
+					<div class="col-3">
+						<label for="f-minPriceActive">Minimum Price for Activation</label><i class="icon icon-tool-tip x-space-s" title="You can use this field to specify your bottom price line when making updates in bulk. Depending on the other settings you have chosen, this will either deactivate any products below this price or mark them all up to match this price."></i>
+					    <input type="text" id="f-minPriceActive" name="f-minPriceActive" value="<%= minPriceActive %>">
+					</div>	
+					<div class="col-3">
+						<div class="label">Product Below Minimum Price</div>
+						<div class="select-container">
+							<select id="f-newProductMinPrice" name="f-newProductMinPrice">
+							<option selected disabled hidden value="<%= newProductMinPrice %>"><%= newProductMinPrice %></option>
+							<option value="Deactivated">Deactivated</option>
+							<option value="Marked Up">Marked Up</option>
+							</select>
+						</div>
+					</div>		
+				</div>
+
+				<div class="row row-spaced form-section">
+					<div class="col-6">
+						<button type="button" id="update-btn" class="btn btn-submit pull-left">UPDATE PRICES IN BULK</button>
+					</div>
+					<div class="col-6">
+						<button type="button" id="reset-btn" class="btn btn-other pull-left">RESET PRICES TO DEFAULT</button>
+					</div>		
+				</div>
+			</div>
+		</div>
+
+		<div id="product-price-modal"></div>
+
+		<div class="row row-spaced panel">
+			<div class="col-12">
+				<div class="row row-spaced">
+					<div class="col-12">
+						<div class="panel-title clearfix">
+							<div class="y-space-top-m pull-left">Holiday Pricing</div> 
+								<button id="reset-holiday-btn" type="button" class="btn btn-submit pull-right"><i class="icon icon-add"></i>RESET HOLIDAY PRICE SETTINGS</button>
+						</div>
+					</div>
+				</div>
+				<div class="row row-spaced">
+					<div class="col-12">
+						Holiday Pricing's start and end dates are based on delivery date.
+					</div>
+				</div>
+
+				<div class="row row-spaced">
+					<div class="col-3 form-section">
+						<div class="label"> Holiday Pricing </div>
+						<input <%= enableHolidayPricing  ? 'checked ' : '' %>type="checkbox" id="f-enableHolidayPricing" name="f-enableHolidayPricing" class="on-off-switch" />
+						<label for="f-enableHolidayPricing" class="on-off-switch-label">
+							<div class="on-off-switch-state">on</div>
+						</label>				
+					</div>
+
+					<div class="col-3 date-container form-section f-holiday-price-field">
+					 <div class="label"> Holiday Start Date </div>
+					    <input type="text" id="f-startDate" name="f-startDate" class="f-startDate" value="<%= startDate %>">
+					</div>
+					<div class="col-3 date-container form-section f-holiday-price-field">
+					<div class="label"> Holiday End Date</div>
+					    <input type="text" id="f-endDate" name="f-endDate" class="f-endDate" value="<%= endDate %>">
+					</div>	
+					<div class="col-3 form-section select-container f-holiday-price-field">
+						<div class="label">Apply Price by:</div>
+						<select name="f-holiday-type" id="f-holiday-type">
+					    	<option selected disabled hidden value="<%= holidayType %>"><%= holidayType %></option>
+					    	<option value="By Order Date">By Order Date</option>
+					    	<option value="By Delivery Date">By Delivery Date</option>
+						</select>				
+					</div>
+				</div>			
+				<div class="row row-spaced">
+					<div class="col-12 form-section f-holiday-price-field">
+						<div class="label">Holiday Price Text</div>
+						<textarea name="f-holiday-text" id="f-holiday-text" class="size-3"><%= holidayText %></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- End of Main Row -->

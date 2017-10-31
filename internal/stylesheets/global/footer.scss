@@ -1,0 +1,82 @@
+// footer css
+// table of contents
+//
+// settings
+//
+
+.m-footer{
+  padding-top:1.5em;
+  margin-top:0.5em;
+  box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.05);
+  z-index:3;
+  padding-bottom: 2em;
+  background-color: $grey;
+
+  h5{font-size:em(14px);}
+
+  p{
+    margin-bottom:1.3em;
+    font-size:1.07692307692em;
+    line-height:1em;
+  }
+
+  .full-btn{
+    @include desktop() {
+      font-size:0.9em;
+    }
+  }
+}
+
+.checkout-footer{
+  height: 13em !important;
+}
+
+.m-footer-email{
+  height: 3.045em;
+}
+
+.m-footer-email-input{
+  width:70%;
+  border-top-right-radius:0em !important;
+  border-bottom-right-radius:0em !important;
+}
+
+.m-footer-email-btn{
+  width:20%;
+  border-top-left-radius:0em !important;
+  border-bottom-left-radius:0em !important;
+  border: 1px solid $accent-grey;
+  border-left:0px !important;
+}
+.m-footer-border-bottom{
+  @include mobile() {
+    @include border-bottom;
+    margin-bottom:1em;
+    padding-bottom:1em;
+  }
+}
+
+.m-footer-top-half{
+  @include desktop() {
+    padding-bottom: 1.3em;
+    margin-bottom: 1.3em !important;
+    @include border-bottom;
+  }
+}
+
+.m-footer-label{
+  @include desktop() {
+    display:inline;
+    width:auto;
+
+    &:after{content: ":";}
+  }
+}
+
+.m-footer-c-social-list {
+  padding-top: 0.35em;
+}
+
+.oldie .m-rewards-logo-link {
+   background: url('../images/rewards_title_pink.png') no-repeat center center;
+}

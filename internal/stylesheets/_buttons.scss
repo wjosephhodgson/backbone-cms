@@ -1,0 +1,179 @@
+// Button styles
+
+/////
+// ie8-fix
+/////
+.no-svg{
+  .btn-facebook:after, .btn-minus, .btn-plus {
+    background-image: url("../images/ui-sprite.png") !important;
+  }
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  padding: 1em;
+  margin: 0 auto $padding-large;
+
+  font-size: 1em;
+  font-family:$sans-stack;
+  letter-spacing: 1px;
+  line-height: 1em;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+
+  color: white;
+  background-color: $pink;
+
+  border: 1px solid $dark-pink;
+  border-radius: $border-radius;
+
+  &:hover {
+    background-color: $dark-pink;
+    text-decoration: none;
+  }
+
+  &:active {
+    background-color: darken($dark-pink, 10%);
+    text-decoration: none;
+  }
+
+  &.full-btn {
+    max-width:100%;
+
+    @include mobile() {
+      margin-bottom: 1.5em;
+    }
+  }
+}
+
+.btn-light {
+  color: $black;
+  border-color: #e5e5e5;
+  background-color: $light-grey;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+  &:active {
+    background-color: darken(#e5e5e5, 10%);
+  }
+}
+
+.btn-facebook {
+  position: relative;
+  text-align: left;
+  border-color: #314b85;
+  background-color: $facebook;
+  padding-left: 4.5em;
+  max-width: 290px;
+
+  &:hover {
+    background-color: #314b85;
+  }
+  &:active {
+    background-color: darken(#314b85, 10%);
+  }
+
+  &:after {
+    @include sprite("../images/ui-sprite.svg", -240px, 0);
+
+    content: " ";
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 1.8em;
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+
+    border-right: 1px solid #314b85;
+    margin-left: 1em;
+  }
+}
+
+.passive-cta {
+  text-transform:uppercase;
+}
+
+.btn-submit, .btn-cancel {
+  display: block;
+  margin: 0 auto;
+  margin-top: 1.2em;
+
+  @include desktop() {
+    display: inline-block;
+    margin: 0;
+    margin-top: 1.2em;
+  }
+}
+
+.btn-cancel {
+  display: block;
+}
+
+.btn-quickview {
+  position: absolute;
+  top: 10em;
+  @include opacity(0);
+}
+
+.btn-close {
+  position:absolute;
+  right:0;
+  top:0;
+  width:1em;
+  height: 1em;
+  display:block;
+
+  background:$grey;
+  background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAIAAAACUFjqAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2tpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDowMjAzMzU0MzRFMjI2ODExOEMxNEE2MzYwODI0Q0UxNyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1NzlGMDhCN0YyMzcxMUUyQTg0REM0QzE1MDNFQTNCMiIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1NzlGMDhCNkYyMzcxMUUyQTg0REM0QzE1MDNFQTNCMiIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0NTQwNTFlOC0xODY0LTRlOTQtOGM3Yy04NGU2ZDM0YmI4NGMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MDIwMzM1NDM0RTIyNjgxMThDMTRBNjM2MDgyNENFMTciLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4fbhAMAAAAlElEQVR42mLcs3v358+fHRwdGVDBgf37eXl5mW7evFlcWLh50yZkOSAXKAiUYnj//n1+bq6SvPyihQvfgwGQAeQCBYFsBogQXAWyHEIargJZDgiY4PYZm5igMYCABe6Whro6Xz8/IBvIAJIQNgOaW9BcyrB+3To0++AqgFLM3l5eUlJSVTU1yP4GhtKXz5+BwQIQYAA27YBMFCIhwwAAAABJRU5ErkJggg==);
+  background-repeat:no-repeat;
+  background-position:center center;
+  border:1px solid $accent-grey;
+  border-radius:3px;
+
+  font-size:1.5em;
+  color:$black;
+  text-align:center;
+
+  &:hover{
+    text-decoration:none;
+  }
+}
+
+.btn-minus {
+  @include sprite("../images/ui-sprite.svg", -99px, -82px);
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  text-indent: -9999px;
+  margin-top: 10px;
+  margin-left: 5px;
+
+  &:hover {
+    background-position: -126px -82px;
+  }
+}
+.btn-plus {
+  @include sprite("../images/ui-sprite.svg", -41px, -82px);
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  text-indent: -9999px;
+  margin-top: 10px;
+
+  &:hover {
+    background-position: -68px -82px;
+  }
+}
+
+.btn-pdp {
+  display: block;
+  width: 55.0%;
+}

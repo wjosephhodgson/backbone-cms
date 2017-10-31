@@ -1,0 +1,33 @@
+.oldie {
+
+  input[type=password] {
+    font-family: arial;
+  }
+  input[type=checkbox], input[type=radio] {
+    margin-left: 1em;
+  }
+
+	.m-sympathy-list-item {
+    margin-right: 2.2%;
+    margin-left: 0;
+    &.nth-child-even {
+      margin-right: 0;
+      margin-left: 2.2%;
+    }
+
+	  &.m-sympathy-service-color-item {
+
+	   	margin-right: 4%;
+
+      &.nth-child-even {
+        margin-left: 0;
+      }
+
+      &.nth-child-4n {
+        margin-right: 0;
+      }
+	  }
+	}
+
+
+}

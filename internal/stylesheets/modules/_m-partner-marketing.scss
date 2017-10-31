@@ -1,0 +1,117 @@
+.promo-banner-pm {
+  background-image: url('../images/marketing/small-banner.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 60px;
+  position: relative;
+  text-align: center;
+}
+.miles{
+  color: $black;
+}
+.partner-footer {
+  font-size: 12px;
+}
+
+.promo-banner-pm-logo {
+  width: 100%;
+  text-align: center;
+}
+
+.m-create-account-membership-number {
+  margin-top: 10px;
+}
+
+@media screen and (min-width:961px){
+  .promo-banner-pm {
+    background-image: url('../images/marketing/AA_Banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 600px;
+    height: 60px;
+    position: relative;
+    text-align: inherit;
+  }
+  .promo-banner-pm-logo {float: right; text-align: inherit; width:auto;}
+}
+
+.m-checkout-header-container {
+  padding-top: 1em;
+  
+  .m-checkout-header-steps {
+    border-bottom:1px solid $accent-grey;
+    padding-bottom:0.5em;
+
+    .m-checkout-header-step {
+      margin-right: 1em;
+      float: left;
+
+      .m-checkout-header-step-title {
+        font-family: $serif-stack;
+        font-size: em(24px);
+        margin-left: 0.25em;
+      }
+
+      .m-checkout-header-step-circle {
+        @include border-radius(100%);
+        position:relative;
+        font-family: $sans-stack-heavy;
+        color: $white;
+        width: 1.69231em;
+        height: 1.69231em;
+        display: block;
+        float: left;
+        line-height: 175%;
+        text-align: center;
+        padding:0;
+        top:0;
+      }
+
+      &.active {
+        .m-checkout-header-step-circle {
+          background: $green;
+        }
+      }
+
+      &.inactive {
+        .m-checkout-header-step-title {
+          color: $accent-grey;
+        }
+
+        .m-checkout-header-step-circle {
+          background: $accent-grey;
+        }
+      }
+    }
+  }
+}
+.m-delivery-info-price {
+    
+    .strike{text-decoration: line-through;float:left}
+    .after-discount {clear:both;float:left}
+    
+}
+.custom-radio-label {
+    
+    .strike{text-decoration: line-through;float:left}
+    .after-discount {clear:both;float:left}
+    
+}
+#deliveryInfoForm {
+        .d-container_12.l-content{
+            
+            padding-bottom:0;
+            margin-bottom:0;
+        }
+    
+}
+
+.l-main-content-wrapper, .l-main-content-wrapper-cart {
+    background-color: #FFFFFF;
+    padding: 0 2%;
+    position: relative;
+}
+
+.m-delivery-info-price-summary .m-delivery-info-price-summary-service-fee {margin-top:0;}

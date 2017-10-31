@@ -1,0 +1,54 @@
+.m-price {
+  font-family: $sans-stack;
+  margin-left: 0.4em;
+  font-size: 13px;
+  color: $black;
+  .crossed{
+    text-decoration: line-through;
+  }
+}
+
+.m-product-price-radio, .m-price-radio {
+  font-family: $sans-stack;
+  color: $black;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 0.6667em;
+  line-height: 1.27em;
+
+  .crossed {
+    text-decoration: line-through;
+    display: block;
+  }
+
+}
+
+.m-product-price {
+  display: block;
+  font-family: $sans-stack;
+  color: $black;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.7;
+
+  .promo {
+    padding-left: 0.333em;
+  }
+
+  .crossed {
+    font-family: $sans-stack;
+    text-decoration: line-through;
+  }
+
+}
+
+.m-price-discounted {
+  color: $pink !important;
+  .crossed {
+    color: $black;
+    text-decoration: line-through !important;
+  }
+  span.promo, .m-price-promo {
+    color: $pink;
+  }
+}

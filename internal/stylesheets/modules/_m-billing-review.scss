@@ -1,0 +1,90 @@
+
+.m-billing-review-item {
+  border-bottom: 1px solid $accent-grey;
+  margin-bottom: 0;
+}
+.m-billing-review-header {
+  margin-bottom: 0;
+}
+.m-billing-review-grand-total {
+  font-family: $sans-stack-heavy;
+}
+
+.container_4 {
+  .grid_4 {
+    .m-billing-quickpay-button {
+      width: 48%;
+      max-width: 12em;
+
+      @include desktop(){
+        width: 23%;
+        max-width: 100%;
+        margin-top:0.5em;
+        margin-right:1.5em;
+      }
+    }
+  }
+}
+.m-billing-review-cc-container {
+  display: none;
+
+  @include wildcard(600px) {
+    display: block;
+  }
+}
+.m-billing-review-hr {
+  margin: 0 0 1.15385em;
+
+  @include wildcard(600px) {
+    margin: 1.15385em 0;
+  }
+}
+.m-billing-why-safe-text {
+  display: block;
+}
+.m-billing-why-safe-modal {
+  .m-billing-why-safe-modal-p {
+    margin: 1em;
+  }
+}
+.m-billing-review-h5-header {
+  margin-bottom: 0.5em;
+}
+.m-billing-review-order-details-group {
+  margin-bottom: 0.885em;
+}
+.m-billing-review-cvv {
+  margin-bottom: 0.1em;
+}
+.m-billing-review-saved-information {
+  @include mobile() {
+    margin: -0.5em 0 1em;
+  }
+}
+
+.m-billing-gift-card-container, .m-billing-promo-code-container{
+  .m-billing-gift-card-message, .m-billing-promo-code-message{
+  }
+  .m-billing-gift-card-individual, .m-billing-promo-code-individual{
+    margin: 0.5em 0 0;
+    padding: 0.5em 0 0;
+    float: left;
+    width: 100%;
+    border-top: 1px solid $accent-grey;
+    .m-billing-gift-card-individual-entry, .m-billing-promo-code-individual-entry{
+      color: #787878;
+      text-transform: uppercase;
+      font-family: "Avenir LT W01 65 Medium",Helvetica,sans-serif;
+      font-size: 0.8823529em;
+    }
+    .m-billing-gift-card-individual-value, .m-billing-promo-code-individual-value{
+      font-family: "Avenir LT W01 65 Medium",Helvetica,sans-serif;
+      font-size: 0.8823529em;
+      text-align: center;
+    }
+    .m-billing-gift-card-individual-remove, .m-billing-promo-code-individual-remove{
+      text-align: right;
+      font-size: 0.8823529em;
+    }
+  }
+}

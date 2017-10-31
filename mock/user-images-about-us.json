@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name":"About Us Image 1",
+    "url":"http://www.telefloramarketing.com/mock/aboutus-1.jpg",
+    "type":"image/jpeg",
+    "global":false
+  },
+  {
+    "id": 2,
+    "name":"About Us Image 2",
+    "url":"http://www.telefloramarketing.com/mock/aboutus-2.jpg",
+    "type":"image/jpeg",
+    "global":false
+  },
+  {
+    "id": 3,
+    "name":"About Us Image 3",
+    "url":"http://www.telefloramarketing.com/mock/aboutus-3.jpg",
+    "type":"image/jpeg",
+    "global":false
+  },
+  {
+    "id": 4,
+    "name":"About Us Image 4",
+    "url":"http://www.telefloramarketing.com/mock/aboutus-4.jpg",
+    "type":"image/jpeg",
+    "global":false
+  }
+]

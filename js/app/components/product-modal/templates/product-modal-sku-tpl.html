@@ -1,0 +1,40 @@
+<% if( type1 === 'Teleflora' ) { %>
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-4 left-align form-section">
+      <input <%= type1 === 'Teleflora' ? 'disabled' : '' %> type="text" class="f-label" id="f-label-<%= i %>" name="f-label-<%= i %>" value="<%= label %>">
+    </div>  
+    <div class="col-2 left-align form-section">
+      <div class="dollar-container left-align">
+        <input disabled type="text" id="f-sprice-<%= i %>" name="f-sprice-<%= i %>" class="f-sprice" value="<%= suggestedPrice %>">
+      </div>
+    </div>    
+    <div class="col-2 left-align form-section">
+      <div class="dollar-container left-align">
+        <input type="text" id="f-price-<%= i %>" name="f-price-<%= i %>" class="f-price" value="<%= myPrice %>">
+      </div>
+    </div>
+    <div class="col-2 left-align form-section">
+      <div class="dollar-container left-align">
+        <input type="text" id="f-holiday-<%= i %>" name="f-holiday-<%= i %>" class="f-holiday" value="<%= holidayPrice %>">
+      </div>
+    </div>    
+  </div>    
+<% } else { %>
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-4 left-align form-section">
+      <input <%= type1 === 'Teleflora' ? 'disabled' : '' %> type="text" class="f-label" id="f-label-<%= i %>" name="f-label-<%= i %>" value="<%= label %>">
+    </div>  
+    <div class="col-3 left-align form-section">
+      <div class="dollar-container left-align">
+        <input type="text" id="f-price-<%= i %>" name="f-price-<%= i %>" class="f-price" value="<%= myPrice %>">
+      </div>
+    </div>
+    <div class="col-3 left-align form-section">
+      <div class="dollar-container left-align">
+        <input type="text" id="f-holiday-<%= i %>" name="f-holiday-<%= i %>" class="f-holiday" value="<%= holidayPrice %>">
+      </div>
+    </div>    
+  </div>    
+<% } %>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Site Lookup</title>
+	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet" href="jquery.dynatable.css">
+
+	<script src="../js/vendor/jquery.js"></script>
+	<script src="../js/vendor/jquery-datatables.js"></script>
+	<script src="../js/vendor/jquery-validate-base.js"></script>
+	<script src="lookup.js"></script>
+</head>
+<body>
+
+
+	<div id="login" class="full-screen">
+		<section id="lookup-box">
+			<h1 class="logo-e main-title">Welcome to <span class="logo-sat"><img src="/images/esatlogo.png"></span></h1>
+			<div class="row row-spaced">
+				<div class="col-6 left-align">
+					<h2 class="section-title">
+						Site Lookup
+					</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus facere necessitatibus repudiandae, porro saepe fugit provident.</p>
+					<form id="f-site-lookup" name="f-site-lookup">
+						<div class="form-section">
+							<label for="f-tfid">Teleflora ID:</label>
+							<input type="text" id="f-tfid" name="f-tfid" maxlength="8">
+						</div>
+						<div class="form-section">
+						     <br>
+							<label for="f-name">Site Name:</label>
+							<input type="text" id="f-name" name="f-name">
+						</div>
+						<div class="form-section">
+							<label for="f-url">URL:</label>
+							<input type="text" id="f-url" name="f-url">
+						</div>
+						<div class="form-section">
+							<label for="f-vendorid">Site ID:</label>
+							<input type="text" id="f-vendorid" name="f-vendorid">
+						</div>
+						<div class="form-section">
+							<label for="f-group">Group:</label>
+							<input type="text" id="f-group" name="f-group">
+						</div>																		
+						<div class="center-align y-space-s"><button class="btn btn-submit" id="btn-search" type="button">Search</button></div>
+					</form>
+
+				</div>
+
+				<div class="col-6 left-align">
+					<table id="site-table">
+						<thead>
+							<th>id</th>
+							<th>tfid</th>
+							<th>name</th>
+							<th>url</th>
+							<th>vendorid</th>
+							<th>group</th>		
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+
+<!-- Hidden Alert Message -->
+
+<div id="err-alert-panel" class="row panel alert-panel hidden">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-10 alert-text">
+                     At least one input must be provided
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- Hidden Alert Message -->
+
+			<div style="text-align: center; margin-top: 35px;"> 
+				<a href="enter-id.html"><button type="button" id="create-site-btn" class="btn btn-submit btn-shadow">Create Site</button></a>
+		    </div>
+	    </section>
+	</div>
+	<footer id="footer" class="row">
+		<div class="relative">
+			<div class="container">
+				<div class="pull-left">
+					Need Help? 866.983.3992 | eFlorist@teleflora.com
+				</div>
+				<div class="pull-right">
+					<img src="/images/myteleflora.png" alt="">
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

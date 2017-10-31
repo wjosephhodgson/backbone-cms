@@ -1,0 +1,292 @@
+.not-logged-in {
+  .show-on-login {
+    display: none;
+  }
+  .hide-on-login {
+    display: block;
+  }
+}
+
+.logged-in {
+  .show-on-login {
+    display: block;
+  }
+  .hide-on-login {
+    display: none;
+  }
+}
+
+.m-delivery-form {
+  #salutation {
+    margin-left: 0;
+  }
+}
+
+.m-delivery-info-form-content {
+  @include mobile {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+}
+
+.m-delivery-info-price-summary {
+  .m-delivery-info-price-summary-service-fee {
+    margin-top: 1em;
+  }
+  label {
+    margin-bottom: 1em;
+  }
+  .m-delivery-info-price {
+    color: #242424;
+  }
+}
+
+
+.m-delivery-info-item {
+  border: 1px solid $accent-grey;
+
+  div {
+    border: none;
+  }
+
+  .m-delivery-info-item-image {
+    @include desktop() {
+      width: 160px;
+      height: 200px;
+    }
+  }
+
+  .m-shopping-cart-item-header-content {
+
+      .container_4 {
+        width: 100% !important;
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+        padding: 0 0.4em;
+      }
+    .m-shopping-cart-item-header-number{
+      color: $black;
+      @include desktop {
+      }
+      margin-left: 0;
+    }
+
+    .m-shopping-cart-item-header-hide {
+      color: $black;
+      font-size: em(14px);
+      @include desktop {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .m-shopping-cart-item-header {
+    border: none;
+    border-bottom: 1px solid $accent-grey;
+  }
+
+  .m-delivery-info-login-message {
+    border-bottom: 1px solid $accent-grey;
+    padding-bottom: 0.5em;
+    margin-bottom: 1.5em;
+  }
+
+  .m-delivery-info-message {
+    padding: 1.0em 1.5em;
+    border: 1px dotted $dark-grey;
+
+    .m-delivery-info-message-title {
+      margin-bottom: 1em;
+    }
+
+    label {
+      margin-bottom: 0;
+    }
+
+    p{
+      font-size: 1.0769230769231em;
+      margin-bottom: 1em;
+      line-height: 1.21428571428571em;
+    }
+  }
+
+  .m-delivery-info-florist-selection{
+    padding: 1.5em 1.0em;
+    border-top: 1px solid $accent-grey;
+
+    &.closed {
+      display: none;
+    }
+
+    .m-delivery-info-florist-selection-list {
+      padding-top: 1.5em;
+      @include desktop() {
+        margin-bottom: 1em;
+      }
+    }
+
+    .m-florist-personal-selection {
+      position: relative;
+      bottom:  11px;
+      @include mobile() {
+        bottom: 45px;
+      }
+    }
+
+    .m-florist-selection-radio {
+      margin-bottom: 1em;
+      @include mobile() {
+        width: 293px;
+        display: inline-block;
+      }
+    }
+    .m-delivery-info-custom-radio-us-choose{
+      border: 1px dotted $dark-grey;
+      padding-top: 0.7em;
+      padding-bottom: 0.8em;
+      margin-left: -0.3em;
+      padding-left: 2.6em;
+      margin-right: 0px;
+      @include mobile() {
+        width: 90%;
+      }
+    }
+    .custom-radio-label.m-delivery-info-custom-radio-us-choose:before {
+      top: 8px;
+      left: 4px;
+    }
+  }
+
+  .m-delivery-info-item-footer {
+    padding: 1.5em;
+    border-top: 1px solid $accent-grey;
+
+    &.empty {
+      height: 0;
+      padding: 0;
+      border: none;
+
+    }
+
+    .custom-checkbox {
+      margin-bottom: 0;
+
+      label {
+        margin-bottom: 0;
+      }
+    }
+
+    .btn-container {
+      margin-top: 1.5em;
+
+      @include mobile {
+        margin-top: 2em;
+        margin-bottom: 1.5em;
+      }
+    }
+
+    @include mobile {
+      .btn-container {
+        width: 100%;
+        text-align: center;
+        .next {
+          display: inline;
+          margin: 1em auto;
+          max-width: 260px;
+        }
+      }
+    }
+
+    .btn {
+      margin-bottom: 0;
+      @include desktop {
+        margin: 0;
+        max-width: 250px;
+      }
+    }
+  }
+}
+
+.m-shopping-cart-delivery-info {
+  .special-instructions {
+    height: 70px;
+  }
+}
+
+.m-shopping-cart-note-info {
+  .your-message-input-note {
+    margin-top: -0.25em;
+  }
+  .your-message {
+    height: 70px;
+  }
+}
+
+.m-delivery-info-header {
+  .l-content-delivery-info {
+    @include desktop {
+      margin-top: 0;
+
+      .m-breadcrumbs {
+        margin-top: -1em;
+      }
+    }
+  }
+}
+
+.m-delivery-info-grand-total-container {
+  margin-top: 2em !important;
+  border-bottom: 1px solid $accent-grey;
+  padding-bottom: 1em;
+
+  .m-delivery-info-grand-total-info-container {
+    width: 100%;
+    @include desktop() {
+      width: 380px !important;
+    }
+    float: right;
+  }
+  .m-delivery-info-grand-total-savings-price {
+    font-family: $sans-stack;
+  }
+  .m-delivery-info-grand-total-total-price {
+    color: $black;
+    font-family: $sans-stack-heavy;
+  }
+}
+
+.m-shopping-cart-delivery-info-footer {
+  .btn {
+    @include desktop {
+      float: right;
+    }
+  }
+} 
+.m-delivery-info-custom-checkbox-label {
+  margin-right: 0 !important;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+$breakpoint-tablet: 670px;
+// $breakpoint-pre-tablet: 58.461538462em;
+
+/////////////////////////
+// breakpoint1
+/////////////////////////
+
+// @media all and (min-width:$breakpoint-tablet) {
+//   //for things bigger than phone -> tablet + desktop
+
+// }
+
+// @media all and (min-width:$breakpoint-pre-tablet) {
+//   //for things  bigger than tablet -> desktop
+// }
+
+@media all and (max-width:$breakpoint-tablet) {
+  //for things smaller than tablet -> phone
+  .m-florist-personal-selection {
+    bottom: 4px !important;
+  }
+}

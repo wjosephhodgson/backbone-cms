@@ -1,0 +1,232 @@
+.m-account-header, .m-account-subheader {
+  font-size: 1.846em; //24px
+  padding-bottom: 1em; //16px
+  margin-bottom: 1.15em;
+  border-bottom: 1px solid $accent-grey;
+  text-align: center;
+}
+
+.m-account-header {
+  //margin-top: 1.5em;
+}
+
+.m-account-subheader {
+  @include desktop() {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border: none;
+    text-align: left;
+    padding-bottom: 0.6em;
+  }
+
+  @include mobile() {
+    padding-top: 0.2em;
+  }
+}
+
+.m-account-divider-header {
+  font-size: 1.385em;
+  /* padding: 0.5em 0.6em; */
+  margin-top: $padding-medium;
+  margin-bottom: 1em;
+  color: $white;
+  background-color: $green;
+
+  &.green {
+    background-color: $dark-green;
+  }
+
+  .m-account-divider-header-number {
+    font-size: 0.9em;
+    display: inline-block;
+    padding: 0.5em $padding-medium+0.2em 0.5em $padding-medium+0.2em;
+    border-right: 1px solid $light-grey;
+  }
+
+  .m-account-divider-header-title {
+    display: inline-block;
+    padding-left: $padding-medium;
+
+
+    &.no-numbers{
+      padding: 0.5em $padding-medium+0.2em 0.5em $padding-medium+0.2em;
+    }
+  }
+}
+
+.m-account-description {
+  max-width: 40em;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+
+.m-account-sidebar {
+  text-align: left;
+}
+
+.m-account-text {
+  margin-top: -0.5em;
+  margin-bottom: 1.5em;
+  text-align: left;
+}
+
+.m-account-form {
+  text-align: left;
+}
+
+.m-account-mobile-back-button {
+  max-width: 100%;
+  text-align: left;
+  position: relative;
+  margin-top: 7px;
+  font-size: 1em;
+  font-family: $sans-stack;
+  line-height: 1.1em;
+  display: block;
+  padding: 1em;
+  border-bottom: 1px solid $light-grey;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.m-account-pw-instructions {
+  margin-top: -0.4em;
+  padding-bottom: 0.3em;
+  text-align: left;
+  line-height: 1em;
+  margin-bottom: 1.2em;
+  font-size: 1.07692307692308em !important;
+
+  @include desktop() {
+    text-align: left;
+  }
+}
+
+.m-account-or {
+  font-family: $sans-stack-heavy;
+  font-size: 0.769em;
+  color: $dark-grey;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.2em;
+
+  &:before, &:after {
+    width: 46%;
+    margin-top: 10px;
+    height: 1px;
+    background-color: $accent-grey;
+    content: " ";
+  }
+
+  &:before {
+    float: left;
+    //margin-right: 3%;
+  }
+
+  &:after {
+    float: right;
+  }
+}
+
+.m-account-expiration-date {
+  max-width: 11.25em;
+}
+
+//temp-fixes
+.below-input {
+  margin-top: -1.6em;
+  margin-bottom: 1.4em;
+  display: block;
+}
+.label-next-to-icon {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 1em;
+  bottom: 0.3em;
+  left: 0.3em;
+}
+.required {
+  margin-bottom: -0.6em;
+  margin-top: -0.8em;
+  font-size: 1.07692307692308em;
+  line-height: 1.077em;
+}
+
+
+
+/////
+// .m-create-account
+/////
+@import "./account/create-account";
+
+/////
+// .m-express-checkout
+/////
+@import "./account/express-checkout";
+
+/////
+// .m-order-history
+/////
+@import "./account/order-history";
+
+/////
+// .m-order-detail
+/////
+@import "./account/order-detail";
+
+/////
+// .m-info
+/////
+@import "./account/info";
+
+/////
+// .m-login
+/////
+@import "./account/login";
+
+/////
+// .m-signup
+/////
+@import "./account/signup";
+
+/////
+// .m-deleted-account
+/////
+@import "./account/deleted-account";
+
+/////
+// .m-password
+/////
+@import "./account/password";
+
+/////
+// .m-password-confirm
+/////
+@import "./account/password-Confirmation";
+
+/////
+// .m-reminders
+/////
+@import "./account/reminders";
+
+/////
+// .m-new-reminders
+/////
+@import "./account/new-reminders";
+
+/////
+// .m-address-book
+/////
+@import "./account/address-book";
+
+/////
+// .m-subscription
+/////
+@import "./account/subscription";
+
+/////
+// .m-log-out
+/////
+@import "./account/logout";

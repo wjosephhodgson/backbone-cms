@@ -1,0 +1,86 @@
+<div class="row row-spaced x-space-s left-align">
+    <div class="row form-section">
+    	<div class="col-12">
+        	<div class="clearfix section-title">
+            	<h2 class="pull-left" >Edit Mega Menu Content</h2>
+		    	<button type="button" id="cancel-btn" class="btn btn-other btn-panel pull-right">Cancel</button>
+            	<button type="button" id="save-btn" class="btn btn-submit btn-panel pull-right"> Save</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+    		</div>
+      	</div>
+    </div>
+
+  	<div class="row">
+		<div class="col-12" >
+			<h4 class="pull-left">Edit Content of HTML block in eSAT mega menu</h4>		 
+		</div>
+	</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+
+ <div class="row row-spaced form-section">
+
+       <div class="col-2 form-section">
+			<div class="label"> Status </div>
+			
+
+			<input <%= MegaMenuActive ? 'checked' : '' %> type="checkbox" id="f-create-edit-MegaMenu-Active" name="f-create-edit-MegaMenu-Active" class="on-off-switch"/>
+
+			<label for="f-create-edit-MegaMenu-Active" class="on-off-switch-label">
+			    <div class="on-off-switch-state">on</div>
+			</label>
+         </div>
+        <div class="col-5 form-section"> 
+	    	<label for="f-AssociatedMenu-name"> Associated Menu Section</label>
+
+			<input id="f-AssociatedMenu-name" name="f-AssociatedMenu-name" type="text" value="<%= MegaMenuAssociatedSection %>" disabled />
+		  </div>
+
+          
+	    <div class="col-5 form-section">
+	        <label for="f-blocktitle-name"> Block Title in the Menu <i title="???" class="icon icon-tool-tip"></i>
+			</label>
+
+            <input id="f-blocktitle-name" name="f-blocktitle-name" type="text" value="<%= MegaMenuBlockTitle %>" />	
+
+     </div>
+
+
+	</div>		
+
+
+<div class="row row-spaced">
+			<div class="col-5 pull-left form-section">
+				<label for="f-megaMenu-page-content" class="pull-left"> Edit HTML Block </label>
+				<i title="Edit or Create a Page Content" class="icon icon-tool-tip pull-left" style="position: relative;"></i>
+			</div>
+	</div>
+
+<div class="row form-section" >
+		<div class="col-12 form-section">
+
+			<textarea name="f-megaMenu-page-content" id="f-megaMenu-page-content" class="size-2 tinymce" ><%= MegaMenuBlockContent %></textarea>
+ 
+	     </div>
+
+	</div>
+
+
+</div> <!-- Mega Memu ends here -->

@@ -1,0 +1,56 @@
+<div>
+	<% for(var i = 0, j = categories.length; i < j; ++i) { %>
+		<span class="nav-group">
+			<div id="<%= categories[i].id %>" class="nav-title"><%= categories[i].name %></div>
+			<div class="nav-body">
+				<div class="clearfix">
+					<div class="clearfix">
+						<div class="col-12">
+							<div class="nav-title-row clearfix">
+								<% for (var k = 0;  k < 3; ++k) { 
+									if (categories[i].subCategories[k]) { %>
+										<div class="col-3 no-padding">
+										<div class="nav-sub-title"><i class="icon <%= categories[i].subCategories[k].iconClass %> icon-prefix"></i><%= categories[i].subCategories[k].name %></div>
+										</div>
+									<% } else { %>
+										<div class="col-3 no-padding">
+											<div class="nav-sub-title"></div>
+										</div>
+									<% } %>
+								<% } %>
+
+								<div class="col-3 no-padding pull-right">
+									<div class="nav-sub-title"><i class="icon icon-question-circle icon-prefix"></i>Did You Know?</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-12">
+							<% for (var k = 0;  k < 3; ++k) { 
+								if (categories[i].subCategories[k]) { %>
+									<div class="col-3 no-padding">
+									<ul class="nav-links">
+									<% for (var m = 0, n = categories[i].subCategories[k].sections.length; m < n; ++m ) { %>
+											<li><a href="<%= categories[i].baseUrl + categories[i].subCategories[k].sections[m].url %>"><%= categories[i].subCategories[k].sections[m].name %></a></li>
+									<% } %>
+									</ul>
+									</div>
+								<% } else { %>
+									<div class="col-3 no-padding"></div>
+								<% } %>
+							<% } %>
+
+							<div class="col-3 no-padding pull-right">
+								<img src="http://placekitten.com/g/200/300" class="y-space-s fit-container">
+							</div>
+						</div>
+					</div>
+						
+					
+				</div>
+			</div>
+		</span>
+	<% } %>
+</div>

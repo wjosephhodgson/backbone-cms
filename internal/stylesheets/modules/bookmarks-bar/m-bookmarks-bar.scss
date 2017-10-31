@@ -1,0 +1,97 @@
+@import "../../mixins";
+@import "../../settings";
+@import "../../universal";
+
+$bookmarks-height: 28.5em;
+
+.m-bookmarks-bar{
+  position:fixed;
+  right:0;
+  left:0;
+  bottom: -28.7em;
+
+  margin-right:0%;
+
+  z-index:999;
+
+  @include transition(bottom, 0.25s);
+
+  .m-product-mini{
+    position:relative;
+    overflow:hidden;
+
+    @include transition(bottom, 0.25s);
+  }
+
+  @include desktop(){
+    bottom:-($bookmarks-height);
+  }
+}
+
+.m-bookmarks-bar-nav{
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+
+  padding:0.5em;
+
+  border-top:1px solid $accent-grey;
+  border-bottom:1px solid $accent-grey;
+  background-color:$grey;
+}
+
+#booksCaro {
+  width: 85%;
+  margin: 0 auto;
+
+  @include desktop() {
+    width: 92%;
+  }
+
+   .flex-direction-nav .flex-prev {
+    left: -3em !important;
+    top: 12em;
+  }
+
+  .flex-direction-nav .flex-next {
+    right: -3em !important;
+    top: 12em;
+    text-align: left;
+  }
+
+  .flex-direction-nav a {
+    position: absolute !important;
+  }
+
+  .flex-control-paging {
+    bottom: -1em;
+  }
+}
+
+#bookmarksContent{
+  padding-top: 3.5em;
+  height: 28.5em;
+  background-color: $white;
+}
+
+.is-bookmarks-ready .m-bookmarks-bar{
+  bottom: -25.7em;
+}
+
+.is-bookmarks-expanded .m-bookmarks-bar{
+  bottom:0;
+}
+
+.is-bookmark-removed.m-product-mini{
+  bottom:-($bookmarks-height);
+}
+.is-bookmark-added.m-product-mini{
+  bottom:-($bookmarks-height);
+}
+
+.bookmark-added-li {
+  //width: 0 !important;
+}
+
+#bookmarksBar .m-product-mini p{display:none;}

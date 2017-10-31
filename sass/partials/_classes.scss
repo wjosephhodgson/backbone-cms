@@ -1,0 +1,333 @@
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.pull-left {
+    float: left !important;
+}
+
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.hidden-alt {
+    display: none;
+}
+
+.no-click {
+    cursor: default;
+}
+
+.center-align {
+    text-align: center;
+}
+
+.left-align {
+    text-align: left !important;
+}
+
+.right-align {
+    text-align: right !important;
+}
+
+.title {
+    margin: 0;
+    margin-bottom: $space-s;
+}
+
+.padded-s {
+    padding: $space-s;
+}
+
+.padded-m {
+    padding: $space-m;
+}
+
+.padded-l {
+    padding: $space-l;
+}
+
+.no-margin {
+    margin: 0 !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+.no-border {
+    border: 0 !important;
+}
+
+.fit-container-height {
+    max-height: 100%;
+}
+
+.fit-container-width {
+    max-width: 100%;
+}
+
+.fit-container {
+    @extend .fit-container-height;
+    @extend .fit-container-width;
+}
+
+.fill-container-height {
+    height: 100%;
+}
+
+.fill-container-width {
+    width: 100%;
+}
+
+.fill-container {
+    @extend .fill-container-height;
+    @extend .fill-container-width;
+}
+
+.bottom-overlay {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+}
+
+.hide-overflow {
+    overflow: hidden;
+}
+
+.show-overflow {
+    overflow: visible;
+}
+
+.no-mobile {
+    @include break-mobile() {
+        display: none !important;
+    }
+}
+
+.no-desktop {
+    @include break-desktop() {
+        display: none !important;
+    }
+}
+
+.text-2x {
+    font-size: 2em;
+}
+
+.x-space-s {
+    margin-left: $space-s !important;
+    margin-right: $space-s !important;
+}
+.x-space-m {
+    margin-left: $space-m !important;
+    margin-right: $space-m !important;
+}
+.left-offset-xs {
+    margin-left: $space-xs !important;
+}
+.left-offset-s {
+    margin-left: $space-s !important;
+}
+.left-offset-m {
+    margin-left: $space-m !important;
+}
+.left-offset-l {
+    margin-left: $space-l !important;
+}
+.left-pad-xs {
+    padding-left: $space-xs !important;
+}
+.left-pad-s {
+    padding-left: $space-s !important;
+}
+.left-pad-m {
+    padding-left: $space-m !important;
+}
+.left-pad-l {
+    padding-left: $space-l !important;
+}
+.x-pad-s {
+    padding: 0px $space-s;
+}
+.x-pad-m {
+    padding: 0px $space-m;
+}
+.x-pad-l {
+    padding: 0px $space-l;
+}
+.x-pad-xl {
+    padding: 0px $space-xl;
+}
+.y-space-s {
+    margin-top: $space-s !important;
+    margin-bottom: $space-s !important;
+}
+
+.y-space-top-xxs {
+    margin-top: $space-xxs !important;
+}
+
+.y-space-top-xs {
+    margin-top: $space-xs !important;
+}
+
+.y-space-top-s {
+    margin-top: $space-s !important;
+}
+
+.y-space-top-m {
+    margin-top: $space-m !important;
+}
+
+.y-space-top-nm {
+    margin-top: -$space-m !important;
+}
+
+.y-space-top-l {
+    margin-top: $space-l !important;
+}
+
+.y-space-top-ll {
+    margin-top: $space-ll !important;   
+}
+
+.y-space-top-xl {
+    margin-top: $space-xl !important;
+}
+
+.y-space-top-btn {
+    margin-top: 27px !important;
+    /* this allows buttons to align properly with input fields that have labels on the same row */
+}
+
+.y-space-bottom-s {
+    margin-bottom: $space-s !important;
+}
+
+.y-space-bottom-m {
+    margin-bottom: $space-m !important;
+}
+
+.y-space-bottom-l {
+    margin-bottom: $space-m !important;
+}
+
+.y-space-bottom-xl {
+    margin-bottom: $space-m !important;
+}
+
+.y-space-bottom-xxl {
+    margin-bottom: $space-m !important;
+}
+.top-offset-s {
+    margin-top: -$space-s !important;
+}
+
+.top-offset-m {
+    margin-top: -$space-m !important;
+}
+
+.font-size-xs {
+    font-size: $font-size-xs;
+}
+
+.font-size-s {
+    font-size: $font-size-s;
+}
+
+.font-size-m {
+    font-size: $font-size-m;
+}
+
+.font-size-l {
+    font-size: $font-size-l;
+}
+
+.font-size-xl {
+    font-size: $font-size-xl;
+}
+
+.font-size-xxl {
+    font-size: $font-size-xxl;
+}
+
+.x-y-space-s {
+    @extend .x-space-s;
+    @extend .y-space-s;
+}
+
+.centered-content-container {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.label-row {
+    position: relative;
+    min-height: 1em;
+
+    & > [class^="col"] {
+        position: static;
+    }
+
+    & label {
+        position: absolute;
+        bottom: 0;
+        width: inherit;
+    }
+}
+
+.v-center {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.v-center-helper {
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.bordered {
+    border: 1px solid $color-border-2;
+    min-height: 1em;
+}
+
+.wrap-text {
+    word-wrap: break-word;
+}
+
+img.fit-container {
+    width: 100%
+}

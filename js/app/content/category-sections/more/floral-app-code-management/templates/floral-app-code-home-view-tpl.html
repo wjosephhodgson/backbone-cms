@@ -1,0 +1,75 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Floral App Code Management</h2>
+			<div class="btn-panel">
+				<button type="button" id="save-btn" class="btn btn-submit pull-right">Save</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row row-spaced">
+	<div class="col-12">
+		<button type="button" id="new-btn" class="btn btn-submit pull-left">Add New Code</button>
+		<button type="button" id="bulk-btn" class="x-space-m btn btn-submit pull-left">Bulk Upload</button>
+		<button type="button" id="download-btn" class="btn btn-submit pull-left">Export</button>
+	</div>
+</div>
+
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="panel-title">Search for an Existing Code</div>
+	</div>
+</div>
+
+<div class="row row-spaced form-section">
+	<div class="col-4">
+		<label for="f-siteID-search">Search by Site ID</label><i class="icon icon-tool-tip x-space-s" title="Search for a Floral App code by the ID of the site associated with it."></i>
+		<div class="search-container">
+			<input type="text" id="f-siteID-search" name="f-siteID-search">
+		</div>
+	</div>		
+
+	<div class="col-4">
+		<label for="f-floralCode-search">Search by Floral Code</label><i class="icon icon-tool-tip x-space-s" title="Search for a Floral App code using the unique Floral Code used by Floral App."></i>
+		<div class="search-container">
+			<input type="text" id="f-floralCode-search" name="f-floralCode-search">
+		</div>
+	</div>	
+</div>
+
+<div class="row row-spaced">
+	<div class="col-12">
+	<table id="code-table" class="table alternate">
+		<thead>
+			<tr>
+				<th class="left-align">Site ID</th>
+				<th class="left-align">Floral Code</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+		<tbody id="code-list"></tbody>
+	</table>
+	</div>
+</div>
+
+<div id="create-edit-modal"></div>
+<div id="bulk-modal"></div>

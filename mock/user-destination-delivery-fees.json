@@ -1,0 +1,240 @@
+[
+	{
+		"country": "United States",
+		"state": "California",
+		"conditionType":"City",
+		"conditionValue":"Beverly Hills, CA",
+		"city": "Beverly Hills",
+		"deliveryFee":"5.00",
+		"active": true,
+		"id": 1
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90001",
+		"zip": "90001",
+		"deliveryFee":"11.00",
+		"active": true,
+		"id": 2
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90001",
+		"zip": "90001",
+		"deliveryFee":"11.00",
+		"active": true,
+		"id": 3
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90001",
+		"zip": "90001",
+		"deliveryFee":"11.00",
+		"active": true,
+		"id": 4
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90001",
+		"zip": "90001",
+		"deliveryFee":"11.00",
+		"active": true,
+		"id": 5
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90001",
+		"zip": "90001",
+		"deliveryFee":"11.00",
+		"active": true,
+		"id": 6
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90001",
+		"zip": "90001",
+		"deliveryFee":"11.00",
+		"active": true,
+		"id": 7
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90001",
+		"zip": "90001",
+		"deliveryFee":"11.00",
+		"active": true,
+		"id": 8
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90001",
+		"zip": "90001",
+		"deliveryFee":"11.00",
+		"active": true,
+		"id": 9
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90001",
+		"zip": "90001",
+		"deliveryFee":"11.00",
+		"active": true,
+		"id": 10
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90001",
+		"zip": "90001",
+		"deliveryFee":"11.00",
+		"active": true,
+		"id": 11
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90001",
+		"zip": "90001",
+		"deliveryFee":"11.00",
+		"active": true,
+		"id": 12
+	},
+	{
+		"conditionType":"Facility Name",
+		"conditionValue":"XYZ Center",
+		"deliveryFee":"15.00",
+		"active": true,
+		"id": 13
+	},
+	{
+		"conditionType":"Facility Name",
+		"conditionValue":"ABC Hospital",
+		"deliveryFee":"19.00",
+		"active": true,
+		"id": 14
+	},
+	{
+		"conditionType":"Facility Name",
+		"conditionValue":"EFD Funeral",
+		"deliveryFee":"25.00",
+		"active": true,
+		"id": 15
+	},
+	{
+		"conditionType":"City",
+		"conditionValue":"Los Angeles, CA",
+		"city": "Los Angeles",
+		"state": "CA",
+		"country": "United States",
+		"deliveryFee":"500.00",
+		"active": true,
+		"id": 16
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90064",
+		"zip": "90064",
+		"deliveryFee":"8.00",
+		"active": true,
+		"id": 17
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90064",
+		"zip": "90064",
+		"deliveryFee":"8.00",
+		"active": true,
+		"id": 18
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90064",
+		"zip": "90064",
+		"deliveryFee":"8.00",
+		"active": true,
+		"id": 19
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90064",
+		"zip": "90064",
+		"deliveryFee":"8.00",
+		"active": true,
+		"id": 20
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90064",
+		"zip": "90064",
+		"deliveryFee":"8.00",
+		"active": true,
+		"id": 21
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90064",
+		"zip": "90064",
+		"deliveryFee":"8.00",
+		"active": true,
+		"id": 22
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90064",
+		"zip": "90064",
+		"deliveryFee":"8.00",
+		"active": true,
+		"id": 23
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90064",
+		"zip": "90064",
+		"deliveryFee":"8.00",
+		"active": true,
+		"id": 24
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90064",
+		"zip": "90064",
+		"deliveryFee":"8.00",
+		"active": true,
+		"id": 25
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90064",
+		"zip": "90064",
+		"deliveryFee":"8.00",
+		"active": true,
+		"id": 26
+	},
+	{
+		"conditionType":"Zip Code",
+		"conditionValue":"90064",
+		"zip": "90064",
+		"deliveryFee":"8.00",
+		"active": true,
+		"id": 27
+	},
+	{
+		"conditionType":"Facility Name",
+		"conditionValue":"QQQ Center",
+		"deliveryFee":"5.00",
+		"active": true,
+		"id": 28
+	},
+	{
+		"conditionType":"Facility Name",
+		"conditionValue":"AAA Hospital",
+		"deliveryFee":"10.00",
+		"active": true,
+		"id": 29
+	},
+	{
+		"conditionType":"Facility Name",
+		"conditionValue":"SOS Funeral",
+		"deliveryFee":"15.00",
+		"active": true,
+		"id": 30
+	}
+]

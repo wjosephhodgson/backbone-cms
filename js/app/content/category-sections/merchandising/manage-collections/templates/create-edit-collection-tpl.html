@@ -1,0 +1,267 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="section-title">
+			<h2 class="pull-left"><%= id ? 'Edit ' : 'Add ' %><%= parent === 0 ? 'Collection' : 'Subcollection' %></h2>
+			<div class="btn-panel">
+				<button type="button" id="cancel-btn" class="btn btn-other">Cancel</button>
+				<% if(collectionType !== 'Teleflora' && id) { %>
+				<button type="button" id="delete-btn" class="btn btn-cancel">Delete</button>
+				<% } %>
+				<button id="save-btn" class="btn btn-submit"><% if(!id) { %><i class="icon icon-add icon-lg"></i><% } %>Save</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row row-spaced">
+	<div class="col-12">
+		Here you can <%= id ? 'edit a' : 'add a' %> collection. These are groups of products that can be used for marketing purposes across your site. 
+	</div>
+</div>
+<form id="create-edit-form">
+<div class="row row-spaced form-section panel">
+	<div class="row row-spaced">
+		<div class="form-section col-5">
+			<label for="f-name">Name</label><i class="icon icon-tool-tip x-space-s" title="This is the name of the collection, shown throughout the site."></i>
+			<% if(collectionType !== 'Teleflora') { %>
+				<input type="text" id="f-name" name="f-name" value="<%= name %>" required>
+			<% } else { %>
+				<input type="text" id="f-name" name="f-name" value="<%= name %>">
+			<% } %>
+		</div>
+
+		<div class="col-2">
+			<div class="label">Status</div>
+			<input <%= active ? 'checked' : '' %> type="checkbox" id="f-active" name="f-active" class="on-off-switch" />
+			<label for="f-active" class="on-off-switch-label">
+			    <div class="on-off-switch-state">on</div>
+			</label>
+		</div>
+
+		<div class="col-3">
+			<label for="f-collection-type">Collection Type</label>
+			<input disabled type="text" id="f-collection-type" name="f-collection-type" value="<%= collectionType %>">
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="form-section col-3 pull-left">
+
+			<label for="f-start-date">Start Date</label><i class="icon icon-tool-tip x-space-s" title="This is the first day that your collection will be active as of 12:01AM."></i>
+			<div class="date-container">
+			    <input type="text" id="f-start-date" name="f-start-date" class="date" value="<%= startDate %>">
+			</div>
+
+		</div>
+
+		<div class="form-section col-3 pull-left">
+
+			<label for="f-end-date">End Date</label><i class="icon icon-tool-tip x-space-s" title="Your collection will no longer be active after 11:59PM on this date."></i>
+			<div class="date-container">
+			    <input type="text" id="f-end-date" name="f-end-date" class="date" value="<%= endDate %>">
+
+			</div>
+		</div>
+	</div>
+
+<% if( parent != 0 ) { %>
+
+
+
+    
+
+
+<div class="row row-spaced">
+	<div class="col-12">
+				
+	              <div class="panel-title">Subcollection Header</div>	
+
+		</div>
+	
+</div> 
+
+<div class="row row-spaced">
+	<div class="col-4 form-section">
+		<div class="label">Active</div>
+			<input checked="" type="checkbox" id="f-subHeader-active" name="f-subHeader-active" class="on-off-switch">
+			
+			<label for="f-subHeader-active" class="on-off-switch-label">
+			  <div class="on-off-switch-state">on</div>
+			</label>		
+	</div>
+</div>
+ <% } %>
+
+
+
+<div id="hide-SubCollectionArea">
+
+  <div class="row row-spaced">
+   		<div class="col-6 pull-left">
+			<label for="f-sub-title"><%= parent === 0 ? 'Title' : 'Title' %></label><i class="icon icon-tool-tip x-space-s" title="This is the title of the collection and is shown on your website."></i>
+			<input type="text" id="f-sub-title" name="f-sub-title" value="<%= subTitle %>">
+		</div>
+  </div>
+
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			<label for="f-promo-desc">Description</label><i class="icon icon-tool-tip x-space-s" title="This is a short description of the collection that is shown on the collections page."></i>
+			<textarea class="size-2" id="f-promo-desc" name="f-promo-desc"><%= promoDesc %></textarea>
+		</div>
+	</div>
+
+	<% if( parent != 0 ) { %>
+	<div class="row row-spaced">
+		<div class="col-6 form-section image-form-section" id="f-image-1">
+			<div>
+				<div class="label">Left Image<i class="icon icon-tool-tip x-space-s" title="Recommended size: 320px width x 300px height"></i></div>
+				
+					<button type="button" id="f-image-url-1" class="btn btn-other btn-file">
+						Select
+					</button>
+				
+			</div>
+			<div><img id="f-image-1-preview" class="fill-container-width" src="<%= imgUrl1 %>" alt="" required></div>
+		</div>
+		<div class="col-6 form-section image-form-section" id="f-image-2">
+			<div>
+				<div class="label">Right Image<i class="icon icon-tool-tip x-space-s" title="Recommended size: 320px width x 300px height"></i></div>
+				
+					<button type="button" id="f-image-url-2" class="btn btn-other btn-file">
+						Select
+					</button>
+				
+			</div>
+			<div><img id="f-image-2-preview" class="fill-container-width" src="<%= imgUrl2 %>" alt="" required></div>
+		</div>
+	</div>
+
+	<% } else { %>
+	<div class="row row-spaced">
+		<div class="col-12 form-section image-form-section" id="f-image-1">
+			<div>
+				<div class="label">Hero Image<i class="icon icon-tool-tip x-space-s" title="The collections hero image is a large background banner displayed behind the promoted collection products at the top of the page. Recommended size: 960px width x 370px height"></i></div>
+				
+					<button type="button" id="f-image-url-1" class="btn btn-other btn-file">
+						Select
+					</button>
+				
+			</div>
+			<div><img id="f-image-1-preview" class="fill-container-width" src="<%= imgUrl1 %>" alt="" required></div>
+		</div>
+	
+	</div>
+	<div class="row row-spaced">
+
+		<div class="col-6 form-section image-form-section" id="f-image-4">
+			<div class="label">Tile Image<i class="icon icon-tool-tip x-space-s" title="The tile image can be displayed on the Collections landing page. Recommended size: 460px width x 270px height"></i></div>
+			<button type="button" id="f-image-url-4" class="btn btn-other btn-file" required>Select</button>	
+			<div><img id="f-image-4-preview" class="fill-container-width" src="<%= imgUrl4 %>" alt="" required></div>
+		</div> 
+	 	<div class="col-6 form-section image-form-section" id="f-image-3">
+			<div class="label">Thumbnail Image<i class="icon icon-tool-tip x-space-s" title="The thumbnail image can be displayed in your navigation and across the site. Recommended size: 210px width x 250px height"></i></div>
+			<button type="button" id="f-image-url-3" class="btn btn-other btn-file">Select</button>	
+			<div><img id="f-image-3-preview" class="fill-container" src="<%= imgUrl3 %>" alt="" required></div> 
+		</div>			
+	</div>
+	<% } %>
+
+</div>
+
+
+</div>
+
+<div id="featured-products"></div>
+<% if (parent === 0) { %>
+<div class="row row-spaced panel">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">
+				Subcollections<i class="icon icon-tool-tip x-space-s" title="Subcollections let you organize your products into several groups whice can be listed under one main collection."></i>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row row-spaced">
+		<div class="col-12">
+			<button type="button" id="new-btn" class="btn btn-submit pull-right"><i class="icon icon-add icon-lg"></i>New Subcollection</button>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			<table id="sub-collection-table" class="table alternate">
+				<thead>
+					<tr>
+						<th class='col-4 left-align'>Subcollection Name</th>
+						<th class='col-4'>Type</th>
+						<th class='col-2'>Status</th>
+						<th class='col-1'>Edit</th>
+						<th class='col-1'>Delete</th>
+					</tr>
+				</thead>
+				<tbody id="sub-collection-list"></tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<% } %>
+
+<% if(parent === 0) { %> 
+ <div class="row row-spaced panel form-section">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title"><i class="icon icon-closed x-space-s" id="optional"></i>Collection SEO Content</div>
+		</div>
+	</div>
+
+	<div id="accordion">
+	
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<label for="f-meta-title">Page Title</label><i title="This is the text displayed in the tabs at the top of your browser window." class="icon icon-tool-tip x-space-s"></i>
+			<input type="text" id="f-meta-title" name="f-meta-title" value="<%= metaTitle %>">
+		</div>
+	</div>
+	<div class="row row-spaced">
+		<div class="col-6 form-section">
+			<label for="f-meta-keywords">Meta Keywords</label><i title="Here you can list a few comma separated keywords that describe your collection." class="icon icon-tool-tip x-space-s"></i>
+			<textarea class="size-1" id="f-meta-keywords" name="f-meta-keywords"><%= metaKeywords %></textarea>
+		</div>
+		<div class="col-6 form-section">
+			<label for="f-meta-desc">Meta Description</label><i title="This is the text displayed on search engines. It should consist of a few short and simple sentences that describe your collection." class="icon icon-tool-tip x-space-s"></i>
+			<textarea class="size-1" name="f-meta-desc" id="f-meta-desc"><%= metaDesc %></textarea>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<label for="f-meta-tags">Additional Tags</label><i class="icon icon-tool-tip x-space-s" title="This area allows you to insert any extra meta tags that may be used for tracking or other purposes."></i>
+			<textarea id="f-meta-tags" name="f-meta-tags"><%= metaTags %></textarea>
+			<div class="row"><div class="col-12">Please include the full HTML (such as &lt;meta&gt;) in the Additional Tags field.</div></div>
+			</div>
+		</div>
+	</div> 
+</div> <% } %>
+
+
+
+</form>

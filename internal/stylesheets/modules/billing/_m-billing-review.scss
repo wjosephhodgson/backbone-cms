@@ -1,0 +1,249 @@
+.no-js .m-billing-hidden-panel{height:auto !important;}
+.m-billing-hidden-panel{
+  width:100%;
+  max-height:0px;
+  float:left;
+  position:relative;
+  overflow:hidden;
+  z-index:0;
+
+  @include transition(all, 0.5s);
+
+  &.is-hidden{
+    max-height:0px;
+    @include transition(all, 0.5s);
+  }
+
+  &.is-revealed{
+    max-height:10000px;
+    @include desktop() {
+      max-height:10000px;
+    }
+    @include transition(all, 0.5s);
+  }
+}
+
+#giftApplied {
+    display:none;
+    padding:0.66667em;
+    font-size:1.30769em;;
+    min-height:40px;
+    border:1px dotted $dark-grey;
+    margin:0 0 1em 0;
+}
+
+#promoCodeApplied {
+    display:none;
+    padding:0.66667em;
+    font-size:1.30769em;;
+    min-height:40px;
+    border:1px dotted $dark-grey;
+    margin:0 0 1em 0;
+}
+
+.m-billing-review-counter{
+  width:100%;
+  float:left;
+  padding-bottom:1em;
+  list-style:none;
+  border-bottom:1px solid $accent-grey;
+
+  li{
+    display:table;
+    margin:0 1.25em 0 0;
+    padding:0;
+    width:auto;
+    float:left;
+  }
+
+  .c-circle-number{
+    display:table-cell;
+    vertical-align:middle;
+  }
+
+}
+
+.m-billing-review-counter-text{
+  display:none;
+  vertical-align:middle;
+  font-family:$serif-stack;
+  font-size: 1.84615em;
+  padding-left:0.25em;
+  color:$accent-grey;
+
+  @include desktop(){
+    display:table-cell;
+  }
+
+}
+
+.m-checkout-header-active{
+  .c-circle-number{background-color:$green;}
+  .m-billing-review-counter-text{color:$black;display:table-cell;}
+}
+
+
+
+.m-order-detail-item-container.m-billing-item-first{border-top:0;}
+.m-billing-item{
+  padding:2%;
+
+  @include desktop(){
+    border-right:1px solid $accent-grey;
+  }
+
+}
+////////////////////////////////
+//to toggle order details
+.m-order-details-items-container {
+  @include mobile() {
+    display: none;
+  }
+}
+
+.m-billing-order-details-show {
+  padding-top: 0.8em;
+  padding-right: 0.8em;
+  font-size: 14px;
+  color: #FFF;
+
+  &.open {
+    &:after {
+      background-position: -186px -18px;
+    }
+  }
+  &.closed {
+    &:after {
+      background-position: -186px -26px;
+    }
+  }
+  &:after {
+    background-image: url("../images/ui-sprite.svg");
+    width: 1em;
+    height: 0.5em;
+    content: "";
+    display: inline-block;
+    margin: 0.2em 0.4em;
+  }
+}
+
+.no-svg {
+  .m-billing-order-details-show:after {
+    background-image: url("../images/ui-sprite.png") !important;
+  }
+}
+
+.m-billing-delivery{
+  padding:2%;
+
+}
+
+.m-billing-price{
+  font-family:$sans-stack;
+}
+
+p .m-billing-price{font-size: 0.75em;}
+
+.m-billing-subtotal{
+  font-family: $sans-stack-heavy;
+  color: $dark-grey;
+  font-size: 0.75em;
+  text-transform:uppercase;
+}
+
+.m-sidebar-recipient-area{
+  background-color: $grey;
+  padding: 0.5em 1em;
+  margin-bottom: 1.5em;
+  border: 1px dotted $dark-grey;
+
+  .btn{margin-top:1em;}
+  @include desktop(){
+
+  position:absolute;
+  width:100%;
+  }
+}
+
+.summary-label{
+  font-family:$sans-stack;
+}
+
+.m-billing-sidebar{
+  margin-top:0.99em;
+  @include desktop() {
+    margin-left: 3% !important;
+  }
+  @include mobile() {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+  }
+}
+
+.m-billing-product-img{
+
+    width: 160px;
+    height: auto;
+  @include mobile(){
+    display:block;
+    margin:0 auto;
+  }
+}
+
+.m-billing-bordered-div {
+  position:relative;
+  border:1px dotted $dark-grey;
+  float:left;
+  width:100%;
+  margin:0.5em 0 1.5em;
+  padding:0.5em;
+}
+
+
+  .m-billing-indent {
+    padding-left:5%;
+  }
+
+.m-billing-cvv-modal-link {
+  background: none;
+  position: absolute;
+  right: 0px;
+  top: -5px;
+  width: 7.7em;
+  height: 1.5em;
+  text-align: right;
+}
+#cvvModal {
+  .m-billing-cvv-modal {
+    padding: 20px;
+    p {
+      font-size: 1.07692em;
+      line-height: 1.21428571429em;
+      &.bold {
+        font-family: "Bembo MT W01 Bold", Georgia, "Times New Roman", serif;
+      }
+    }
+  }
+}
+
+.m-billing-bring-delivery-info-copy {
+  margin-top: 0.55em;
+}
+
+.m-billing-info-select {
+  max-width: 22.53846em !important;
+}
+
+.custom-checkbox-label {
+  margin-right: -2.8em !important;
+}
+
+.custom-radio {
+  margin-bottom: 0em !important;
+}
+
+.custom-checkbox-label {
+  margin-bottom: 0.5em;
+  width: 100%;
+}

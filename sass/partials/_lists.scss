@@ -1,0 +1,144 @@
+.m-data-table{
+
+	.table-list {
+	    list-style-type:none;
+	    margin:0;
+	    padding:0;
+	}
+
+    .form-section {
+    	input[type="text"], input[type="url"], input[type="email"], input[type="tel"], select, textarea {
+			margin:0px;
+		}
+		.select-container:before{
+			top:0em;
+			bottom:0em;
+		}
+    }
+
+	.data-row {
+		border-bottom: 1px solid $color-border-1;
+	    &:nth-child(odd) {
+			background-color: $color-neutral-1;
+	    }
+	}
+
+	.td {
+	    overflow: hidden;
+	    float: left;
+	    padding: $space-xs;
+	    height: 4em;
+	    text-align: center;
+	}
+
+	.td-largetext {
+		span {
+    		margin-left: 1em;
+    		font-size: 1.3em;
+    	}
+    }
+
+	.th {
+		@extend .td;
+
+		background-color: $color-accent-2-light;
+		font-weight: bold;
+	}
+
+
+}
+
+.compact-list {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+.td-name {
+	width: 34%;
+}
+
+.td-type {
+	width: 13%;
+}
+
+.td-page {
+	width: 10%;
+}
+
+.td-date {
+	width: 11%;
+}
+
+.td-status {
+	width: 14%;
+}
+
+.td-edit {
+	width: 7%;
+}
+
+.td {
+    overflow: hidden;
+    float: left;
+    padding: $space-xs;
+    height: 4em;
+    text-align: center;
+}
+
+.th {
+	overflow: hidden;
+    float: left;
+    padding: $space-xs;
+    height: 4em;
+    text-align: center;
+
+	background-color: $color-accent-2-light;
+	font-weight: bold;
+}
+
+.collapse-list {
+	background-color: white;
+}
+
+.collapse-list .compact-list {
+	/*
+	& > li > .clearfix > .td:first-child {
+		text-indent: $space-m;
+	}
+	*/
+	background-color: $color-neutral-1;
+	border-top: 2px solid $color-border-2;
+}
+
+.collapse-list .compact-list .compact-list {
+	/*
+	& > li > .clearfix > .td:first-child {
+		text-indent: 2 * $space-m;
+	}
+	*/
+	background-color: white;
+}
+
+.collapse-list .compact-list .compact-list .compact-list {
+	/*
+	& > li > .clearfix > .td:first-child {
+		text-indent: 3 * $space-m;
+	}
+	*/
+	background-color: $color-neutral-1;
+}
+
+li.clickable:hover {
+  background-color:  $color-accent-2 !important;
+}
+/*
+#featured-sub-list {
+	
+}
+
+#featured-sub-search-list {
+	max-height: 300px;
+	overflow-y: scroll;	
+}
+*/

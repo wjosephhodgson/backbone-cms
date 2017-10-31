@@ -1,0 +1,228 @@
+// ============================================================================
+// Header
+// ============================================================================
+#header {
+	background-color: white;
+	position: static;
+	width: 100%;
+	z-index: 5;
+	border-bottom: 1px solid $color-border-1;
+
+	& .btn-panel {
+		top: 5px;
+		right: 5px;
+	}
+
+	@include break-desktop() {
+		border: 0;
+		position: fixed;
+
+		&:after {
+			content: ' ';
+			display: block;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			border-bottom: 3px solid $color-neutral-2;
+			z-index: 1;
+		}
+	}
+}
+
+.logo {
+	padding: 10px 0;
+	font-size: 30px;
+}
+
+.logo-e {
+	color: #b2b2b3;
+}
+
+.logo-sat {
+	vertical-align: middle;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+#esat-logo {
+	display:block;
+	float:left;
+	margin:5px 10px 0px 0px;
+}
+
+.logo-shop-name {
+	border-left: 2px solid $color-accent-2;
+	padding-left: 10px;
+	font-size: 25px;
+	color: #484848;
+}
+
+#main-nav {
+	display: block;
+	position: relative;
+	padding-top: 0;
+	// width: 100%;
+	z-index: 10;
+}
+
+.nav-group {
+	cursor: default;
+
+	&.no-js:hover, &.active {
+		& .nav-title {
+			color: white;
+
+			&#merchandising {
+				background-color: $color-merchandising;
+			}
+
+			&#content-management {
+				background-color: $color-content;
+			}
+
+			&#marketing-promotions {
+				background-color: $color-marketing;
+			}
+
+			&#seo {
+				background-color: $color-seo;
+			}
+
+			&#reporting {
+				background-color: $color-reporting;
+			}
+
+			&#more {
+				background-color: $color-more;
+			}
+
+			&#help {
+				background-color: $color-help;
+			}
+		}
+
+		& > .nav-body {
+			display: block;
+		}
+	}
+}
+
+.nav-title {
+	@include user-select(none);
+	@include transition(background-color 300ms, color 300ms);
+	@include border-radius(5px 5px 0 0);
+	float: left;
+	height: auto;
+	padding: 0.5% 4% 0.5% 1%;
+	border-left: 0;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	background-color: white;
+	border-bottom: 3px solid black;
+	z-index: 2;
+	position: relative;
+
+	&#merchandising {
+		border-bottom-color: $color-merchandising;
+	}
+
+	&#content-management {
+		border-bottom-color: $color-content;
+	}
+
+	&#marketing-promotions {
+		border-bottom-color: $color-marketing;
+	}
+
+	&#seo {
+		border-bottom-color: $color-seo;
+	}
+
+	&#reporting {
+		border-bottom-color: $color-reporting;
+	}
+
+	&#more {
+		border-bottom-color: $color-more;
+	}
+
+	&#help {
+		border-bottom-color: $color-help;
+		padding-right: 1.5%;
+		&:after {
+			content:'';
+			width:0px;
+		}
+	}
+
+	&:after {
+		content:'\f078';
+		font-family:FontAwesome;
+		position: absolute;
+		width: 40px;
+		text-align: center;
+	}		
+}
+
+.help-group.nav-group {
+	.nav-body {
+		display:none!important;
+	}
+}
+
+.nav-body {
+	@extend .compact-list;
+	@include border-radius($border-radius);
+
+	background-color: white;
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	z-index: 10;
+
+	border-right: 2px solid $color-neutral-2;
+	border-bottom: 2px solid $color-neutral-2;
+	border-left: 2px solid $color-neutral-2;
+	padding-bottom: $space-m;
+
+	& > li {
+		float: left;
+		width: 25%;
+	}
+}
+
+.nav-title-row {
+	border-bottom: 2px solid $color-neutral-2;
+}
+
+.nav-sub-title {
+	padding: $space-s 0;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-indent: $space-xs;
+	cursor: default;
+}
+
+.nav-links {
+	@extend .compact-list;
+	font-size: 14px;
+	font-weight: bold;
+	padding: $space-s;
+
+	& li {
+		padding: $space-xs $space-s;
+
+		& > a {
+			@include single-transition(color, 100ms);	
+		}
+
+		& > a:hover, & > .selected {
+			color: $color-accent-2;
+		}
+	}
+}

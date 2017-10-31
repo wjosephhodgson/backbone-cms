@@ -1,0 +1,155 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Manage Rewards Program</h2>
+			<div class="btn-panel">
+				<button type="button" id="save-btn" class="btn btn-submit pull-right">Save Changes</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced">
+	<div class="col-12">
+		Use this section to manage your site's rewards program. When your customers place orders, they can be given the option to register at checkout and sign up to receive rewards. This can give them points per order to use towards rewards and special offers.
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+
+<!-- Hidden Alert Message for invalid search -->
+<div class="row row-spaced panel alert-panel hidden-alt" id="search-alert">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-1">
+				<div class="icon icon-4x icon-warning"></div>
+			</div>
+			<div class="col-11 alert-text">
+				Please enter search criteria into at least one of the below fields in order to look up reward information.
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+<div class="row row-spaced">
+	<div class="col-12">
+	    <div id="tabs">
+	      <ul class="clearfix">
+	        <li class="col-6"><a class="center-align fill-container-width" href="#accountManagement">Account Management</a></li>
+	        <li class="col-6"><a class="center-align fill-container-width" href="#settings">Settings</a></li>
+	      </ul>
+
+			<!-- Start of Account Tab -->
+			<div id="accountManagement">
+
+				<div class="row">
+					<div class="col-12">
+						<div class="panel-title">Search</div>
+					</div>
+				</div>
+
+				<div class="row row-spaced form-section">
+					<div class="col-4">
+						<div class="search-container">
+							<input type="text" id="firstNameSearch" name="firstNameSearch" placeholder="Search by First Name"> 
+						</div>
+					</div>
+
+					<div class="col-4">
+						<div class="search-container">
+							<input type="text" id="lastNameSearch" name="lastNameSearch" placeholder="Search by Last Name">
+						</div>
+					</div>
+				</div>
+
+				<div class="row row-spaced form-section">
+					<div class="col-8">
+						<div class="search-container">
+							<input type="text" id="emailSearch" name="emailSearch" placeholder="Search by Email">
+						</div>
+					</div>
+
+					<div class="col-3 pull-right buttonwithlabel">
+						<button type="button" id="search-btn" class="btn btn-submit">SEARCH</button>
+					</div>
+				</div>
+
+				<div class="search-results">
+					<div class="row">
+						<div class="col-12">
+							<div class="panel-title">Member Account Information</div>
+						</div>
+					</div>
+
+					<!-- Start of Rewards Table -->
+					<div class="row row-spaced">
+						<div class="col-12">
+							<table id="reward-table" class="table alternate">
+								<thead>
+									<tr>
+										<th class="clickable th-3-20 left-align">First Name <i class="icon left-offset-xs"></i></th>
+										<th class="clickable th-3-20 left-align">Last Name<i class="icon left-offset-xs"></i></th>
+										<th class="clickable th-2-20 left-align">Email Address <i class="icon left-offset-xs"></i></th>
+										<th class="clickable th-2-20">Opt In Date<i class="icon left-offset-xs"></i></th>
+										<th class="clickable th-2-20">Opt Out Date<i class="icon left-offset-xs"></i></th>
+										<th class="clickable th-2-20">Account Status <i class="icon left-offset-xs"></i></th>
+										<th class="clickable th-2-20">Current Balance <i class="icon left-offset-xs"></i></th>
+										<th class="th-1-20">Edit</th>
+									</tr>
+								</thead>
+								<tbody id="reward-list"></tbody>
+							</table>
+						</div>
+					</div>
+					<!-- End of Rewards Table -->
+
+					<div class="row">
+						<div class="col-12">
+							<div class="panel-title">Download Account Data</div>
+						</div>
+					</div>
+					<div class="row row-spaced">
+						<div class="col-3">
+							<button type="button" id="download-btn" class="btn btn-submit">Export csv</button>
+						</div>
+					</div>
+
+				</div><!-- end of search-results -->
+
+
+
+			</div><!-- End of Account Tab -->
+			
+	        <!-- Start of Settings Tab -->
+			<div id="settings">
+
+				
+				
+				<div id="settings-content"></div>
+
+
+			</div><!-- End of Settings Tab -->
+
+	    </div><!-- End of Tabs Section -->
+
+	<div id="reward-modal"></div>
+	</div>
+</div>

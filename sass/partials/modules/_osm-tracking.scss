@@ -1,0 +1,152 @@
+/* Style and size the chart container, border and data-grid font */
+#balihoochart, #balihoochartnew {
+	width: 850px;
+	background-color: white;
+	border-width: 14px;
+	border-style: none;
+	font-size: 11px;
+	font-family: Arial;
+	color: #000000;
+	clear:both;
+}
+
+/* Style the data-grid row selection background and font color */
+#balihoochart .bselectioncolor, #balihoochartnew .bselectioncolor {
+	color: #FFFFFF;
+	font-weight: bold;
+	background-color: #9C99CE;
+}
+
+/* Style the chart's bars */
+#balihoochart .bbar, #balihoochartnew .bbar {
+	border-width:1px;
+	border-style: solid;
+	border-color: #475034;
+	background-color: #BED392;
+}
+
+/* Set the font color of the data that is not selected */
+#balihoochart .bfade, #balihoochartnew .bfade {
+	color: #000000;
+}
+
+/* Style the data-grid row background color */
+#balihoochart .blightshade, #balihoochartnew .blightshade {
+	background-color: #FFFFFF;
+}
+
+/* Style the alternating data-grid row background color */
+#balihoochart .bdarkshade, #balihoochartnew .bdarkshade {
+	background-color: #EAEAF4;
+}
+
+.osm_header{
+	font-family: Arial;
+	font-size: 18px;
+	font-weight: bold;	
+	color: #3366cc;
+}
+/****** Stats Styles - End  ******/
+
+/******Call Tracking - Begin******/
+/* Style and size the chart container, border and data-grid font */
+#balihoocalltracking {
+	width: 722px;
+	background-color: white;
+	border-width: 0px;
+	border-style: none;
+	font-size: 11px;
+	font-family: Arial;
+	color: #000000;
+}
+
+/* Style the data-grid row selection background and font color */
+#balihoocalltracking .bselectioncolor {
+	color: #FFFFFF;
+	font-weight: bold;
+	background-color: #9C99CE;
+}
+
+/* Style the chart's bars */
+#balihoocalltracking .bbar {
+	border-width:1px;
+	border-style: solid;
+	border-color: #475034;
+	background-color: #BED392;
+}
+
+/* Set the font color of the data that is not selected */
+#balihoocalltracking .bfade {
+	color: #000000;
+}
+
+/* Style the data-grid row background color */
+#balihoocalltracking .blightshade {
+	background-color: #FFFFFF;
+}
+
+/* Style the alternating data-grid row background color */
+#balihoocalltracking .bdarkshade {
+	background-color: #EAEAF4;
+}
+
+/* Style the submit and dropdown controls */
+#balihoocalltracking .ui-widget {
+	font-size:11px;
+}
+
+/* Added styles from "pure" staging */
+table.balihoochart th {
+	text-align: center;
+	color: white;
+	background-color: #9C99CE;
+}
+#balihoocalltracking .dataTable{
+	width: 722px;
+	background-color: white;
+	border-width: 0px;
+	border-style: none;
+	font-size: 11px;
+	font-family: Arial;
+	color: black;
+}
+table.balihoochart tbody tr.odd td {
+	color: black;
+	background-color: #EAEAF4;
+}
+.datatables_wrapper {
+	width: 722px;
+}
+table.balihoochart tbody td.bct_left {
+	text-align: center;
+	color: black;
+	background-color: white;
+}
+#osm_header_bottom_hr{
+	width:716px;
+	float:left;
+}
+/******Call Tracking - End******/
+
+#balihoochart, #balihoochartnew {
+	.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {
+		cursor: pointer;
+		font-family: Arial;
+		font-size: 18px;
+		font-weight: bold;
+		color: #36C;
+	}
+	.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	}
+	.ui-widget-header{
+	}
+	.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+	}
+	.ui-tabs .ui-tabs-nav {
+		width: 100%;
+	}
+}
+#osm-tabs{  }
+	#osm-tabs .osm-tab{ float:left; margin:10px 0px; }
+		#osm-tabs .osm-header{ float:left; width:100%; font-size:26px; color:#167DFE; font-weight:900; border-bottom:1px solid #167DFE; margin: 10px 0px 20px 0px;  }
+			#osm-tabs-2 .osm-header{ margin-top:30px; }

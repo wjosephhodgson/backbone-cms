@@ -1,0 +1,99 @@
+.m-contact-page-header {
+  font-size: em(24px);
+  margin-bottom: 0.5em;
+  padding: 0 0 0.5em;
+  text-align: left;
+
+  @include mobile {
+    text-align: center;
+    border-bottom: 1px solid $accent-grey;
+  }
+}
+
+.m-contact-paragraph {
+	width: 98%;
+	margin: auto 1%;
+}
+
+.m-contact-intro {
+	position: relative;
+	display: block;
+	padding-bottom: 1em;
+	margin-bottom: 1em;
+	border-bottom: 1px solid $accent-grey;
+
+	&.order {
+		border: none;
+		margin-bottom: 0;
+	}
+}
+
+.m-contact-form-container {
+	position: relative;
+
+	.m-contact-form-message {
+		position: absolute;
+		top: -1em;
+		right: 0;
+
+		&.m-contact-form-message-required {
+			font-size: 1.07692307692em;
+		}
+	}
+	.pull-right {
+		@include mobile(){
+			float: left !important;
+		}
+	}
+}
+
+.m-contact-question-select-container {
+	width: 100% !important;
+	margin-top: 1em;
+	@include mobile {
+		width: 98% !important;
+	}
+	.m-contact-question-select{
+		max-width: 100% !important;
+	}
+}
+
+.m-contact-outro {
+	font-size: em(14px);
+	line-height: 1.21428571428571em;
+	padding-bottom: 1.4em;
+}
+.m-contact-content {
+	text-align: left;
+}
+
+.m-contact-email {
+	margin-bottom: 1em;
+	@include desktop {
+		width: 100% !important;
+	}
+}
+
+.m-contact-comments {
+	margin-top: 0.5em;
+	margin-bottom: 0;
+	@include desktop {
+		width: 100% !important;
+	}
+}
+
+.m-contact-comments-message {
+	font-size: em(14px);
+	margin-top: -0.444em;
+}
+
+.m-contact-submit {
+	margin-top: 0.5em;
+}
+
+.m-contact-divider {
+	width: 100%;
+	margin: 0 0 1em;
+	height: 1px;
+	background-color: $accent-grey;
+}

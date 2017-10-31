@@ -1,0 +1,13 @@
+{
+	"enrollment":"active",
+	"appCode":"XXDEFG1",
+	"emails":true,
+	"emailImg":"images/mock/bouquet-1.png",
+	"aboutUs": true,
+	"aboutUsImg": "images/mock/bouquet-2.png",
+	"logoImg": "images/mock/bouquet-3.png",
+	"splashImg": "images/mock/bouquet-4.png",
+	"pickUpMsg": "",
+	"delMsg": "",
+	"profileMsg": ""
+}

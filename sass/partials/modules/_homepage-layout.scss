@@ -1,0 +1,15 @@
+#layout-container {
+	& > .grid-item {
+		background-color: white;
+		text-align: center;
+
+		&:hover, &.active {
+			background-color: $color-accent-2-light;
+		}
+
+		& img {
+			height: 150px;
+			width: 100px;
+		}
+	}
+}

@@ -1,0 +1,191 @@
+.no-webkit select {
+  padding-top: 0.56em;
+  padding-bottom: 0.56em;
+  padding-right: 1em;
+  background-image: none;
+  border: 1px solid #cccccc;
+}
+
+@media screen and (min-width: 961px) {
+  .m-pattern-library-masthead {
+    height: 260px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .m-pattern-library-masthead {
+    height: 220px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .m-pattern-library-masthead {
+    height: 175px;
+  }
+  .m-pattern-library-masthead h1 {
+    padding: 0em;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .m-pattern-library-master-header {
+    height: 5.25em !important;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .m-pattern-library-bg-container {
+    height: 260px !important;
+  }
+}
+
+.m-padding-top-xlarge {
+  padding-top: 1.53846em;
+}
+
+.top-margin-small {
+  margin-top: 1em;
+}
+
+pre {
+  white-space: pre !important;
+}
+
+.m-code {
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+  background-color: #fdf6e3;
+  padding: 10px;
+  border: 1px solid #E1E1E8;
+}
+
+.m-grid-container-bg-primary {
+  background-color: #fa3c7a;
+}
+
+.m-grid-container-bg-secondary {
+  background-color: #ffeaed;
+}
+
+.c-grid-container-padding {
+  padding: 1em 0em;
+}
+
+.m-center-content {
+  display: table;
+  height: 8em;
+  width: 100%;
+}
+.m-center-content > p {
+  display: table-cell;
+  font-size: 1em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.c-secondary-color {
+  color: #787878;
+}
+
+.m-grid-nested {
+  background-color: #ffc53e;
+}
+
+.m-sidebar-nav {
+  min-height: 1px;
+}
+@media screen and (max-width: 960px) {
+  .m-sidebar-nav {
+    padding: 1.53846em 0em;
+  }
+}
+@media screen and (max-width: 960px) {
+  .m-sidebar-nav {
+    padding: 1.53846em 0em;
+  }
+}
+
+.m-sidebar-nav-sub-list {
+  display: none;
+}
+
+.active .m-sidebar-nav-sub-list {
+  display: block;
+}
+
+@media screen and (min-width: 961px) {
+  .affixed {
+    position: fixed !important;
+    top: 3em;
+  }
+}
+
+.m-nested-sidebar-nav-list-item-link {
+  color: #242424;
+  font-family: "Avenir LT W01 85 Heavy", Helvetica, sans-serif;
+  text-decoration: none;
+}
+.m-nested-sidebar-nav-list-item-link:hover {
+  color: #fa3c7a;
+  text-decoration: none;
+}
+
+.m-navbar-pattern-library {
+  position: relative !important;
+}
+
+.c-secondlevel-pattern-library {
+  background-color: #fff !important;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-tabs {
+    font-size: 0.95em;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .m-pattern-library-offset {
+    margin-top: 1.6em;
+  }
+}
+
+.m-product-mini-image:hover .btn-quickview {
+  opacity: 1 !important;
+}
+
+.btn-quickview {
+  position: relative !important;
+}
+
+.m-pdp-flowers-in-bouquet {
+  overflow: hidden;
+}
+
+@media screen and (max-width: 960px) {
+  .m-pdp-flowers-in-bouquet-flex-container {
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 961px) {
+  .flex-control-nav {
+    width: 685px !important;
+  }
+}
+
+.flex-direction-nav a.flex-next {
+  right: -11.5em !important;
+}
+
+.m-pattern-lib-downsize {
+  font-size: 1.4em !important;
+}
+
+.m-about-content-list {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 40px;
+}

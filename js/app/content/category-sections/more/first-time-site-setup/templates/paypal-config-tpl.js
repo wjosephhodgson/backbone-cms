@@ -1,0 +1,15 @@
+define(function(){ return function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<div class="row row-spaced">\r\n\t<div class="col-12">\r\n\t\t<div class="clearfix section-title">\r\n\t\t\t<h2 class="pull-left">Configure PayPal</h2>\r\n\t\t\t<div class="btn-panel">\r\n\t\t\t\t<button id="cancel-btn" class="btn btn-other">Cancel</button>\r\n\t\t\t\t<button id="save-btn" class="btn btn-submit">Save Changes</button>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n</div>\r\n\r\n<!-- Hidden Alert Message -->\r\n\r\n<div class="row panel alert-panel">\r\n  <div class="col-12">\r\n    <div class="row">\r\n      <div class="col-1">\r\n        <div class="icon icon-3x icon-warning"></div>\r\n      </div>\r\n      <div class="col-11 alert-text left-align">\r\n                     This is a generic placeholder for error messages in eSAT. <br>\r\n                     In the live app, this will be a real message and will be hidden by default.\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n\r\n<!-- Hidden Alert Message -->\r\n\r\n\r\n<form id="edit-form" class="row form-section">\r\n    <div class="col-12">\r\n        <div class="row row-spaced">\r\n            <div class="col-2 form-section left-align">\r\n                <div class="label">Active<i class="icon icon-tool-tip x-space-s" title=""></i></div>\r\n                <div class="centered-content-container">\r\n                    <input ' +
+((__t = ( payPalActive ? 'checked' : '' )) == null ? '' : __t) +
+' type="checkbox" id="f-paypal-active" name="f-paypal-active" class="on-off-switch" />\r\n                    <label for="f-paypal-active" class="on-off-switch-label">\r\n                        <div class="on-off-switch-state">on</div>\r\n                    </label>\r\n                </div>\r\n            </div>\r\n        \t<div class="col-5 form-section left-align">\r\n                <label for="f-paypal-email-address">PayPal Email Address</label><i class="icon icon-tool-tip x-space-s" title="Enter the email address associated with the florist\'s PayPal account here."></i>\r\n                <input id="f-paypal-email-address" name="f-paypal-email-address" type="email" value="' +
+((__t = ( payPalEmailAddress )) == null ? '' : __t) +
+'">\r\n        \t</div>\r\n\r\n        \t<div class="col-5 form-section left-align">\r\n                <label for="f-paypal-pos-account-number" class="label">POS Account Number</label><i class="icon icon-tool-tip x-space-s" title="Enter the Point of Sale Account Number here."></i>\r\n                <input id="f-paypal-pos-account-number" name="f-paypal-pos-account-number" type="text" value="' +
+((__t = ( payPalPosAccountNumber )) == null ? '' : __t) +
+'">\r\n        \t</div>\r\n        </div>\r\n    </div>\r\n</form>';
+
+}
+return __p
+};});

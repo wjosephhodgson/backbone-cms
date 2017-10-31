@@ -1,0 +1,35 @@
+[
+	{
+		"name":"Same Day Delivery",
+		"imgUrl":"images/icons/fv-1-sun.png",
+		"active": true,
+		"rank": 1,
+		"id": 1
+	},
+	{
+		"name":"Fresh Flowers & Plants",
+		"imgUrl":"images/icons/fv-4-leaf.png",
+		"active": true,
+		"rank": 2,
+		"id": 2
+	},
+	{
+		"name":"Family Owned",
+		"imgUrl":"images/icons/fv-2-people.png",
+		"active": true,
+		"rank": 3,
+		"id": 3
+	},
+	{
+		"name":"Satisfaction Guaranteed",
+		"imgUrl":"images/icons/fv-3-star.png",
+		"active": false,
+		"id": 4
+	},
+	{
+		"name":"We Are Really Great",
+		"imgUrl":"images/icons/fv-3-star.png",
+		"active": false,
+		"id": 5
+	}	
+]

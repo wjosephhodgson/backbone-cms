@@ -1,0 +1,245 @@
+<div id="home">
+      <!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel y-space-top-s">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+
+  <div class="row">
+    <!-- Body -->
+    <div class="col-d-8">
+
+    
+      <div class="row row-spaced panel form-section">
+        <div class="row">
+          <div class="col-12">
+            <div class="panel-title">
+              Site Notes
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <textarea class="size-3" name="f-site-notes" id="f-site-notes"></textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <button type="button" id="save-btn" class="btn btn-submit pull-right">Save Changes</button>
+            <div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+          </div>
+        </div>
+        
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-12">
+          <div class="clearfix section-title">
+            <h2 class="pull-left">New Product Additions</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <p>
+            New Teleflora products are now in eSAT.  Click here to review new additions for Prom, Mother's Day, Father's Day, Grandparent's Day, New Baby and Everyday.  Edit prices and categories before they go live on your site!
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="clearfix section-title">
+        <h2 class="pull-left">Lady Antebellum Free Album Promotion</h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel hidden">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+      You have reached the maximum number of add-ons allowed.<br>Please remove add-ons you have selected if you wish to add more.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+
+
+      <div class="row row-spaced">
+        <div class="col-12">
+          <img class="fill-container-width" src="images/dashboard-ladya-banner.jpg" alt="">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum officiis perspiciatis dolor impedit dolore temporibus mollitia maxime. Ab placeat, temporibus aliquam laboriosam asperiores optio sit magni, rem corporis iure perferendis delectus. Ex quasi corrupti qui assumenda minima explicabo quidem, doloremque quibusdam iure culpa veritatis non facilis necessitatibus similique harum quae doloribus, placeat. Veniam eum qui in porro? Harum inventore optio mollitia, est eligendi iure explicabo eveniet. Nemo, nisi magnam. Laboriosam sequi, tempore quaerat. Nemo debitis, quisquam sunt perspiciatis voluptatum. Quisquam libero ea hic possimus repudiandae eum eius facere, quod voluptas fuga obcaecati exercitationem sequi, quaerat dolor mollitia, modi veritatis nostrum!
+        </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="clearfix section-title">
+            <h2 class="pull-left">New Product Additions</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <p>
+            New Teleflora products are now in eSAT.  Click here to review new additions for Prom, Mother's Day, Father's Day, Grandparent's Day, New Baby and Everyday.  Edit prices and categories before they go live on your site!
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="clearfix section-title">
+        <h2 class="pull-left">Lady Antebellum Free Album Promotion</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-spaced">
+        <div class="col-12">
+          <img class="fill-container-width" src="images/dashboard-ladya-banner.jpg" alt="">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum officiis perspiciatis dolor impedit dolore temporibus mollitia maxime. Ab placeat, temporibus aliquam laboriosam asperiores optio sit magni, rem corporis iure perferendis delectus. Ex quasi corrupti qui assumenda minima explicabo quidem, doloremque quibusdam iure culpa veritatis non facilis necessitatibus similique harum quae doloribus, placeat. Veniam eum qui in porro? Harum inventore optio mollitia, est eligendi iure explicabo eveniet. Nemo, nisi magnam. Laboriosam sequi, tempore quaerat. Nemo debitis, quisquam sunt perspiciatis voluptatum. Quisquam libero ea hic possimus repudiandae eum eius facere, quod voluptas fuga obcaecati exercitationem sequi, quaerat dolor mollitia, modi veritatis nostrum!
+        </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-d-4">
+      <div class="row">
+        <div class="col-12">
+          <div class="clearfix section-title">
+        <h2 class="pull-left">Quick Links</h2><button id="open-modal-btn" class="icon icon-btn icon-cog pull-right icon-2x fill-container-height"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-spaced">
+        <div class="grid-2">
+          <% for (var i = 0; i < quickLinks.length; ++i) { 
+            if(quickLinks[i].active) { %>
+              <a href="<%= quickLinks[i].url %>"><button class="btn btn-quick-link grid-item">
+              <i class="icon <%= quickLinks[i].icon %> icon-2x"></i> <div class="quick-link-text"><%= quickLinks[i].nickName %></div>
+              </button></a>
+          <%  }
+            } %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="clearfix section-title">
+        <h2 class="pull-left">Last 30 Days</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-spaced">
+        <div class="grid-2">
+          <div class="grid-item stats-panel"> 
+            <div class="row">
+              <div class="col-12">
+                <i class="icon icon-group icon-2x"></i> Visitors
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-12">
+                <span class="fa-2x">33,597</span>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item stats-panel">
+            <div class="row">
+              <div class="col-12">
+                <i class="icon icon-shopping-cart icon-2x"></i> Orders
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-12">
+                <span class="fa-2x">2,492</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 no-mobile">
+          <article class="fill-container-width center-align">
+            <iframe src="https://www.google.com/calendar/embed?title=eFlorist%20Scheduled%20Updates&amp;showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=300&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=jua1qn8l1ddreegp88r6dvbf08%40group.calendar.google.com&amp;color=%23333333&amp;src=7j2s39ipiqd058cl8sijfj67fk%40group.calendar.google.com&amp;color=%23875509&amp;src=jvgejecq27mpomoh726uah1gns%40group.calendar.google.com&amp;color=%23182C57&amp;src=eflorist%40teleflora.com&amp;color=%232952A3&amp;src=prkithvjko4s7mdshujd87krsc%40group.calendar.google.com&amp;color=%232952A3&amp;src=9cb7nutliqs2tht483shp9e23c%40group.calendar.google.com&amp;color=%23B1440E&amp;src=7s5s1v8vi1n256ka7rtvb6eans%40group.calendar.google.com&amp;color=%235229A3&amp;src=ib3ntnat24emcepdne6q0lq4pk%40group.calendar.google.com&amp;color=%232F6309&amp;src=5ir2p328sqbh35os97nssm8cec%40group.calendar.google.com&amp;color=%236B3304&amp;src=5hf78jfn09l1o4821vhd8g7u84%40group.calendar.google.com&amp;color=%231B887A&amp;src=nflal6dm2991lje07d78ojr904%40group.calendar.google.com&amp;color=%23B1365F&amp;ctz=America%2FChicago" style=" border-width:0 " width="300" height="300" frameborder="0" scrolling="no"></iframe>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="quick-links-modal">
+    <div class="row row-spaced">
+      <div class="col-12">
+        <div class="clearfix section-title">
+          <h2 class="pull-left">Quick Links Configuration</h2>
+          <div class="btn-panel">
+            <button id="cancel-btn" class="btn btn-other">Cancel</button>
+            <button id="save-btn" class="btn btn-submit">Save Changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <div class="row">
+          <div class="col-12"><strong>Selected Links</strong></div>
+        </div>
+        <div class="row row-spaced">
+          <div class="col-12">
+            <div id="active-quick-links" class="grid-2-closed clearfix"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="row">
+          <div class="col-12"><strong>Quick Links</strong></div>
+        </div>
+        <div class="row row-spaced">
+          <div class="col-12">
+            <ul id="all-quick-links" class="listing"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

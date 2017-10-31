@@ -1,0 +1,304 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="section-title">
+			<h2 class="pull-left">Date & Time Based Fees</h2>
+			<div class="btn-panel">
+				<button id="cancel-btn" class="btn btn-other">Cancel</button>
+				<button id="save-btn" class="btn btn-submit">Save Changes</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced">
+	<div class="col-12">
+		Use this section to set up seasonal delivery fees based on date ranges.  Also, set up delivery fees for same or 2nd day delivery and for each day of the week.
+	</div>
+</div>
+
+<div class="row row-spaced panel">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title clearfix">Seasonal Delivery Fees
+				<button class="btn btn-submit pull-right" id="add-btn">
+					<i class="icon icon-add"></i>Add New Fee
+				</button>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+	<table id="date-time-delivery-fee-table" class="table alternate">
+		<thead>
+			<tr>
+				<th>Start Date</th>
+				<th>End Date</th>
+				<th>Fee Amount</th>
+				<th>Status</th>
+				<th>Edit</th>
+				<th>Delete</th>
+			</tr>
+		</thead>
+		<tbody id="date-time-delivery-fee-list"></tbody>
+	</table>
+		</div>
+	</div>
+</div>
+
+
+<div class="row row-spaced panel form-section">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Same Day Delivery Additional Fee</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-3">
+			<label for="f-same-day-fee">Same Day Fee</label><i class="icon icon-tool-tip x-space-s" title="???"></i>
+			<div class="dollar-container">
+				<input type="text" id="f-same-day-fee" name="f-same-day-fee" value="<%= sameDayFee %>">
+			</div>
+		</div>
+	</div>
+</div>
+
+<form id="f-early-delivery">
+<div class="row row-spaced panel form-section">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Early Delivery Additional Fee</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-2 form-section">
+			<div class="label">Active</div>
+			<input <%= earlyFeeActive ? 'checked' : '' %> type="checkbox" id="f-early-fee-active" name="f-early-fee-active" class="on-off-switch" />
+			<label for="f-early-fee-active" class="on-off-switch-label">
+			    <div class="on-off-switch-state">on</div>
+			</label>
+		</div>
+		<div class="col-2 form-section">
+			<label for="f-early-fee">Fee Amount</label>
+			<div class="dollar-container">
+			<input type="text" id="f-early-fee" name="f-early-fee" value="<%= earlyFee %>">
+			</div>
+		</div>
+		<div class="col-3 form-section">
+			<label for="f-cut-off-time">Cut Off Time</label><i class="icon icon-tool-tip x-space-s" title="???"></i>
+			<div class="select-container">
+			    <select id="f-cut-off-time" name="f-cut-off-time">
+			        <option selected disabled hidden value="<%= cutOffTime %>"><%= cutOffTime %></option>
+
+			        <option value="6:00AM">6:00AM</option>
+			        <option value="6:30AM">6:30AM</option>
+			        <option value="7:00AM">7:00AM</option>
+			        <option value="7:30AM">7:30AM</option>
+			        <option value="8:00AM">8:00AM</option>
+			        <option value="8:30AM">8:30AM</option>
+			        <option value="9:00AM">9:00AM</option>
+			        <option value="9:30AM">9:30AM</option>
+			        <option value="10:00AM">10:00AM</option>
+			        <option value="10:30AM">10:30AM</option>
+			        <option value="11:00AM">11:00AM</option>
+			        <option value="11:30AM">11:30AM</option>
+			        <option value="12:00PM">12:00PM</option>
+			        <option value="12:30PM">12:30PM</option>
+			        <option value="1:00PM">1:00PM</option>
+			        <option value="1:30PM">1:30PM</option>
+			        <option value="2:00PM">2:00PM</option>
+			        <option value="2:30PM">2:30PM</option>
+			        <option value="3:00PM">3:00PM</option>
+			        <option value="3:30PM">3:30PM</option>
+			        <option value="4:00PM">4:00PM</option>
+			        <option value="4:30PM">4:30PM</option>
+			        <option value="5:00PM">5:00PM</option>
+			        <option value="5:30PM">5:30PM</option>
+			        <option value="6:00PM">6:00PM</option>
+			        <option value="6:30PM">6:30PM</option>
+			        <option value="7:00PM">7:00PM</option>
+			        <option value="7:30PM">7:30PM</option>
+			        <option value="8:00PM">8:00PM</option>
+			        <option value="8:30PM">8:30PM</option>
+			        <option value="9:00PM">9:00PM</option>
+			        <option value="9:30PM">9:30PM</option>
+			        <option value="10:00PM">10:00PM</option>
+			        <option value="10:30PM">10:30PM</option>
+			        <option value="11:00PM">11:00PM</option>
+			        <option value="11:30PM">11:30PM</option>
+			        <option value="12:00AM">12:00AM</option>
+			        <option value="12:30AM">12:30AM</option>
+			        <option value="1:00AM">1:00AM</option>
+			        <option value="1:30AM">1:30AM</option>
+			        <option value="2:00AM">2:00AM</option>
+			        <option value="2:30AM">2:30AM</option>
+			        <option value="3:00AM">3:00AM</option>
+			        <option value="3:30AM">3:30AM</option>
+			        <option value="4:00AM">4:00AM</option>
+			        <option value="4:30AM">4:30AM</option>
+			        <option value="5:00AM">5:00AM</option>
+			        <option value="5:30AM">5:30AM</option>
+			    </select>
+			</div>
+		</div>
+		<div class="col-5 form-section">
+			<label for="f-front-end-message">Front-End Message</label>
+			<input type="text" id="f-front-end-message" maxlength="28" name="f-front-end-message" value="<%= frontEndMessage %>">
+		</div>
+	</div>
+</div>
+</form>
+
+<div class="row row-spaced panel form-section">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Fees for Days of the Week to be Added to Other Delivery Fees<i class="icon icon-tool-tip x-space-s" title="???"></i></div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+	<table class="table alternate">
+		<thead>
+			<tr>
+				<th class="col-4 left-align indented-s">Day</th>
+				<th class="col-4">Fee Amount</th>
+				<th class="col-4">Active</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="left-align"><span class="x-space-s font-size-xxl">Monday</span></td>
+				<td>
+					<div class="centered-content-container">
+					<div class="dollar-container fee">
+					<input type="text" id="f-monday-fee" name="f-monday-fee" value="<%= mondayFee %>">
+					</div>
+					</div>
+				</td>
+				<td>
+					<div class="centered-content-container">
+						<input <%= mondayFeeActive ? 'checked' : '' %> type="checkbox" id="f-monday-fee-active" name="f-monday-fee-active" class="on-off-switch" />
+						<label for="f-monday-fee-active" class="on-off-switch-label">
+						    <div class="on-off-switch-state">on</div>
+						</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="left-align"><span class="x-space-s font-size-xxl">Tueday</span></td>
+				<td>
+					<div class="centered-content-container">
+					<div class="dollar-container fee">
+					<input type="text" id="f-tuesday-fee" name="f-tuesday-fee" value="<%= tuesdayFee %>">
+					</div>
+					</div>
+				</td>
+				<td>
+					<div class="centered-content-container">
+						<input <%= tuesdayFeeActive ? 'checked' : '' %> type="checkbox" id="f-tuesday-fee-active" name="f-tuesday-fee-active" class="on-off-switch" />
+						<label for="f-tuesday-fee-active" class="on-off-switch-label">
+						    <div class="on-off-switch-state">on</div>
+						</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="left-align"><span class="x-space-s font-size-xxl">Wednesday</span></td>
+				<td>
+					<div class="centered-content-container">
+					<div class="dollar-container fee">
+					<input type="text" id="f-wednesday-fee" name="f-wednesday-fee" value="<%= wednesdayFee %>">
+					</div>
+					</div>
+				</td>
+				<td>
+					<div class="centered-content-container">
+						<input <%= wednesdayFeeActive ? 'checked' : '' %> type="checkbox" id="f-wednesday-fee-active" name="f-wednesday-fee-active" class="on-off-switch" />
+						<label for="f-wednesday-fee-active" class="on-off-switch-label">
+						    <div class="on-off-switch-state">on</div>
+						</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="left-align"><span class="x-space-s font-size-xxl">Thursday</span></td>
+				<td>
+					<div class="centered-content-container">
+					<div class="dollar-container fee">
+					<input type="text" id="f-thursday-fee" name="f-thursday-fee" value="<%= thursdayFee %>">
+					</div>
+					</div>
+				</td>
+				<td>
+					<div class="centered-content-container">
+						<input <%= thursdayFeeActive ? 'checked' : '' %> type="checkbox" id="f-thursday-fee-active" name="f-thursday-fee-active" class="on-off-switch" />
+						<label for="f-thursday-fee-active" class="on-off-switch-label">
+						    <div class="on-off-switch-state">on</div>
+						</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="left-align"><span class="x-space-s font-size-xxl">Friday</span></td>
+				<td>
+					<div class="centered-content-container">
+					<div class="dollar-container fee">
+					<input type="text" id="f-friday-fee" name="f-friday-fee" value="<%= fridayFee %>">
+					</div>
+					</div>
+				</td>
+				<td>
+					<div class="centered-content-container">
+						<input <%= fridayFeeActive ? 'checked' : '' %> type="checkbox" id="f-friday-fee-active" name="f-friday-fee-active" class="on-off-switch" />
+						<label for="f-friday-fee-active" class="on-off-switch-label">
+						    <div class="on-off-switch-state">on</div>
+						</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="left-align"><span class="x-space-s font-size-xxl">Saturday</span></td>
+				<td>
+					<div class="centered-content-container">
+					<div class="dollar-container fee">
+					<input type="text" id="f-saturday-fee" name="f-saturday-fee" value="<%= saturdayFee %>">
+					</div>
+					</div>
+				</td>
+				<td>
+					<div class="centered-content-container">
+						<input <%= saturdayFeeActive ? 'checked' : '' %> type="checkbox" id="f-saturday-fee-active" name="f-saturday-fee-active" class="on-off-switch" />
+						<label for="f-saturday-fee-active" class="on-off-switch-label">
+						    <div class="on-off-switch-state">on</div>
+						</label>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="left-align"><span class="x-space-s font-size-xxl">Sunday</span></td>
+				<td>
+					<div class="centered-content-container">
+					<div class="dollar-container fee">
+					<input type="text" id="f-sunday-fee" name="f-sunday-fee" value="<%= sundayFee %>">
+					</div>
+					</div>
+				</td>
+				<td>
+					<div class="centered-content-container">
+						<input <%= sundayFeeActive ? 'checked' : '' %> type="checkbox" id="f-sunday-fee-active" name="f-sunday-fee-active" class="on-off-switch" />
+						<label for="f-sunday-fee-active" class="on-off-switch-label">
+						    <div class="on-off-switch-state">on</div>
+						</label>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	</div>
+</div>

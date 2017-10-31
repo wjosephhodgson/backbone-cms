@@ -1,0 +1,19 @@
+<div class="row row-spaced">
+	<div class="col-12">Delivery Zip Code is among the local zip codes which are set inside Custom Fees setup section.</div>
+</div>
+
+<div class="row row-spaced">
+
+	<div class="col-3 form-section">
+	  <label for="f-deliveryStartDate">Delivery Start Date</label>
+	  <div class="date-container">
+	    <input type="text" id="f-deliveryStartDate" name="f-deliveryStartDate" class="date f-promo-required" value="<%= deliveryStartDate %>"<% if(federated){ %> disabled<% } %>>
+	  </div>
+	</div>
+	<div class="col-3 form-section">
+	  <label for="f-deliveryEndDate">Delivery End Date</label>
+	  <div class="date-container">
+	    <input type="text" id="f-deliveryEndDate" name="f-deliveryEndDate" class="date f-promo-required" value="<%= deliveryEndDate %>"<% if(federated){ %> disabled<% } %>>
+	  </div>
+	</div>
+</div>

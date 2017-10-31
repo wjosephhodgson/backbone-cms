@@ -1,0 +1,35 @@
+[
+	{
+		"id": 1,
+		"promoCode":"TrickOrTreat",
+		"startDate":"10/20/2014",
+		"endDate":"10/21/2014",
+		"discountType":"Dollars Off",
+		"discountAmt":"5",
+		"condition":"AAP",
+		"description":"Halloween",
+		"federated":true
+	},
+	{
+		"id": 2,
+		"promoCode":"turkey",
+		"startDate":"11/20/2014",
+		"endDate":"11/21/2014",
+		"discountType":"Percentage Off",
+		"discountAmt":"10",
+		"condition":"M",
+		"description":"Thanksgiving",
+		"federated":false
+	},
+	{
+		"id": 3,
+		"promoCode":"hohoho",
+		"startDate":"12/20/2014",
+		"endDate":"12/21/2014",
+		"discountType":"Dollars Off",
+		"discountAmt":"1.25",
+		"condition":"ANP",
+		"description":"Christmas",
+		"federated":false
+	}
+]

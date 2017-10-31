@@ -1,0 +1,25 @@
+<div class="row row-spaced form-section">
+  <div class="col-3">
+    <label>Price Point Label</label>
+    <input type="text" disabled value="<%= skuLabel %>">
+  </div>
+  <div class="col-3">
+    <label for="f-discountAmount-<%= id %>">Discount Amount</label><i class="icon icon-tool-tip x-space-s" title="This is how much the product will be discounted."></i>
+    <div class="dollar-container">
+    <input <%= type === 'Teleflora' ? 'disabled' : '' %> type="text" id="f-discountAmount-<%= id %>" name="f-discountAmount-<%= id %>" value="<%= discountAmount %>">
+    </div>
+  </div>
+
+  <div class="col-3">
+    <label for="f-discountStartDate-<%= id %>">Start Date</label><i title="This is the day that the discount will become active and will be available." class="icon icon-tool-tip x-space-s"></i>
+    <div class="date-container">
+        <input <%= type === 'Teleflora' ? 'disabled' : '' %> type="text" id="f-discountStartDate-<%= id %>" name="f-discountStartDate-<%= id %>" class="date" value="<%= discountStartDate %>">
+    </div>
+  </div>
+  <div class="col-3">
+    <label for="f-discountEndDate-<%= id %>">End Date</label><i title="This is the day that the discount will become inactive and will no longer be available." class="icon icon-tool-tip x-space-s"></i>
+    <div class="date-container">
+        <input <%= type === 'Teleflora' ? 'disabled' : '' %> type="text" id="f-discountEndDate-<%= id %>" name="f-discountEndDate-<%= id %>" class="date" value="<%= discountEndDate %>">
+    </div>
+  </div>
+</div>

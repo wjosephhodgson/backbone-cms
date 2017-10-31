@@ -1,0 +1,56 @@
+// m-social-buttons
+.m-social-container{
+  //container for social networks icon-links
+  margin-top: 1.5em;
+  text-align: left;
+
+  @include mobile() {
+    text-align: center;
+  }
+
+  .m-social {
+    //used in each social element
+    display: inline-block;
+    margin: 0 auto;
+    width: 280px;
+    padding: 0;
+
+    .m-social-p {
+      //pinterest
+      width: 16%;
+      margin-right: 0;
+      @include desktop() {
+        margin-left: 0em;
+      }
+    }
+
+    .m-social-t {
+      //twitter
+      width: 33%;
+      margin-left: 0em;
+      margin-right: 0em;
+    }
+
+    .m-social-g {
+      //google plus
+      margin-left: 0em;
+      margin-right: 0em;
+      width: 24%;
+    }
+
+    .m-social-f {
+      //facebook
+      margin-left: 0em;
+      margin-right: 0em;
+      width: 27%;
+    }
+    &.m-social-collection {
+      display: block;
+      width: 100%;
+      max-width: 24em;
+      &.m-social-left {
+        float: left;
+      }
+    }
+  }
+}

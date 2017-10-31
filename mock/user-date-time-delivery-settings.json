@@ -1,0 +1,21 @@
+{
+	"sameDayFee": "0.00",
+	"earlyFeeActive": true,
+	"earlyFee": "0.00",
+	"cutOffTime": "5:00PM",
+	"frontEndMessage": "Delivery By 11:00 AM for only 5 more",
+	"mondayFee": "0.00",
+	"mondayFeeActive": true,
+	"tuesdayFee": "0.00",
+	"tuesdayFeeActive": true,
+	"wednesdayFee": "0.00",
+	"wednesdayFeeActive": true,
+	"thursdayFee": "1.00",
+	"thursdayFeeActive": true,
+	"fridayFee": "2.00",
+	"fridayFeeActive": true,
+	"saturdayFee": "4.00",
+	"saturdayFeeActive": true,
+	"sundayFee": "6.00",
+	"sundayFeeActive": true
+}

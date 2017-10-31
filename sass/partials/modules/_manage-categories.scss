@@ -1,0 +1,109 @@
+.td-category, .td-collection {
+	width: 32%;
+}
+
+.td-category-type, .td-collection-type {
+	width: 15%;
+}
+
+.td-page-type {
+	width: 11%;
+}
+
+.td-start-date {
+	width: 11%;
+}
+
+.td-end-date {
+	width: 11%;
+}
+
+.td-status {
+	width: 14%;
+}
+
+.td-edit {
+	width: 6%;
+}
+
+.header-active-space {
+	float: left; 
+	margin-left: 10px; 
+	position: relative;
+}
+
+.header-spacing-top {
+	margin-top: 20px;
+}
+
+.header-active-pad-bottom {
+	padding-bottom: 50px;
+}
+
+.fileUpload {
+	position: relative;
+	overflow: hidden;
+	margin: 10px;
+}
+.fileUpload input.upload {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	cursor: pointer;
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.btn-Boostrap {
+  display: inline-block;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #35c10a;
+}
+
+.right-pad-tabs {
+   padding-right: 30px !important;
+}
+
+.panel.alert-panel-success, .alert-panel-success.panel-list {
+  background-color: #93D995;
+}
+
+.panel.alert-panel-success .alert-text-success, .alert-panel-success.panel-list .alert-text {
+  font-size: 1.2em;
+}
+
+
+  .hide-calendar .ui-datepicker-calendar {
+    display: none !important;
+}
+
+.wrap-text {
+	white-space: nowrap; 
+	overflow: hidden; 
+	text-overflow: ellipsis;
+}
+
+#product-search-list {
+	.wrap-text {
+		max-width: 13em;
+	}
+}
+
+.break-text {
+	word-break: break-all;
+}

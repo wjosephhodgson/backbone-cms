@@ -1,0 +1,32 @@
+<div class="page-change-modal">
+
+  <div class="row row-spaced">
+    <div class="col-12">
+      <div class="clearfix section-title">
+        <h2 class="pull-left"><%= title %></h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-spaced">
+    <div class="col-12 left-align">
+      <%= text %>
+    </div>
+  </div>
+
+  <div class="row row-spaced">
+    <div class="col-12">
+      <div class="btn-container-space-s">
+        <% if(!singleBtn) { %>
+        <button id="cancel" class="btn btn-other"><%= cancelBtnText %></button>
+        <% } %>
+        <button id="confirm" class="btn btn-submit"><%= confirmBtnText %></button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="page-save-tip">
+  <div role="tooltip" class="ui-tooltip ui-widget ui-corner-all ui-widget-content" style="display: none;"><div class="ui-tooltip-content">???</div></div>
+</div>

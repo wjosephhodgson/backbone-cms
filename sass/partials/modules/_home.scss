@@ -1,0 +1,66 @@
+// ============================================================================
+// Home
+// ============================================================================
+#active-quick-links {
+	& .grid-item {
+		position: relative;
+		padding-bottom: $space-xl;
+		height: 100px;
+	}
+
+	& .icon-trash {
+		position: absolute;
+		bottom: $space-s;
+		left: $space-s;
+	}
+
+	& img {
+		height: auto;
+		width: 40%;
+		max-width: 100px * .4;
+	}
+}
+
+#all-quick-links {
+	& img {
+		height: 30px;
+		width: auto;
+		vertical-align: middle;
+	}
+
+	& button {
+		height: 30px;
+	}
+}
+
+.btn-quick-link {
+	text-align: left;
+	letter-spacing: .05em;
+    padding-left: $space-s;
+    padding-right: $space-s;
+
+    .icon {
+		display:inline-block;
+		vertical-align:middle;
+		width:20%;
+    }
+
+    .quick-link-text {
+		display:inline-block;
+		vertical-align:middle;
+		width:75%;
+		font-size: $font-size-xxs;
+	}
+}
+
+.stats-panel {
+    background-color: $color-stats-panel;
+    padding: $space-s;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+#quick-links-modal {
+	max-width: 650px;
+}
+

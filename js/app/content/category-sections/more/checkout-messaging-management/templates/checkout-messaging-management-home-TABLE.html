@@ -1,0 +1,27 @@
+<tr> 
+    <td class="left-align indented-l"><%= AssociatedPage %> </td>
+    <td class="left-align"><%= StartDate %></td>
+    <td class="left-align"><%= EndDate %> </td>
+    <td class="center-align"><%= type %> </td>
+	<td class="center-align hide-overflow">  
+        <div class="centered-content-container">
+            <input <%= CheckoutMessagingActive ? 'checked' : ''%> type="checkbox" id="<%= 'checkoutmessaging-status-active-' + id %>" name="<%= 'checkoutmessaging-status-active-' + id %>" data-id="<%=id%>" class="on-off-switch checkoutMessagingActive-switch" />
+            <label for="<%= 'checkoutmessaging-status-active-' + id %>" class="on-off-switch-label">
+                <div class="on-off-switch-state">on</div>
+            </label>
+        </div>
+    </td>  
+    <td class="center-align"> 
+        <% if(type === 'Teleflora') { %> 
+            <!-- <button type="button" class="icon icon-btn icon-2x icon-edit"></button> -->
+            <button type="button" class="icon icon-btn icon-2x icon-search"></button>   
+        <% } else { %>
+            <button type="button" class="icon icon-btn icon-2x icon-edit"></button>
+        <% } %>
+    </td>  
+    <td class="center-align"> 
+        <% if(type === 'Custom') { %>
+            <button type="button" class="icon icon-btn icon-trash icon-2x"></button> 
+        <% } %>
+    </td> 
+</tr>

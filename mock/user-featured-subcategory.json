@@ -1,0 +1,22 @@
+[
+	{
+		"name":"Valentine's day",
+		"rank": 1,
+		"active": true
+	},
+	{
+		"name":"Birthday",
+		"rank": 2,
+		"active": true
+	},
+	{
+		"name":"Anniversary",
+		"rank": 3,
+		"active": true
+	},
+	{
+		"name":"My Custom Category",
+		"rank": 4,
+		"active": true
+	}
+]

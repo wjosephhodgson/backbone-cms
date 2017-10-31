@@ -1,0 +1,12 @@
+<div class="<%= !parent ? 'top-level-category' : '' %> row <%= parent || visible ? '' : 'hidden-alt' %>" data-id="<%= id %>">
+    <div class="parent-name <%= selected ? 'active' : 'clickable' %> clearfix">
+        <div class="left-align level-<%= level %> col-12">
+            <% if (children.length) { %>
+                <button type="button" id="outer" class="toggle-btn icon icon-btn icon-opened icon-2x"></button>
+            <% } %>
+            <%= name %>
+        </div>
+    </div>
+
+    <div class="nested-rows"></div>
+</div>

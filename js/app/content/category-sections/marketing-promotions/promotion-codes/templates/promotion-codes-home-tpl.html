@@ -1,0 +1,85 @@
+<div class="row row-spaced">
+  <div class="col-12">
+    <div class=" clearfix section-title">
+      <h2 class="pull-left">Manage Promotion Codes</h2>
+      <div class="btn-panel">
+        <button id="save-btn" class="btn btn-submit">Save Changes</button>
+        <div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row row-spaced">
+  <div class="col-12">
+    Use this page to manage the promotion codes on your site. You can manage all of the existing codes using the table below or create new codes.
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row row-spaced">
+
+  <div class="col-12 form-section">
+
+    <div class="col-4">
+      <div class="row">
+        <label for="f-search-promotion-code">Search for Promotion Code</label>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="row">
+              <div class="search-container">
+                <input type="text" id="f-search-promotion-code" name="f-search-promotion-code">
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-8">
+      <div class="row">
+        <button id="add-btn" type="button" class="y-space-top-l btn compact btn-submit pull-right"><i class="icon icon-add"></i>Advanced Promo</button>  
+        <button id="quick-btn" type="button" class="y-space-top-l x-space-m btn compact btn-submit pull-right"><i class="icon icon-add"></i>Quick Promo</button>          
+      </div>
+    </div>
+
+  </div> 
+
+</div>
+
+<div class="row row-spaced">
+  <div class="col-12">
+  <table id="promotion-codes-table" class="table alternate">
+    <thead>
+      <tr>
+        <th>Promo Code <button data-attribute="code" class="icon icon-btn icon-sort sort-btn"></button></th>
+        <th>Discount</th>
+        <th>Start Date <button data-attribute="startDate" class="icon icon-btn icon-sort sort-btn"></button></th>
+        <th>End Date <button data-attribute="endDate" class="icon icon-btn icon-sort sort-btn"></button></th>
+        <th>Status</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody id="promotion-codes-list"></tbody>
+  </table>
+  </div>
+</div>

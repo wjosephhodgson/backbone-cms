@@ -1,0 +1,126 @@
+<form id="Social-Media-HPage" name="f-Social-Media-HPage" class="form-section">
+ 	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="clearfix section-title">
+				<h2 class="pull-left">Social Media Management </h2>
+				<div class="btn-panel">
+					<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+					<button type="button" id="cancel-btn" class="btn btn-other">Cancel</button>
+					<button type="button" id="save-btn" class="btn btn-submit pull-right">
+						Save
+					</button>
+					<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			You can manage social media settings by editing the settings below.
+		</div>
+	</div>
+
+<div class="row row-spaced panel">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Social Media Icons General Settings</div>
+		</div>
+	</div>
+
+
+	<div class="row row-spaced form-section" >   
+		<div class="col-4">
+			<div class="label">Show in Header
+
+			<i title="Leave this turned on to show icons at the Header on your Site." class="icon icon-tool-tip x-space-s"></i>
+
+			</div>
+
+		<input <%= showInHeaderActive ? 'checked' : '' %> type="checkbox" id="f-showInHeaderActive" name="f-showInHeaderActive" class="on-off-switch"/>
+
+
+			<label for="f-showInHeaderActive" class="on-off-switch-label">
+			    <div class="on-off-switch-state">on</div>
+			</label>
+		</div>
+		<div class="col-4">
+			<div class="label">Show in Footer<i title="Leave this turned on to show icons at the in the Footer of your Site." class="icon icon-tool-tip x-space-s"></i></div>
+
+			<input <%= showInFooterActive ? 'checked' : '' %> type="checkbox" id="f-showInFooterActive" name="f-showInFooterActive" class="on-off-switch" />
+
+			<label for="f-showInFooterActive" class="on-off-switch-label">
+			    <div class="on-off-switch-state">on</div>
+			</label>
+		</div>
+
+		<div class="col-4">
+			<div class="label">Show In Contact us Box<i title="Leave this turned on to show icons in the Contact us Box on your Site." class="icon icon-tool-tip x-space-s"></i></div>
+			<input  <%= showInContactBxActive ? 'checked' : '' %> type="checkbox" id="f-showInContactBxActive" name="f-showInContactBxActive" class="on-off-switch" />
+			<label for="f-showInContactBxActive" class="on-off-switch-label">
+			    <div class="on-off-switch-state">on</div>
+			</label>
+		</div> 
+
+	</div>
+</div>  <!-- Social Media Icons General Settings Section ends here -->
+
+<div class="row panel">
+	<div class="row">
+		<div class="col-12">
+			<button type="button" id="add-new-btn" class="btn btn-submit pull-right">
+				<i class="icon icon-add icon-lg"></i> ADD CHANNEL
+			</button>  <!-- Add New Social Media Channel-->
+		<div class="panel-title y-space-top-m">Social Media Channels Settings </div>
+	</div>
+</div>
+			<div class="row row-spaced">
+		<div class="col-12">
+			Add your social media pages links in this section. Top 5 active social media channels will show up on your website.
+		</div>
+	</div>   
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			<table class="table alternate">
+				<thead>
+					<tr class="form-section">
+						<th class="col-1 indented-s">Sequence</th>
+						<th class="col-1"></th>    <!-- Channels Logo -->
+						<th class="col-2">Channels Name</th> 
+						<th class="col-3 left-align">Store's Social Page Link</th>
+						<th class="col-2">Status</th> 
+						<th class="col-1">Edit</th>  
+						<!-- Note: Only New Added Social Media Channels should possess Edit Capabilities -->
+					</tr>
+				</thead>
+				<tbody id="socialMedia-List"></tbody>
+			</table>
+		</div>
+	</div>
+
+	</div>
+	</div>
+	
+</form>
+
+		 <!-- Social Media Channel Settings Ends here -->

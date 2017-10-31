@@ -1,0 +1,178 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Manage Floral App Settings</h2>
+			<button type="button" id="save-btn" class="btn btn-submit pull-right">Save</button>
+			<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced">
+	<div class="col-12">
+		Use this page to manage the settings for your Floral App. You can create new Floral App promo codes, create push notifications, or change your other Floral App settings such as delivery text.
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row row-spaced">
+	<div class="col-12">
+
+			<div id="mktg">
+
+				<div class="panel">
+				<div class="row">
+					<div class="col-12">
+						<div class="panel-title">App Status</div>
+					</div>
+				</div>
+				<div class="row row-spaced">
+					<div class="col-4 form-section">
+						<div class="label">Enrollment Status<i title="This indicates whether or not you are currently enrolled in the Floral App Program." class="icon icon-tool-tip x-space-s"></i></div>
+						<input type="text" readonly id="f-enrollment" name="f-enrollment" value="<%= enrollment %>" disabled>
+					</div>
+					<div class="col-2"></div>
+					<div class="col-4 form-section">
+						<div class="label">Your Unique Floral App Code<i title="This is the code unique to your Floral App which your customers can use to find you on Floral App." class="icon icon-tool-tip x-space-s"></i></div>
+						<input type="text" readonly id="f-appCode" name="f-appCode" value="<%= appCode %>" disabled>
+					</div>		
+				</div>
+				</div>
+				<div class="row row-spaced y-space-top-m"></div>
+				
+				<div class="panel">
+				<div class="row">
+					<div class="col-12">
+						<div class="panel-title">Display Graphics & Banners</div>
+					</div>
+				</div>		
+				<div class="row row-spaced">
+					<div class="col-6 form-section">
+						<div class="row">
+							<div class="col-5">
+		 						<div class="label">App Logo Image</div>
+								<input <%= logo ? 'checked' : '' %> type="checkbox" id="f-logo" name="f-logo" class="on-off-switch" />
+								<label for="f-logo" class="on-off-switch-label">
+									<div class="on-off-switch-state">on</div>
+								</label>
+							</div>
+							<div class="col-1">
+								<label for="f-image-logo">Image</label>
+								<button type="button" id="f-image-logo" class="image-upload icon icon-btn icon-image btn-file icon-2x y-space-s"></button>
+							</div>
+						</div>	 	
+						<div class="row row-spaced form-section">
+							<div class="col-12">
+								<img id="f-logoImg-image" class="medium-table-image" src="<%= logoImg %>" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="col-6 form-section">
+						<div class="row">
+							<div class="col-5">
+		 						<div class="label">App Splash Image</div>
+								<input <%= splash ? 'checked' : '' %> type="checkbox" id="f-splash" name="f-splash" class="on-off-switch" />
+								<label for="f-splash" class="on-off-switch-label">
+									<div class="on-off-switch-state">on</div>
+								</label>
+							</div>
+							<div class="col-1">
+								<label for="f-image-splash">Image</label>
+								<button type="button" id="f-image-splash" class="image-upload icon icon-btn icon-image btn-file icon-2x y-space-s"></button>
+							</div>
+						</div>	 	
+						<div class="row row-spaced form-section">
+							<div class="col-12">
+								<img id="f-splash-image" class="medium-table-image" src="<%= splashImg %>" alt="">
+							</div>
+						</div>	
+					</div>
+				</div>						
+				<div class="row row-spaced">
+					<div class="col-6 form-section">
+						<div class="row">
+							<div class="col-5">
+		 						<div class="label">Email Banner</div>
+								<input <%= emails ? 'checked' : '' %> type="checkbox" id="f-emails" name="f-emails" class="on-off-switch" />
+								<label for="f-emails" class="on-off-switch-label">
+									<div class="on-off-switch-state">on</div>
+								</label>
+							</div>
+							<div class="col-1">
+								<label for="f-image-email">Image</label>
+								<button type="button" id="f-image-email" class="image-upload icon icon-btn icon-image btn-file icon-2x y-space-s"></button>
+							</div>
+						</div>	 	
+						<div class="row row-spaced form-section">
+							<div class="col-12">
+								<img id="f-emailImg-image" class="medium-table-image" src="<%= emailImg %>" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="col-6 form-section">
+						<div class="row">
+							<div class="col-5">
+		 						<div class="label">About Us Banner</div>
+								<input <%= aboutUs ? 'checked' : '' %> type="checkbox" id="f-aboutUs" name="f-aboutUs" class="on-off-switch" />
+								<label for="f-aboutUs" class="on-off-switch-label">
+									<div class="on-off-switch-state">on</div>
+								</label>
+							</div>
+							<div class="col-1">
+								<label for="f-image-about">Image</label>
+								<button type="button" id="f-image-about" class="image-upload icon icon-btn icon-image btn-file icon-2x y-space-s"></button>
+							</div>
+						</div>	 	
+						<div class="row row-spaced form-section">
+							<div class="col-12">
+								<img id="f-aboutUs-image" class="medium-table-image" src="<%= aboutUsImg %>" alt="">
+							</div>
+						</div>	
+					</div>
+				</div>
+				</div>
+
+				<div class="row row-spaced y-space-top-m"></div>
+				
+				<div class="panel">
+				<div class="row">
+					<div class="col-12">
+						<div class="panel-title">App Text</div>
+					</div>
+				</div>		
+				<div class="row row-spaced form-section">
+					<div class="col-12">
+						<div class="label">
+							Profile Message
+						</div>
+					</div>
+					<div class="col-12">
+						<textarea name="f-profileMsg" id="f-profileMsg" class="size-2"><%= profileMsg %></textarea>
+					</div>
+				</div>	
+				</div>			
+			</div><!-- end tab 1 -->	
+
+	</div>
+</div>
+
+<div id="quick-promo-modal"></div>
+<div id="adv-promo-modal"></div>
+<div id="push-modal"></div>

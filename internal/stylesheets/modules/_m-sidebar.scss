@@ -1,0 +1,260 @@
+.m-sidebar-nav-toggle {
+  width:100%;
+  margin:1em 0 0.75em 0;
+  padding: 0.5em 0 0.5em 0.75em;
+  border-top:1px solid $accent-grey;
+  border-bottom:1px solid $accent-grey;
+  background-color: $grey;
+  font-family: $sans-stack-heavy;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.m-sidebar-nav-toggle-submenu {
+  width:100%;
+  margin:0em 0 0em 0;
+  padding: 0.5em 0 0.5em 0.75em;
+  border-bottom:1px solid $accent-grey;
+  font-family: $sans-stack-heavy;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.m-sidebar-nav-toggle-bottom {
+  width:100%;
+  margin:0 0 0.75em 0;
+  padding: 0.25em 0 0.25em 0.75em;
+  border-bottom:1px solid $accent-grey;
+  background-color: $grey;
+}
+
+.m-sidebar-nav-bypas-first-child {
+  padding-top: 0.5em !important;
+}
+
+.m-sidebar-nav {
+  text-align: left;
+
+  &.m-sidebar-nav-desktop {
+    @include desktop {
+     margin-top: -0.25em;
+    }
+  }
+
+  &.m-sidebar-nav-mobile {
+    @include mobile {
+      margin-bottom: 0.5em;
+    }
+  }
+
+  .m-sidebar-nav-list, .m-sidebar-nav-sub-list  {
+    position:relative;
+    width:100%;
+    height:auto;
+    margin:0;
+    padding:0;
+    list-style:none;
+    @include transition(transform, 0.5s);
+
+    .m-sidebar-nav-list-item {
+      @include mobile {
+        padding: 0.5em 0 0.5em 0.75em;
+        border-bottom: 1px solid $accent-grey;
+      }
+      @include desktop {
+        padding: 0.25em 0 0.25em 0;
+        border: none;
+      }
+    }
+
+    .m-sidebar-nav-list-item, .m-sidebar-nav-sub-list-item  {
+
+      .m-sidebar-nav-list-item-link {
+        position:relative;
+        font-family:$sans-stack-heavy;
+        color:$black;
+        text-decoration:none !important;
+        text-transform:uppercase;
+
+        &.no-caps {
+          text-transform: none;
+        }
+
+        &:hover {
+          color: $pink;
+        }
+      }
+
+      &:first-child {
+        padding-top: 0;
+      }
+
+      &.active {
+        > a {
+          color: $pink;
+
+          &:after {
+            visibility: visible;
+          }
+        }
+      }
+    }
+
+    .m-sidebar-nav-sub-list {
+      padding-left: 1em;
+
+      @include desktop {
+        margin-top: 0.25em;
+      }
+      .m-sidebar-nav-sub-list-item {
+        padding: 0.1em 0;
+      }
+    }
+
+    .m-sidebar-nav-list-item {
+      > .m-nav-list-item-link:after {
+        position:relative;
+        visibility: hidden;
+        content: "\0000a0\0000a0";
+        display: inline;
+        margin-left:10px;
+        background-image: url("../images/ui-sprite.svg");
+        background-position: -128px 1px;
+        background-repeat: no-repeat;
+
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.no-svg {
+  .m-nav-list-item-link:after {
+    background-image: url("../images/ui-sprite.png") !important;
+  }
+}
+
+.m-sidebar-learn-more {
+  position:relative;
+  margin-top:2em;
+  padding:0.5em 1em;
+  margin-bottom:1.5em;
+  border:1px dotted $dark-grey;
+
+  .m-sidebar-learn-more-header {
+    padding-bottom: 0.25em;
+    margin-bottom: 0.25em;
+  }
+  .m-sidebar-nav-list-item {
+    padding: 0.33em 0 !important;
+  }
+}
+
+.stickyBox {
+  position: relative;
+  min-width: 216px;
+  padding: 0;
+  margin-top: 0;
+  z-index: 1;
+
+  &.isSticky {
+    position: fixed;
+    top: 0;
+    margin-top: 0.666em;
+  }
+}
+
+.m-sidebar-contact-us {
+  border: 1px dotted $dark-grey;
+  padding: 0.5em 1em;
+  background-color: $grey;
+
+  @include mobile {
+    margin: 1.0em 0;
+  }
+
+  .icon-geopin, .icon-phone, .icon-email {
+    position: absolute;
+  }
+}
+
+.m-sidebar-back-to-top {
+  display: none;
+
+  .icon-arrow-up-pink {
+    display: inline-block;
+    margin-left: 0.5em;
+    float: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.m-sidebar-contact-us-desktop {
+  margin-bottom: 1em;
+}
+
+.m-sidebar-contact-us-mobile {
+  float: none;
+}
+
+.m-sidebar-contact-us-header {
+  padding-bottom: 0.25em;
+  margin-bottom: 0.5em;
+}
+
+.m-sidebar-contact-us-content {
+  display: block;
+
+  .phone {
+    padding-top: 0.1em;
+    padding-bottom: 0.2em;
+
+    a {
+      color: $black;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:hover, &:active {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .email {
+    padding-top: 0.3em;
+    padding-bottom: 0.5em;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  .address {
+    margin-bottom: 0.5em;
+  }
+
+  .m-sidebar-contact-us-content-text {
+    padding-left: 2em;
+    line-height: 1.4em;
+  }
+  &:first-child {
+    margin-top: 1em;
+  }
+}
+
+// IE Fixes
+.oldie {
+  .stickyBox {
+    min-width: 0;
+  }
+}
+

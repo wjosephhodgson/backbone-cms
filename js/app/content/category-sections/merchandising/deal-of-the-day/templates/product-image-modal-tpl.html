@@ -1,0 +1,186 @@
+<div id="image-modal" class="left-align">
+  <div id="aviary" class="hidden-alt"></div>
+  <div class="row row-spaced">
+    <div class="col-12">
+      <div class="clearfix section-title">
+        <h2 class="pull-left"><%= name %> Images</h2>
+        <button type="button" id="save-btn" class="btn btn-submit pull-right left-offset-m hidden">Save</button>        
+        <button type="button" id="cancel-btn" class="btn btn-other pull-right">Cancel</button>
+      </div>
+    </div>
+  </div>
+  <!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+  <div class="row panel alert-panel hidden-alt">
+    <div class="col-12">
+      <div class="row">
+        <div class="col-1">
+          <div class="icon icon-3x icon-warning"></div>
+        </div>
+        <div class="col-11 alert-text left-align">
+          You have uploaded an invalid image file.  Please upload image files that have
+          extensions '.gif', '.jpg', '.jpeg', '.bmp' or '.png'.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row row-spaced">
+    <div class="col-12 left-align">
+      Shown below are the various images for the <%= name %> product used on your site. You can click one of the below images to edit it or upload a new version. You can also change the editing mode to "advanced" if you would like to edit the different sizes of each image manually. Otherwise, eSAT will automatically size the product's images to fit your site.
+    </div>
+  </div>
+  <div class="row row-spaced">    
+    <div id="edit-btn-panel" class="col-6 left-align hidden-alt y-space-top-l form-section">
+      <button type="button" id="delete-btn" class="btn btn-cancel">Delete</button>
+      <button type="button" id="edit-btn" class="btn btn-other x-space-s">Edit</button>
+      <button type="button" id="upload-button" class="btn btn-submit btn-file x-space-s">
+        <input type="file" id="upload-btn" accept="image/*">
+        <i class="icon icon-add icon-lg"></i> Upload
+      </button>      
+    </div>  
+    <div class="col-4 form-section select-container pull-right">
+      <label for="f-editing-mode">Editing Mode</label>
+      <select id="f-editing-mode" name="f-editing-mode">
+        <option selected="selected" value="Basic">Basic</option>
+        <option value="Advanced">Advanced</option>
+      </select>
+    </div>
+  </div>
+
+  <canvas id="product-image-canvas" class="hidden"></canvas>
+  <img id="placeholder" class="hidden">
+
+  <div class="row row-spaced">
+    <div class="col-12">
+      <div class="col-3 form-section">
+        <div class="label">White Background</div>
+        <div class="grid-item clickable" id="product-image-A1" data-img="A1">
+          <div class="product-image-dimensions padded-s left-align hidden">500x500px</div>
+          <% if(imgA1) { %>
+            <img id="img_imgA1" class="fit-container" src="<%= imgA1 %>" alt="<%= name %>"/>
+          <% } else { %>
+            <div class="icon icon-question-circle icon-alt-color-1 icon-large-3x center-align padded-s"></div>
+          <% } %>
+        </div>
+      </div>
+      <div class="col-1"></div>
+      <div class="col-3 form-section">
+        <div class="label">Transparent Background</div>
+        <div class="grid-item clickable" id="product-image-B1" data-img="B1">
+          <div class="product-image-dimensions padded-s left-align hidden">500x500px</div>
+          <% if(imgB1) { %>
+            <img id="img_imgB1" class="fit-container" src="<%= imgB1 %>" alt="<%= name %>"/>
+          <% } else { %>
+            <div class="icon icon-question-circle icon-alt-color-1 icon-large-3x center-align padded-s"></div>
+          <% } %>
+        </div>
+      </div>
+      <div class="col-1"></div>
+      <div class="col-3 form-section">
+        <div class="label">Environmental Background</div>
+        <div class="grid-item clickable" id="product-image-C1" data-img="C1">
+          <div class="product-image-dimensions padded-s left-align hidden">500x500px</div>
+          <% if(imgC1) { %>
+            <img id="img_imgC1" class="fit-container" src="<%= imgC1 %>" alt="<%= name %>"/>
+          <% } else { %>
+            <div class="icon icon-question-circle icon-alt-color-1 icon-large-3x center-align padded-s"></div>
+          <% } %>
+        </div>
+      </div>      
+    </div>
+  </div>
+
+  <div id="product-images-advanced" class="hidden">
+    <div class="row row-spaced">
+      <div class="col-12">
+        <div class="col-3 form-section">     
+          <div class="grid-item clickable" id="product-image-A2" data-img="A2">
+            <div class="product-image-dimensions left-align padded-s">300x300px</div>
+            <% if(imgA2) { %>
+              <img id="img_imgA2" class="fit-container" src="<%= imgA2 %>" alt="<%= name %>"/>
+            <% } else { %>
+              <div class="icon icon-question-circle icon-alt-color-1 icon-large-2x center-align padded-s"></div>
+            <% } %>
+          </div>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-3 form-section">     
+          <div class="grid-item clickable" id="product-image-B2" data-img="B2">
+            <div class="product-image-dimensions left-align padded-s">300x300px</div>
+            <% if(imgB2) { %>
+              <img id="img_imgB2" class="fit-container" src="<%= imgB2 %>" alt="<%= name %>"/>
+            <% } else { %>
+              <div class="icon icon-question-circle icon-alt-color-1 icon-large-2x center-align padded-s"></div>
+            <% } %>
+          </div>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-3 form-section">     
+          <div class="grid-item clickable" id="product-image-C2" data-img="C2">
+            <div class="product-image-dimensions left-align padded-s">300x300px</div>
+            <% if(imgC2) { %>
+              <img id="img_imgC2" class="fit-container" src="<%= imgC2 %>" alt="<%= name %>"/>
+            <% } else { %>
+              <div class="icon icon-question-circle icon-alt-color-1 icon-large-2x center-align padded-s"></div>
+            <% } %>
+          </div>
+        </div> 
+        <div class="col-1"></div>             
+      </div>
+    </div>
+    <div class="row row-spaced">
+      <div class="col-12">
+        <div class="col-3 form-section">     
+          <div class="grid-item clickable" id="product-image-A3" data-img="A3">
+            <div class="product-image-dimensions left-align padded-s">100x100px</div>
+            <% if(imgA3) { %>
+              <img id="img_imgA3" class="fit-container" src="<%= imgA3 %>" alt="<%= name %>"/>
+            <% } else { %>
+              <div class="icon icon-question-circle icon-alt-color-1 icon-large-1x center-align padded-s"></div>
+            <% } %>
+          </div>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-3 form-section">     
+          <div class="grid-item clickable" id="product-image-B3" data-img="B3">
+            <div class="product-image-dimensions left-align padded-s">100x100px</div>
+            <% if(imgB3) { %>
+              <img id="img_imgB3" class="fit-container" src="<%= imgB3 %>" alt="<%= name %>"/>
+            <% } else { %>
+              <div class="icon icon-question-circle icon-alt-color-1 icon-large-1x center-align padded-s"></div>
+            <% } %>
+          </div>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-3 form-section">     
+          <div class="grid-item clickable" id="product-image-C3" data-img="C3">
+            <div class="product-image-dimensions left-align padded-s">100x100px</div>
+            <% if(imgC3) { %>
+              <img id="img_imgC3" class="fit-container" src="<%= imgC3 %>" alt="<%= name %>"/>
+            <% } else { %>
+              <div class="icon icon-question-circle icon-alt-color-1 icon-large-1x center-align padded-s"></div>
+            <% } %>
+          </div>
+        </div>  
+        <div class="col-1"></div>            
+      </div>
+    </div>  
+  </div>
+
+</div>

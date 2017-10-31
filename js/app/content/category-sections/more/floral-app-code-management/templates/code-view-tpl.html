@@ -1,0 +1,12 @@
+<tr>
+	<td class="left-align"><%= siteID %></td>
+	<td class="left-align"><%= floralCode %></td>
+	<td>
+		<div class="centered-content-container">
+			<input <%= active ? 'checked' : '' %> type="checkbox" id="<%=id %>" name="<%=id %>" class="on-off-switch" />
+			<label for="<%=id %>" class="on-off-switch-label no-margin">
+			    <div class="on-off-switch-state">on</div>
+			</label>
+		</div>
+	</td>
+</tr>

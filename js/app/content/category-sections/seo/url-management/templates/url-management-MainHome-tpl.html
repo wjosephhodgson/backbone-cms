@@ -1,0 +1,159 @@
+<div class="row row-spaced form-section">
+	 <div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">URL Management</h2>
+		</div>
+	</div> 
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row panel alert-panel form-section">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-1">
+				<div class="icon icon-3x icon-warning"></div>
+			</div>
+			<div class="col-11 alert-text">
+				This is a generic placeholder for error messages in eSAT. <br>
+				In the live app, this will be a real message and will be hidden by default.
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="y-space-top-xs">Use the settings of this page to manage alternate URLs and URL redirects for your website</div>
+	</div>
+</div>
+
+<!--  ALL TABS Below -->
+<div id="tabs" class="y-space-top-l">
+	<ul>
+		<li class="right-pad-tabs"><a class="url-management-edit-tab" href="#Alternate-Url">Alternate Url</a></li>
+		<li class="right-pad-tabs"><a class="url-management-edit-tab" href="#directory-Redirects">Vanity URLs</a></li>
+		<li class="right-pad-tabs"><a class="url-management-edit-tab" href="#301-Redirects">301 Redirects</a></li>
+	</ul>
+
+	<div id="Alternate-Url">
+		<div class="row">
+			<div class="col-12">
+				<div class="row row-spaced">
+					<div class="col-12 form-section">
+						<div class="label">Vendor Primary Url</div>
+						<input type="text" id="vendor-PrimaryUrl" name="vendor-PrimaryUrl" value="<%= vendorPrimaryURL %>" disabled>
+					</div>
+				</div>
+				<div class="row row-spaced">
+					<div class="col-12">
+						<button type="button" id="add-new-AlternateResourceUrl-btn" class="btn btn-submit pull-right"><i class="icon icon-add"></i>ADD NEW</button>
+						<div class="panel-title y-space-top-l">Alternate URLs<i title="You can add Alternate URLs here. These are additional URLs that your customers may use to access your website other than your primary URL (located under More > General Settings)." class="icon icon-tool-tip x-space-s"></i></div>
+					</div>
+				</div>
+				<div class="row row-spaced"> 
+					<div class="col-12">
+						<table class="table alternate">
+							<thead>
+								<tr class="">
+									<th class="col-6 left-align indented-l">Alternate URL</th>
+									<th class="col-2 left-align">Edit</th>
+									<th class="col-2 left-align">Delete</th>
+								</tr>
+							</thead>
+							<tbody id="AlternateResourceUrl-List"></tbody>
+						</table>
+					</div>		
+				</div>
+			</div>
+		</div>
+	</div> <!-- Alternate URL Ends Here -->
+
+	<div id="directory-Redirects">
+		<div class="row row-spaced">
+			<div class="col-12">
+				<button type="button" id="add-new-DirectoryResourceUrl-btn" class="btn btn-submit pull-right"><i class="icon icon-add"></i>ADD NEW</button>
+				<div class="panel-title y-space-top-l">Vanity URLs<i title="You may specify vanity URLs below. These are special directories used to link to pages that are deeper in your website but are shorter and much easier for your customers to remember." class="icon icon-tool-tip x-space-s"></i></div>   
+			</div>
+		</div>
+		<div class="row row-spaced"> 
+			<div class="col-12">
+				<table class="table alternate">
+					<thead>
+						<tr class="">
+							<th class="col-4 left-align indented-s">Directory</th>
+							<th class="col-6 left-align">Redirect To</th>
+							<th class="col-1 left-align">Edit</th>
+							<th class="col-1 left-align">Delete</th>
+						</tr>
+					</thead>
+					<tbody id="DirectoryResourceUrl-List"></tbody>
+				</table>
+			</div>		
+		</div>
+	</div> <!-- Director Redirects ends here -->
+
+	<div id="301-Redirects">
+		<div class="row row-spaced">
+			<div class="col-12">
+				<div class="clearfix">
+					<div class="btn-panel pull-right">
+					    <button type="button" id="save-btn" class="btn btn-other">SAMPLE</button>
+						<button type="button" id="301-import-btn" class="fileUpload btn btn-Boostrap btn-primary btn-file">
+							<span> IMPORT</span>
+							<input type="file" id="file-btn" class="upload">
+						</button>						    
+						<button type="button" id="add-301-redirect-btn" class="btn btn-submit"><i class="icon icon-add"></i>ADD NEW</button>
+						<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+					</div>
+					<div class="panel-title y-space-top-l">301 Permanent URL Redirect<i title="You may use 301 redirects to redirect traffic from old or bad links to new ones. This can be helpful if you decide to take down a section of your site but do not want to take any SEO penalties due to having broken links." class="icon icon-tool-tip x-space-s"></i></div>
+				</div>
+			</div>
+		</div>
+        <div class="row row-spaced">
+            <div class="col-12">
+                Please allow up to 30 minutes for your redirects to be reflected on your website.
+            </div>
+        </div>      		
+		<div class="row row-spaced hidden" id="modal-alert">
+			<div class="col-12 panel alert-panel">
+				<div class="row">
+					<div class="col-1">
+						<div class="icon icon-3x icon-warning"></div>
+					</div>
+					<div class="col-11 alert-text">
+						You must select a CSV file to upload.
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row row-spaced hidden" id="import-alert">
+			<div class="col-12  panel alert-panel-success">
+				<div class="row">
+					<div class="col-1">
+						<div class="fa fa-2x fa-thumbs-o-up"></div>
+					</div>
+					<div class="col-11 alert-text-success">
+					   Import Successful.
+					</div>
+				</div>
+			</div>
+		</div>
+	    <div class="row row-spaced"> 
+		   <div class="col-12 ">
+				<table class="table alternate">
+					<thead>
+						<tr class="">
+							<th class="col-5 left-align">Old Address</th>
+							<th class="col-5 left-align">Redirect To</th>
+							<th class="col-1 left-align">Edit</th>
+							<th class="col-1 left-align">Delete</th>
+						</tr>
+					</thead>
+					<tbody id="Permanent-Redirect-List"></tbody>
+				</table>
+		     </div>		
+	    </div>
+	</div>
+</div> <!-- TABS Ends Here -->
+

@@ -1,0 +1,19 @@
+<tr data-id="<%= id %>">
+	<td class="left-align"><%= searchTerm %></td>
+	<td class="left-align"><%= landingPageOrBannerImage %></td>
+
+
+	 <td><%= type %> </td>
+	<td>
+		<input <%= searchActiveStatus ? 'checked' : '' %> type="checkbox"  id="<%= id %>" name="<%= id %>" class="on-off-switch"/>
+        <label for="<%= id %>" class="on-off-switch-label">
+        	<div class="on-off-switch-state">on</div>
+        </label>
+    </td>
+
+
+
+	<td> <button type="button" class="icon icon-btn <%= type === "Custom" ? 'icon-edit' : 'icon-search' %> icon-2x"></button></td>
+
+	<td><button type="button" class="icon icon-btn <%= type === "Custom" ? 'icon-trash' : '' %> icon-2x"></button></td>
+</tr>

@@ -1,0 +1,52 @@
+[
+	{
+		"id": 1,
+		"occasionName": "Thanksgiving",
+		"linkPath": "/category/thanksgiving-12345",
+		"occasionDate": "09/04",
+		"upcomingOccasionsActive": true	
+	},
+	{
+		"id": 2,
+		"occasionName": "Valentine's Day",
+		"linkPath": "/category/valentines-12345",
+		"occasionDate": "14/02",
+		"upcomingOccasionsActive": true	
+	},
+	{
+		"id": 3,
+		"occasionName": "Easter",
+		"linkPath": "/category/easter-12345",
+		"occasionDate": "04/04",
+		"upcomingOccasionsActive": true	
+	},
+	{
+		"id": 4,
+		"occasionName": "Halloween",
+		"linkPath": "/category/halloween-12345",
+		"occasionDate": "09/15",
+		"upcomingOccasionsActive": true	
+	},
+	{
+		"id": 5,
+		"occasionName": "Chinese New Year",
+		"linkPath": "/category/chinese-new-year",
+		"occasionDate": "02/05",
+		"upcomingOccasionsActive": true	
+	},
+	{
+		"id": 6,
+		"occasionName": "Chinese New Year",
+		"linkPath": "/category/chinese-new-year",
+		"occasionDate": "09/17",
+		"upcomingOccasionsActive": true	
+	},
+	{
+		"id": 7,
+		"occasionName": "Passover",
+		"linkPath": "/category/passover",
+		"occasionDate": "04/01",
+		"upcomingOccasionsActive": true	
+	}
+
+]

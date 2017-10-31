@@ -1,0 +1,105 @@
+<section id="mixed-nested-grids" class="l-wrapper top-margin">
+  <h2>Mixed / Nested Grids</h2>
+  <p>The grid layout is easily extended by nesting and mixing different column sizes up to 12 columns wide.</p>
+
+  <!-- grid container starts -->
+  <div class="container_4 d-container_12 m-grid-container-bg-primary top-margin c-grid-container-padding clearfix top-margin">
+    <div class="grid_1 d-grid_3 m-grid-container-bg-secondary">
+      <div class="m-center-content">
+        <p class="avenir-heavy c-secondary-color">1 / 4</p>
+      </div>
+    </div>
+    <div class="grid_1 d-grid_3 m-grid-container-bg-secondary">
+      <div class="m-center-content">
+        <p class="avenir-heavy c-secondary-color">1 / 4</p>
+      </div>
+    </div>
+    <div class="grid_2 d-grid_6 m-grid-container-bg-secondary">
+      <div class="m-center-content">
+        <p class="avenir-heavy c-secondary-color">1 / 2</p>
+      </div>
+    </div>
+  </div>
+  <!-- grid container ends -->
+  <!-- grid container starts -->
+  <div class="container_4 d-container_12 m-grid-container-bg-primary top-margin c-grid-container-padding clearfix top-margin">
+    <div class="grid_1 d-grid_3 m-grid-container-bg-secondary">
+      <div class="m-center-content">
+        <p class="avenir-heavy c-secondary-color">1 / 4</p>
+      </div>
+    </div>
+    <div class="grid_3 d-grid_9 m-grid-container-bg-secondary">
+      <div class="m-center-content">
+        <p class="avenir-heavy c-secondary-color">3 / 4</p>
+      </div>
+    </div>
+  </div>
+  <!-- grid container ends -->
+  <!-- grid container starts -->
+  <div class="container_4 d-container_12 m-grid-container-bg-primary top-margin c-grid-container-padding clearfix top-margin">
+    <div class="grid_1 d-grid_3 m-grid-container-bg-secondary">
+      <div class="m-center-content">
+        <p class="avenir-heavy c-secondary-color">1 / 4</p>
+      </div>
+    </div>
+    <div class="grid_3 d-grid_9 m-grid-container-bg-secondary">
+      <div class="grid_2 d-grid_6 m-grid-nested">
+        <div class="m-center-content">
+          <p class="avenir-heavy c-secondary-color">1 / 2</p>
+        </div>
+      </div>
+      <div class="grid_2 d-grid_6 m-grid-nested">
+        <div class="m-center-content">
+          <p class="avenir-heavy c-secondary-color">1 / 2</p>
+        </div>
+      </div>
+      <div class="m-center-content m-grid-container-bg-secondary">
+        <p class="avenir-heavy c-secondary-color">3 / 4</p>
+      </div>
+    </div>
+  </div>
+  <!-- grid container ends -->
+  <!-- code demo starts -->
+  <div class="m-code l-wrapper container_4 d-container_12 top-margin">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <pre class="prettyprint linenums lang-html">
+  &lt;!-- grid container starts --&gt;
+  &lt;div class="container_4 d-container_12"&gt;
+    &lt;div class="grid_1 d-grid_3"&gt;
+      Content...
+    &lt;/div&gt;
+    &lt;div class="grid_1 d-grid_3"&gt;
+      Content...
+    &lt;/div&gt;
+    &lt;div class="grid_2 d-grid_6"&gt;
+      Content...
+   &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;!-- grid container ends --&gt;
+ &lt;!-- grid container starts --&gt;
+ &lt;div class="container_4 d-container_12"&gt;
+   &lt;div class="grid_1 d-grid_3"&gt;
+       Content...
+   &lt;/div&gt;
+   &lt;div class="grid_3 d-grid_9"&gt;
+     &lt;div class="grid_2 d-grid_6"&gt;
+       Content...
+     &lt;/div&gt;
+     &lt;div class="grid_2 d-grid_6"&gt;
+       Content...
+     &lt;/div&gt;
+   &lt;/div&gt;
+ &lt;/div&gt;
+ &lt;!-- grid container ends --&gt;
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- code demo ends -->
+</section>
+<!-- mixed-grids ends -->

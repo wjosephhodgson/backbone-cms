@@ -1,0 +1,47 @@
+<tr>
+  <td><%= code %></td>
+  <td>
+
+    <% if(!bcc) { %>
+      <% if(discountType === 'Dollar Off') { %>
+        $
+      <% } %>
+      <%= discountAmount %>
+      <% if(discountType === 'Percentage Off') { %>
+        %
+      <% } %>
+    <% } else { %>
+      <button type="button" class="icon icon-btn icon-tag icon-2x"></button><i class="icon icon-tool-tip x-space-s" title="<%=bccPromoDetail%>"></i>
+    <% } %>
+  </td>
+  <td><%= startDate %></td>
+  <td><%= endDate %></td>
+  <td>
+    <div class="v-center">
+      <input <%= active ? 'checked' : '' %> type="checkbox" id="f-active-<%= id %>" name="f-active-<%= id %>" class="on-off-switch" />
+      <label for="f-active-<%= id %>" class="on-off-switch-label">
+          <div class="on-off-switch-state">on</div>
+      </label>
+    </div>
+  </td>
+  <td>
+    <% if(!bcc) { %>
+      <% if (bulk) { %>
+        <button type="button" class="icon icon-btn p-icon-download icon-save icon-2x"></button>
+      <% } else if (federated) { %>
+        <button type="button" class="icon icon-btn p-icon-view icon-search icon-2x"></button>
+      <% } else { %>
+        <button type="button" class="icon icon-btn icon-edit icon-2x"></button>
+      <% } %>
+    <% } else { %>
+      <button type="button" class="icon icon-btn p-icon-view icon-search icon-2x"></button>
+    <% } %>
+  </td>
+  <td>
+    <% if (bulk || federated || bcc === true) { %>
+    
+    <% } else { %>
+      <button type="button" class="icon icon-btn icon-trash icon-2x"></button>
+    <% } %>  
+  </td>
+</tr>

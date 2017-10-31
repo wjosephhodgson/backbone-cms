@@ -1,0 +1,13 @@
+<tr>
+  <td class="left-align indented-l"><%= name %></td>
+  <td>
+    <a href="#more/image-management/<%= hash %>">
+      <button class="icon icon-btn icon-2x icon-edit"></button>
+    </a>
+  </td>
+  <td>
+    <% if(!primary) { %>
+      <button class="icon icon-btn icon-2x icon-trash"></button>
+    <% } %>
+  </td>
+</tr>

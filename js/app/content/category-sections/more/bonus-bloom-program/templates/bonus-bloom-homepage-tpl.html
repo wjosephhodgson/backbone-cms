@@ -1,0 +1,426 @@
+<form id="bonus-bloom-homepage-form" name="bonus-bloom-homepage-form">
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Manage Bonus Blooms Program</h2>
+			<div class="btn-panel">
+				<button type="button" id="save-btn" class="btn btn-submit">Save</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+		<div class="y-space-top-xs">The Bonus Blooms program is an opportunity to get more orders as well as make and retain customers. You can use it to give prizes to customers based on unique "winner codes" that you specify. You can include those numbers in receipts with bouquets, give them away on your Facebook page, or use whatever method you like to get your customers involved.</div>
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row row-spaced panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+			This is a generic placeholder for error messages in eSAT. <br>
+			In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+
+<div id="tabs">
+	<ul>
+		<li class="right-pad-tabs"><a class="manage-bonus-bloom-edit-tab" href="#settings-Content">Settings</a></li>
+		<li><a class="manage-bonus-bloom-edit-tab" href="#Main-PageTab">Main Page </a></li>
+		<li><a class="manage-bonus-bloom-edit-tab" href="#Winner-Page">Winner Page </a></li>
+		<li><a class="manage-bonus-bloom-edit-tab" href="#No-Winner-Page">No Winner Page </a></li>
+		<li><a class="manage-bonus-bloom-edit-tab" href="#thank-You-Page">Thank You Page  </a></li>
+	</ul>
+
+
+	<div id="settings-Content">
+
+
+
+ <div class="row">
+	<div class="col-12">
+ 
+	 <div class="row row-spaced form-section">
+	  <div class="col-4">
+		<label for="bloom-settings-active" class="pull-left">Active</label><i title="If this is turned OFF, the Bonus Blooms program will not be active on your site and customers will not be able to enter codes." class="icon icon-tool-tip x-space-s"></i>
+
+		    <input <%= settingsContentActive ? 'checked' : ''%> type="checkbox" id="bloom-settings-active" name="bloom-settings-active" class="on-off-switch f-settingsActive" />
+
+	          <label for="bloom-settings-active" class="on-off-switch-label">
+
+	              <div class="on-off-switch-state">on</div>
+
+
+	      </label>
+
+	   </div>
+
+	 </div>
+
+		<div class="row row-spaced form-section">
+		    <div class="col-5 form-section">
+		      <label for="f-setting-program-name">Program Name</label> <i title="You can change the program name to something other than Bonus Blooms here. Get creative and make it fit your store!" class="icon icon-tool-tip x-space-s"></i>
+			    <input type="text" id="f-setting-program-name" name="f-setting-program-name" value="<%= programName %>">
+		    <!-- Character Count Here -->
+			</div>
+
+			<div class="col-3 form-section">
+
+			 <label for="f-setting-winning-digits">Winning Digits</label><i title="These are the winning numbers your customers need to get a prize. You can specify a series of up to 3 numbers here." class="icon icon-tool-tip x-space-s"></i>
+			    <input type="number" id="f-setting-winning-digits" name="f-setting-winning-digits" value="<%= winningDigits %>">
+                <!-- Character Count Here -->
+			</div>
+
+		</div>
+
+		<div class="row row-spaced form-section">
+			<div class="col-7">
+				<label for="f-email-address-name">Email Address</label> <i title="This is the email address that entries will be sent to." class="icon icon-tool-tip x-space-s"></i>
+				<input type="email" id="f-email-address-name" name="f-email-address-name" value="<%= emailAddressBonusBloom %>">
+			<!-- Character Count Here -->
+			</div>
+		</div>
+
+		<div class="row row-spaced ">
+			<div class="col-12">
+				<div class="panel-title clearfix y-space-bottom-l">Display Banners to Promote Program</div>
+				<p class="y-space-top-s">If you have enabled the Bonus Blooms program on your site, a Bonus Blooms Marketing Campaign is automatically created and enabled to promote Bonus Blooms. You can control this and all your other marketing items in the "Marketing Campaign" page - Marketing & Promotions > Marketing Campaigns. </p>
+			</div>
+		</div>
+
+
+
+		<div class="row row-spaced">
+			<div class="col-12 y-space-bottom-l">
+				<div class="panel-title clearfix"> FAQ & Rules</div>
+			</div>
+		</div>
+
+
+				<div class="row row-spaced form-section">
+			      <div class="col-12"> 
+			         	 	<label for="f-bloom-faq-section"> FAQs </label> <i title="This is an FAQ section to better inform your customers and help let them know how the Bonus Blooms program works." class="icon icon-tool-tip x-space-s"></i>   
+			      	  <div id="tiny-mce-container1" class="row row-spaced panel form-section">
+					<textarea id="f-bloom-faq-section" class="size-4 f-bloom-faq-section f-bloom-rules-section y-space-s" name="f-bloom-faq-section"><%= faQSectionContent  %></textarea>
+
+			      </div>
+  	                <p ><span id="character-countFAQSection">3000 </span><span> Characters remaining (3000 maximum) </span></p>
+
+			    </div>
+             </div>
+
+
+
+				<div class="row row-spaced form-section">
+			      <div class="col-12"> 
+			        <label for="f-bloom-rules-section">Rules  </label> <i title="This content area is meant for the rules of your unique Bonus Blooms program." class="icon icon-tool-tip x-space-s"></i>   
+			          <div id="tiny-mce-container2" class="row row-spaced panel form-section">
+					<textarea id="f-bloom-rules-section" class="size-4 tinymce f-bloom-rules-section y-space-s" name="f-bloom-rules-section">
+					<%= RulesContent %></textarea>
+			        </div>
+			          <p><span id="character-countRulesSection">3000 </span><span> Characters remaining (3000 maximum) </span></p>
+			      </div>
+               </div>
+
+
+           </div>
+   </div>
+
+		</div> <!-- Settings Content Ends Here  -->
+
+
+
+
+		<div id="Main-PageTab">
+
+
+
+		 <div class="row">
+		 <div class="col-12">
+		 	<div class="row row-spaced">
+		 		<div class="col-12 form-section">
+		 			<div class="label">Main Page Title</div>
+		 			<input type="text" name="f-main-page-title" id="f-main-page-title" value="<%= MainPageTitle %>">
+		 		</div>
+		 	</div>
+			<div class="row row-spaced form-section">
+             
+             <div class="col-12 y-space-bottom-xxl">
+	             <label for="f-main-page-section-header">Main Page Header</label> <i title="This is a descriptive text area that shows up on the main entry Bonus Blooms page underneath the Main Page Title." class="icon icon-tool-tip x-space-s"></i>   
+	                <textarea id="f-main-page-section-header" name="f-main-page-section-header"><%= MainPageHeader %></textarea>
+	                <p ><span id="character-countMainHeader">500 </span><span> Characters remaining (500 maximum) </span></p>
+               </div>
+
+			   </div>
+     
+
+
+			<div class="row row-spaced form-section">
+             
+             <div class="col-12 y-space-bottom-xxl">
+	             <label for="f-main-page-section-message">Main Page Message</label> <i title="This is a descriptive text area that shows up on the main entry Bonus Blooms page that you can use to explain what the customer should do to enter." class="icon icon-tool-tip x-space-s"></i>   
+	                <textarea id="f-main-page-section-message" name="f-main-page-section-message" maxlength="500"><%= MainPageMessage %></textarea>
+	                <p ><span id="character-countMainMessage">500 </span><span> Characters remaining (500 maximum) </span></p>
+               </div>
+             </div>
+		   
+
+          <div class="row row-spaced">
+
+           <div class="col-2 form-section">
+		      <div class="label form-section">Image</div>
+
+		         <button type="button" id="btn-main-section-logo" name="btn-main-section-logo"  class="icon icon-btn icon-image btn-file icon-3x"> </button>
+			   </div>
+
+
+              <div class="col-10">
+                      <img id="preview-main-section-Img" class="icon icon-2x" src="<%= MainpageImgUrl %>" style="max-height:60%; max-width:60%;">
+              </div>
+           </div>
+
+       </div>
+     </div>
+		</div> <!-- Main Page Tab Ends here -->
+
+
+
+
+		<div id="Winner-Page">
+
+
+
+			<div class="row panel alert-panel hidden-alt">
+
+			    <div class="col-12">
+
+			      <div class="row">
+			        <div class="col-1">
+			          <div class="icon icon-3x icon-warning"></div>
+
+			        </div>
+
+			        <div class="col-11 alert-text left-align">
+			          You have uploaded an invalid image file.  Please upload image files that have
+			          extensions '.gif', '.jpg', '.jpeg', '.bmp' or '.png'.
+			        </div>
+
+			      </div>
+
+			    </div>
+			  </div>
+
+
+
+		 <div class="row">
+		 	<div class="col-12">
+			<div class="row row-spaced form-section">
+             
+             <div class="col-12 y-space-bottom-xxl">
+	             <label for="f-winner-page-section-header">Winner Page Header </label> <i title="This header text is displayed on the page if your customer enters a winning code that you can use to congratulate your winner." class="icon icon-tool-tip x-space-s"></i>   
+	                <textarea id="f-winner-page-section-header" name="f-winner-page-section-header" maxlength="500"><%= WinnerPageHeader %></textarea>
+	       	        <p ><span id="character-countWinnerHeader">500 </span><span> Characters remaining (500 maximum) </span></p>
+        
+               </div>
+		   
+			</div>
+     
+			<div class="row row-spaced form-section">
+             
+             <div class="col-12 y-space-bottom-xxl">
+	             <label for="f-winner-page-section-message">Winner Page Message  </label> <i title="This is another descriptive text field on the winner page that you can use to congratulate and let your winning customer know how they will redeem their prize." class="icon icon-tool-tip x-space-s"></i>   
+	                <textarea id="f-winner-page-section-message" name="f-winner-page-section-message" maxlength="500"><%= WinnerPageMessage %></textarea>
+	                 <p ><span id="character-countWinnerMessage">500 </span><span> Characters remaining (500 maximum) </span></p>
+               </div>
+             </div>
+		   
+
+		  <div class="row row-spaced">
+
+           <div class="col-2 form-section">
+		      <div class="label form-section">Image</div>
+
+		         <button type="button" id="winnerPage-btn-logo" name="winnerPage-btn-logo"  class="icon icon-btn icon-image btn-file icon-3x"> </button>
+			   </div>
+
+
+              <div class="col-10">
+                      <img id="winner-edit-Img" name="winner-edit-Img" class="icon icon-2x " src="<%= winnnerImgUrl %>" style="max-height:60%; max-width:60%;">
+              </div>
+           </div>
+
+       </div>
+     
+     </div>
+
+
+		</div> <!-- Winner Page Tab Ends here -->
+
+
+
+
+
+		<div id="No-Winner-Page">
+
+
+
+		<div class="row panel alert-panel hidden-alt">
+
+		    <div class="col-12">
+
+		      <div class="row">
+		        <div class="col-1">
+		          <div class="icon icon-3x icon-warning"></div>
+
+		        </div>
+
+		        <div class="col-11 alert-text left-align">
+		          You have uploaded an invalid image file.  Please upload image files that have
+		          extensions '.gif', '.jpg', '.jpeg', '.bmp' or '.png'.
+		        </div>
+
+		      </div>
+
+		    </div>
+		  </div>
+
+
+
+		 <div class="row">
+		 	<div class="col-12">
+
+			<div class="row row-spaced form-section ">
+             
+             <div class="col-12 y-space-bottom-xxl">
+	             <label for="f-winner-page-section-header">No Winner Page Header </label> <i title="This is the header text that is displayed if your customer does not enter a winning code." class="icon icon-tool-tip x-space-s"></i>   
+	                <textarea id="f-no-winner-page-section-header" name="f-no-winner-page-section-header" maxlength="500"><%= NoWinnerPageHeader %></textarea>
+             <p ><span id="character-countNoWinnerPageHeader">500 </span><span> Characters remaining (500 maximum) </span></p>
+
+               </div>
+		   
+
+
+
+			   </div>
+
+
+
+			<div class="row row-spaced form-section">
+             
+             <div class="col-12 y-space-bottom-xxl">
+	             <label for="f-no-winner-page-section-message">No Winner Page Message  </label> <i title="This second block of descriptive text is shown if you customer does not enter a winning code." class="icon icon-tool-tip x-space-s"></i>   
+	                <textarea id="f-no-winner-page-section-message" name="f-no-winner-page-section-message" maxlength="500"><%= NoWinnerPageMessage %></textarea>
+                 <p><span id="character-countNoWinnerPageMessage">500 </span><span> Characters remaining (500 maximum) </span></p>
+
+               </div>
+             </div>
+
+
+
+          <div class="row row-spaced form-section">
+          		   <div class="col-2">
+		      <div class="label form-section">Image</div>
+
+		         <button type="button" id="no-winnerPage-btn-logo" name="no-winnerPage-btn-logo"  class="icon icon-btn icon-image btn-file icon-3x"> </button>
+			   </div>
+			   
+              <div class="col-10">
+                      <img id="No-winner-Img" class="icon icon-2x " src="<%= NoWinnnerImgUrl %>" style="max-height:60%; max-width:60%;">
+              </div>
+           </div>
+		   
+       </div>
+     </div>
+
+
+
+		</div> <!-- No Winner Page Tab ends here -->
+
+
+
+
+
+		<div id="thank-You-Page">
+
+
+
+		<div class="row panel alert-panel hidden-alt">
+
+		    <div class="col-12">
+
+		      <div class="row">
+		        <div class="col-1">
+		          <div class="icon icon-3x icon-warning"></div>
+
+		        </div>
+
+		        <div class="col-11 alert-text left-align">
+		          You have uploaded an invalid image file.  Please upload image files that have
+		          extensions '.gif', '.jpg', '.jpeg', '.bmp' or '.png'.
+		        </div>
+
+		      </div>
+
+		    </div>
+		  </div>
+
+
+
+
+		  <div class="row">
+			<div class="col-12">
+			<div class="row row-spaced form-section ">
+             
+             <div class="col-12 y-space-bottom-xxl">
+	             <label for="f-thank-you-section-header">Thank You Page Header </label> <i title="This header text is displayed at the top of the Thank You page after submitting a Bonus Blooms code." class="icon icon-tool-tip x-space-s"></i>   
+	                <textarea id="f-thank-you-section-header" name="f-thank-you-section-header" maxlength="500"><%= thankYouPageHeader %></textarea>
+                <p ><span id="character-countThankYouHeader">500 </span><span> Characters remaining (500 maximum) </span></p>
+
+               </div>
+
+			   </div>
+      
+
+
+
+		<div class="row row-spaced form-section">
+         
+         <div class="col-12 y-space-bottom-xxl">
+             <label for="f-thank-you-section-message">Thank You Page Message  </label> <i title="This descriptive text shows up underneath the page header on the Thank You page." class="icon icon-tool-tip x-space-s"></i>   
+                <textarea id="f-thank-you-section-message" name="f-thank-you-section-message" maxlength="500"><%= thankYouPageMessage %></textarea>
+            <p ><span id="character-countThankYouMessage">500 </span><span> Characters remaining (500 maximum) </span></p>
+
+           </div>
+         </div>
+
+
+          <div class="row row-spaced form-section">
+
+           <div class="col-2">
+		      <div class="label form-section">Image</div>
+
+		         <button type="button" id="thankYouPage-btn-logo" name="thankYouPage-btn-logo"  class="icon icon-btn icon-image btn-file icon-3x"> </button>
+			   </div>
+
+
+              <div class="col-10">
+                      <img id="thankyou-edit-Img" class="icon icon-2x " src="<%= thankYouImgUrl %>" style="max-height:70%; max-width:70%;">
+              </div>
+           </div>
+
+       </div>
+		 </div>
+
+		</div> <!--  Thank you page ends here-->
+
+
+	</div> <!-- Tabs Content Ends Here -->
+</form>

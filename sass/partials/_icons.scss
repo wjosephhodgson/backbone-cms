@@ -1,0 +1,495 @@
+.icon {
+	@extend .fa;
+}
+
+.icon-btn {
+	background-color: transparent;
+	color: inherit;
+	border: 0;
+	outline: 0;
+	opacity: 1;
+
+	&:hover, &.active {
+		opacity: .7;
+	}
+
+	// &.icon-added {
+	// 	cursor: default;
+
+	// 	&:hover {
+	// 		opacity: 1;
+	// 	}
+	// }
+
+	&.active {
+		opacity: .7;
+	}
+}
+
+.icon-colored {
+	&:hover, &.active {
+		color: $color-accent-2;
+	}
+}
+
+.icon-prefix {
+	margin-right: $space-s;
+
+	&.icon-2x {
+		margin-right: $space-s / 2;
+	}
+}
+
+.icon-text{
+	font-family: $main-font;
+	font-size: .75em;
+	display: inline;
+}
+
+.icon-lg {
+	@extend .fa-lg;
+}
+
+.icon-1p5x {
+	font-size: 1.5em;
+}
+
+.icon-2x {
+	@extend .fa-2x;
+}
+
+.icon-3x {
+	@extend .fa-3x;
+}
+
+.icon-4x {
+	@extend .fa-4x;
+}
+
+.icon-5x {
+	@extend .fa-5x;
+}
+
+.icon-large-1x {
+	font-size: 5em;
+}
+
+.icon-large-2x {
+	font-size: 10em;
+}
+
+.icon-large-3x {
+	font-size: 15em;
+}
+
+.icon-alt-color-1 {
+	color: $color-tool-tip;
+}
+
+// general menu icon
+.icon-question-circle {
+	@extend .fa-question-circle;
+}
+
+// .icon-check-sign {
+// 	@extend .fa-check-sign;
+// }
+
+// header icons
+.icon-comments {
+	@extend .fa-comments;
+}
+
+.icon-user {
+	@extend .fa-user;
+}
+
+// menu icons
+.icon-home {
+	@extend .fa-home;
+}
+
+.icon-site-map {
+	@extend .fa-sitemap;
+}
+
+.icon-leaf {
+	@extend .fa-leaf;
+}
+
+.icon-heart {
+	@extend .fa-heart;
+}
+
+.icon-list-ul {
+	@extend .fa-list-ul;
+}
+
+.icon-grid {
+	@extend .fa-th-large;
+}
+
+.icon-email {
+	@extend .fa-envelope-o;
+}
+
+.icon-money {
+	@extend .fa-money;
+}
+
+.icon-cubes {
+	@extend .fa-cubes;
+}
+
+.icon-list {
+	@extend .fa-list;
+}
+
+.icon-share {
+	@extend .fa-share-alt-square;
+}
+
+.icon-wrench {
+	@extend .fa-wrench;
+}
+
+.icon-warning {
+	@extend .fa-warning;
+}
+
+.icon-analytics {
+	@extend .fa-superscript;
+	font-style: italic;
+}
+
+.icon-line-chart {
+	@extend .fa-line-chart;
+}
+
+.icon-bar-chart {
+	@extend .fa-bar-chart;
+}
+
+.icon-cog {
+	@extend .fa-cog;
+}
+
+.icon-cogs {
+	@extend .fa-cogs;
+}
+
+.icon-cube {
+	@extend .fa-cube;
+}
+
+.icon-rocket {
+	@extend .fa-rocket;
+}
+
+.icon-image {
+	@extend .fa-file-image-o;
+}
+
+// button icons
+.icon-calendar {
+	@extend .fa-calendar;
+}
+
+.icon-shopping-cart {
+	@extend .fa-shopping-cart;
+}
+
+.icon-group {
+	@extend .fa-group;
+}
+
+.icon-envelope {
+	@extend .fa-envelope;
+}
+
+// used icons
+.icon-add {
+	@extend .fa-plus-circle;
+
+	.btn > & {
+		margin-right: $space-xs;
+	}
+}
+
+.icon-added {
+	@extend .fa-check-circle;
+
+	color: $color-accent-1;
+}
+
+.icon-down-chevron {
+	@extend .fa-chevron-down;
+}
+
+.icon-left-chevron {
+	@extend .fa-chevron-left;
+}
+
+.icon-globe {
+	@extend .fa-globe;
+}
+
+.icon-right-chevron {
+	@extend .fa-chevron-right;
+}
+
+.icon-left-circle-chevron {
+	@extend .fa-chevron-circle-left;
+}
+
+.icon-right-circle-chevron {
+	@extend .fa-chevron-circle-right;
+}
+
+
+.icon-edit {
+	@extend .fa-pencil;
+}
+
+.icon-closed {
+	@extend .fa-plus-square;
+	cursor: pointer;
+}
+
+.icon-opened {
+	@extend .fa-minus-square;
+	cursor: pointer;
+}
+
+
+.icon-desktop {
+	@extend .fa-desktop;
+}
+
+.icon-landing {
+	@extend .fa-files-o;
+}
+
+.icon-save {
+	@extend .fa-save;
+}
+
+.icon-movie {
+	@extend .fa-file-movie-o;
+}
+
+.icon-category {
+	@extend .fa-th;
+}
+
+.icon-trash {
+	@extend .fa-trash-o;
+}
+
+.icon-2x {
+	@extend .fa-2x;
+}
+
+.icon-3x {
+	@extend .fa-3x;
+}
+
+.icon-tool-tip {
+	@extend .fa-info-circle;
+
+	font-size: 14px;
+	color: $color-tool-tip;
+	opacity: 1;
+
+	position: absolute;
+	margin-left: 5px !important;
+	margin-right: 0 !important;
+
+	&:hover {
+		opacity: .7;
+	}
+
+	&.x-space-s {
+		position: absolute;
+		margin-left: 5px !important;
+		margin-right: 0 !important;
+	}
+
+	&.warning {
+		color: red;
+	}
+
+	&.static {
+		position: static;
+	}
+}
+
+.btn-tool-tip {
+	@extend .fa-info-circle;
+
+}
+
+.icon-filter {
+	@extend .fa-sliders;
+}
+
+.icon-x {
+	@extend .fa-times-circle;
+
+	.btn > & {
+		margin-right: $space-s;
+	}
+}
+
+.icon-ban {
+	@extend .fa-ban;
+}
+
+.icon-lock {
+	@extend .fa-lock;
+}
+
+.icon-arrows {
+	@extend .fa-arrows;
+}
+
+.icon-sort {
+	position:absolute; // Don't move the table header
+
+	@extend .fa-sort;
+}
+
+.icon-sort-asc {
+	position:absolute;
+
+	@extend .fa-sort-asc;
+}
+
+.icon-sort-desc {
+	position:absolute;
+
+	@extend .fa-sort-desc;
+}
+
+.icon-nav {
+	&.active {
+		color: $color-accent-2;
+	}
+
+	@extend .fa-navicon;
+}
+
+.icon-undo, .icon-reset {
+	@extend .fa-undo;
+
+	.btn > & {
+		margin-right: $space-s;
+	}
+}
+
+.icon-export {
+	@extend .fa-share-square-o;
+
+	.btn > & {
+		margin-right: $space-s;
+	}
+}
+
+// Social media
+.icon-twitter {
+	@extend .fa-twitter;
+}
+
+.icon-pinterest {
+	@extend .fa-pinterest;
+}
+
+.icon-facebook {
+	@extend .fa-facebook;
+}
+
+.icon-instagram {
+	@extend .fa-instagram;
+}
+
+.icon-yelp {
+	@extend .fa-yelp;
+}
+
+.icon-print {
+	@extend .fa-print;
+
+	.btn > & {
+		margin-right: $space-s;
+	}
+}
+
+.icon-search {
+	@extend .fa-search;
+}
+
+.icon-file {
+	@extend .fa-file-o;
+}
+
+.icon-folder {
+	@extend .fa-folder-o;
+}
+
+.icon-question-circle {
+	@extend .fa-question-circle;
+}
+
+@media only screen and (max-width: 960px) {
+  .fa-question-circle.icon-large-3x {
+    font-size: 5em;
+  }
+}
+
+.icon-tag {
+	@extend .fa-tag;
+}
+
+.icon-federated {
+	@extend .fa-chain;
+	&:before {
+		margin-left: -1em;
+	}
+
+	width: 1em;
+	margin-left: -1.4em;
+	margin-right: 0.2em;
+	color: $color-federated;
+
+}
+
+.f-federated .icon-tool-tip-federated, .global .icon-tool-tip-federated {
+	display: inline-block;
+}
+
+.icon-tool-tip-federated {
+	@extend .fa-info-circle;
+
+	font-size: 14px;
+	color: $color-federated-1;
+	opacity: 1;
+
+	position: absolute;
+	margin-left: 20px !important;
+	margin-right: 0px !important;
+
+	&:hover {
+		opacity: .7
+	}
+
+
+}
+
+.federated-top-right {
+	top: -7px;
+	right: 0px;
+}
+.federated-bottom-right {
+	bottom: 5px;
+	right: 5px;
+}

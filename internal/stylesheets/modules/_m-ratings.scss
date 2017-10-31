@@ -1,0 +1,77 @@
+
+.m-ratings-row{
+  //container for ratings horizontal bar visualization
+  //it contains stars+horizontal bars+number of votes
+  padding-left: 0.5em;
+  margin-left: -1em;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+.m-product-mini-stars.m-ratings-stars{
+  //extending product mini stars for this specific layout
+  //used on the tool tip window to see ratings
+  width: 4.6em;
+  height: 0.8em;
+  margin-top: 0.3em;
+}
+
+.m-product-mini-stars-rating.m-ratings-stars-rating{
+  //used on the ratings tool tip window to show 5,4,3,2,1 green stars
+  width: 3.7em;
+  height: 0.9em;
+  margin-top: 0em;
+  &.stars-1, &.stars-1-0{width:0.9em;}
+  &.stars-1-5{width:1.3em;}
+  &.stars-2, &.stars-2-0{width:1.8em;}
+  &.stars-2-5{width:2.1em;}
+  &.stars-3, &.stars-3-0{width:2.7em;}
+  &.stars-3-5{width:3.2em;}
+  &.stars-4, &.stars-4-0{width:3.6em;}
+  &.stars-4-5{width:4.3em;}
+  &.stars-5, &.stars-5-0{width:4.6em;}
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.m-ratings-bar{
+  height:1em;
+  display:block;
+  width: 0.22em;
+  background-position:left bottom;
+  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+}
+
+.m-ratings-bar {
+  //darker horizontal bar, is the one that changes length
+  background-color:$dark-grey;
+}
+
+.m-ratings-bar-rating{
+  //light gray horizontal bar
+  height:1em;
+  display:block;
+  margin:0 auto;
+  margin-left: 0.3em;
+  width: 5.5em;
+  background-position:left bottom;
+  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+}
+
+.m-ratings-bar-rating {
+  //light gray horizontal bar, is the backround and gives 100% of the width
+  background-color:$select-grey;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.m-ratings-number{
+  font-family: $sans-stack-heavy;
+  font-size: 0.769em;
+  color: $dark-grey;
+  text-transform: uppercase;
+  text-align: left;
+  padding-bottom: 0em;
+  margin-left: 0.5em;
+}

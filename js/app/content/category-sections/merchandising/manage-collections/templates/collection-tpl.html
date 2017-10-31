@@ -1,0 +1,29 @@
+<div data-pid="<%= id %>" class="tr clearfix">
+    <div class="left-align <%= parent > 0 ? 'level-2' : 'level-1' %> col-4 td-collection">
+        <% if (children.length) { %>
+            <button id="outer" class="toggle-btn icon icon-btn icon-opened icon-2x"></button>
+        <% } %>
+        <%= name %>
+    </div>
+    <div class="col-2 td-collection-type">
+        <%= collectionType %>
+    </div>
+    <div class="col-1 td-page-type">
+        <i class="icon <%= parent === 0 ? 'icon-landing' : 'icon-category' %> icon-2x"></i>
+    </div>
+    <div class="col-1 td-start-date"><%= startDate %></div>
+    <div class="col-1 td-end-date"><%= endDate %></div>
+    <div class="col-2 td-status">
+        <div class="centered-content-container">
+            <input <%= parentActive && active ? 'checked' : ''%> type="checkbox" class="on-off-switch" id="<%= 'switch-' + id %>" name="<%= 'switch-' + id %>" class="on-off-switch" />
+            <label for="<%= 'switch-' + id %>" class="on-off-switch-label">
+                <div class="on-off-switch-state">on</div>
+            </label>
+        </div>
+    </div>
+    <div class="col-1 td-edit">
+        <button class="icon icon-edit icon-btn icon-2x"></button>
+    </div>
+</div>
+
+<div data-id="<%= id %>" class="nested-rows"></div>

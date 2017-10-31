@@ -1,0 +1,30 @@
+<tr> 
+	<td class="left-align indented-l">
+	   <%= closureReason %>
+	</td>
+
+	<td class="left-align"> 
+		<% if (repeatsYearly === "Yes") { %>
+			<%= startDate.substr(0,5) %>
+		<% } else { %>
+			<%= startDate %>
+		<% } %>
+	</td>
+
+	<td class="left-align">
+		<% if (repeatsYearly === "Yes") { %> 
+			<%= resumeDate.substr(0,5) %>
+		<% } else { %>
+			<%= resumeDate %>
+		<% } %>
+	</td>
+
+	<td class="left-align">
+	  <%= repeatsYearly %>
+	</td>
+	 
+	<td class="left-align">
+		<button class="icon icon-btn icon-2x icon-trash"></button>
+	</td>
+
+</tr>

@@ -1,0 +1,145 @@
+<section id="tabs" class="l-wrapper top-margin">
+  <h2>Tabs</h2>
+  <p>This section illustrates the functionality of Teleflora's tabs and how they are used to navigate through content. The image max-height in the tabs is 220px high, while max-width is contingent on the tabs container width.</p>
+
+  <!-- TABS + FLORIST TIPS container -->
+  <div id="pdpTabs" class="m-pdp-tabs pdp-tabs top-margin" style="display:block;">
+    <!-- TABS container with bootstrap main tabbable class-->
+    <div id="tabs" class="grid_4 d-grid_12 clear-margin-left clear-margin-right"> <!-- Only required for left/right tabs -->
+      <!-- list for tab navegatin titles -->
+      <ul id="tabs-pdp" data-tabs="tabs" class="nav nav-tabs">
+        <!-- list elements for tabs labels, actual labels-->
+        <li id="descriptionTab" class="active"><a href="#description" data-toggle="tab">SECTION 1</a></li>
+        <!-- tab label element -->
+        <li id="vaseTab"><a href="#vase" data-toggle="tab">SECTION 2</a></li>
+        <!-- tab label element -->
+        <li id="sizesTab"><a href="#sizes" data-toggle="tab">SECTION 3</a></li>
+      </ul>
+
+      <!-- TABS content -->
+      <div id="tabs-pdp-content" class="tab-content">
+        <!-- TAB 1 Description container -->
+        <div class="tab-pane fade active" id="description">
+          <!-- TAB 1 description parragraph -->
+          <p class="m-pdp-tabs-description">Sed dapibus scelerisque est, eu. Interdum et malesuada fames ac. Proin ac lectus vitae nunc. Donec vitae ultricies mi, ac. Morbi pharetra sem a arcu.</p>
+           <!-- TAB 1 label, "subheader" -->
+        </div>
+        <!-- end TAB 1 -->
+
+        <!-- TAB 2 Vases container-->
+        <div class="tab-pane fade" id="vase">
+          <!-- image container -->
+          <div class="m-pdp-tabs-vase-img">
+            <!-- image -->
+            <img src="http://placehold.it/200x220" alt="vase image"/>
+          </div>
+          <!-- end image  -->
+
+          <!-- text container-->
+          <div  class="m-pdp-tabs-vase-text">
+            <!-- text header -->
+            <h5>Section 2</h5>
+            <!-- text parragraph -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.Lorem ipsum dolor sit amet, as consectetur adipisicing elit.</p>
+          </div>
+          <!-- end text -->
+        </div>
+        <!-- end TAB 2 -->
+
+        <!-- TAB 3 SIZES main container-->
+        <div class="tab-pane fade m-pdp-tabs-sizes" id="sizes">
+            <!-- first size -->
+                <!-- size 1 -->
+                <div id="standard_size" class="m-sizes-container">
+                  <!-- vertical ruler container -->
+                  <div class="m-sizes-vertical-container">
+                    <div class="m-sizes-vertical-arrow">
+                      <div class="sizes-up"></div>
+                    </div>
+                    <div class="m-sizes-vertical-number">
+                      <label id="standard_height">16" H</label>
+                    </div>
+                    <div class="m-sizes-vertical-arrow">
+                      <div class="sizes-down"></div>
+                    </div>
+                  </div>
+                  <!-- end vertical ruler container -->
+
+                  <!-- image + horizontal ruler-->
+                  <div class="m-sizes-image-horizontal-container">
+                    <img id="standard_image" src="http://placehold.it/200x220" alt="bouquet size image"/>
+                    <!-- horizontal ruler container -->
+                    <div class="m-sizes-horizontal-container">
+                      <div class="m-sizes-horizontal-arrow-l">
+                        <div class="sizes-left"></div>
+                      </div>
+                      <div class="m-sizes-horizontal-number">
+                        <label id="standard_width">13" W</label>
+                      </div>
+                      <div class="m-sizes-horizontal-arrow-r">
+                        <div class="sizes-right"></div>
+                      </div>
+                      <div class="clear"></div>
+
+                      <!-- size descrption label and price -->
+                      <div class="m-sizes-label-container">
+                      </div>
+                      <!-- end size descrption label and price -->
+                    </div>
+                    <!-- end horizontal ruler container -->
+                  </div>
+                  <!-- end image + horizontal ruler-->
+                </div>
+                <!-- end size 1 -->
+              <!-- end first size -->
+          </div>
+
+        </div>
+        <!-- end TABS content -->
+      </div>
+      <!-- end TABS container with bootstrap main tabbable class-->
+  </div>
+  <!-- end TABS + FLORIST TIPS container -->
+
+<div class="clearfix"></div>
+
+  <!-- code demo -->
+  <div class="m-code l-wrapper top-margin">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <pre class="prettyprint linenums lang-html">
+  &lt;!-- tabs container starts --&gt;
+  &lt;div id="pdpTabs" class="m-pdp-tabs pdp-tabs top-margin" style="display:block;"&gt;
+    &lt;!-- tabs container with bootstrap main tabbable class--&gt;
+    &lt;div id="tabs" class="grid_4 d-grid_12 clear-margin-left clear-margin-right"&gt; &lt;!-- Only required for left/right tabs --&gt;
+      &lt;!-- list for tab navegatin titles --&gt;
+      &lt;ul id="tabs-pdp" data-tabs="tabs" class="nav nav-tabs"&gt;
+        &lt;!-- list elements for tabs labels, actual labels--&gt;
+        &lt;li id="descriptionTab" class="active"&gt;&lt;a href="#description" data-toggle="tab"&gt;SECTION 1&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+     &lt;!-- tabs content --&gt;
+     &lt;div id="tabs-pdp-content" class="tab-content"&gt;
+       &lt;!-- tab 1 Description container --&gt;
+       &lt;div class="tab-pane fade active" id="description"&gt;
+         &lt;!-- tab 1 description parragraph --&gt;
+         &lt;p class="m-pdp-tabs-description"&gt;This premium bouquet features a wide, wondrous assortment of blooms in one bouquet, this colorful arrangement is always a favorite! Hydrangea, roses, lilies, alstromelia, gerberas, daisies - they're all here in stunning variety.&lt;/p&gt;
+          &lt;!-- tab 1 label, "subheader" --&gt;
+       &lt;/div&gt;
+       &lt;!-- end tab 1 --&gt;
+       &lt;/div&gt;
+       &lt;!-- end tabs content --&gt;
+     &lt;/div&gt;
+     &lt;!-- end tabs container with bootstrap main tabbable class--&gt;
+ &lt;/div&gt;
+ &lt;!-- tabs container ends --&gt;
+            </pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</section>
+<!-- tabs section ends-->

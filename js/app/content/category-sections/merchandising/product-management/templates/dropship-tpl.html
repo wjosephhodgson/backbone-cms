@@ -1,0 +1,15 @@
+<tr>
+  <td class="left-align indented-s"><%= serviceType %></td>
+  <td><%= standardDeliveryFee %></td>
+  <td>
+    <input class="f-overrideFee" type="text" value="<%= overrideFee %>">
+  </td>
+  <td class="hide-overflow">
+    <div class="centered-content-container">
+      <input <%= status ? 'checked' : ''%> type="checkbox" class="on-off-switch f-status" id="<%= serviceType %>" name="<%= serviceType %>"/>
+          <label for="<%= serviceType %>" class="on-off-switch-label">
+              <div class="on-off-switch-state">on</div>
+          </label>
+        </div>
+  </td>
+</tr>

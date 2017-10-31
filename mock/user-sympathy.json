@@ -1,0 +1,154 @@
+{
+  "active": true,
+  "pageHeaderTitle": "Page Header Title",
+  "pageHeaderDescription": "Page Header Description",
+  "backgroundImageUrl": "",
+  "serviceDisplayActive": true,
+  "serviceNameOverride": "Service Name Override",
+  "imgUrl1":"http://www.telefloramarketing.com/mock/aboutus-1.jpg",
+  "imgUrl2":"http://www.telefloramarketing.com/mock/aboutus-2.jpg",
+  "serviceCategories": [
+    {
+      "id":1,
+      "sequence": 1,
+      "active": false,
+      "name": "Standing Sprays & Wreath",
+      "img": "http://www.telefloramarketing.com/mock/sympathy-type-3.jpg",
+      "type": "Teleflora"
+    },
+    {
+      "id":2,
+      "sequence":2,
+      "active": true,
+      "name": "Photos & Urn Tributes",
+      "img": "http://www.telefloramarketing.com/mock/sympathy-type-2.jpg",
+      "type": "Teleflora"
+    },
+    {
+      "id":3,
+      "sequence":3,
+      "active": false,
+      "name": "Flowers for the Casket",
+      "img": "http://www.telefloramarketing.com/mock/sympathy-type-1.jpg",
+      "type": "Teleflora"
+    },
+    {
+      "id":4,
+      "sequence":4,
+      "active": false,
+      "name": "Funeral Bouquets",
+      "type": "Custom"
+    }
+  ],
+  "serviceColors": [
+    {
+      "id":1,
+      "active": false,
+      "color": "Blue",
+      "type": "Teleflora"
+    },
+    {
+      "id":2,
+      "active": true,
+      "color": "Yellow",
+      "type": "Teleflora"
+    },
+    {
+      "id":3,
+      "active": false,
+      "color": "Pink",
+      "type": "Custom"
+    },
+    {
+      "id":4,
+      "active": false,
+      "color": "Beige",
+      "type": "Teleflora"
+    }
+  ],
+  "homeDisplayActive": true,
+  "homeNameOverride": "Home Name Override",
+  "homeCategories": [
+    {
+      "id":1,
+      "active": true,
+      "name": "Standing Sprays & Wreath",
+      "img": "http://www.telefloramarketing.com/mock/sympathy-type-3.jpg",
+      "type": "Teleflora"
+    },
+    {
+      "id":2,
+      "active": false,
+      "name": "Photos & Urn Tributes",
+      "img": "http://www.telefloramarketing.com/mock/sympathy-type-2.jpg",
+      "type": "Custom"
+    },
+    {
+      "id":3,
+      "active": false,
+      "name": "Flowers for the Casket",
+      "img": "http://www.telefloramarketing.com/mock/sympathy-type-1.jpg",
+      "type": "Teleflora"
+    },
+    {
+      "id":4,
+      "active": false,
+      "name": "Funeral Bouquets",
+      "type": "Teleflora"
+    }
+  ],
+  "homeColors": [
+    {
+      "id":1,
+      "active": false,
+      "color": "Blue",
+      "type": "Teleflora"
+    },
+    {
+      "id":2,
+      "active": true,
+      "color": "Yellow",
+      "type": "Teleflora"
+    },
+    {
+      "id":3,
+      "active": false,
+      "color": "Pink",
+      "type": "Custom"
+    },
+    {
+      "id":4,
+      "active": false,
+      "color": "Beige",
+      "type": "Teleflora"
+    }
+  ],
+  "mainTitle": "Main Title & Copy",
+  "sections": [
+    {
+      "sequence": 1,
+      "id":1,
+      "display": true,
+      "title": "Religious & Cultural Traditions",
+      "description":"Religious & Cultural Traditions"
+    },
+    {
+      "sequence": 2,
+      "id":2,
+      "display": true,
+      "title": "Funeral & Sympathy Etiquette",
+      "description":"Funeral & Sympathy Etiquette"
+    },
+    {
+      "sequence": 3,
+      "id":3,
+      "display": true,
+      "title": "Symbolic Meaning of Funeral Flower",
+      "description":"Symbolic Meaning of Funeral Flower"
+    }
+  ],
+  "metaTitle": "Meta Title",
+  "metaKeywords": "Meta Keywords",
+  "metaDescription": "Meta Description",
+  "metaTags": "Meta Tags"
+}

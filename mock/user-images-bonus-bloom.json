@@ -1,0 +1,30 @@
+[
+   {
+	"id": 1,
+	"name":"Main Page",
+	"url":"/images/mock/Main-page-win-image.png",
+	"type":"image/png",
+    "global":false
+	},
+	{
+	"id": 2,
+	"name":"Winner Page",
+	"url":"/images/mock/win-amazing-prices.png",
+	"type":"image/png",
+    "global":false
+	},
+	{
+	"id": 3,
+	"name":"No Winner Page",
+	"url":"/images/mock/dont-give-up-noWinner.png",
+	"type":"image/png",
+    "global":false
+	},
+	{
+	"id": 4,
+	"name":"Thank You",
+	"url":"/images/mock/thank-you-page.png",
+	"type":"image/png",
+    "global":false
+	}
+]

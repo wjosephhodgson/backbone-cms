@@ -1,0 +1,123 @@
+@import "compass/css3/transition";
+
+//////////////////////////////////////////////////////////////////////////
+////flexsllider css clases extension for best sellers slide show
+.flexslider,.m-category-flexslider,.m-pdp-flexslider{
+  box-shadow: 0 0px 0px rgba(0,0,0,0) !important;
+  -webkit-box-shadow: 0 0px 0px rgba(0,0,0,0) !important;
+  -moz-box-shadow: 0 0px 0px rgba(0,0,0,0) !important;
+  -o-box-shadow: 0 0px 0px rgba(0,0,0,0) !important;
+}
+
+.m-category-flexslider {
+  margin: 0 !important;
+}
+
+.flexslider.m-pdp-flexslider {
+  margin-bottom: 4em !important;
+  margin-top: 1em !important;
+}
+
+.flexslider.m-pdp-flowers-flexslider {
+  border: 0px;
+  background-color: rgba(255,255,255,0);
+  margin: 0 auto;
+
+  ///////////////////////////////////////////////////////////////////////
+  //width: 100%;///////this is being changed on pdp.js
+  ///////////////////////////////////////////////////////////////////////
+}
+
+.flexslider .slides > li {
+  //used on category bestsellers flexslider & main flexslider on pdp
+  display: none;
+  list-style: none !important;
+}
+
+
+.flexslider.m-pdp-flowers-flexslider .slides > li {
+  // used on flowers in this bouquet on pdp
+  display: none;
+  list-style: none !important;
+  width: 140px !important;
+}
+
+.flex-active-slide{
+  opacity: 1;
+  @include full-transition(all, 0.30s, ease);
+}
+
+////////////////////////////////////////////////////////////////////////////
+//// direction nav for category page bestsellers flexslider
+.flex-direction-nav a {
+  width: 22px !important;
+  height: 22px !important;
+  background-image: url("../images/ui-sprite.svg");
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+//ie fix
+.no-svg {
+  .flex-direction-nav a {
+    background-image: url("../images/ui-sprite.png") !important;
+  }
+}
+
+.flex-direction-nav .flex-next {
+  opacity: 0.6;
+  right: -8.5em !important;
+  top: 1.7em;
+  background-position: -154px -57px;
+  text-align: left !important;
+  text-indent: -9999px;
+  font-family: arial;
+}
+
+.flex-direction-nav .flex-prev {
+  opacity: 0.6;
+  left: 3.4em !important;
+  top: 1.8em;
+  background-position: -208px -57px;
+  text-indent: -9999px;
+  font-family: arial;
+}
+
+.flex-direction-nav .counter {
+  height: 30px;
+  margin: 0px 0 0;
+  display: block;
+  position: relative;
+  top: 50%; z-index: 1;
+  cursor: pointer;
+  @include full-transition(all, 0.30s, ease);
+}
+
+.flex-control-nav {
+	bottom:0;
+	padding-top:10px;
+	position:relative;
+}
+////////////////////////////////////////////////////////////////////////
+/////////////////////////
+// breakpoint1
+/////////////////////////
+
+$breakpoint-tablet: 960px;
+$breakpoint-pre-tablet: 960px;
+
+@media all and (min-width:$breakpoint-tablet) {
+  //for things bigger than phone -> tablet + desktop
+  .flexslider.m-pdp-flowers-flexslider .slides > li {
+    //used on pdp - flowers in this bouquet
+    margin-right: 40px !important; // for tablet layout
+  }
+}
+
+@media all and (min-width:$breakpoint-pre-tablet) {
+  //for things  bigger than tablet -> desktop
+  .flexslider.m-pdp-flowers-flexslider .slides > li {
+    //used on pdp - flowers in this bouquet
+    margin-right: 20px !important; // for desktop layout
+  }
+}

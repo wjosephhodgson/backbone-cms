@@ -1,0 +1,167 @@
+.m-rewards-header-mobile {
+  border-bottom: 1px solid $accent-grey;
+  margin-bottom: 2em;
+  margin-top: 1.5em;
+  text-align: center;
+}
+
+.m-rewards-logo, .m-rewards-logo-signup {
+  background-image: url("../images/rewards/teleflora_rewards_title.svg");
+}
+
+.no-svg {
+  .m-rewards-logo, .m-rewards-logo-signup {
+    background-image: url("../images/rewards/teleflora_rewards_title.png") !important;
+  }
+}
+
+.m-rewards-logo {
+  width:16.4em;
+  height:1.9em;
+  margin-bottom: 1em;
+  margin-top: 0.4em;
+  float: none;
+  display: inline-block;
+}
+
+.m-rewards-logo-signup {
+  width: 8.9em;
+  height: 1.05em;
+  background-position:-231px 1px;
+  margin-top: 0.4em;
+  float: none;
+  display: inline-block;
+}
+
+.m-rewards-logo-link {
+  width: 17.6em;
+  height: 1.9em;
+  margin-bottom: 1em;
+  margin-top: 0.4em;
+  float: none;
+  display: inline-block;
+}
+
+
+.d-grid_9.m-rewards-grid-9-fix {
+  @include desktop() {
+    width: 76% !important;
+  }
+}
+
+.m-account-subheader.m-rewards-subheader {
+  @include mobile() {
+    margin-bottom: 0.8em;
+    padding-top: 1.0em;
+    padding-bottom: 0.7em;
+  }
+}
+
+.m-rewards-points-balance-container{
+  border: 1px dotted $dark-grey;
+  height: 76px;
+  margin-bottom: 3em;
+  margin-top: 0.5em;
+
+  @include desktop() {
+    height: 72px;
+  }
+
+  .m-rewards-points-balance-number {
+    border-right: 1px solid $accent-grey;
+
+    padding-top: 1em;
+    padding-left: 0.2em;
+    padding-right: 0.5em;
+    padding-bottom: 1em;
+    text-align: center;
+    width: 135px;
+
+    @include mobile() {
+      padding-left: 0em;
+      width: 125px;
+    }
+    .m-rewards-points-balance-number-number {
+      font-family: $sans-stack;
+      font-size: 30px;
+      color: $dark-green;
+    }
+  }
+  .m-rewards-points-balance-copy {
+    line-height: 20px;
+    padding-top: 0.55em;
+    padding-left: 10.2em;
+
+    @include desktop() {
+      padding-top: 1.8em;
+      padding-left: 11.5em;
+    }
+  }
+}
+
+.m-rewards-promotion-history-container {
+  margin-bottom: 3em;
+
+  .m-rewards-used-promo-code {
+    color: $black;
+  }
+}
+
+.m-rewards-point-history-container {
+  margin-bottom: 0em;
+}
+
+.table.m-rewards-table {
+  margin-top: 2em !important;
+  margin-bottom: 0 !important;
+
+  td{
+    @include mobile() {
+      font-size: 14px !important;
+
+      a,span{
+        font-size: 13px !important;;
+      }
+    }
+  }
+}
+
+.table-header.m-rewards-table-header {
+  &:first-child {
+    padding-left: 0px !important;
+    max-width: 85px;
+  }
+}
+
+.table-header.m-rewards-table-l-padding{
+  padding-left: 1.1em !important;
+}
+
+.table-data.m-rewards-table-l-padding-td{
+  padding-left: 1.0em !important;
+}
+
+.m-rewards-table-code {
+  font-size: 15px;
+}
+
+.m-rewards-bottom-questions {
+  padding-bottom: 1em;
+
+  &.m-rewards-disclaimer {
+    padding: 1em 0;
+  }
+
+  p{
+    display: block;
+    margin-bottom: -0.1em;
+
+    @include desktop() {
+      display: inline-block;
+    }
+  }
+
+  .m-rewards-link {
+    font-size: 1.15em;
+  }
+}

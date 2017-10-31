@@ -1,0 +1,47 @@
+{
+  "active": true,
+  "pageHeaderTitle": "Page Header Title",
+  "pageHeaderDescription": "Page Header Description",
+  "backgroundImage": "http://www.telefloramarketing.com/mock/tile-1.png",
+  "sectionActive": true,
+  "imgActive": true,
+  "sections": [
+    {
+      "sequence": 1,
+      "id": 1,
+      "display": true,
+      "customerName": "Ricky Bobby",
+      "testimonial":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+      "imgUrl1":"http://www.telefloramarketing.com/mock/bouquet-1.png"
+    },
+    {
+      "sequence": 2,
+      "id": 2,
+      "display": true,
+      "customerName": "Cal Naughton Jr.",
+      "testimonial":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+      "imgUrl1":"http://www.telefloramarketing.com/mock/bouquet-2.png"
+    },
+    {
+      "sequence": 3,
+      "id": 3,
+      "display": true,
+      "customerName": "Jean Girard",
+      "testimonial":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "imgUrl1":"http://www.telefloramarketing.com/mock/bouquet-3.png"
+    },
+    {
+      "sequence": 4,
+      "id": 4,
+      "display": true,
+      "customerName": "Lionel Richie",
+      "testimonial":"Hello... Is it me you are looking for?",
+      "imgUrl1":"http://www.telefloramarketing.com/mock/bouquet-4.png"
+    }
+  ],
+  "mainTitle": "Main Title & Copy",
+  "metaTitle": "Meta Title",
+  "metaKeywords": "Meta Keywords",
+  "metaDescription": "Meta Description",
+  "metaTags": "Meta Tags"
+}

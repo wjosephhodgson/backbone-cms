@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Jquery UI -->
+
+	<title>eSAT Demo</title>
+	<!-- Cache bust loaded CSS -->
+
+	<script>
+	document.write('<link rel="stylesheet" type="text/css" href="css/styles.css?time='+new Date().getTime()+'">');
+	</script>
+
+
+	<script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript" src="http://feather.aviary.com/imaging/v1/editor.js"></script>
+	<!--<script src="http://feather.aviary.com/js/feather.js"></script>-->
+	<script src="js/vendor/modernizr.js"></script>
+
+     <script type="text/javascript" src="https://www.google.com/jsapi"></script> <!--  This is for the Google Graph API-->
+
+
+    <!-- Production -->
+	<!-- <script src="js/bundle.js"></script> -->
+
+	<!-- Development -->
+	<script src="js/vendor/require.js" data-main="js/main-dev"></script>
+</head>
+<body id="app">
+	<div id="page" class="clearfix">
+		<!-- Container for mobile navigation -->
+		<div id="mobile-nav" class="no-desktop"></div>
+
+		<!--
+			Overlay that covers the visible content when mobile nav is open
+			If this is clicked, it will close the mobile nav
+		-->
+		<div id="mobile-nav-overlay" class="no-desktop"></div>
+
+		<!-- Header and content -->
+		<div id="page-content">
+			<header id="header">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<div class="pull-left no-desktop x-space-s">
+								<button id="nav-btn" class="icon icon-btn icon-nav icon-3x y-space-s"></button>
+							</div>
+
+							<div class="logo pull-left">
+								<a href="#" id="esat-logo">
+									<img src="/images/esatlogo.png">
+								</a>
+									<span class="no-click logo-shop-name">MICHAEL'S FLOWER SHOP</span>
+							</div>
+
+							<div class="btn-panel no-mobile">
+								<a href="http://www.teleflora.com" target="_blank"><button class="btn-clear"><i class="icon icon-desktop"></i> See it Live</button></a>
+								<!--<button class="btn-clear"><i class="icon icon-comments"></i> Ask an Expert</button>-->
+								<button class="btn-clear"><i class="icon icon-user"></i> Log Out</button>
+							</div>
+						</div>
+					</div>
+
+					<!-- Desktop navigation container-->
+					<nav id="main-nav" class="row no-mobile"></nav>
+				</div>
+			</header>
+
+			<!-- Page content (this is what routing affects -->
+			<section id="content" class="container"></section>
+		</div>
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer" class="clearfix">
+		<div class="container">
+			<div class="pull-left">
+				Need Help? 866.983.3992 | eFlorist@teleflora.com
+			</div>
+			<div class="pull-right">
+				<img src="images/myteleflora.png" alt="">
+			</div>
+		</div>
+	</footer>
+
+	<div id="modal-container"></div>
+	<div id="modal-container-fixed"></div>
+	<div id="modal-container-form"></div>
+	<div id="another-modal-container"></div>
+
+ </body>
+</html>

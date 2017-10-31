@@ -1,0 +1,275 @@
+.m-category-header {
+  font-size: 1.846em;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+  padding-bottom: 0.5em;
+  text-align: center;
+
+  @include desktop() {
+    //desktop exclusive
+    font-size: 1.846em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+    padding: 0;
+    padding-bottom: 0.5em;
+    text-align: left;
+  }
+}
+
+.m-category-subheader {
+  //used on desktop left side vertical nav-bar
+  @include desktop() {
+    border-bottom: 1px solid $accent-grey;
+    font-size: 1.3em;
+    margin-bottom: 0.8em;
+    padding-bottom: 0.2em;
+    text-align: left;
+  }
+}
+
+.m-category-subheader-bestsellers {
+  //best sellers section heaeder
+  @include desktop() {
+    border-bottom: 1px solid $accent-grey;
+    font-size: 1.3em;
+    margin-bottom: 0.8em;
+    padding-bottom: 0.2em;
+    text-align: left;
+  }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+.m-category-flower-row{
+  //used on every set of bouquets on category page
+  @include desktop() {
+    padding-left: 2em;
+  }
+}
+
+.m-category-flower-link{
+  // used on individual product label and price
+  color: $black;
+  font-family: $serif-stack;
+  display: block;
+  height:40px;
+
+  b:hover{
+    text-decoration: underline;
+  }
+}
+
+.m-category-featured {
+  //background and section bottom border used on the featured bouquets mobile & desktop
+  background-image: url("../images/shelf.png");
+  border-bottom: 1px solid $accent-grey;
+    padding-bottom: 3em;
+  @include desktop() {
+    display: inline-block;
+    margin-bottom: 0em;
+    background-size: 100% 45px;
+    background-repeat: no-repeat;
+    background-position: 0em 15.8em;
+  }
+  @include mobile() {
+    background-size: 100% 45px;
+    background-repeat: no-repeat;
+    background-position: 0em 16em;
+  }
+}
+
+.m-category-featured-title {
+  //main category pink title
+  color: $dark-pink;
+  font-size: 1.846em;
+  margin-bottom: -0.3em;
+  margin-top: 0.13em;
+  padding: 0 0 0.2em;
+  text-align: center;
+  line-height: 1.1em;
+}
+
+.m-category-flower {
+  //for each individual product container
+  margin-top: 1.6em;
+  padding-bottom: 1.5em;
+  display: inline-block;
+}
+
+.m-category-shop-btn {
+  //all shopping buttons on category use this on desktop
+  line-height: 1.3em;
+  display: inline;
+  @include wildcard-max(600px) {
+    display: inline-block;
+  }
+}
+
+.m-category-content {
+  //content container for non featured occasion bouquets
+  border-bottom: 1px solid $accent-grey;
+  padding-bottom: 3em;
+  @include desktop() {
+    margin-top: 1em;
+  }
+  @include mobile() {
+    margin-top: 1.6em;
+  }
+}
+
+.m-category-content-header {
+  //header for al other categories (non featured)
+  font-size: 1.846em;
+  margin-bottom: -0.4em;
+  margin-top: 0.13em;
+  padding: 0 0 0.2em;
+  text-align: center;
+  line-height: 1.1em;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+.m-category-bestsellers-wrap {
+  float:left;
+  width:100%;
+  margin-top: 2em;
+  padding: 0.5em 1em;
+  border: 1px dotted $dark-grey;
+}
+
+.m-category-bestsellers li{
+  list-style:none;
+}
+
+.m-category-bestsellers .m-product-mini{
+
+  @include opacity(0);
+  min-height: 289px;
+  line-height: 1.307692308;
+  filter: progid:DXImageTransform.Microsoft.gradient(
+        startColorstr=#FFFFFF, endColorstr=#FFFFFF
+    );
+
+  figure {
+    margin-bottom: 0.5em;
+  }
+
+  .m-category-flower-link {
+    font-size: 1.07692307692em;
+  }
+}
+
+.m-category-bestsellers-link {
+  //bestsellers pick link "View all"
+  font-family: $sans-stack;
+  font-size: 0.8em;
+}
+
+.m-category-bestsellers-pics {
+  margin-top: -13px;
+  padding-top: -0.8em;
+  text-align: center;
+}
+
+.m-category-bestsellers-img {
+  //bestsellers image for flexsilder
+  height: 195px;
+  width: 195px;
+}
+
+.m-category-bestsellers-price {
+  //best sellers price
+  font-family: $sans-stack-heavy;
+  font-size: 1em;
+  margin-top: -0.3em;
+}
+
+.m-category-dealoftheday {
+  //deal of the day image link
+  margin-top: 2.7em;
+}
+
+.m-category-header-underline {
+  margin: 1.5em auto 0.7em;
+}
+
+
+
+
+///////////////////////////////////////////////drop down menu mobile ///////
+.m-category-sidebar {
+  //mobile menu container
+  .filter-nav-category {
+    //used in ul element of nav-bar
+    display: none;
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+
+    @include desktop() {
+      display: block !important; //important is to override js changes done in mobile
+    }
+  }
+  a:hover {
+    //no underline on mobile menu active element
+    text-decoration: none;
+  }
+}
+
+.m-category-mobile-menu-button {
+  //togle button to display de mobile nav-bar vertical menu
+  max-width: 100%;
+  margin-top: 7px;
+  font-size: 1.1em;
+  font-family: "Avenir LT W01 85 Heavy", Helvetica, sans-serif;
+  text-align: center;
+  margin-bottom: 0em;
+}
+
+.m-category-sidebar-header {
+  //text of the menu
+  font-size: 1em;
+  border-top: 1px solid $accent-grey;
+  padding-top: 0.5em;
+  padding-bottom: 0.4em;
+  text-align: center;
+
+}
+
+.m-category-drop-menu-bottom-border {
+  //bottom border for the vertical nav-bar drop down menu
+  border-bottom: 1px solid $accent-grey
+}
+
+
+.m-category-vert-navbar-link{
+  //used on the labels for each element of the vetical nav-bar drop down menu
+  text-decoration: none;
+  font-family:$sans-stack-heavy;
+  color:$black;
+  text-decoration:none !important;
+  text-transform:uppercase;
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+$breakpoint-tablet: 38.461538462em; // threshold between tablet and smaller screen size (phone)
+
+// media query and class used to show a bouquet during tablet, and hide it on smaller screen size
+.hide-after-tablet {
+  display: none;
+  .grid_2.m-category_2{
+    width: 30%;
+  }
+}
+
+///////////////////////////////////////////////////
+// media queries to ask for specific screen size //
+///////////////////////////////////////////////////
+
+@media all and (min-width:$breakpoint-tablet) {
+  // media query and class used to show a bouquet during tablet, and hide it on smaller screen size
+  .hide-after-tablet {
+    display: inline-block;
+  }
+  .grid_2.m-category_2{
+    width: 30%;
+  }
+}

@@ -1,0 +1,21 @@
+<tr> 
+	<td class="left-align indented-l">
+
+	<%= ProductCatalogName %>
+	  </td>
+
+	<td class="left-align hide-overflow">  
+	 <div class="centered-content-container">
+
+      <input <%= SubscribeStatusActive ? 'checked' : ''%> type="checkbox" id="<%= 'subscribe-status-active-' + id %>" name="<%= 'subscribe-status-active-' + id %>" data-id="<%=id%>" class="on-off-switch subscribeActive-switch" />
+
+          <label for="<%= 'subscribe-status-active-' + id %>" class="on-off-switch-label">
+
+              <div class="on-off-switch-state">on</div>
+        </label>
+
+        </div>
+
+        </td> 
+
+</tr>

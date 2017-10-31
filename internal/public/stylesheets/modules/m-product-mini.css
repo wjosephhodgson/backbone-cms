@@ -1,0 +1,222 @@
+html {
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: scroll;
+  overflow-scrolling: touch;
+}
+
+html.no-scroll {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  overflow-scrolling: auto;
+  width: 100%;
+  height: 100%;
+}
+html.no-scroll body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  min-height: 50em;
+  min-width: 320px;
+  width: 100%;
+}
+
+.touch a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+html.oldie {
+  width: 960px;
+  display: block;
+  margin: 0 auto;
+  border-right: 0;
+}
+html.oldie .m-navbar-offcanvas-divider {
+  display: none;
+}
+
+.oldie #navTrigger {
+  display: none;
+}
+
+/* Used in: sub-category, */
+.m-product-mini {
+  width: 100%;
+  max-width: 140px;
+  /* min-height: 300px; */
+  display: inline-block;
+  float: none;
+  vertical-align: bottom !important;
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 1em;
+  position: relative;
+  text-align: center;
+}
+@media screen and (min-width: 961px) {
+  .m-product-mini {
+    max-width: 160px;
+  }
+}
+.m-product-mini .text-large {
+  font-size: 1.307em;
+  margin-bottom: 0em;
+}
+.m-product-mini .text-large a {
+  color: black;
+}
+.m-product-mini:hover a {
+  text-decoration: underline;
+}
+.m-product-mini .m-product-mini-image a {
+  text-decoration: none;
+}
+.m-product-mini .m-product-mini-image a:hover {
+  text-decoration: none;
+}
+.m-product-mini .m-product-mini-price {
+  display: block;
+  font-family: "Avenir LT W01 65 Medium", Helvetica, sans-serif;
+  color: #242424;
+  text-transform: uppercase;
+  text-align: center;
+}
+.m-product-mini .m-product-mini-price .crossed {
+  display: inline-block;
+  padding-right: 10px;
+}
+.m-product-mini .m-product-mini-price .crossed:hover {
+  text-decoration: none;
+}
+.m-product-mini .m-product-mini-buynow {
+  margin-top: -0.4em;
+}
+@media screen and (max-width: 960px) {
+  .m-product-mini.col-4 .hidden {
+    display: block;
+  }
+}
+@media screen and (min-width: 961px) {
+  .m-product-mini.col-4 {
+    width: 100% !important;
+    max-width: 100%;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 960px) {
+  .m-product-mini.col-2 .hidden {
+    display: block;
+  }
+}
+@media screen and (min-width: 961px) {
+  .m-product-mini.col-2 {
+    width: 48% !important;
+    max-width: 100%;
+  }
+}
+.m-product-mini .promo-bg-image {
+  width: auto;
+  height: 200px;
+  margin-bottom: 0.2em;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media screen and (min-width: 961px) {
+  .m-product-mini .promo-bg-image {
+    height: 220px;
+    margin-bottom: 0.6em;
+  }
+}
+.m-product-mini div {
+  position: relative;
+}
+
+.m-product-mini-recommends, .m-product-mini-stars, .m-product-mini-stars-rating {
+  height: 0;
+  padding-bottom: 0.9em;
+  overflow: hidden;
+  display: block;
+  margin: 0 auto;
+  text-indent: -9999px;
+}
+
+.m-product-mini-stars, .m-product-mini-stars-rating {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAANCAYAAACZ3F9/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0MDk1OTI3OTBEQjYxMUUzOEU3N0MzNTUzNjBFNkFGRiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0MDk1OTI3QTBEQjYxMUUzOEU3N0MzNTUzNjBFNkFGRiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjQwOTU5Mjc3MERCNjExRTM4RTc3QzM1NTM2MEU2QUZGIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjQwOTU5Mjc4MERCNjExRTM4RTc3QzM1NTM2MEU2QUZGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+aqK5vwAAAM1JREFUeNqU0T0KwkAQhuGJxh9EtLPQe+gBbCysLGzSWXkOK8FCFO8gglh4H5sgIv5UgpUa34WJxJgV8sFDdjfM7g4rgT2zP/8CsawfUMEpbeEUOczTFjaR1W9iHKxEZI87Alyx0LExRBUlOKhjINpPBwW9njkpo5uGzNxFN+w7vOoTYxQthWbTCV62HtcJhWa8jPfoynd87SMaM99JPLGN2sijhhEa2nfr33OcUUYPR127wNPe/fhzBHr4Fjd48psNHuh/7h8pTJW3AAMAbW/nqcyYdOUAAAAASUVORK5CYII=);
+}
+
+.m-product-mini-stars {
+  width: 5.3em;
+  background-position: left top;
+  background-color: #cccccc;
+  margin-top: 0.3em;
+  margin-bottom: 0.4em;
+}
+.m-product-mini-stars .m-product-mini-stars-rating {
+  background-position: left top;
+  float: left;
+  background-color: #7fcf29;
+}
+.m-product-mini-stars .m-product-mini-stars-rating.stars-1, .m-product-mini-stars .m-product-mini-stars-rating.stars-1-0 {
+  width: 1em;
+}
+.m-product-mini-stars .m-product-mini-stars-rating.stars-1-5 {
+  width: 1.6em;
+}
+.m-product-mini-stars .m-product-mini-stars-rating.stars-2, .m-product-mini-stars .m-product-mini-stars-rating.stars-2-0 {
+  width: 2em;
+}
+.m-product-mini-stars .m-product-mini-stars-rating.stars-2-5 {
+  width: 2.7em;
+}
+.m-product-mini-stars .m-product-mini-stars-rating.stars-3, .m-product-mini-stars .m-product-mini-stars-rating.stars-3-0 {
+  width: 3.2em;
+}
+.m-product-mini-stars .m-product-mini-stars-rating.stars-3-5 {
+  width: 3.8em;
+}
+.m-product-mini-stars .m-product-mini-stars-rating.stars-4, .m-product-mini-stars .m-product-mini-stars-rating.stars-4-0 {
+  width: 4.2em;
+}
+.m-product-mini-stars .m-product-mini-stars-rating.stars-4-5 {
+  width: 4.8em;
+}
+.m-product-mini-stars .m-product-mini-stars-rating.stars-5, .m-product-mini-stars .m-product-mini-stars-rating.stars-5-0 {
+  width: 5.2em;
+}
+
+.m-product-mini-recommends {
+  background-image: url("../images/ui-sprite.svg");
+  background-position: -44px -106px;
+  text-indent: -9999px;
+  width: 10.7em;
+  height: 1.2em;
+  margin-top: 0.1em;
+  margin-bottom: 0.3em;
+}
+
+.no-svg .m-product-mini-recommends {
+  background-image: url("../images/ui-sprite.png") !important;
+}
+
+@media screen and (min-width: 961px) {
+  .m-pdp-bouquets-in-collection-flower.m-product-mini {
+    width: 17%;
+  }
+}

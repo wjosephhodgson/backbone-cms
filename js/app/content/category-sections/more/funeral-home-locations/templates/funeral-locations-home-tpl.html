@@ -1,0 +1,68 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Funeral Home Locations</h2>
+			<button type="button" id="save-btn" class="btn btn-submit pull-right">Save Changes</button>
+			<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced">
+	<div class="col-12">
+		You can use this page to configure which funeral homes you are associated with.
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+		This is a generic placeholder for error messages in eSAT. <br>
+		In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row row-spaced panel form-section">
+	<div class="col-12">
+		<div class="label">Delivery Message</div>
+		<textarea class="size-2" name="f-delivery-message" id="f-delivery-message"><%= delMsg %></textarea>
+	</div>
+</div>
+
+<div class="row row-spaced panel">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Funeral Home Locations</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+		<button type="button" id="new-btn" class="btn btn-submit pull-right">
+			<i class="icon icon-add"></i> New Location
+		</button>
+		</div>
+	</div>
+
+	<table class="table alternate">
+		<thead>
+			<tr>
+				<th class="col-1"></th>
+				<th class="col-1">Sequence</th>
+				<th class="col-6 left-align">Description <button type="button" id="sort-btn" class="icon icon-btn icon-sort x-space-s"></button></th>
+				<th class="col-2">Status</th>
+				<th class="col-1">Edit</th>
+				<th class="col-1">Delete</th>
+			</tr>
+		</thead>
+		<tbody id="location-list"></tbody>
+	</table>
+</div>

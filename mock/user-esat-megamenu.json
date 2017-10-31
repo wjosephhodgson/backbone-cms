@@ -1,0 +1,39 @@
+[
+	{
+	"id": 1,
+	"MegaMenuName": "Merchandising",
+	"MegaMenuActive": true,
+	"MegaMenuAssociatedSection": "MERCHANDISING"
+	},
+	
+	{
+	"id": 2,
+	"MegaMenuName": "Content Management",
+	"MegaMenuActive": true,
+	"MegaMenuAssociatedSection": "MERCHANDISING"	
+	},
+	{
+	"id": 3,
+	"MegaMenuName": "Marketing & Promotions",
+	"MegaMenuActive": true,
+	"MegaMenuAssociatedSection": "MERCHANDISING"	
+	},
+	{
+	"id": 4,
+	"MegaMenuName": "SEO",
+	"MegaMenuActive": true,
+	"MegaMenuAssociatedSection": "MERCHANDISING"	
+	},
+	{
+	"id": 5,
+	"MegaMenuName": "Reporting",
+	"MegaMenuActive": true,
+	"MegaMenuAssociatedSection": "MERCHANDISING"	
+	},
+	{
+	"id": 6,
+	"MegaMenuName": "More",
+	"MegaMenuActive": true,
+	"MegaMenuAssociatedSection": "MERCHANDISING"	
+}
+]

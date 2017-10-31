@@ -1,0 +1,996 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////
+.m-pdp-tooltip-stars, .m-pdp-tooltip-ratings {
+  display: none;
+}
+.tooltip-inner .m-pdp-tooltip-stars, .tooltip-inner .m-pdp-tooltip-ratings{
+  display: block;
+}
+.d-grid_10.m-pdp-header-grid{
+  //extension of grid to fit title on desktop
+  @include desktop() {
+    width: 80.333% !important;
+  }
+}
+.d-grid_2.m-pdp-rating-combo{
+  //extension of grid to fit rating combo on desktop
+  @include desktop() {
+    width: 19.667% !important;
+  }
+}
+
+.m-pdp-title-ratings-container {
+  border-bottom: 1px solid $accent-grey;
+  padding-bottom: 1em;
+
+  @include desktop() {
+    margin-bottom: 0.9em;
+    padding-bottom: 0.6em;
+  }
+
+  .m-pdp-header{
+    //used on the main title of the page
+    font-size: 24px !important;
+    line-height: 1.2em;
+    margin-bottom: 0.3em;
+    text-align: center;
+    padding: 0;
+
+    @include desktop() {
+      text-align: left;
+      margin-left: 0em;
+      margin-right: 0em;
+      margin-top: 0.4em;
+      margin-bottom: 0.05em;
+    }
+  }
+  .m-pdp-rating-combo{
+    //container for rating stars & link to open ratings tooltip, with horizontal bar graph
+    @include desktop() {
+      margin-left: 0em;
+      margin-right: 0em;
+      margin-top: 0.6em;
+    }
+  }
+  .m-pdp-ratings-stars{
+    //used in the interactive rating stars
+    @include desktop() {
+      padding-top: 0.6em;
+    }
+  }
+  .m-pdp-ratings-link {
+    //used to place the "## Ratings" link
+    font-size: 15px;
+
+    @include desktop() {
+      margin-right: 0em;
+      padding-top: 0.45em;
+    }
+
+    &:hover {
+      a{
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.grid_2.m-pdp-grid2-rating{
+  width: 26%
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+.m-pdp-thumbs-column {
+  //container for the image thumb
+  margin-left: 0em !important;
+  margin-top: 0.2em;
+  margin-right: 0em;
+
+  .m-pdp-thumbs-column-list{
+    //used to align the thumbs column
+    margin-top: 0.45em;
+    width: 6em;
+
+    .m-pdp-thumbs-column-list-item{
+      //individual thumb
+      list-style: none;
+      width: 9.6em;
+
+      .m-pdp-thumbs-column-list-item-link{
+        //individual thumb active element
+        text-decoration: none;
+        cursor: pointer;
+
+        img {
+          border: 1px solid $accent-grey;
+          height: 60px;
+          width: 60px;
+        }
+      }
+      &.active {
+        //used when a thumb is active and showing a big size main image
+        font-size: 1em;
+
+        a:after {
+          background-image: url("../images/ui-sprite.svg");
+          background-position: -111px 0px;
+          background-repeat: no-repeat;
+          content: ">";
+          display: inline-block;
+          float: right;
+          height: 0.9em;
+          padding-right: 0.5em;
+          margin-top: 1.8em;
+          margin-right: 3.6em;
+          text-indent: -9999px;
+        }
+      }
+    }
+  }
+}
+
+.no-svg {
+  .m-pdp-thumbs-column-list-item.active a:after {
+    background-image: url("../images/ui-sprite.png") !important;
+  }
+}
+
+.m-pdp-main-img-container {
+  //container for main pdp image, the big image on desktop and tablet
+  margin-top: 0.65em;
+  max-height: 460px;
+  margin-left: -0.3em !important;
+  text-align: center;
+
+  .m-pdp-main-img {
+    //actual img element that shows the main pdp image on desktop and tablet
+    height: auto;
+    cursor: url("../images/pdp/zoom_cursor.png"), url('../images/pdp/zoom_cursor.cur.png'), pointer;
+  }
+}
+///////////////////////////////////////////////////////////////////////////////////////////
+.d-grid_7.pdp-selects{
+  //used to extend the grid system for the select lists on "Add something extra"
+   @include desktop() {
+    width:53.5%%;
+  }
+}
+
+.m-pdp-form-container {
+  //form container, used to have the vertical division line between images and the dashboard
+  @include desktop() {
+    border-left: 1px solid $accent-grey;
+    margin-top: -1em;
+    margin-right: 0em;
+    margin-bottom: -0.1em;
+  }
+
+  @include mobile() {
+    border-top: 1px solid $accent-grey;
+  }
+}
+
+.m-pdp-form-elements{
+  //used to have a left padding for all the elements on the form of the dashboard
+  @include desktop() {
+    padding: 0 1em 0 1.85em;
+
+    &.m-social-left-container {
+      padding-left: 0;
+    }
+  }
+
+  li {
+    //clear margin on the bottom of radio btns
+    margin-bottom: 0em;
+    margin-left: 0;
+    margin-right: 2%;
+  }
+
+  .m-subscriptions-dynamic-list {
+    .m-subscriptions-dynamic-list-item {
+      @include wildcard-max(480px) {
+        .grid_2 {
+          display: block;
+          clear: both;
+          width: 100%;
+        }
+        #occasionSelect {
+          margin-top: 1em;
+        }
+      }
+    }
+  }
+}
+
+@include wildcard-max(480px) {
+  .m-pdp-form-radios {
+    margin-right: 0;
+    width: 100%;
+
+    &.m-pdp-form-radios-thirds {
+      .custom-radio {
+        width: (100%/3);
+        margin-right: 0;
+
+        .custom-radio-label {
+          padding-left: 1.8em;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+//////////////////////////////////////////////////////
+.m-pdp-form-radios-container{
+  //container for "select size" radio btns
+  border-bottom: 1px solid $accent-grey;
+  padding-top: 1.5em;
+}
+
+.m-pdp-form-radio-title{
+  //"select size" section title
+  @include desktop() {
+      margin-bottom: 1em;
+  }
+}
+
+.m-pdp-form-radios{
+  //<ul>  containing the actual radio btns as <li>
+   @include desktop() {
+    margin-left: -0.2em;
+  }
+
+  @include mobile() {
+    margin-right: -11em;
+  }
+
+  &.u-pdp-form-payment-plan {
+    width: 100%;
+
+    .custom-radio-label {
+      margin-right: 0;
+    }
+  }
+}
+
+.m-pdp-custom-radio{
+  //actual radio btns
+  margin-left: 0em;
+
+  @include desktop() {
+    display: inline-block;
+  }
+}
+/////////////////////////////////////////////////////////////////////////////
+.m-pdp-form-extra-container{
+  //"add something extra" container
+  border-bottom: 1px solid $accent-grey;
+  padding-top: 1.5em;
+}
+
+.grid_2.pdp-grid_2{
+  //grid extension for add something extra select labels
+  @include mobile() {
+    width:30.0%;
+  }
+}
+
+.m-pdp-form-extra-labels{
+  //add something extra first label
+  margin-left: -0.25em;
+  padding-top: 0.55em;
+}
+
+.grid_2.pdp-grid_2s{
+  //grid extension for add something extra selects
+  @include mobile() {
+    width:66.0%;
+  }
+}
+
+.m-pdp-form-extra-selects{
+  //add something extra selects
+  margin-top: -1em;
+}
+
+.m-pdp-form-extra-selects-label{
+  //add something extra, second and third labels
+  margin-top: -0.8em;
+}
+
+//////////////////////////////////////////////////////////////////////
+.m-pdp-form-zip-date-container{
+  //main container for zip and date text input boxes
+  border-bottom: 1px solid $accent-grey;
+  padding-top: 1.5em;
+  padding-bottom: 0.6em;
+}
+
+.m-pdp-zip-link-adress-book-container {
+  margin-top: 0.2em;
+  margin-bottom: 0.1em;
+
+  a {
+    cursor: pointer;
+  }
+}
+
+.m-pdp-form-zip{
+  text-align: left;
+  //zip code text area container
+  @include desktop() {
+    input {
+      margin-bottom: 0.7em;
+    }
+  }
+}
+
+.m-pdp-form-date{
+  //container for delivery date input text area
+  margin-bottom: -1em;
+}
+
+.m-pdp-find-zip-link{
+  //find zip link
+  border-right: 1px solid $accent-grey;
+  padding-right: 4px;
+}
+
+.d-grid_1.pdp-grid_1{
+  //grid extension for m-pdp-vdivider - small vertical divider
+  width: 0.1% !important;
+}
+
+.m-pdp-vdivider{
+  //small vertical divider
+  background-color:$accent-grey;
+  height: 12px;
+  margin-top: -0.5em;
+  margin-bottom: 0em;
+}
+
+.m-pdp-form-address-link{
+  //use address book link
+  font-family: $sans-stack-book;
+
+  @include desktop() {
+    margin-left: -0.1em;
+    margin-top: -0.8em;
+    padding-left: 0.85em;
+  }
+}
+
+///////////////////////////////////////////////////////////////////
+.m-pdp-form-add-to-cart-container{
+  //container for add to cat btn and sve for later link
+  border-bottom: 1px solid $accent-grey;
+}
+
+.m-pdp-form-cart-btn{
+  //containe for add to cart btn
+  @include desktop() {
+    margin-bottom: 1.6em;
+    margin-top: 0.2em;
+    margin-left: 0em !important;
+  }
+  margin-top: 1.5em;
+}
+
+.m-pdp-form-save-link{
+  //container for save for later link
+  @include desktop() {
+    margin-top: 2.05em;
+    padding-left: 1.9em;
+  }
+  @include mobile() {
+    margin-top: 0.6em;
+    text-align: center;
+    padding-bottom: 0.95em;
+  }
+  a{
+    //correct font size according to design
+    font-size: 15px;
+  }
+}
+////////////////////////////////////////////////////////////////////
+
+.d-grid_12.pdp-tabs{
+  //extension of grid to fit tabs
+  width: 100%;
+}
+
+.grid_1.pdp-tabs-btn-mobil{
+  //extension of grid to adapt mobile description btns
+  @include mobile() {
+    width: 40.0%;
+  }
+  @include wildcard-max(480px) {
+    width: 48%;
+  }
+}
+
+.d-grid_2.pdp-btn-d{
+  //extension of grid to adapt desktop description btns
+  @include desktop() {
+    width: 18%;
+  }
+}
+
+.tabbable.pdp-tabable{
+  //extension of bootstrap tabbable class
+  padding-bottom: 1em;
+  display: inline;
+  @include desktop() {
+    min-height: 344px;
+    height: 100%;
+  }
+}
+
+.m-pdp-loading-gif-tabs {
+  margin-top: 10em !important;
+  // padding-top: 10em;
+  margin-bottom: -14em;
+
+}
+
+.m-pdp-tabs,.m-pdp-tabs-no-florist-tip{
+  //container for tabs
+  margin-top: 1.8em;
+  margin-left: 0.2em;
+  margin-right: 0em;
+  padding-right: 0em;
+
+  p{
+    font-family: $serif-stack;
+    font-size: 17px;
+  }
+  label{
+    font-size: 13px;
+  }
+  @include desktop() {
+    margin-left: 0.9em;
+  }
+
+  .m-pdp-tabs-description {
+    //description tab
+    padding-left: 0.1em;
+    padding-right: 0em;
+    @include desktop() {
+      padding-left: 0.9em;
+      padding-right: 1em;
+    }
+  }
+
+  .m-pdp-tabs-description-label, .m-pdp-tabs-promo-label{
+    //label ("subheader") between description pararaf and category btns
+      margin-bottom: 1em;
+      padding-left: 0.2em;
+      padding-top: 1.1em;
+      padding-right: 1em;
+
+    @include desktop() {
+      margin-bottom: 1em;
+      padding-left: 1.2em;
+      padding-top: 3.2em;
+      padding-right: 1em;
+    }
+  }
+
+  .m-pdp-tabs-promo-image {
+    padding: 0 1em 0 0.9em;
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .m-pdp-tabs-description-btns{
+    //category btns container
+    padding-left: 0.0em;
+    font-size: 14px;
+
+    @include desktop() {
+      padding-left: 0.6em;
+    }
+  }
+////////////////////////////////////////////////////////////////////////////
+  // .m-pdp-tabs-vase-img {
+  //   code for this at the bottom, using media queries
+  // }
+
+  .m-pdp-tabs-vase-text{
+    //vase tab text
+    padding-top: 1em;
+    text-align: left;
+
+    h5{
+      font-size: 17px;
+    }
+  }
+///////////////////////////////////////////////////////////////////////////////
+  .m-pdp-tabs-sizes{
+    // container for flower sizes
+    @include desktop() {
+      padding-top: 1em;
+    }
+    @include mobile() {
+      text-align: center;
+    }
+  }
+  .m-pdp-tabs-sizes-size, .m-pdp-tabs-sizes-no-florist-tip {
+    //used to have spacing between sizes, its used on the middle size
+    margin-right: 2em;
+    margin-left: 2em;
+  }
+}
+
+.m-pdp-tabs-sizes-no-florist-tip {
+  @include desktop() {
+    margin-right: 10em !important;
+    margin-left: 10em !important;
+  }
+}
+
+.m-pdp-tabs-no-florist-tip {
+  border-bottom: 1px solid $accent-grey;
+  padding-bottom: 2em;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+.m-pdp-floris-tips-container{
+  //florist tips container
+  border: 1px dotted $dark-grey;
+  margin-top: 2.0em;
+
+  @include desktop() {
+    margin-top: 0em;
+    float: right;
+    max-width: 19em;
+    height: 344px;
+   }
+
+  .m-pdp-floris-tips-subheader {
+    //header for florist tips area
+    font-size: 1.3em;
+    padding-top: 0.5em;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+  }
+
+  .m-pdp-floris-tips-text{
+    //text for florist itp area
+    padding-left: 0.9em;
+    padding-right: 1em;
+    padding-bottom: 0.5em;
+    @include desktop() {
+      height: 227px;
+    }
+  }
+
+  .m-pdp-florist-tips-florist{
+    padding-left: 1.2em;
+    padding-bottom: 0.5em;
+  }
+
+  .m-pdp-floris-tips-florist-img{
+    margin-right: 1em;
+    display: inline-block;
+  }
+
+  .m-pdp-floris-tips-florist-data-container{
+    //floris bio parragraph
+    font-size: 14px;
+    display: inline-block;
+    line-height: 17px;
+    position: relative;
+    top: -8px;
+    @include desktop() {
+      max-width: 160px;
+    }
+    .m-pdp-floris-tips-florist-data-name {
+      height: auto;
+    }
+    .m-pdp-floris-tips-florist-data-business {
+      height: auto;
+    }
+    .m-pdp-floris-tips-florist-data-address {
+      height: auto;
+    }
+  }
+}
+///////////////////////////////////////////////////////////////////////////
+
+.m-pdp-flowers-in-bouquet {
+  //main container for flowers in this bouquet
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+  visibility: hidden;
+
+  @include desktop() {
+    width: 100%;
+    height: 280px;
+    margin: 0em;
+    padding: 0em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  img {
+    cursor: pointer;
+  }
+}
+
+.m-pdp-flowers-in-bouquet-title-container {
+  text-align: center;
+  h3{
+      font-size: 24px !important;
+    }
+
+  .m-pdp-flowers-in-bouquet-title{
+    //main title for flowers in this bouquet section
+    @include desktop() {
+      margin-top: 1.25em;
+    }
+    @include mobile() {
+      margin-top: 1em;
+    }
+  }
+}
+
+.m-pdp-flowers-in-bouquet-copy {
+  //copy under flowers
+  font-size: 14px;
+  line-height: 17px;
+  @include desktop() {
+    margin-top: 0.0em;
+  }
+  @include mobile() {
+    margin-top: 0.5em;
+    margin-bottom: 0.7em;
+  }
+}
+
+.m-pdp-flowers-in-bouquet-flowers {
+  //container for all the flowers to display
+  padding-top: 2.8em;
+  margin: 0 auto;
+  display: inline-block;
+  float: none;
+  text-align: center;
+}
+
+.m-pdp-flowers-in-bouquet-flower {
+  //container for individual flower
+  display: inline-block;
+  position: relative;
+}
+
+.m-pdp-flowers-in-bouquet-flower-tag{
+  //name tag for each flower
+  text-align: center;
+  margin-top: 0.3em;
+}
+
+
+/////////////////////////////////////////////////////////////////////////////
+.d-grid_12.pdp-grid_12{
+  //extension of grid to meet bouequets in collection graphic requirements
+  width: 100%;
+  margin-left: 1em;
+  margin-right: 0em;
+  @include mobile() {
+    margin-left: 0em;
+  }
+}
+
+.m-pdp-bouquets-in-collection {
+  //container for background, overflowing grid
+  text-align: center;
+
+  @include desktop() {
+    margin-top: 0em;
+    padding: 0em;
+  }
+
+  @include mobile() {
+    margin-top: -3em;
+  }
+}
+
+.m-pdp-bouquets-in-collection-flowers {
+  //container for the flowers being displayed
+  float: none;
+  margin: 0 auto;
+  display: inline;
+
+  @include desktop() {
+    margin-top: 1em;
+  }
+}
+
+.m-pdp-bouquets-in-collection-title {
+  //bouquets in collection title
+  h3{
+    font-size: 24px !important;
+  }
+
+  @include desktop() {
+    margin-top: 0em;
+    margin-bottom: -1em;
+  }
+  @include mobile() {
+    margin-top: 3.8em;
+  }
+}
+
+.m-pdp-bouquets-in-collection-title-img {
+  //bouquets in this collection title image
+  @include desktop() {
+    margin-top: 0em;
+  }
+  @include mobile() {
+    margin-top: 0em;
+  }
+}
+//////////////////////////////////////////////////////////////////////////////
+.m-pdp-recommended{
+  //recommended bouquets USED WHEN THERE IS NO COLLECTION BOUQUETS WANTED on the pdp page
+  //it has no background image
+  text-align: center;
+
+  @include desktop() {
+    margin-top: 0em;
+    padding: 0em;
+  }
+  @include mobile() {
+      margin-top: -3em;
+  }
+}
+
+.m-pdp-recommended-title{
+  //bouquets in collection title
+  font-size: 13px;
+  p{
+    margin-bottom: -0.5em;
+  }
+  @include desktop() {
+    margin-top: 0em;
+  }
+  @include mobile() {
+    margin-top: 0em;
+  }
+}
+
+.m-pdp-recommended-flowers{
+  //container for the flowers being displayed
+  float: none;
+  margin: 0 auto;
+  display: inline;
+}
+
+.m-pdp-recommended-flower{
+  //indiviual flower being displayed
+  @include desktop() {
+    padding-top: 0em;
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////
+
+.product-zoom {
+  display: none;
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 7px;
+
+  z-index: 1;
+  clear: both;
+  width: 546px;
+  float: left;
+  text-align: left;
+}
+.product-zoom .prod-zoom-close {
+  position: absolute;
+  z-index: 3;
+  right: 10px;
+  top: 10px;
+  text-indent: -9999px;
+
+}
+.product-zoom .product-zoom-img {
+  top: -125px;
+  left: -300px;
+  cursor: move;
+
+  position: absolute;
+  z-index: 2;
+  vertical-align: middle;
+}
+.container {
+  position: relative;
+  width: 705px;
+  height: 555px;
+  background: #f7f8f8;
+  overflow: hidden;
+}
+.product .slides .list {
+  position: relative;
+  left: 0;
+  top: 0;
+  list-style-type: none;
+  white-space: nowrap;
+}
+.product .slides .slide {
+  display: inline-block;
+  vertical-align: top;
+}
+
+//////////////////////////////////////////////////////////////////////////
+.modal-body.pdp-modal-body{
+  //extension for modal body
+  max-height: 510px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-top: 0.5em;
+}
+
+.modal-footer.pdp-modal-footer {
+  //extension for modal footer
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 0.9em;
+  padding: 0 0 1em;
+  margin-bottom: 0;
+  text-align: center;
+  border-top: 1px solid $accent-grey;
+}
+
+.pdp-modal-footer-link{
+  //modal footer left side link
+  padding-top: 1em;
+  font-size: 15px;
+}
+
+.m-pdp-header-modal-body{
+  //modal body container
+  font-size: 1.846em;
+  line-height: 1.2em;
+  margin-bottom: 0.0em;
+  padding-bottom: 0.0em;
+  text-align: center;
+
+  @include desktop() {
+    margin-left: -0.4em;
+    margin-top: -0.7em;
+  }
+
+  @include mobile() {
+    margin-top: -0.5em;
+  }
+}
+
+.m-pdp-modal-flowers-container {
+  margin-bottom: 1em;
+}
+.m-pdp-modal-header{
+  //modal main header container
+  background-color: $grey;
+  height: 4em;
+  border-radius: 6px;
+}
+
+.m-pdp-modal-header-text {
+  //modal main copy
+  font-size: 1.3em;
+
+  @include desktop() {
+    margin-bottom: 0.8em;
+    margin-top: 0.5em;
+    padding-bottom: 0.2em;
+    text-align: left;
+  }
+  @include mobile() {
+    padding-top: 0.5em;
+  }
+}
+
+.btn-submit-pdp-alert{
+  //modal btn to vew subcategory
+  margin: 0 auto;
+  line-height: 1.3em;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+.hide-on-smaller-than-tablet{
+  display: none;
+}
+
+.m-pdp-tabs-vase-img {
+  //vase tab image for sizes bigger than phone
+  float: left;
+  margin-right: 1em;
+  padding-top: 1em;
+}
+
+$breakpoint-tablet: 38.461538462em;
+$breakpoint-pre-tablet: 58.461538462em;
+
+/////////////////////////
+// breakpoint1
+/////////////////////////
+@media all and (min-width:$breakpoint-tablet) {
+  //for things bigger than phone -> tablet + desktop
+  .show-on-phone-only {
+    display: none;
+  }
+  .hide-on-smaller-than-tablet{
+    display: inline-block;
+  }
+}
+
+@media all and (min-width:$breakpoint-pre-tablet) {
+  //for things  bigger than tablet -> desktop
+}
+
+@media all and (max-width:$breakpoint-tablet) {
+  //for things smaller than tablet -> phone
+
+  .m-pdp-tabs-vase-img {
+    //vase tab image
+    //is used on size smaller than phone
+    float: none;
+    text-align: center;
+    margin-right: 1em;
+    padding-top: 0.5em;
+  }
+}
+//////////////////////////////////////////////
+
+
+/////////////////flexsliders /////////////////////////////////////////////
+.m-pdp-main-caro-container {
+  margin-top: 1em;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.m-pdp-flowers-in-bouquet-flex-container {
+  margin-top: 1em;
+
+  @include desktop() {
+    margin-top: 2em;
+  }
+
+  background-image: url("../images/pdp/shelf_940.png");
+  background-repeat: no-repeat;
+  background-size: 100% 130px;
+}
+
+
+.m-pdp-find-zip {
+  width: 64%;
+  margin: 0 auto;
+
+  ul {/*
+    list-style: none;
+    line-height: 2;
+    padding-left: 1.5em; */
+
+    li {
+      display: inline-block;
+      margin-right: 1em;
+      margin-left: 1em;
+
+      a {
+        color: $black;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

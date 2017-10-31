@@ -1,0 +1,46 @@
+<form id="create-edit-form" name="create-edit-form" class="form-section">
+    <div class="row row-spaced">
+        <div class="col-12">
+            <div class="clearfix section-title">
+                <h2 class="pull-left"><%= id ? 'Edit ' : 'Add ' %> Site Map</h2>
+                <div class="btn-panel">
+                    <button type="button" id="cancel-btn" class="btn btn-other">Cancel</button>
+                    <% if(id) { %>
+                        <button type="button" id="delete-btn" class="btn btn-cancel">Delete</button>
+                    <% } %>
+                    <button type="button" id="save-btn" class="btn btn-submit pull-right">
+                    <% if(!id) { %><i class="icon icon-add icon-lg"></i><% } %>Save
+                    </button>
+                    <div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Alert Message -->
+    <div class="row panel alert-panel">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-1">
+                    <div class="icon icon-3x icon-warning"></div>
+                </div>
+                <div class="col-11 alert-text">
+                    This is a generic placeholder for error messages in eSAT. <br>
+                    In the live app, this will be a real message and will be hidden by default.
+                </div>
+            </div> 
+        </div>
+    </div>
+    <!-- Hidden Alert Message -->
+
+    <div class="row row-spaced panel form-section">
+        <div class="col-8 form-section">
+            <label for="f-link-title">Link Title</label><i class="icon icon-tool-tip x-space-s" title="This text is the name of the link which will be displayed on your site map."></i>
+            <input type="text" id="f-link-title" name="f-link-title" value="<%= linkTitle %>" required>
+        </div>
+        <div class="col-8 form-section">
+            <label for="f-link-url">Link URL</label><i class="icon icon-tool-tip x-space-s" title="You can specify a URL for the site map link you have added here."></i>
+            <input type="text" id="f-link-url" name="f-link-url" value="<%= linkUrl %>" required>
+        </div>
+    </div>
+</form>

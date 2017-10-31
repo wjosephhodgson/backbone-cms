@@ -1,0 +1,46 @@
+[
+	{
+		"serviceType":"Ground",
+		"minDaysDelivery":"",
+		"standardDeliveryFee":"10.00",
+		"alaskaDeliveryActive": true,
+		"hawaiiDeliveryActive": true,
+		"checkoutText":"Ground (2-5 business days)",
+		"comments":"",
+		"active": true,
+		"id": 1
+	},
+	{
+		"serviceType":"2 Day",
+		"minDaysDelivery":"",
+		"standardDeliveryFee":"12.00",
+		"alaskaDeliveryActive": true,
+		"hawaiiDeliveryActive": true,
+		"checkoutText":"2 Day (1-2 business days)",
+		"comments":"",
+		"active": true,
+		"id": 2
+	},
+	{
+		"serviceType":"Overnight",
+		"minDaysDelivery":"",
+		"standardDeliveryFee":"20.00",
+		"alaskaDeliveryActive": true,
+		"hawaiiDeliveryActive": true,
+		"checkoutText":"Overnight (1 business day)",
+		"comments":"",
+		"active": true,
+		"id": 3
+	},
+	{
+		"serviceType":"Saturday",
+		"minDaysDelivery":"",
+		"standardDeliveryFee":"18.00",
+		"alaskaDeliveryActive": true,
+		"hawaiiDeliveryActive": true,
+		"checkoutText":"Saturday Delivery",
+		"comments":"",
+		"active": true,
+		"id": 4
+	}
+]

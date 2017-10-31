@@ -1,0 +1,713 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="section-title clearfix">
+			<h2 class="pull-left"><%= id ? 'Edit ' : 'Create ' %>Campaign</h2>
+			<div class="btn-panel">
+				<button id="cancel-btn" type="button" class="btn btn-other">Cancel</button>
+				<% if (type !== "Teleflora") { %>
+				<button id="delete-btn" type="button" class="btn btn-cancel">Delete</button>
+				<% } %>
+				<button id="save-btn" type="button" class="btn btn-submit"><% if(!id) { %><i class="icon icon-add"></i><% } %>Save</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+			The category you have chosen is currently inactive. The banner will not display until that category is activated.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+
+<div class="row row-spaced">
+	<div class="col-12">
+		Here you can <%= id ? 'edit ' : 'create ' %> products for your site. This page will allow you to change all of the details for each individual product.
+	</div>
+</div>
+
+<div class="row row-spaced panel form-section">
+	<div class="row y-space-top-m">
+		<div class="col-3 form-section">
+			<label for="f-name">Name</label><i class="icon icon-tool-tip x-space-s" title="This is the name of the marketing campaign for your internal use."></i>
+			<input <%= type === 'Teleflora' ? 'disabled' : '' %> type="text" id="f-name" name="f-name" value="<%= name %>">
+		</div>
+		<div class="col-3 form-section">
+			<label for="f-number">Campaign Type</label>
+			<input <%= type === 'Teleflora' ? 'disabled' : 'disabled' %> type="text" id="f-type" name="f-type" value="<%= type %>">
+		</div>
+		<div class="col-2">
+			<div class="label">Active<i title="If this setting is OFF, the marketing campaign is deactivated and will not appear on your site." class="icon icon-tool-tip x-space-s"></i></div>
+			<input <%= active ? 'checked' : '' %> type="checkbox" id="f-active" name="f-active" class="on-off-switch" />
+			<label for="f-active" class="on-off-switch-label">
+			    <div class="on-off-switch-state">on</div>
+			</label>
+		</div>
+	</div>
+	<div class="row row-spaced">
+		<div class="col-3 form-section">
+			<label for="f-startDate">Start Date</label><i title="The marketing campaign will become active at 12:01AM on this date." class="icon icon-tool-tip x-space-s"></i>
+			<div class="date-container">
+			    <input type="text" id="f-startDate" name="f-startDate" class="date" value="<%= startDate %>">
+			</div>
+		</div>
+		<div class="col-3 form-section">
+			<label for="f-endDate">End Date</label><i title="The marketing campaign will be deactived at 11:59PM on this date." class="icon icon-tool-tip x-space-s"></i>
+			<div class="date-container">
+			    <input type="text" id="f-endDate" name="f-endDate" class="date" value="<%= endDate %>">
+			</div>
+		</div>
+		<div class="col-2 form-section">
+			<label for="f-priority">Priority</label><i class="icon icon-tool-tip x-space-s" title="If you have multiple marketing campaigns active that might be displayed on the same page at once, this number identifies which campaign will be displayed. The lower the number, the higher the priority. If you want to make sure this campaign is displayed before all others, enter 1."></i>
+			<input type="text" id="f-priority" name="f-priority" value="<%= priority %>">
+		</div>
+	</div>
+
+</div>
+
+
+<!-- Start of jQuery Tabs -->
+<div id="tabs">
+	<ul>
+		<li><a class="product-management-edit-tab" href="#home-page">Home Page</a></li>
+		<li><a class="product-management-edit-tab" href="#category-sidebar">Category Sidebar</a></li>
+		<li><a class="product-management-edit-tab" href="#category-grid">Category Grid</a></li>
+		<li><a class="product-management-edit-tab" href="#product-page">Product Page</a></li>
+	</ul>
+
+	<!-- Start of Home Page Tab -->
+	<div id="home-page">
+
+		<div class="row">
+
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Home Page Banner</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				The recommended size for home page banner image is 940 (W) x 200 (H) pixels. The maximum file size is 200 KB.
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-5 form-section image-section">
+				<div class="label">Image Upload</div>
+				<button type="button" id="homepage-image-button" class="image-upload btn btn-other">Select</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+			<div id="tile-display" class="row row-spaced">
+				<div class="col-12 center-align">
+					<img class="fit-container" id="homepage-image" src="<%= homepageImage %>" alt="">
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Mobile Home Page Banner</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				The recommended size for home page banner image is 460 (W) x 200 (H) pixels. The maximum file size is 100 KB.
+			</div>
+		</div>
+
+		<div class="row row-spaced">	
+			<div class="col-5 form-section image-section">
+				<div class="label">Image Upload</div>
+				<button type="button" id="mobile-homepage-image-button" class="image-upload btn btn-other">Select</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+			<div id="tile-display" class="row row-spaced">
+				<div class="col-12 center-align">
+					<img class="fit-container" id="mobile-homepage-image" src="<%= mobileHomepageImage %>" alt="">
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Where Banner Links To</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				To indicate what page users will be directed to once they click on the banner, you can select either a product page or a category page or indicate any other landing page (by entering the page URL).
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="form-section col-3">
+				<label for="f-type1">Banner Links To: </label>
+				<div class="select-container">
+					<select id="f-type1" name="f-type1">
+						<option selected disabled hidden value="<%= type1 %>"><%= type1 %></option>
+						<option id="homeone" value="Category Page">Category Page</option>
+						<option id="hometwo" value="Collections Page">Collections Page</option>
+						<option id="homethree" value="Product Page">Product Page</option>
+						<option id="homefour" value="Link/Landing Page">Link/Landing Page</option>
+						<option id="homezero" value="No Link">No Link</option>
+					</select>
+				</div>
+			</div>
+		</div>
+			
+		<div class="row row-spaced" id="homeBanner-Category" style="display:block;">
+			<div class="col-12">
+				<div class="panel-title">
+					Select Category Page Link
+				</div>
+			</div>
+			<div class="col-12">
+				<div id="homepage-category"></div>
+			</div>
+		</div>
+
+		<div class="row row-spaced" id="homeBanner-Collections" style="display:none;">
+			<div class="col-12">
+				<div class="panel-title">
+					Select Collections Page Link
+				</div>
+			</div>
+			<div class="col-12">
+				<div id="homepage-collections"></div>
+			</div>
+		</div>
+
+		<div class="row row-spaced" id="homeBanner-Product" style="display:none;">
+			<div class="col-12">
+				<div class="panel-title">
+					Select Products Page Link
+				</div>
+			</div>
+			<div class="col-12">
+				<div id="homepage-productpage"></div>
+			</div>
+		</div>
+
+		<div class="row row-spaced" id="homeBanner-LinkLanding" style="display:none;">
+			<div class="col-12">
+				<div class="panel-title">
+					Select Link/Landing Page Link
+				</div>
+			</div>
+			<div class="col-12" id="homepage-linklanding">
+				<div class="row row-spaced">
+					<div class="form-section col-5">
+						<label for="f-landingPageLink">Banner Landing Page Link</label>
+						<input type="text" id="f-landingPageLink" name="f-landingPageLink" value="<%= landingPageLink %>">
+					</div>
+					<div class="form-section col-4">
+						<div class="label">Open Link in New Window<i title="If this is turned ON, clicking the link will open it in a new browser window/tab." class="icon icon-tool-tip x-space-s"></i></div>
+						<input <%= homeLinkActive ? 'checked' : '' %> type="checkbox" id="f-link-active" name="f-link-active" class="on-off-switch" />
+						<label for="f-link-active" class="on-off-switch-label">
+						    <div class="on-off-switch-state">on</div>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- Closing Div, Home Page -->
+
+	<!-- End of Home Page Tab -->
+
+	<!-- Start of Category Sidebar Tab -->
+	<div id="category-sidebar">
+
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Category Sidebar</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				The recommended size for category landing page left side banner is 220(W) x 275(H) pixels. The Maximum file size is 100 KB.
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-3 center-align"><img src="/images/mock/sidebarbanner.jpg"></div>
+			<div class="col-3 form-section image-section">
+				<div class="label">Image Upload</div>
+				<button type="button" id="sidebar-image-button" class="image-upload btn btn-other">Select</button>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12">
+			<div id="tile-display" class="row row-spaced">
+				<div class="col-12 center-align">
+					<img class="fit-container" id="sidebar-image" src="<%= sidebarImage %>" alt="">
+				</div>
+			</div>
+			</div>
+		</div>
+
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				<div class="panel-title">
+					Where the Banner Appears
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				Select the categories that you want the banner to show up.
+			</div>
+		</div>
+
+		<div id="sidebar-appear-container"></div>
+
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Where Banner Links To</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				To indicate what page users will be directed to once they click on the banner, you can select either a product page or a category page or indicate any other link or landing page (by endering the page URL.)
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="form-section col-3">
+				<label for="f-type2">Banner Links To: </label>
+				<div class="select-container">
+					<select id="f-type2" name="f-type2">
+						<option selected disabled hidden value="<%= type2 %>">Category Page</option>
+						<option id="sideone" value="Category Page">Category Page</option>
+						<option id="sidetwo" value="Collections Page">Collections Page</option>
+						<option id="sidethree" value="Product Page">Product Page</option>
+						<option id="sidefour" value="Link/Landing Page">Link/Landing Page</option>
+						<option id="sidezero" value="No Link">No Link</option>
+					</select>
+				</div>
+			</div>
+		</div>
+			
+		<div class="row row-spaced" id="side-Category" style="display:block;">
+			<div class="col-12">
+				<div class="panel-title">
+					Select Category Page Link
+				</div>
+			</div>
+			<div class="col-12">
+				<div id="sidebar-category"></div>
+			</div>
+		</div>
+
+		<div class="row row-spaced" id="side-Collections" style="display:none;">
+			<div class="col-12">
+				<div class="panel-title">
+					Select Collections Page Link
+				</div>
+			</div>
+			<div class="col-12">
+				<div id="sidebar-collections"></div>
+			</div>
+		</div>
+
+		<div class="row row-spaced" id="side-Product" style="display:none;">
+			<div class="col-12">
+				<div class="panel-title">
+					Select Products Page Link
+				</div>
+			</div>
+			<div class="col-12">
+				<div id="sidebar-productpage"></div>
+			</div>
+		</div>
+
+		<div class="row row-spaced" id="side-LinkLanding" style="display:none;">
+			<div class="col-12">
+				<div class="panel-title">
+					Select Link/Landing Page Link
+				</div>
+			</div>
+			<div class="col-12">
+				<div id="sidebar-linklanding">
+					<div class="row row-spaced">
+						<div class="form-section col-5">
+							<label for="f-catPageLink">Banner Landing Page Link</label>
+							<input type="text" id="f-catPageLink" name="f-catPageLink" value="<%= catPageLink %>">
+						</div>
+						<div class="form-section col-4">
+							<div class="label" center-align>Open Link in New Window<i title="If this is turned ON, clicking the link will open it in a new browser window/tab." class="icon icon-tool-tip x-space-s"></i></div>
+							<input <%= catLinkActive ? 'checked' : '' %> type="checkbox" id="f-cat-link-active" name="f-cat-link-active" class="on-off-switch" />
+							<label for="f-cat-link-active" class="on-off-switch-label">
+							    <div class="on-off-switch-state">on</div>
+							</label>
+						</div>
+					</div>						
+				</div>
+			</div>
+		</div>
+
+		<div id="sidebar-container"></div>
+
+	</div><!-- Closing Div, Category Sidebar -->
+	<!-- End of Category Sidebar Tab -->
+
+	<!-- Start of Category Grid -->
+	<div id="category-grid">
+		<div class="row">
+
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Category Page's Products Grid Banner</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				The recommended image size for banner inside the products grid in categories is 340(W) x 220(H) pixels. The Maximum file size is 200 KB. The banner will only show if it is activated in category settings page.
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-3 center-align"><img src="/images/mock/homegridimage.jpg"></div>
+			<div class="col-3 form-section image-section">
+				<div class="label">Image Upload</div>
+				<button type="button" id="grid-image-button" class="image-upload btn btn-other">Select</button>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12">
+			<div id="tile-display" class="row row-spaced">
+				<div class="col-12 center-align">
+					<img class="fit-container" id="grid-image" src="<%= gridImage %>" alt="">
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<div class="row">
+
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Mobile Category Pages Products Grid Banner</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				The recommended size for home page banner image is 460 (W) x 200 (H) pixels. The maximum file size is 100 KB.
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-3 center-align"><img src="/images/mock/mobilegridimage.jpg"></div>
+			<div class="col-3 form-section image-section">
+				<div class="label">Image Upload</div>
+				<button type="button" id="mobile-grid-image-button" class="image-upload btn btn-other">Select</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+			<div id="tile-display" class="row row-spaced">
+				<div class="col-12 center-align">
+					<img class="fit-container" id="mobile-grid-image" src="<%= mobileGridImage %>" alt="">
+				</div>
+			</div>
+			</div>
+		</div>
+
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				<div class="panel-title">
+					Where the Banner Appears
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				Select the categories that you want the banner to show up.
+			</div>
+		</div>
+
+		<div id="grid1-table-container"></div>
+
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Where Banner Links To</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				To indicate what page users will be directed to once they click on the banner, you can select either a product page or a category page or indicate any other link or landing page (by endering the page URL.)
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="form-section col-3">
+				<label for="f-type3">Banner Links To: </label>
+				<div class="select-container">
+					<select id="f-type3" name="f-type3">
+						<option selected disabled hidden value="<%= type3 %>">Category Page</option>
+						<option id="gridone" value="Category Page">Category Page</option>
+						<option id="gridtwo" value="Collections Page">Collections Page</option>
+						<option id="gridthree" value="Product Page">Product Page</option>
+						<option id="gridfour" value="Link/Landing Page">Link/Landing Page</option>
+						<option id="gridzero" value="No Link">No Link</option>
+					</select>
+				</div>
+			</div>
+		</div>
+			
+			<div class="row row-spaced" id="grid-Category" style="display:block;">
+				<div class="col-12">
+					<div class="panel-title">
+						Select Category Page Link
+					</div>
+				</div>
+				<div class="col-12">
+					<div id="grid-category"></div>
+				</div>
+			</div>
+	
+			<div class="row row-spaced" id="grid-Collections" style="display:none;">
+				<div class="col-12">
+					<div class="panel-title">
+						Select Collections Page Link
+					</div>
+				</div>
+				<div class="col-12">
+					<div id="grid-collections"></div>
+				</div>
+			</div>
+
+			<div class="row row-spaced" id="grid-Product" style="display:none;">
+				<div class="col-12">
+					<div class="panel-title">
+						Select Products Page Link
+					</div>
+				</div>
+				<div class="col-12">
+					<div id="grid-productpage"></div>
+				</div>
+			</div>
+
+			<div class="row row-spaced" id="grid-LinkLanding" style="display:none;">
+				<div class="col-12">
+					<div class="panel-title">
+						Select Link/Landing Page Link
+					</div>
+				</div>
+				<div class="col-12">
+					<div id="grid-linklanding">		
+						<div class="row row-spaced">
+							<div class="form-section col-5">
+								<label for="f-gridPageLink">Banner Landing Page Link</label>
+								<input type="text" id="f-gridPageLink" name="f-gridPageLink" value="<%= gridPageLink %>">
+							</div>
+							<div class="form-section col-4">
+								<div class="label">Open Link in New Window<i title="If this is turned ON, clicking the link will open it in a new browser window/tab." class="icon icon-tool-tip x-space-s"></i></div>
+								<input <%= gridLinkActive ? 'checked' : '' %> type="checkbox" id="f-grid-link-active" name="f-grid-link-active" class="on-off-switch" center-align/>
+								<label for="f-grid-link-active" class="on-off-switch-label">
+								    <div class="on-off-switch-state">on</div>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	</div><!-- Closing Tab, Category Grid -->
+
+	<!-- End of Category Grid -->
+
+	<!-- Start of Product Tab -->
+	<div id="product-page">
+
+	<div class="row">
+
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Product Page Banner</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				The recommended image size for banner inside the products grid in categories is 340(W) x 220(H) pixels. The Maximum file size is 200 KB. The banner will only show if it is activated in category settings page.
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-3 center-align"><img src="/images/mock/productimage.jpg"></div>
+			<div class="col-3 form-section image-section">
+				<div class="label">Image Upload</div>
+				<button type="button" id="product-image-button" class="image-upload btn btn-other">Select</button>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12">
+			<div id="tile-display" class="row row-spaced">
+				<div class="col-12 center-align">
+					<img class="fit-container" id="product-image" src="<%= productImage %>" alt="">
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<!-- Start Featured Product Section -->
+		<div id="product-or-subcategory"></div>
+		<!-- End of Featured Product Section -->
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				<div class="panel-title">
+					Where the Banner Appears
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				Select the categories that you want the banner to show up.
+			</div>
+		</div>
+
+		<div id="product-table-container"></div>
+		
+
+		<div class="row">
+			<div class="col-12">
+				<div class="panel-title clearfix">
+					<div class="y-space-top-m pull-left">Where Banner Links To</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12">
+				To indicate what page users will be directed to once they click on the banner, you can select either a product page or a category page or indicate any other link or landing page (by endering the page URL.)
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="form-section col-3">
+				<label for="f-type4">Banner Links To: </label>
+				<div class="select-container">
+					<select id="f-type4" name="f-type4">
+						<option selected disabled hidden value="<%= type4 %>">Category Page</option>
+						<option id="productone" value="Category Page">Category Page</option>
+						<option id="producttwo" value="Collections Page">Collections Page</option>
+						<option id="productthree" value="Product Page">Product Page</option>
+						<option id="productfour" value="Link/Landing Page">Link/Landing Page</option>
+						<option id="productzero" value="No Link">No Link</option>
+					</select>
+				</div>
+			</div>
+		</div>
+			
+			<div class="row row-spaced" id="product-Category" style="display:block;">
+				<div class="col-12">
+					<div class="panel-title">
+						Select Category Page Link
+					</div>
+				</div>
+				<div class="col-12">
+					<div id="product-tab-category"></div>
+				</div>
+			</div>
+	
+			<div class="row row-spaced" id="product-Collections" style="display:none;">
+				<div class="col-12">
+					<div class="panel-title">
+						Select Collections Page Link
+					</div>
+				</div>
+				<div class="col-12">
+					<div id="product-tab-collections"></div>
+				</div>
+			</div>
+
+			<div class="row row-spaced" id="product-Product" style="display:none;">
+				<div class="col-12">
+					<div class="panel-title">
+						Select Products Page Link
+					</div>
+				</div>
+				<div class="col-12">
+					<div id="product-tab-productpage"></div>
+				</div>
+			</div>
+
+			<div class="row row-spaced" id="product-LinkLanding" style="display:none;">
+				<div class="col-12">
+					<div class="panel-title">
+						Select Link/Landing Page Link
+					</div>
+				</div>
+				<div class="col-12">
+					<div id="product-tab-linklanding">
+						<div class="row row-spaced">
+							<div class="form-section col-5">
+								<label for="f-productPageLink">Banner Landing Page Link</label>
+								<input type="text" id="f-productPageLink" name="f-productPageLink" value="<%= productPageLink %>">
+							</div>
+							<div class="form-section col-4">
+								<div class="label">Open Link in New Window<i title="If this is turned ON, clicking the link will open it in a new browser window/tab." class="icon icon-tool-tip x-space-s"></i></div>
+								<input <%= productPageLink ? 'checked' : '' %> type="checkbox" id="f-product-link-active" name="f-product-link-active" class="on-off-switch" center-align/>
+								<label for="f-product-link-active" class="on-off-switch-label">
+								    <div class="on-off-switch-state">on</div>
+								</label>
+							</div>
+						</div>						
+					</div>
+				</div>
+			</div>
+		
+	</div><!-- Closing Tag, Product tab -->
+	<!-- End of Product Tab -->
+
+    
+</div>

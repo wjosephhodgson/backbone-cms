@@ -1,0 +1,14 @@
+<tr class="sortable" data-id="<%= id %>">
+	<td><i class="icon icon-arrows icon-2x"></i></td>
+	<td class="form-section">
+		<input type="text" name="f-custom-list-label-<%= sequence %>" id="f-custom-list-label-<%= sequence %>" class="f-custom-list-label" value="<%= label %>">
+	</td>
+	<td class="form-section">
+		<input type="text" name="f-custom-list-url-<%= sequence %>" id="f-custom-list-url-<%= sequence %>" class="f-custom-list-url" value="<%= url %>">
+	</td>
+	<td class="center-align form-section">
+		<input <%= newWindow ? 'checked' : ''%> type="checkbox" id="<%= 'f-new-window-active-' + sequence %>" name="<%= 'f-new-window-active-' + sequence %>" class="on-off-switch" />
+        <label for="<%= 'f-new-window-active-' + sequence %>" class="on-off-switch-label"><div class="on-off-switch-state">on</div></label>
+	</td>		
+	<td><button type="button" class="icon icon-btn icon-trash icon-2x"></button></td>
+</tr>

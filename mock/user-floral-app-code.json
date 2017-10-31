@@ -1,0 +1,37 @@
+[	
+	{
+		"id":1,
+		"active": true,
+		"type":"Teleflora",
+		"siteID":"JTAKAKI",
+		"floralCode":"FLOWER1"
+	},
+	{
+		"id":2,
+		"active": true,
+		"type":"Teleflora",
+		"siteID":"MICHAEL",
+		"floralCode":"BLOSSOM"
+	},
+	{
+		"id":3,
+		"active": true,
+		"type":"Teleflora",
+		"siteID":"TELEF",
+		"floralCode":"TELEF101"
+	},
+	{
+		"id":4,
+		"active": true,
+		"type":"Teleflora",
+		"siteID":"PHILIP",
+		"floralCode":"PEMOK"
+	},
+	{
+		"id":5,
+		"active": true,
+		"type":"Teleflora",
+		"siteID":"JOESFLOWER",
+		"floralCode":"JF1000"
+	}
+]

@@ -1,0 +1,119 @@
+.m-subscriptions {
+  .m-subscriptions-image {
+    margin-top: 0.5em;
+    max-width: 460px;
+  }
+
+  .m-subscriptions-image-text {
+    margin: 1em 0;
+  }
+
+  .m-subscriptions-list {
+    margin-left: 1.2em;
+    font-size: 1.3em;
+  }
+
+  .m-subscriptions-dynamic-list {
+    h5 {
+      margin-top: 0.5em;
+
+      @include mobile() {
+        margin-bottom: 0.5em;
+      }
+    }
+    input, select {
+      margin-bottom: 0.75em;
+    }
+  }
+
+  .m-subscriptions-form {
+    @include desktop() {
+      width: 50% !important;
+    }
+  }
+
+  .m-subscriptions-total-savings {
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+  }
+
+  .m-subscriptions-confirmation-content {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+
+    .m-subscriptions-confirmation-content-header {
+      font-size: 1.846em;
+      line-height: 1.2;
+
+      @include desktop() {
+        margin-top: 1em;
+      }
+    }
+
+    .m-subscriptions-confirmation-content-text {
+      margin: 0;
+    }
+
+    .m-subscriptions-confirmation-content-link {
+      font-size: 1.076em;
+    }
+  }
+
+  .m-subscriptions-confirmation-image {
+    display: block;
+    background-image: url('../images/subscriptions/m-confirm-subscription.jpg');
+    width: 768px;
+    height: 184px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+
+    @include mobile() {
+      left: 50%;
+      margin-left: -384px;
+    }
+
+    @include desktop() {
+      background-image: url('../images/subscriptions/confirm-subscription.jpg');
+      width: 900px;
+      height: 184px;
+    }
+  }
+
+  .normalize {
+    @include mobile() { display: block; }
+  }
+
+  .custom-ul {
+    display: inline-block;
+  }
+
+  .delivery_date {
+    width: 75%;
+  }
+
+  .btn-plus, .btn-minus {
+    position: absolute;
+    z-index: 0;
+  }
+
+  .btn-minus {
+    margin-left: 10px;
+  }
+
+  .btn-plus {
+    margin-left: 40px;
+  }
+
+  .extra-bottom-padding {
+    padding-bottom: 0.5em;
+  }
+
+  @include wildcard-max(480px) {
+    .m-subscription-dynamic-list-label {
+      display: none;
+    }
+  }
+}

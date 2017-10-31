@@ -1,0 +1,60 @@
+<div class="left-align">
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			<div class="clearfix section-title">
+				<h2 class="pull-left">Create Quick Promotion Code</h2>
+				<div class="btn-panel">
+					<button type="button" id="cancel-btn" class="btn btn-other">Cancel</button>
+					<button type="button" id="save-btn" class="btn btn-submit pull-right">Create Code</button>
+					<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+	<div class="row row-spaced">
+		<div class="col-6 form-section">
+			<div class="label">Promotion Code</div>
+			<input type="text" name="f-promoCode" id="f-promoCode" value="<%= promoCode %>">
+		</div>
+		<div class="col-3 form-section date-container">
+			<div class="label">Start Date</div>
+			<input type="text" name="f-startDate" id="f-startDate" class="date" value="<%= startDate %>">
+		</div>
+		<div class="col-3 form-section date-container">
+			<div class="label">End Date</div>
+			<input type="text" name="f-endDate" id="f-endDate" class="date" value="<%= endDate %>">
+		</div>			
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-6 form-section select-container">
+			<div class="label">Discount Amount</div>
+			<select name="f-discountAmount" id="f-discountAmount">
+				<option value="$5">$5</option>
+				<option value="$10">$10</option>
+				<option value="$20">$20</option>
+				<option value="10%">10%</option>
+				<option value="20%">20%</option>
+			</select>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,48 @@
+<div class="row" data-id="<%= id %>">
+    <div class="clearfix">
+        <div class="left-align level-<%= level %> col-4 td-category">
+            <% if (children.length) { %>
+                <button type="button" id="outer" class="toggle-btn icon icon-btn icon-closed icon-2x"></button>
+            <% } %>
+            <%= name %>
+        </div>
+        <div class="col-2 td-category-type">
+            <%= ungrouped === true ? '' : categoryType %>
+        </div>
+        <div class="col-1 td-page-type">
+            <%
+                if(ungrouped === false) {
+            %>
+            <i title="<%= pageType === 'category' ? 'Subcategory' : 'Landing Page' %>" class="icon-page-tip icon <%= pageType === 'category' ? 'icon-category' : 'icon-landing' %> icon-2x"></i>
+            <%
+                }
+            %>
+        </div>
+        <div class="col-1 td-start-date"><%= ungrouped === true ? '' : startDate %></div>
+        <div class="col-1 td-end-date"><%= ungrouped === true ? '' : endDate %></div>
+        <div class="col-2 td-status">
+            <%
+                if(ungrouped === false) {
+            %>
+                <div class="centered-content-container">
+                    <input <%= active ? 'checked' : ''%> type="checkbox" class="on-off-switch" id="<%= id %>" name="<%= id %>" class="on-off-switch" />
+                    <label for="<%= id %>" class="on-off-switch-label">
+                        <div class="on-off-switch-state">on</div>
+                    </label>
+                </div>
+            <%
+                }
+            %>            
+        </div>
+        <div class="col-1 td-edit">
+            <%
+                if(ungrouped === false) {
+            %>        
+                <button type="button" class="icon icon-edit icon-btn icon-2x"></button>
+            <%
+                }
+            %>                  
+        </div>
+    </div>
+    <div class="nested-rows" style="display:none;"></div>
+</div>

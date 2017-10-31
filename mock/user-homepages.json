@@ -1,0 +1,187 @@
+[
+	{
+		"name":"Default",
+		"isFederated": true,
+		"isDefault": true,
+		"id": 1,
+		"buttonText": "Text here",
+		"buttonTextActive": true,
+		"subhead": "Subhead",
+		"subheadActive": true,
+		"headline": "Hello",
+		"headlineActive": true,
+		"buttonLink": "www.google.com",
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"name":"Mother's Day 1",
+		"isFederated": false,
+		"startDate": "05/13/12",
+		"endDate": "05/11/14",
+		"id": 2,
+		"buttonText": "",
+		"buttonTextActive": false,
+		"subhead": "",
+		"subheadActive": false,
+		"headline": "",
+		"headlineActive": false,
+		"buttonLink": "",
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"name":"Mother's Day 2",
+		"isFederated": false,
+		"startDate": "05/12/12",
+		"endDate": "05/11/14",
+		"id": 3,
+		"buttonText": "",
+		"buttonTextActive": false,
+		"subhead": "",
+		"subheadActive": false,
+		"headline": "",
+		"headlineActive": false,
+		"buttonLink": "",
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"name":"Mother's Day 3",
+		"isFederated": false,
+		"startDate": "05/11/12",
+		"endDate": "05/11/14",
+		"id": 4,
+		"buttonText": "",
+		"buttonTextActive": false,
+		"subhead": "",
+		"subheadActive": false,
+		"headline": "",
+		"headlineActive": false,
+		"buttonLink": "",
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"name":"Mother's Day 4",
+		"isFederated": true,
+		"startDate": "05/10/12",
+		"endDate": "05/11/14",
+		"id": 5,
+		"buttonText": "",
+		"buttonTextActive": false,
+		"subhead": "",
+		"subheadActive": false,
+		"headline": "",
+		"headlineActive": false,
+		"buttonLink": "",
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	},
+	{
+		"name":"Mother's Day 5",
+		"isFederated": true,
+		"startDate": "05/09/12",
+		"endDate": "05/11/14",
+		"id": 6,
+		"buttonText": "",
+		"buttonTextActive": false,
+		"subhead": "",
+		"subheadActive": false,
+		"headline": "",
+		"headlineActive": false,
+		"buttonLink": "",
+		"featuredProducts": [
+			{
+				"id": "372559",
+				"featured": true,
+				"rank": 1
+		    },
+		    {
+				"id": "372689",
+				"featured": true,
+				"rank": 2
+		    },
+		    {
+				"id": "372730",
+				"featured": true,
+				"rank": 3
+		    }
+		]
+	}
+]

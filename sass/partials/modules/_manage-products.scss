@@ -1,0 +1,21 @@
+.general-product {
+  & #product-container.scroll-container {
+    height: 18em + $height-input;
+  }
+
+  & .scroll-container {
+    height: 18em;
+  }
+}
+
+#m-product-management {
+	.ui-tabs .ui-tabs-nav li a {
+		padding: .5em .75em;
+	}
+	#filter-view {
+		position: relative;
+		& + .search-filters {
+			width: 250px;
+		}
+	}
+}

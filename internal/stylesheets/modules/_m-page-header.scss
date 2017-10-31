@@ -1,0 +1,47 @@
+.m-page-header {
+  margin-bottom: -1em;
+  padding: 0;
+
+  .m-page-header-centered-content {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+
+    @include desktop() {
+      width:66%;
+    }
+
+    .m-page-header-title {
+      font-size: 2em;
+      padding: 0;
+
+
+      @include desktop() {
+        font-size: 2.461em;
+      }
+    }
+
+    .m-page-smaller-header-title {
+      font-size: em(24px);
+    }
+
+    .header-underline {
+      width: 150px;
+    }
+
+    .m-page-header-text {
+    }
+  }
+
+  .m-page-header-center-and-left {
+    text-align: center;
+
+    @include desktop() {
+      text-align: left;
+    }
+    .m-page-header-title {
+      font-size: em(32px);
+      margin-bottom: -0.5em;
+    }
+  }
+}

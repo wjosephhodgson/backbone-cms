@@ -1,0 +1,38 @@
+{
+  "headerTitle":"",
+  "headerDescription":"",
+  "categories": [
+    {
+      "id":1,
+      "active": true,
+      "name": "Party",
+      "img": "http://www.telefloramarketing.com/mock/sympathy-type-3.jpg"
+    },
+    {
+      "id":2,
+      "active": true,
+      "name": "Ceremony",
+      "img": "http://www.telefloramarketing.com/mock/sympathy-type-2.jpg"
+    },
+    {
+      "id":3,
+      "active": true,
+      "name": "Reception",
+      "img": "http://www.telefloramarketing.com/mock/sympathy-type-1.jpg"
+    },
+    {
+      "id":4,
+      "active": true,
+      "name": "Party2"
+    },
+    {
+      "id":5,
+      "active": true,
+      "name": "Wedding Equipment"
+    }
+  ],
+  "metaTitle":"",
+  "metaKeywords":"",
+  "metaDescription":"",
+  "metaTags":""
+}

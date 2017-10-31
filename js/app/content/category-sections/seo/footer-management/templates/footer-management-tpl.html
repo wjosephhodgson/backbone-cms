@@ -1,0 +1,125 @@
+<form id="create-edit-form" name="create-edit-form">
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left">Manage Site Footer</h2>
+			<button type="button" id="save-btn" class="btn btn-submit pull-right">Save Changes</button>
+			<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced">
+	<div class="col-12">
+		Make changes to the content of your website footer, or completely rewrite it. The choice is yours!
+	</div>
+</div>
+
+<!-- Hidden Alert Message -->
+<div class="row panel alert-panel">
+	<div class="col-12">
+		<div class="row">
+			<div class="col-1">
+				<div class="icon icon-3x icon-warning"></div>
+			</div>
+			<div class="col-11 alert-text">
+				This is a generic placeholder for error messages in eSAT. <br>
+				In the live app, this will be a real message and will be hidden by default.
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row row-spaced panel form-section">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Custom Footer Text</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12">
+			<textarea name="f-custom-footer-text" id="f-custom-footer-text" class="size-3 tinymce"><%= customFooterText %></textarea>
+		</div>
+	</div>
+</div>
+
+<div class="row row-spaced panel form-section">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Footer Settings</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced form-section">
+		<div class="select-container form-section col-6">
+			<label for="f-footer-display-address">Display Address In Footer</label><i class="icon icon-tool-tip x-space-s" title="Use this to select how your address will be displayed."></i>
+			<select id="f-footer-display-address">
+				<option selected disabled hidden value="<%= addressDisplay %>"><%= addressDisplay %></option>
+				<option value="Display Address">Display Address</option>
+				<option value="Custom">Custom</option>
+				<option value="Don't Display Address">Don't Display Address</option>
+			</select>
+		</div>
+
+		<div class="col-12 <%= addressDisplay === 'Don\'t Display Address' ? 'hidden-alt' : ''%> form-section" id="f-custom-footer-address-wrap">
+		   <label for="f-custom-footer-address">Override Address Field</label><i class="icon icon-tool-tip x-space-s" title="Do you have more than one location? Or need to edit your address? Set the choice above to custom, and put your address here."></i>
+			
+
+	   <textarea <%= addressDisplay === 'Display Address' ? 'disabled' : '' %> name="f-custom-footer-address" id="f-custom-footer-address" class="size-3"><%= addressDisplay === 'Display Address' ? address1+'\r\n'+address2 : '' %></textarea>
+
+
+	   </div>
+
+	    <div id="customAddressDiv" class="col-12 form-section <%= addressDisplay === 'Don\'t Display Address' ? 'hidden-alt' : ''%> hidden" >
+	       <label for="f-custom-val">Override Address Field</label><i class="icon icon-tool-tip x-space-s" title="Do you have more than one location? Or need to edit your address? Set the choice above to custom, and put your address here."></i>
+
+			<textarea name="f-custom-val" id="f-custom-val" class="size-3"><%= customAddress %></textarea>
+			
+		</div>
+	</div>
+
+	<div class="row row-spaced form-section">
+		<div class="col-4 form-section">
+			<div class="label pull-left">Display Email Sign-up</div><i class="icon icon-tool-tip x-space-s" title="This allows your customers to sign up for email marketing campaigns, which can bring you extra orders. We recommend leaving this turned on."></i>
+			<input <%= emailSignup ? 'checked' : '' %> type="checkbox" id="f-footer-email" name="f-footer-email" class="switch on-off-switch">
+			<label for="f-footer-email" class="on-off-switch-label"><div class="on-off-switch-state">on</div></label>
+        </div>
+        <div class="col-8 form-section">
+			<div class="label pull-left">Display "Proud Member" Logo</div><i class="icon icon-tool-tip x-space-s" title="This lets your customers know that you are a Teleflora Member. We recommend leaving this turned on."></i>
+			<input <%= tfLogo ? 'checked' : '' %> type="checkbox" id="f-footer-tf-logo" name="f-footer-tf-logo" class="switch on-off-switch">
+			<label for="f-footer-tf-logo" class="on-off-switch-label"><div class="on-off-switch-state">on</div></label>
+        </div>
+    </div>
+</div>
+
+
+<div class="row row-spaced panel form-section">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Footer Links</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-4">
+			<div class="label pull-left">Shop Info Links</div><i class="icon icon-tool-tip x-space-s" title="Turning on this setting will display the 'Learn More About' links - About Us, Safe Shopping, Privacy/Delivery/Substitution Policies, and Site Map."></i>
+			<input <%= shopInfoLinks ? 'checked' : '' %> type="checkbox" id="f-shopInfoLinks" name="f-shopInfoLinks" class="switch on-off-switch">
+			<label for="f-shopInfoLinks" class="on-off-switch-label"><div class="on-off-switch-state">on</div></label>
+		</div>
+		<div class="col-4">
+			<div class="label pull-left">Featured Occasions</div><i class="icon icon-tool-tip x-space-s" title="Turning on this setting will display the Featured Occasion links in your site footer. These come from the first 5 active Occasions in your site navigation."></i>
+			<input <%= featuredOccasionLinks ? 'checked' : '' %> type="checkbox" id="f-featuredOccasionLinks" name="f-featuredOccasionLinks" class="switch on-off-switch">
+			<label for="f-featuredOccasionLinks" class="on-off-switch-label"><div class="on-off-switch-state">on</div></label>
+		</div>
+		<div class="col-4">
+			<div class="label pull-left">Customer Service Links</div><i class="icon icon-tool-tip x-space-s" title="Turning on this setting will display the 'Cusomter Service' links in your site footer - Contact Us and Help/FAQs."></i>
+			<input <%= customerServiceLinks ? 'checked' : '' %> type="checkbox" id="f-customerServiceLinks" name="f-customerServiceLinks" class="switch on-off-switch">
+			<label for="f-customerServiceLinks" class="on-off-switch-label"><div class="on-off-switch-state">on</div></label>
+		</div>		
+    </div>
+
+</div>
+
+</form>

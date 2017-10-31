@@ -1,0 +1,51 @@
+a {
+  color: #b10000;
+  font-weight: bold;
+}
+
+.mast {
+  background: url("public/images/homepage/mothers-bg.jpg");
+  padding: 100px 0;
+  margin-bottom: 50px;
+  background-color: #c72020;
+  background-repeat: repeat-x;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffa836), to(#f38f0d));
+  background: -webkit-linear-gradient(top, #f38f0d, #ffa836);
+  background: -moz-linear-gradient(top, #f38f0d, #ffa836);
+  background: -ms-linear-gradient(top, #f38f0d, #ffa836);
+  background: -o-linear-gradient(top, #f38f0d, #ffa836);
+}
+
+.white {
+  color: #fff;
+}
+
+.shadowed {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .brand {
+  float: right;
+  color: #eee;
+  font-weight: bold;
+}
+
+.bss-tray {
+  background-color: #eaeeef;
+  border-radius: 5px;
+  padding: 5px 0;
+}
+
+.bss-tray .icon-chevron-right {
+  float: right;
+}
+
+iframe.full-size, iframe.mobile.size, iframe.tablet-size {
+  border: none;
+  height: auto;
+  overflow: auto;
+}
+
+iframe.full-size {
+  width: 100%;
+}

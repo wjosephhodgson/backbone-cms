@@ -1,0 +1,465 @@
+// general icons
+
+.icon-info {
+  @include icon(0,-30px,15px,15px);
+  top: -2px;
+}
+
+.icon-info, .non-icon-info {
+  position: relative;
+
+  .m-tooltip, .c-tooltip {
+    display: none;
+  }
+
+  &:hover {
+    .m-tooltip, .c-tooltip {
+      display: block;
+    }
+  }
+}
+
+.icon-kahuna-burger,
+.icon-user,
+.icon-cart,
+.icon-ask,
+.icon-reminder,
+.icon-arrow,
+.icon-arrow-right-black,
+.icon-arrow-left-black,
+.icon-arrow-up-black,
+.icon-arrow-down-black,
+.icon-arrow-up-pink,
+.icon-arrow-down-pink,
+.icon-phone,
+.icon-email,
+.icon-geopin,
+.icon-info,
+.icon-white-arrow-up,
+.icon-white-arrow-down{
+  background-image: url("../images/ui-sprite.svg");
+}
+
+//ie fix
+.no-svg{
+  .icon-kahuna-burger,.icon-user,.icon-cart,.icon-ask,.icon-reminder,.icon-arrow,
+  .icon-phone,.icon-email,.icon-geopin,.icon-info,.icon-white-arrow-up,.icon-white-arrow-down,
+  .icon-step-check-green, .icon-step-check-green.grey-step, .icon-circle-down-arrow,
+  .icon-circle-down-arrow-pink, .icon-form-check, .icon-form-x,
+  .icon-close, .icon-warning, .icon-shopping-cart {
+    background-image: url("../images/ui-sprite.png") !important;
+  }
+}
+
+.icon-white-arrow-up {
+  width:1.2em;
+  height:0.5em;
+  float:left;
+  background-position:-177px -15px;
+}
+.icon-white-arrow-down {
+  width:1.2em;
+  height:0.5em;
+  float:left;
+  background-position:-177px -25px;
+}
+.icon-info {
+  position:absolute;
+  right:0;
+  width: 17px;
+  height:1.5em;
+  float:right;
+  background-position:0 -29px;
+}
+.icon-phone{
+  width:1.05em;
+  height:2em;
+  float:left;
+  background-position:92px 36px;
+}
+.icon-email{
+  width:1.6em;
+  height:2em;
+  float:left;
+  background-position:75px 36px;
+}
+.icon-geopin{
+  margin-left:-0.1em;
+  width:1.4em;
+  height:1.9em;
+  float:left;
+  background-position:110px 36px;
+}
+
+.icon-kahuna-burger{
+  width: 2.6em;
+  height: 2.1em;
+  float:left;
+  margin:0.9em 0.6em;
+  background-position:0 0;
+}
+
+.icon-user{
+  display:block;
+  width:1.2em;
+  height:1.2em;
+  float:left;
+
+  margin:0;
+
+  background-position:-70px 0;
+}
+
+.icon-cart{
+  position:absolute;
+
+  width:2.5em;
+  height:0em;
+
+  padding-left:0.48em;
+  padding-bottom:2.2em;
+  padding-right:0.3em;
+
+  background-position:-84px 0px;
+
+  color:$dark-grey;
+  font-size:0.8em;
+  text-align:center;
+
+  .cart-number {
+    margin-top: -0.9em;
+    display: block;
+  }
+}
+
+.icon-ask{
+  background-position:-204px 0;
+}
+
+.icon-social{
+  width:em(30px);
+  height:em(30px);
+  display:block;
+  float:left;
+
+  margin-right:em(15px);
+
+  background-image:url("../images/social-sprite.png");
+  background-repeat:no-repeat;
+
+  &.icon-facebook{}
+  &.icon-google{background-position:em(-45px) 0;}
+  &.icon-twitter{background-position:em(-90px) 0;}
+  &.icon-pintrest{background-position:em(-134px) 0;width:em(32px);}
+  &.icon-youtube{background-position:em(-180px) 0;}
+}
+
+.icon-reminder {
+  background-repeat: no-repeat;
+  width: 1.4em;
+  height: 1.1em;
+  font-size: 16px; //tmp-fix
+  display: inline-block;
+
+  &.icon-reminder-email {
+    background-position: -213px -35px;
+  }
+
+  &.icon-reminder-text {
+    background-position: -191px -36px;
+  }
+}
+
+.icon-arrow {
+  @include sprite($ui-sprite-path, 0px, 0px);
+  display: inline-block;
+  text-indent: -9999px;
+  width: 0.5em;
+  height: 12px;
+}
+
+.icon-arrow-right-black {
+  background-position: -107px 0;
+  margin-bottom: 2px;
+  vertical-align: middle;
+}
+
+.icon-arrow-left-black {
+  background-position: -119px 0;
+}
+
+.icon-arrow-down-black {
+  background-position: -189px -8px;
+  width: 0.7em;
+  height: 8px;
+  vertical-align: middle;
+  margin: 0 5px;
+
+  &.mobile-filter {
+    right: 5%;
+    position: absolute;
+    margin-top: 0.9em;
+  }
+  &.mobile-filter-up {
+    background-position: -189px 0px;
+    right: 5%;
+    position: absolute;
+    margin-top: 0.9em;
+  }
+
+  &.m-shopping-cart-item-header-hide-arrow {
+    background-position: -189px -7px;
+    background-size: auto;
+    width:10px;
+    height:10px;
+    margin:5px 0.4em 6px 0.5em;
+  }
+}
+
+.icon-arrow-up-black-category {
+  background-position: -258px 1px;
+  background-size: 29em;
+  width: 1.5em;
+}
+
+.icon-arrow-up-black, .icon-arrow-up-pink {
+  width:10px;
+  height:10px;
+  display:block;
+  margin: 0 5px;
+  vertical-align: middle;
+  display: inline-block;
+
+  &.m-shopping-cart-item-header-hide-arrow {
+    margin:5px 0.4em 6px 0.5em;
+  }
+}
+
+.icon-arrow-up-black{background-position:-189px 2px;}
+.icon-arrow-up-pink{background-position: -3px -51px;}
+
+.icon-arrow-down-pink {
+  background-position: 0px -61px;
+  width: 1em;
+  height: 0.6em;
+  vertical-align: middle;
+  margin: 0 5px;
+  display: inline-block;
+
+  &.m-shopping-cart-item-header-hide-arrow {
+    background-size: auto;
+    height:10px;
+    margin:5px 0.4em 2px 0.5em;
+  }
+}
+
+.icon-circle-down-arrow-lines {
+  height: 2em;
+
+  &:before {
+    width: 100%;
+    margin-top: 1em;
+    height: 1px;
+    background-color: $accent-grey;
+    content: " ";
+    float: left;
+  }
+}
+
+.icon-circle-down-arrow {
+  text-indent: -9999px;
+  width: 2em;
+  height: 2em;
+  @include sprite($ui-sprite-path, -247px, -79px);
+  position: absolute;
+  left: 50%;
+  margin-left: -1em;
+}
+
+.icon-circle-down-arrow-pink {
+  text-indent: -9999px;
+  width: 2em;
+  height: 2em;
+  @include sprite($ui-sprite-path, -273px, -79px);
+  position: relative;
+  left: 50%;
+  margin-left: -1em;
+}
+
+// form validation icons
+.icon-form-check {
+  display: block;
+  width: 2em;
+  height: 2em;
+  float: left;
+  margin: .2em;
+  @include sprite($ui-sprite-path, 0px, -77px);
+}
+
+.icon-form-x {
+  display: block;
+  width: 2em;
+  height: 2em;
+  float: left;
+  margin: .2em;
+  @include sprite($ui-sprite-path, -264px, 0px);
+}
+
+//whats next steps icons
+.icon-step-check-green {
+  display: block;
+  width: 1.7em;
+  height: 2em;
+  float: left;
+  margin: .2em;
+  margin-top: 0.5em;
+  padding-top: 0.5em;
+
+  @include sprite($ui-sprite-path, -125px, -28px);
+
+  &.grey-step{
+    @include sprite($ui-sprite-path, -149px, -28px);
+  }
+}
+
+.icon-show-response {
+  position: absolute;
+}
+
+.icon-cc-container {
+  .icon-cc {
+    background-image: url("../images/icon-cc-sprite-small.jpg");
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-indent: -9999px;
+    width: 3.776em;
+    height: 1.846em;
+    vertical-align: middle;
+    margin: -0.3em 0 0.9em 0;
+  }
+  .icon-cc-macys {
+    background-position: -6px -23px;
+    width: em(37px);
+    &.active {
+      background-position: -6px 0px;
+    }
+  }
+  .icon-cc-visa {
+    background-position: -52px -23px;
+    &.active {
+      background-position: -52px 0px;
+    }
+  }
+  .icon-cc-mc {
+    width: em(36px);
+    background-position: -103px -23px;
+    &.active {
+      background-position: -103px 0px;
+    }
+  }
+  .icon-cc-discover {
+    width: em(36px);
+    background-position: -142px -23px;
+    &.active {
+      background-position: -142px 0px;
+    }
+  }
+  .icon-cc-amex {
+    width: em(28px);
+    background-position: -183px -23px;
+    &.active {
+      background-position: -183px -0px;
+    }
+  }
+  .icon-cc-generic {
+    width: em(32px);
+    background-position: -213px -23px;
+    &.active {
+      background-position: -213px 0px;
+    }
+  }
+}
+
+.icon-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.7em;
+  height: 1.7em;
+  display: block;
+  background-image: url("../images/ui-sprite.svg");
+  background-position: -41px -189px;
+  text-indent: -9999px;
+
+  &:hover {
+    background-position: -68px -189px;
+  }
+
+  &.icon-close-quickview {
+    top: 0.9em;
+    right: 0.9em;
+  }
+
+  &.icon-close-modal {
+    top: 0.9em;
+    right: 0.9em;
+    background-position: -112px -12px;
+    width: 0.9em;
+    height: 1em;
+  }
+
+  &.icon-close-ask-expert {
+    top: 0.6em;
+    right: 0.7em;
+    background-position: -15px 3px;
+    background-size: 8.4em;
+    width: 0.9em;
+    height: 1.1em;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.icon-warning {
+  display: block;
+  width: 2em;
+  height: 2em;
+  float: left;
+  margin: 0em;
+  background-image: url("../images/ui-sprite.svg");
+  background-position: -264px 0px;
+}
+
+.icon-shopping-cart {
+  display: block;
+  width: 2.7em;
+  height: 2.1em;
+  float: left;
+  margin: 0em;
+  background-image: url("../images/ui-sprite.svg");
+  background-position: -142px -1px;
+  background-size: 38em;
+}
+
+.icon-box {
+  width: 16px;
+  height: 16px;
+  background-color: $grey;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.5em;
+
+  &.pink {
+    border-top: 5px solid $pink;
+  }
+
+  &.green {
+    border-top: 5px solid $green;
+  }
+
+  &.blue {
+    border-top: 5px solid $blue;
+  }
+}
+

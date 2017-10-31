@@ -1,0 +1,324 @@
+<div class="row row-spaced">
+	<div class="col-12">
+		<div class="clearfix section-title">
+			<h2 class="pull-left"><%= id ? 'Edit' : 'Create' %> Category <%= pageType === 'category' ? '' : 'Landing Page' %></h2>
+			<div class="btn-panel">
+				<button type="button" id="cancel-btn" class="btn btn-other compact">Cancel</button>
+				<% if (categoryType === 'Teleflora' && id) { %>
+				<button type="button" id="copy-btn" class="btn btn-other compact">
+					<i class="icon icon-add"></i>
+					Copy
+				</button>
+				<% } else if(id) { %>
+				<button type="button" id="delete-btn" class="btn btn-cancel compact">
+					Delete
+				</button>
+				<% } %>
+				<button type="button" id="save-btn" class="btn btn-submit"><% if (!id) { %><i class="icon icon-add icon-lg"></i><% } %>Save</button>
+				<div role="tooltip" data-parent="save-btn" class="ui-tooltip ui-widget ui-corner-all ui-widget-content tooltip-change"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+                     This is a generic placeholder for error messages in eSAT. <br>
+                     In the live app, this will be a real message and will be hidden by default.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Hidden Alert Message -->
+
+<div class="row panel alert-panel hidden-alt" id="min-products-error">
+  <div class="col-12">
+    <div class="row">
+      <div class="col-1">
+        <div class="icon icon-3x icon-warning"></div>
+      </div>
+      <div class="col-11 alert-text">
+      	This category must have at least 1 product featured in it. <br>
+      	Please select at least 1 product below before saving.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row row-spaced">
+	<div class="col-12">
+		<% if ( pageType == 'category' ) { %>
+			Here you can <%= id ? 'edit' : 'create' %> a category for your website. You can change the products shown in this category, as well as the active dates and other options.
+		<% } else { %>
+			Here you can <%= id ? 'edit' : 'create' %> a category landing page for your website. You can change the featured subcategories shown on this page, as well as the active dates and other options.
+		<% } %>
+	</div>
+</div>
+
+
+<div id="create-edit-form" class="row row-spaced panel form-section">
+	<div class="row">
+		
+		<div class="col-12">
+			<div class="panel-title">Category Details <div class="panel-subtitle"><%= categoryType %> Category  |  ID <%= id %></div></div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-6 form-section">
+			<label for="f-name">Name</label><i title="This is the name of the category. Ex: Anniversary." class="icon icon-tool-tip x-space-s"></i>
+			<input type="text" id="f-name" name="f-name" value="<%= name %>" autofocus>
+			<div class="col-12 alert-panel panel hidden-field-tip">
+				<div class="row">
+					<div class="col-1">
+						<div class="icon icon-1p5x icon-warning"></div>
+					</div>
+					<div class="col-11 alert-text">
+						Be advised that changing the name of the category will also change the URL of that category page. This can negatively impact your website SEO.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-3">
+			<div class="label">
+				Status
+			</div>
+			<input <%= active ? 'checked' : '' %> type="checkbox" id="status" name="status" class="on-off-switch" />
+		    <label for="status" class="on-off-switch-label">
+			    <div class="on-off-switch-state">on</div>
+		    </label>
+		</div>
+
+		<!-- Start of button  - confirmation modal -->
+		<% if(categoryType === "Teleflora") {%>
+			<div class="col-2">
+				<div class="label left-align">Reset<i title="Click here to reset the category to the default values, whether they come from Teleflora or a group level." class="icon icon-tool-tip x-space-s"></i></div>
+				<button type="button" id="reset-btn" class="btn btn-submit">Reset</button>
+			</div>
+		<% } %>	
+		<!-- end of Button - confirmation modal -->
+
+	</div>
+
+	<div class="row row-spaced">
+
+		<div class="col-6">
+			<div class="row">
+				<div class="col-6 form-section">
+					<label for="f-start-date">Start Date</label><i title="This is the date that you'd like this category to become active and show on your site." class="icon icon-tool-tip x-space-s"></i>
+					<div class="date-container">
+						<input type="text" id="f-start-date" name="f-start-date" class="date" value="<%= startDate %>">
+					</div>
+				</div>
+
+				<div class="col-6 form-section">
+					<label for="f-end-date">End Date</label><i title="This is the date you'd like this category to become inactive and be removed from your site." class="icon icon-tool-tip x-space-s"></i>
+					<div class="date-container">
+						<input type="text" id="f-end-date" name="f-end-date" class="date" value="<%= endDate %>">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<% if (categoryType === 'Teleflora' && pageType === 'category') { %>
+			<div class="<%= pageType === 'category' ? 'col-3' : 'col-6' %>">
+				<div class="label">Lock Merchandising</div>
+				<input <%= allowUpdates ? '' : 'checked' %> type="checkbox" id="allow-updates" name="allow-updates" class="on-off-switch" />
+		        <label for="allow-updates" class="on-off-switch-label">
+		            <div class="on-off-switch-state">on</div>
+		        </label>
+			</div>
+		<% } %>
+
+		<% if (pageType === 'landing') { %>
+			<div class="col-6 form-section">
+				<label for="category-subtype">Landing Page Type</label><i title="This allows you to identify whether this is a Sympathy or Wedding category so that it can be displayed in the proper landing pages of your site." class="icon icon-tool-tip x-space-s"></i>
+				<div class="select-container">
+					<select id="category-subtype" <% if (categoryType === 'Teleflora') { %>disabled <% } %>name="category-subtype">
+						<option selected disabled hidden value="<%= subtype %>"><%= subtype %></option>
+						<option value="Default">Default</option>
+						<option value="Sympathy">Sympathy</option>
+						<option value="Wedding">Wedding</option>
+					</select>
+				</div>
+			</div>
+		<% } %>
+
+		<% if (pageType === 'category') { %>
+				<div class="<%= categoryType === 'Teleflora' ? 'col-3' : 'col-6' %>">
+				<div class="label">Show Add-Ons</div>
+				<input <%= allowAddons ? 'checked' : '' %> type="checkbox" id="allow-addons" name="allow-addons" class="on-off-switch" />
+		        <label for="allow-addons" class="on-off-switch-label">
+		            <div class="on-off-switch-state">on</div>
+		        </label>
+			</div>
+		<% } %>
+
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-6 form-section">
+			<label for="category-visibility">Visibility Setting</label><i title="This allows you to set where and how the category will be shown on your site. You can hide a category instead of removing it if it'll be used at a later time." class="icon icon-tool-tip x-space-s"></i>
+			<div class="select-container">
+				<select id="category-visibility" name="category-visibility">
+					<option selected disabled hidden value="<%= visibility %>"><%= visibility %></option>
+					<option value="Visible Everywhere">Visible Everywhere</option>
+					<option value="Hidden">Hidden</option>
+				</select>
+			</div>
+		</div>
+
+		<% if (pageType === 'category') { %>
+			<div class="col-3">
+				<div class="label">Show on Mobile App</div>
+				<input <%= showApp ? 'checked' : '' %> type="checkbox" id="f-showApp" name="f-showApp" class="on-off-switch" />
+		        <label for="f-showApp" class="on-off-switch-label">
+		            <div class="on-off-switch-state">on</div>
+		        </label>
+			</div>			
+		<% } %>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<label for="short-desc">Short Description</label><i title="Here you can enter a short description of your category and the types of products selected." class="icon icon-tool-tip x-space-s"></i>
+			<textarea class="size-2" maxlength="500" name="short-desc" id="short-desc"><%= categoryShortDesc %></textarea>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-12 form-section">
+			<label for="long-desc">Long Description</label><i title="This area allows you to expand on your short description to describe the category in more detail." class="icon icon-tool-tip x-space-s"></i>
+			<textarea class="size-3" maxlength="1500" name="long-desc" id="long-desc"><%= categoryLongDesc %></textarea>
+		</div>
+	</div>
+</div>
+
+<div id="product-or-subcategory"></div>
+
+<div id="parent-select" class="row row-spaced panel">
+	<div class="row">
+		<div class="col-12">
+			<div class="panel-title">Parent</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced panel alert-panel hidden-alt">
+		<div class="col-12">
+			<div class="row">
+				<div class="col-1">
+					<div class="icon icon-3x icon-warning"></div>
+				</div>
+				<div class="col-11 alert-text">
+					You cannot choose a parent category that will result in a child category that is nested more than 4 levels deep.<br>Please choose another parent category.
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row row-spaced">
+		<div class="col-6 form-section">
+			<div class="row">
+				<div class="col-12">
+					<label for="f-parentName">Parent Category</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-10">
+					<input disabled type="text" id="f-parentName" name="f-parentName" value="<%= parent ? parentName : 'Set as top-level category' %>">
+				</div>
+				<div class="col-2">
+					<button type="button" id="edit-parent-btn" style="padding: 15px 0;" class="icon icon-btn icon-edit icon-2x"></button>
+				</div>
+			</div>
+
+			<div id="edit-parent-container" class="row row-spaced hidden-alt">
+				<div class="col-12">
+					<div class="row">
+						<div class="col-12">
+							<label for="f-parent">Top Level Category</label>
+
+							<div class="select-container">
+						    <select id="f-parent" name="f-parent">
+					        <option selected disabled hidden value="<%= parent ? parent : '' %>"><%= parent ? topLevelModel.name : 'Set as top-level category' %> (currently selected)</option>
+					       	<option value="">Set as top-level category<%= parent ? '' : ' (currently selected)' %></option>
+					        <option disabled></option>
+					        <% for(var i = 0, j = topLevelCategories.length; i < j; ++i) { %>
+										<option value="<%= topLevelCategories[i].id %>"><%= topLevelCategories[i].name %><%= topLevelCategories[i].id === (topLevelModel && topLevelModel.id) ? ' (currently selected)' : '' %></option>
+					        <% } %>
+						    </select>
+							</div>
+						</div>
+					</div>
+
+					<div class="row row-spaced">
+						<div class="col-12">
+							<div id="parent-table" class="div-table <%= parent ? '' : 'no-border' %>">
+							  <div class="div-table-body" id="parent-list"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+   <div id="category-seo-content" class="row row-spaced clearfix">
+
+		<div class="col-12">
+				<div class="panel-title"><i class="icon icon-closed x-space-s"></i>Category SEO Content</div>
+			</div>
+		</div>
+
+	 <div class="accordion">
+		<div class="row row-spaced panel form-section">
+
+		<div class="row row-spaced">
+			<div class="col-6 form-section">
+				<label for="seo-name">SEO Name</label><i title="This is a short description of the category, such as Anniversary by Teleflora." class="icon icon-tool-tip x-space-s"></i>
+				<input type="text" id="seo-name" name="seo-name" value="<%= seoCategoryName %>">
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12 form-section">
+				<label for="f-meta-title">Page &#60;title&#62;</label><i title="This is the text displayed in the tab at the top of your browser window." class="icon icon-tool-tip x-space-s"></i>
+				<input type="text" id="f-meta-title" name="f-meta-title" value="<%= metaTitle %>">
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-6 form-section">
+				<label for="f-meta-keywords">Meta Keywords</label><i title="This area allows you to enter a few comma separated keywords that describe your page." class="icon icon-tool-tip x-space-s"></i>
+				<textarea class="size-1" id="f-meta-keywords" name="f-meta-keywords"><%= metaKeywords %></textarea>
+			</div>
+			<div class="col-6 form-section">
+				<label for="f-meta-desc">Meta Description</label><i title="This is the text shown on search engines for your category and should consist of short clear sentences." class="icon icon-tool-tip x-space-s"></i>
+				<textarea class="size-1" name="f-meta-desc" id="f-meta-desc"><%= metaDesc %></textarea>
+			</div>
+		</div>
+
+		<div class="row row-spaced">
+			<div class="col-12 form-section">
+				<label for="f-meta-tags">Additional Tags</label><i class="icon icon-tool-tip x-space-s" title="This area is for any additional meta tags that may be used for tracking or other purposes."></i>
+				<textarea id="f-meta-tags" name="f-meta-tags"><%= metaTags %></textarea>
+				<div class="row"><div class="col-12">Please include the full HTML (such as &lt;meta&gt;) in the Additional Tags field.</div></div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<div id="modal-container"></div>
